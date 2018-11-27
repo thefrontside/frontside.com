@@ -8,12 +8,12 @@ image: /blog/2016/01/22/functional-templating-in-ember/lisp-all.png
 published: true
 directory_index: false
 ---
-<% content_for :head do  %>
+<!-- <% content_for :head do  %>
   <%= ember_stylesheet_link_tags "2016-01-22-functional-templating-in-ember" %>
 <% end %>
 <% content_for :foot do  %>
   <%= ember_javascript_tags "2016-01-22-functional-templating-in-ember" %>
-<% end %>
+<% end %> -->
 
 > TL;DR --  Avoid using "magically bound" internal component properties in your templates at all costs. Instead be explicit about only passing values around through actions and block params. This will engender a new level of breeziness to your UI.
 
