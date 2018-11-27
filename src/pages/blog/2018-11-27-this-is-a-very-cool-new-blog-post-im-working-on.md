@@ -6,4 +6,4 @@ description: Nice right?
 tags:
   - javascript
 ---
-Oh
+Oh no, I've lost my calculator!
