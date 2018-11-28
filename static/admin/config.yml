@@ -24,6 +24,7 @@ collections:
   - name: "people"
     label: "People"
     folder: "src/pages/people"
+    create: true
     slug: "{{firstName}}-{{lastName}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "people"}
