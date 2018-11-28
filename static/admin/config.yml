@@ -16,6 +16,7 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Authors", name: "author", widget: "relation", collection: "people", displayFields: ['name', 'github'], searchFields: ['name', 'github', 'twitter'], valueField: 'name'}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
