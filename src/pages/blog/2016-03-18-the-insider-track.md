@@ -6,7 +6,7 @@ tags:
   - conferences
   - community
 description: "A guide to using kindness to elevate your conference experience."
-image: /blog/2016/03/18/the-insider-track/fridayhugsquare.jpg
+image: /img/2016-03-18-the-insider-track_fridayhugsquare.jpg
 published: true
 author: Lydia Guarino
 directory_index: false

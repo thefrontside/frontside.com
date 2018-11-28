@@ -7,7 +7,7 @@ tags:
   - dcamp
   - programming
   - inclusiveness
-image: /blog/2016/10/27/the-ruby-dcamp-experience/outside.JPG
+image: /img/2016-10-27-the-ruby-dcamp-experience_outside.jpg
 author: Stephanie Riera
 directory_index: false
 published: true
@@ -22,7 +22,7 @@ It's Fall season but with the current state of the world, it certainly feels lik
 It all takes place in Prince William Forest Park located one hour south of Washington D.C. tucked away in Virginia. The forest is part of the U.S. National Park Service with several campgrounds and trails to hike. If you're a nature enthusiast, you'll find the vegetation breathtaking and its lack of noise immediately calms the soul.
 
 <figure alt="Outside the mess hall cabin">
-<img src="/blog/2016/10/27/the-ruby-dcamp-experience/cabins.JPG">
+<img src="/img/2016-10-27-the-ruby-dcamp-experience_cabins.jpg">
 </figure>
 
 Attendees lodge in one of the several wooden cabins that were built in the 1930's and spend most of the day convened in the mess hall. The day's activities take place in the mess hall which also has a large kitchen. Everyone pitches in with cooking and cleaning, it's essentially communal living. There is no wifi and cellphone signal is spotty which makes you feel truly disconnected from the outside world.
@@ -36,7 +36,7 @@ Learning to program is hard as it is and it doesn't need to be complicated by th
 The excitement is palpable on day one between the bustle of new attendees getting settled in and old friends coming together. Although DCamp is centered around the Ruby programming language, not all developers use Ruby as their primary language or even know it. The group is a diverse bunch with a spectrum of developers from junior to 20+ years experience. On day one, a coding challenge is explained and you are given 15 minutes to pair with a stranger and see how far you can get. The catch is, after the time is up, you have to clear your code, find a new partner and start again. The objective is not to finish the challenge but to see the different ways one can architect the solution.
 
 <figure alt="Outside the mess hall cabin">
-<img src="/blog/2016/10/27/the-ruby-dcamp-experience/wall.JPG">
+<img src="/img/2016-10-27-the-ruby-dcamp-experience_wall.jpg">
 </figure>
 
 The sessions were fun icebreakers and some of us found ourselves leaning on our JavaScript expertise or other languages to accomplish the same goal. Breaks, lunch, and dinner split the pairing sessions and before you know it, day one has passed. Day two and three are centered around unconference talks. That means the attendees themselves lead 45 minute discussions around topics of their choosing. Topics are posted on the main wall of the cabin, and you can cast 3 votes for your favorite talks.
@@ -44,7 +44,7 @@ The sessions were fun icebreakers and some of us found ourselves leaning on our 
 The topics with the highest number of votes are selected and a schedule for the day is born. The talks are split equally between technical topics and nontechnical (people). Some of the technical talks focused on Ruby, Elixir, JavaScript, and sharing resources like websites, books, and podcasts. The nontechnical discussions varied from advice on pair programming, how to get your first programming job, to dealing with contempt culture.
 
 <figure alt="Outside the mess hall cabin">
-<img src="/blog/2016/10/27/the-ruby-dcamp-experience/advice.jpg">
+<img src="/img/2016-10-27-the-ruby-dcamp-experience_advice.jpg">
 </figure>
 
  It was humbling to sit in a circle of developers that admitted their struggle with accepting a compliment or shared the feeling of perpetual confusion and discomfort with programming. These sessions helped me see that we all share the same fears and that we all want a sense of belonging. Largely ignored, Ada Lovelace's published work fell on deaf ears until a century later when Turing rediscovered it. I sometimes wonder what technological advances we'd have today if both Lady Lovelace and Alan Turing had been accepted as people and had lived out their lives to old age.
@@ -54,7 +54,7 @@ If you feel accepted and safe to contribute in your team, you'll be less likely 
 After dinner, the board and card games came out. There's nothing better than blowing off steam over some intense Secret Hitler and Werewolf games next to the fireplace. I enjoyed playing games but I ended up spending the last night from 8 pm til 3 am trying to solder a NodeMCU with built in Wifi that you can program in JavaScript, Python, or Lua. Mind you, I know nothing about hardware and have never soldered in my life.
 
 <figure alt="Outside the mess hall cabin">
-<img src="/blog/2016/10/27/the-ruby-dcamp-experience/hardware.JPG">
+<img src="/img/2016-10-27-the-ruby-dcamp-experience_hardware.jpg">
 </figure>
 
  It was amazing to see everyone sharing tools, collaborating, and teaching each other concepts they'd just learned. Shout out to Lance Gleason (@lgleasain) for purchasing & traveling with all the kits and tools for everyone to play with. *Note to self:* don't solder when it's 3 am, you'll find all the incorrect ways to attach wires in your exhausted stupor.
@@ -64,7 +64,7 @@ After dinner, the board and card games came out. There's nothing better than blo
 One of my favorite aspects of the retreat was the focus on mindfulness. Everyday before starting the main activities, Evan would lead a short meditation. Pausing to take a moment to reflect, take a breath, and wish those around you well can sound corny but don't shoot it down if you haven't tried it. Studies have shown the benefits of meditation and I've seen first hand how a room of 72+ people can reach a state of relaxation you never knew was possible without music or drugs.
 
 <figure alt="Outside the mess hall cabin">
-<img src="/blog/2016/10/27/the-ruby-dcamp-experience/notes.JPG">
+<img src="/img/2016-10-27-the-ruby-dcamp-experience_notes.jpg">
 </figure>
 
 Spreading kindness, having empathy, and being self aware of our actions can make all the difference not only in your team but in how you interact with the world. If you're unaware of your facial expressions or tone of voice, you might not realize you're making someone inferior when you had no intention of doing so.
@@ -72,7 +72,7 @@ Spreading kindness, having empathy, and being self aware of our actions can make
 These moments of reflection helped me realize several things, one of which I'll share. An app essential for work communication like Slack actually hinders my productivity and  I'd like to limit similar distractions in my life. I estimated (personally) 40% of conversations are of substance and the other 60% is just noise. I now check it when I get a ping but no longer go to it when I'm bored or stuck on a bug. I catch myself when I'm about to waste time going to Slack or Twitter, you'd be surprised to know it happens more often than you think.
 
 <figure alt="Outside the mess hall cabin">
-<img src="/blog/2016/10/27/the-ruby-dcamp-experience/outside.JPG">
+<img src="/img/2016-10-27-the-ruby-dcamp-experience_outside.jpg">
 </figure>
 
 During the end of my retreat I was full of these mini epiphanies and felt mentally refreshed. I gained new experiences, interpersonal skills, and technical knowledge. Best of all, I made friends that were strangers merely a couple days before. People were tweeting about returning to real life as if they'd just left Burning Man. DCamp has left a beautiful memory in my heart and I hope every developer gets the opportunity to experience it at least once.

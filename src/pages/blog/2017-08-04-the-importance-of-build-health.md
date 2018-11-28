@@ -12,7 +12,7 @@ tags:
   - cd
   - build
   - test
-image: /blog/2017/08/04/the-importance-of-build-health/creative-commons-heart.png
+image: /img/2017-08-04-the-importance-of-build-health_creative-commons-heart.png
 directory_index: false
 published: true
 ---

@@ -7,7 +7,7 @@ date: 2016-01-22 04:11 UTC
 tags: 
   - ember
   - javascript
-image: /blog/2016/01/22/functional-templating-in-ember/lisp-all.png
+image: /img/2016-01-22-functional-templating-in-ember_lisp-all.png
 published: true
 directory_index: false
 ---
@@ -85,7 +85,7 @@ Notice how the `x-file-input` component in our chooser places very little restri
 </style>
 
 <figure alt="picture of data flow from file input to template scope">
-  <img style="background-color: rgb(248,248,248); padding 15px; border 1px solid #ddd;" src="/blog/2016/01/22/functional-templating-in-ember/file-chooser-only.svg">
+  <img style="background-color: rgb(248,248,248); padding 15px; border 1px solid #ddd;" src="/img/2016-01-22-functional-templating-in-ember_file-chooser-only.svg">
   <figcaption>Fig 1: Data flows from file input into template scope</figcaption>
 </figure>
 
@@ -106,7 +106,7 @@ All we do is allow the `file` attribute to flow right into the `object-url` comp
 Again, `object-url` has no markup of its own. Instead, its only job is to yield the model that makes the file preview markup possible. In this case, we bind the `url` value yielded by the `x-object-url` to the `background-image` property of a div and we're done.
 
 <figure alt="file value is converted into a url">
-  <img src="/blog/2016/01/22/functional-templating-in-ember/choose-files-with-preview.svg">
+  <img src="/img/2016-01-22-functional-templating-in-ember_choose-files-with-preview.svg">
   <figcaption>Fig 2: object-url :: Blob -> String</figcaption>
 </figure>
 
@@ -117,7 +117,7 @@ This might seem totally nuts at first, but mostly because we’ve been trained o
 We'll just let the file object flow into an `x-xml-http-request` component just like it did the `x-object-url`
 
 <figure alt="file object flows into x-xml-http-request">
-  <img src="/blog/2016/01/22/functional-templating-in-ember/full-demo.svg">
+  <img src="/img/2016-01-22-functional-templating-in-ember_full-demo.svg">
   <figcaption>Fig 3: x-xml-http-request :: File -> XHR </figcaption>
 </figure>
 

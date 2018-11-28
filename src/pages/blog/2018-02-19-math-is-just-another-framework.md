@@ -9,7 +9,7 @@ tags:
  - functional programming
  - typeclasses
  - convention over configuration
-image: /blog/2018/02/19/math-is-just-another-framework/graphs.jpg
+image: /img/2018-02-19-math-is-just-another-framework_graphs.jpg
 directory_index: false
 published: true
 ---

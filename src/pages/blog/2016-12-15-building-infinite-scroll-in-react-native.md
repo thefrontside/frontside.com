@@ -8,7 +8,7 @@ tags:
   - react
   - infinite scroll
   - impagination
-image: /blog/2016/12/15/building-infinite-scroll-in-react-native/react-native-header.jpg
+image: /img/2016-12-15-building-infinite-scroll-in-react-native_react-native-header.jpg
 description: Tackling infinite scroll can be hard on any platform. But thankfully React Native allows you to use base JavaScript libraries to solve problems in native apps. We're going to take Impagination.js and build an infinite scrolling list that is silky smooth and painless data management.
 cta_text: Does your team need help building complex UI in React Native? Frontside can unblock your team and ship software with confidence regularly.
 published: true
@@ -57,7 +57,7 @@ like you can sub in your own API here.
 Here's an iOS screenshot of what we're going to build:
 
 <img
-src="/blog/2016/12/15/building-infinite-scroll-in-react-native/impagination-react-native-ios.PNG"
+src="/img/2016/12/15/building-infinite-scroll-in-react-native/impagination-react-native-ios.png"
 alt="iOS Screenshot of the app we will be building"
 style="width: 80%;"
 />
@@ -329,7 +329,7 @@ export default class Home extends Component {
 Our app should look something like this:
 
 <img
-  src="/blog/2016/12/15/building-infinite-scroll-in-react-native/card-component-ios-screenshot.png"
+  src="/img/2016-12-15-building-infinite-scroll-in-react-native_card-component-ios-screenshot.png"
   alt="iOS Screenshot of the new card component styling"
   style="width: 80%;"
 />
@@ -874,7 +874,7 @@ only has 100 records seeded to the DB so don't expect it to be
 _truly_ infinite. Here's a GIF of what we've built together:
 
 <img
-  src="/blog/2016/12/15/building-infinite-scroll-in-react-native/finished-robotImpagination-app.gif"
+  src="/img/2016/12/15/building-infinite-scroll-in-react-native/finished-robotImpagination-app.gif"
   alt="GIF demo of the app we just built together"
 />
 

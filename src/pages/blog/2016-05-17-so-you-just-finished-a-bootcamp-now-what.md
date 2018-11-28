@@ -11,7 +11,7 @@ tags:
   - interview
   - oss
   - community
-image: /blog/2016/05/17/so-you-just-finished-a-bootcamp-now-what/techstars.jpg
+image: /img/2016-05-17-so-you-just-finished-a-bootcamp-now-what_techstars.jpg
 author: Stephanie Riera
 published: true
 directory_index: false
@@ -21,7 +21,7 @@ You took the plunge and here you are, a newly minted code bootcamper. You've end
 Congratulations, you're here now and you're still asking yourself, "What do I do next?", I have no idea what I'm doing. You're here though, thanks Google.
 
 <figure alt="I have no clue what I'm doing dog on computer">
-  <img src="/blog/2016/05/17/so-you-just-finished-a-bootcamp-now-what/codedog.jpg">
+  <img src="/img/2016-05-17-so-you-just-finished-a-bootcamp-now-what_codedog.jpg">
 </figure>
 
 As a developer, our job 90% of the time is to figure things out and create solutions using the resources we have available. You are a developer, you are just unemployed and finding a job is kind of the same process. It boils down to utilizing the available resources and creating your own solutions.
@@ -114,7 +114,7 @@ People are going to be doing their homework and looking you up. Let's face it, y
 Getting stuck in code at home is horrifying because it takes hours to get unstuck. Being around other developers can make a huge difference. Check [Meetup.com][11] for tech groups in your city and don't be shy. Meetups offer a safe environment to learn new topics through their lightning talks, the ability to present your projects, receive constructive feedback, and lose the speaking jitters. Meetups organize fun hackathons and it's a great place to get your networking on. Let me tell you when it comes to jobs, it's all about _who you know_.
 
 <figure alt="Photo by Kara Gomez of San Antonio Geekdom">
-<img src="/blog/2016/05/17/so-you-just-finished-a-bootcamp-now-what/geekdom.jpg">
+<img src="/img/2016-05-17-so-you-just-finished-a-bootcamp-now-what_geekdom.jpg">
 </figure>
 
 Finding a coworking space in your area is paramount. You'll be informed of what is going on in your city's tech ecosystem, meet ambitious people, and even find out about positions with the local startups. Everyone here is busy hustling and simply being in that environment is better than trying to work from home or the loud Starbucks. These people like to work hard and play hard. The opportunity of making amazing friends along the way is real. Surround yourself with people that inspire you.
@@ -136,7 +136,7 @@ Something I learned while working for Techstars was the value of giving first wi
 Offer your time free of charge. When you help out the local girls soccer team by designing their logo, you are freeing their budget to allocate funds elsewhere. You've become a contributing member of the community and when someone asks if anyone knows of a good designer, you have people that will vouch for you organically. Your name comes up everytime someone compliments their jersey.
 
 <figure alt="Photo by Kara Gomez of Rails Girls 2016 San Antonio">
-<img src="/blog/2016/05/17/so-you-just-finished-a-bootcamp-now-what/railsgirlsSA.jpg">
+<img src="/img/2016-05-17-so-you-just-finished-a-bootcamp-now-what_railsgirlsSA.jpg">
 </figure>
 
 Organic leads aside, let me tell you the most satisfying part. _Knowing you've made a difference in someone's life._ After the [Rails Girls][16] event, an older woman came and grabbed my hands to thank me for organizing the event. She said she never would've imagined that she'd be able to create an application from scratch. The majority of women who attended had never touched a line of code previously but left exhilarated and ready to continue learning because they knew it was achievable. I strongly recommend combining your passion with helping others because it's more fulfilling than you'd think.

@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Kubernetes for the Kubernewbie - The Journey
 author: Elrick Ryan
 date: 2018-08-09 18:54 UTC
-image: /blog/2018/08/09/kubernetes-for-the-kubernewbie/drone-container-shot.jpg
+image: /img/2018/08/09/kubernetes-for-the-kubernewbie/drone-container-shot.jpg
 description: "Learning Kubernetes, especially with no background in Ops, is challenging but full of reward. This will take you along the journey of our k8s
 enlightenment and deployment"
 tags: 
@@ -286,7 +286,7 @@ Unsplash.
 
 ## Further reading
 
-- [Birth of Kuberentes](https://kubernetes.io/blog/2018/06/06/4-years-of-k8s/)
+- [Birth of Kuberentes](https://kubernetes.io/img/2018/06/06/4-years-of-k8s/)
 - [Kubernetes documentation](https://kubernetes.io/)
 - [Kubernetes for the Kubernewbie: Frontside -- Lunch &
   Learn](https://youtu.be/9aPtucV0Ke0)

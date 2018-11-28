@@ -11,7 +11,7 @@ tags:
 directory_index: false
 author: Robert DeLuca
 description: "Slack communities for open source projects have become very popular over the past couple years. Slack has taken hold because it makes collaborative chat really easy and accessible for the masses. Something IRC wasn’t able to achieve."
-image: /blog/2018/03/30/connecting-a-slack-channel-to-gitter/sameroom-gitter-slack-blog.jpg
+image: /img/2018/03/30/connecting-a-slack-channel-to-gitter/sameroom-gitter-slack-blog.jpg
 ---
 
 Slack communities for open source projects have become very popular

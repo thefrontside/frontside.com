@@ -12,7 +12,7 @@ tags:
   - finance
   - ethereum
   - decentralized
-image: /blog/2017/12/22/frontside-forecast-the-growing-importance-of-blockchains/blockchain.png
+image: /img/2017-12-22-frontside-forecast-the-growing-importance-of-blockchains_blockchain.png
 directory_index: false
 published: true
 ---

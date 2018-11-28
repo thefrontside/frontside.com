@@ -8,7 +8,7 @@ tags:
   - bigtest
   - testing
 author: Wil Wilsman
-image: /blog/2018/06/13/big-testing-in-react/bigtest.jpg
+image: /img/2018-06-13-big-testing-in-react_bigtest.jpg
 description: "When we write and develop our applications, it's with the intent that somebody will use it. We write tests so we can be assured that everything in our app works as expected and is bug free. But how confident are you in your tests?"
 ---
 

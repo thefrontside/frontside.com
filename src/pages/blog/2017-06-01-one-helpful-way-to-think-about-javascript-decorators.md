@@ -9,7 +9,7 @@ tags:
   - clojure
   - macros
   - decorators
-image: /blog/2017/06/01/one-helpful-way-to-think-about-javascript-decorators/russian-dolls.jpg
+image: /img/2017-06-01-one-helpful-way-to-think-about-javascript-decorators_russian-dolls.jpg
 directory_index: false
 published: true
 ---
@@ -116,7 +116,7 @@ means that there needs to be a
 so that any of the multiple engines can be sure to get it right.
 
 <figure class="figure" alt="a picture of the twenty seven line specification of function syntax in BNF format on the Ecma website">
-  <img class="figure-img img-fluid" src="/blog/2017/06/01/one-helpful-way-to-think-about-javascript-decorators/function-syntax.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-01-one-helpful-way-to-think-about-javascript-decorators_function-syntax.png">
   <figcaption class="figure-caption"> <em><strong>Figure 1:</strong> Put this in your C++ and smoke it</em></caption>
 </figure>
 
@@ -139,7 +139,7 @@ defn :: Code -> Code
 The second thing that makes a macro function special is that it doesn't run when the rest of your program does; it runs when your program is being compiled. When the compiler encounters a macro, it calls it, and then replaces the macro with the code that got returned.
 
 <figure class="figure" alt="the arguments to a macro function are the unevaluated source code">
-  <img class="figure-img img-fluid" src="/blog/2017/06/01/one-helpful-way-to-think-about-javascript-decorators/defn-arguments.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-01-one-helpful-way-to-think-about-javascript-decorators_defn-arguments.png">
   <figcaption class="figure-caption"> <em><strong>Figure 2:</strong> The arguments to a macro function are unevaluated source code</em></caption>
 </figure>
 
@@ -157,7 +157,7 @@ with
 
 <figure class="figure" alt="defn consumes its arguments and returns
   new source code containing those arguments">
-  <img class="figure-img img-fluid" src="/blog/2017/06/01/one-helpful-way-to-think-about-javascript-decorators/defn-mapping.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-01-one-helpful-way-to-think-about-javascript-decorators_defn-mapping.png">
   <figcaption class="figure-caption"> <em><strong>Figure 3:</strong>
   The defn macro takes code as arguments and returns more code</em></caption>
 </figure>

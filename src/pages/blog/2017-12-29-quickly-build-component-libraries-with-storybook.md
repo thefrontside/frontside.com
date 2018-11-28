@@ -9,7 +9,7 @@ tags:
   - component library
   - style guide
   - storybook
-image: /blog/2017/12/29/quickly-build-component-libraries-with-storybook/storybook.jpg
+image: /img/2017-12-29-quickly-build-component-libraries-with-storybook_storybook.jpg
 directory_index: false
 published: true
 ---

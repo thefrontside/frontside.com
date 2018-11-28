@@ -9,7 +9,7 @@ tags:
   - resin.io
   - javascript
   - circleci
-image: /blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/main-image-iot-blog.png
+image: /img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_main-image-iot-blog.png
 directory_index: false
 published: true
 ---
@@ -62,14 +62,14 @@ First you need to create an account at <a href="http://www.resin.io" target="_bl
 In the Resin.io dashboard add your GitHub SSH public key that you use to push code to GitHub into Resin.io.
 
 <figure class="figure" alt="add public key from github to resin.io dashboard">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/resin/1-add-public-key-to-resin.png">
+  <img class="figure-img img-fluid" src="/img/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/resin/1-add-public-key-to-resin.png">
   <figcaption class="figure-caption"> <em><strong>Figure 1: </strong>Add public key from GitHub to Resin.io</em></caption>
 </figure>
 
 Next create your application, give it a name and pick your device type from the list.
 
 <figure class="figure" alt="create application in resin.io dashboard">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/resin/2-create-app-in-resin.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_resin_2-create-app-in-resin.png">
   <figcaption class="figure-caption"> <em><strong>Figure 2: </strong>Create Application in Resin.io dashboard and pick device type</em></caption>
 </figure>
 
@@ -80,21 +80,21 @@ Download the resinOS. Which will give you the Device OS specific for your device
 We will need that later. 
 
 <figure class="figure" alt="download resinOS image">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/resin/3-download-resinOS.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_resin_3-download-resinOS.png">
   <figcaption class="figure-caption"> <em><strong>Figure 3: </strong>Download the resinOS image for your device</em></caption>
 </figure>
 
 Choose the configuration you would like.
 
 <figure class="figure" alt="select resinOS build and config image">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/resin/4-pick-resinOS-and-config.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_resin_4-pick-resinOS-and-config.png">
   <figcaption class="figure-caption"> <em><strong>Figure 4: </strong>Select resinOS build and config</em></caption>
 </figure>
 
 After downloading the resinOS image. You need to burn that image onto a SD card for each device you want to connect under you myCoolApp. You <a href="http://www.etcher.io/" target="_blank">download Etcher</a> which will make the process simple. 
 
 <figure class="figure" alt="burn resinos image using etcher">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/resin/5-burn-resinOS-img-using-etcher.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_resin_5-burn-resinOS-img-using-etcher.png">
   <figcaption class="figure-caption"> <em><strong>Figure 5: </strong>Burn image using etcher</em></caption>
 </figure>
 
@@ -103,7 +103,7 @@ After the resinOS img has completed burning onto an SD card you can place that S
 Remember, if you burn this resinOS image associated with the application that you created onto multiple SD cards and place each one into a device then all of those devices will show up under that application in the Resin.io dashboard.
 
 <figure class="figure" alt="device is connected to resin.io">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/resin/6-device-is-connected.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_resin_6-device-is-connected.png">
   <figcaption class="figure-caption"> <em><strong>Figure 6: </strong>Device is now connected to Resin.io</em></caption>
 </figure>
 
@@ -112,7 +112,7 @@ When you click into your application on the Resin.io dashboard you will see a li
 How ever many devices you have will show up in this list.
 
 <figure class="figure" alt="list of all devices connected in application">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/resin/7-devices-in-list-within-each-app.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_resin_7-devices-in-list-within-each-app.png">
   <figcaption class="figure-caption"> <em><strong>Figure 7: </strong>All devices that are connected under this application</em></caption>
 </figure>
 
@@ -155,7 +155,7 @@ Resin.io builds <a href="http://www.docker.com/what-docker" target="_blank">Dock
 Hey look, our build is complete! You should see a lovely unicorn in the terminal.
 
 <figure class="figure" alt="resin deploys code to device">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/resin/8-resin-complete-containerizing-code.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_resin_8-resin-complete-containerizing-code.png">
   <figcaption class="figure-caption"> <em><strong>Figure 8: </strong>Code is successfully build and deployed to your device</em></caption>
 </figure>
 
@@ -192,28 +192,28 @@ This will generate the public/private ssh-key pair that we will need later.
 Now go to the circleCI dashboard and find the IoT project that you created in GitHub in the project list. When you find it click on the settings icon.
 
 <figure class="figure" alt="project in circleci dashboard">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/circle/1-circleci-project-list.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_circle_1-circleci-project-list.png">
   <figcaption class="figure-caption"> <em><strong>Figure 9: </strong>Find project in circleci dashboard</em></caption>
 </figure>
 
 When the settings options appear find ssh-permissions in the list and click it.
 
 <figure class="figure" alt="ssh permissions for project in circleci">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/circle/2-select-ssh-permissions.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_circle_2-select-ssh-permissions.png">
   <figcaption class="figure-caption"> <em><strong>Figure 10: </strong>SSH Permissions in circleci project settings</em></caption>
 </figure>
 
 Then click add-key and add your private ssh-key that you generated.
 
 <figure class="figure" alt="add private ssh-key to circleci">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/circle/3-add-ssh-private-key.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_circle_3-add-ssh-private-key.png">
   <figcaption class="figure-caption"> <em><strong>Figure 11: </strong>Add ssh private key to circleci</em></caption>
 </figure>
 
 Now we need to go back to our Resin dashboard. Go to "preferences" and then "ssh-keys". From there, click ssh-keys and add the public ssh-key from the pair we generated into Resin.io.
 
 <figure class="figure" alt="add private ssh-key to circleci">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/circle/4-add-public-key.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_circle_4-add-public-key.png">
   <figcaption class="figure-caption"> <em><strong>Figure 12: </strong>Add public key to Resin.io dashboard</em></caption>
 </figure>
 
@@ -225,7 +225,7 @@ You now have Continuous Integration and Deployment setup for IoT.
 This is what an image map of our setup would look like.
 
 <figure class="figure" alt="Image map of deployment solution">
-  <img class="figure-img img-fluid" src="/blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/resin-circleci-github.png">
+  <img class="figure-img img-fluid" src="/img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_resin-circleci-github.png">
   <figcaption class="figure-caption"> <em><strong>Figure 13: </strong>Image map of deployment solution</em></caption>
 </figure>
 
