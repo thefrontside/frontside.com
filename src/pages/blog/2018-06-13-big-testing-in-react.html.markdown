@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Big Testing in React
 date: 2018-06-13
 tags: react, open source, bigtest, testing

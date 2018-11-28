@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: A Sprinkling of Ember
 date: 2014-03-06
 author: Jeffrey Biles

@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Programming in the Wild West
 date: 2014-05-16 12:16 UTC
 author: Brandon Hays

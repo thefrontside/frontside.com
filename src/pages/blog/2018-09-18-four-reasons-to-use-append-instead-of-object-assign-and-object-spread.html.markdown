@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Four reasons to use append() instead of Object.assign() and Object spread
 author: Charles Lowell
 date: 2018-09-18 05:02 UTC

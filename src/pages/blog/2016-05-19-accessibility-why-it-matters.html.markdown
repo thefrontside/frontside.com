@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Accessibility & Why it Matters
 date: 2016-05-19 17:50 UTC
 tags: code, frontside, accessibility, web accessibility, disability, gaad, ember-a11y

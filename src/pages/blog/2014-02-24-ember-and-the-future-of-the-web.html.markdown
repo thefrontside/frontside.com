@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Ember and the future of the web
 date: 2014-02-24
 author: Brandon Hays

@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: In Search of a Better Autogrowing Textfield
 date: 2008-12-16
 author: Charles Lowell

@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Taming the Rhino
 author: Charles Lowell
 date: 2006-08-04

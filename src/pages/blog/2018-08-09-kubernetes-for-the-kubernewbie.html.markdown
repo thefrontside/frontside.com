@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Kubernetes for the Kubernewbie - The Journey
 author: Elrick Ryan
 date: 2018-08-09 18:54 UTC

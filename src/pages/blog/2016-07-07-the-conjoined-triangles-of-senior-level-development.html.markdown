@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: The Conjoined Triangles of Senior-Level Development
 date: 2016-07-07 06:02 UTC
 tags: hiring, senior developers, frontside

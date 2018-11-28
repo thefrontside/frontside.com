@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: So You Just Finished a Bootcamp, Now What?
 date: 2016-05-17 20:25 UTC
 tags: code, bootcamp, frontside, job, hiring, interview, oss, community

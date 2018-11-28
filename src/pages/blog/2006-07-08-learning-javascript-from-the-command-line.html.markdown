@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Learning Javascript from the Command Line
 date: 2006-07-08
 author: Charles Lowell

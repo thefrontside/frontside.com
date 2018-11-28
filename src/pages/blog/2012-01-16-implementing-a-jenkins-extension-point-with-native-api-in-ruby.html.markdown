@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Implementing a Jenkins Extension Point with the Native Java API inside a Ruby Plugin
 date: 2012-01-16
 author: Charles Lowell

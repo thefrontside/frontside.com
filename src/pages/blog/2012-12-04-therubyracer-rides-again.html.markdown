@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: The Ruby Racer Rides Again
 date: 2012-12-04
 author: Charles Lowell

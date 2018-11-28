@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Connecting a Slack Channel to Gitter
 date: 2018-03-30 01:22 UTC
 tags: open source, community, collaboration, slack, gitter

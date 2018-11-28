@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: "Math is Just Another Framework"
 description: "Functional programming with typeclasses rooted in category theory may seem like some esoteric practice reserved for the truly pointy-haired. But guess what? You do it every day."
 author: Charles Lowell

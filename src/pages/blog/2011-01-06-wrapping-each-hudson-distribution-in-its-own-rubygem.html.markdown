@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Wrapping each Hudson distribution in its own RubyGem
 date: 2011-01-06
 author: Charles Lowell

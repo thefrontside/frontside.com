@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: The Ruby DCamp Experience
 date: 2016-10-27 16:08 UTC
 tags: ruby, dcamp, programming, inclusiveness

@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: "Quickly Build Component Libraries with Storybook"
 description: "Design systems have become an effective way to maintain consistency and improve feature delivery time. What can developers on smaller teams do to apply design system concepts?"
 author: Jeffrey Cherewaty

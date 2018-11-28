@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: "WCAG 2.1: What does it actually mean?"
 author: Robert DeLuca
 date: 2018-06-14 12:00 UTC

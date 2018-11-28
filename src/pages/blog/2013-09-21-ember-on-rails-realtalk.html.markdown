@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: "Ember on Rails: #REALTALK"
 date: 2013-09-21
 author: Brandon Hays

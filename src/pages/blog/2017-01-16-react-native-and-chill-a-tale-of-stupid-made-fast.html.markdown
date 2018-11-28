@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: "React Native and Chill: A tale of stupid made fast"
 date: 2017-01-16 22:57 UTC
 author: "Charles Lowell"

@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Building a Continuous Integration & Deployment Solution for the IoT.
 description: Smart homes, smart devices, smart vehicles. The Internet of Things is here! You want to be able to build software for IoT and deploy, maintain, and update it on your devices that may be located anywhere and within anything. This is the first part of our IoT setup connecting users to the Internet of Things.
 author: Elrick Ryan

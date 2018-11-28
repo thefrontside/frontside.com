@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: We must come together to honor the command line
 date: 2010-11-14
 author: Charles Lowell

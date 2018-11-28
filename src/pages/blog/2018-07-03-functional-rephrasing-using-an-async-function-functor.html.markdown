@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Functional Rephrasing Using an Async Function Functor
 author: Charles Lowell
 date: 2018-07-03 12:00 UTC

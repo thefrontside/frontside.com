@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: The Insider Track
 date: 2016-03-18 16:11 UTC
 tags: conferences, community

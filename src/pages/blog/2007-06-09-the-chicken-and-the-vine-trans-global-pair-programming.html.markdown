@@ -1,4 +1,5 @@
 ---
+templateKey: blog-post
 title: Trans-Global Pair Programming
 author: Charles Lowell
 date: 2007-06-09
