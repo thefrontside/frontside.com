@@ -1,17 +1,15 @@
 ---
 templateKey: blog-post
 title: Kubernetes for the Kubernewbie - The Journey
-author: Elrick Ryan
-date: 2018-08-09 18:54 UTC
-image: /img/2018/08/09/kubernetes-for-the-kubernewbie/drone-container-shot.jpg
-description: "Learning Kubernetes, especially with no background in Ops, is challenging but full of reward. This will take you along the journey of our k8s
-enlightenment and deployment"
-tags: 
+date: 2018-08-09T21:00:00.000Z
+description: >-
+  Learning Kubernetes, especially with no background in Ops, is challenging but
+  full of reward. This will take you along the journey of our k8s enlightenment
+  and deployment
+tags:
   - kubernetes
   - devops
   - microservices
-cta_text: "Building a microservice and an application that consumes that microservice. We can help."
-cta_button: "Ok Scooty...containerize"
 ---
 
 ‘It’s not how you start it’s how you finish’, is a phrase you may hear a coach
