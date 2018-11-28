@@ -1,17 +1,16 @@
 ---
 templateKey: blog-post
-title: "Quickly Build Component Libraries with Storybook"
-description: "Design systems have become an effective way to maintain consistency and improve feature delivery time. What can developers on smaller teams do to apply design system concepts?"
-author: Jeffrey Cherewaty
-date: 2017-12-29 12:00 UTC
-tags: 
+title: Quickly Build Component Libraries with Storybook
+date: 2017-12-29T23:00:00.000Z
+description: >-
+  Design systems have become an effective way to maintain consistency and
+  improve feature delivery time. What can developers on smaller teams do to
+  apply design system concepts?
+tags:
   - design systems
   - component library
   - style guide
   - storybook
-image: /img/2017-12-29-quickly-build-component-libraries-with-storybook_storybook.jpg
-directory_index: false
-published: true
 ---
 
 As long as humans have been building things, we've tried to break up the work. When we can carve out smaller tasks, we can share the work among more people and focus on the quality of each little piece.
