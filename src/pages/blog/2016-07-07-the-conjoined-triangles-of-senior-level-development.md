@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: The Conjoined Triangles of Senior-Level Development
-date: 2016-07-07 06:02 UTC
+date: 2016-07-07T12:00:00.000Z
 tags: 
   - hiring
   - senior developers

@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Global Accessibility Awareness Day
-date: 2016-05-17 05:35 UTC
+date: 2016-05-17T12:00:00.000Z
 tags: 
   - accessibility
   - ember.js

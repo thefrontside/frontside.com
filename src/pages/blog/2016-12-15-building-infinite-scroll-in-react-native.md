@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Building infinite scroll in React Native
-date: 2016-12-15 07:00 UTC
+date: 2016-12-15T12:00:00.000Z
 author: "Robert DeLuca"
 tags: 
   - react native

@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Accessing Javascript Objects from Ruby
-date: 2010-10-25
+date: 2010-10-25T12:00:00.000Z
 author: Charles Lowell
 tags: 
     - javascript

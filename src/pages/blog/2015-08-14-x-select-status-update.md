@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: X-Select Status Update
-date: 2015-08-14 17:52 UTC
+date: 2015-08-14T12:00:00.000Z
 author: Robert DeLuca
 tags: 
   - oss

@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Ruby for Jenkins Goes Pre-Alpha
-date: 2011-09-13
+date: 2011-09-13T12:00:00.000Z
 author: Charles Lowell
 tags: 
   - java

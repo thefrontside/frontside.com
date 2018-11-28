@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: In Search of a Better Autogrowing Textfield
-date: 2008-12-16
+date: 2008-12-16T12:00:00.000Z
 author: Charles Lowell
 tags: 
   - dhtml

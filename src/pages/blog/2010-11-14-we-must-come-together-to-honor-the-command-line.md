@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: We must come together to honor the command line
-date: 2010-11-14
+date: 2010-11-14T12:00:00.000Z
 author: Charles Lowell
 tags: 
   - ruby

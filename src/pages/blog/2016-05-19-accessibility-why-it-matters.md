@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Accessibility & Why it Matters
-date: 2016-05-19 17:50 UTC
+date: 2016-05-19T12:00:00.000Z
 tags: 
   - code
   - frontside

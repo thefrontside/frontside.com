@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Ember and the future of the web
-date: 2014-02-24
+date: 2014-02-24T12:00:00.000Z
 author: Brandon Hays
 image: "http://cl.ly/image/0s1M3r1p1Q1P/peabody.jpg"
 tags: 

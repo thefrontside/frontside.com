@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: Patiently waiting for JavaFX
 author: Charles Lowell
-date: 2008-06-05
+date: 2008-06-05T12:00:00.000Z
 tags: 
   - java
   - jafafx

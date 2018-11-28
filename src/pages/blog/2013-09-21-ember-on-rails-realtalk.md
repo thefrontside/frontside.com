@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: "Ember on Rails: #REALTALK"
-date: 2013-09-21
+date: 2013-09-21T12:00:00.000Z
 author: Brandon Hays
 tags: 
   - talks

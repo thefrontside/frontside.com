@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: So You Just Finished a Bootcamp, Now What?
-date: 2016-05-17 20:25 UTC
+date: 2016-05-17T12:00:00.000Z
 tags:
   - code
   - bootcamp

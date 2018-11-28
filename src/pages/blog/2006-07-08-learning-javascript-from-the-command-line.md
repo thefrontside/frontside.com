@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Learning Javascript from the Command Line
-date: 2006-07-08
+date: 2006-07-08T12:00:00.000Z
 author: Charles Lowell
 tags: 
     - javascript

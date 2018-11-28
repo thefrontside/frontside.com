@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: The Ruby Racer Rides Again
-date: 2012-12-04
+date: 2012-12-04T12:00:00.000Z
 author: Charles Lowell
 tags: 
     - javascript

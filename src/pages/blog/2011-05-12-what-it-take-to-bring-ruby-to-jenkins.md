@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: What it takes to bring Ruby to Jenkins
-date: 2011-05-12
+date: 2011-05-12T12:00:00.000Z
 author: Charles Lowell
 tags: 
   - java
