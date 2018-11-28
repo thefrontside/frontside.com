@@ -1,17 +1,16 @@
 ---
 templateKey: blog-post
-title: "Math is Just Another Framework"
-description: "Functional programming with typeclasses rooted in category theory may seem like some esoteric practice reserved for the truly pointy-haired. But guess what? You do it every day."
-author: Charles Lowell
-date: 2018-02-19 00:00 UTC
-tags: 
- - javascript
- - functional programming
- - typeclasses
- - convention over configuration
-image: /img/2018-02-19-math-is-just-another-framework_graphs.jpg
-directory_index: false
-published: true
+title: Math is Just Another Framework
+date: 2018-02-19T13:00:00.000Z
+description: >-
+  Functional programming with typeclasses rooted in category theory may seem
+  like some esoteric practice reserved for the truly pointy-haired. But guess
+  what? You do it every day.
+tags:
+  - javascript
+  - functional programming
+  - typeclasses
+  - convention over configuration
 ---
 
 <p>Monads. Amirite?</p>
