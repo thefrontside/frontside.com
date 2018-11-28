@@ -256,7 +256,7 @@ We created `useType` hook using `useState`, `useMemo` and Microstates. In the fu
 
 ## Build recursive Family Tree builder component
 
-![Demo of Family Builder Component](/img/2018/11/06/build-a-family-tree-maker-using-react-hooks-and-microstates/family-builder.gif)
+![Demo of Family Builder Component](/img/2018-11-06-build-a-family-tree-maker-using-react-hooks-and-microstates_family-builder.gif)
 
 Our component will allow the user to enter their name. When the name is entered, they’ll see an input field to enter names of their mother and father. When a parent’s name is entered, we’ll show input fields for parent’s parents. This will work recursively as deeply as the user has patience to enter.
 
