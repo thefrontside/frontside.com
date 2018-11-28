@@ -1,0 +1,16 @@
+<svg width="58px" height="68px" viewBox="300 69 150 165" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Logo" filter="url(#filter-1)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(324.000000, 81.000000)">
+        <polygon id="Fill-1" fill="#112A51" points="50.8140138 0.250347265 0.454363577 29.4990488 0.454363577 87.5545175 50.8140138 116.803219 101.173664 87.5545175 101.173664 29.4990488"></polygon>
+        <polygon id="Fill-2" fill="#F74D7B" points="25.6446995 73.0345689 25.6446995 44.0189423 13.1575963 36.821275 13.1575963 80.2322362 50.8140275 102.102892 50.8140275 87.6527969"></polygon>
+        <polygon id="Fill-3" fill="#26ACE8" points="75.9833693 73.0345689 75.9833693 44.0189423 88.4704725 36.821275 88.4704725 80.2322362 50.8140413 102.102892 50.8140413 87.6527969"></polygon>
+        <polygon id="Fill-4" fill="#FFFFFF" points="75.9833693 48.0189148 88.4704725 40.8212474 50.8140413 18.9505918 13.15761 40.8212474 25.6447132 48.0189148 34.919169 42.6323249 60.0856155 57.2489019 72.5727187 50.0512346 47.3590698 35.4072775 50.8140413 33.4006867"></polygon>
+    </g>
+</svg>

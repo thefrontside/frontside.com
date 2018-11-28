@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="206px" height="206px" viewBox="0 0 206 206" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>product-blue</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="product-blue" transform="translate(3.000000, 3.000000)" stroke="#26ABE8" stroke-width="5">
+            <circle id="Oval-590" cx="100" cy="100" r="100"></circle>
+            <g id="Line-+-Line-191" transform="translate(45.872711, 62.221699) rotate(-45.000000) translate(-45.872711, -62.221699) translate(30.372711, 46.721699)">
+                <path d="M17,0.657935772 L17,30.2875653" id="Line"></path>
+                <path d="M0.873709797,14 L30.5033395,14" id="Line-191"></path>
+            </g>
+            <g id="Line-+-Line-191" transform="translate(113.810288, 147.406884) rotate(-45.000000) translate(-113.810288, -147.406884) translate(98.310288, 131.906884)">
+                <path d="M17,0.657935772 L17,30.2875653" id="Line"></path>
+                <path d="M0.873709797,14 L30.5033395,14" id="Line-191"></path>
+            </g>
+            <path d="M60.7612367,135.674218 C60.7612367,135.674218 59.5646235,92.2663866 119.876032,73.4177215" id="Path-1253"></path>
+            <ellipse id="Oval-591" fill-opacity="0.25" fill="#FFFFFF" cx="60.3844352" cy="151.523676" rx="14.8148148" ry="14.8148148"></ellipse>
+            <polyline id="Rectangle-636" transform="translate(108.771820, 77.860428) rotate(113.000000) translate(-108.771820, -77.860428) " points="97.6607091 88.971539 97.6607091 66.7493167 119.882931 66.7493167"></polyline>
+            <ellipse id="Oval-592" fill-opacity="0.25" fill="#FFFFFF" cx="159.118612" cy="57.8527896" rx="14.8148148" ry="14.8148148"></ellipse>
+        </g>
+    </g>
+</svg>
