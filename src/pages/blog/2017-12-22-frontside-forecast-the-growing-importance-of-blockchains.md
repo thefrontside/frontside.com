@@ -1,10 +1,13 @@
 ---
 templateKey: blog-post
-title: "Frontside Forecast: The Growing Importance of Blockchains"
-description: "Blockchain-based technologies are here to stay, and we can't wait to see what the future holds.  From finance to IoT and everywhere in-between: the implications of truly decentralized applications are massive.  You can count on Frontside for blockchain software development."
-author: Arash Zafarnia
-date: 2017-12-22 18:49 UTC
-tags: 
+title: 'Frontside Forecast: The Growing Importance of Blockchains'
+date: 2017-12-22T23:00:00.000Z
+description: >-
+  Blockchain-based technologies are here to stay, and we can't wait to see what
+  the future holds.  From finance to IoT and everywhere in-between: the
+  implications of truly decentralized applications are massive.  You can count
+  on Frontside for blockchain software development.
+tags:
   - blockchain
   - cryptography
   - cryptocurrency
@@ -12,9 +15,6 @@ tags:
   - finance
   - ethereum
   - decentralized
-image: /img/2017-12-22-frontside-forecast-the-growing-importance-of-blockchains_blockchain.png
-directory_index: false
-published: true
 ---
 
 It is indisputable that cryptocurrencies like [Bitcoin](https://bitcoin.org) have brought the concept of blockchains into the mainstream. For those who have purchased Bitcoin and held, the sky appears to be the limit.  For those who have shown up later to the party, they’re either laughing it off or trying to collect as many [CryptoKitties](http://www.cryptokitties.com) as possible. This interest in blockchain-based technologies has unlocked new frontiers well beyond cryptocurrencies.
