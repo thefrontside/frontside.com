@@ -3,7 +3,8 @@ templateKey: blog-post
 title: Learning Javascript from the Command Line
 date: 2006-07-08
 author: Charles Lowell
-tags: javascript
+tags: 
+    - javascript
 ---
 
 <p>In the <a href="http://www.drunkandretired/podcast">Drunk and Retired Podcast</a>, <a href="http://www.drunkandretired.com/2006/07/08/drunkandretiredcom-podcast-episode-59-lightside-v-darkside-plus-learning-javascript-the-language-not-the-javascript-the-browser-scriptus/#comments">episode  59</a> I spoke about learning your way around javascript the language independently from the browser, and how you can use the command line tools that come with the various javascript engines to interactively explore the javascript runtime.</p>

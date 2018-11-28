@@ -3,7 +3,10 @@ templateKey: blog-post
 title: "React Native and Chill: A tale of stupid made fast"
 date: 2017-01-16 22:57 UTC
 author: "Charles Lowell"
-tags: react native, react, tvOS
+tags: 
+    - react native
+    - react
+    - tvOS
 image: /blog/2017/01/16/react-native-and-chill-a-tale-of-stupid-made-fast/monkey.png
 published: true
 ---

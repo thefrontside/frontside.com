@@ -2,7 +2,11 @@
 templateKey: blog-post
 title: Big Testing in React
 date: 2018-06-13
-tags: react, open source, bigtest, testing
+tags: 
+  - react
+  - open source
+  - bigtest
+  - testing
 author: Wil Wilsman
 image: /blog/2018/06/13/big-testing-in-react/bigtest.jpg
 description: "When we write and develop our applications, it's with the intent that somebody will use it. We write tests so we can be assured that everything in our app works as expected and is bug free. But how confident are you in your tests?"

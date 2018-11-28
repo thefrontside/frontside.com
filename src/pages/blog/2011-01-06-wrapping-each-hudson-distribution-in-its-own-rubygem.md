@@ -3,7 +3,11 @@ templateKey: blog-post
 title: Wrapping each Hudson distribution in its own RubyGem
 date: 2011-01-06
 author: Charles Lowell
-tags: ruby, hudson, java, jenkins
+tags: 
+    - ruby
+    - hudson
+    - java
+    - jenkins
 directory_index: false
 ---
 

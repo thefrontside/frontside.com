@@ -4,7 +4,11 @@ title: "Quickly Build Component Libraries with Storybook"
 description: "Design systems have become an effective way to maintain consistency and improve feature delivery time. What can developers on smaller teams do to apply design system concepts?"
 author: Jeffrey Cherewaty
 date: 2017-12-29 12:00 UTC
-tags: design systems, component library, style guide, storybook
+tags: 
+  - design systems
+  - component library
+  - style guide
+  - storybook
 image: /blog/2017/12/29/quickly-build-component-libraries-with-storybook/storybook.jpg
 directory_index: false
 published: true

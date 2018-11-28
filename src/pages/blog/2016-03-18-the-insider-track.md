@@ -2,7 +2,9 @@
 templateKey: blog-post
 title: The Insider Track
 date: 2016-03-18 16:11 UTC
-tags: conferences, community
+tags: 
+  - conferences
+  - community
 description: "A guide to using kindness to elevate your conference experience."
 image: /blog/2016/03/18/the-insider-track/fridayhugsquare.jpg
 published: true

@@ -3,7 +3,10 @@ templateKey: blog-post
 title: Implementing a Jenkins Extension Point with the Native Java API inside a Ruby Plugin
 date: 2012-01-16
 author: Charles Lowell
-tags: jenkins, ruby, java
+tags: 
+  - jenkins
+  - ruby
+  - java
 image: "http://ftp-nyc.osuosl.org/pub/jenkins/art/jenkins-logo/1024x1024/headshot.png"
 directory_index: false
 ---

@@ -4,7 +4,10 @@ title: Programming in the Wild West
 date: 2014-05-16 12:16 UTC
 author: Brandon Hays
 image: "http://cl.ly/image/0l1p1C1R2U0b/Screen%20Shot%202014-05-14%20at%202.17.49%20AM.png"
-tags: community, javascript, tdd
+tags: 
+  - community
+  - javascript
+  - tdd
 published: true
 directory_index: false
 ---

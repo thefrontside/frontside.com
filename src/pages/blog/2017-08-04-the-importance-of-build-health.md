@@ -4,7 +4,14 @@ title: How Healthy Is Your Build?
 description: "Staying healthy is a lot of work.  Maybe you hit the treadmill before going into the office, and then on the way home you pick up some organic groceries.  But be honest, you probably don't.  Thankfully, maintaining your web application's build health is much easier, and the rewards can be huge!  Take a few minutes to check your build health today: you might regret it if you don't."
 author: "Joe LaSala, Ginger Whalen, Elrick Ryan"
 date: 2017-08-04 17:43 UTC
-tags: continuous, integration, deploy, ci, cd, build, test
+tags: 
+  - continuous
+  - integration
+  - deploy
+  - ci
+  - cd
+  - build
+  - test
 image: /blog/2017/08/04/the-importance-of-build-health/creative-commons-heart.png
 directory_index: false
 published: true

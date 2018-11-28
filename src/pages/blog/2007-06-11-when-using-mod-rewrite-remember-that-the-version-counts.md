@@ -3,7 +3,8 @@ templateKey: blog-post
 title: "mod_rewrite: Remeber that the version counts"
 author: Charles Lowell
 date: 2007-06-11
-tags: tips
+tags: 
+    - tips
 directory_index: false
 ---
 

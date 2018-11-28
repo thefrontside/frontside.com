@@ -4,7 +4,10 @@ title: Ember and the future of the web
 date: 2014-02-24
 author: Brandon Hays
 image: "http://cl.ly/image/0s1M3r1p1Q1P/peabody.jpg"
-tags: ember, platforms, prognostication
+tags: 
+  - ember
+  - platforms
+  - prognostication
 published: true
 directory_index: false
 ---

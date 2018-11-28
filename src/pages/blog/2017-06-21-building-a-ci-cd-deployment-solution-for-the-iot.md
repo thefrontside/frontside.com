@@ -4,7 +4,11 @@ title: Building a Continuous Integration & Deployment Solution for the IoT.
 description: Smart homes, smart devices, smart vehicles. The Internet of Things is here! You want to be able to build software for IoT and deploy, maintain, and update it on your devices that may be located anywhere and within anything. This is the first part of our IoT setup connecting users to the Internet of Things.
 author: Elrick Ryan
 date: 2017-06-21 17:43 UTC
-tags: iot, resin.io, javascript, circleci,
+tags: 
+  - iot
+  - resin.io
+  - javascript
+  - circleci
 image: /blog/2017/06/21/building-a-ci-cd-deployment-solution-for-the-iot/main-image-iot-blog.png
 directory_index: false
 published: true

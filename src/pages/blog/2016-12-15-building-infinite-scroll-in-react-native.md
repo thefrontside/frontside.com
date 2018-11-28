@@ -3,7 +3,11 @@ templateKey: blog-post
 title: Building infinite scroll in React Native
 date: 2016-12-15 07:00 UTC
 author: "Robert DeLuca"
-tags: react native, react, infinite scroll, impagination
+tags: 
+  - react native
+  - react
+  - infinite scroll
+  - impagination
 image: /blog/2016/12/15/building-infinite-scroll-in-react-native/react-native-header.jpg
 description: Tackling infinite scroll can be hard on any platform. But thankfully React Native allows you to use base JavaScript libraries to solve problems in native apps. We're going to take Impagination.js and build an infinite scrolling list that is silky smooth and painless data management.
 cta_text: Does your team need help building complex UI in React Native? Frontside can unblock your team and ship software with confidence regularly.

@@ -2,7 +2,14 @@
 templateKey: blog-post
 title: Accessibility & Why it Matters
 date: 2016-05-19 17:50 UTC
-tags: code, frontside, accessibility, web accessibility, disability, gaad, ember-a11y
+tags: 
+  - code
+  - frontside
+  - accessibility
+  - web accessibility
+  - disability
+  - gaad
+  - ember-a11y
 image: /blog/2016/05/19/accessibility-why-it-matters/gaad.jpg
 author: Stephanie Riera
 directory_index: false

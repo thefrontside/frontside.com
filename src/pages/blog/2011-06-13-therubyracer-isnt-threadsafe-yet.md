@@ -3,7 +3,10 @@ templateKey: blog-post
 title: The Ruby Racer isn't threadsafe... yet.
 date: 2011-06-13
 author: Charles Lowell
-tags: javascript, ruby, therubyracer
+tags: 
+  - javascript
+  - ruby
+  - therubyracer
 directory_index: false
 ---
 

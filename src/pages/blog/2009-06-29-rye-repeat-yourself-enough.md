@@ -3,7 +3,8 @@ templateKey: blog-post
 title: "RYE: Repeat Yourself Enough"
 date: 2009-06-29
 author: Charles Lowell
-tags: proskillz
+tags: 
+  - proskillz
 directory_index: false
 ---
 

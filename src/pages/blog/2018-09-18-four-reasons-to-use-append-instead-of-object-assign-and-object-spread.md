@@ -3,7 +3,9 @@ templateKey: blog-post
 title: Four reasons to use append() instead of Object.assign() and Object spread
 author: Charles Lowell
 date: 2018-09-18 05:02 UTC
-tags: javascript functional-programming
+tags: 
+  - javascript
+  - functional-programming
 image: /blog/2018/09/18/four-reasons-to-use-append-instead-of-object-assign-and-object-spread/merge-sign.jpg
 description: "Object.assign is just a special case of a universal concept in functional programming. By opting to use a universal function to back this universal concept, you can inherit all kinds of awesome for free."
 cta_text: "I'm Charles, a developer at Frontside. We offer development, training and support services that will fast-track your foundations in practical functional programming for JavaScript."

@@ -4,7 +4,9 @@ title: "WCAG 2.1: What does it actually mean?"
 author: Robert DeLuca
 date: 2018-06-14 12:00 UTC
 directory_index: false
-tags: accessibility, web standards
+tags: 
+  - accessibility
+  - web standards
 image: /blog/2018/06/14/what-is-new-in-wcag-2-1/wcag-2-1-image.jpg
 description: "WCAG 2.1 has officially been put in place as a standard but what does that mean? What was added? How does this impact my site or app? In this post we break down everything new in WCAG 2.1 and put in simple terms so you can walk away armed with the knowledge of making your site more accessibile."
 cta_text: "Does your team need help complying with WCAG? There's more where this came from! Frontside can help your team implement beautiful and accessible interfaces."

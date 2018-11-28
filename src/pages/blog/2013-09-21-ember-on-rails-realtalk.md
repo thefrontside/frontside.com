@@ -3,7 +3,11 @@ templateKey: blog-post
 title: "Ember on Rails: #REALTALK"
 date: 2013-09-21
 author: Brandon Hays
-tags: talks, videos, ember, rails
+tags: 
+  - talks
+  - videos
+  - ember
+  - rails
 image: "http://cl.ly/image/0V1v3N1f2y2G/ember-on-rails-realtalk-2.png"
 published: true
 directory_index: false

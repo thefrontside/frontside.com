@@ -2,7 +2,11 @@
 templateKey: blog-post
 title: The Ruby DCamp Experience
 date: 2016-10-27 16:08 UTC
-tags: ruby, dcamp, programming, inclusiveness
+tags: 
+  - ruby
+  - dcamp
+  - programming
+  - inclusiveness
 image: /blog/2016/10/27/the-ruby-dcamp-experience/outside.JPG
 author: Stephanie Riera
 directory_index: false

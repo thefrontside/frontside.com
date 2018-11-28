@@ -3,7 +3,11 @@ templateKey: blog-post
 title: X-Select Status Update
 date: 2015-08-14 17:52 UTC
 author: Robert DeLuca
-tags: oss, ember, ember-addon, x-select
+tags: 
+  - oss
+  - ember
+  - ember-addon
+  - x-select
 published: true
 directory_index: false
 ---

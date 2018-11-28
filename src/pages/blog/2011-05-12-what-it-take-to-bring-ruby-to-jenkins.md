@@ -3,7 +3,10 @@ templateKey: blog-post
 title: What it takes to bring Ruby to Jenkins
 date: 2011-05-12
 author: Charles Lowell
-tags: java, ruby, jenkins
+tags: 
+  - java
+  - ruby
+  - jenkins
 directory_index: false
 ---
 

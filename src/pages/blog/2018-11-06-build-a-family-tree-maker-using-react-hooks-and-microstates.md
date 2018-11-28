@@ -2,7 +2,10 @@
 templateKey: blog-post
 title: Build a Family Tree maker using React Hooks and Microstates
 date: 2018-11-06 00:07 UTC
-tags: javascript, microstates, react
+tags: 
+  - javascript
+  - microstates
+  - react
 author: Taras Mankovski
 image: /blog/2018/11/06/build-a-family-tree-maker-using-react-hooks-and-microstates/family-builder.gif
 ---

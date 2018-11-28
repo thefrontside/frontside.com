@@ -3,7 +3,8 @@ templateKey: blog-post
 title: Please Stop Using Global Variables in Ruby
 date: 2008-06-25
 author: Charles Lowell
-tags: ruby
+tags: 
+    - ruby
 directory_index: false
 ---
 

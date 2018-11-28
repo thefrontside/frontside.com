@@ -5,7 +5,13 @@ author: Charles Lowell
 date: 2018-07-03 12:00 UTC
 image: /blog/2018/07/03/functional-rephrasing-using-an-async-function-functor/starry-night.jpg
 description: "Once you know that they're there, Functors pop up in all kinds of surprising places. Here we take a simple exploration of how the JavaScript async function construct is actually a Functor and how we can use that for great good."
-tags: functional-programming, functor, funcadelic, TIL, javascript, typeclasses
+tags: 
+  - functional-programming
+  - functor
+  - funcadelic
+  - TIL
+  - javascript
+  - typeclasses
 cta_text: "Is your team eager to unlock the power of true functional programming in JavaScript but doesn't know where to start?"
 cta_button: "Lets get your FP journey started"
 ---

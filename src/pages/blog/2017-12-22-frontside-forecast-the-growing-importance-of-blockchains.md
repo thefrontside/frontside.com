@@ -4,7 +4,14 @@ title: "Frontside Forecast: The Growing Importance of Blockchains"
 description: "Blockchain-based technologies are here to stay, and we can't wait to see what the future holds.  From finance to IoT and everywhere in-between: the implications of truly decentralized applications are massive.  You can count on Frontside for blockchain software development."
 author: Arash Zafarnia
 date: 2017-12-22 18:49 UTC
-tags: blockchain, cryptography, cryptocurrency, iot, finance, ethereum, decentralized
+tags: 
+  - blockchain
+  - cryptography
+  - cryptocurrency
+  - iot
+  - finance
+  - ethereum
+  - decentralized
 image: /blog/2017/12/22/frontside-forecast-the-growing-importance-of-blockchains/blockchain.png
 directory_index: false
 published: true
