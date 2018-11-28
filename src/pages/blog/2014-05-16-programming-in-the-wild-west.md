@@ -32,7 +32,7 @@ This sounds like a simple concept, even obvious, but we ignore it so much that w
 
 ### Test-first and open & closed modes
 
-![The TDD cycle](http://brandonhays.com/Pics/experiment-1.png)
+![The TDD cycle](/img/experiment-1.png)
 
 First, I should clarify that this is representative of how I've learned to define and practice test-first development, and others may have different definitions or methods.
 
@@ -60,7 +60,7 @@ The talk covers several topics, but the main point to me was that software commu
 
 To me, this looks a lot like the test-first cycle above:
 
-![The community cycle](http://brandonhays.com/Pics/experiment-2.png)
+![The community cycle](/img/experiment-2.png)
 
 **Early in a community's maturity, it may be time for a bazaar of different solutions** while everyone is simply learning the right questions to ask. What does an authentication solution look like? What about persistence? Security? Code sharing? Scalability? Deployment?
 
@@ -78,7 +78,7 @@ The good news is that after agreeing on a solution, even if it's a sub-optimal, 
 
 ### Platforms and scaffolding
 
-![Platforms and scaffolding](http://brandonhays.com/Pics/experiment-3.png)
+![Platforms and scaffolding](/img/experiment-3.png)
 
 Each new layer adds a level of abstraction, so **you need to have confidence in the layers beneath you.** In software projects, this confidence comes from good tests. In communities, the confidence tends to come from seeing a project in broad use.
 
@@ -144,7 +144,7 @@ You then have a natural break into closed-mode, solution-oriented work, and back
 
 Let's look again at the circular diagrams above. From that perspective, they look positively Sisyphean and don't tell the whole story. In reality, they are the means by which these towering platforms are built, but you have to view the circle from a third dimension to see it:
 
-![The TDD cycle, from the side](http://brandonhays.com/Pics/experiment-4.png)
+![The TDD cycle, from the side](/img/experiment-4.png)
 
 With good tests, every trip around the loop provides more capabilities on top of a trustworthy codebase. You can keep building without fear of your codebase collapsing under the weight of its own complexity.
 

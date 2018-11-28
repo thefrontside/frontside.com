@@ -36,7 +36,7 @@ initSelect2($("#tags"));
 
 But what's actually happening here is not simple (and has [security implications](http://homakov.blogspot.com/2013/05/do-not-use-rjs-like-techniques.html) that bear keeping in mind):
 
-[![](http://brandonhays.com/Pics/rjs-flow.png)](http://homakov.blogspot.com/2013/05/do-not-use-rjs-like-techniques.html)
+[![](/img/rjs-flow.png)](http://homakov.blogspot.com/2013/05/do-not-use-rjs-like-techniques.html)
 *(Credit: [Egor Homakov's blog](http://homakov.blogspot.com))*
 
 And that's a greatly simplified example. The fact is that if you're building stateful client-side interactions, you're already managing a lot of JavaScript, but your code is probably scattered across jQuery plugins, server-side rendered JavaScript, and custom JS in your assets.
@@ -65,7 +65,7 @@ I never realized how much of my thinking was shaped by the limitations of the to
 
 Let's look at the original Rails app, Basecamp:
 
-![Basecamp](http://brandonhays.com/Pics/basecamp-marked-up.png)
+![Basecamp](/img/basecamp-marked-up.png)
 
 Yes, the screenshot is outdated. This is not meant as a knock against Basecamp, which has been since rewritten, but rather an example of how most of us write our Rails apps. **Server-side MVC frameworks lay a yellow brick road right to that interface.** It's certainly representative of the majority of *my* vanilla Rails applications.
 
@@ -73,7 +73,7 @@ A few months ago, we started using the chat service Slack. I feel comfortable sa
 
 See if you can spot a direct mapping to database rows in Slack:
 
-![Slack](http://brandonhays.com/Pics/slack-marked-up.png)
+![Slack](/img/slack-marked-up.png)
 
 I sure couldn't pin it down. In fact, after downloading the standalone Slack app for OS X, I was sure that it was a native app until I right-clicked and saw "inspect element" in the menu. It's not an Ember app, but I can easily see how it would be done.
 
@@ -217,4 +217,4 @@ And if you're going to do something, why not do something awesome?
 
 Ember may not be for every problem or every developer, but if you'll give it a shot on your next project with high front-end ambitions, I promise you'll start feeling less intimidated and more like this:
 
-![](http://cl.ly/image/0K3f1t3l1c14/challenge-accepted-l.png)
+![](/img/challenge-accepted-l.png)
