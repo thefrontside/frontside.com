@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "simplecast-api-client": "1.0.2",
-    "lodash.camelcase": "4.3.0"
+    "lodash.camelcase": "4.3.0",
+    "lodash.kebabcase": "4.1.1"
   }
 }

@@ -1,18 +1,26 @@
-const assert = require('assert');
-const SimpleCastClient = require('simplecast-api-client');
-const camelCase = require('lodash.camelcase');
+const assert = require("assert");
+const SimpleCastClient = require("simplecast-api-client");
+const camelCase = require("lodash.camelcase");
+const kebabCase = require("lodash.kebabcase");
 
 const { keys } = Object;
 
 exports.sourceNodes = async (
-  { actions, createNodeId, createContentDigest },
+  {
+    actions: { createNode, createNodeField },
+    createNodeId,
+    createContentDigest
+  },
   { apiKey, podcastId }
 ) => {
-
-  assert(apiKey, `gatsby-source-simplecast requires SimpleCast API apiKey to be specified in options expected a string, received ${apiKey}`);
-  assert(podcastId, `gatsby-source-simplecast requires SimpleCast podcastId to be specified in options expected to be present, received ${podcastId}`);
-
-  const { createNode } = actions;
+  assert(
+    apiKey,
+    `gatsby-source-simplecast requires SimpleCast API apiKey to be specified in options expected a string, received ${apiKey}`
+  );
+  assert(
+    podcastId,
+    `gatsby-source-simplecast requires SimpleCast podcastId to be specified in options expected to be present, received ${podcastId}`
+  );
 
   let client = new SimpleCastClient({ apikey: apiKey });
 
@@ -28,10 +36,15 @@ exports.sourceNodes = async (
     const nodeId = createNodeId(`simplecast-episode-${episode.id}`);
     const nodeContent = JSON.stringify(episode);
 
-    const data = keys(episode).reduce((camelcased, key) => ({
-      ...camelcased,
-      [camelCase(key)]: episode[key]
-    }), {});
+    const data = keys(episode).reduce(
+      (camelcased, key) => ({
+        ...camelcased,
+        [camelCase(key)]: episode[key]
+      }),
+      {
+        slug: kebabCase(episode.title)
+      }
+    );
 
     createNode({
       ...data,
@@ -41,9 +54,9 @@ exports.sourceNodes = async (
       internal: {
         type: `SimplecastEpisode`,
         content: nodeContent,
-        contentDigest: createContentDigest(episode),
-      },
-    })
+        contentDigest: createContentDigest(episode)
+      }
+    });
   }
 
   episodes.forEach(createEpisode);

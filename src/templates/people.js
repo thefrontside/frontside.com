@@ -1,63 +1,121 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import React from "react";
+import PropTypes from "prop-types";
+import { Link, graphql } from "gatsby";
+import Layout from "../components/Layout";
+import Helmet from "react-helmet";
+import Img from "gatsby-image"
 
-export const People = ({ name, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
-
-  return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="name is-size-3 has-text-weight-bold is-bold-light">
-                {name}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-People.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
-
-const PeoplePage = ({ data }) => {
-  const { markdownRemark: post } = data
-
+const PersonPage = ({
+  data: {
+    site: {
+      siteMetadata: { title }
+    },
+    markdownRemark: {
+      frontmatter: {
+        name,
+        title: personTitle,
+        img,
+        twitter,
+        github,
+        bio
+      },
+      fields: {
+        posts,
+        episodes
+      }
+    }
+  }
+}) => {
   return (
     <Layout>
-      <People
-        contentComponent={HTMLContent}
-        name={post.frontmatter.name}
-        content={post.html}
-      />
+      <Helmet title={`Team | ${title}`} />
+      <Img fixed={img.childImageSharp.fixed} />
+      <h1>{name}</h1>
+      <div className="person-title">{personTitle}</div>
+      <p>{bio}</p>
+      <ul>
+        <li>Twitter: <a href={`https://twitter.com/${twitter}`}>{twitter}</a></li>
+        <li>GitHub: <a href={`https://github.com/${github}`}>{github}</a></li>
+      </ul>
+      {posts.length ? (
+        <div>
+          <h2>Blog Posts</h2>
+          <ul>
+            {posts.map(post => (
+              <li key={post.fields.slug}>
+                <Link to={post.fields.slug}>
+                  {post.frontmatter.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ): null}
+      {episodes.length ? (
+        <div>
+          <h2>Podcast Episodes</h2>
+          <ul>
+            {episodes.map(episode => (
+              <li key={episode.number}>{episode.title}</li>
+            ))}
+          </ul>
+        </div>
+      ) : null}
     </Layout>
-  )
-}
+  );
+};
 
-PeoplePage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
+PersonPage.propTypes = {
+  data: PropTypes.object.isRequired
+};
 
-export default PeoplePage
+export default PersonPage;
 
 export const peopleQuery = graphql`
-  query PeopleQuery($id: String!) {
+  query PersonQuery($id: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         name
+        title
+        img {
+          childImageSharp {
+            fixed(width: 300) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+        twitter
+        github
+        bio
+      }
+      fields {
+        slug
+        episodes {
+          title
+          id
+          number
+          season
+        }
+        posts {
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+            authors {
+              frontmatter {
+                title
+              }
+            }
+          }
+        }
       }
     }
   }
-`
+`;

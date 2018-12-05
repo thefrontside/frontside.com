@@ -1,12 +1,10 @@
-const _ = require('lodash')
-const path = require('path')
-const { createFilePath } = require('gatsby-source-filesystem')
-const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+const _ = require("lodash");
+const path = require("path");
+const { createFilePath } = require("gatsby-source-filesystem");
+const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
-
-  return graphql(`
+exports.createPages = async ({ actions: { createPage }, graphql }) => {
+  let result = await graphql(`
     {
       allMarkdownRemark(limit: 1000) {
         edges {
@@ -22,66 +20,97 @@ exports.createPages = ({ actions, graphql }) => {
           }
         }
       }
+      allSimplecastEpisode {
+        edges {
+          node {
+            id
+            number
+            season
+            slug
+          }
+        }
+      }
     }
-  `).then(result => {
-    if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
-      return Promise.reject(result.errors)
-    }
+  `);
 
-    const posts = result.data.allMarkdownRemark.edges
+  if (result.errors) {
+    result.errors.forEach(e => console.error(e.toString()));
+    throw result.errors;
+  }
 
-    posts.forEach(edge => {
-      const id = edge.node.id
+  const posts = result.data.allMarkdownRemark.edges;
+
+  posts.forEach(
+    ({
+      node: {
+        id,
+        fields: { slug },
+        frontmatter: { tags, templateKey }
+      }
+    }) =>
       createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
+        path: slug,
+        tags: tags,
+        component: path.resolve(`src/templates/${String(templateKey)}.js`),
         // additional data can be passed via context
         context: {
-          id,
-        },
+          id
+        }
       })
-    })
+  );
 
-    // Tag pages:
-    let tags = []
-    // Iterate through each post, putting all found tags into `tags`
-    posts.forEach(edge => {
-      if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags)
+  // Tag pages:
+  let tags = posts.reduce((acc, { node: { frontmatter: { tags } } }) => {
+    if (tags) {
+      return [...acc, ...tags];
+    } else {
+      return acc;
+    }
+  }, []);
+
+  // Eliminate duplicate tags
+  tags = _.uniq(tags);
+
+  // Make tag pages
+  tags.forEach(tag =>
+    createPage({
+      path: `/tags/${_.kebabCase(tag)}/`,
+      component: path.resolve(`src/templates/tags.js`),
+      context: {
+        tag
       }
     })
-    // Eliminate duplicate tags
-    tags = _.uniq(tags)
+  );
 
-    // Make tag pages
-    tags.forEach(tag => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`
 
-      createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
-        context: {
-          tag,
-        },
-      })
-    })
-  })
-}
+  result.data.allSimplecastEpisode.edges.forEach(({ node: {
+    id,
+    season,
+    number,
+    slug
+  }}) => createPage({
+    path: `/podcast/${slug}/`,
+    component: path.resolve('src/templates/episode.js'),
+    context: {
+      id,
+      season,
+      number
+    }
+  }))
+
+  return result;
+};
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
-  fmImagesToRelative(node) // convert image paths for gatsby images
+  const { createNodeField } = actions;
+  fmImagesToRelative(node); // convert image paths for gatsby images
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
       node,
-      value,
-    })
+      value
+    });
   }
-}
+};
