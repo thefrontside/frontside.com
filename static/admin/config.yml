@@ -21,6 +21,9 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "CTA Text", name: "cta_text", widget: "text"}
+      - {label: "CTA Button", name: "cta_button", widget: "text"}
+      - {label: "Description", name: "cta_text", widget: "text"}
 
   - name: "people"
     label: "People"

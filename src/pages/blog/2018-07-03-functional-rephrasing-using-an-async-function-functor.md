@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Functional Rephrasing Using an Async Function Functor
 date: 2018-07-03T16:00:00.000Z
+author: Charles Lowell
 description: >-
   Once you know that they're there, Functors pop up in all kinds of surprising
   places. Here we take a simple exploration of how the JavaScript async function
@@ -13,6 +14,11 @@ tags:
   - TIL
   - javascript
   - typeclasses
+cta_text: >-
+  Is your team eager to unlock the power of true functional programming in 
+  JavaScript but doesn't know where to start?
+cta_button: "Lets get your FP journey started"
+image: /img/2018-07-03-functional-rephrasing-using-an-async-function-functor_starry-night.jpg
 ---
 
 One of my favorite things about the [the math framework][1] is that it

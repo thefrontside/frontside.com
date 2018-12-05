@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: Build a Family Tree maker using React Hooks and Microstates
 date: 2018-11-06T05:00:00.000Z
+author: Taras Mankovski
 description: >-
   If you use React, you probably know about the React Hooks RFC that was
   introduced at ReactConf. It’s an exciting proposal because it promises to
@@ -13,6 +14,7 @@ tags:
   - javascript
   - microstates
   - react
+image: /img/2018-06-14-what-is-new-in-wcag-2-1_wcag-2-1-image.jpg
 ---
 ![Demo of Family Builder Component](/img/2018-11-06-build-a-family-tree-maker-using-react-hooks-and-microstates_family-builder.gif)
 
