@@ -3,6 +3,12 @@ module.exports = {
     title: 'Gatsby + Netlify CMS Starter',
     description: 'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
   },
+  mapping: {
+    "MarkdownRemark.fields.authors": "MarkdownRemark",
+    "MarkdownRemark.fields.posts": "MarkdownRemark",
+    "MarkdownRemark.fields.episodes": "SimplecastEpisode",
+    "SimplecastEpisode.fields.authors": "MarkdownRemark",
+  },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
@@ -64,6 +70,14 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    {
+      resolve: "gatsby-source-simplecast",
+      options: {
+        apiKey: process.env.SIMPLECAST_API,
+        podcastId: 96
+      },
+    },
+    'gatsby-connect-authors',
     'gatsby-plugin-purgecss', // must be after other CSS plugins
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
