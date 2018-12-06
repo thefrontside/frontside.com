@@ -15,7 +15,7 @@ function EpisodeRoute({
     <Layout>
       <Helmet title={`${title} | ${siteTitle}`} />
       <h1>{title}</h1>
-      <p dangerouslySetInnerHTML={{ __html: longDescriptionHtml }} />
+      <div dangerouslySetInnerHTML={{ __html: longDescriptionHtml }} />
       <ul>
         {authors.map(author => (
           <li key={author.fields.slug}>
