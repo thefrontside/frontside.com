@@ -8,14 +8,14 @@ function EpisodeRoute({
     site: {
       siteMetadata: { title: siteTitle }
     },
-    simplecastEpisode: { title, description, authors }
+    simplecastEpisode: { title, longDescriptionHtml, authors }
   }
 }) {
   return (
     <Layout>
       <Helmet title={`${title} | ${siteTitle}`} />
       <h1>{title}</h1>
-      <p>{description}</p>
+      <p dangerouslySetInnerHTML={{ __html: longDescriptionHtml }} />
       <ul>
         {authors.map(author => (
           <li key={author.fields.slug}>
@@ -42,6 +42,7 @@ export const episodePageQuery = graphql`
       number
       title
       description
+      longDescriptionHtml
       publishedAt
       audioUrl
       sharingUrl

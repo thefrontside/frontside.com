@@ -2,8 +2,11 @@ const assert = require("assert");
 const SimpleCastClient = require("simplecast-api-client");
 const camelCase = require("lodash.camelcase");
 const kebabCase = require("lodash.kebabcase");
+const { EPISODE_TYPE } = require('./constants');
 
 const { keys } = Object;
+
+exports.setFieldsOnGraphQLNodeType = require("./extend-node-type").setFieldsOnGraphQLNodeType;
 
 exports.sourceNodes = async (
   {
@@ -52,7 +55,7 @@ exports.sourceNodes = async (
       parent: null,
       children: [],
       internal: {
-        type: `SimplecastEpisode`,
+        type: EPISODE_TYPE,
         content: nodeContent,
         contentDigest: createContentDigest(episode)
       }

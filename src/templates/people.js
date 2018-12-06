@@ -56,7 +56,11 @@ const PersonPage = ({
           <h2>Podcast Episodes</h2>
           <ul>
             {episodes.map(episode => (
-              <li key={episode.number}>{episode.title}</li>
+              <li key={episode.number}>
+                <Link to={`/podcast/${episode.slug}`}>
+                  {episode.title}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
@@ -101,6 +105,7 @@ export const peopleQuery = graphql`
           id
           number
           season
+          slug
         }
         posts {
           frontmatter {
