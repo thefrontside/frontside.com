@@ -62,6 +62,7 @@ export const episodesQuery = graphql`
           season
           title
           description
+          longDescriptionHtml
           slug
           authors {
             frontmatter {
