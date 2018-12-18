@@ -16,7 +16,7 @@ export default function IndexPage({ data: { allMarkdownRemark, allSimplecastEpis
         <p>We help your team build web applications at scale.</p>
       </section>
       <section>
-        <div class="column">
+        <div className="column">
           <p>
             When your framework decisions today will impact the state of your
             product—and team—for years to come, we’ve got your back.
@@ -28,7 +28,7 @@ export default function IndexPage({ data: { allMarkdownRemark, allSimplecastEpis
             them.
           </p>
         </div>
-        <div class="column">
+        <div className="column">
           <Link to="services">See how we can Help</Link>
         </div>
       </section>
@@ -63,7 +63,7 @@ export default function IndexPage({ data: { allMarkdownRemark, allSimplecastEpis
         <Link to="about">Get to know us</Link>
       </section>
       <section>
-        <div class="column">
+        <div className="column">
           <h3>Latest on the blog</h3>
           <ul>
             {posts.map(post => (
@@ -82,7 +82,7 @@ export default function IndexPage({ data: { allMarkdownRemark, allSimplecastEpis
             ))}
           </ul>
         </div>
-        <div class="column">
+        <div className="column">
           <h3>Latest on the podcast</h3>
           <ul>
             {episodes.map(episode => (
