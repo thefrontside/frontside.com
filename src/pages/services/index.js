@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
+import Layout from "../../components/Layout";
+import illya from '../../img/illya-busigin.jpg';
+import benji from '../../img/benji-shine.jpg';
+import jason from '../../img/jason-jaynes.jpg';
 
 export default function Services() {
   return (
-    <>
+    <Layout>
       <section>
         <h1>
           We bring deep expertise in web UI platforms to help your application
@@ -72,7 +76,7 @@ export default function Services() {
         </div>
       </section>
       <section>
-        <div className="column">[portrait]</div>
+        <div className="column"><img src={illya} alt="Ilya Busigin portrait"/></div>
         <div className="column">
           <p>
             “We had engineers with no previous web development or frontend
@@ -82,7 +86,7 @@ export default function Services() {
           </p>
           Ilya Busigin | iNGAGED
         </div>
-        <div className="column">[portrait]</div>
+        <div className="column"><img src={benji} alt="Benjamin Shine portrait"/></div>
         <div className="column">
           <p>
             “They introduced us to a new way of thinking about and working with
@@ -94,7 +98,7 @@ export default function Services() {
           </p>
           Benjamin Shine | AltSchool
         </div>
-        <div className="column">[portrait]</div>
+        <div className="column"><img src={jason} alt="Jason Jaynes portrait" /></div>
         <div className="column">
           <p>
             “Everything was well documented, well tested and followed the
@@ -149,9 +153,12 @@ export default function Services() {
       </section>
       <section>
         <h2>Get ready to lead the best projects of your life</h2>
-        <p>Reach out today to learn how we can help your organization move faster, without compromising quality</p>
+        <p>
+          Reach out today to learn how we can help your organization move
+          faster, without compromising quality
+        </p>
         <Link to="/contact">Get in touch</Link>
       </section>
-    </>
+    </Layout>
   );
 }
