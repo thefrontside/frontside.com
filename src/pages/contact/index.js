@@ -55,7 +55,7 @@ export default class Index extends React.Component {
                 <span className="postal-code">78717</span>
                 <span className="country-name">United States of America</span>
               </div>
-              <div className="tel">+1 (800) 493-4589</div>
+              <div className="tel">&#43;1 (800) 493-4589</div>
             </div>
           </div>
           <div className="column">
