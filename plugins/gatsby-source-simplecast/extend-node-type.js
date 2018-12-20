@@ -1,4 +1,4 @@
-const { GraphQLString } = require("graphql");
+const { GraphQLString } = require("gatsby/graphql");
 const Remark = require("remark");
 const toHAST = require("mdast-util-to-hast");
 const hastToHTML = require("hast-util-to-html");
