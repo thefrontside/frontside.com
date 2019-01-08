@@ -1,0 +1,64 @@
+@import '../variables';
+
+.button {
+  display: inline-block;
+  border-radius: var(--space-half);
+  padding: var(--space-single) var(--space-double);
+  margin-top: var(--space-triple);
+  font-size: var(--size-small);
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  line-height: 1rem;
+
+  &.is-primary {
+    background: var(--color-pink);
+    color: white;
+  }
+
+  &.is-secondary {
+    background: var(--color-light-blue);
+    color: white;
+  }
+
+  &.is-tertiary {
+    color: var(--color-pink);
+  }
+
+  span {
+    vertical-align: middle;
+  }
+}
+
+.button-group {
+  margin-top: var(--space-triple);
+  display: flex;
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.align-start {
+    align-items: flex-start;
+  }
+
+  &.align-end {
+    align-items: flex-end;
+  }
+
+  &.justify-center {
+    justify-content: center;
+  }
+
+  &.justify-between {
+    justify-content: space-between;
+  }
+
+  &.justify-around {
+    justify-content: space-around;
+  }
+
+  .button {
+    margin: 0 var(--space-half) 0;
+  }
+}

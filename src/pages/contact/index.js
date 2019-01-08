@@ -1,6 +1,6 @@
 import React from "react";
 import { navigate } from "gatsby-link";
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout";
 
 function encode(data) {
   return Object.keys(data)
@@ -46,7 +46,7 @@ export default class Index extends React.Component {
               <div>
                 <a className="email" href="mailto:info@frontside.io">
                   info@frontside.io
-                </a>                
+                </a>
               </div>
               <div className="adr">
                 <div className="street-address">PO Box is #170249</div>

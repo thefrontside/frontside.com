@@ -1,0 +1,21 @@
+@import '../variables';
+
+.home-hero {
+  padding:
+    var(--space-double-vw)
+    var(--space-half-vw)
+    var(--space-single-vw);
+  box-sizing: content-box;
+  max-width: 50rem;
+  margin: 0 auto;
+
+  h1 {
+    font-size: var(--size-xxl);
+    margin-bottom: var(--space-single);
+  }
+
+  p {
+    font-size: var(--size-med-lg);
+    font-style: italic;
+  }
+}

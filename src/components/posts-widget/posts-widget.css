@@ -1,0 +1,99 @@
+@import '../variables';
+
+.posts-widget {
+  display: flex;
+  flex-direction: column;
+
+  @media (--large-up) {
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+  }
+
+  @media (--xl-up) {
+    padding-right: var(--space-half-vw);
+    padding-left: var(--space-half-vw);
+  }
+
+  &:not(:last-child) {
+    @media (--medium-up) {
+      padding-bottom: 0;
+    }
+
+    @media (--large-up) {
+      padding-bottom: var(--space-one-half-vw);
+    }
+  }
+
+  &:nth-child(even) {
+    align-items: flex-end;
+  }
+
+  h2 {
+    margin-bottom: var(--space-double);
+  }
+
+  & > * {
+    max-width: 33.75rem;
+    width: 100%;
+  }
+}
+
+.posts-widget-list {
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.posts-widget-entry {
+  margin-bottom: var(--space-single);
+}
+
+.posts-widget-title {
+  color: var(--color-dark-blue);
+  font-family: var(--font-serif);
+  font-size: var(--size-medium);
+  margin-bottom: var(--space-half);
+}
+
+.posts-widget-meta {
+  color: var(--color-light-gray);
+  font-family: var(--font-sans-serif);
+  font-size: var(--size-small);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.posts-widget-authors a {
+  color: var(--color-light-blue);
+
+  &:not(:last-child)::after {
+    content: ", ";
+  }
+}
+
+.posts-widget-date {
+  display: inline;
+  white-space: nowrap;
+
+  &::before {
+    content: " | ";
+    margin: 0 0.125em;
+  }
+}
+
+.rarr {
+  background: no-repeat center 100%;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16'><path d='M6,4L10,8L6,12' fill='none' stroke='%23F74D7B' stroke-width='2'/></svg>");
+  display: inline-block;
+  margin-left: 0.25em;
+  width: 1em;
+  height: 1em;
+}

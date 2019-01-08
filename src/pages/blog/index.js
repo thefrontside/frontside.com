@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout";
 
 export default class BlogPage extends React.Component {
   render() {
