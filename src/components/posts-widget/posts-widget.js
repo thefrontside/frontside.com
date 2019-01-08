@@ -5,7 +5,7 @@ import { Link } from 'gatsby';
 import './posts-widget.css';
 import Text from '../text';
 import Content from '../content';
-import Button, { ButtonGroup } from '../Button';
+import Button, { ButtonGroup } from '../button';
 
 PostsWidget.propTypes = {
   heading: PropTypes.string.isRequired,
