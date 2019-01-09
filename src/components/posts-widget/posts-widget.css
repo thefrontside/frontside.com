@@ -59,6 +59,10 @@
 
 .posts-widget-entry {
   margin-bottom: var(--space-single);
+
+  @media (--medium-up) {
+    margin-bottom: var(--space-one-half);
+  }
 }
 
 .posts-widget-title {

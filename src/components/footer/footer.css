@@ -50,10 +50,6 @@
     font-size: var(--size-medium);
     font-weight: 600;
     line-height: 1;
-
-    @media (--medium-up) {
-      font-size: var(--size-base);
-    }
   }
 }
 

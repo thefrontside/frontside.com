@@ -95,7 +95,7 @@ $navbar-height: calc($logo-height + ($navbar-padding * 2));
     font-size: var(--size-med-lg);
 
     @media (--medium-up) {
-      font-size: var(--size-base);
+      font-size: var(--size-med-sm);
     }
   }
 }

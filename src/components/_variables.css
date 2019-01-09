@@ -66,3 +66,16 @@
 @custom-media --medium-up (min-width: 768px);
 @custom-media --large-up (min-width: 1024px);
 @custom-media --xl-up (min-width: 1440px);
+
+@media (--medium-up) {
+  :root {
+    --size-scale: 1.2;
+    --size-base: 1.25rem;
+  }
+}
+
+@media (--large-up) {
+  :root {
+    --space-single-vw: 7.5vw;
+  }
+}
