@@ -18,6 +18,7 @@ export default class BlogPage extends React.Component {
             slug: node.fields.slug,
             title: node.frontmatter.title,
             date: node.frontmatter.date,
+            excerpt: node.excerpt,
             authors: node.fields.authors.map(author => ({
               slug: author.fields.slug,
               name: author.frontmatter.name
@@ -45,7 +46,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt(pruneLength: 200)
           id
           fields {
             slug

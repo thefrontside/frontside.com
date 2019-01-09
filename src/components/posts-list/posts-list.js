@@ -15,6 +15,7 @@ PostsList.propTypes = {
       slug: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
+      excerpt: PropTypes.string.isRequired,
       authors: PropTypes.arrayOf(
         PropTypes.shape({
           slug: PropTypes.string.isRequired,
@@ -25,7 +26,7 @@ PostsList.propTypes = {
   ).isRequired
 };
 
-export default function PostsList({ heading, linkTo, posts }) {
+export default function PostsList({ heading, posts }) {
   return (
     <Content className="posts-list">
       <Text tag="h2" align="center">
@@ -34,13 +35,12 @@ export default function PostsList({ heading, linkTo, posts }) {
       <ul className="posts-list-list">
         {posts.map(post => (
           <li key={post.id} className="posts-list-entry">
-            <h3 className="posts-list-title">
+            <Text tag="h3" className="posts-list-title">
               <Link to={post.slug}>
-                <Text>{post.title}</Text>
+                {post.title}
               </Link>
-            </h3>
-
-            <p className="posts-list-meta">
+            </Text>
+            <Text tag="p" className="posts-list-meta">
               <span className="posts-list-authors">
                 {post.authors.map((author, i) => (
                   <Link key={i} to={author.slug}>
@@ -50,7 +50,13 @@ export default function PostsList({ heading, linkTo, posts }) {
               </span>
 
               <span className="posts-list-date">{post.date}</span>
-            </p>
+            </Text>
+            <Text tag="p">
+              {post.excerpt}
+            </Text>
+            <Link to={post.slug}>
+              Keep Reading →
+            </Link>
           </li>
         ))}
       </ul>
