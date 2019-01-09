@@ -17,12 +17,12 @@ export default function Text({
 }) {
   return (
     <Component {...props}>
-      {widowText(children, widows)}
+      {typeof children === 'string' ? widowText(children, widows) : children}
     </Component>
   );
 }
 
-function widowText(text, count) {
+function widowText(text = '', count) {
   let words = text.split(' ');
   let safelen = words.length - count;
   let begin = words.slice(0, safelen).join(' ');
