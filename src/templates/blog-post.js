@@ -5,24 +5,27 @@ import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Content, { HTMLContent } from "../components/content";
+import Text from '../components/text';
 
-export const BlogPostTemplate = ({ content, contentComponent, tags }) => {
-  const PostContent = contentComponent || Content;
-
+export const BlogPostTemplate = ({ content, tags, title }) => {
   tags = Array.isArray(tags) ? tags : [tags].filter(Boolean);
 
   return (
-    <>
-      <PostContent content={content} />
-      <h4>Tags</h4>
-      <ul className="taglist">
-        {tags.map(tag => (
-          <li key={tag + `tag`}>
-            <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-          </li>
+    <Content>
+      <Text tag="h1">{title}</Text>
+      <Text tag="p">
+        Tags:{" "}
+        {tags.map((tag, i) => (
+          <>
+            <Link key={`tag-${tag}`} to={`/tags/${kebabCase(tag)}/`}>
+              {tag}
+            </Link>
+            {tags.length === i - 1 ? null : ", "}
+          </>
         ))}
-      </ul>
-    </>
+      </Text>
+      <HTMLContent content={content} />
+    </Content>
   );
 };
 
@@ -35,13 +38,13 @@ BlogPostTemplate.propTypes = {
 };
 
 const BlogPost = ({ data }) => {
+  console.log(arguments);
   const { markdownRemark: post } = data;
 
   return (
     <Layout>
       <BlogPostTemplate
         content={post.html}
-        contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
           <Helmet titleTemplate="%s | Blog">
