@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Children } from 'react';
 import PropTypes from 'prop-types';
 
 Text.propTypes = {
   tag: PropTypes.string,
   widows: PropTypes.number,
   component: PropTypes.node,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.string.isRequired
 };
 
 export default function Text({
@@ -17,15 +17,23 @@ export default function Text({
 }) {
   return (
     <Component {...props}>
-      {typeof children === 'string' ? widowText(children, widows) : children}
+      {Children.map(children, (child, i) => (
+        (i === children.length - 1)
+          ? widowText(child, widows)
+          : child
+      ))}
     </Component>
   );
 }
 
-function widowText(text = '', count) {
-  let words = text.split(' ');
-  let safelen = words.length - count;
-  let begin = words.slice(0, safelen).join(' ');
-  let end = words.slice(safelen).join('\u00A0');
-  return `${begin} ${end}`;
+function widowText(text, count) {
+  if (typeof text === 'string') {
+    let words = text.split(' ');
+    let safelen = words.length - count;
+    let begin = words.slice(0, safelen).join(' ');
+    let end = words.slice(safelen).join('\u00A0');
+    return `${begin} ${end}`;
+  } else {
+    return text;
+  }
 }
