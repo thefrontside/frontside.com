@@ -20,7 +20,7 @@ export const BlogPostTemplate = ({ content, tags, title }) => {
             <Link key={`tag-${tag}`} to={`/tags/${kebabCase(tag)}/`}>
               {tag}
             </Link>
-            {tags.length === i - 1 ? null : ", "}
+            {tags.length > i + 1 ? ", " : null}
           </>
         ))}
       </Text>
