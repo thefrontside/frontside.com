@@ -1,7 +1,41 @@
 @import '../variables';
 
 .team-list {
+  margin: var(--space-triple) calc(-1 * var(--space-single)) 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+
+  li {
+    font-size: var(--size-med-lg);
+    margin: 0 var(--space-single) var(--space-triple);
+    max-width: 15rem;
+    width: 100%;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+.team-name {
+  text-decoration: none;
+  font-family: var(--font-sans-serif);
+  font-size: var(--size-med-lg);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  /* scaled from the current scale */
+  font-size: calc(1em / var(--size-scale));
+}
+
+.team-img {
+  border: var(--space-half) solid var(--color-light-blue);
+  margin-bottom: var(--space-half);
+  /* 1:1 aspect ratio */
+  padding-top: 100%;
+
+  img {
+    width: 100%;
+  }
 }
