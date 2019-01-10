@@ -6,6 +6,7 @@
   padding: var(--space-single) var(--space-double);
   margin-top: var(--space-triple);
   font-size: var(--size-small);
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.1em;

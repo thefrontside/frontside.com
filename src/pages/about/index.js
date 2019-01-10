@@ -98,7 +98,9 @@ const AboutPage = ({
           page apps faster than any similar solutions available today.
         </Text>
         <ButtonGroup justify="center">
-          <Button to="/work">Learn more about our work</Button>
+          <Button to="/work">
+            <Text>Learn more about our work</Text>
+          </Button>
         </ButtonGroup>
       </Content>
 
