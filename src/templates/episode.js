@@ -2,32 +2,40 @@ import React from "react";
 import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
+import Content from "../components/content";
+import Text from "../components/text";
 
-function EpisodeRoute({
+export default function EpisodeRoute({
   data: {
     site: {
       siteMetadata: { title: siteTitle }
     },
-    simplecastEpisode: { title, longDescriptionHtml, authors }
+    simplecastEpisode: { title, longDescriptionHtml, authors, publishedAt }
   }
 }) {
   return (
     <Layout>
       <Helmet title={`${title} | ${siteTitle}`} />
-      <h1>{title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: longDescriptionHtml }} />
-      <ul>
-        {authors.map(author => (
-          <li key={author.fields.slug}>
-            <Link to={author.fields.slug}>{author.frontmatter.name}</Link>
-          </li>
-        ))}
-      </ul>
+      <Content>
+        <Text tag="h1">{title}</Text>
+        <Text tag="p">
+          Hosts:{" "}
+          {authors.map((author, i) => (
+            <span key={author.fields.slug}>
+              <Link to={author.fields.slug}>
+                {author.frontmatter.name}
+              </Link>
+              {authors.length > i + 1 ? ", " : null}
+            </span>
+          ))}
+          <br />
+          Published on: {new Date(publishedAt).toLocaleDateString("en-US")}
+        </Text>
+        <div dangerouslySetInnerHTML={{ __html: longDescriptionHtml }} />
+      </Content>
     </Layout>
   );
 }
-
-export default EpisodeRoute;
 
 export const episodePageQuery = graphql`
   query EpisodePage($id: String!) {
