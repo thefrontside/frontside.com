@@ -1,0 +1,7 @@
+@import '../variables';
+
+.team-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
