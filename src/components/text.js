@@ -5,7 +5,7 @@ Text.propTypes = {
   tag: PropTypes.string,
   widows: PropTypes.number,
   component: PropTypes.node,
-  children: PropTypes.string.isRequired
+  children: PropTypes.node.isRequired
 };
 
 export default function Text({
@@ -15,10 +15,12 @@ export default function Text({
   children,
   ...props
 }) {
+  let childCount = Children.count(children);
+
   return (
     <Component {...props}>
       {Children.map(children, (child, i) => (
-        (i === children.length - 1)
+        (i === childCount - 1)
           ? widowText(child, widows)
           : child
       ))}
@@ -31,9 +33,15 @@ function widowText(text, count) {
     let words = text.split(' ');
     let safelen = words.length - count;
     let begin = words.slice(0, safelen).join(' ');
-    let end = words.slice(safelen).join('\u00A0');
+
+    // replace hyphens with non-breaking hyphens
+    let end = words.slice(safelen).map(word => {
+      return word.replace('-', '\u2011');
+    }).join('\u00A0');
+
     return `${begin} ${end}`;
   } else {
+    console.log('text=', text);
     return text;
   }
 }

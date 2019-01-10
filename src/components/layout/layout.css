@@ -22,6 +22,11 @@ input, button {
   background: none;
 }
 
+/* required for picture element */
+picture {
+  position: initial;
+}
+
 /* Typography */
 h1, h2, h3 {
   line-height: 1.375;
@@ -50,6 +55,10 @@ p {
   font-size: var(--size-base);
   margin-bottom: var(--space-one-half);
   color: var(--color-gray);
+}
+
+a {
+  color: var(--color-pink);
 }
 
 /* Utility Classes */
