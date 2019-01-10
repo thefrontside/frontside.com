@@ -4,7 +4,7 @@ import Img from "gatsby-image";
 
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/layout";
-import HomeHero from "../../components/home-hero";
+import Hero from "../../components/hero";
 import Text from "../../components/text";
 import Content from "../../components/content";
 import Button, { ButtonGroup } from "../../components/button";
@@ -22,7 +22,8 @@ const AboutPage = ({
   return (
     <Layout>
       <Helmet title={`About | ${title}`} />
-      <HomeHero
+
+      <Hero
         heading={
           <Text>
             Bringing predictability to web application projects since 2005

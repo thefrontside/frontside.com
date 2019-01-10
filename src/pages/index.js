@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
-import HomeHero from '../components/home-hero';
+import Hero from '../components/hero';
 import Content from '../components/content';
 import Text from '../components/text';
 import Button, { ButtonGroup } from '../components/button';
@@ -26,7 +26,7 @@ export default function IndexPage({
 }) {
   return (
     <Layout>
-      <HomeHero
+      <Hero
         heading={(
           <Text>
             Build a better platform—without the missteps, timeline setbacks, or

@@ -1,6 +1,6 @@
 @import '../variables';
 
-.home-hero {
+.hero {
   padding:
     var(--space-double-vw)
     var(--space-half-vw)
@@ -11,10 +11,10 @@
 
   h1 {
     font-size: var(--size-xxl);
-    margin-bottom: var(--space-single);
   }
 
   p {
+    margin: var(--space-single) 0 0;
     font-size: var(--size-med-lg);
     font-style: italic;
   }
