@@ -22,6 +22,11 @@ input, button {
   background: none;
 }
 
+/* required for picture element */
+picture {
+  position: initial;
+}
+
 /* Typography */
 h1, h2, h3 {
   line-height: 1.375;
