@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../../components/layout";
-import HomeHero from "../../components/home-hero";
+import Hero from "../../components/hero";
 import Content from "../../components/content";
 import Text from "../../components/text";
 import Button, { ButtonGroup } from "../../components/button";
@@ -12,7 +12,7 @@ import jason from "../../img/jason-jaynes.jpg";
 export default function Services() {
   return (
     <Layout>
-      <HomeHero
+      <Hero
         heading={
           <Text>
             We bring deep expertise in web UI platforms to help your application
@@ -20,6 +20,7 @@ export default function Services() {
           </Text>
         }
       />
+
       <Content>
         <Text tag="p">
           When you have multiple teams building on the same platform, poor
@@ -31,6 +32,7 @@ export default function Services() {
           cohesive frontend stack.
         </Text>
       </Content>
+
       <Content>
         <Text tag="h2">Build a better platform for your applications</Text>
         <Text tag="p">Here’s how we can help your organization</Text>
