@@ -1,0 +1,12 @@
+@import '../variables';
+
+.content-container {
+  padding: var(--space-one-half-vw) var(--space-half-vw);
+  box-sizing: content-box;
+  max-width: 50rem;
+  margin: 0 auto;
+
+  @media (--xl-up) {
+    padding: var(--space-single-vw) var(--space-half-vw);
+  }
+}

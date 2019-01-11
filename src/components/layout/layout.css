@@ -1,0 +1,83 @@
+@import '../fonts';
+@import '../variables';
+
+/* Default document styles */
+html {
+  font: 100%/1.8 var(--font-sans-serif);
+  background: white;
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+input, button {
+  appearance: none;
+  border: none;
+  font: inherit;
+  background: none;
+}
+
+/* required for picture element */
+picture {
+  position: initial;
+}
+
+/* Typography */
+h1, h2, h3 {
+  line-height: 1.375;
+  font-weight: 800;
+  letter-spacing: 0.025em;
+}
+
+h1 {
+  font-size: var(--size-xl);
+  margin-bottom: var(--space-one-half);
+}
+
+h2 {
+  font-size: var(--size-large);
+  margin-bottom: var(--space-single);
+}
+
+h3 {
+  font-size: var(--size-med-lg);
+  margin-bottom: var(--space-single);
+  font-weight: 700;
+}
+
+p {
+  font-family: var(--font-serif);
+  font-size: var(--size-base);
+  margin-bottom: var(--space-one-half);
+  color: var(--color-gray);
+}
+
+a {
+  color: var(--color-pink);
+}
+
+/* Utility Classes */
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}

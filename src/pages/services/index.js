@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout";
 import illya from '../../img/illya-busigin.jpg';
 import benji from '../../img/benji-shine.jpg';
 import jason from '../../img/jason-jaynes.jpg';
