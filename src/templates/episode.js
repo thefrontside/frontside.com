@@ -10,27 +10,36 @@ export default function EpisodeRoute({
     site: {
       siteMetadata: { title: siteTitle }
     },
-    simplecastEpisode: { title, longDescriptionHtml, authors, publishedAt }
+    simplecastEpisode: { title, longDescriptionHtml, authors, publishedAt, sharingUrl }
   }
 }) {
+  let [,shareId] = sharingUrl.match(/.*\/(.*)$/);
+
   return (
     <Layout>
       <Helmet title={`${title} | ${siteTitle}`} />
       <Content>
         <Text tag="h1">{title}</Text>
-        <Text tag="p">
+        <iframe
+          frameBorder="0"
+          height="200px"
+          scrolling="no"
+          seamless
+          src={`https://embed.simplecast.com/${shareId}?color=f5f5f5`}
+          width="100%"
+          title="Podcast episode player"
+        />
+        <p>
           Hosts:{" "}
           {authors.map((author, i) => (
             <span key={author.fields.slug}>
-              <Link to={author.fields.slug}>
-                {author.frontmatter.name}
-              </Link>
+              <Link to={author.fields.slug}>{author.frontmatter.name}</Link>
               {authors.length > i + 1 ? ", " : null}
             </span>
           ))}
           <br />
           Published on: {new Date(publishedAt).toLocaleDateString("en-US")}
-        </Text>
+        </p>
         <div dangerouslySetInnerHTML={{ __html: longDescriptionHtml }} />
       </Content>
     </Layout>
@@ -46,13 +55,10 @@ export const episodePageQuery = graphql`
     }
     simplecastEpisode(id: { eq: $id }) {
       id
-      season
-      number
       title
       description
       longDescriptionHtml
       publishedAt
-      audioUrl
       sharingUrl
       authors {
         frontmatter {

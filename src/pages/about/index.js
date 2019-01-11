@@ -1,7 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import Hero from "../../components/hero";
 import Text from "../../components/text";
