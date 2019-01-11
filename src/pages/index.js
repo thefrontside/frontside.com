@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 import Hero from '../components/hero';
 import Content from '../components/content';
 import Text from '../components/text';
+import Box from '../components/box';
 import Button, { ButtonGroup } from '../components/button';
 import HomeLogos, { Logo } from '../components/home-logos';
 import PostsWidget from '../components/posts-widget';
@@ -82,35 +83,36 @@ export default function IndexPage({
         </ButtonGroup>
       </Content>
 
-      <PostsWidget
-        heading="Latest on the blog"
-        linkTo="/blog"
-        posts={posts.map(({ node }) => ({
-          id: node.id,
-          slug: node.fields.slug,
-          title: node.frontmatter.title,
-          date: node.frontmatter.date,
-          authors: node.fields.authors.map(author => ({
-            slug: author.fields.slug,
-            name: author.frontmatter.name
-          }))
-        }))}
-      />
-
-      <PostsWidget
-        heading="Latest on the podcast"
-        linkTo="/podcast"
-        posts={episodes.map(({ node })=> ({
-          id: node.id,
-          slug: `/podcast/${node.slug}`,
-          title: node.title,
-          date: node.publishedAt,
-          authors: node.authors.map(author => ({
-            slug: author.fields.slug,
-            name: author.frontmatter.name
-          }))
-        }))}
-      />
+      <Box direction="row" justify="center">
+        <PostsWidget
+          heading="Latest on the blog"
+          linkTo="/blog"
+          posts={posts.map(({ node }) => ({
+            id: node.id,
+            slug: node.fields.slug,
+            title: node.frontmatter.title,
+            date: node.frontmatter.date,
+            authors: node.fields.authors.map(author => ({
+              slug: author.fields.slug,
+              name: author.frontmatter.name
+            }))
+          }))}
+        />
+        <PostsWidget
+          heading="Latest on the podcast"
+          linkTo="/podcast"
+          posts={episodes.map(({ node })=> ({
+            id: node.id,
+            slug: `/podcast/${node.slug}`,
+            title: node.title,
+            date: node.publishedAt,
+            authors: node.authors.map(author => ({
+              slug: author.fields.slug,
+              name: author.frontmatter.name
+            }))
+          }))}
+        />
+      </Box>
     </Layout>
   );
 }
