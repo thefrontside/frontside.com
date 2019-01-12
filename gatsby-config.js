@@ -91,6 +91,13 @@ module.exports = {
         podcastId: 96
       },
     },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: 859026,
+        sv: 6
+      },
+    },
     'gatsby-connect-authors',
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
