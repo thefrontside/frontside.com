@@ -4,8 +4,8 @@ import Layout from "../../components/layout";
 import Hero from "../../components/hero";
 import Text from "../../components/text";
 import Content from "../../components/content";
-import PullQuote from '../../components/pull-quote';
-import Testimonial from '../../components/testimonial';
+import PullQuote from "../../components/pull-quote";
+import Testimonial from "../../components/testimonial";
 
 import altschool from "../../img/clients/altschool-logo.svg";
 import bengi from "../../../static/img/benji.png";
@@ -15,7 +15,11 @@ export default function AltSchoolCaseStudy() {
     <Layout>
       <Hero
         heading={<Text>AltSchool &amp; Frontside</Text>}
-        subheading={<Text>AltSchool adopts an improved process to reduce build times by 40%.</Text>}
+        subheading={
+          <Text>
+            AltSchool adopts an improved process to reduce build times by 40%.
+          </Text>
+        }
       />
       <Content>
         <Text tag="p">
@@ -78,16 +82,18 @@ export default function AltSchoolCaseStudy() {
           portrait={bengi}
           name="Benji Shine, Staff Front-end Engineer, AltSchool"
         >
-          The Frontside developers have an incredibly high level of technical
-          expertise. They've built complex plug-ins from scratch, massively
-          improved our testing infrastructure, and contributed to critical-path
-          product initiatives. When I pair programming with Frontside developers
-          they simultaneously show me how to use software they've built, and
-          help me adopt new ways of thinking. Their code is well-tested and
-          documented, which has raised the bar for our team around testing and
-          documentation. I consider them educators as much as individual
-          contributors, because they can communicate so clearly about their
-          ideas, and they have deep skill.
+          <Text tag="p">
+            The Frontside developers have an incredibly high level of technical
+            expertise. They've built complex plug-ins from scratch, massively
+            improved our testing infrastructure, and contributed to
+            critical-path product initiatives. When I pair programming with
+            Frontside developers they simultaneously show me how to use software
+            they've built, and help me adopt new ways of thinking. Their code is
+            well-tested and documented, which has raised the bar for our team
+            around testing and documentation. I consider them educators as much
+            as individual contributors, because they can communicate so clearly
+            about their ideas, and they have deep skill.
+          </Text>
         </Testimonial>
 
         <PullQuote>
