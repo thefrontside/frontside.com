@@ -4,6 +4,7 @@ import Hero from "../../components/hero";
 import Content from "../../components/content";
 import Text from "../../components/text";
 import Box from "../../components/box";
+import Testimonials from "../../components/testimonials";
 import Button, { ButtonGroup } from "../../components/button";
 
 import illya from "../../img/illya-busigin.jpg";
@@ -86,29 +87,55 @@ export default function Services() {
       </Content>
 
       <Content>
-        <img src={illya} alt="Ilya Busigin portrait" />
-        <Text tag="p">
-          “We had engineers with no previous web development or frontend
-          experience, and, at the end of our engagement, those engineers were
-          fully capable of taking over from where Frontside left us and moving
-          the product forward.” Ilya Busigin | iNGAGED
+        <Text tag="h2" className="align-center" widows={3}>
+          What some of our clients are saying
         </Text>
-        <img src={benji} alt="Benjamin Shine portrait" />
-        <Text tag="p">
-          “They introduced us to a new way of thinking about and working with
-          our forms, which is a core part of our application. We’ve adopted that
-          philosophy across the board. They suggested using an immutable state
-          in Ember, which turned out well. The quality of their work was far
-          higher than what we’ve seen before. They intensely tested their work,
-          and their tech support was fantastic.” Benjamin Shine | AltSchool
-        </Text>
-        <img src={jason} alt="Jason Jaynes portrait" />
-        <Text tag="p">
-          “Everything was well documented, well tested and followed the
-          well-known conventions for working with JavaScript. It was evident
-          they were interested in giving us a software base that we could evolve
-          on our own.” Jason Jaynes | Kasita
-        </Text>
+        <Testimonials
+          testimonials={[
+            {
+              img: illya,
+              author: 'Ilya Busigin | iNGAGED',
+              quote: (
+                <Text tag="p">
+                  We had engineers with no previous web development or
+                  frontend experience, and, at the end of our
+                  engagement, those engineers were fully capable of
+                  taking over from where Frontside left us and moving
+                  the product forward.
+                </Text>
+              )
+            },
+            {
+              img: benji,
+              author: 'Benjamin Shine | AltSchool',
+              quote: (
+                <Text tag="p">
+                  They introduced us to a new way of thinking about
+                  and working with our forms, which is a core part of
+                  our application. We’ve adopted that philosophy
+                  across the board. They suggested using an immutable
+                  state in Ember, which turned out well. The quality
+                  of their work was far higher than what we’ve seen
+                  before. They intensely tested their work, and their
+                  tech support was fantastic.
+                </Text>
+              )
+            },
+            {
+              img: jason,
+              author: 'Jason Jaynes | Kasita',
+              quote: (
+                <Text tag="p">
+                  Everything was well documented, well tested and
+                  followed the well-known conventions for working with
+                  JavaScript. It was evident they were interested in
+                  giving us a software base that we could evolve on
+                  our own.
+                </Text>
+              )
+            }
+          ]}
+        />
       </Content>
 
       <Content>
@@ -159,6 +186,7 @@ export default function Services() {
           </Box>
         </Box>
       </Content>
+
       <Content>
         <Text tag="h2">Get ready to lead the best projects of your life</Text>
         <Text tag="p">
