@@ -4,7 +4,6 @@ import Layout from "../../components/layout";
 import Hero from "../../components/hero";
 import Text from "../../components/text";
 import Content from "../../components/content";
-import Testimonial from "../../components/testimonial";
 import PullQuote from "../../components/pull-quote";
 
 import logo from "../../img/clients/kasita-logo.svg";
