@@ -29,13 +29,19 @@ const PersonPage = ({
   return (
     <Layout>
       <Helmet title={`Team | ${title}`} />
-      <Img fixed={img.childImageSharp.fixed} />
+      {img && (
+        <Img fixed={img.childImageSharp.fixed} />
+      )}
       <h1>{name}</h1>
       <div className="person-title">{personTitle}</div>
       <p>{bio}</p>
       <ul>
-        <li>Twitter: <a href={`https://twitter.com/${twitter}`}>{twitter}</a></li>
-        <li>GitHub: <a href={`https://github.com/${github}`}>{github}</a></li>
+        {twitter && (
+          <li>Twitter: <a href={`https://twitter.com/${twitter}`}>{twitter}</a></li>
+        )}
+        {github && (
+          <li>GitHub: <a href={`https://github.com/${github}`}>{github}</a></li>
+        )}
       </ul>
       {posts.length ? (
         <div>
