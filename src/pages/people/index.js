@@ -38,17 +38,6 @@ const PeoplePage = ({
           </li>
         ))}
       </ul>
-      <h2>Alumni</h2>
-      <ul>
-        {alumni.map(person => (
-          <li key={person.frontmatter.name}>
-            <Link to={person.fields.slug}>
-              <Img fixed={person.frontmatter.img.childImageSharp.fixed} />
-              {person.frontmatter.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
     </Layout>
   );
 };
