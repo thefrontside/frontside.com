@@ -1,9 +1,9 @@
 ---
 templateKey: people
 name: Jeffrey Cherewaty
-title: Puzzle Solver
+title: Software Diplomat
 img: /img/jeffrey-cherewaty.jpg
 twitter: cherewaty
 github: cherewaty
-bio: Jeffrey is a startup veteran who likes building thoughtfully designed apps in the browser. He wrote PHP in a past life, and still has scars from CSS layouts in IE6. These days he’s all-in on modern JavaScript. Jeffrey believes in empathy, constant learning, and King Ranch chicken. His autobiography would be set in Futura and Sentinel.
+bio: Jeffrey is a seasoned designer/developer who likes creating thoughtfully designed apps in the browser. He began his career building accessible websites for The University of Texas at Austin. As SpareFoot’s first employee, he led design and front-end engineering through exponential growth and multiple fundraising rounds. At Frontside, Jeffrey prides himself on shipping beautiful, livable code that solves real business problems. He’s currently working on a Master’s in Software Engineering at UT-Austin.
 ---
