@@ -6,22 +6,22 @@ import { Link } from 'gatsby';
 import './button.css';
 
 Button.propTypes = {
-  type: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
-  to: PropTypes.string
+  color: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
+  to: PropTypes.string,
 };
 
-export default function Button({
-  type = 'primary',
-  className,
-  ...props
-}) {
+export default function Button({ color = 'primary', className, ...props }) {
   let Component = props.to ? Link : 'button';
 
   return (
     <Component
-      className={css('button', {
-        [`is-${type}`]: true
-      }, className)}
+      className={css(
+        'button',
+        {
+          [`is-${color}`]: true,
+        },
+        className
+      )}
       {...props}
     />
   );

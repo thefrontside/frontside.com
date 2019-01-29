@@ -10,23 +10,23 @@ import Button, { ButtonGroup } from '../button';
 PostsWidget.propTypes = {
   heading: PropTypes.string.isRequired,
   linkTo: PropTypes.string.isRequired,
-  posts: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    authors: PropTypes.arrayOf(PropTypes.shape({
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
       slug: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired
-    })).isRequired
-  })).isRequired
+      title: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      authors: PropTypes.arrayOf(
+        PropTypes.shape({
+          slug: PropTypes.string.isRequired,
+          name: PropTypes.string.isRequired,
+        })
+      ).isRequired,
+    })
+  ).isRequired,
 };
 
-export default function PostsWidget({
-  heading,
-  linkTo,
-  posts
-}) {
+export default function PostsWidget({ heading, linkTo, posts }) {
   return (
     <Content className="posts-widget">
       <Text tag="h2" align="center">
@@ -51,18 +51,16 @@ export default function PostsWidget({
                 ))}
               </span>
 
-              <span className="posts-widget-date">
-                {post.date}
-              </span>
+              <span className="posts-widget-date">{post.date}</span>
             </p>
           </li>
         ))}
       </ul>
 
       <ButtonGroup justify="center">
-        <Button type="tertiary" to={linkTo}>
+        <Button color="tertiary" to={linkTo}>
           <span>More</span>
-          <span className="rarr"/>
+          <span className="rarr" />
         </Button>
       </ButtonGroup>
     </Content>

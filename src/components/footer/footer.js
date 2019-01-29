@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import Text from '../text';
-import logo from '../../img/logo-no-text.svg'
+import logo from '../../img/logo-no-text.svg';
 import './footer.css';
 
 export default function Footer() {
@@ -15,18 +15,32 @@ export default function Footer() {
       </Link>
 
       <ul className="footer-menu">
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/services">Services</Link></li>
-        <li><Link to="/blog">Blog</Link></li>
-        <li><Link to="/podcast">Podcast</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/services">Services</Link>
+        </li>
+        <li>
+          <Link to="/blog">Blog</Link>
+        </li>
+        <li>
+          <Link to="/podcast">Podcast</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
       </ul>
 
-      <address className="footer-address">
-        P.O. Box 170249 <br/>
-        Austin, TX 78717 <br/>
-        <a href="tel:18004934589">
-          +1 (800) 493-4589
+      <address className="vcard footer-address">
+        <div className="adr">
+          <div className="street-address">P.O. Box 170249</div>
+          <span className="locality">Austin</span>,&nbsp;
+          <span className="region">Texas</span>&nbsp;
+          <span className="postal-code">78717</span>
+        </div>
+        <a className="tel" href="tel:18004934589">
+          &#43;1 (800) 493-4589
         </a>
       </address>
 
