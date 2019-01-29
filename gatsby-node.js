@@ -3,6 +3,9 @@ const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
 const { fmImagesToRelative } = require("gatsby-remark-relative-images");
 
+const POSTS_PER_PAGE = 10;
+const getBlogUrl = page => `/blog${page > 1 ? `/${page}` : ""}`;
+
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   let result = await graphql(`
     {
@@ -39,6 +42,20 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   }
 
   const posts = result.data.allMarkdownRemark.edges;
+
+  const pages = Math.floor(posts.length / POSTS_PER_PAGE);
+  _.range(pages - 1).forEach(p => {
+    createPage({
+      path: getBlogUrl(p + 1),
+      component: path.resolve("./src/templates/blog-list.js"),
+      context: {
+        limit: POSTS_PER_PAGE,
+        skip: p * POSTS_PER_PAGE,
+        page: p + 1,
+        pages
+      }
+    });
+  });
 
   posts.forEach(
     ({
@@ -82,21 +99,18 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     })
   );
 
-
-  result.data.allSimplecastEpisode.edges.forEach(({ node: {
-    id,
-    season,
-    number,
-    slug
-  }}) => createPage({
-    path: `/podcast/${slug}/`,
-    component: path.resolve('src/templates/episode.js'),
-    context: {
-      id,
-      season,
-      number
-    }
-  }))
+  result.data.allSimplecastEpisode.edges.forEach(
+    ({ node: { id, season, number, slug } }) =>
+      createPage({
+        path: `/podcast/${slug}/`,
+        component: path.resolve("src/templates/episode.js"),
+        context: {
+          id,
+          season,
+          number
+        }
+      })
+  );
 
   return result;
 };
