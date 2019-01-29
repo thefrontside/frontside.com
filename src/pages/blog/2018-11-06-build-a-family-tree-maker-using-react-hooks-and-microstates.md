@@ -142,7 +142,7 @@ class App extends Component {
 
 Checkout this example in a [CodeSandbox](https://codesandbox.io/s/myr4jy546p).
 
-Now, let’s implement the same functionality using the `useState` hook. `useState` takes a reference to initial state and returns an array that can be destructured to `let [state, setState] = useState(initialState)`. It’s important that `initialState` is consistent because it’s used as the key to that particular state.
+Now, let’s implement the same functionality using the `useState` hook. `useState` takes a reference to initial state and returns an array that can be destructured to `js›let [state, setState] = useState(initialState)`. It’s important that `initialState` is consistent because it’s used as the key to that particular state.
 
 If the reference of `initialState` changes between re-renders then it’ll create a new state for you. This will break your component. For this reason, it’s important that the `initialState` does not change between re-renders of that component. 
 
@@ -303,7 +303,7 @@ function FamilyTree({ person )} {
 }
 ```
 
-That should do it. Look at the onChange handler of the input. Notice the `person.name.set` transition. It’s similar to a reducer that changes the name of the node, but Microstates handles immutably updating the value and causing our component to update via our `useType` hook. Let’s use another hook to persist our input in LocalStorage.
+That should do it. Look at the onChange handler of the input. Notice the `js›person.name.set()` transition. It’s similar to a reducer that changes the name of the node, but Microstates handles immutably updating the value and causing our component to update via our `useType` hook. Let’s use another hook to persist our input in LocalStorage.
 
 ## Persist component state in localStorage
 

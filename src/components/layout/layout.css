@@ -22,6 +22,10 @@ input, button {
   background: none;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* required for picture element */
 picture {
   position: initial;
