@@ -41,16 +41,19 @@ h1, h2, h3 {
 h1 {
   font-size: var(--size-xl);
   margin-bottom: var(--space-one-half);
+  margin-top: var(--space-double);
 }
 
 h2 {
   font-size: var(--size-large);
   margin-bottom: var(--space-single);
+  margin-top: var(--space-double);
 }
 
 h3 {
   font-size: var(--size-med-lg);
   margin-bottom: var(--space-single);
+  margin-top: var(--space-one-half);
   font-weight: 700;
 }
 
