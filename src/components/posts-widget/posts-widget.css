@@ -3,14 +3,11 @@
 .posts-widget {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  max-width: 33.75rem;
   width: 100%;
 
   @media (--large-up) {
     box-sizing: border-box;
-    padding-right: var(--space-double);
-    padding-left: var(--space-double);
+    padding-right: var(--space-triple);
     width: 50%;
 
     &:nth-child(even) {
@@ -60,14 +57,14 @@
 
 .posts-widget-title {
   color: var(--color-dark-blue);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans-serif);
   font-size: var(--size-medium);
   margin-bottom: var(--space-half);
 }
 
 .posts-widget-meta {
   color: var(--color-light-gray);
-  font-family: var(--font-sans-serif);
+  font-family: var(--font-serif);
   font-size: var(--size-small);
   line-height: 1.5;
   margin: 0;

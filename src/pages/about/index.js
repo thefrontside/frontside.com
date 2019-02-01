@@ -23,16 +23,15 @@ const AboutPage = ({
       <Helmet title={`About | ${title}`} />
 
       <Hero
-        align="center"
         heading={
           <Text>
-            Bringing predictability to web application projects since 2005
+            We've been bringing predictability to web application projects since 2005.
           </Text>
         }
       />
 
       <Content>
-        <Text tag="h2" className="align-center">
+        <Text tag="h2">
           We help you choose the best solution for long-term maintainability
         </Text>
         <Text tag="p">
@@ -53,7 +52,7 @@ const AboutPage = ({
 
       <Content>
         <Box direction="column">
-          <Text tag="h2" className="align-center margin-bottom-triple">
+          <Text tag="h2" className="margin-bottom-triple">
             With Frontside, your team can deploy faster
           </Text>
           <Box marginBottom="double">
@@ -87,7 +86,7 @@ const AboutPage = ({
       </Content>
 
       <Content>
-        <Text tag="h2" className="align-center">
+        <Text tag="h2">
           We’re active members of the open source community
         </Text>
         <Text tag="p">
@@ -97,14 +96,14 @@ const AboutPage = ({
           community. Our latest tool is <a href="https://bigtestjs.io">BigTest</a>, designed to test single
           page apps faster than any similar solutions available today.
         </Text>
-        <ButtonGroup justify="center">
+        <ButtonGroup>
           <Button to="/work">
             <Text>Learn more about our work</Text>
           </Button>
         </ButtonGroup>
       </Content>
 
-      <Content align="center">
+      <Content>
         <Text tag="h2">Meet the team</Text>
         <TeamList people={team.map(({ node }) => ({
           name: node.frontmatter.name,
@@ -114,7 +113,7 @@ const AboutPage = ({
       </Content>
 
       <Content>
-        <Text tag="h2" className="align-center">
+        <Text tag="h2">
           Feel confident in what you’re building
         </Text>
         <Text tag="p">
@@ -122,7 +121,7 @@ const AboutPage = ({
           health so you can move forward with certainty. Contact us today to get
           practical guidance on your toughest platform challenges.
         </Text>
-        <ButtonGroup justify="center">
+        <ButtonGroup>
           <Button to="/contact">Get Started</Button>
         </ButtonGroup>
       </Content>

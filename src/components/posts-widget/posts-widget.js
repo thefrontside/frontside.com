@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 
 import './posts-widget.css';
 import Text from '../text';
-import Content from '../content';
 import Button, { ButtonGroup } from '../button';
 
 PostsWidget.propTypes = {
@@ -28,8 +27,8 @@ PostsWidget.propTypes = {
 
 export default function PostsWidget({ heading, linkTo, posts }) {
   return (
-    <Content className="posts-widget">
-      <Text tag="h2" align="center">
+    <div className="posts-widget">
+      <Text tag="h2">
         {heading}
       </Text>
 
@@ -57,12 +56,12 @@ export default function PostsWidget({ heading, linkTo, posts }) {
         ))}
       </ul>
 
-      <ButtonGroup justify="center">
+      <ButtonGroup>
         <Button color="tertiary" to={linkTo}>
           <span>More</span>
           <span className="rarr" />
         </Button>
       </ButtonGroup>
-    </Content>
+    </div>
   );
 }

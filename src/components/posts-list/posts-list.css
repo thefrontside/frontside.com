@@ -39,17 +39,17 @@
 
 .posts-list-title {
   color: var(--color-dark-blue);
-  font-family: var(--font-serif);
+  font-family: var(--font-sans-serif);
   font-size: var(--size-large);
   margin-bottom: var(--space-half);
 }
 
 .posts-list-meta {
   color: var(--color-light-gray);
-  font-family: var(--font-sans-serif);
+  font-family: var(--font-serif);
   font-size: var(--size-small);
   line-height: 1.5;
-  margin: 0;
+  margin: 0 0 var(--space-single);
 }
 
 .posts-list-authors a {

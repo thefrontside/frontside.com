@@ -138,7 +138,7 @@ export default function KasitaCaseStudy() {
       </Content>
       <Content>
         <Text tag="h2">The MVP</Text>
-        <img src={tempScreen} alt="photo of Kasita temperature controls" />
+        <img src={tempScreen} alt="Kasita temperature controls" />
         <Text tag="p">
           Kasita is a smart home and has several smart devices throughout the
           home that the user can manipulate. Rather than having the user click
@@ -149,7 +149,7 @@ export default function KasitaCaseStudy() {
         </Text>
         <img
           src={multipleDevices}
-          alt="photo of Kasita application running on multiple devices"
+          alt="Kasita application running on multiple devices"
         />
         <Text tag="p">
           While taking the idea of Moods and staying focused on simplicity of
@@ -161,7 +161,7 @@ export default function KasitaCaseStudy() {
           in industry speak makes the application have an intuitive user
           interface.
         </Text>
-        <img src={customIcons} alt="photo of Kasita user interface icons" />
+        <img src={customIcons} alt="Kasita user interface icons" />
         <Text tag="p">
           The Kasita application required constant consideration, critical
           thinking, and imagination to build from the perspective of someone

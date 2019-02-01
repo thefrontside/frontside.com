@@ -52,12 +52,12 @@ export default function IndexPage({
           rock-solid web applications—and assembling the toolkits that
           support them.
         </Text>
-        <ButtonGroup justify="center">
+        <ButtonGroup>
           <Button to="/services">See how we can help</Button>
         </ButtonGroup>
       </Content>
 
-      <Content align="center">
+      <Content>
         <Text tag="h2">
           Trusted by top development teams
         </Text>
@@ -71,48 +71,50 @@ export default function IndexPage({
         </HomeLogos>
       </Content>
 
-      <Content align="center">
+      <Content>
         <Text tag="h3" widows={3}>
           React. Ember. Angular. And many more.
         </Text>
         <Text tag="p">
           We’re here to make your large-scale application projects run smoothly.
         </Text>
-        <ButtonGroup justify="center">
+        <ButtonGroup>
           <Button to="/about">Get to know us</Button>
         </ButtonGroup>
       </Content>
 
-      <Box direction="row" justify="center">
-        <PostsWidget
-          heading="Latest on the blog"
-          linkTo="/blog"
-          posts={posts.map(({ node }) => ({
-            id: node.id,
-            slug: node.fields.slug,
-            title: node.frontmatter.title,
-            date: node.frontmatter.date,
-            authors: node.fields.authors.map(author => ({
-              slug: author.fields.slug,
-              name: author.frontmatter.name
-            }))
-          }))}
-        />
-        <PostsWidget
-          heading="Latest on the podcast"
-          linkTo="/podcast"
-          posts={episodes.map(({ node })=> ({
-            id: node.id,
-            slug: `/podcast/${node.slug}`,
-            title: node.title,
-            date: node.publishedAt,
-            authors: node.authors.map(author => ({
-              slug: author.fields.slug,
-              name: author.frontmatter.name
-            }))
-          }))}
-        />
-      </Box>
+      <Content>
+        <Box direction="row">
+          <PostsWidget
+            heading="Latest on the blog"
+            linkTo="/blog"
+            posts={posts.map(({ node }) => ({
+              id: node.id,
+              slug: node.fields.slug,
+              title: node.frontmatter.title,
+              date: node.frontmatter.date,
+              authors: node.fields.authors.map(author => ({
+                slug: author.fields.slug,
+                name: author.frontmatter.name
+              }))
+            }))}
+          />
+          <PostsWidget
+            heading="Latest on the podcast"
+            linkTo="/podcast"
+            posts={episodes.map(({ node })=> ({
+              id: node.id,
+              slug: `/podcast/${node.slug}`,
+              title: node.title,
+              date: node.publishedAt,
+              authors: node.authors.map(author => ({
+                slug: author.fields.slug,
+                name: author.frontmatter.name
+              }))
+            }))}
+          />
+        </Box>
+      </Content>
     </Layout>
   );
 }

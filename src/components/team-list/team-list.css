@@ -5,7 +5,6 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 
   li {
     font-size: var(--size-med-lg);
