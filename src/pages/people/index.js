@@ -13,11 +13,6 @@ const PeoplePage = ({
   }
 }) => {
 
-  let alumni = group
-    .find(({ fieldValue }) => fieldValue === "true")
-    .edges
-    .map(({ node }) => node);
-
   let team = group
     .find(({ fieldValue }) => fieldValue === "undefined")
     .edges

@@ -17,8 +17,8 @@ export default function BlogPage({
       <PostsList
         heading={
           <>
-            <Text tag="h2" align="center">
-              { page === 1 ? "Blog" : `Blog on page ${page}` } 
+            <Text tag="h2">
+              { page === 1 ? "Blog" : `Blog on page ${page}` }
             </Text>
           </>
         }
