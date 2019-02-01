@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Helmet from "react-helmet";
 import Img from "gatsby-image"
+import Content from "../components/content";
 
 const PersonPage = ({
   data: {
@@ -28,49 +29,51 @@ const PersonPage = ({
 }) => {
   return (
     <Layout>
-      <Helmet title={`Team | ${title}`} />
-      {img && (
-        <Img fixed={img.childImageSharp.fixed} />
-      )}
-      <h1>{name}</h1>
-      <div className="person-title">{personTitle}</div>
-      <p>{bio}</p>
-      <ul>
-        {twitter && (
-          <li>Twitter: <a href={`https://twitter.com/${twitter}`}>{twitter}</a></li>
+      <Content>
+        <Helmet title={`Team | ${title}`} />
+        {img && (
+          <Img fixed={img.childImageSharp.fixed} />
         )}
-        {github && (
-          <li>GitHub: <a href={`https://github.com/${github}`}>{github}</a></li>
-        )}
-      </ul>
-      {posts.length ? (
-        <div>
-          <h2>Blog Posts</h2>
-          <ul>
-            {posts.map(post => (
-              <li key={post.fields.slug}>
-                <Link to={post.fields.slug}>
-                  {post.frontmatter.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ): null}
-      {episodes.length ? (
-        <div>
-          <h2>Podcast Episodes</h2>
-          <ul>
-            {episodes.map(episode => (
-              <li key={episode.number}>
-                <Link to={`/podcast/${episode.slug}`}>
-                  {episode.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ) : null}
+        <h1>{name}</h1>
+        <div className="person-title">{personTitle}</div>
+        <p>{bio}</p>
+        <ul>
+          {twitter && (
+            <li>Twitter: <a href={`https://twitter.com/${twitter}`}>{twitter}</a></li>
+          )}
+          {github && (
+            <li>GitHub: <a href={`https://github.com/${github}`}>{github}</a></li>
+          )}
+        </ul>
+        {posts.length ? (
+          <div>
+            <h2>Blog Posts</h2>
+            <ul>
+              {posts.map(post => (
+                <li key={post.fields.slug}>
+                  <Link to={post.fields.slug}>
+                    {post.frontmatter.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ): null}
+        {episodes.length ? (
+          <div>
+            <h2>Podcast Episodes</h2>
+            <ul>
+              {episodes.map(episode => (
+                <li key={episode.number}>
+                  <Link to={`/podcast/${episode.slug}`}>
+                    {episode.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+      </Content>
     </Layout>
   );
 };
