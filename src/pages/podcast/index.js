@@ -21,7 +21,7 @@ const PodcastPage = ({
       <Helmet title={`Podcast | ${title}`} />
       <EpisodesList
         heading={
-          <Text tag="h2" align="center">
+          <Text tag="h2">
             The Frontside Podcast
           </Text>
         }

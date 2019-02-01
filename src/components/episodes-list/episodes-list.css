@@ -1,24 +1,6 @@
 @import '../variables';
 
 .episodes-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @media (--large-up) {
-    box-sizing: border-box;
-    float: left;
-    width: 50%;
-
-    &:nth-child(even) {
-      align-items: flex-end;
-    }
-
-    &:nth-child(odd) {
-      align-items: flex-start;
-    }
-  }
-
   @media (--xl-up) {
     padding-right: var(--space-half-vw);
     padding-left: var(--space-half-vw);
@@ -39,7 +21,6 @@
   }
 
   & > * {
-    max-width: 33.75rem;
     width: 100%;
   }
 }
