@@ -19,7 +19,6 @@ export default function WorkIndex() {
   return (
     <Layout>
       <Hero
-        align="center"
         heading={
           <Text>Bring us your most ambitious web application ideas.</Text>
         }
@@ -31,11 +30,10 @@ export default function WorkIndex() {
         }
       />
 
-      <Text tag="h2" align="center">
-        Here's some of our recent work.
-      </Text>
-
       <Content>
+        <Text tag="h2">
+          Here's some of our recent work.
+        </Text>
         <Box>
           <img src={altschool} alt="altschool logo" />
           <Text tag="h3">AltSchool | Case Study</Text>

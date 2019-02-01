@@ -18,7 +18,7 @@ export default function Services() {
         heading={
           <Text>
             We bring deep expertise in web UI platforms to help your application
-            projects run smoothly
+            projects run smoothly.
           </Text>
         }
       />
@@ -37,7 +37,7 @@ export default function Services() {
 
       <Content>
         <Box direction="column">
-          <Box marginBottom="double" className="align-center">
+          <Box marginBottom="double">
             <Text tag="h2">Build a better platform for your applications</Text>
             <Text tag="p">Here’s how we can help your organization</Text>
           </Box>
@@ -87,7 +87,7 @@ export default function Services() {
       </Content>
 
       <Content>
-        <Text tag="h2" className="align-center" widows={3}>
+        <Text tag="h2" widows={3}>
           What some of our clients are saying
         </Text>
         <Testimonials
@@ -140,7 +140,7 @@ export default function Services() {
 
       <Content>
         <Box direction="column">
-          <Box marginBottom="double" className="align-center">
+          <Box marginBottom="double">
             <Text tag="h2">
               We make your projects predictable with tried-and-true processes
             </Text>
@@ -193,7 +193,7 @@ export default function Services() {
           Reach out today to learn how we can help your organization move
           faster, without compromising quality
         </Text>
-        <ButtonGroup justify="center">
+        <ButtonGroup>
           <Button to="/contact">Get in touch</Button>
         </ButtonGroup>
       </Content>

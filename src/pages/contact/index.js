@@ -87,7 +87,7 @@ export default class Index extends React.Component {
                 required={true}
                 rows="10"
               />
-              <ButtonGroup justify="center">
+              <ButtonGroup>
                 <Button type="submit">Send</Button>
               </ButtonGroup>
             </form>
