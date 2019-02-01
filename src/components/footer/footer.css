@@ -46,7 +46,7 @@
 
   a {
     text-decoration: none;
-    color: var(--color-light-blue);
+    color: var(--link-color);
     font-size: var(--size-medium);
     font-weight: 600;
     line-height: 1;
@@ -54,7 +54,7 @@
 }
 
 .footer-address {
-  color: var(--color-light-gray);
+  color: var(--body-color-faded);
   margin-bottom: var(--space-double-vw);
   font-size: var(--size-small);
   font-style: normal;
@@ -70,7 +70,7 @@
 }
 
 .footer-copyright {
-  color: var(--color-light-gray);
+  color: var(--body-color-faded);
   font-family: var(--font-sans-serif);
   font-size: var(--size-xs);
   text-transform: uppercase;

@@ -75,7 +75,7 @@
     }
 
     cite {
-      color: var(--color-pink);
+      color: var(--body-color-faded);
       font-size: var(--size-med-sm);
       font-style: normal;
     }

@@ -4,7 +4,8 @@
 /* Default document styles */
 html {
   font: 100%/1.8 var(--font-sans-serif);
-  background: white;
+  background: var(--body-bg);
+  color: var(--body-color);
 }
 
 /* Reset */
@@ -61,11 +62,11 @@ p {
   font-family: var(--font-serif);
   font-size: var(--size-base);
   margin-bottom: var(--space-one-half);
-  color: var(--color-gray);
+  color: var(--body-color);
 }
 
 a {
-  color: var(--color-pink);
+  color: var(--link-color);
 }
 
 /* Utility Classes */

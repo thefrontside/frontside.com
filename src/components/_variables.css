@@ -3,12 +3,18 @@
   --font-sans-serif: "Proxima Nova", "Helvetica", sans-serif;
   --font-serif: "Georgia", "Times", "Times New Roman", serif;
 
-  /* Colors */
+  /* Brand Colors */
   --color-pink: #F74D7B;
   --color-light-blue: #26ABE8;
   --color-dark-blue: #14315D;
-  --color-gray: #444;
-  --color-light-gray: #888;
+  --link-color: var(--color-light-blue);
+  --button-color: var(--color-pink);
+
+  /* Light Mode */
+  --body-bg: #fff;
+  --body-color: #444;
+  --body-color-faded: #888;
+  --logo-wordmark-color: var(--color-dark-blue);
 
   /* Spacing  */
   --space-single: 1rem;
@@ -77,5 +83,15 @@
 @media (--large-up) {
   :root {
     --space-single-vw: 7.5vw;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg: #1e1e1e;
+    --body-color: #fff;
+    --body-color-faded: #aaa;
+    --logo-wordmark-color: #fff;
   }
 }

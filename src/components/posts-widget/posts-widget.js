@@ -57,9 +57,8 @@ export default function PostsWidget({ heading, linkTo, posts }) {
       </ul>
 
       <ButtonGroup>
-        <Button color="tertiary" to={linkTo}>
+        <Button to={linkTo}>
           <span>More</span>
-          <span className="rarr" />
         </Button>
       </ButtonGroup>
     </div>

@@ -38,14 +38,14 @@
 }
 
 .posts-list-title {
-  color: var(--color-dark-blue);
+  color: var(--link-color);
   font-family: var(--font-sans-serif);
   font-size: var(--size-large);
   margin-bottom: var(--space-half);
 }
 
 .posts-list-meta {
-  color: var(--color-light-gray);
+  color: var(--body-color-faded);
   font-family: var(--font-serif);
   font-size: var(--size-small);
   line-height: 1.5;
@@ -53,7 +53,7 @@
 }
 
 .posts-list-authors a {
-  color: var(--color-light-blue);
+  color: var(--body-color-faded);
 
   &:not(:last-child)::after {
     content: ", ";
