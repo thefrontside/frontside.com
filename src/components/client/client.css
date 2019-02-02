@@ -1,0 +1,10 @@
+.client {
+  margin: calc(var(--space-double)*3) 0;
+}
+
+.client-logo {
+  height: auto;
+  max-height: 8rem;
+  max-width: 14rem;
+  width: auto;
+}

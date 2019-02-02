@@ -50,7 +50,7 @@ export default function PostsList({ heading, posts, pagination = null }) {
               <span className="posts-list-date">{post.date}</span>
             </Text>
             <Text tag="p">{post.excerpt}</Text>
-            <Link to={post.slug}>Keep Reading →</Link>
+            <Link to={post.slug}>Keep reading →</Link>
           </li>
         ))}
       </ul>

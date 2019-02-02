@@ -11,6 +11,8 @@ $navbar-height: calc($logo-height + ($navbar-padding * 2));
   align-items: center;
   padding: $navbar-padding var(--space-half-vw);
   z-index: var(--z-top);
+  margin: 0 auto;
+  max-width: 80rem;
 }
 
 .navbar-logo {
