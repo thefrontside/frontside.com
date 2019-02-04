@@ -11,20 +11,8 @@
   text-decoration: none;
   letter-spacing: 0.1em;
   line-height: 1rem;
-
-  &.is-primary {
-    background: var(--color-pink);
-    color: white;
-  }
-
-  &.is-secondary {
-    background: var(--color-light-blue);
-    color: white;
-  }
-
-  &.is-tertiary {
-    color: var(--color-pink);
-  }
+  background: var(--button-color);
+  color: white;
 
   span {
     vertical-align: middle;
