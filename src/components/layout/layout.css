@@ -48,13 +48,13 @@ h1 {
 h2 {
   font-size: var(--size-large);
   margin-bottom: var(--space-single);
-  margin-top: var(--space-double);
+  margin-top: var(--space-quadruple);
 }
 
 h3 {
   font-size: var(--size-med-lg);
   margin-bottom: var(--space-single);
-  margin-top: var(--space-one-half);
+  margin-top: var(--space-quadruple);
   font-weight: 700;
 }
 
@@ -67,6 +67,12 @@ p {
 
 a {
   color: var(--link-color);
+}
+
+ol {
+  font-family: var(--font-serif);
+  font-size: var(--size-base);
+  margin: var(--space-double);
 }
 
 /* Utility Classes */
