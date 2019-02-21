@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "fast-xml-parser": "^3.12.13",
+    "request-promise-native": "1.0.7"
+  }
+}
