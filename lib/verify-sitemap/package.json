@@ -1,0 +1,11 @@
+{
+  "name": "verify-sitemap",
+  "version": "0.1.0",
+  "bin": {
+    "verify-sitemap": "./index.js"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^3.12.13",
+    "request-promise-native": "1.0.7"
+  }
+}
