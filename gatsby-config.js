@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: "Frontside",
     description: "Build web applications at scale",
-    siteUrl: "https://frontside.io",
+    siteUrl: "https://frontside.io"
   },
   mapping: {
     "MarkdownRemark.fields.authors": "MarkdownRemark",
@@ -129,14 +129,20 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-hotjar`,
+      resolve: "gatsby-plugin-hotjar",
       options: {
         id: 859026,
         sv: 6
       }
     },
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-44597640-1"
+      }
+    },
+    {
+      resolve: "gatsby-plugin-sitemap",
       options: {
         query: `
           {
