@@ -1,0 +1,9 @@
+/talks            /blog         302
+/ember-consulting /services     302
+/calendar         /             302
+/lunch-and-learn  /blog         302
+/open-source      /about        302
+/careers          /about        302
+/learning         /about        302
+/style-guide      /             302
+/blog/:year/:month/:day/:slug.html    /blog/:year-:month-:day-:slug
