@@ -20,8 +20,6 @@ image: /img/2018-06-14-what-is-new-in-wcag-2-1_wcag-2-1-image.jpg
 
 In this tutorial, we will create a Family Tree marker component using React Hooks and Microstates. The Family Tree maker will allow the user to enter their name, then their parent’s names, their parent’s parent’s names and their parent’s parent’s parent’s names, as far back as they can remember.
 
-![test](/img/2018-11-06-build-a-family-tree-maker-using-react-hooks-and-microstates_family-builder.gif)
-
 To do this, we’ll follow the following steps:
 
 1. Create a new project and install Microstates
