@@ -6,4 +6,4 @@
 /careers          /about        302
 /learning         /about        302
 /style-guide      /             302
-/blog/:year/:month/:day/:slug.html    /blog/:year-:month-:day-:slug   302
+/blog/:year/:month/:day/:slug    /blog/:year-:month-:day-:slug   302
