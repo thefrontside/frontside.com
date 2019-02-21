@@ -8,16 +8,27 @@
 /learning/*         /about        302
 /style-guide      /             302
 
+/case-studies/ /work 302
+
 /about/:name  /people/:name 302
 
-/podcast/calendar/* / 302
+/calendar/* / 302
 
 /blog/2014/09/21/reactive-modeling-with-ember.html /blog 302
 /blog/2014/03/06/a-sprinkling-of-ember.html /blog 302
 /blog/:year/:month/:day/:slug    /blog/:year-:month-:day-:slug   302
+/blog/tags/frp/ /tags 302
+/blog/tags/mvc/ /tags 302
+/blog/tags/javascript-functional-programming/ /tags 302
+/blog/tags/component/ /tags 302
+/blog/tags/awesome/ /tags 302
+/blog/tags/ember-a11y/ /tags 302
+/blog/tags/tvos/ /tags 302
+/blog/tags/javascript/page/2/ /tags 302
 /blog/tags/:slug  /tags/:slug 302
 /blog/page/:page /blog/:page 302
 
+/podcast/page/* /podcast 302
 /podcast/115-testing-issues-and-bigtest-solutions /podcast/115-testing-issues-and-big-test-solutions 302
 /podcast/109-what-do-you-need-in-a-javascript-framework /podcast/109-what-do-you-need-in-a-java-script-framework 302
 /podcast/105-automating-github-with-probot  /podcast/105-automating-git-hub-with-probot 302
