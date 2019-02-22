@@ -1,0 +1,10 @@
+@import '../components/variables';
+
+.episode-transcript {
+  margin: var(--space-single) 0;
+}
+
+.episode-transcript ul {
+  margin-left: var(--space-double);
+  margin-bottom: var(--space-one-half);
+}

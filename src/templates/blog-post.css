@@ -1,0 +1,10 @@
+@import '../components/variables';
+
+.blog-post-byline {
+  margin-bottom: var(--space-single);
+}
+
+.blog-post-content ul {
+  margin-left: var(--space-double);
+  margin-bottom: var(--space-one-half);
+}

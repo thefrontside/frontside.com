@@ -42,8 +42,8 @@ export default function PostsList({
             </h3>
             <Text tag="p" className="posts-list-meta">
               <span className="posts-list-authors">
-                {post.authors.map((author, i) => (
-                  <Link key={i} to={author.slug}>
+                {post.authors.map((author) => (
+                  <Link key={author.slug} to={author.slug}>
                     <Text>{author.name}</Text>
                   </Link>
                 ))}

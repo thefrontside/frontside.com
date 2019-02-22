@@ -6,7 +6,7 @@ import './testimonials.css';
 Testimonials.propTypes = {
   testimonials: PropTypes.arrayOf(
     PropTypes.shape({
-      quote: PropTypes.string.isRequired,
+      quote: PropTypes.node.isRequired,
       author: PropTypes.string.isRequired,
       img: PropTypes.string.isRequired
     })

@@ -4,17 +4,25 @@ import { kebabCase } from "lodash";
 import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
-import Content, { HTMLContent } from "../components/content";
+import Content from "../components/content";
 import Text from "../components/text";
 
-export const BlogPostTemplate = ({ content, tags, title }) => {
+import "./blog-post.css";
+
+export const BlogPostTemplate = ({ content, tags, title, authors, date }) => {
   tags = Array.isArray(tags) ? tags : [tags].filter(Boolean);
 
   return (
     <Content>
       <Text tag="h1">{title}</Text>
-      <Text tag="p">
-        Tags:{" "}
+      <div className="blog-post-byline">
+        {"Published by "}
+        {authors.map(author => (
+          <Link key={author.slug} to={author.slug}>
+            <Text>{author.name}</Text>
+          </Link>
+        ))}
+        {` on ${date}. Tagged with `}{" "}
         {tags.map((tag, i) => (
           <span key={tag}>
             <Link key={`tag-${tag}`} to={`/tags/${kebabCase(tag)}/`}>
@@ -23,8 +31,15 @@ export const BlogPostTemplate = ({ content, tags, title }) => {
             {tags.length > i + 1 ? ", " : null}
           </span>
         ))}
-      </Text>
-      <HTMLContent content={content} />
+        {"."}
+      </div>
+
+      <section
+        className="blog-post-content"
+        dangerouslySetInnerHTML={{
+          __html: content
+        }}
+      />
     </Content>
   );
 };
@@ -37,9 +52,7 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object
 };
 
-const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
-
+const BlogPost = ({ data: { markdownRemark: post } }) => {
   return (
     <Layout>
       <BlogPostTemplate
@@ -56,6 +69,11 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        authors={post.fields.authors.map(author => ({
+          slug: author.fields.slug,
+          name: author.frontmatter.name
+        }))}
+        date={post.frontmatter.date}
       />
     </Layout>
   );
@@ -79,6 +97,17 @@ export const pageQuery = graphql`
         title
         description
         tags
+      }
+      fields {
+        slug
+        authors {
+          fields {
+            slug
+          }
+          frontmatter {
+            name
+          }
+        }
       }
     }
   }
