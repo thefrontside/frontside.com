@@ -41,7 +41,7 @@ export default class Navbar extends Component {
       <nav className="navbar" ref={this.$nav}>
         <Link to="/" className="navbar-logo">
           <svg width="137" height="34" xmlns="http://www.w3.org/2000/svg" alt="Frontside">
-            <g fill="none" fill-rule="evenodd">
+            <g fill="none" fillRule="evenodd">
               <path fill="#14315D" d="M15.2.04L.48 8.55v16.9l14.7 8.52 14.7-8.52V8.55z"/>
               <path fill="#F74D7B" d="M7.84 21.23v-8.45l-3.64-2.1v12.64l11 6.37v-4.2z"/>
               <path fill="#26ABE8" d="M22.54 21.23v-8.45l3.65-2.1v12.64l-11 6.37v-4.2z"/>

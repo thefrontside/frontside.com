@@ -7,10 +7,8 @@ import Text from "../text";
 import Content from "../content";
 
 PostsList.propTypes = {
-  heading: PropTypes.string.isRequired,
-  linkTo: PropTypes.string.isRequired,
-  hasNewer: PropTypes.bool.isRequired,
-  hasOlder: PropTypes.bool.isRequired,
+  heading: PropTypes.node,
+  pagination: PropTypes.node,
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -28,7 +26,11 @@ PostsList.propTypes = {
   ).isRequired
 };
 
-export default function PostsList({ heading, posts, pagination = null }) {
+export default function PostsList({
+  heading = null,
+  posts,
+  pagination = null
+}) {
   return (
     <Content className="posts-list">
       {heading}

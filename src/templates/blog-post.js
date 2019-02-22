@@ -5,7 +5,7 @@ import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Content, { HTMLContent } from "../components/content";
-import Text from '../components/text';
+import Text from "../components/text";
 
 export const BlogPostTemplate = ({ content, tags, title }) => {
   tags = Array.isArray(tags) ? tags : [tags].filter(Boolean);
@@ -16,12 +16,12 @@ export const BlogPostTemplate = ({ content, tags, title }) => {
       <Text tag="p">
         Tags:{" "}
         {tags.map((tag, i) => (
-          <>
+          <span key={tag}>
             <Link key={`tag-${tag}`} to={`/tags/${kebabCase(tag)}/`}>
               {tag}
             </Link>
             {tags.length > i + 1 ? ", " : null}
-          </>
+          </span>
         ))}
       </Text>
       <HTMLContent content={content} />
