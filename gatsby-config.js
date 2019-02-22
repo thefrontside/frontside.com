@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "Frontside",
-    description: "Build web applications at scale",
+    description: "Austin-based frontend software engineering and architecture consultancy. We help teams build applications at scale.",
     siteUrl: "https://frontside.io"
   },
   mapping: {
