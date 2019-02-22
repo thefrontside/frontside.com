@@ -1,8 +1,10 @@
+@import '../components/variables';
+
 .episode-transcript {
-  margin: 1em 0;
+  margin: var(--space-single) 0;
 }
 
 .episode-transcript ul {
-  margin-left: 2em;
-  margin-bottom: 1.5em;
+  margin-left: var(--space-double);
+  margin-bottom: var(--space-one-half);
 }
