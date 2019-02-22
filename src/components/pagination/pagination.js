@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 
 export default function Pagination({ prefix, page, pages }) {
-  console.log(page, pages);
   return (
-    <div class="pagination">
+    <div className="pagination">
       {page > 1 ? (
         <Link to={page === 2 ? prefix : `${prefix}/${page - 1}`}>
           &larr; Newer

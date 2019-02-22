@@ -3,23 +3,30 @@ import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Content from "../components/content";
-import Text from "../components/text";
+import format from "dateformat";
+
+import "./episode.css";;
 
 export default function EpisodeRoute({
   data: {
     site: {
       siteMetadata: { title: siteTitle }
     },
-    simplecastEpisode: { title, longDescriptionHtml, authors, publishedAt, sharingUrl }
+    simplecastEpisode: {
+      title,
+      longDescriptionHtml,
+      authors,
+      publishedAt,
+      sharingUrl
+    }
   }
 }) {
-  let [,shareId] = sharingUrl.match(/.*\/(.*)$/);
+  let [, shareId] = sharingUrl.match(/.*\/(.*)$/);
 
   return (
     <Layout>
       <Helmet title={`${title} | ${siteTitle}`} />
       <Content>
-        <Text tag="h1">{title}</Text>
         <iframe
           frameBorder="0"
           height="200px"
@@ -27,20 +34,19 @@ export default function EpisodeRoute({
           seamless
           src={`https://embed.simplecast.com/${shareId}?color=f5f5f5`}
           width="100%"
-          title="Podcast episode player"
+          title={title}
         />
-        <p>
-          Hosts:{" "}
+        <div>
+          {"Hosted by "}
           {authors.map((author, i) => (
             <span key={author.fields.slug}>
               <Link to={author.fields.slug}>{author.frontmatter.name}</Link>
               {authors.length > i + 1 ? ", " : null}
             </span>
           ))}
-          <br />
-          Published on: {new Date(publishedAt).toLocaleDateString("en-US")}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: longDescriptionHtml }} />
+          {format(publishedAt, `" on " mmmm dS, yyyy"."`)}
+        </div>
+        <section className="episode-transcript" dangerouslySetInnerHTML={{ __html: longDescriptionHtml }} />
       </Content>
     </Layout>
   );
