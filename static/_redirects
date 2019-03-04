@@ -10,6 +10,8 @@
 
 /case-studies/ /work 302
 
+/people/arash-zafarnia/ /about 302
+
 /about/:name  /people/:name 302
 
 /calendar/* / 302
