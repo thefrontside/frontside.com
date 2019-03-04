@@ -47,6 +47,7 @@
   a {
     text-decoration: none;
     color: var(--link-color);
+    font-family: var(--font-sans-serif);
     font-size: var(--size-medium);
     font-weight: 600;
     line-height: 1;
@@ -56,6 +57,7 @@
 .footer-address {
   color: var(--body-color-faded);
   margin-bottom: var(--space-double-vw);
+  font-family: var(--font-sans-serif);
   font-size: var(--size-small);
   font-style: normal;
 

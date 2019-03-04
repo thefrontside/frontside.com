@@ -4,5 +4,6 @@
 
 .text-field-label {
   display: block;
+  font-family: var(--font-sans-serif);
   margin-bottom: var(--space-half);
 }

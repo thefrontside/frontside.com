@@ -94,6 +94,7 @@ $navbar-height: calc($logo-height + ($navbar-padding * 2));
     text-decoration: none;
     color: var(--link-color);
     font-weight: 600;
+    font-family: var(--font-sans-serif);
     font-size: var(--size-med-lg);
 
     @media (--medium-up) {
