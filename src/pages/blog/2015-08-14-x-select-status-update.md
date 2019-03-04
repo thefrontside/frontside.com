@@ -3,7 +3,7 @@ templateKey: blog-post
 title: X-Select Status Update
 date: 2015-08-14T12:00:00.000Z
 author: Robert DeLuca
-tags: 
+tags:
   - oss
   - ember
   - ember-addon
@@ -44,7 +44,10 @@ from James Rosen!
 ### Known Glimmer issue with x-select
 
 To use x-select with Glimmer (Ember 1.13.x) requires 1.13.4+. Anything below
-1.13.4 will throw `Error: Assertion Failed: x-option component declared without enclosing x-select`
+1.13.4 will throw
+```
+Error: Assertion Failed: x-option component declared without enclosing x-select
+```
 because non-dirty component child views are not getting the correct parentView. You can see the related
 ticket [here](https://github.com/emberjs/ember.js/pull/11651).
 
