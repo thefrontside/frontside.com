@@ -3,7 +3,7 @@
 
 /* Default document styles */
 html {
-  font: 100%/1.8 var(--font-sans-serif);
+  font: 100%/1.8 var(--font-serif);
   background: var(--body-bg);
   color: var(--body-color);
 }
@@ -35,6 +35,7 @@ picture {
 /* Typography */
 h1, h2, h3 {
   line-height: 1.375;
+  font-family: var(--font-sans-serif);
   font-weight: 800;
   letter-spacing: 0.025em;
 }

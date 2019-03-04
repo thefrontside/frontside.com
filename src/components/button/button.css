@@ -5,6 +5,7 @@
   border-radius: var(--space-half);
   padding: var(--space-single) var(--space-double);
   margin-top: var(--space-triple);
+  font-family: var(--font-sans-serif);
   font-size: var(--size-small);
   text-align: center;
   text-transform: uppercase;
