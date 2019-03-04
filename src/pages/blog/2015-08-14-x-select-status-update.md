@@ -3,7 +3,7 @@ templateKey: blog-post
 title: X-Select Status Update
 date: 2015-08-14T12:00:00.000Z
 author: Robert DeLuca
-tags: 
+tags:
   - oss
   - ember
   - ember-addon
@@ -20,9 +20,11 @@ Before Glimmer (1.13) compatibility, we are making a release for Ember 1.12 or b
 ## What's new in 1.1.3?
 
 - Title attr bound to an option or select. [PR](https://github.com/thefrontside/emberx-select/pull/32)
-- Blockless improvements [PRs: [1](https://github.com/thefrontside/emberx-select/pull/31), [2](https://github.com/thefrontside/emberx-select/commit/46c7acca9f7bd3a67b08f1fc1f6174759d47f465)]
+- Add optionValuePath [PR](https://github.com/thefrontside/emberx-select/pull/31)
+- Fixed blockless form [PR](https://github.com/thefrontside/emberx-select/commit/46c7acca9f7bd3a67b08f1fc1f6174759d47f465)
 - Default tabindex to 0 to make it tabable. [PR](https://github.com/thefrontside/emberx-select/pull/37)
-- Test helper [PRs: [1](https://github.com/thefrontside/emberx-select/pull/14), [2](https://github.com/thefrontside/emberx-select/pull/27)]
+- Introduce `registerSelectHelper` [PR](https://github.com/thefrontside/emberx-select/pull/14)
+- Improve test helper [PR](https://github.com/thefrontside/emberx-select/pull/27)
 - Improved testing coverage
 
 See the [diff here](https://github.com/thefrontside/emberx-select/compare/v1.1.2...v1.1.3).
@@ -44,7 +46,10 @@ from James Rosen!
 ### Known Glimmer issue with x-select
 
 To use x-select with Glimmer (Ember 1.13.x) requires 1.13.4+. Anything below
-1.13.4 will throw `Error: Assertion Failed: x-option component declared without enclosing x-select`
+1.13.4 will throw
+```
+Error: Assertion Failed: x-option component declared without enclosing x-select
+```
 because non-dirty component child views are not getting the correct parentView. You can see the related
 ticket [here](https://github.com/emberjs/ember.js/pull/11651).
 
