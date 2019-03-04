@@ -20,9 +20,11 @@ Before Glimmer (1.13) compatibility, we are making a release for Ember 1.12 or b
 ## What's new in 1.1.3?
 
 - Title attr bound to an option or select. [PR](https://github.com/thefrontside/emberx-select/pull/32)
-- Blockless improvements [PRs: [1](https://github.com/thefrontside/emberx-select/pull/31), [2](https://github.com/thefrontside/emberx-select/commit/46c7acca9f7bd3a67b08f1fc1f6174759d47f465)]
+- Add optionValuePath [PR](https://github.com/thefrontside/emberx-select/pull/31)
+- Fixed blockless form [PR](https://github.com/thefrontside/emberx-select/commit/46c7acca9f7bd3a67b08f1fc1f6174759d47f465)
 - Default tabindex to 0 to make it tabable. [PR](https://github.com/thefrontside/emberx-select/pull/37)
-- Test helper [PRs: [1](https://github.com/thefrontside/emberx-select/pull/14), [2](https://github.com/thefrontside/emberx-select/pull/27)]
+- Introduce `registerSelectHelper` [PR](https://github.com/thefrontside/emberx-select/pull/14)
+- Improve test helper [PR](https://github.com/thefrontside/emberx-select/pull/27)
 - Improved testing coverage
 
 See the [diff here](https://github.com/thefrontside/emberx-select/compare/v1.1.2...v1.1.3).
