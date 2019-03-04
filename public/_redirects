@@ -1,0 +1,53 @@
+/talks/*            /blog         302
+/ember-consulting /services     302
+/ember-training   /services     302
+/calendar         /             302
+/lunch-and-learn/*  /blog         302
+/open-source      /about        302
+/careers          /about        302
+/learning/*         /about        302
+/style-guide      /             302
+
+/people/arash-zafarnia/ /about 302
+
+/case-studies/ /work 302
+
+/about/:name  /people/:name 302
+
+/calendar/* / 302
+
+/blog/tags/javascript/page/2/ /tags 302
+/blog/tags/frp/ /tags 302
+/blog/tags/mvc/ /tags 302
+/blog/tags/javascript-functional-programming/ /tags 302
+/blog/tags/component/ /tags 302
+/blog/tags/awesome/ /tags 302
+/blog/tags/ember-a11y/ /tags 302
+/blog/tags/tvos/ /tags 302
+/blog/2014/09/21/reactive-modeling-with-ember.html /blog 302
+/blog/2014/03/06/a-sprinkling-of-ember.html /blog 302
+
+/blog/:year/:month/:day/:slug    /blog/:year-:month-:day-:slug   302
+/blog/tags/:slug  /tags/:slug 302
+/blog/page/:page /blog/:page 302
+
+/podcast/page/* /podcast 302
+/podcast/115-testing-issues-and-bigtest-solutions /podcast/115-testing-issues-and-big-test-solutions 302
+/podcast/109-what-do-you-need-in-a-javascript-framework /podcast/109-what-do-you-need-in-a-java-script-framework 302
+/podcast/105-automating-github-with-probot  /podcast/105-automating-git-hub-with-probot 302
+/podcast/100-100th-episode-celebration-with-brandon-hays /podcast/100-100-th-episode-celebration-with-brandon-hays 302
+/podcast/091-rxjs-with-ben-lesh-and-tracy-lee  /podcast/091-rx-js-with-ben-lesh-and-tracy-lee 302
+/podcast/090-big-testing-in-javascript /podcast/090-big-testing-in-java-script 302
+/podcast/085-webassembly-with-jay-phelps /podcast/085-web-assembly-with-jay-phelps 302
+/podcast/080-resin-io-with-alison-davis-and-ronald-mccollam  /podcast/080-resin-io-with-alison-davis-and-ronald-mc-collam 302
+/podcast/051-rust-and-apis-with-steve-klabnik /podcast/051-rust-and-ap-is-with-steve-klabnik 302
+/podcast/049-learning-elm-for-better-javascript-with-jamison-dance /podcast/049-learning-elm-for-better-java-script-with-jamison-dance 302
+/podcast/044-women-in-tech-and-shenomads-with-latoya-allen /podcast/044-women-in-tech-and-she-nomads-with-la-toya-allen 302
+/podcast/038-emberconf-2016-recap-and-highlights /podcast/038-ember-conf-2016-recap-and-highlights 302
+/podcast/032-working-remotely-with-allison-mcmillan /podcast/032-working-remotely-with-allison-mc-millan 302
+/podcast/021-best-of-emberconf-2015-part-2 /podcast/021-best-of-ember-conf-2015-part-2 302
+/podcast/020-best-of-emberconf-2015-part-1 /podcast/020-best-of-ember-conf-2015-part-1 302
+/podcast/015-domstep-with-jamison-dance   /podcast/015-dom-step-with-jamison-dance/ 302
+/podcast/013-ember-metal-htmlbars-and-the-death-of-script-tags /podcast/012-is-it-ok-to-not-love-programming-with-sarah-mei 302
+/podcast/009-how-to-tell-if-a-jquery-plugin-is-about-to-stab-you /podcast/009-how-to-tell-if-a-j-query-plugin-is-about-to-stab-you 302
+/podcast/004-emberconf-recap /podcast/004-ember-conf-recap 302
