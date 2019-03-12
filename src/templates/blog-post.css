@@ -5,6 +5,11 @@
 }
 
 .blog-post-content ul {
+  font-size: var(--size-base);
   margin-left: var(--space-double);
   margin-bottom: var(--space-one-half);
+}
+
+.blog-post-content li {
+  margin-bottom: var(--space-single);
 }
