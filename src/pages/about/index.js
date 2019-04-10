@@ -8,7 +8,11 @@ import Text from "../../components/text";
 import Content from "../../components/content";
 import Box from '../../components/box';
 import Button, { ButtonGroup } from "../../components/button";
-import TeamList from '../../components/team-list'
+import TeamList from '../../components/team-list';
+import { Link } from 'gatsby';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faComment } from '@fortawesome/free-solid-svg-icons';
 
 import './index.css';
 import logo from '../../img/logo-no-text.svg';
@@ -90,7 +94,9 @@ const AboutPage = ({
             We are constantly learning the new developments on our ecosystem and pushing them forward. We also share all the knowledge we can with our clients and community.
           </p>
         </div>
+      </Content>
 
+      <Content>
         <h2 className="frontside-separator">
           <span className="frontside-separator--text">
             <span>Meet the</span>
@@ -104,6 +110,25 @@ const AboutPage = ({
           slug: node.fields.slug,
           img: node.frontmatter.img
         }))}/>
+
+        <div className="cta-box">
+          <header className="cta-box--header">
+            <h2>
+              <Link to='contact'>
+                Let's talk
+              </Link>
+            </h2>
+            <FontAwesomeIcon icon={faComment} />
+          </header>
+          <div className="cta-box--body">
+            <p>
+              Get in touch with one of our technical leaders to discover how our expertise can bring value to your organization.
+            </p>
+            <Link className="cta-box--contact" to='contact'>
+              Contact us <FontAwesomeIcon icon={faArrowRight} />
+            </Link>
+          </div>
+        </div>
       </Content>
 
       <Content>
