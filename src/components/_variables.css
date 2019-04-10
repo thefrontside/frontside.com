@@ -24,7 +24,7 @@
   --space-triple: calc(var(--space-single) * 3);
   --space-quadruple: calc(var(--space-single) * 4);
 
-  --space-single-vw: 10vw;
+  --space-single-vw: 5vw;
   --space-half-vw: calc(var(--space-single-vw) * 0.5);
   --space-one-half-vw: calc(var(--space-single-vw) * 1.5);
   --space-double-vw: calc(var(--space-single-vw) * 2);
