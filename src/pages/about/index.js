@@ -61,7 +61,7 @@ const AboutPage = ({
         </div>
 
         <h2 className="frontside-separator">
-          <span class="frontside-separator--text">
+          <span className="frontside-separator--text">
             <span>The</span>
             <img src={logo} alt="Frontside" />
             <span>values</span>
@@ -90,6 +90,20 @@ const AboutPage = ({
             We are constantly learning the new developments on our ecosystem and pushing them forward. We also share all the knowledge we can with our clients and community.
           </p>
         </div>
+
+        <h2 className="frontside-separator">
+          <span className="frontside-separator--text">
+            <span>Meet the</span>
+            <img src={logo} alt="Frontside" />
+            <span>team</span>
+          </span>
+        </h2>
+
+        <TeamList people={team.map(({ node }) => ({
+          name: node.frontmatter.name,
+          slug: node.fields.slug,
+          img: node.frontmatter.img
+        }))}/>
       </Content>
 
       <Content>
@@ -163,15 +177,6 @@ const AboutPage = ({
             <Text>Learn more about our work</Text>
           </Button>
         </ButtonGroup>
-      </Content>
-
-      <Content>
-        <Text tag="h2">Meet the team</Text>
-        <TeamList people={team.map(({ node }) => ({
-          name: node.frontmatter.name,
-          slug: node.fields.slug,
-          img: node.frontmatter.img
-        }))}/>
       </Content>
 
       <Content>
