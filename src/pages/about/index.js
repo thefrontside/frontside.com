@@ -21,7 +21,6 @@ const coreSlugs = [
   '/people/taras-mankovski/'
 ];
 
-
 const AboutPage = ({
   data: {
     allMarkdownRemark: { edges: team },
