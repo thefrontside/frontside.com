@@ -70,6 +70,7 @@
 }
 
 /* Break Points */
+@custom-media --up-small (min-width: 430px);
 @custom-media --medium-up (min-width: 768px);
 @custom-media --large-up (min-width: 1024px);
 @custom-media --xl-up (min-width: 1440px);

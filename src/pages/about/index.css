@@ -1,0 +1,70 @@
+@import '../../components/variables';
+
+.about-features {
+  margin-top: var(--space-double);
+
+  @media (--up-small) {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.about-feature {
+  font-family: var(--font-sans-serif);
+  margin-top: var(--space-single);
+
+  @media (--up-small) {
+    width: 50%;
+  }
+}
+
+.about-feature > em {
+  font-style: normal;
+  font-weight: 800;
+}
+
+.about-feature > strong {
+  font-style: normal;
+  font-weight: 600;
+  font-size: var(--size-large);
+  color: var(--color-dark-blue);
+  display: block;
+}
+
+.frontside-separator {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  font-size: var(--size-base);
+  text-transform: uppercase;
+  font-weight: 600;
+  justify-content: space-between;
+}
+
+.frontside-separator--text {
+  flex-shrink: 0;
+  margin: 0 var(--space-single);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.frontside-separator--text > img {
+  margin: 0 var(--space-single);
+}
+
+.frontside-separator:before, .frontside-separator:after {
+  content: '';
+  display: block;
+  width: 200px;
+  height: 1px;
+  background: #999999;
+  flex-shrink: 5;
+}
+
+.frontside-values {
+  text-align: center;
+  @media (--up-small) {
+    margin: 0 var(--space-quadruple);
+  }
+}

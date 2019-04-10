@@ -10,6 +10,9 @@ import Box from '../../components/box';
 import Button, { ButtonGroup } from "../../components/button";
 import TeamList from '../../components/team-list'
 
+import './index.css';
+import logo from '../../img/logo-no-text.svg';
+
 const AboutPage = ({
   data: {
     allMarkdownRemark: { edges: team },
@@ -29,6 +32,65 @@ const AboutPage = ({
           </Text>
         }
       />
+
+      <Content>
+        <Text tag="p">
+          Every member of our team has significant experience in web UI platforms. From day one, you’ll get practical guidance on how to navigate interactions between frameworks like React, Angular, Ember, and more—all from specialists who have experienced similar challenges firsthand.
+        </Text>
+        <div className="about-features">
+          <p className="about-feature">
+            <em>Each</em> of our <em>leaders</em> has
+            <strong>15-20 years of experience</strong>
+            in <em>frontend engineering</em>.
+          </p>
+          <p className="about-feature">
+            Our <em>leadership</em> benefits
+            <strong>30 developers per leader</strong>
+            in each <em>client team</em>.
+          </p>
+          <p className="about-feature">
+            Our <em>approach</em> to frontend is
+            <strong>Framework Agnostic</strong>
+            We find the <em>right fit</em> for each case.
+          </p>
+          <p className="about-feature">
+            Some other <em>awesome</em>
+            <strong>Shiny Feature</strong>
+            goes <em>here</em>.
+          </p>
+        </div>
+
+        <h2 className="frontside-separator">
+          <span class="frontside-separator--text">
+            <span>The</span>
+            <img src={logo} alt="Frontside" />
+            <span>values</span>
+          </span>
+        </h2>
+
+        <div className="frontside-values">
+          <h3>
+            Future ready solutions
+          </h3>
+          <p>
+            We help our clients move with confidence by taking decisions that prepare them for the future. We are mindful of the implications each choice will have today and tomorrow.
+          </p>
+
+          <h3>
+            Development Experience
+          </h3>
+          <p>
+            We believe in empowering engineers with the right tools and setup for a delightful and productive development experience. This includes a robust test strategy that will allow everyone to keep moving nimbly.
+          </p>
+
+          <h3>
+            Constant Learning/Teaching
+          </h3>
+          <p>
+            We are constantly learning the new developments on our ecosystem and pushing them forward. We also share all the knowledge we can with our clients and community.
+          </p>
+        </div>
+      </Content>
 
       <Content>
         <Text tag="h2">
