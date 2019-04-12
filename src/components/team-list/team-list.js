@@ -40,7 +40,7 @@ export default function TeamList({ people }) {
               </Link>
             </h3>
             <p>
-              Jeffrey is a seasoned designer/developer who likes creating thoughtfully designed apps in the browser.  At Frontside, Jeffrey prides himself on shipping beautiful, livable code that solves real business problems.
+              {person.intro}
             </p>
             <Link className="team-member--more" to={person.slug}>
               Know more <FontAwesomeIcon icon={faArrowRight} />
