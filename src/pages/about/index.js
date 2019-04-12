@@ -6,8 +6,6 @@ import Layout from "../../components/layout";
 import Hero from "../../components/hero";
 import Text from "../../components/text";
 import Content from "../../components/content";
-import Box from '../../components/box';
-import Button, { ButtonGroup } from "../../components/button";
 import TeamList from '../../components/team-list';
 import { Link } from 'gatsby';
 
@@ -106,10 +104,12 @@ const AboutPage = ({
           </span>
         </h2>
 
+        {console.log(team)}
         <TeamList people={team.map(({ node }) => ({
           name: node.frontmatter.name,
           slug: node.fields.slug,
-          img: node.frontmatter.img
+          img: node.frontmatter.img,
+          intro: node.frontmatter.intro
         }))}/>
 
         <div className="cta-box">
