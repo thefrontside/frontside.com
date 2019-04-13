@@ -71,17 +71,22 @@
 
 .cta-box {
   background: #F3F8FF;
-  display: flex;
-  flex-flow: row nowrap;
   padding: var(--space-double) var(--space-single);
+  @media (--up-small) {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 }
 
 .cta-box--header {
-  width: 40%;
-  text-align: center;
   font-size: var(--size-xl);
   color: var(--color-light-blue);
-  flex-shrink: 0;
+  
+  @media (--up-small) {
+    width: 40%;
+    flex-shrink: 0;
+    text-align: center;
+  }
 }
 
 .cta-box--header > h2 {
@@ -89,6 +94,7 @@
   font-size: var(--size-large);
   border-bottom: 2px solid var(--color-light-blue);
   margin-right: var(--space-single);
+  margin-top: 0;
 }
 
 .cta-box--header > h2 > a {
@@ -98,7 +104,9 @@
 
 .cta-box--body {
   box-sizing: border-box;
-  padding: 0 var(--space-triple);
+  @media (--up-small) {
+    padding: 0 var(--space-triple);
+  }
 }
 
 .cta-box--body > p {
