@@ -6,10 +6,14 @@
 }
 
 .team-member {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
   margin-bottom: var(--space-quadruple);
+  text-align: center;
+  @media (--up-small) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    text-align: left;
+  }
 }
 
 .team-member--picture {
@@ -21,14 +25,28 @@
   mask-repeat: no-repeat;
   mask-size: 115%;
   mask-position: center center;
+  margin: 0 auto;
+
+  @media (--up-small) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 0;
+  }
 }
 
 .team-member--abstract {
-  margin-left: var(--space-double);
+  margin: 0 var(--space-double);
+  @media (--up-small) {
+    margin-right: 0;
+  }
 }
 
 .team-member--name {
-  margin-top: 0;
+  margin-top: var(--space-double);
+  @media (--up-small) {
+    margin-top: 0;
+  }
 }
 
 .team-member--name > a {
