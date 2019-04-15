@@ -104,7 +104,6 @@ const AboutPage = ({
           </span>
         </h2>
 
-        {console.log(team)}
         <TeamList people={team.map(({ node }) => ({
           name: node.frontmatter.name,
           slug: node.fields.slug,
@@ -268,6 +267,7 @@ export const aboutQuery = graphql`
           frontmatter {
             name
             title
+            intro
             img {
               childImageSharp {
                 fixed(width: 300) {
