@@ -41,18 +41,6 @@
   justify-content: space-between;
 }
 
-.frontside-separator--text {
-  flex-shrink: 0;
-  margin: 0 var(--space-single);
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-}
-
-.frontside-separator--text > img {
-  margin: 0 var(--space-single);
-}
-
 .frontside-separator:before, .frontside-separator:after {
   content: '';
   display: block;
@@ -60,6 +48,12 @@
   height: 1px;
   background: #999999;
   flex-shrink: 5;
+}
+
+.frontside-separator--text {
+  text-align: center;
+  flex-shrink: 0;
+  margin: 0 var(--space-single);
 }
 
 .frontside-values {

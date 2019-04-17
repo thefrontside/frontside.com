@@ -14,7 +14,6 @@ import { faArrowRight, faComment, faCodeBranch, faStar } from '@fortawesome/free
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import './index.css';
-import logo from '../../img/logo-no-text.svg';
 
 const AboutPage = ({
   data: {
@@ -31,43 +30,31 @@ const AboutPage = ({
       <Hero
         heading={
           <Text>
-            We've been bringing predictability to web application projects since 2005.
+            We've been bringing predictability to application development since 2005.
           </Text>
         }
       />
 
       <Content>
         <Text tag="p">
-          Every member of our team has significant experience in web UI platforms. From day one, you’ll get practical guidance on how to navigate interactions between frameworks like React, Angular, Ember, and more—all from specialists who have experienced similar challenges firsthand.
+          Every member of our team has significant experience in application platforms. From day one, you’ll get practical guidance on how to navigate interactions between frameworks like React, Angular, Ember, and more—all from specialists who have experienced similar challenges firsthand.
         </Text>
         <div className="about-features">
           <p className="about-feature">
-            <em>Each</em> of our <em>leaders</em> has
-            <strong>15-20 years of experience</strong>
+            <em>Each</em> of our <em>technical leaders</em> has
+            <strong>10-20 years of experience</strong>
             in <em>frontend engineering</em>.
-          </p>
-          <p className="about-feature">
-            Our <em>leadership</em> benefits
-            <strong>30 developers per leader</strong>
-            in each <em>client team</em>.
           </p>
           <p className="about-feature">
             Our <em>approach</em> to frontend is
             <strong>Framework Agnostic</strong>
             We find the <em>right fit</em> for each case.
           </p>
-          <p className="about-feature">
-            Some other <em>awesome</em>
-            <strong>Shiny Feature</strong>
-            goes <em>here</em>.
-          </p>
         </div>
 
         <h2 className="frontside-separator">
           <span className="frontside-separator--text">
-            <span>The</span>
-            <img src={logo} alt="Frontside" />
-            <span>values</span>
+            Our values
           </span>
         </h2>
 
@@ -98,9 +85,7 @@ const AboutPage = ({
       <Content>
         <h2 className="frontside-separator">
           <span className="frontside-separator--text">
-            <span>Meet the</span>
-            <img src={logo} alt="Frontside" />
-            <span>team</span>
+            Our team
           </span>
         </h2>
 
@@ -134,14 +119,12 @@ const AboutPage = ({
       <Content>
         <h2 className="frontside-separator">
           <span className="frontside-separator--text">
-            <span>We</span>
-            <img src={logo} alt="Frontside" />
-            <span>Open Source</span>
+            Open Source
           </span>
         </h2>
 
         <p className="oss-intro-parragraph">
-          We strive to nourish the javascript ecosystem with libraries and tools to empower developers to build better platforms on the web.
+          We strive to nourish the JavaScript ecosystem with libraries and tools to empower developers to build better platforms on the web.
         </p>
 
         <div className="oss-projects-list">
@@ -227,7 +210,7 @@ const AboutPage = ({
           <header className="cta-box--header">
             <h2>
               <Link to="/contact">
-                Contribute
+                Collaborate
               </Link>
             </h2>
             <FontAwesomeIcon icon={faCodeBranch} />
