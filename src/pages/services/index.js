@@ -6,10 +6,14 @@ import Text from "../../components/text";
 import Box from "../../components/box";
 import Testimonials from "../../components/testimonials";
 import Button, { ButtonGroup } from "../../components/button";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 import illya from "../../img/illya-busigin.jpg";
 import benji from "../../img/benji-shine.jpg";
 import jason from "../../img/jason-jaynes.jpg";
+
+import './index.css';
 
 export default function Services() {
   return (
@@ -17,25 +21,78 @@ export default function Services() {
       <Hero
         heading={
           <Text>
-            We bring deep expertise in web UI platforms to help your application
-            projects run smoothly.
+           We bring deep expertise in application platforms to ensure your projects run smoothly.
           </Text>
         }
       />
 
       <Content>
         <Text tag="p">
-          When you have multiple teams building on the same platform, poor
-          framework decisions can slow down your entire organization.
-        </Text>
-        <Text tag="p">
-          But with the right toolkit, your product will be able to withstand
-          change, and your team will move faster than ever before with a
-          cohesive frontend stack.
+        We help organizations architect and implement long lasting platforms at scale. Our leadership will provide you with a robust toolkit and optimized workflow so your teams can deliver features with confidence.
         </Text>
       </Content>
 
       <Content>
+        <div class="service-thumb service-thumb__consulting">
+          <div class="service-thumb--content">
+            <h2>
+              Frontend web application consulting
+            </h2>
+            <p>
+              We’ve built the huge applications, and we know how open source projects operate at scale.
+            </p>
+            <p class="service-thumb--cta">
+              We’ll give you full visibility on what to look out for in every step of your project to ensure implementation goes smoothly.
+              <a href="/">Let’s build with confidence <FontAwesomeIcon icon={faArrowRight} /></a>
+            </p>
+          </div>
+        </div>
+
+        <div class="service-thumb service-thumb__platform">
+          <div class="service-thumb--content">
+            <h2>
+              Platform profiling
+            </h2>
+            <p>
+              We’ll do an in-depth assessment of the frameworks you’re considering to give you an advance on what to expect with your current architecture.
+            </p>
+            <p class="service-thumb--cta">
+              You’ll get a comprehensive report on 12 key considerations along with practical steps to improve your platform’s architecture
+              <a href="/">Let’s plan ahead <FontAwesomeIcon icon={faArrowRight} /></a>
+            </p>
+          </div>
+        </div>
+
+        <div class="service-thumb service-thumb__coaching">
+          <div class="service-thumb--content">
+            <h2>
+              Software team coaching
+            </h2>
+            <p>
+              We are ruthlessly committed to collaborative consulting—training up engineers through pair programming and communicating the details behind every decision.
+            </p>
+            <p class="service-thumb--cta">
+              By the end of our engagement, your team will be well equipped to continue building upon your platform for years to come.
+              <a href="/">Level up your team <FontAwesomeIcon icon={faArrowRight} /></a>
+            </p>
+          </div>
+        </div>
+
+        <div class="service-thumb service-thumb__testing">
+          <div class="service-thumb--content">
+            <h2>
+              Peace-of-mind testing
+            </h2>
+            <p>
+              Well implemented testing can drastically improve your team’s performance by helping developers make smart coding choices to begin with and reducing the load on QA.
+            </p>
+            <p class="service-thumb--cta">
+              Your team will learn how to make testing a normal and pain-free part of your company culture, write effective, long-lasting tests quickly and release code that’s resilient and on spec.
+              <a href="/">Let’s test together <FontAwesomeIcon icon={faArrowRight} /></a>
+            </p>
+          </div>
+        </div>
+
         <Box direction="column">
           <Box marginBottom="double">
             <Text tag="h2">Build a better platform for your applications</Text>

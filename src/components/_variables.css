@@ -11,6 +11,8 @@
   --link-color: var(--color-light-blue);
   --button-color: var(--color-pink);
 
+  --rgba-light-blue: 38, 171, 232;
+
   /* Light Mode */
   --body-bg: #fff;
   --body-color: #444;

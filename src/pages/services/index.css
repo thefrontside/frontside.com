@@ -1,0 +1,73 @@
+@import '../../components/variables';
+
+.service-thumb {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.service-thumb:before {
+  content: '';
+  display: block;
+  flex-shrink: 0;
+
+  mask-image: url(../../img/logo-no-text.svg);
+  mask-mode: alpha;
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+
+  width: 180px;
+  height: 180px;
+  margin-right: var(--space-double);
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40%;
+}
+
+.service-thumb__consulting:before {
+  background-color: var(--color-pink);
+  background-image: url(../../img/custom-icons/consulting.svg);
+}
+
+.service-thumb__platform:before {
+  background-color: var(--color-light-blue);
+  background-image: url(../../img/custom-icons/platform.svg);
+}
+
+.service-thumb__coaching:before {
+  background-color: var(--color-dark-blue);
+  background-image: url(../../img/custom-icons/coaching.svg);
+}
+
+.service-thumb__testing:before {
+  background-color: var(--color-pink);
+  background-image: url(../../img/custom-icons/testing.svg);
+}
+
+.service-thumb--content {
+  flex-shrink: 2;
+}
+
+.service-thumb--content > h2 {
+  font-weight: 300;
+  color: var(--color-dark-blue);
+}
+
+.service-thumb--cta {
+  background-color: rgba(var(--rgba-light-blue), 0.10);
+  background-image: url(../../img/custom-icons/trophy.svg);
+  background-repeat: no-repeat;
+  background-position: var(--space-double) center;
+  background-size: 27px 25px;
+
+  padding: var(--space-single) var(--space-double) var(--space-single) calc(var(--space-quadruple) + 27px);
+  font-family: var(--font-sans-serif);
+  font-size: var(--size-med-sm);
+}
+
+.service-thumb--cta > a {
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
