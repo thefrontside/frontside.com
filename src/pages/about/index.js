@@ -15,6 +15,13 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import './index.css';
 
+const coreSlugs = [
+  '/people/charles-lowell/',
+  '/people/jeffrey-cherewaty/',
+  '/people/taras-mankovski/'
+];
+
+
 const AboutPage = ({
   data: {
     allMarkdownRemark: { edges: team },
@@ -23,6 +30,20 @@ const AboutPage = ({
     }
   }
 }) => {
+
+  let people = team.map(({ node }) => ({
+    name: node.frontmatter.name,
+    slug: node.fields.slug,
+    img: node.frontmatter.img,
+    intro: node.frontmatter.intro
+  }));
+
+  let coreTeam = coreSlugs.map((slug) => {
+    return people.find(person => person.slug.indexOf(slug) >= 0);
+  });
+  let otherTeam = people.filter(person => coreSlugs.indexOf(person.slug) === -1);
+  let orederedTeam = [...coreTeam, ...otherTeam];
+
   return (
     <Layout>
       <Helmet title={`About | ${title}`} />
@@ -89,12 +110,7 @@ const AboutPage = ({
           </span>
         </h2>
 
-        <TeamList people={team.map(({ node }) => ({
-          name: node.frontmatter.name,
-          slug: node.fields.slug,
-          img: node.frontmatter.img,
-          intro: node.frontmatter.intro
-        }))}/>
+        <TeamList people={orederedTeam}/>
 
         <div className="cta-box">
           <header className="cta-box--header">
