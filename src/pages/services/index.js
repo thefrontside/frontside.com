@@ -7,7 +7,8 @@ import Box from "../../components/box";
 import Testimonials from "../../components/testimonials";
 import Button, { ButtonGroup } from "../../components/button";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faComment } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'gatsby';
 
 import illya from "../../img/illya-busigin.jpg";
 import benji from "../../img/benji-shine.jpg";
@@ -30,9 +31,7 @@ export default function Services() {
         <Text tag="p">
         We help organizations architect and implement long lasting platforms at scale. Our leadership will provide you with a robust toolkit and optimized workflow so your teams can deliver features with confidence.
         </Text>
-      </Content>
-
-      <Content>
+ 
         <div class="service-thumb service-thumb__consulting">
           <div class="service-thumb--content">
             <h2>
@@ -92,7 +91,110 @@ export default function Services() {
             </p>
           </div>
         </div>
+      </Content>
 
+      <Content>
+        <h2 className="frontside-separator">
+          <span className="frontside-separator--text">
+            The Frontside way
+          </span>
+        </h2>
+
+        <p class="our-way--intro-parragraph">
+          We make your projects predictable with tried‑and‑true processes.
+        </p>
+
+        <div class="our-way--row">
+          <div class="our-way--pilar">
+            <h3>
+              Framework agnostic approach
+            </h3>
+            <p>
+              Every framework has its best use cases and its limitations. With deep experience in frameworks such as Ember, Angular, React, and Vue, we can help you identify the right solution for your organization’s specific goals.
+            </p>
+            <h3>
+              Automated Testing
+            </h3>
+            <p>
+              Every project begins with a comprehensive test plan so we can automate the testing process. This greatly reduces the load on QA and eliminates feedback cycles between them and your development team. It’s common for our clients to see a 4x increase in the number of releases that they can do in a month.
+            </p>
+          </div>
+          <aside>
+            <blockquote class="our-way--quote">
+              <p>
+                We had engineers with no previous web development or frontend experience, and, at the end of our engagement, those engineers were fully capable of taking over from where Frontside left us and moving the product forward.
+              </p>
+              <footer  class="our-way--quote-footer">
+                <img src={illya} alt="Ilya Busigin" />
+                <div>
+                  <strong>
+                    Ilya Busigin
+                  </strong>
+                  <br />
+                  CEO at iNGAGED.
+                </div>
+              </footer>
+            </blockquote>
+          </aside>
+        </div>
+
+        <div class="our-way--row our-way--row__alt">
+          <div class="our-way--pilar">
+            <h3>
+              Automated deployment
+            </h3>
+            <p>
+              Because everything is run through test suites and bugs are caught before they exist, you’ll be able to write, integrate, and deploy software continuously. That means no more resource-intensive release events. We’ll help you implement this system across your department so you can release safely and efficiently throughout all future projects.
+            </p>
+            <h3>
+              Zero regressions—really
+            </h3>
+            <p>
+              Sure, it sounds radical. But we’ve been able to do it again and again. Our process helps you deploy products that are bug‑free, guaranteed.
+            </p>
+          </div>
+          <aside>
+            <blockquote class="our-way--quote">
+              <p>
+                They introduced us to a new way of thinking about and working with our forms, which is a core part of our application. We’ve adopted that philosophy across the board. The quality of their work was far higher than what we’ve seen before. They intensely tested their work, and their tech support was fantastic.
+              </p>
+              <footer  class="our-way--quote-footer">
+                <img src={benji} alt="Benjamin Shine" />
+                <div>
+                  <strong>
+                    Benjamin Shine
+                  </strong>
+                  <br />
+                  CTO at AltSchool.
+                </div>
+              </footer>
+            </blockquote>
+          </aside>
+        </div>
+
+        <div className="cta-box">
+          <header className="cta-box--header">
+            <h2>
+              <Link to="/contact">
+                Let's talk
+              </Link>
+            </h2>
+            <FontAwesomeIcon icon={faComment} />
+          </header>
+          <div className="cta-box--body">
+            <p>
+              Reach out today to learn how we can help your organization move faster, without compromising quality.
+            </p>
+            <Link className="cta-box--contact" to="/contact">
+              Contact us <FontAwesomeIcon icon={faArrowRight} />
+            </Link>
+          </div>
+        </div>
+      </Content>
+
+
+
+      <Content>
         <Box direction="column">
           <Box marginBottom="double">
             <Text tag="h2">Build a better platform for your applications</Text>

@@ -71,3 +71,71 @@
   text-decoration: none;
   display: block;
 }
+
+.our-way--intro-parragraph {
+  text-align: center;
+  margin: var(--space-quadruple) var(--space-quadruple) var(--space-double) var(--space-quadruple);
+}
+
+.our-way--row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-double);
+}
+
+.our-way--row__alt > aside {
+  order: 1;
+}
+
+.our-way--row__alt > .our-way--pilar {
+  order: 2;
+}
+
+.our-way--row > aside {
+  flex-shrink: 2;
+  width: 40%;
+}
+
+.our-way--pilar {
+  flex-shrink: 0;
+  width: 50%;
+}
+
+.our-way--pilar > h3 {
+  font-weight: 300;
+  color: var(--color-dark-blue);
+  margin-top: var(--space-double);
+}
+
+.our-way--quote {
+  background-image: url(../../img/custom-icons/quote.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 60px 45px;
+  padding-top: calc(46px + var(--space-double));
+}
+
+.our-way--quote > p {
+  font-size: var(--size-med-lg);
+  font-style: italic;
+}
+
+.our-way--quote-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  font-family: var(--font-sans-serif);
+  font-size: var(--size-med-sm);
+  color: var(--color-dark-blue);
+}
+
+.our-way--quote-footer > img {
+  border-radius: 100%;
+  width: 75px;
+  height: 75px;
+  display: block;
+  margin-right: var(--space-double);
+}
