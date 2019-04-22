@@ -16,6 +16,8 @@
   --body-color-faded: #888;
   --logo-wordmark-color: var(--color-dark-blue);
 
+  --rgba-light-blue: 38, 171, 232;
+
   /* Spacing  */
   --space-single: 1rem;
   --space-half: calc(var(--space-single) * 0.5);

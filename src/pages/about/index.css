@@ -64,7 +64,7 @@
 }
 
 .cta-box {
-  background: #F3F8FF;
+  background: rgba(var(--rgba-light-blue), 0.10);
   padding: var(--space-double) var(--space-single);
   @media (--up-small) {
     display: flex;
