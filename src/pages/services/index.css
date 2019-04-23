@@ -139,3 +139,34 @@
   display: block;
   margin-right: var(--space-double);
 }
+
+.success-stories {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-top: var(--space-quadruple);
+}
+
+.success-stories--content {
+  width: 50%;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.success-stories > aside {
+  width: 40%;
+}
+
+.success-stories--logos {
+  list-style: none;
+  padding-left: var(--space-double);
+}
+
+.success-stories--logo {
+  padding-left: 50%;
+  margin-bottom: var(--space-double);
+}
+
+.success-stories--logo__square {
+  padding-left: 70%;
+}
