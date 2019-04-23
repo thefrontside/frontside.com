@@ -1,9 +1,11 @@
 @import '../../components/variables';
 
 .service-thumb {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
+  @media (--up-small) {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
 }
 
 .service-thumb:before {
@@ -18,11 +20,15 @@
 
   width: 180px;
   height: 180px;
-  margin-right: var(--space-double);
 
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 40%;
+
+  margin: 0 auto;
+  @media (--up-small) {
+    margin: 0 var(--space-double) 0 0;
+  }
 }
 
 .service-thumb__consulting:before {
@@ -52,6 +58,7 @@
 .service-thumb--content > h2 {
   font-weight: 300;
   color: var(--color-dark-blue);
+  margin-top: var(--space-double);
 }
 
 .service-thumb--cta {
@@ -78,11 +85,14 @@
 }
 
 .our-way--row {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: var(--space-double);
+
+  @media (--up-small) {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .our-way--row__alt > aside {
@@ -94,13 +104,17 @@
 }
 
 .our-way--row > aside {
-  flex-shrink: 2;
-  width: 40%;
+  @media (--up-small) {
+    flex-shrink: 2;
+    width: 40%;
+  }
 }
 
 .our-way--pilar {
-  flex-shrink: 0;
-  width: 50%;
+  @media (--up-small) {
+    flex-shrink: 0;
+    width: 50%;
+  }
 }
 
 .our-way--pilar > h3 {
@@ -141,20 +155,28 @@
 }
 
 .success-stories {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
   margin-top: var(--space-quadruple);
+
+  @media (--up-small) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
 }
 
 .success-stories--content {
-  width: 50%;
-  flex-shrink: 0;
-  text-align: right;
+  text-align: center;
+  @media (--up-small) {
+    width: 50%;
+    flex-shrink: 0;
+    text-align: right;
+  }
 }
 
 .success-stories > aside {
-  width: 40%;
+  @media (--up-small) {
+    width: 40%;
+  }
 }
 
 .success-stories--logos {
@@ -163,10 +185,18 @@
 }
 
 .success-stories--logo {
-  padding-left: 50%;
-  margin-bottom: var(--space-double);
+  width: 50%;
+  margin: 0 auto var(--space-double) auto;
+  @media (--up-small) {
+    width: 100%;
+    padding-left: 50%;
+  }
 }
 
 .success-stories--logo__square {
-  padding-left: 70%;
+  width: 35%;
+  @media (--up-small) {
+    width: 100%;
+    padding-left: 70%;
+  }
 }
