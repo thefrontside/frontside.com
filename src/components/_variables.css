@@ -7,6 +7,7 @@
   --color-pink: #F74D7B;
   --color-light-blue: #26ABE8;
   --color-dark-blue: #14315D;
+  --color-dark-blue-darkable: #14315D;
   --link-color: var(--color-light-blue);
   --button-color: var(--color-pink);
 
@@ -94,8 +95,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --body-bg: #1e1e1e;
-    --body-color: #fff;
+    --body-color: #fafafa;
     --body-color-faded: #aaa;
     --logo-wordmark-color: #fff;
+    --color-dark-blue-darkable: #59d6fb;
   }
 }

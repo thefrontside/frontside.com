@@ -27,7 +27,7 @@
   font-style: normal;
   font-weight: 600;
   font-size: var(--size-large);
-  color: var(--color-dark-blue);
+  color: var(--color-dark-blue-darkable);
   display: block;
 }
 
@@ -94,7 +94,7 @@
 
 .cta-box--header > h2 > a {
   text-decoration: none;
-  color: var(--color-dark-blue);
+  color: var(--color-dark-blue-darkable);
 }
 
 .cta-box--body {
@@ -113,7 +113,7 @@
   font-weight: 800;
   text-decoration: none;
   font-size: var(--size-base);
-  color: var(--color-dark-blue);
+  color: var(--color-dark-blue-darkable);
 }
 
 .oss-intro-parragraph {

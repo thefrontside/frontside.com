@@ -54,7 +54,7 @@
   font-family: var(--font-sans-serif);
   font-size: var(--size-large);
   font-weight: 300;
-  color: var(--color-dark-blue);
+  color: var(--color-dark-blue-darkable);
 }
 
 .team-img {
