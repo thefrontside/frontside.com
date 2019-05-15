@@ -38,6 +38,7 @@ collections:
       - {label: "Github", name: "github", widget: "string"}
       - {label: "Bio", name: "bio", widget: "markdown"}
       - {label: "Portrait", name: "img", widget: "image"}
+      - {label: "Intro", name: "intro", widget: "markdown"}
 
   - name: "pages"
     label: "Pages"

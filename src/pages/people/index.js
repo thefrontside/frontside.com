@@ -54,6 +54,7 @@ export const peoplePageQuery = graphql`
             frontmatter {
               name
               title
+              intro
               img {
                 childImageSharp {
                   fixed(width: 300) {

@@ -5,6 +5,10 @@
   "author": "Taras <taras@frontside.io>",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-brands-svg-icons": "^5.8.1",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "autoprefixer": "^9.4.4",
     "classnames": "^2.2.6",
     "dateformat": "3.0.3",
