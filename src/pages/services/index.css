@@ -42,7 +42,7 @@
 }
 
 .service-thumb__coaching:before {
-  background-color: var(--color-dark-blue);
+  background-color: var(--color-dark-blue-darkable);
   background-image: url(../../img/custom-icons/coaching.svg);
 }
 
@@ -57,7 +57,7 @@
 
 .service-thumb--content > h2 {
   font-weight: 300;
-  color: var(--color-dark-blue);
+  color: var(--color-dark-blue-darkable);
   margin-top: var(--space-double);
 }
 
@@ -119,7 +119,7 @@
 
 .our-way--pilar > h3 {
   font-weight: 300;
-  color: var(--color-dark-blue);
+  color: var(--color-dark-blue-darkable);
   margin-top: var(--space-double);
 }
 
@@ -143,7 +143,7 @@
 
   font-family: var(--font-sans-serif);
   font-size: var(--size-med-sm);
-  color: var(--color-dark-blue);
+  color: var(--color-dark-blue-darkable);
 }
 
 .our-way--quote-footer > img {
@@ -191,6 +191,12 @@
     width: 100%;
     padding-left: 50%;
   }
+}
+
+.success-stories--logo > img { 
+  background: #fff;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .success-stories--logo__square {
