@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import Helmet from "react-helmet";
 import Img from "gatsby-image"
 import Content from "../components/content";
+import './people.css';
 
 const PersonPage = ({
   data: {
@@ -37,7 +38,7 @@ const PersonPage = ({
         <h1>{name}</h1>
         <div className="person-title">{personTitle}</div>
         <p>{bio}</p>
-        <ul>
+        <ul className="list-style-none">
           {twitter && (
             <li>Twitter: <a href={`https://twitter.com/${twitter}`}>{twitter}</a></li>
           )}
@@ -46,9 +47,9 @@ const PersonPage = ({
           )}
         </ul>
         {posts.length ? (
-          <div>
+          <>
             <h2>Blog Posts</h2>
-            <ul>
+            <ul className="list-style-none">
               {posts.map(post => (
                 <li key={post.fields.slug}>
                   <Link to={post.fields.slug}>
@@ -57,12 +58,12 @@ const PersonPage = ({
                 </li>
               ))}
             </ul>
-          </div>
+          </>
         ): null}
         {episodes.length ? (
-          <div>
+          <>
             <h2>Podcast Episodes</h2>
-            <ul>
+            <ul className="list-style-none">
               {episodes.map(episode => (
                 <li key={episode.number}>
                   <Link to={`/podcast/${episode.slug}`}>
@@ -71,7 +72,7 @@ const PersonPage = ({
                 </li>
               ))}
             </ul>
-          </div>
+          </>
         ) : null}
       </Content>
     </Layout>
