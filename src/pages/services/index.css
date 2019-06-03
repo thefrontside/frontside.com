@@ -1,0 +1,208 @@
+@import '../../components/variables';
+
+.service-thumb {
+  @media (--up-small) {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+}
+
+.service-thumb:before {
+  content: '';
+  display: block;
+  flex-shrink: 0;
+
+  mask-image: url(../../img/logo-no-text.svg);
+  mask-mode: alpha;
+  mask-repeat: no-repeat;
+  mask-size: 100%;
+
+  width: 180px;
+  height: 180px;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40%;
+
+  margin: 0 auto;
+  @media (--up-small) {
+    margin: 0 var(--space-double) 0 0;
+  }
+}
+
+.service-thumb__consulting:before {
+  background-color: var(--color-pink);
+  background-image: url(../../img/custom-icons/consulting.svg);
+}
+
+.service-thumb__platform:before {
+  background-color: var(--color-light-blue);
+  background-image: url(../../img/custom-icons/platform.svg);
+}
+
+.service-thumb__coaching:before {
+  background-color: var(--color-dark-blue-darkable);
+  background-image: url(../../img/custom-icons/coaching.svg);
+}
+
+.service-thumb__testing:before {
+  background-color: var(--color-pink);
+  background-image: url(../../img/custom-icons/testing.svg);
+}
+
+.service-thumb--content {
+  flex-shrink: 2;
+}
+
+.service-thumb--content > h2 {
+  font-weight: 300;
+  color: var(--color-dark-blue-darkable);
+  margin-top: var(--space-double);
+}
+
+.service-thumb--cta {
+  background-color: rgba(var(--rgba-light-blue), 0.10);
+  background-image: url(../../img/custom-icons/trophy.svg);
+  background-repeat: no-repeat;
+  background-position: var(--space-double) center;
+  background-size: 27px 25px;
+
+  padding: var(--space-single) var(--space-double) var(--space-single) calc(var(--space-quadruple) + 27px);
+  font-family: var(--font-sans-serif);
+  font-size: var(--size-med-sm);
+}
+
+.service-thumb--cta > a {
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+}
+
+.our-way--intro-parragraph {
+  text-align: center;
+  margin: var(--space-quadruple) var(--space-quadruple) var(--space-double) var(--space-quadruple);
+}
+
+.our-way--row {
+  margin-bottom: var(--space-double);
+
+  @media (--up-small) {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.our-way--row__alt > aside {
+  order: 1;
+}
+
+.our-way--row__alt > .our-way--pilar {
+  order: 2;
+}
+
+.our-way--row > aside {
+  @media (--up-small) {
+    flex-shrink: 2;
+    width: 40%;
+  }
+}
+
+.our-way--pilar {
+  @media (--up-small) {
+    flex-shrink: 0;
+    width: 50%;
+  }
+}
+
+.our-way--pilar > h3 {
+  font-weight: 300;
+  color: var(--color-dark-blue-darkable);
+  margin-top: var(--space-double);
+}
+
+.our-way--quote {
+  background-image: url(../../img/custom-icons/quote.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 60px 45px;
+  padding-top: calc(46px + var(--space-double));
+}
+
+.our-way--quote > p {
+  font-size: var(--size-med-lg);
+  font-style: italic;
+}
+
+.our-way--quote-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  font-family: var(--font-sans-serif);
+  font-size: var(--size-med-sm);
+  color: var(--color-dark-blue-darkable);
+}
+
+.our-way--quote-footer > img {
+  border-radius: 100%;
+  width: 75px;
+  height: 75px;
+  display: block;
+  margin-right: var(--space-double);
+}
+
+.success-stories {
+  margin-top: var(--space-quadruple);
+
+  @media (--up-small) {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+}
+
+.success-stories--content {
+  text-align: center;
+  @media (--up-small) {
+    width: 50%;
+    flex-shrink: 0;
+    text-align: right;
+  }
+}
+
+.success-stories > aside {
+  @media (--up-small) {
+    width: 40%;
+  }
+}
+
+.success-stories--logos {
+  list-style: none;
+  padding-left: var(--space-double);
+}
+
+.success-stories--logo {
+  width: 50%;
+  margin: 0 auto var(--space-double) auto;
+  @media (--up-small) {
+    width: 100%;
+    padding-left: 50%;
+  }
+}
+
+.success-stories--logo > img { 
+  background: #fff;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.success-stories--logo__square {
+  width: 35%;
+  @media (--up-small) {
+    width: 100%;
+    padding-left: 70%;
+  }
+}
