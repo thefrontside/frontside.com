@@ -23,7 +23,7 @@ const PeoplePage = ({
     <Layout>
       <Helmet title={`Team | ${title}`} />
       <h1>Team</h1>
-      <ul>
+      <ul className="list-style-none">
         {team.map(person => (
           <li key={person.frontmatter.name}>
             <Link to={person.fields.slug}>
