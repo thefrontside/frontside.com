@@ -46,7 +46,7 @@ export default function Services() {
             </p>
             <p className="service-thumb--cta">
               We’ll give you full visibility on what to look out for in every step of your project to ensure implementation goes smoothly.
-              <a href="/">Let’s build with confidence <FontAwesomeIcon icon={faArrowRight} /></a>
+              <a href="/contact">Let’s build with confidence <FontAwesomeIcon icon={faArrowRight} /></a>
             </p>
           </div>
         </div>
@@ -61,7 +61,7 @@ export default function Services() {
             </p>
             <p className="service-thumb--cta">
               You’ll get a comprehensive report on 12 key considerations along with practical steps to improve your platform’s architecture
-              <a href="/">Let’s plan ahead <FontAwesomeIcon icon={faArrowRight} /></a>
+              <a href="/contact">Let’s plan ahead <FontAwesomeIcon icon={faArrowRight} /></a>
             </p>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function Services() {
             </p>
             <p className="service-thumb--cta">
               By the end of our engagement, your team will be well equipped to continue building upon your platform for years to come.
-              <a href="/">Level up your team <FontAwesomeIcon icon={faArrowRight} /></a>
+              <a href="/contact">Level up your team <FontAwesomeIcon icon={faArrowRight} /></a>
             </p>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function Services() {
             </p>
             <p className="service-thumb--cta">
               Your team will learn how to make testing a normal and pain-free part of your company culture, write effective, long-lasting tests quickly and release code that’s resilient and on spec.
-              <a href="/">Let’s test together <FontAwesomeIcon icon={faArrowRight} /></a>
+              <a href="/contact">Let’s test together <FontAwesomeIcon icon={faArrowRight} /></a>
             </p>
           </div>
         </div>
