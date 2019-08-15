@@ -46,7 +46,7 @@ const PersonPage = ({
             <li>GitHub: <a href={`https://github.com/${github}`}>{github}</a></li>
           )}
         </ul>
-        {posts.length ? (
+        {posts && posts.length ? (
           <>
             <h2>Blog Posts</h2>
             <ul className="list-style-none">
@@ -60,7 +60,7 @@ const PersonPage = ({
             </ul>
           </>
         ): null}
-        {episodes.length ? (
+        {episodes && episodes.length ? (
           <>
             <h2>Podcast Episodes</h2>
             <ul className="list-style-none">
