@@ -5,7 +5,7 @@
     "verify-sitemap": "./index.js"
   },
   "dependencies": {
-    "fast-xml-parser": "^3.12.13",
+    "fast-xml-parser": "^3.13.0",
     "request-promise-native": "1.0.7"
   }
 }
