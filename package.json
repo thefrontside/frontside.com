@@ -5,7 +5,7 @@
   "author": "Taras <taras@frontside.io>",
   "private": true,
   "engines": {
-    "node" : "~10.16.2"
+    "node": "~10.16.2"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",
@@ -32,7 +32,6 @@
     "gatsby-source-filesystem": "^2.0.1",
     "gatsby-transformer-remark": "^2.2.0",
     "gatsby-transformer-sharp": "^2.1.1",
-    "lerna": "^3.5.1",
     "lodash": "^4.17.5",
     "lodash-webpack-plugin": "^0.11.4",
     "netlify-cms": "^2.1.1",
@@ -55,12 +54,13 @@
     "gatsby",
     "netlifycms"
   ],
+  "workspaces": [
+    "plugins/*",
+    "lib/*"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "lerna": "lerna",
-    "bootstrap": "lerna bootstrap",
-    "postinstall": "yarn bootstrap",
     "start": "yarn develop",
     "clean": "rimraf .cache public",
     "build": "yarn clean && gatsby build",
