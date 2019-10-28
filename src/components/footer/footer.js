@@ -34,10 +34,11 @@ export default function Footer() {
 
       <address className="vcard footer-address">
         <div className="adr">
-          <div className="street-address">P.O. Box 170249</div>
+          <div className="street-address">2700 W Anderson Ln</div>
+          <div className="street-address">Suite 205-122</div>
           <span className="locality">Austin</span>,&nbsp;
           <span className="region">Texas</span>&nbsp;
-          <span className="postal-code">78717</span>
+          <span className="postal-code">78757</span>
         </div>
         <a className="tel" href="tel:18004934589">
           &#43;1 (800) 493-4589
