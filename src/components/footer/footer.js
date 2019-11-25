@@ -1,9 +1,9 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from "react";
+import { Link } from "gatsby";
 
-import Text from '../text';
-import logo from '../../img/logo-no-text.svg';
-import './footer.css';
+import Text from "../text";
+import logo from "../../img/logo-no-text.svg";
+import "./footer.css";
 
 export default function Footer() {
   let year = new Date().getFullYear();
@@ -35,7 +35,7 @@ export default function Footer() {
       <address className="vcard footer-address">
         <div className="adr">
           <div className="street-address">2700 W Anderson Ln</div>
-          <div className="street-address">Suite 205-122</div>
+          <div className="street-address">Suite 205-107</div>
           <span className="locality">Austin</span>,&nbsp;
           <span className="region">Texas</span>&nbsp;
           <span className="postal-code">78757</span>
