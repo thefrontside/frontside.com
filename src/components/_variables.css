@@ -57,6 +57,13 @@
     var(--size-scale) *
     var(--size-scale) *
     var(--size-scale));
+  --size-xxxl: calc(
+    var(--size-base) *
+    var(--size-scale) *
+    var(--size-scale) *
+    var(--size-scale) *
+    var(--size-scale) *
+    var(--size-scale));
   --size-med-sm: calc(
     var(--size-base) /
     var(--size-scale));

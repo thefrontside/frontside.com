@@ -3,7 +3,7 @@
 .content-container {
   padding: var(--space-half-vw);
   box-sizing: content-box;
-  max-width: 50rem;
+  max-width: 45rem;
   margin: 0 auto;
 
   @media (--xl-up) {

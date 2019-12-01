@@ -35,7 +35,7 @@ export default function IndexPage({
         )}
         subheading={(
           <Text widows={3}>
-            We help your team get ahead of your competitors through outstanding engineering.
+            We help your team get ahead of your competitors <br /> through outstanding engineering.
           </Text>
         )}
       />

@@ -75,8 +75,6 @@ export default class Navbar extends Component {
           <ul className="navbar-menu">
             <li><Link to="/about">About</Link></li>
             <li><Link to="/services">Services</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/podcast">Podcast</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </CSSTransition>

@@ -1,16 +1,16 @@
 @import '../variables';
 
 .hero {
-  padding:
-    var(--space-double-vw)
-    var(--space-half-vw)
-    var(--space-single-vw);
+  padding: var(--space-single-vw) var(--space-half-vw);
   box-sizing: content-box;
-  max-width: 50rem;
+  max-width: 60rem;
   margin: 0 auto;
+  text-align: center;
 
   h1 {
-    font-size: var(--size-xxl);
+    font-size: var(--size-xxxl);
+    font-weight: normal;
+    color: var(--color-dark-blue-darkable);
   }
 
   p {
