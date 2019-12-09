@@ -30,30 +30,28 @@ export default function IndexPage({
       <Hero
         heading={(
           <Text>
-            Build a better platform—without the missteps, timeline setbacks, or
-            even regressions.
+            Deliver next-generation user experiences, without the new-technology risks
           </Text>
         )}
         subheading={(
           <Text widows={3}>
-            We help your team build web applications at scale.
+            We help your team get ahead of your competitors <br /> through outstanding engineering.
           </Text>
         )}
       />
 
       <Content>
         <Text tag="p">
-          When your framework decisions today will impact the state of your
-          product—and team—for years to come, we’ve got your back.
+          Adopting new technologies can create a competitive advantage in the marketplace by allowing your team to build leading-edge user experiences, but this can also carry risks to delivery, both in the short and long term.
         </Text>
         <Text tag="p">
-          Frontside is a small team with deep experience in web UI platform
-          integrations. Since 2005, we’ve been helping engineering teams build
-          rock-solid web applications—and assembling the toolkits that
-          support them.
+          Frontside specializes in eliminating the typical risks in these cases, building next-generation tools to enable cross-team collaboration, fast feedback, and upholding a high standard of quality.
+        </Text>
+        <Text tag="p">
+        What you’re left with is a compelling user experience delivered on time, with the tools and training for your teams to continue delivering long into the future.
         </Text>
         <ButtonGroup>
-          <Button to="/services">See how we can help</Button>
+          <Button to="/about">See how we can help</Button>
         </ButtonGroup>
       </Content>
 
@@ -73,10 +71,11 @@ export default function IndexPage({
 
       <Content>
         <Text tag="h3" widows={3}>
-          React. Ember. Angular. And many more.
+          Own your stack. Go beyond frameworks like Angular, React or Vue.
         </Text>
         <Text tag="p">
-          We’re here to make your large-scale application projects run smoothly.
+          Attract and retain engineers with an elite developer experience that promotes code quality through thoughtful practices and a smooth development pipeline.
+          We make your developer experience a first-class citizen so that your engineers stay unlocked, productive and interested.
         </Text>
         <ButtonGroup>
           <Button to="/about">Get to know us</Button>

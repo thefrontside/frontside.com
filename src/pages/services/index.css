@@ -24,31 +24,52 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 40%;
+  background-color: var(--color-dark-blue-darkable);
 
   margin: 0 auto;
   @media (--up-small) {
     margin: 0 var(--space-double) 0 0;
   }
+  
+}
+
+.service-thumb:nth-child(3n):before {
+  background-color: var(--color-pink);
+}
+.service-thumb:nth-child(3n+1):before {
+  background-color: var(--color-light-blue);
+}
+.service-thumb:nth-child(3n+2):before {
+  background-color: var(--color-dark-blue-darkable);
 }
 
 .service-thumb__consulting:before {
-  background-color: var(--color-pink);
   background-image: url(../../img/custom-icons/consulting.svg);
 }
 
 .service-thumb__platform:before {
-  background-color: var(--color-light-blue);
   background-image: url(../../img/custom-icons/platform.svg);
 }
 
 .service-thumb__coaching:before {
-  background-color: var(--color-dark-blue-darkable);
   background-image: url(../../img/custom-icons/coaching.svg);
 }
 
 .service-thumb__testing:before {
-  background-color: var(--color-pink);
   background-image: url(../../img/custom-icons/testing.svg);
+}
+
+.service-thumb__architecture:before {
+  background-image: url(../../img/custom-icons/architecture.svg);
+}
+
+.service-thumb__staffing:before {
+  background-image: url(../../img/custom-icons/staffing.svg);
+}
+
+
+.service-thumb__experience:before {
+  background-image: url(../../img/custom-icons/user-experience.svg);
 }
 
 .service-thumb--content {

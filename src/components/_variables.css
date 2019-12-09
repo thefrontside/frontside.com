@@ -13,6 +13,9 @@
 
   --rgba-light-blue: 38, 171, 232;
 
+  --input-border-color: #ccc;
+  --input-color: #000;
+
   /* Light Mode */
   --body-bg: #fff;
   --body-color: #444;
@@ -53,6 +56,13 @@
     var(--size-scale));
   --size-xxl: calc(
     var(--size-base) *
+    var(--size-scale) *
+    var(--size-scale) *
+    var(--size-scale) *
+    var(--size-scale));
+  --size-xxxl: calc(
+    var(--size-base) *
+    var(--size-scale) *
     var(--size-scale) *
     var(--size-scale) *
     var(--size-scale) *
@@ -101,5 +111,6 @@
     --body-color-faded: #aaa;
     --logo-wordmark-color: #fff;
     --color-dark-blue-darkable: #59d6fb;
+    --input-color: #ffffff;
   }
 }

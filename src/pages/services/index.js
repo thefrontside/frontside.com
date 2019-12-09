@@ -26,7 +26,7 @@ export default function Services() {
       <Hero
         heading={
           <Text>
-           We bring deep expertise in application platforms to ensure your projects run smoothly.
+            We bring deep expertise in engineering to realize your teams' full potential.
           </Text>
         }
       />
@@ -39,29 +39,10 @@ export default function Services() {
         <div className="service-thumb service-thumb__consulting">
           <div className="service-thumb--content">
             <h2>
-              Frontend web application consulting
+              Development Parallelization
             </h2>
             <p>
-              We’ve built the huge applications, and we know how open source projects operate at scale.
-            </p>
-            <p className="service-thumb--cta">
-              We’ll give you full visibility on what to look out for in every step of your project to ensure implementation goes smoothly.
-              <a href="/contact">Let’s build with confidence <FontAwesomeIcon icon={faArrowRight} /></a>
-            </p>
-          </div>
-        </div>
-
-        <div className="service-thumb service-thumb__platform">
-          <div className="service-thumb--content">
-            <h2>
-              Platform profiling
-            </h2>
-            <p>
-              We’ll do an in-depth assessment of the frameworks you’re considering to give you an advance on what to expect with your current architecture.
-            </p>
-            <p className="service-thumb--cta">
-              You’ll get a comprehensive report on 12 key considerations along with practical steps to improve your platform’s architecture
-              <a href="/contact">Let’s plan ahead <FontAwesomeIcon icon={faArrowRight} /></a>
+              Maximize your teams' velocity by enabling them to work in parallel. We specialize in keeping your teams unblocked from each other through contract management, simulation, and automated visibility. 
             </p>
           </div>
         </div>
@@ -69,29 +50,45 @@ export default function Services() {
         <div className="service-thumb service-thumb__coaching">
           <div className="service-thumb--content">
             <h2>
-              Software team coaching
+              Inter-team Collaboration 
             </h2>
             <p>
-              We are ruthlessly committed to collaborative consulting—training up engineers through pair programming and communicating the details behind every decision.
-            </p>
-            <p className="service-thumb--cta">
-              By the end of our engagement, your team will be well equipped to continue building upon your platform for years to come.
-              <a href="/contact">Level up your team <FontAwesomeIcon icon={faArrowRight} /></a>
+              We help your teams across cities—or continents—and departments to collaborate as they co-develop business value in your applications. Through custom-tailored tools and processes around your codebase, we allow you to keep real track of expectations and progress across Engineering, Product, UX, and Leadership. 
             </p>
           </div>
         </div>
 
-        <div className="service-thumb service-thumb__testing">
+        <div className="service-thumb service-thumb__architecture">
           <div className="service-thumb--content">
             <h2>
-              Peace-of-mind testing
+              Architecture for new technologies
             </h2>
             <p>
-              Well implemented testing can drastically improve your team’s performance by helping developers make smart coding choices to begin with and reducing the load on QA.
+              Do not compromise in quality or software durability when choosing cutting-edge technologies. We help you architect your software to minimize risk and empower your team for experimentation.
             </p>
-            <p className="service-thumb--cta">
-              Your team will learn how to make testing a normal and pain-free part of your company culture, write effective, long-lasting tests quickly and release code that’s resilient and on spec.
-              <a href="/contact">Let’s test together <FontAwesomeIcon icon={faArrowRight} /></a>
+
+          </div>
+        </div>
+
+        <div className="service-thumb service-thumb__staffing">
+          <div className="service-thumb--content">
+            <h2>
+              Elite Staffing
+            </h2>
+            <p>
+              We help you identify which parts of your software are best suited to be built by specialized engineers in intricate fields. We facilitate collaboration with the best engineers from around the world for the tasks you need.
+            </p>
+
+          </div>
+        </div>
+
+        <div className="service-thumb service-thumb__experience">
+          <div className="service-thumb--content">
+            <h2>
+              Development Experience
+            </h2>
+            <p>
+              We help you make sure your engineers stay motivated and productive by perfecting their tools and processes. A great developer experience will help you retain talented engineers, onboard new hires and contractors, and get more results faster. 
             </p>
           </div>
         </div>

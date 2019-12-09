@@ -1,6 +1,10 @@
 .input {
-  border: 1px solid #ccc;
+  border: 1px solid var(--input-border-color);
   border-radius: var(--space-half);
+  background: var(--body-bg);
   padding: 0.25em 0.5em;
   width: 100%;
+  color: var(--input-color);
+  font-size: 1rem;
+  font-family: var(--font-serif);
 }

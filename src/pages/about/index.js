@@ -58,7 +58,10 @@ const AboutPage = ({
 
       <Content>
         <Text tag="p">
-          Every member of our team has significant experience in application platforms. From day one, you’ll get practical guidance on how to navigate interactions between frameworks like React, Angular, Ember, and more—all from specialists who have experienced similar challenges firsthand.
+          Frontside serves as a platform for technology leaders with a shared philosophy on software quality to come together and enable the next generation of engineering teams.
+        </Text>
+        <Text tag="p">
+          Thanks to our extensive experience working with large-scale projects, we can leverage your team to embrace modern tooling and technologies. Get ready to deliver outstanding experiences to your users consistently, while enabling cross-teams collaboration in your organization as you have not seen before.
         </Text>
         <div className="about-features">
           <p className="about-feature">
@@ -71,27 +74,42 @@ const AboutPage = ({
             <strong>Framework Agnostic</strong>
             We find the <em>right fit</em> for each case.
           </p>
+          <p className="about-feature">
+            The <em>quality</em> of our work creates
+            <strong>Long-lasting software</strong>
+            With clients <em>still using</em> and mantaining our code <em>after half a decade</em>.
+          </p>
+          <p className="about-feature">
+            Our solutions are technically outstanding and
+            <strong>Business Oriented</strong>
+            In order to <em>maximize the value</em> of software in time.
+          </p>
         </div>
 
         <h2 className="frontside-separator">
           <span className="frontside-separator--text">
-            Our values
+            Our Principles
           </span>
         </h2>
 
         <div className="frontside-values">
           <h3>
-            Future ready solutions
+            Automated Visibility
           </h3>
           <p>
-            We help our clients move with confidence by taking decisions that prepare them for the future. We are mindful of the implications each choice will have today and tomorrow.
+            We make it easy for teams to collaborate by automating the delivery process, including real-time demos of your projects as your team makes progress. You get fast feedback, and the team can focus on delivering exactly what’s needed.
           </p>
-
           <h3>
-            Development Experience
+            Flexible Architecture
           </h3>
           <p>
-            We believe in empowering engineers with the right tools and setup for a delightful and productive development experience. This includes a robust test strategy that will allow everyone to keep moving nimbly.
+            Stay ready and responsive to changing business or technology requirements. We help you plan a resilient architecture for your software and prepare your team so they can nimbly experiment with new features and technologies. 
+          </p>
+          <h3>
+            Long-Lasting Software
+          </h3>
+          <p>
+            Using leading-edge technologies doesn’t have to mean compromising on quality. We spend the first portion of each project helping establish patterns and tools for building software that’s easy to maintain for years, even decades.
           </p>
 
           <h3>
@@ -140,7 +158,7 @@ const AboutPage = ({
         </h2>
 
         <p className="oss-intro-parragraph">
-          We strive to nourish the JavaScript ecosystem with libraries and tools to empower developers to build better platforms on the web.
+          Frontside is a small studio but brings big results by working alongside the open source community. We help you leverage the benefits of open source in your organization, letting you use better tools with less in-house maintenance.
         </p>
 
         <div className="oss-projects-list">
