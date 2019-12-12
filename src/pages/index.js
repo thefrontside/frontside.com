@@ -10,6 +10,7 @@ import Box from '../components/box';
 import Button, { ButtonGroup } from '../components/button';
 import HomeLogos, { Logo } from '../components/home-logos';
 import PostsWidget from '../components/posts-widget';
+import CaseStudyCall from '../components/case-study-call';
 
 // TODO: these logos should be managed by the CMS so we can change them easily
 import logoHoneywell from '../img/clients/honeywell-logo.svg';
@@ -54,6 +55,8 @@ export default function IndexPage({
           <Button to="/about">See how we can help</Button>
         </ButtonGroup>
       </Content>
+
+      <CaseStudyCall />
 
       <Content>
         <Text tag="h2">

@@ -1,0 +1,55 @@
+.case-study-call {
+  border: 10px solid rgba(var(--rgba-light-blue), 0.10);
+  padding: var(--space-double);
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  @media(--medium-up) {
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+}
+
+.case-study-call > content {
+  order: 2;
+}
+
+.case-study-call > aside {
+  width: 225px;
+  order: 1;
+  @media (--medium-up) {
+    width: 225px;
+    flex-shrink: 0;
+    text-align: center;
+    order: 3;
+  }
+}
+
+.case-study-call--title {
+  font-family: var(--font-sans-serif);
+  font-size: var(--size-large);
+  line-height: var(--size-xxl);
+  margin-bottom: var(--space-single);
+}
+
+.case-study-call--title > a {
+  color: var(--color-dark-blue-darkable);
+  text-decoration: none;
+}
+
+.case-study-call--label {
+  display: block;
+  font-size: var(--size-base);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-light-blue);
+}
+
+.case-study-call--link {
+  font-family: var(--font-sans-serif);
+  font-weight: 800;
+  text-decoration: none;
+  font-size: var(--size-base);
+  color: var(--color-dark-blue-darkable);
+}
