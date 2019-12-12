@@ -7,11 +7,11 @@ import Hero from "../../components/hero";
 import Text from "../../components/text";
 import Content from "../../components/content";
 import TeamList from '../../components/team-list';
+import CaseStudyCall from '../../components/case-study-call';
 import { Link } from 'gatsby';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faComment, faCodeBranch, faStar } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faArrowRight, faComment } from '@fortawesome/free-solid-svg-icons';
 
 import './index.css';
 
@@ -156,109 +156,12 @@ const AboutPage = ({
             Open Source
           </span>
         </h2>
-
         <p className="oss-intro-parragraph">
           Frontside is a small studio but brings big results by working alongside the open source community. We help you leverage the benefits of open source in your organization, letting you use better tools with less in-house maintenance.
         </p>
-
-        <div className="oss-projects-list">
-          <div className="oss-project">
-            <h3>
-              <a href="https://github.com/microstates" target="_blank"  rel="noopener noreferrer" className="oss-project--title">
-                Microstates
-              </a>
-            </h3>
-            <p>
-              Immutable state primitives for building domain specific models that work equally well in all frameworks.
-            </p>
-            <footer>
-              <a href="https://github.com/microstates" target="_blank"  rel="noopener noreferrer" className="oss-project--github-link">
-                <FontAwesomeIcon icon={faGithub} />
-                <span className="oss-project--stars-label">
-                  <FontAwesomeIcon icon={faStar} />
-                  1,236
-                </span>
-              </a>
-            </footer>
-          </div>
-          <div className="oss-project">
-            <h3>
-              <a href="https://bigtestjs.io" target="_blank"  rel="noopener noreferrer" className="oss-project--title">
-                Big Test
-              </a>
-            </h3>
-            <p>
-              Functional testing toolchain to create test suites that support testing applications consisting of multiple frameworks in a single application.
-            </p>
-            <footer>
-              <a href="https://github.com/bigtestjs" target="_blank"  rel="noopener noreferrer" className="oss-project--github-link">
-                <FontAwesomeIcon icon={faGithub} />
-                <span className="oss-project--stars-label">
-                  <FontAwesomeIcon icon={faStar} />
-                  85
-                </span>
-              </a>
-            </footer>
-          </div>
-          <div className="oss-project">
-            <h3>
-              <a href="https://github.com/thefrontside/frontmacs" target="_blank"  rel="noopener noreferrer" className="oss-project--title">
-                Frontmacs
-              </a>
-            </h3>
-            <p>
-              A package-based, web-centric, customizable, awesome-by-default, acceptance-tested Emacs distribution.
-            </p>
-            <footer>
-              <a href="https://github.com/thefrontside/frontmacs" target="_blank"  rel="noopener noreferrer" className="oss-project--github-link">
-                <FontAwesomeIcon icon={faGithub} />
-                <span className="oss-project--stars-label">
-                  <FontAwesomeIcon icon={faStar} />
-                  405
-                </span>
-              </a>
-            </footer>
-          </div>
-          <div className="oss-project">
-            <h3>
-              <a href="https://github.com/thefrontside/funcadelic.js" target="_blank"  rel="noopener noreferrer" className="oss-project--title">
-                funcadelic.js
-              </a>
-            </h3>
-            <p>
-              Haskell typeclasses and functional primitives for JavaScript
-            </p>
-            <footer>
-              <a href="https://github.com/thefrontside/funcadelic.js" target="_blank"  rel="noopener noreferrer" className="oss-project--github-link">
-                <FontAwesomeIcon icon={faGithub} />
-                <span className="oss-project--stars-label">
-                  <FontAwesomeIcon icon={faStar} />
-                  158
-                </span>
-              </a>
-            </footer>
-          </div>
-        </div>
-
-        <div className="cta-box">
-          <header className="cta-box--header">
-            <h2>
-              <Link to="/contact">
-                Collaborate
-              </Link>
-            </h2>
-            <FontAwesomeIcon icon={faCodeBranch} />
-          </header>
-          <div className="cta-box--body">
-            <p>
-            Reach out if you have feedback or questions about our projects, or just want to talk about open source.
-            </p>
-            <Link className="cta-box--contact" to="/contact">
-              Contact us <FontAwesomeIcon icon={faArrowRight} />
-            </Link>
-          </div>
-        </div>
       </Content>
+
+      <CaseStudyCall />
 
     </Layout>
   );
