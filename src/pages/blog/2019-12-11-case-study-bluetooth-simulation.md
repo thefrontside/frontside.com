@@ -64,4 +64,4 @@ At the moment, BLEmulator only works with projects that have chosen Polidea’s 
 
 Frontside aspires to maximize the value and impact of software. Thus, the implementation of BLEmulator is designed to be decoupled from FlutterBLE so the library may become independent and have a wider adoption.
 
-[You can learn more about BLEmulator from Polidea’s technical release and the project’s Github.]
+You can learn more about <a href="https://www.polidea.com/blog/bluetooth-low-energy-simulator-a-new-hope-in-iot-development/?utm_source=Backlinking&utm_medium=Npaid&utm_campaign=Blog&utm_term=Article&utm_content=BL_NOP_BLG_ART_Front001" target="_blank">BLEmulator from Polidea’s technical release</a> and the project’s <a href="https://github.com/Polidea/blemulator_flutter" target="_blank">Github</a>.
