@@ -166,7 +166,7 @@ export default function Services() {
                     Benjamin Shine
                   </strong>
                   <br />
-                  CTO at AltSchool.
+                  Staff Front-end Engineer, AltSchool
                 </div>
               </footer>
             </blockquote>
