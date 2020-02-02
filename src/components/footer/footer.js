@@ -46,7 +46,7 @@ export default function Footer() {
       </address>
 
       <Text tag="p" className="footer-copyright" widows={3}>
-        {`\u00A9 2005-${year} The Frontside, Inc. All rights reserved.`}
+        {`\u00A9 2005-${year} The Frontside Software, Inc. All rights reserved.`}
       </Text>
     </footer>
   );
