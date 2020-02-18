@@ -206,12 +206,12 @@ to learn the math framework, the same feeling is waiting for you.
 I’m Charles Lowell, and I build UI for a living at [Frontside][6]. If
 you enjoyed this post, I’d love to hear from you. You can give me a
 shout on Twitter where I'm [@cowboyd][4], or drop me a line at
-[cowboyd@frontside.io][7]
+[cowboyd@frontside.com][7]
 
 [1]: http://127.0.0.1:59477/Dash/wbiryrnu/developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Array/map.html
 [2]: http://reactivex.io/rxjs/class/es6/Observable.js~Observable.html#instance-method-map
 [3]: https://github.com/cowboyd/funcadelic.js
 [4]: https://twitter.com/cowboyd
 [5]: http://rubyonrails.org/doctrine/#convention-over-configuration
-[6]: https://frontside.io
-[7]: mailto:cowboyd@frontside.io
+[6]: https://frontside.com
+[7]: mailto:cowboyd@frontside.com

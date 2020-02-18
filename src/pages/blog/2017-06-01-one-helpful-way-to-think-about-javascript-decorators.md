@@ -340,6 +340,6 @@ For individual developers, decorators let us work with a lighter touch; applying
 <hr/>
 
 I’m Charles Lowell ([@cowboyd](https://twitter.com/cowboyd) on twitter), and I build UI for a
-living at [Frontside](http://frontside.io). If you enjoyed this, I’d love to hear
-from you. We're always [hiring](http://frontside.io/careers/) and
-looking for [exciting new work](http://frontside.io/services/)
+living at [Frontside](http://frontside.com). If you enjoyed this, I’d love to hear
+from you. We're always [hiring](http://frontside.com/careers/) and
+looking for [exciting new work](http://frontside.com/services/)

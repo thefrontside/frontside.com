@@ -254,4 +254,4 @@ Whew! That was a lot to unpack. One of the biggest struggles I had when getting 
 
 I think it is worthwhile for you to spend some time reading through a couple of the documents that explain the reasoning for these success criteria. One of the realizations I’ve had when reading through the spec is WCAG is a set of guidelines for improving your site’s UX. Accessibility really is all about making sure your site or app can be used by _anyone_, which serves as an excellent foundation to build upon for your site’s UX.
 
-If you or your team need any help getting up to speed with WCAG 2.1 [reach out to us!](https://frontside.io/contact) If you would like to ask any questions or continue this conversation feel free to [reach out to me on Twitter](https://twitter.com/robdel12).
+If you or your team need any help getting up to speed with WCAG 2.1 [reach out to us!](https://frontside.com/contact) If you would like to ask any questions or continue this conversation feel free to [reach out to me on Twitter](https://twitter.com/robdel12).

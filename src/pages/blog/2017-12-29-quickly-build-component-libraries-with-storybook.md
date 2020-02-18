@@ -97,4 +97,4 @@ Storybook is a big landmark for developing component libraries for the web, and 
 
 Check out this [Lunch and Learn](https://youtu.be/RHacQsTxnQ4) to see Storybook in action.
 
-Need help creating your own design system? [Reach out to Frontside.](https://frontside.io/contact/)
+Need help creating your own design system? [Reach out to Frontside.](https://frontside.com/contact/)

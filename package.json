@@ -2,7 +2,7 @@
   "name": "platform-frontside",
   "description": "Frontend Platform for Frontside Website",
   "version": "2.0.0",
-  "author": "Taras <taras@frontside.io>",
+  "author": "Taras <taras@frontside.com>",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",

@@ -305,12 +305,12 @@ two.
 I’m Lydia Guarino ([@lydiaguarino][2] on twitter), and I build UI for a living at [The Frontside][3]. If you enjoyed this, I’d love to hear from you.
 
 If you have a project you'd like to work with us on,
-[get in touch](mailto:cowboyd@frontside.io). We're currently taking on
+[get in touch](mailto:cowboyd@frontside.com). We're currently taking on
 new projects.
 
 [1]: http://posttestserver.com/
 [2]: https://twitter.com/lydiaguarino
-[3]: https://frontside.io
+[3]: https://frontside.com
 [4]: http://www.harpersbazaar.com/culture/features/a10441/why-i-wear-the-same-thing-to-work-everday/
 [5]: http://www.inc.com/eric-v-holtzclaw/five-ways-to-use-social-media-at-conferences.html
 [6]: http://www.salestrainingadvice.com/2005/11/the-art-of-asking-good-questions-by-tim-hagen.html

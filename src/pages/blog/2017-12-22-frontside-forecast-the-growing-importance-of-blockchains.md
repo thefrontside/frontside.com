@@ -41,7 +41,7 @@ Blockchain for Philanthropy. Charities would be able to provide a new level of t
 - **Blockchain for Identity Management:** A comprehensive identity platform that could protect against identity fraud and simplify legal proceedings where there are questions about identity.
 - **Blockchain for Film (Photo and Video):** Doctoring images would be much more difficult when photos belong to a chain.
 
-We’re excited about what the future holds for blockchain-backed applications, and we look forward to working on more blockchain projects in 2018. Please [get in touch with us](https://frontside.io/contact/) if you have an upcoming blockchain-backed project you’d like to collaborate on with us.
+We’re excited about what the future holds for blockchain-backed applications, and we look forward to working on more blockchain projects in 2018. Please [get in touch with us](https://frontside.com/contact/) if you have an upcoming blockchain-backed project you’d like to collaborate on with us.
 
 In future updates we’ll be defining what a blockchain software developer is and giving you an inside look into one of our current blockchain projects.
 

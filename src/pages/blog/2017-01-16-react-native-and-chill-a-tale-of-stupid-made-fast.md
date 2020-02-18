@@ -135,4 +135,4 @@ I’m Charles Lowell ([@cowboyd][5] on twitter), and I build UI for a living at 
 [3]: https://github.com/facebook/react-native/commit/c92ad5f6ae74c1d398c7cd93d5c4c50da0ca0430
 [4]: https://www.npmjs.com/package/react-native-chillest-monkey
 [5]: https://twitter.com/cowboyd
-[6]: http://frontside.io
+[6]: http://frontside.com
