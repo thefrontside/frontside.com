@@ -10,8 +10,6 @@
 
 /case-studies/ /work 302
 
-/people/arash-zafarnia/ /about 302
-
 /about/:name  /people/:name 302
 
 /calendar/* / 302
@@ -51,3 +49,5 @@
 /podcast/013-ember-metal-htmlbars-and-the-death-of-script-tags /podcast/012-is-it-ok-to-not-love-programming-with-sarah-mei 302
 /podcast/009-how-to-tell-if-a-jquery-plugin-is-about-to-stab-you /podcast/009-how-to-tell-if-a-j-query-plugin-is-about-to-stab-you 302
 /podcast/004-emberconf-recap /podcast/004-ember-conf-recap 302
+
+/people /about 302

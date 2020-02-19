@@ -162,6 +162,18 @@ module.exports = {
         }`
       }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `frontside`,
+        short_name: `frontside`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#15325f`,
+        display: `minimal-ui`,
+        icon: `src/img/frontside-logo.png`,
+      },
+    },
     "gatsby-connect-authors",
     "gatsby-plugin-netlify" // make sure to keep it last in the array
   ]

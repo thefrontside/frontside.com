@@ -1,38 +1,14 @@
 import React from "react";
 import Helmet from "react-helmet";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../../components/layout";
-import Img from "gatsby-image"
 
-const PeoplePage = ({
-  data: {
-    allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title }
-    }
-  }
-}) => {
-
-  let team = group
-    .find(({ fieldValue }) => fieldValue === "undefined")
-    .edges
-    .map(({ node }) => node);
-
+const PeoplePage = () => {
 
   return (
     <Layout>
-      <Helmet title={`Team | ${title}`} />
+      <Helmet title="Team" />
       <h1>Team</h1>
-      <ul className="list-style-none">
-        {team.map(person => (
-          <li key={person.frontmatter.name}>
-            <Link to={person.fields.slug}>
-              <Img fixed={person.frontmatter.img.childImageSharp.fixed} />
-              {person.frontmatter.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
     </Layout>
   );
 };
