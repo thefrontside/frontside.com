@@ -37,8 +37,7 @@ exports.sourceNodes = async (
     sharing_url: 'https://simplecast.com/s/e3b70a0d'
   }];
 
-  if (process.env.NODE_ENV == 'development' && !process.env.SIMPLECAST_API) {
-    // should be process.env.simplecast not !process
+  if (process.env.NODE_ENV == 'development' && process.env.SIMPLECAST_API) {
     assert(
       apiKey,
       `gatsby-source-simplecast requires SimpleCast API apiKey to be specified in options expected a string, received ${apiKey}`
