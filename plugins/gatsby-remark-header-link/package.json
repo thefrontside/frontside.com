@@ -1,0 +1,10 @@
+{
+  "name": "gatsby-remark-header-link",
+  "version": "0.0.1",
+  "description": "",
+  "dependencies": {
+    "github-slugger": "^1.2.1",
+    "mdast-util-to-string": "^1.0.7",
+    "unist-util-visit-parents": "^3.0.2"
+  }
+}
