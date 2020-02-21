@@ -6,13 +6,6 @@ import PostsList from "../components/posts-list";
 import Pagination from "../components/pagination";
 import Text from "../components/text";
 
-/*
-all H tags should be transformed to <a> with its text as #text in the link
-
-hover styles = blue when hovered
-not hovered = not visible unless h2 then it's grey
-*/
-
 export default function BlogPage({
   data: {
     allMarkdownRemark: { edges: posts }
