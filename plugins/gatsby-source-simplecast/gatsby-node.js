@@ -10,30 +10,53 @@ exports.setFieldsOnGraphQLNodeType = require("./extend-node-type").setFieldsOnGr
 
 exports.sourceNodes = async (
   {
-    actions: { createNode, createNodeField },
+    actions: { createNode },
     createNodeId,
     createContentDigest
   },
   { apiKey, podcastId }
 ) => {
-  assert(
-    apiKey,
-    `gatsby-source-simplecast requires SimpleCast API apiKey to be specified in options expected a string, received ${apiKey}`
-  );
-  assert(
-    podcastId,
-    `gatsby-source-simplecast requires SimpleCast podcastId to be specified in options expected to be present, received ${podcastId}`
-  );
-
-  let client = new SimpleCastClient({ apikey: apiKey });
 
   let episodes;
-  try {
-    episodes = await client.episodes.getEpisodes(podcastId);
-  } catch (e) {
-    console.error(`Could not retrieve episodes for podcast ${podcastId}`, e);
-    return;
-  }
+  let dev_samplecast = [{
+    id: 1,
+    number: 1,
+    season: 1,
+    podcast_id: 96,
+    guid: '00000',
+    title: "001: Podcast Example",
+    author: 'Charles Lowell, Taras Mankovski',
+    duration: 100,
+    explicit: false,
+    published: true,
+    description: 'Sample Description',
+    long_description: 'You are seeing this because you\'re in development mode and do not have access to SIMPLECAST_API key.',
+    published_at: '2019-01-01T06:20:00.000-07:00',
+    audio_file_size: 100000,
+    audio_url: 'http://audio.simplecast.com/41252.mp3',
+    sharing_url: 'https://simplecast.com/s/e3b70a0d'
+  }];
+
+  if (process.env.NODE_ENV == 'development' && process.env.SIMPLECAST_API) {
+    assert(
+      apiKey,
+      `gatsby-source-simplecast requires SimpleCast API apiKey to be specified in options expected a string, received ${apiKey}`
+    );
+    assert(
+      podcastId,
+      `gatsby-source-simplecast requires SimpleCast podcastId to be specified in options expected to be present, received ${podcastId}`
+    );
+    let client = new SimpleCastClient({ apikey: apiKey });
+    try {
+      episodes = await client.episodes.getEpisodes(podcastId);
+    } catch (e) {
+      console.error(`Could not retrieve episodes for podcast ${podcastId}`, e);
+      return;
+    }
+  } else {
+    episodes = dev_samplecast;
+    podcastId = 96;
+  };
 
   function createEpisode(episode) {
     const nodeId = createNodeId(`simplecast-episode-${episode.id}`);
