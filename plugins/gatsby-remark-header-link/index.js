@@ -13,7 +13,13 @@ module.exports = ({ markdownAST }) => {
     node.type = "html";
     node.value = `
       <h${depth} id="${id}">
-        <a href="#${id}" class="header-link ${depth == 2 ? '' : 'not-h2'}">
+        <a
+          href="#${id}"
+          class="markdown-heading-link ${
+            depth == 2  ? 'markdown-heading-link__higher-heading'
+                        : 'markdown-heading-link__lower-heading'
+          }"
+        >
         ${text} 
         </a>
       </h${depth}>
