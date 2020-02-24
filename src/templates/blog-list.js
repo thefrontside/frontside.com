@@ -18,7 +18,7 @@ export default function BlogPage({
         heading={
           <>
             <Text tag="h2">
-              { page === 1 ? "Blog" : `Blog on page ${page}` }
+              {page === 1 ? "Blog" : `Blog on page ${page}`}
             </Text>
           </>
         }

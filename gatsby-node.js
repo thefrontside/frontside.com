@@ -1,10 +1,10 @@
-const _ = require("lodash");
-const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
-const { fmImagesToRelative } = require("gatsby-remark-relative-images");
+const _ = require('lodash');
+const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
 const POSTS_PER_PAGE = 10;
-const getBlogUrl = page => `/blog${page > 1 ? `/${page}` : ""}`;
+const getBlogUrl = page => `/blog${page > 1 ? `/${page}` : ''}`;
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   let result = await graphql(`
@@ -47,13 +47,13 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   _.range(pages - 1).forEach(p => {
     createPage({
       path: getBlogUrl(p + 1),
-      component: path.resolve("./src/templates/blog-list.js"),
+      component: path.resolve('./src/templates/blog-list.js'),
       context: {
         limit: POSTS_PER_PAGE,
         skip: p * POSTS_PER_PAGE,
         page: p + 1,
-        pages
-      }
+        pages,
+      },
     });
   });
 
@@ -62,8 +62,8 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       node: {
         id,
         fields: { slug },
-        frontmatter: { tags, templateKey }
-      }
+        frontmatter: { tags, templateKey },
+      },
     }) =>
       createPage({
         path: slug,
@@ -71,8 +71,8 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         component: path.resolve(`src/templates/${String(templateKey)}.js`),
         // additional data can be passed via context
         context: {
-          id
-        }
+          id,
+        },
       })
   );
 
@@ -94,8 +94,8 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
       path: `/tags/${_.kebabCase(tag)}/`,
       component: path.resolve(`src/templates/tags.js`),
       context: {
-        tag
-      }
+        tag,
+      },
     })
   );
 
@@ -103,12 +103,12 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     ({ node: { id, season, number, slug } }) =>
       createPage({
         path: `/podcast/${slug}/`,
-        component: path.resolve("src/templates/episode.js"),
+        component: path.resolve('src/templates/episode.js'),
         context: {
           id,
           season,
-          number
-        }
+          number,
+        },
       })
   );
 
@@ -124,7 +124,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value
+      value,
     });
   }
 };

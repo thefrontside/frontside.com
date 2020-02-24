@@ -32,7 +32,7 @@
     "gatsby-transformer-sharp": "^2.3.14",
     "lodash": "^4.17.15",
     "lodash-webpack-plugin": "^0.11.4",
-    "netlify-cms": "^2.10.23",
+    "netlify-cms-app": "^2.11.20",
     "parcel-bundler": "^1.12.4",
     "postcss-calc": "^7.0.2",
     "postcss-color-function": "^4.1.0",
