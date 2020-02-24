@@ -39,7 +39,7 @@ exports.sourceNodes = async (
 
   console.log("PENE", process.env.NODE_ENV, "WEEEEEEEEEEEEEEEE");
 
-  if (process.env.NODE_ENV == 'development' && process.env.SIMPLECAST_API) {
+  if (process.env.NODE_ENV == 'development' && process.env.SIMPLECAST_API || process.env.NODE_ENV == 'production') {
     assert(
       apiKey,
       `gatsby-source-simplecast requires SimpleCast API apiKey to be specified in options expected a string, received ${apiKey}`
