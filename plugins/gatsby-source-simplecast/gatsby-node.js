@@ -37,9 +37,10 @@ exports.sourceNodes = async (
     sharing_url: 'https://simplecast.com/s/e3b70a0d'
   }];
 
-  console.log("PENE", process.env.NODE_ENV, "WEEEEEEEEEEEEEEEE");
-
-  if (process.env.NODE_ENV == 'development' && process.env.SIMPLECAST_API || process.env.NODE_ENV == 'production') {
+  if (process.env.NODE_ENV == 'development' && !process.env.SIMPLECAST_API) {
+    episodes = dev_samplecast;
+    podcastId = 96;
+  } else {
     assert(
       apiKey,
       `gatsby-source-simplecast requires SimpleCast API apiKey to be specified in options expected a string, received ${apiKey}`
@@ -55,9 +56,6 @@ exports.sourceNodes = async (
       console.error(`Could not retrieve episodes for podcast ${podcastId}`, e);
       return;
     }
-  } else {
-    episodes = dev_samplecast;
-    podcastId = 96;
   };
 
   function createEpisode(episode) {
