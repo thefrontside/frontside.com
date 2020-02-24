@@ -37,6 +37,8 @@ exports.sourceNodes = async (
     sharing_url: 'https://simplecast.com/s/e3b70a0d'
   }];
 
+  console.log("PENE", process.env.NODE_ENV, "WEEEEEEEEEEEEEEEE");
+
   if (process.env.NODE_ENV == 'development' && process.env.SIMPLECAST_API) {
     assert(
       apiKey,
