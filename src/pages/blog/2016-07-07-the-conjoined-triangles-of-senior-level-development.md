@@ -11,10 +11,8 @@ published: true
 directory_index: false
 ---
 
-<figure alt="The Conjoined Triangles of Success">
-  <img src="/img/2016-07-07-the-conjoined-triangles-of-senior-level-development_sv-conjoined.jpg">
-</figure>
-  <div style="text-align:center;"><em>My man Stephen Tobolowsky lays down the conjoined triangles.</em></div>
+![Stephen Tobolowsky expalining the cojoined triangles](/img/2016-07-07-the-conjoined-triangles-of-senior-level-development_sv-conjoined.jpg)
+<div style="text-align:center;"><em>My man Stephen Tobolowsky lays down the conjoined triangles.</em></div>
 
 ### "This actually makes me feel less confident about *my* role here. If we can’t define what we think senior is, how am I supposed to know if I’m working toward it?"
 
@@ -103,9 +101,7 @@ I recently had a chance to dig into the definition of "senior" at a number of co
 
 The simplest explanation of seniority across companies is this: __How much direction will this person need, and how much will they be able to provide to others?__
 
-<figure alt="The Conjoined Triangles of Senior-level Development">
-  <img src="/img/2016-07-07-the-conjoined-triangles-of-senior-level-development_conjoined.jpg">
-</figure>
+![Graph that shows a linear relationship of what is provided by seniority](/img/2016-07-07-the-conjoined-triangles-of-senior-level-development_conjoined.jpg)
 
 I stand by the Conjoined Triangles of Senior-Level Development as a nice idea, but like Action Jack’s "Conjoined Triangles of Success", it’s enough of an oversimplification to shed its intrinsic meaning.
 
@@ -119,9 +115,7 @@ She described the framework we use to determine seniority at Frontside as a Venn
 
 ## The Venn diagram: The more complex explanation
 
-<figure alt="The Three Tracks of a Senior-level Dev">
-  <img src="/img/2016-07-07-the-conjoined-triangles-of-senior-level-development_venn.jpg">
-</figure>
+![Venn diagram relating Connectendess, Technical Capability, and Leadership](/img/2016-07-07-the-conjoined-triangles-of-senior-level-development_venn.jpg)
 
 Our evaluation of seniority does, in fact, roll up to the higher definition: *“How much direction will this person need, and how much will they be able to provide to others?”* But as our employees pointed out, when we stop there, there’s a ton of room for confusion.
 
