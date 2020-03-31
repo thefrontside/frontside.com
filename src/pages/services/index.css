@@ -40,7 +40,7 @@
   background-color: var(--color-light-blue);
 }
 .service-thumb:nth-child(3n+2):before {
-  background-color: var(--color-dark-blue-darkable);
+  background-color: var(--color-dark-blue);
 }
 
 .service-thumb__consulting:before {

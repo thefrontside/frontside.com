@@ -106,11 +106,11 @@
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --body-bg: #1e1e1e;
-    --body-color: #fafafa;
-    --body-color-faded: #aaa;
+    --body-bg: #14191e;
+    --body-color: #c4c4c4;
+    --body-color-faded: #8c8c8c;
     --logo-wordmark-color: #fff;
-    --color-dark-blue-darkable: #59d6fb;
+    --color-dark-blue-darkable: #ffffff;
     --input-color: #ffffff;
   }
 }

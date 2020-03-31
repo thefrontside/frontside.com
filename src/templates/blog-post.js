@@ -14,13 +14,17 @@ export const BlogPostTemplate = ({ content, tags, title, authors, date }) => {
 
   return (
     <Content>
-      <Text tag="h1">{title}</Text>
+      <Link to='/blog' className='blog-post-blog-link'>Blog</Link>
+      <Text className="blog-post-title" tag="h1">{title}</Text>
       <div className="blog-post-byline">
         {"Published by "}
-        {authors.map(author => (
-          <Link key={author.slug} to={author.slug}>
-            <Text>{author.name}</Text>
-          </Link>
+        {authors.map((author, i) => (
+          <>
+            {(i === 0) ? '' : ', '}
+            <Link key={author.slug} to={author.slug}>
+              <Text>{author.name}</Text>
+            </Link>
+          </>
         ))}
         {` on ${date}. Tagged with `}{" "}
         {tags.map((tag, i) => (
