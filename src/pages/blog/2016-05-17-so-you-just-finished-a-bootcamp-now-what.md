@@ -151,7 +151,7 @@ I’m Stephanie Riera ([@stefriera][2] on twitter), and I build web applications
 
 [1]: http://posttestserver.com/
 [2]: https://twitter.com/stefriera
-[3]: https://frontside.io
+[3]: https://frontside.com
 [4]: https://indeed.com
 [5]: https://upwork.com
 [6]: https://fiverr.com

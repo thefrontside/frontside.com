@@ -231,4 +231,4 @@ This is what an image map of our setup would look like.
 
 Thanks for reading! I’m Elrick Ryan ([@elrickvm](https://twitter.com/elrickvm) on twitter), and I love building UI.
 
-If you're like us and always pushing the limits of awesome. We're the Frontside [drop us a line](http://frontside.io/contact/) and let's build it and ship it.
+If you're like us and always pushing the limits of awesome. We're the Frontside [drop us a line](http://frontside.com/contact/) and let's build it and ship it.

@@ -283,7 +283,7 @@ your abilities, ask questions and don’t get discouraged when you can’t figur
 something out. There is still much to learn but that is nature of the Beast
 which we call technology. If you have any question you can always hit me on
 twitter at [@elrickvm](https://twitter.com/elrickvm) or [send an
-email](https://frontside.io/contact). Be blessed and happy coding!
+email](https://frontside.com/contact). Be blessed and happy coding!
 
 Photo by <a href="https://unsplash.com/photos/Q4bmoSPJM18">chuttersnap </a> on
 Unsplash.

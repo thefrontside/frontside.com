@@ -183,7 +183,7 @@ it! But with the AsyncFunction Functor in your pocket, you've got options on you
 
 Photo by <a href="https://unsplash.com/photos/Opit9xvZDP0?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jason Blackeye</a> on <a href="/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
 
-[1]: https://frontside.io/img/2018/02/19/math-is-just-another-framework.html
+[1]: https://frontside.com/img/2018/02/19/math-is-just-another-framework.html
 [2]: https://github.com/cowboyd/funcadelic.js
 [3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function
 [4]: https://github.com/cowboyd/funcadelic.js#chaining-api

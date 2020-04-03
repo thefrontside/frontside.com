@@ -139,7 +139,7 @@ The first time this technique really came together for me it felt impossibly lig
 
 I’m Charles Lowell ([@cowboyd][9] on twitter), and I build UI for a living at [The Frontside][10]. If you enjoyed this, I’d love to hear from you.
 
-Also, If you'd like to work with our team doing stuff like this, then please [get in touch](mailto:cowboyd@frontside.io). We're hiring.
+Also, If you'd like to work with our team doing stuff like this, then please [get in touch](mailto:cowboyd@frontside.com). We're hiring.
 
 
 
@@ -152,4 +152,4 @@ Also, If you'd like to work with our team doing stuff like this, then please [ge
 [7]: https://developer.mozilla.org/en-US/docs/Web/API/URL/revokeObjectURL
 [8]: http://posttestserver.com/
 [9]: https://twitter.com/cowboyd
-[10]: https://frontside.io
+[10]: https://frontside.com
