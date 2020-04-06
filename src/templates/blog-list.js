@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 import PostsList from "../components/posts-list";
 import Pagination from "../components/pagination";
 import Text from "../components/text";
+import Hero from "../components/hero";
 
 export default function BlogPage({
   data: {
@@ -14,6 +15,18 @@ export default function BlogPage({
 }) {
   return (
     <Layout>
+      <Hero
+        heading={
+          <Text>
+            Our Insights
+          </Text>
+        }
+        subheading={
+          <Text>
+            Paradigms, frameworks, and tools <br /> around robust engineering.  
+          </Text>
+        }
+      />
       <PostsList
         heading={
           <>

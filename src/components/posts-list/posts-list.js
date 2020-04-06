@@ -33,7 +33,6 @@ export default function PostsList({
 }) {
   return (
     <Content className="posts-list">
-      {heading}
       <ul className="posts-list-list">
         {posts.map(post => (
           <li key={post.id} className="posts-list-entry">
@@ -52,7 +51,9 @@ export default function PostsList({
               <span className="posts-list-date">{post.date}</span>
             </Text>
             <Text tag="p">{post.excerpt}</Text>
-            <Link to={post.slug}>Keep reading →</Link>
+            <Link to={post.slug} class='post-link'>
+              Keep reading <span class='post-link--arrow'>→</span>
+            </Link>
           </li>
         ))}
       </ul>

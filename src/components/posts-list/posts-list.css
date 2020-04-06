@@ -1,7 +1,9 @@
 @import '../variables';
 
 .posts-list {
+
   &:not(:last-child) {
+    padding-top: 0;
     @media (--medium-up) {
       padding-bottom: 0;
     }
@@ -25,11 +27,6 @@
 
   a {
     text-decoration: none;
-    color: inherit;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
 
@@ -38,10 +35,14 @@
 }
 
 .posts-list-title {
-  color: var(--link-color);
+  color: var(--color-dark-blue-darkable);
   font-family: var(--font-sans-serif);
   font-size: var(--size-large);
   margin-bottom: var(--space-half);
+  font-weight: normal;
+  > a {
+    color: var(--color-dark-blue-darkable);
+  }
 }
 
 .posts-list-meta {
@@ -77,4 +78,14 @@
   margin-left: 0.25em;
   width: 1em;
   height: 1em;
+}
+
+.post-link {
+  color: var(--color-dark-blue-darkable);
+  font-family: var(--font-sans-serif);
+  font-weight: bold;
+}
+
+.post-link--arrow {
+  color: var(--color-pink);
 }
