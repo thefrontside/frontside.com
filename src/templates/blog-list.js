@@ -14,7 +14,7 @@ export default function BlogPage({
   pageContext: { page, pages }
 }) {
   return (
-    <Layout>
+    <Layout title="Blog">
       <Hero
         heading={
           <Text>
@@ -23,7 +23,7 @@ export default function BlogPage({
         }
         subheading={
           <Text>
-            Paradigms, frameworks, and tools <br /> around robust engineering.  
+            Paradigms, frameworks, and tools <br /> around robust engineering.
           </Text>
         }
       />

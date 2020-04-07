@@ -2,16 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
-import Helmet from "react-helmet";
 import Img from "gatsby-image"
 import Content from "../components/content";
 import './people.css';
 
 const PersonPage = ({
   data: {
-    site: {
-      siteMetadata: { title }
-    },
     markdownRemark: {
       frontmatter: {
         name,
@@ -29,9 +25,8 @@ const PersonPage = ({
   }
 }) => {
   return (
-    <Layout>
+    <Layout title="Team">
       <Content>
-        <Helmet title={`Team | ${title}`} />
         {img && (
           <Img fixed={img.childImageSharp.fixed} />
         )}
@@ -59,7 +54,7 @@ const PersonPage = ({
               ))}
             </ul>
           </>
-        ): null}
+        ) : null}
         {episodes && episodes.length ? (
           <>
             <h2>Podcast Episodes</h2>

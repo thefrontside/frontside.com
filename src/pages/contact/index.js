@@ -40,7 +40,7 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout title="Contact">
         <Hero
           heading={
             <Text>

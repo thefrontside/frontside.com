@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
-import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Content from "../components/content";
@@ -57,14 +56,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data: { markdownRemark: post } }) => {
   return (
-    <Layout>
-      <Helmet titleTemplate="%s | Blog">
-        <title>{`${post.frontmatter.title}`}</title>
-        <meta
-          name="description"
-          content={`${post.frontmatter.description}`}
-        />
-      </Helmet>
+    <Layout title={post.frontmatter.title} description={post.frontmatter.description}>
       <BlogPostTemplate
         content={post.html}
         description={post.frontmatter.description}

@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
-import Helmet from "react-helmet";
-// import Img from "gatsby-image"
 
 import Layout from "../../components/layout";
 import EpisodesList from "../../components/episodes-list";
@@ -10,15 +8,11 @@ import Text from "../../components/text";
 
 const PodcastPage = ({
   data: {
-    site: {
-      siteMetadata: { title }
-    },
     allSimplecastEpisode: { edges }
   }
 }) => {
   return (
-    <Layout>
-      <Helmet title={`Podcast | ${title}`} />
+    <Layout title="Podcast">
       <EpisodesList
         heading={
           <Text tag="h2">
