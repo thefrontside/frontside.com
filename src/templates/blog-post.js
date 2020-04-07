@@ -52,25 +52,22 @@ BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object
+  title: PropTypes.string
 };
 
 const BlogPost = ({ data: { markdownRemark: post } }) => {
   return (
     <Layout>
+      <Helmet titleTemplate="%s | Blog">
+        <title>{`${post.frontmatter.title}`}</title>
+        <meta
+          name="description"
+          content={`${post.frontmatter.description}`}
+        />
+      </Helmet>
       <BlogPostTemplate
         content={post.html}
         description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         authors={post.fields.authors.map(author => ({

@@ -6,7 +6,8 @@ module.exports = {
   siteMetadata: {
     title: "Frontside",
     description: "Austin-based frontend software engineering and architecture consultancy. We help teams build applications at scale.",
-    siteUrl: "https://frontside.com"
+    siteUrl: "https://frontside.com",
+    image: "/img/frontside-icon-transparent.png"
   },
   mapping: {
     'MarkdownRemark.fields.authors': 'MarkdownRemark',
