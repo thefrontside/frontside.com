@@ -7,7 +7,7 @@ module.exports = {
     title: "Frontside",
     description: "Austin-based frontend software engineering and architecture consultancy. We help teams build applications at scale.",
     siteUrl: "https://frontside.com",
-    image: "/img/frontside-icon-transparent.png"
+    image: "https://frontside.com/img/frontside-icon-transparent.png"
   },
   mapping: {
     'MarkdownRemark.fields.authors': 'MarkdownRemark',

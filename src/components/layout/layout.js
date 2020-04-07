@@ -17,6 +17,7 @@ export default function TemplateWrapper({ children }) {
             siteMetadata {
               title,
               description,
+              image
             }
           }
         }
@@ -27,13 +28,13 @@ export default function TemplateWrapper({ children }) {
             <html lang="en" />
             <title>{data.site.siteMetadata.title}</title>
             <meta name="description" content={data.site.siteMetadata.description} />
+            <meta name="image" content={data.site.siteMetadata.image} />
           </Helmet>
-
-          <Navbar/>
+          <Navbar />
 
           {children}
 
-          <Footer/>
+          <Footer />
         </main>
       )}
     />
