@@ -14,7 +14,7 @@ export default function BlogPage({
   pageContext: { page, pages }
 }) {
   return (
-    <Layout title="Blog">
+    <Layout title={page === 1 ? "Blog" : `Blog - page ${page}`}>
       <Hero
         heading={
           <Text>
