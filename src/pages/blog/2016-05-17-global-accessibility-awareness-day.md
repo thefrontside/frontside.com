@@ -2,13 +2,13 @@
 templateKey: blog-post
 title: Global Accessibility Awareness Day
 date: 2016-05-17T12:00:00.000Z
+author: Robert DeLuca
 tags: 
   - accessibility
   - ember.js
   - community
 published: true
-image: http://www.globalaccessibilityawarenessday.org/img/gaad-logo.png
-author: Robert DeLuca
+img: /img/2016-05-17-global-accessibility-awareness-day-gaad.png
 directory_index: false
 ---
 

@@ -8,7 +8,7 @@ description: >-
   Speed, reliability, and relevance constitute the mains pillars of a robust testing strategy. The faster a test suite can diagnose an issue in its application, the more value it renders. In this article, we navigate through the most significant causes of slow tests and suggest ideas to deal with them.
 tags:
   - testing
-image: /img/2020-triple-threat-to-testing-part-1-speed.png
+img: /img/2020-triple-threat-to-testing-part-1-speed.png
 ---
 ![The Triple Threat to Testing — Part 1\:Speed](/img/2020-triple-threat-to-testing-part-1-speed.png)
 

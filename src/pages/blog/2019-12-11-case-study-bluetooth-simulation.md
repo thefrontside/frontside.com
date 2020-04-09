@@ -9,7 +9,7 @@ tags:
   - oss
   - case-study
   - simulation
-image: /img/2019-12-11-case-study-bluetooth-simulation.png
+img: /img/2019-12-11-case-study-bluetooth-simulation.png
 ---
 ![BlEmulator: an open source cross-platform bluetooth simulator](/img/2019-12-11-case-study-bluetooth-simulation.png)
 

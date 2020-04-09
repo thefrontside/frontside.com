@@ -1,19 +1,18 @@
 ---
 templateKey: blog-post
 title: Building a Continuous Integration & Deployment Solution for the IoT.
-description: Smart homes, smart devices, smart vehicles. The Internet of Things is here! You want to be able to build software for IoT and deploy, maintain, and update it on your devices that may be located anywhere and within anything. This is the first part of our IoT setup connecting users to the Internet of Things.
-author: Elrick Ryan
 date: 2017-06-21T12:00:00.000Z
+author: Elrick Ryan
+description: Smart homes, smart devices, smart vehicles. The Internet of Things is here! You want to be able to build software for IoT and deploy, maintain, and update it on your devices that may be located anywhere and within anything. This is the first part of our IoT setup connecting users to the Internet of Things.
 tags: 
   - iot
   - resin.io
   - javascript
   - circleci
-image: /img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_main-image-iot-blog.png
+img: /img/2017-06-21-building-a-ci-cd-deployment-solution-for-the-iot_main-image-iot-blog.png
 directory_index: false
 published: true
 ---
-
 
 Great, Scott! Even Doc may say we are in the future. Embedded devices and systems are everywhere and today almost every one of them is connected to the internet. Currently, there are over an estimated 8 billion connected devices transferring data and communicating via the internet and that number will continue to grow exponentially to an estimated over 27 billion by 2020. To put that number in perspective the population is estimated at 321 million in the United States and 7 billion in the world. Is anyone else thinking Skynet here? Now that you have that mental picture you now have to build, maintain, and deploy software to these devices that could be located anywhere and in anything. Wondering how to do that? Do not worry The Frontside has your back!
 

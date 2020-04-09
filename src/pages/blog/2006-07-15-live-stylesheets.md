@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
 title: Live Stylesheets
-author: Charles Lowell
 date: 2006-07-15T12:00:00.000Z
+author: Charles Lowell
 tags: 
    - dhtml
    - javascript

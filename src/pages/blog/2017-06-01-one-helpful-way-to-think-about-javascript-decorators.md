@@ -1,15 +1,15 @@
 ---
 templateKey: blog-post
 title: One Helpful Way to Think About JavaScript Decorators
-description: JavaScript decorators are coming, but what are the class of problems which they're useful for? In this brief tour of decorators, we'll try to answer that question by contrasting them with comparable technology from other languages.
-author: Charles Lowell
 date: 2017-06-01T12:00:00.000Z
+author: Charles Lowell
+description: JavaScript decorators are coming, but what are the class of problems which they're useful for? In this brief tour of decorators, we'll try to answer that question by contrasting them with comparable technology from other languages.
 tags: 
   - javascript
   - clojure
   - macros
   - decorators
-image: /img/2017-06-01-one-helpful-way-to-think-about-javascript-decorators_russian-dolls.jpg
+img: /img/2017-06-01-one-helpful-way-to-think-about-javascript-decorators_russian-dolls.jpg
 directory_index: false
 published: true
 ---

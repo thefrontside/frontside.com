@@ -2,11 +2,11 @@
 templateKey: blog-post
 title: The Conjoined Triangles of Senior-Level Development
 date: 2016-07-07T12:00:00.000Z
+author: Brandon Hays
 tags: 
   - hiring
   - senior developers
   - frontside
-author: Brandon Hays
 published: true
 directory_index: false
 ---

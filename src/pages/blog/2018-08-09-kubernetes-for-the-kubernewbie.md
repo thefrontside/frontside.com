@@ -15,7 +15,7 @@ cta_text: >-
   Building a microservice and an application that consumes that microservice. 
   We can help.
 cta_button: "Ok Scooty...containerize"
-image: /img/2018/08/09/kubernetes-for-the-kubernewbie/drone-container-shot.jpg
+img: /img/2018/08/09/kubernetes-for-the-kubernewbie/drone-container-shot.jpg
 ---
 
 ‘It’s not how you start it’s how you finish’, is a phrase you may hear a coach

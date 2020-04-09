@@ -3,7 +3,6 @@ templateKey: blog-post
 title: Math is Just Another Framework
 date: 2018-02-19T13:00:00.000Z
 author: Charles Lowell
-image: /img/2018-02-19-math-is-just-another-framework_graphs.jpg
 description: >-
   Functional programming with typeclasses rooted in category theory may seem
   like some esoteric practice reserved for the truly pointy-haired. But guess
@@ -13,6 +12,7 @@ tags:
   - functional programming
   - typeclasses
   - convention over configuration
+img: /img/2018-02-19-math-is-just-another-framework_graphs.jpg
 ---
 
 <p>Monads. Amirite?</p>

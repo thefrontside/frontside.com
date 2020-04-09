@@ -16,7 +16,7 @@ tags:
   - finance
   - ethereum
   - decentralized
-image: /img/2017-12-22-frontside-forecast-the-growing-importance-of-blockchains_blockchain.png
+img: /img/2017-12-22-frontside-forecast-the-growing-importance-of-blockchains_blockchain.png
 ---
 
 It is indisputable that cryptocurrencies like [Bitcoin](https://bitcoin.org) have brought the concept of blockchains into the mainstream. For those who have purchased Bitcoin and held, the sky appears to be the limit.  For those who have shown up later to the party, they’re either laughing it off or trying to collect as many [CryptoKitties](http://www.cryptokitties.com) as possible. This interest in blockchain-based technologies has unlocked new frontiers well beyond cryptocurrencies.

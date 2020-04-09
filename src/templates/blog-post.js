@@ -56,7 +56,7 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data: { markdownRemark: post } }) => {
   return (
-    <Layout title={post.frontmatter.title} description={post.frontmatter.description}>
+    <Layout title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.img == null ? null : post.frontmatter.img.childImageSharp.resolutions.src}>
       <BlogPostTemplate
         content={post.html}
         description={post.frontmatter.description}
@@ -90,6 +90,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        img {
+          childImageSharp{
+            resolutions {
+              src
+            }
+          }
+        }
       }
       fields {
         slug

@@ -8,7 +8,7 @@ import "syntax-highlighting/assets/css/prism/prism-base16-ateliersulphurpool.lig
 import Navbar from '../navbar';
 import Footer from '../footer';
 
-export default function TemplateWrapper({ children, description, title }) {
+export default function TemplateWrapper({ children, description, title, image }) {
   return (
     <StaticQuery
       query={graphql`
@@ -17,7 +17,8 @@ export default function TemplateWrapper({ children, description, title }) {
             siteMetadata {
               title,
               description,
-              image
+              image,
+              siteUrl
             }
           }
         }
@@ -28,9 +29,9 @@ export default function TemplateWrapper({ children, description, title }) {
             <html lang="en" />
             <title>{title ? `${title} | ${data.site.siteMetadata.title}` : data.site.siteMetadata.title}</title>
             <meta name="description" content={description ? description : data.site.siteMetadata.description} />
-            <meta name="image" content={data.site.siteMetadata.image} />
+            <meta name="image" content={image ? `${data.site.siteMetadata.siteUrl}${image}` : data.site.siteMetadata.image} />
             <meta name="twitter:card" content="summary" />
-            <meta name="twitter:image" content={data.site.siteMetadata.image} />
+            <meta name="twitter:image" content={image ? `${data.site.siteMetadata.siteUrl}${image}` : data.site.siteMetadata.image} />
             <meta name="twitter:title" content={title ? `${title} | ${data.site.siteMetadata.title}` : data.site.siteMetadata.title} />
             <meta name="twitter:description" content={description ? description : data.site.siteMetadata.description} />
           </Helmet>
