@@ -34,6 +34,10 @@ export default function TemplateWrapper({ children, description, title, image })
             <meta name="twitter:image" content={image ? `${data.site.siteMetadata.siteUrl}${image}` : data.site.siteMetadata.image} />
             <meta name="twitter:title" content={title ? `${title} | ${data.site.siteMetadata.title}` : data.site.siteMetadata.title} />
             <meta name="twitter:description" content={description ? description : data.site.siteMetadata.description} />
+            <meta property="og:title" content={title ? `${title} | ${data.site.siteMetadata.title}` : data.site.siteMetadata.title} />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content={data.site.siteMetadata.siteUrl} />
+            <meta property="og:image" content={image ? `${data.site.siteMetadata.siteUrl}${image}` : data.site.siteMetadata.image} />
           </Helmet>
           <Navbar />
 
