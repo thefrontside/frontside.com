@@ -1,5 +1,4 @@
 import React from "react";
-import Helmet from "react-helmet";
 
 import { graphql } from "gatsby";
 import Layout from "../../components/layout";
@@ -24,10 +23,7 @@ const coreSlugs = [
 
 const AboutPage = ({
   data: {
-    allMarkdownRemark: { edges: team },
-    site: {
-      siteMetadata: { title }
-    }
+    allMarkdownRemark: { edges: team }
   }
 }) => {
 
@@ -45,8 +41,7 @@ const AboutPage = ({
   let orederedTeam = [...coreTeam, ...otherTeam];
 
   return (
-    <Layout>
-      <Helmet title={`About | ${title}`} />
+    <Layout title="About">
 
       <Hero
         heading={
@@ -103,7 +98,7 @@ const AboutPage = ({
             Flexible Architecture
           </h3>
           <p>
-            Stay ready and responsive to changing business or technology requirements. We help you plan a resilient architecture for your software and prepare your team so they can nimbly experiment with new features and technologies. 
+            Stay ready and responsive to changing business or technology requirements. We help you plan a resilient architecture for your software and prepare your team so they can nimbly experiment with new features and technologies.
           </p>
           <h3>
             Long-Lasting Software
@@ -128,7 +123,7 @@ const AboutPage = ({
           </span>
         </h2>
 
-        <TeamList people={orederedTeam}/>
+        <TeamList people={orederedTeam} />
 
         <div className="cta-box">
           <header className="cta-box--header">
@@ -171,11 +166,6 @@ export default AboutPage;
 
 export const aboutQuery = graphql`
   query AboutQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "/people/" }
@@ -186,7 +176,6 @@ export const aboutQuery = graphql`
         node {
           frontmatter {
             name
-            title
             intro
             img {
               childImageSharp {

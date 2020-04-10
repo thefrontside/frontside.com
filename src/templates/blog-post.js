@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { kebabCase } from "lodash";
-import Helmet from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
 import Content from "../components/content";
@@ -52,25 +51,15 @@ BlogPostTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
-  title: PropTypes.string,
-  helmet: PropTypes.object
+  title: PropTypes.string
 };
 
 const BlogPost = ({ data: { markdownRemark: post } }) => {
   return (
-    <Layout>
+    <Layout title={post.frontmatter.title} description={post.frontmatter.description} image={post.frontmatter.img == null ? null : post.frontmatter.img.childImageSharp.resolutions.src}>
       <BlogPostTemplate
         content={post.html}
         description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         authors={post.fields.authors.map(author => ({
@@ -101,6 +90,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        img {
+          childImageSharp{
+            resolutions {
+              src
+            }
+          }
+        }
       }
       fields {
         slug

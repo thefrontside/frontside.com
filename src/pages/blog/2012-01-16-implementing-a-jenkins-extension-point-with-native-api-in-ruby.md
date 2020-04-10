@@ -7,7 +7,7 @@ tags:
   - jenkins
   - ruby
   - java
-image: "http://ftp-nyc.osuosl.org/pub/jenkins/art/jenkins-logo/1024x1024/headshot.png"
+img: /img/2012-01-16-implementing-a-jenkins-extension-point-with-native-api-in-ruby-1.png
 directory_index: false
 ---
 

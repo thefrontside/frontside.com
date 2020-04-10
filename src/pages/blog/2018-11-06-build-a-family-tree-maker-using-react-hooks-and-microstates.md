@@ -14,7 +14,7 @@ tags:
   - javascript
   - microstates
   - react
-image: /img/2018-06-14-what-is-new-in-wcag-2-1_wcag-2-1-image.jpg
+img: /img/2018-06-14-what-is-new-in-wcag-2-1_wcag-2-1-image.jpg
 ---
 ![Demo of Family Builder Component](/img/2018-11-06-build-a-family-tree-maker-using-react-hooks-and-microstates_family-builder.gif)
 

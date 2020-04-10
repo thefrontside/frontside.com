@@ -2,6 +2,7 @@
 templateKey: blog-post
 title: So You Just Finished a Bootcamp, Now What?
 date: 2016-05-17T12:00:00.000Z
+author: Stephanie Riera
 tags:
   - code
   - bootcamp
@@ -11,8 +12,7 @@ tags:
   - interview
   - oss
   - community
-image: /img/2016-05-17-so-you-just-finished-a-bootcamp-now-what_techstars.jpg
-author: Stephanie Riera
+img: /img/2016-05-17-so-you-just-finished-a-bootcamp-now-what_techstars.jpg
 published: true
 directory_index: false
 ---

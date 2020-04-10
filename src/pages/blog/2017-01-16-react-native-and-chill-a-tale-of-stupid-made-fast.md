@@ -7,7 +7,7 @@ tags:
     - react native
     - react
     - tvOS
-image: /img/2017-01-16-react-native-and-chill-a-tale-of-stupid-made-fast_monkey.png
+img: /img/2017-01-16-react-native-and-chill-a-tale-of-stupid-made-fast_monkey.png
 published: true
 ---
 

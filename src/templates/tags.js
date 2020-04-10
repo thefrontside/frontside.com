@@ -1,5 +1,4 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import PostsList from "../components/posts-list";
@@ -9,11 +8,9 @@ class TagRoute extends React.Component {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges;
     const tag = this.props.pageContext.tag;
-    const title = this.props.data.site.siteMetadata.title;
 
     return (
-      <Layout>
-        <Helmet title={`${tag} | ${title}`} />
+      <Layout title={tag}>
         <PostsList
           heading={
             <>

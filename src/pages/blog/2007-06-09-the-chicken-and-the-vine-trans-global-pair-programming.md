@@ -1,8 +1,8 @@
 ---
 templateKey: blog-post
 title: Trans-Global Pair Programming
-author: Charles Lowell
 date: 2007-06-09T12:00:00.000Z
+author: Charles Lowell
 tags: 
   - proskillz
 directory_index: false

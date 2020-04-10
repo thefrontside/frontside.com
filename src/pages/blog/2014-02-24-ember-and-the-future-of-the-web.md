@@ -3,11 +3,11 @@ templateKey: blog-post
 title: Ember and the future of the web
 date: 2014-02-24T12:00:00.000Z
 author: Brandon Hays
-image: "http://cl.ly/image/0s1M3r1p1Q1P/peabody.jpg"
 tags: 
   - ember
   - platforms
   - prognostication
+img: /img/2014-02-24-ember-and-the-future-of-the-web-peabody.jpg
 published: true
 directory_index: false
 ---

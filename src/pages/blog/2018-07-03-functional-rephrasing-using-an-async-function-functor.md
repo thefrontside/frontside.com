@@ -18,7 +18,7 @@ cta_text: >-
   Is your team eager to unlock the power of true functional programming in 
   JavaScript but doesn't know where to start?
 cta_button: "Lets get your FP journey started"
-image: /img/2018-07-03-functional-rephrasing-using-an-async-function-functor_starry-night.jpg
+img: /img/2018-07-03-functional-rephrasing-using-an-async-function-functor_starry-night.jpg
 ---
 
 One of my favorite things about the [the math framework][1] is that it

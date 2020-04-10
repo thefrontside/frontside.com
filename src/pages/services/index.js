@@ -22,7 +22,7 @@ import './index.css';
 
 export default function Services() {
   return (
-    <Layout>
+    <Layout title="Services">
       <Hero
         heading={
           <Text>
@@ -33,16 +33,16 @@ export default function Services() {
 
       <Content>
         <Text tag="p">
-        We help organizations architect and implement long lasting platforms at scale. Our leadership will provide you with a robust toolkit and optimized workflow so your teams can deliver features with confidence.
+          We help organizations architect and implement long lasting platforms at scale. Our leadership will provide you with a robust toolkit and optimized workflow so your teams can deliver features with confidence.
         </Text>
- 
+
         <div className="service-thumb service-thumb__consulting">
           <div className="service-thumb--content">
             <h2>
               Development Parallelization
             </h2>
             <p>
-              Maximize your teams' velocity by enabling them to work in parallel. We specialize in keeping your teams unblocked from each other through contract management, simulation, and automated visibility. 
+              Maximize your teams' velocity by enabling them to work in parallel. We specialize in keeping your teams unblocked from each other through contract management, simulation, and automated visibility.
             </p>
           </div>
         </div>
@@ -50,10 +50,10 @@ export default function Services() {
         <div className="service-thumb service-thumb__coaching">
           <div className="service-thumb--content">
             <h2>
-              Inter-team Collaboration 
+              Inter-team Collaboration
             </h2>
             <p>
-              We help your teams across cities—or continents—and departments to collaborate as they co-develop business value in your applications. Through custom-tailored tools and processes around your codebase, we allow you to keep real track of expectations and progress across Engineering, Product, UX, and Leadership. 
+              We help your teams across cities—or continents—and departments to collaborate as they co-develop business value in your applications. Through custom-tailored tools and processes around your codebase, we allow you to keep real track of expectations and progress across Engineering, Product, UX, and Leadership.
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function Services() {
               Development Experience
             </h2>
             <p>
-              We help you make sure your engineers stay motivated and productive by perfecting their tools and processes. A great developer experience will help you retain talented engineers, onboard new hires and contractors, and get more results faster. 
+              We help you make sure your engineers stay motivated and productive by perfecting their tools and processes. A great developer experience will help you retain talented engineers, onboard new hires and contractors, and get more results faster.
             </p>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function Services() {
               <p>
                 We had engineers with no previous web development or frontend experience, and, at the end of our engagement, those engineers were fully capable of taking over from where Frontside left us and moving the product forward.
               </p>
-              <footer  className="our-way--quote-footer">
+              <footer className="our-way--quote-footer">
                 <img src={illya} alt="Ilya Busigin" />
                 <div>
                   <strong>
@@ -159,7 +159,7 @@ export default function Services() {
               <p>
                 They introduced us to a new way of thinking about and working with our forms, which is a core part of our application. We’ve adopted that philosophy across the board. The quality of their work was far higher than what we’ve seen before. They intensely tested their work, and their tech support was fantastic.
               </p>
-              <footer  className="our-way--quote-footer">
+              <footer className="our-way--quote-footer">
                 <img src={benji} alt="Benjamin Shine" />
                 <div>
                   <strong>
@@ -203,23 +203,23 @@ export default function Services() {
         <div className="success-stories">
           <div className="success-stories--content">
             <p>
-             We have collaborated with well established clients to help their teams move with confidence. 
+              We have collaborated with well established clients to help their teams move with confidence.
             </p>
             <ul className="success-stories--logos">
               <li className="success-stories--logo"><img src={logoHoneywell} alt="Honeywell logo" /></li>
               <li className="success-stories--logo"><img src={logoConde} alt="Conde Nast logo" /></li>
               <li className="success-stories--logo"><img src={logoEbsco} alt="EBSCO logo" /></li>
               <li className="success-stories--logo"><img src={logoSxsw} alt="SXSW logo" /></li>
-              <li className="success-stories--logo"><img src={logoStandard} alt="Standard Chartered Bank logo"/></li>
+              <li className="success-stories--logo"><img src={logoStandard} alt="Standard Chartered Bank logo" /></li>
               <li className="success-stories--logo success-stories--logo__square"><img src={logoDell} alt="Dell logo" /></li>
             </ul>
           </div>
           <aside>
             <blockquote className="our-way--quote">
               <p>
-              Everything was well documented, well tested and followed the well-known conventions for working with JavaScript. It was evident they were interested in giving us a software base that we could evolve on our own.
+                Everything was well documented, well tested and followed the well-known conventions for working with JavaScript. It was evident they were interested in giving us a software base that we could evolve on our own.
               </p>
-              <footer  className="our-way--quote-footer">
+              <footer className="our-way--quote-footer">
                 <img src={jason} alt="Jason Jaynes" />
                 <div>
                   <strong>

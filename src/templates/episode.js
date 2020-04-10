@@ -1,5 +1,4 @@
 import React from "react";
-import Helmet from "react-helmet";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import Content from "../components/content";
@@ -9,9 +8,6 @@ import "./episode.css";;
 
 export default function EpisodeRoute({
   data: {
-    site: {
-      siteMetadata: { title: siteTitle }
-    },
     simplecastEpisode: {
       title,
       longDescriptionHtml,
@@ -24,8 +20,7 @@ export default function EpisodeRoute({
   let [, shareId] = sharingUrl.match(/.*\/(.*)$/);
 
   return (
-    <Layout>
-      <Helmet title={`${title} | ${siteTitle}`} />
+    <Layout title={title}>
       <Content>
         <iframe
           frameBorder="0"

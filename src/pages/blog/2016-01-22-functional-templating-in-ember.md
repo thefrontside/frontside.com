@@ -1,13 +1,13 @@
 ---
 templateKey: blog-post
 title: "Functional Templating in Ember"
-description: "See how easy it is to build a fully formed image upload widget complete with preview and progress bars when you apply functional programming techniques to your handlebars templates"
-author: Charles Lowell
 date: 2016-01-22T12:00:00.000Z
+author: Charles Lowell
+description: "See how easy it is to build a fully formed image upload widget complete with preview and progress bars when you apply functional programming techniques to your handlebars templates"
 tags: 
   - ember
   - javascript
-image: /img/2016-01-22-functional-templating-in-ember_lisp-all.png
+img: /img/2016-01-22-functional-templating-in-ember_lisp-all.png
 published: true
 directory_index: false
 ---

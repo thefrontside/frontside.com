@@ -14,7 +14,7 @@ tags:
   - collaboration
   - slack
   - gitter
-image: /img/2018/03/30/connecting-a-slack-channel-to-gitter/sameroom-gitter-slack-blog.jpg
+img: /img/2018/03/30/connecting-a-slack-channel-to-gitter/sameroom-gitter-slack-blog.jpg
 ---
 
 Slack communities for open source projects have become very popular
