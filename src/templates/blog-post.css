@@ -54,6 +54,17 @@
   }
 }
 
+.blog-post-content a.gatsby-resp-image-link {
+  border: none;
+}
+
+.gatsby-resp-image-wrapper + em {
+  font-size: var(--size-med-sm);
+  text-align: center;
+  display: block;
+  margin: var(--space-single);
+}
+
 .blog-post-content > h2 {
   font-weight: normal;
 }
