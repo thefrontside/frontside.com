@@ -111,3 +111,27 @@
 .markdown-heading-link:hover:before {
   opacity: 0.7;
 }
+
+.table-of-contents {
+  border: 10px solid rgba(var(--rgba-light-blue), 0.10);
+  padding: var(--space-double);
+}
+
+.table-of-contents > h2 {
+  margin-top: 0;
+  font-size: var(--size-md-small);
+  text-transform: uppercase;
+}
+
+.table-of-contents ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.table-of-contents li > ul {
+  margin-top: var(--space-single);
+}
+
+.table-of-contents ul > li:last-child {
+  margin-bottom: 0;
+}
