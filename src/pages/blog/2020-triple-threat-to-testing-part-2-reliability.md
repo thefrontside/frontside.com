@@ -12,37 +12,12 @@ img: /img/2020-triple-threat-to-testing-part-2-reliability-social.png
 ---
 ![The Triple Threat to Testing — Part 2\: Reliability](/img/2020-triple-threat-to-testing-part-2-reliability-intro.png)
 
-_This article is the second one in our Triple Threat to Testing saga. If you haven't, check out the first part about [Speed as a make-or-break factor of any test suite](https://frontside.com/blog/2020-triple-threat-to-testing-part-1-speed/) and tips to improve it._
-
-<nav class="table-of-contents">
-  <h2>In this article:</h2>
-  <ul>
-    <li>
-        <a href='#why-reliability-matters'>Why Reliability matters</a>
-    </li>
-    <li>
-        <a href='#whats-causing-flaky-tests'>What’s causing flaky tests?</a>
-        <ul>
-            <li>
-                <a href='#complexity-and-test-size'>Complexity and test size</a>
-            </li>
-            <li>
-                <a href='#asynchrony-in-the-app'>Asynchrony in the app</a>
-            </li>
-            <li>
-                <a href='#environment-and-preconditions'>Environment and Preconditions</a>
-            </li>
-            <li>
-                <a href='#unmanaged-tests'>Unmanaged tests</a>
-            </li>
-        </ul>
-    </li>
-  </ul>
-</nav>
-
-## Why Reliability matters
 
 Imagine you have agreed to carpool with a friend. The first couple of weeks it’s all good: you go to their place to pick them up, the next time they pick you up. But one day you’re waiting in front of your building and it’s getting late. You decide to call your friend and hear them say: “Oh, I’ve been waiting too. I thought it was your turn.” You’re both frustrated with each other, and if this happens a few more times, you know you’ll drop carpooling entirely. But since you want to reduce your carbon footprint, you come up with solutions to try to make it work. Perhaps you set up a shared calendar, or create alarms on each other’s phones, or create a text message strategy. Even if your strategies aren’t foolproof, there are actionable steps you can take to significantly increase the reliability of your carpooling partner.
+
+<aside class="blog-post--saga-box">
+This article is the second one in our <em>Triple Threat to Testing</em> saga. If you haven't, check out the first part about <a href="https://frontside.com/blog/2020-triple-threat-to-testing-part-1-speed/" target="_blank">Speed as a make-or-break factor of any test suite</a> and tips to improve it.
+</aside>
 
 More often than not, test suites are like that unreliable friend. Almost every developer has encountered a test that passes several times and then unpredictably fails without having made any change in your codebase. It turns out test flakiness affects practically every team, even those with robust test suites. For instance, [in 2016 Google reported](https://testing.googleblog.com/2016/05/flaky-tests-at-google-and-how-we.html) an average of 1.5% of flaky tests on their suites despite their constant efforts to fight them. And test flakiness remains one of the top concerns of developers according to [The State of Testing 2019](https://static1.smartbear.co/smartbearbrand/media/pdf/third-annual-testing-community-survey-report.pdf) survey.
 
@@ -55,6 +30,24 @@ The impact of flaky tests is not unlike the sensation of being stuck back in hig
 ## What’s causing flaky tests?
 
 All developers have experienced flaky tests. But understanding why tests are unreliable goes a long way to solving the issue. Flaky tests can be diagnosed, handled, and in many cases prevented. In this section, we’ll have a look at common sources of flakiness and strategies to make tests less prone to be unstable. 
+
+<nav class="table-of-contents">
+  <h2>Common sources of flakiness:</h2>
+  <ul>
+      <li>
+          <a href='#complexity-and-test-size'>Complexity and test size</a>
+      </li>
+      <li>
+          <a href='#asynchrony-in-the-app'>Asynchrony in the app</a>
+      </li>
+      <li>
+          <a href='#environment-and-preconditions'>Environment and Preconditions</a>
+      </li>
+      <li>
+          <a href='#unmanaged-tests'>Unmanaged tests</a>
+      </li>
+  </ul>
+</nav>
 
 ### Complexity and test size  
 

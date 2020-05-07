@@ -20,6 +20,11 @@ We’re not writing to convince you about the value of testing any more than we�
 
 The first factor is the most obvious: speed. Slow tests are literally a drag on teams and organizations.
 
+<aside class="blog-post--saga-box">
+The second part is out! Check out how <a href="https://frontside.com/blog/2020-triple-threat-to-testing-part-2-reliability/" target="_blank">Reliability directly impacts your test suite</a>, as well as common causes of test flakiness.
+</aside>
+
+
 ## Why Speed Matters
 
 In the stock market, information services offer different pricing schemes around speed. You can wait and get information for free in a minute or pay to get data within seconds. But if you want information with minimum latency the price tag goes through the roof. Why? The infrastructure to make this possible is more expensive and the value of knowing something before others is very high. 
@@ -133,7 +138,9 @@ We think it’s worth the effort to improve testing, as speedy test suites short
 
 ### Up next...
 
-Speed is critical to a healthy testing strategy, but it won't work without the other pillars of the testing triple threat. Next we want to talk about the second essential make-or-break factor in testing: reliability. Tests can be flaky, but there are strategies you can take now to detect, fix, and even prevent having non-deterministic tests in your application.
+Speed is critical to a healthy testing strategy, but it won't work without the other pillars of the testing triple threat. Next we focus on the second essential make-or-break factor in testing: reliability. Tests can be flaky, but there are strategies you can take now to detect, fix, and even prevent having non-deterministic tests in your application.
+
+Keep on reading, [The Triple Threat to Testing — Part 2: Reliability](http://localhost:8000/blog/2020-triple-threat-to-testing-part-2-reliability/).
 
 ---
 

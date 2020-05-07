@@ -135,3 +135,21 @@
 .table-of-contents ul > li:last-child {
   margin-bottom: 0;
 }
+
+.blog-post--saga-box {
+  font-size: var(--size-md-small);
+  margin: var(--space-single) 0;
+  font-style: italic;
+  padding: var(--space-single);
+  border-left: 1px solid rgba(var(--rgba-light-blue), 0.70);
+}
+
+.blog-post--saga-box em {
+  font-style: normal;
+}
+
+.blog-post--saga-box a {
+  color: var(--body-color);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--rgba-light-blue), 0.70);
+}
