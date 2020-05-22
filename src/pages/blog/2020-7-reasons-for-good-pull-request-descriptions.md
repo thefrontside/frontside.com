@@ -61,3 +61,21 @@ Most of our days as developers are spent finding solutions to problems. A PR des
 Open source communities have a reputation for having great source code. It’s not a coincidence that they tend to have some of the strictest requirements dictating the quality of PR descriptions. Enterprise teams can learn a lot from the best practices of how open source communities write great software, starting with pull requests. 
 
 Requiring a good PR description is a small investment that pays big dividends. Give it a shot for a few months and encourage the same of your fellow developers. You might find yourself never going back, and emerge as a stronger and more valuable team member as a result.  
+
+<aside class="posts-list-list">
+  <h2>Related article:</h2>
+  <div class="posts-list-entry">
+    <h3 class="posts-list-title">
+      <a href="/blog/2020-05-25-github-actions-pull_request/">
+        Gihub Actions: a deep dive into pull_request
+      </a>
+    </h3>
+    <p>
+      We have put together specific behaviors and information that you’ll need to use pull_request as a trigger for your Github Actions workflow.
+    </p>
+    <a href="/blog/2020-05-25-github-actions-pull_request/" class="post-link">
+      Continue reading
+      <span class="post-link--arrow">→</span>
+    </a>
+  </div>
+</aside>

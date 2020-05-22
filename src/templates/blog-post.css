@@ -154,3 +154,32 @@
   text-decoration: none;
   border-bottom: 1px solid rgba(var(--rgba-light-blue), 0.70);
 }
+
+.blog-post--caption {
+  text-align: center;
+  font-size: var(--size-md-small);
+  margin: var(--space-single) 0;
+  font-style: italic;
+}
+
+.blog-post--caption .language-text {
+  font-style: normal;
+  font-size: var(--size-small);
+}
+
+.blog-post-content table {
+  margin: 0 auto;
+}
+
+.blog-post-content thead th {
+  border-bottom: 2px solid var(--body-color-faded);
+  text-align: left;
+  font-family: var(--font-sans-serif);
+  letter-spacing: 1px;
+  padding: var(--space-half);
+}
+
+.blog-post-content tbody td {
+  padding: var(--space-half);
+  border-bottom: 1px solid var(--body-color-faded);
+}
