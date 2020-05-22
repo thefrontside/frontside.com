@@ -2,12 +2,10 @@
 templateKey: people
 name: Min Kim
 title: Software Engineer
-img: /img/frontside-800.png
+img: /img/min-kim.png
 bio: 
-twitter: 
-github: 
+twitter: minkimcello
+github: minkimcello
 alumnus: true
-intro: Min Kim 
+intro: 
 ---
-
-[comment]: # (Temporal profile for Min. I'll ask him for a bio, social media, etc)
