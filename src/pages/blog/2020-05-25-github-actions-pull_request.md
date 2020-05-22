@@ -75,7 +75,7 @@ Although the names of these types are pretty self-explanatory, we have gone ahea
 | `review_requested`       | request a user for review                             |
 | `review_request_removed` | remove request from user for review                   |
 
-<p class="blog-post--caption">For a complete list of activity types, checkout <a href="https://help.github.com/en/actions/reference/events-that-trigger-workflows" target="_blank" rel="nofollow">Github's Events-that-trigger-workflows page</a></p>.
+<p class="blog-post--caption">For a complete list of activity types, checkout <a href="https://help.github.com/en/actions/reference/events-that-trigger-workflows" target="_blank" rel="nofollow">Github's Events-that-trigger-workflows page</a>.</p>
 
 One thing to note is that when you configure your `pull_request` workflow to be triggered on `labeled` or `unlabeled` and you add/remove multiple labels at the same time, the event of each label will trigger its own workflow run. It also works the same way for `assigned`/`unassigned` and `review_requested`/`review_request_removed`.
 
@@ -151,7 +151,7 @@ Now that we have compared how a `push` payload differs from a `pull_request` pay
 
 ## How does `pull_request` affect `@actions/checkout`?
 
-When you use `pull_request`, (`@actions/checkout`)[https://github.com/actions/checkout] will perform a `git checkout` to the `github.ref` environment variable. Note that `git checkout` is not applied to the commit, as it would have been the case when using `push`. 
+When you use `pull_request`, [`@actions/checkout`](https://github.com/actions/checkout) will perform a `git checkout` to the `github.ref` environment variable. Note that `git checkout` is not applied to the commit, as it would have been the case when using `push`. 
 
 This difference means that a `pull_request` workflow `ref` would look like `refs/remotes/pull/##/merge` whereas a `push` workflow would be `refs/heads/branch_name`. This explains why the SHA of a `push` workflow matches the commit that triggered the workflow, whereas the SHA of a `pull_request` workflow does not; instead the SHA of the `pull_request` is the resulting commit that was created from merging the base to the head.
 
