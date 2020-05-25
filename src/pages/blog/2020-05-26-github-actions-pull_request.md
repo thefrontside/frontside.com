@@ -2,16 +2,16 @@
 templateKey: blog-post
 title: >-
   Gihub Actions: a deep dive into pull_request
-date: 2020-05-25T05:00:00.000Z
+date: 2020-05-26T05:00:00.000Z
 author: Min Kim
 description: >-
   We have put together specific behaviors and information that you’ll need to use pull_request as a trigger for your Github Actions workflow.
 tags:
   - github-actions
   - continous-delivery
-img: /img/2020-05-25-github-actions-pull_request-social-media.png
+img: /img/2020-05-26-github-actions-pull_request-social-media.png
 ---
-![Gihub Actions: a deep dive into pull_request](/img/2020-05-25-github-actions-pull_request-intro.png)
+![Gihub Actions: a deep dive into pull_request](/img/2020-05-26-github-actions-pull_request-intro.png)
 
 Github Actions is an exciting feature that enables teams to construct workflows based on webhook events. It unlocks new possibilities for teams that neatly integrate it into their development flow.
 
@@ -151,11 +151,18 @@ Now that we have compared how a `push` payload differs from a `pull_request` pay
 
 ## How does `pull_request` affect `@actions/checkout`?
 
-When you use `pull_request`, [`@actions/checkout`](https://github.com/actions/checkout) will perform a `git checkout` to the `github.ref` environment variable. Note that `git checkout` is not applied to the commit, as it would have been the case when using `push`. 
+When you use `pull_request`, [`@actions/checkout`](https://github.com/actions/checkout) will perform a `git checkout` to the `github.ref` environment variable. Note that `git checkout` is not applied to the commit, as it would have been the case when using `push`.
 
 This difference means that a `pull_request` workflow `ref` would look like `refs/remotes/pull/##/merge` whereas a `push` workflow would be `refs/heads/branch_name`. This explains why the SHA of a `push` workflow matches the commit that triggered the workflow, whereas the SHA of a `pull_request` workflow does not; instead the SHA of the `pull_request` is the resulting commit that was created from merging the base to the head.
 
-You could configure the checkout action with the `ref` argument to be more explicit with what you want to check out. For instance, if you want to checkout the head commit instead of using the default merge ref, you could pass in `github.event.pull_request.head.sha` as the argument (or `github.event.pull_request.head.ref` if you are using `v1`).
+You could configure the checkout action with the `ref` argument to be more explicit with what you want to check out. For instance, if you want to checkout the head commit instead of using the default merge ref, you could pass in `github.event.pull_request.head.sha` as the argument (or `github.event.pull_request.head.ref` if you are using `v1`):
+
+```yaml
+- uses: actions/checkout@v2
+  with:
+    ref: ${{ github.event.pull_request.head.sha }}
+```
+<p class="blog-post--caption">Checking out head commit using <code class="language-text">checkout@v2</code>.</p>
 
 Opting out from the default checkout to specify the head ref might be useful for any number of reasons. For example, if you have an action that relies on the output of `git log`, the merge commit would offset your results. Or merging with the base ref might introduce features that conflict with the head and possibly even go unnoticed. A third reason could be as follows: suppose your tests are comprehensive and catches those conflicts. A user might be confused as to why the tests are failing in CI but passing locally, especially if they are not familiar with how the checkout action works. Specifying the head ref allows you to have more granular control. In any case, a better understanding of how the checkout action works will allow you to troubleshoot effectively.
 
