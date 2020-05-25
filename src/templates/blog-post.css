@@ -1,4 +1,4 @@
-@import '../components/variables';
+@import "../components/variables";
 
 .blog-post-blog-link {
   padding: 0.5rem 1rem;
@@ -15,7 +15,7 @@
   font-size: var(--size-xxl);
   font-weight: normal;
   color: var(--color-dark-blue-darkable);
-  
+
   @media (--large-up) {
     padding-right: 4rem;
   }
@@ -45,13 +45,14 @@
   margin-bottom: var(--space-one-half);
 }
 
-.blog-post-content > p a, .blog-post-content li a {
+.blog-post-content > p a,
+.blog-post-content li a {
   text-decoration: none;
   color: var(--body-color);
   padding-bottom: 2px;
   border-bottom: 1px solid var(--body-color-faded);
   &:hover {
-    border-color: var(--color-light-blue)
+    border-color: var(--color-light-blue);
   }
 }
 
@@ -87,7 +88,7 @@
 }
 
 .markdown-heading-link:before {
-  content: '';
+  content: "";
   background-image: url(../img/custom-icons/link-icon.svg);
   background-repeat: no-repeat;
   background-size: contain;
@@ -100,7 +101,7 @@
 
 @media (prefers-color-scheme: dark) {
   .markdown-heading-link:before {
-    background-image: url(../img/custom-icons/link-icon-white.svg);;
+    background-image: url(../img/custom-icons/link-icon-white.svg);
   }
 }
 
@@ -114,7 +115,7 @@
 }
 
 .table-of-contents {
-  border: 10px solid rgba(var(--rgba-light-blue), 0.10);
+  border: 10px solid rgba(var(--rgba-light-blue), 0.1);
   padding: var(--space-double);
 }
 
@@ -142,7 +143,7 @@
   margin: var(--space-single) 0;
   font-style: italic;
   padding: var(--space-single);
-  border-left: 1px solid rgba(var(--rgba-light-blue), 0.70);
+  border-left: 1px solid rgba(var(--rgba-light-blue), 0.7);
 }
 
 .blog-post--saga-box em {
@@ -152,7 +153,7 @@
 .blog-post--saga-box a {
   color: var(--body-color);
   text-decoration: none;
-  border-bottom: 1px solid rgba(var(--rgba-light-blue), 0.70);
+  border-bottom: 1px solid rgba(var(--rgba-light-blue), 0.7);
 }
 
 .blog-post--caption {
@@ -182,4 +183,19 @@
 .blog-post-content tbody td {
   padding: var(--space-half);
   border-bottom: 1px solid var(--body-color-faded);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    background: rgba(var(--rgba-light-blue), 0.1);
+    color: #a2adbf;
+  }
+  pre code[class*="language-"] {
+    background: none;
+  }
+  .token.punctuation {
+    color: #818aab;
+  }
 }
