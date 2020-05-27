@@ -1,14 +1,14 @@
 ---
 templateKey: blog-post
 title: >-
-  Gihub Actions: a deep dive into pull_request
+  Github Actions: a deep dive into pull_request
 date: 2020-05-26T05:00:00.000Z
 author: Min Kim
 description: >-
   We have put together specific behaviors and information that you’ll need to use pull_request as a trigger for your Github Actions workflow.
 tags:
   - github-actions
-  - continous-delivery
+  - continuous-delivery
 img: /img/2020-05-26-github-actions-pull_request-social-media.png
 ---
 ![Gihub Actions: a deep dive into pull_request](/img/2020-05-26-github-actions-pull_request-intro.png)
@@ -54,7 +54,7 @@ on:
   pull_request:
     types: [ assigned, opened, synchronize, reopened ]
 ```
-<p class="blog-post--caption">We have to explicitely set every action type if we customize them. <br /> The defaults will not be preserved tacitly.</p>
+<p class="blog-post--caption">We have to explicitely set every action type if we customize them. <br /> The defaults will not be preserved automatically.</p>
 
 Although the names of these types are pretty self-explanatory, we have gone ahead and double-checked each one of them to confirm our assumptions:
 
