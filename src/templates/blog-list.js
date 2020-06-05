@@ -1,26 +1,22 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Layout from "../components/layout";
-import PostsList from "../components/posts-list";
-import Pagination from "../components/pagination";
-import Text from "../components/text";
-import Hero from "../components/hero";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import PostsList from '../components/posts-list';
+import Pagination from '../components/pagination';
+import Text from '../components/text';
+import Hero from '../components/hero';
 
 export default function BlogPage({
   data: {
-    allMarkdownRemark: { edges: posts }
+    allMarkdownRemark: { edges: posts },
   },
-  pageContext: { page, pages }
+  pageContext: { page, pages },
 }) {
   return (
-    <Layout title={page === 1 ? "Blog" : `Blog - page ${page}`}>
+    <Layout title={page === 1 ? 'Blog' : `Blog - page ${page}`}>
       <Hero
-        heading={
-          <Text>
-            Our Insights
-          </Text>
-        }
+        heading={<Text>Our Insights</Text>}
         subheading={
           <Text>
             Paradigms, frameworks, and tools <br /> around robust engineering.
@@ -30,9 +26,7 @@ export default function BlogPage({
       <PostsList
         heading={
           <>
-            <Text tag="h2">
-              {page === 1 ? "Blog" : `Blog on page ${page}`}
-            </Text>
+            <Text tag="h2">{page === 1 ? 'Blog' : `Blog on page ${page}`}</Text>
           </>
         }
         pagination={<Pagination prefix="/blog" page={page} pages={pages} />}
@@ -44,8 +38,8 @@ export default function BlogPage({
           excerpt: node.excerpt,
           authors: node.fields.authors.map(author => ({
             slug: author.fields.slug,
-            name: author.frontmatter.name
-          }))
+            name: author.frontmatter.name,
+          })),
         }))}
       />
     </Layout>
@@ -55,13 +49,13 @@ export default function BlogPage({
 BlogPage.propTypes = {
   pageContext: PropTypes.shape({
     page: PropTypes.number.isRequired,
-    pages: PropTypes.number.isRequired
+    pages: PropTypes.number.isRequired,
   }),
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array
-    })
-  })
+      edges: PropTypes.array,
+    }),
+  }),
 };
 
 export const pageQuery = graphql`

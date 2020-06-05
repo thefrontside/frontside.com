@@ -1,10 +1,10 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
-import Layout from "../components/layout";
-import Content from "../components/content";
-import format from "dateformat";
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Layout from '../components/layout';
+import Content from '../components/content';
+import format from 'dateformat';
 
-import "./episode.css";;
+import './episode.css';
 
 export default function EpisodeRoute({
   data: {
@@ -13,9 +13,9 @@ export default function EpisodeRoute({
       longDescriptionHtml,
       authors,
       publishedAt,
-      sharingUrl
-    }
-  }
+      sharingUrl,
+    },
+  },
 }) {
   let [, shareId] = sharingUrl.match(/.*\/(.*)$/);
 
@@ -32,16 +32,19 @@ export default function EpisodeRoute({
           title={title}
         />
         <div>
-          {"Hosted by "}
+          {'Hosted by '}
           {authors.map((author, i) => (
             <span key={author.fields.slug}>
               <Link to={author.fields.slug}>{author.frontmatter.name}</Link>
-              {authors.length > i + 1 ? ", " : null}
+              {authors.length > i + 1 ? ', ' : null}
             </span>
           ))}
           {format(publishedAt, `" on " mmmm dS, yyyy"."`)}
         </div>
-        <section className="episode-transcript" dangerouslySetInnerHTML={{ __html: longDescriptionHtml }} />
+        <section
+          className="episode-transcript"
+          dangerouslySetInnerHTML={{ __html: longDescriptionHtml }}
+        />
       </Content>
     </Layout>
   );

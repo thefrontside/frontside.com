@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../../components/layout";
-import Hero from "../../components/hero";
-import Text from "../../components/text";
-import Content from "../../components/content";
-import PullQuote from "../../components/pull-quote";
+import Layout from '../../components/layout';
+import Hero from '../../components/hero';
+import Text from '../../components/text';
+import Content from '../../components/content';
+import PullQuote from '../../components/pull-quote';
 
-import logo from "../../img/clients/kasita-logo.svg";
+import logo from '../../img/clients/kasita-logo.svg';
 // import mike from "../../img/mike-wiles.jpg";
-import kasita from "../../../static/img/kasita.jpg";
-import tempScreen from "../../../static/img/kasita-temp-screen.jpg";
-import multipleDevices from "../../../static/img/kasita-multi-device.jpg";
-import customIcons from "../../../static/img/kasita-custom-icons.jpg";
+import kasita from '../../../static/img/kasita.jpg';
+import tempScreen from '../../../static/img/kasita-temp-screen.jpg';
+import multipleDevices from '../../../static/img/kasita-multi-device.jpg';
+import customIcons from '../../../static/img/kasita-custom-icons.jpg';
 
 export default function KasitaCaseStudy() {
   return (
@@ -48,7 +48,7 @@ export default function KasitaCaseStudy() {
           that Small, Smart and Affordable is doable for housing.
         </Text>
         <p>
-          Check them out here:{" "}
+          Check them out here:{' '}
           <a href="https://www.kasita.com">https://www.kasita.com/</a>
         </p>
         <PullQuote>
@@ -116,12 +116,12 @@ export default function KasitaCaseStudy() {
           controls.
         </Text>
         <Text tag="p">
-          Frontside developer{" "}
+          Frontside developer{' '}
           <a href="/about/jeffrey-cherewaty">Jeffrey Cherewaty</a> said,
           &ldquo;Many interfaces for controlling Internet of Things devices
           either lack indicators that desired actions are taking place, or they
           completely block the user from doing anything else while the action
-          takes place. So, Frontside developer{" "}
+          takes place. So, Frontside developer{' '}
           <a href="/about/elrick-ryan">Elrick Ryan</a> designed a climate
           control screen that elegantly fixes both those problems - the
           temperature pulses when communication is happening between the HVAC
@@ -169,7 +169,7 @@ export default function KasitaCaseStudy() {
         </Text>
         <Text tag="h3">When&#39;s your move-in date?</Text>
         <Text tag="p">
-          To keep up with the latest details on Kasita homes, check out{" "}
+          To keep up with the latest details on Kasita homes, check out{' '}
           <a href="https://kasita.com/news/">Kasita in the News</a>.
         </Text>
       </Content>

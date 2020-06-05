@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
 
-import Text from "../text";
-import logo from "../../img/logo-no-text.svg";
-import "./footer.css";
+import Text from '../text';
+import logo from '../../img/logo-no-text.svg';
+import './footer.css';
 
 export default function Footer() {
   let year = new Date().getFullYear();

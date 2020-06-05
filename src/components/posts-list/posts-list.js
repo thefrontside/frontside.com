@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "gatsby";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
-import "./posts-list.css";
-import Text from "../text";
-import Content from "../content";
+import './posts-list.css';
+import Text from '../text';
+import Content from '../content';
 
 PostsList.propTypes = {
   heading: PropTypes.node,
@@ -19,17 +19,17 @@ PostsList.propTypes = {
       authors: PropTypes.arrayOf(
         PropTypes.shape({
           slug: PropTypes.string.isRequired,
-          name: PropTypes.string.isRequired
+          name: PropTypes.string.isRequired,
         })
-      ).isRequired
+      ).isRequired,
     })
-  ).isRequired
+  ).isRequired,
 };
 
 export default function PostsList({
   heading = null,
   posts,
-  pagination = null
+  pagination = null,
 }) {
   return (
     <Content className="posts-list">
@@ -41,7 +41,7 @@ export default function PostsList({
             </h3>
             <Text tag="p" className="posts-list-meta">
               <span className="posts-list-authors">
-                {post.authors.map((author) => (
+                {post.authors.map(author => (
                   <Link key={author.slug} to={author.slug}>
                     <Text>{author.name}</Text>
                   </Link>
@@ -51,8 +51,8 @@ export default function PostsList({
               <span className="posts-list-date">{post.date}</span>
             </Text>
             <Text tag="p">{post.excerpt}</Text>
-            <Link to={post.slug} class='post-link'>
-              Keep reading <span class='post-link--arrow'>→</span>
+            <Link to={post.slug} class="post-link">
+              Keep reading <span class="post-link--arrow">→</span>
             </Link>
           </li>
         ))}
