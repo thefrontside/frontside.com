@@ -7,13 +7,13 @@ import './home-logos.css';
 Logo.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  square: PropTypes.bool
+  square: PropTypes.bool,
 };
 
 export function Logo({ src, alt, square }) {
   return (
     <li className={css('home-logo', { 'is-square': square })}>
-      <img src={src} alt={alt}/>
+      <img src={src} alt={alt} />
     </li>
   );
 }
@@ -24,13 +24,9 @@ HomeLogos.propTypes = {
     if (arr.some(child => child instanceof Logo)) {
       throw new Error(`Invalid children for ${componentName}, expected Logo`);
     }
-  }
+  },
 };
 
 export default function HomeLogos({ children }) {
-  return (
-    <ul className="home-logos">
-      {children}
-    </ul>
-  );
+  return <ul className="home-logos">{children}</ul>;
 }

@@ -1,1 +1,1 @@
-export { default } from './pull-quote'
+export { default } from './pull-quote';

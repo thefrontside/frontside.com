@@ -28,9 +28,7 @@ PostsWidget.propTypes = {
 export default function PostsWidget({ heading, linkTo, posts }) {
   return (
     <div className="posts-widget">
-      <Text tag="h2">
-        {heading}
-      </Text>
+      <Text tag="h2">{heading}</Text>
 
       <ul className="posts-widget-list">
         {posts.map(post => (

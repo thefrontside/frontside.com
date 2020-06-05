@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../../components/layout";
-import Hero from "../../components/hero";
-import Text from "../../components/text";
-import Content from "../../components/content";
-import Testimonial from "../../components/testimonial";
+import Layout from '../../components/layout';
+import Hero from '../../components/hero';
+import Text from '../../components/text';
+import Content from '../../components/content';
+import Testimonial from '../../components/testimonial';
 
-import ingaged from "../../img/clients/ingaged-logo.svg";
-import mike from "../../img/mike-wiles.jpg";
+import ingaged from '../../img/clients/ingaged-logo.svg';
+import mike from '../../img/mike-wiles.jpg';
 
 export default function AltSchoolCaseStudy() {
   return (
