@@ -180,6 +180,12 @@ module.exports = {
         icon: `src/img/frontside-logo.png`,
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://frontside.com`,
+      },
+    },
     'gatsby-connect-authors',
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
