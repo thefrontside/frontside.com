@@ -30,6 +30,12 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-react-helmet-canonical-urls',
+      options: {
+        siteUrl: 'https://frontside.com',
+      },
+    },
+    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -178,12 +184,6 @@ module.exports = {
         theme_color: `#15325f`,
         display: `minimal-ui`,
         icon: `src/img/frontside-logo.png`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: `https://frontside.com`,
       },
     },
     'gatsby-connect-authors',
