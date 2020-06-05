@@ -1,8 +1,8 @@
-import React from "react";
-import { Link, graphql } from "gatsby";
-import Layout from "../components/layout";
-import PostsList from "../components/posts-list";
-import Text from "../components/text";
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import Layout from '../components/layout';
+import PostsList from '../components/posts-list';
+import Text from '../components/text';
 
 class TagRoute extends React.Component {
   render() {
@@ -26,8 +26,8 @@ class TagRoute extends React.Component {
             excerpt: node.excerpt,
             authors: node.fields.authors.map(author => ({
               slug: author.fields.slug,
-              name: author.frontmatter.name
-            }))
+              name: author.frontmatter.name,
+            })),
           }))}
         />
       </Layout>

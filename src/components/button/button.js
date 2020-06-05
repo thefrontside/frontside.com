@@ -12,13 +12,5 @@ Button.propTypes = {
 export default function Button({ className, ...props }) {
   let Component = props.to ? Link : 'button';
 
-  return (
-    <Component
-      className={css(
-        'button',
-        className
-      )}
-      {...props}
-    />
-  );
+  return <Component className={css('button', className)} {...props} />;
 }

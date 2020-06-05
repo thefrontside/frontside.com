@@ -12,7 +12,7 @@ ButtonGroup.propTypes = {
     if (arr.some(child => child instanceof Button)) {
       throw new Error(`Invalid children for ${componentName}, expected Button`);
     }
-  }
+  },
 };
 
 export default function ButtonGroup({
@@ -24,10 +24,14 @@ export default function ButtonGroup({
 }) {
   return (
     <div
-      className={css('button-group', {
-        [`align-${align}`]: !!align,
-        [`justify-${justify}`]: !!justify
-      }, className)}
+      className={css(
+        'button-group',
+        {
+          [`align-${align}`]: !!align,
+          [`justify-${justify}`]: !!justify,
+        },
+        className
+      )}
       {...props}
     >
       {children}

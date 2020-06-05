@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import Layout from "../../components/layout";
-import Hero from "../../components/hero";
-import Text from "../../components/text";
-import Content from "../../components/content";
-import PullQuote from "../../components/pull-quote";
-import Testimonial from "../../components/testimonial";
+import Layout from '../../components/layout';
+import Hero from '../../components/hero';
+import Text from '../../components/text';
+import Content from '../../components/content';
+import PullQuote from '../../components/pull-quote';
+import Testimonial from '../../components/testimonial';
 
-import altschool from "../../img/clients/altschool-logo.svg";
-import bengi from "../../../static/img/benji.png";
+import altschool from '../../img/clients/altschool-logo.svg';
+import bengi from '../../../static/img/benji.png';
 
 export default function AltSchoolCaseStudy() {
   return (
@@ -48,11 +48,11 @@ export default function AltSchoolCaseStudy() {
           leverage AltSchool’s technology and services platform.
         </Text>
         <Text tag="p">
-          Check them out here:{" "}
+          Check them out here:{' '}
           <a href="https://www.altschool.com/">https://www.altschool.com/</a>
         </Text>
         <Text tag="p">
-          And here:{" "}
+          And here:{' '}
           <a href="https://www.altschool.com/lab-schools/approach#personalized">
             https://www.altschool.com/lab-schools/approach#personalized
           </a>
@@ -67,7 +67,7 @@ export default function AltSchoolCaseStudy() {
         <Text tag="p">
           We first began helping AltSchool with their feature work; reworking
           legacy code as we went along. Among other things, we tackled the
-          unique UI problems of constructing re-usable and <i>well-tested</i>{" "}
+          unique UI problems of constructing re-usable and <i>well-tested</i>{' '}
           file upload components that could be shared between their web and
           native application.
         </Text>

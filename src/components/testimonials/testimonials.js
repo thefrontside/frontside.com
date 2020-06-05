@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import './testimonials.css';
 
@@ -8,9 +8,9 @@ Testimonials.propTypes = {
     PropTypes.shape({
       quote: PropTypes.node.isRequired,
       author: PropTypes.string.isRequired,
-      img: PropTypes.string.isRequired
+      img: PropTypes.string.isRequired,
     })
-  ).isRequired
+  ).isRequired,
 };
 
 export default function Testimonials({ testimonials }) {
@@ -18,7 +18,7 @@ export default function Testimonials({ testimonials }) {
     <ul className="testimonials">
       {testimonials.map((testimonial, i) => (
         <li key={i} className="testimonial">
-          <img src={testimonial.img} alt={testimonial.author}/>
+          <img src={testimonial.img} alt={testimonial.author} />
           <blockquote>
             {testimonial.quote}
             <cite>{testimonial.author}</cite>

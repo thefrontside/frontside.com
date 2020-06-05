@@ -4,13 +4,7 @@ import css from 'classnames';
 
 import './box.css';
 
-const sizes = [
-  'half',
-  'single',
-  'one-half',
-  'double',
-  'triple'
-];
+const sizes = ['half', 'single', 'one-half', 'double', 'triple'];
 
 Box.propTypes = {
   direction: PropTypes.oneOf(['column', 'row']),
@@ -61,7 +55,7 @@ export default function Box({
         [`margin-top-${margin}`]: !!marginTop,
         [`margin-left-${marginLeft}`]: !!marginLeft,
         [`margin-right-${marginRight}`]: !!marginRight,
-        [`margin-bottom-${marginBottom}`]: !!marginBottom
+        [`margin-bottom-${marginBottom}`]: !!marginBottom,
       })}
       {...props}
     />

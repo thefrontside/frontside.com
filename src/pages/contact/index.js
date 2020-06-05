@@ -2,10 +2,10 @@ import React from 'react';
 import { navigate } from 'gatsby-link';
 import Layout from '../../components/layout';
 import Content from '../../components/content';
-import Text from "../../components/text";
+import Text from '../../components/text';
 import Button, { ButtonGroup } from '../../components/button';
 import TextField from '../../components/text-field';
-import Hero from "../../components/hero";
+import Hero from '../../components/hero';
 
 function encode(data) {
   return Object.keys(data)
@@ -42,16 +42,13 @@ export default class Index extends React.Component {
     return (
       <Layout title="Contact">
         <Hero
-          heading={
-            <Text>
-              What challenges would you like help with today?
+          heading={<Text>What challenges would you like help with today?</Text>}
+          subheading={
+            <Text widows={3}>
+              Tell us what’s on your mind, and we’ll be in touch within 24
+              hours.
             </Text>
           }
-          subheading={(
-            <Text widows={3}>
-              Tell us what’s on your mind, and we’ll be in touch within 24 hours.
-            </Text>
-          )}
         />
         <Content>
           <section>

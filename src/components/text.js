@@ -5,13 +5,13 @@ Text.propTypes = {
   tag: PropTypes.string,
   widows: PropTypes.number,
   component: PropTypes.node,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default function Text({
   tag,
   widows = 2,
-  component:Component = tag || Fragment,
+  component: Component = tag || Fragment,
   children,
   ...props
 }) {
@@ -19,11 +19,9 @@ export default function Text({
 
   return (
     <Component {...props}>
-      {Children.map(children, (child, i) => (
-        (i === childCount - 1)
-          ? widowText(child, widows)
-          : child
-      ))}
+      {Children.map(children, (child, i) =>
+        i === childCount - 1 ? widowText(child, widows) : child
+      )}
     </Component>
   );
 }
@@ -35,9 +33,12 @@ function widowText(text, count) {
     let begin = words.slice(0, safelen).join(' ');
 
     // replace hyphens with non-breaking hyphens
-    let end = words.slice(safelen).map(word => {
-      return word.replace(/-/g, '\u2011');
-    }).join('\u00A0');
+    let end = words
+      .slice(safelen)
+      .map(word => {
+        return word.replace(/-/g, '\u2011');
+      })
+      .join('\u00A0');
 
     return `${begin} ${end}`;
   } else {

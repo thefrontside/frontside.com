@@ -8,22 +8,23 @@ import Content from '../content';
 
 EpisodesList.propTypes = {
   heading: PropTypes.node.isRequired,
-  episodes: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    authors: PropTypes.arrayOf(PropTypes.shape({
+  episodes: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
       slug: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired
-    })).isRequired
-  })).isRequired
+      title: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      authors: PropTypes.arrayOf(
+        PropTypes.shape({
+          slug: PropTypes.string.isRequired,
+          name: PropTypes.string.isRequired,
+        })
+      ).isRequired,
+    })
+  ).isRequired,
 };
 
-export default function EpisodesList({
-  heading,
-  episodes
-}) {
+export default function EpisodesList({ heading, episodes }) {
   return (
     <Content className="episodes-list">
       {heading}
@@ -46,9 +47,7 @@ export default function EpisodesList({
                 ))}
               </span>
 
-              <span className="episodes-list-date">
-                {episode.date}
-              </span>
+              <span className="episodes-list-date">{episode.date}</span>
             </Text>
           </li>
         ))}

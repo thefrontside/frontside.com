@@ -4,10 +4,11 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: "Frontside",
-    description: "Austin-based frontend software engineering and architecture consultancy. We help teams build applications at scale.",
-    siteUrl: "https://frontside.com",
-    image: "https://frontside.com/img/frontside-800.png"
+    title: 'Frontside',
+    description:
+      'Austin-based frontend software engineering and architecture consultancy. We help teams build applications at scale.',
+    siteUrl: 'https://frontside.com',
+    image: 'https://frontside.com/img/frontside-800.png',
   },
   mapping: {
     'MarkdownRemark.fields.authors': 'MarkdownRemark',
@@ -78,7 +79,7 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-header-link`
+            resolve: `gatsby-remark-header-link`,
           },
           {
             resolve: `gatsby-remark-prismjs`,

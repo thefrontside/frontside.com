@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Layout from "../components/layout";
-import Content, { HTMLContent } from "../components/content";
-import Text from "../components/text";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import Content, { HTMLContent } from '../components/content';
+import Text from '../components/text';
 
 const Page = ({ data }) => {
   const { markdownRemark: post } = data;
@@ -19,7 +19,7 @@ const Page = ({ data }) => {
 };
 
 Page.propTypes = {
-  data: PropTypes.object.isRequired
+  data: PropTypes.object.isRequired,
 };
 
 export default Page;
