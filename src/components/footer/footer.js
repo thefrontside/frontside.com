@@ -34,8 +34,7 @@ export default function Footer() {
 
       <address className="vcard footer-address">
         <div className="adr">
-          <div className="street-address">2700 W Anderson Ln</div>
-          <div className="street-address">Suite 205-107</div>
+          <div className="street-address">2301 W Anderson Ln #107</div>
           <span className="locality">Austin</span>,&nbsp;
           <span className="region">Texas</span>&nbsp;
           <span className="postal-code">78757</span>
