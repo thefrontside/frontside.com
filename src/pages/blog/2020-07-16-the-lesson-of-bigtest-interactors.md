@@ -22,7 +22,7 @@ Testing the frontend of complex applications is often associated with nightmaris
 
 As the original author of Capybara, an acceptance test framework written in Ruby which has a reputation of being incredibly solid and resistant to flakiness, I know all about how to avoid random test failures. We have taken all of the lessons learned from tweaking Capybara over years and applied them to build BigTest’s Interactor API—a powerful way of defining interactions with your application which allows you to write tests which are even more solid than what Capybara can provide.
 
-We'll be ready to share more about BigTest soon, but for the moment I want to talk about the overarching approach Frontside takes to eliminate flakiness, and what you need to know to write tests which are rock solid and never fail randomly. While there will be significant gains to the had in using Frontside's BigTest, the principles guiding its development are what I want to talk about here: eliminating ambiguities when writing tests in order to ensure stability. Let's see how BigTest is designed to do just that and then apply those insights to test writing in general.
+We'll be ready to share more about BigTest soon, but for the moment I want to talk about the overarching approach Frontside takes to eliminate flakiness, and what you need to know to write tests which are rock solid and never fail randomly. While there will be significant gains to be had in using Frontside's BigTest, the principles guiding its development are what I want to talk about here: eliminating ambiguities when writing tests in order to ensure stability. Let's see how BigTest is designed to do just that and then apply those insights to test writing in general.
 
 ## The Convergence Strategy
 
