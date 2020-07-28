@@ -140,7 +140,7 @@ We think it’s worth the effort to improve testing, as speedy test suites short
 
 Speed is critical to a healthy testing strategy, but it won't work without the other pillars of the testing triple threat. Next we focus on the second essential make-or-break factor in testing: reliability. Tests can be flaky, but there are strategies you can take now to detect, fix, and even prevent having non-deterministic tests in your application.
 
-Keep on reading, [The Triple Threat to Testing — Part 2: Reliability](2020-triple-threat-to-testing-part-2-reliability/).
+Keep on reading, [The Triple Threat to Testing — Part 2: Reliability](/blog/2020-triple-threat-to-testing-part-2-reliability/).
 
 ---
 
