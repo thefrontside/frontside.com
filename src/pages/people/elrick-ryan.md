@@ -5,5 +5,5 @@ title: Frontside Alumnus
 img: /img/elrick-ryan.jpg
 twitter: elrickvm
 github: elrickvm
-alumnus: true
+alumnus: false
 ---
