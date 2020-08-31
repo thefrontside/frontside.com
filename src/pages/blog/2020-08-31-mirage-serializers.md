@@ -321,7 +321,7 @@ By default, relationships are not resolved for this serializer. However, we can 
 
 If `include` is configured, the records of the related fields in a relationship are also loaded at the top level of the JSON with their type names. In the target object, the reference to that related object is only an `id`. The field name of the relationship will not be suffixed with anything:
 
-```
+```json
 { 
   "blogPosts": [
     {
@@ -340,7 +340,7 @@ If `include` is configured, the records of the related fields in a relationship 
 
 Additionally, you can decide to [configure the `embed` option](https://miragejs.com/api/classes/serializer/#embed) to nest the relationship object instead of having a reference:
 
-```
+```json
 { 
   "blogPosts": [
     {
@@ -394,7 +394,7 @@ If `include` is configured, the records of the related fields in a relationship 
 
 The field name of the relationship will be appended `Id`:
 
-```
+```json
 { 
   "blogPosts": [
     {
@@ -412,7 +412,7 @@ The field name of the relationship will be appended `Id`:
 ```
 Additionally, you can decide to [configure the `embed` option](https://miragejs.com/api/classes/serializer/#embed) to nest the relationship object instead of having a reference:
 
-```
+```json
 { 
   "blogPosts": [
     {
