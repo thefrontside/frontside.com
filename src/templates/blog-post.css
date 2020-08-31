@@ -180,9 +180,30 @@
   padding: var(--space-half);
 }
 
+.blog-post-content tbody td .language-text {
+  font-size: var(--size-small);
+}
+
 .blog-post-content tbody td {
   padding: var(--space-half);
   border-bottom: 1px solid var(--body-color-faded);
+}
+
+.blog-post-content tbody td.row-heading {
+  font-family: var(--font-sans-serif);
+}
+
+.blog-post-content table.blog-cheat-sheet {
+  margin-left: -5%;
+  margin-top: var(--space-double);
+}
+
+.blog-cheat-sheet tr {
+  vertical-align: top;
+}
+
+.blog-cheat-sheet thead tr {
+  vertical-align: bottom;
 }
 
 /* Dark Mode */
