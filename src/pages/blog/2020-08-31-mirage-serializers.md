@@ -58,7 +58,7 @@ this.get("/blog-posts", () => {
 
 However, hand-crafted anything is not a scalable solution, and these sorts of objects become difficult to maintain when your data relies on relationships. 
 
-Instead, we recommend taking advantage of Mirage modeling and [ORM](https://miragejs.com/docs/main-concepts/orm/) capabilities so you can shape your backend in Mirage and seed it with generated data.As the snipped code below illustrates, you can use the seeded models of the database directly from your route handle:
+Instead, we recommend taking advantage of Mirage modeling and [ORM](https://miragejs.com/docs/main-concepts/orm/) capabilities so you can shape your backend in Mirage and seed it with generated data. As the snipped code below illustrates, you can use the seeded models of the database directly from your route handle:
 
 ```js
 this.get("/users", (schema, request) => {
@@ -239,9 +239,9 @@ Alternatively, we can [set the `alwaysIncludeLinkageData` option](https://mirage
 }
 ```
 
-### Field names format: under_scored
+### Field names format: under\_scored
 
-The Active Model Serializer changes the caps to be under_scored no matter how the original model name was configured. As you can see in the example, the attribute names that were inconsistently cased are all under_scored now; for instance, `blogPost_title` becomes `blog_post_title`.
+The Active Model Serializer changes the caps to be under\_scored no matter how the original model name was configured. As you can see in the example, the attribute names that were inconsistently cased are all under\_scored now; for instance, `blogPost_title` becomes `blog_post_title`.
 
 ### Response structure: top level types
 
@@ -293,7 +293,7 @@ Additionally, you can decide to [configure the `embed` option](https://miragejs.
 
 ## Rest Serializer
 
-The Rest Serializer is almost identical to the Active Model Serializer except that it transforms names to camelCase instead of under_score. Let's look at the example output for Rest Serializer:
+The Rest Serializer is almost identical to the Active Model Serializer except that it transforms names to camelCase instead of under\_score. Let's look at the example output for Rest Serializer:
 
 ```json
 {
@@ -486,3 +486,21 @@ Additionally, you can decide to [configure the `embed` option](https://miragejs.
     </tr>
   </tbody>
 </table>
+
+<aside class="posts-list-list">
+  <h2>Related article:</h2>
+  <div class="posts-list-entry">
+    <h3 class="posts-list-title">
+      <a href="/blog/2020-07-29-decoupling-teams-through-simulation/">
+        Beyond Mocking: Decoupling teams through Simulation
+      </a>
+    </h3>
+    <p>
+      Decoupling front-end and mobile teams from the back-end makes organizations more effective. In this article we explain why using simulation is an ideal strategy for this purpose, and present important considerations for adopting such practices.
+    </p>
+    <a href="/blog/2020-07-29-decoupling-teams-through-simulation/" class="post-link">
+      Continue reading
+      <span class="post-link--arrow">→</span>
+    </a>
+  </div>
+</aside>

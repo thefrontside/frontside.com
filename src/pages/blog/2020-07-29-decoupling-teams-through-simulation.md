@@ -105,3 +105,21 @@ But what is often overlooked in that decision is the cost of the solution used i
 Or you could address all these issues in one fell swoop by using a simulator. To be sure, adopting a simulation strategy requires thoughtful considerations and efforts from the team to adopt new practices. But the benefits that flow from decoupling teams through simulation – more effective development cycles and a better directed collaboration – by far outweigh the problems caused by mocks and stubs.
 
 In The Matrix the main character Neo initially doesn’t trust the simulation but eventually comes to recognize the power inherent in using it to achieve his ends. Maybe it’s time for you to “take the red pill” like Neo did and convince your company to do the same. Feel free to [reach out to us](https://frontside.com/contact) if you want help or ideas :) 
+
+<aside class="posts-list-list">
+  <h2>Related article:</h2>
+  <div class="posts-list-entry">
+    <h3 class="posts-list-title">
+      <a href="/blog/2020-08-31-mirage-serializers/">
+        MirageJS: Choosing the right Serializer 
+      </a>
+    </h3>
+    <p>
+      Mirage is a great library for implemnting HTTP simulation. In this blog post, we overview the basics of serializers in Mirage, and examin in detail the specific format of each JSON API, Active Model, Rest and generic serializers.
+    </p>
+    <a href="/blog/2020-08-31-mirage-serializers/" class="post-link">
+      Continue reading
+      <span class="post-link--arrow">→</span>
+    </a>
+  </div>
+</aside>
