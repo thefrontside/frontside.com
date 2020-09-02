@@ -11,13 +11,13 @@ tags:
   - mirage
 img: /img/2020-07-29-mirage-social.png
 ---
-![Beyond Mocking: Decoupling teams through Simulation](/img/2020-07-29-mirage-intro.png)
+![MirageJS logo and printer icons to represent output formats](/img/2020-07-29-mirage-intro.png)
 
 MirageJS is one of the pioneers in enabling frontend developers to use mocks systematically for their tests and development. It was originally built for Ember.js in 2015, but due to its popularity the maintainers created a standalone version compatible with any javascript framework.
 
-Mirage introduces itself as a mocking library, but at Frontside we don't think that's a good enough term to refer to its extensive power. If your application uses a RESTful API, Mirage is a great choice to simulate your backend with high-fidelity outputs. We've used Mirage in several projects to enable frontend developers to keep advancing the UI while the backend is not yet ready. Its flexibility also makes it a perfect test companion compatible with many tools out there, including Cypress.
+Mirage introduces itself as a mocking library, but at Frontside we don't think that's a good enough term to refer to its extensive power. If your application uses a RESTful API (an [adapter for GraphQL](https://github.com/miragejs/graphql) is on the way), Mirage is a great choice to simulate your backend with high-fidelity outputs. We've used Mirage in several projects to enable frontend developers to keep advancing the UI while the backend is not yet ready. Its flexibility also makes it a perfect test companion compatible with many tools out there, including Cypress.
 
-A key element of Mirage that enables it to generate realistic responses lies on its serializer layer. The serializer takes the data stored in Mirage's seeded database and outputs it in the format that you configure for it. For an effective simulation strategy, you want that output format to match exactly your backend API specifications. 
+A key element of Mirage that enables it to generate realistic responses lies on its serializer layer. The serializer takes the data stored in Mirage's seeded database and outputs it in the format that you configure for it. For an effective <a href='/blog/2020-07-29-decoupling-teams-through-simulation/' target='_blank' rel='nofollow noopener'>simulation strategy</a>, you want that output format to match exactly your backend API specifications. 
 
 In this article, we'll explore the four serializers available on Mirage by default. Choosing which one is the right one for you depends on your API formats. There might be a serializer that works with your backend right out of the box or you may have to customize it from a base. After outlining how the serializer layer works in Mirage, we'll dive into the specifics of each one.
 
