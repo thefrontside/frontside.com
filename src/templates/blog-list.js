@@ -31,11 +31,6 @@ export default function BlogPage({
         </div>
       </section>
       <PostsList
-        heading={
-          <>
-            <Text tag="h2">{page === 1 ? 'Blog' : `Blog on page ${page}`}</Text>
-          </>
-        }
         pagination={<Pagination prefix="/blog" page={page} pages={pages} />}
         posts={posts.map(({ node }) => ({
           id: node.id,

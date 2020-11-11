@@ -33,6 +33,14 @@ export default function PostsList({
   pagination = null,
 }) {
   return (
+    <>
+    { (heading) ?
+      <section className="widewrapper herowrapper w-container">
+        <div className="herotext">
+          {heading}
+        </div>
+      </section>
+    : ''}
     <div className="widewrapper column w-container">
       <ul className="entries-list">
         {posts.map(post => (
@@ -62,5 +70,6 @@ export default function PostsList({
       </ul>
       {pagination}
     </div>
+    </>
   );
 }

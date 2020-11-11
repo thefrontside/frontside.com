@@ -14,8 +14,12 @@ class TagRoute extends React.Component {
         <PostsList
           heading={
             <>
-              <Link to="/tags/">Browse all tags</Link>
-              <Text tag="h2">{`Tag: ${tag}`}</Text>
+              <h1 className="heading">
+                Articles tagged with <span className="gradient-text">{tag}</span>
+              </h1>
+              <p className="subheader">
+                <Link to="/tags/">Browse all tags</Link>
+              </p>
             </>
           }
           posts={posts.map(({ node }) => ({
@@ -23,6 +27,7 @@ class TagRoute extends React.Component {
             slug: node.fields.slug,
             title: node.frontmatter.title,
             date: node.frontmatter.date,
+            description: node.frontmatter.description,
             excerpt: node.excerpt,
             authors: node.fields.authors.map(author => ({
               slug: author.fields.slug,
@@ -68,6 +73,7 @@ export const tagPageQuery = graphql`
           frontmatter {
             title
             templateKey
+            description
             date(formatString: "MMMM DD, YYYY")
           }
         }

@@ -194,6 +194,11 @@ input.w-button {
   font-family: "Proxima Nova", sans-serif;
   font-size: 35px;
   line-height: 40px;
+  a {
+    color: var(--body-color-faded);
+    border-bottom: 1px dotted var(--body-color-faded);
+    text-decoration: none;
+  }
 }
 
 .subheader.centered {
