@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import { Link } from 'gatsby';
 
+import Logo from "../../img/plork/fs-logo.svg";
+
 import './navbar.css';
 
 export default class Navbar extends Component {
@@ -39,7 +41,7 @@ export default class Navbar extends Component {
     return (
       <div data-collapse="medium" data-animation="over-right" data-duration="200" data-doc-height="1" data-easing="ease-in-out-circ" data-no-scroll="1" role="banner" className="navbar w-nav">
         <div className="widewrapper w-container">
-          <a href="/" className="w-nav-brand"><img src="images/fs-logo.svg" loading="lazy" width="143.5" alt="Frontside" /></a>
+          <a href="/" className="w-nav-brand"><img src={Logo} loading="lazy" width="143.5" alt="Frontside" /></a>
           <nav role="navigation" className="fullnav w-nav-menu">
             <ul role="list" className="navwrap w-list-unstyled">
               <li className="clase-nav">

@@ -33,6 +33,7 @@ picture {
 }
 
 /* Typography */
+
 h1, h2, h3 {
   line-height: 1.375;
   font-family: var(--font-sans-serif);
@@ -95,4 +96,57 @@ ol {
   width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Webflow general stuff */
+
+.w-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+}
+.w-container:before,
+.w-container:after {
+  content: " ";
+  display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
+}
+.w-container:after {
+  clear: both;
+}
+.w-container .w-row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+@media screen and (max-width: 991px) {
+  .w-container {
+    max-width: 728px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .w-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.w-list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.w-button {
+  display: inline-block;
+  padding: 9px 15px;
+  background-color: #3898EC;
+  color: white;
+  border: 0;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 0;
+}
+input.w-button {
+  -webkit-appearance: button;
 }

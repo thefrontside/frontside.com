@@ -152,57 +152,6 @@
   }
 }
 
-.w-container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 940px;
-}
-.w-container:before,
-.w-container:after {
-  content: " ";
-  display: table;
-  grid-column-start: 1;
-  grid-row-start: 1;
-  grid-column-end: 2;
-  grid-row-end: 2;
-}
-.w-container:after {
-  clear: both;
-}
-.w-container .w-row {
-  margin-left: -10px;
-  margin-right: -10px;
-}
-@media screen and (max-width: 991px) {
-  .w-container {
-    max-width: 728px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .w-container {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-.w-list-unstyled {
-  padding-left: 0;
-  list-style: none;
-}
-.w-button {
-  display: inline-block;
-  padding: 9px 15px;
-  background-color: #3898EC;
-  color: white;
-  border: 0;
-  line-height: inherit;
-  text-decoration: none;
-  cursor: pointer;
-  border-radius: 0;
-}
-input.w-button {
-  -webkit-appearance: button;
-}
-
 /** CUstom stuff **/
 
 .widewrapper {
@@ -231,7 +180,7 @@ input.w-button {
 .navbar {
   padding-bottom: 20px;
   background-color: transparent;
-  font-family: proxima-nova, sans-serif;
+  font-family: "Proxima Nova", sans-serif;
   color: #14315d;
   font-size: 20px;
   line-height: 30px;
