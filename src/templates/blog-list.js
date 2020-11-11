@@ -7,6 +7,8 @@ import Pagination from '../components/pagination';
 import Text from '../components/text';
 import Hero from '../components/hero';
 
+import './blog-list.css';
+
 export default function BlogPage({
   data: {
     allMarkdownRemark: { edges: posts },
@@ -15,14 +17,17 @@ export default function BlogPage({
 }) {
   return (
     <Layout title={page === 1 ? 'Blog' : `Blog - page ${page}`}>
-      <Hero
-        heading={<Text>Our Insights</Text>}
-        subheading={
-          <Text>
-            Paradigms, frameworks, and tools <br /> around robust engineering.
-          </Text>
-        }
-      />
+      <section className="widewrapper herowrapper w-container">
+        <div className="herotext">
+          <h1 className="heading">Sharing <span className="text-span-4">Frontside's</span> latest discoveries</h1>
+          <p className="subheader">
+            Find useful ideas and practical tips on apps engineering through our articles and podcast.
+          </p>
+        </div>
+        <div className="consultingheroimage">
+          <img src="images/consulting-hero2x.png" loading="lazy" sizes="(max-width: 479px) 86vw, (max-width: 767px) 350px, 420px" srcset="images/consulting-hero2x-p-500.png 500w, images/consulting-hero2x.png 837w" alt="" />
+        </div>
+      </section>
       <PostsList
         heading={
           <>
