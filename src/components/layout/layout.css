@@ -172,7 +172,7 @@ input.w-button {
 
 .heading {
   margin-bottom: 34px;
-  color: #14315d;
+  color: var(--color-dark-blue-darkable);
   font-size: 50px;
   line-height: 55px;
   font-weight: 800;
@@ -190,7 +190,7 @@ input.w-button {
 }
 
 .subheader {
-  color: #4f6586;
+  color: var(--body-color-faded);
   font-family: "Proxima Nova", sans-serif;
   font-size: 35px;
   line-height: 40px;
@@ -264,4 +264,36 @@ input.w-button {
   .button.cta {
     font-size: 20px;
   }
+}
+
+@media screen and (max-width: 991px) {
+  .widewrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .widewrapper.herowrapper {
+    margin-top: 40px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .herotext {
+    width: 100%;
+    margin-right: 0px;
+  }
+
 }

@@ -15,6 +15,7 @@ PostsList.propTypes = {
       slug: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
       excerpt: PropTypes.string.isRequired,
       authors: PropTypes.arrayOf(
         PropTypes.shape({
@@ -32,32 +33,34 @@ export default function PostsList({
   pagination = null,
 }) {
   return (
-    <Content className="posts-list">
-      <ul className="posts-list-list">
+    <div className="widewrapper column w-container">
+      <ul className="entries-list">
         {posts.map(post => (
-          <li key={post.id} className="posts-list-entry">
-            <h3 className="posts-list-title">
-              <Link to={post.slug}>{post.title}</Link>
-            </h3>
-            <Text tag="p" className="posts-list-meta">
-              <span className="posts-list-authors">
-                {post.authors.map(author => (
-                  <Link key={author.slug} to={author.slug}>
-                    <Text>{author.name}</Text>
-                  </Link>
-                ))}
-              </span>
+          <li key={post.id} className="colorborderwrapping entrypreview">
+            <dvi className="entry-preview">
+              <h3 className="posts-list-title">
+                <Link to={post.slug}>{post.title}</Link>
+              </h3>
+              <Text tag="p" className="posts-list-meta">
+                <span className="posts-list-authors">
+                  {post.authors.map(author => (
+                    <Link key={author.slug} to={author.slug}>
+                      <Text>{author.name}</Text>
+                    </Link>
+                  ))}
+                </span>
 
-              <span className="posts-list-date">{post.date}</span>
-            </Text>
-            <Text tag="p">{post.excerpt}</Text>
-            <Link to={post.slug} class="post-link">
-              Keep reading <span class="post-link--arrow">→</span>
-            </Link>
+                <span className="posts-list-date">{post.date}</span>
+              </Text>
+              <Text tag="p">{post.description}</Text>
+              <Link to={post.slug} class="post-link">
+                Read more <span class="post-link--arrow">→</span>
+              </Link>
+            </dvi>
           </li>
         ))}
       </ul>
       {pagination}
-    </Content>
+    </div>
   );
 }

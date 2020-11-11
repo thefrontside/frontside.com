@@ -7,6 +7,8 @@ import Pagination from '../components/pagination';
 import Text from '../components/text';
 import Hero from '../components/hero';
 
+import BlogHeroImage from '../img/plork/blog-hero@1.5x.png';
+
 import './blog-list.css';
 
 export default function BlogPage({
@@ -19,13 +21,13 @@ export default function BlogPage({
     <Layout title={page === 1 ? 'Blog' : `Blog - page ${page}`}>
       <section className="widewrapper herowrapper w-container">
         <div className="herotext">
-          <h1 className="heading">Sharing <span className="text-span-4">Frontside's</span> latest discoveries</h1>
+          <h1 className="heading">Sharing <span className="gradient-text">Frontside's</span> latest discoveries</h1>
           <p className="subheader">
             Find useful ideas and practical tips on apps engineering through our articles and podcast.
           </p>
         </div>
         <div className="consultingheroimage">
-          <img src="images/consulting-hero2x.png" loading="lazy" sizes="(max-width: 479px) 86vw, (max-width: 767px) 350px, 420px" srcset="images/consulting-hero2x-p-500.png 500w, images/consulting-hero2x.png 837w" alt="" />
+          <img src={BlogHeroImage} alt="" />
         </div>
       </section>
       <PostsList
@@ -40,6 +42,7 @@ export default function BlogPage({
           slug: node.fields.slug,
           title: node.frontmatter.title,
           date: node.frontmatter.date,
+          description: node.frontmatter.description,
           excerpt: node.excerpt,
           authors: node.fields.authors.map(author => ({
             slug: author.fields.slug,
@@ -89,6 +92,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
+            description
             date(formatString: "MMMM DD, YYYY")
           }
         }

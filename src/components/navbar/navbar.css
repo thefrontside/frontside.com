@@ -165,7 +165,7 @@
   padding-bottom: 20px;
   background-color: transparent;
   font-family: "Proxima Nova", sans-serif;
-  color: #14315d;
+  color: var(--color-dark-blue-darkable);
   font-size: 20px;
   line-height: 30px;
 }
@@ -190,8 +190,8 @@
   margin-right: 0px;
   margin-left: 0px;
   padding: 0px 10px 2px;
-  background-color: #fff;
-  color: #14315d;
+  background-color: var(--body-bg);
+  color: var(--color-dark-blue-darkable);
   font-size: 15px;
   line-height: 34px;
   font-weight: 700;
@@ -202,7 +202,7 @@
 .main-nav-link.w--current {
   margin-bottom: 2px;
   padding: 0px 10px;
-  color: #14315d;
+  color: var(--color-dark-blue-darkable);
   text-transform: none;
   background-clip: border-box;
 }
@@ -299,15 +299,15 @@
   
   .nav-menu {
     width: 100%;
-    background-color: #14315d;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
-    background-image: linear-gradient(180deg, #fff, #fff);
+    background-color: var(--color-dark-blue-darkable);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--body-bg)), to(var(--body-bg)));
+    background-image: linear-gradient(180deg, var(--body-bg), var(--body-bg));
     box-shadow: -2px 4px 3px 4px #f74d7b;
   }
 
   .navlink {
     border-bottom: 1px solid #2f608f;
-    color: #14315d;
+    color: var(--color-dark-blue-darkable);
     font-size: 20px;
     text-align: center;
     text-decoration: none;
@@ -325,16 +325,16 @@
 
 
   .menu-button {
-    color: #14315d;
+    color: var(--color-dark-blue-darkable);
   }
 
   .menu-button.w--open {
     background-color: #2f608f;
-    color: #fff;
+    color: var(--body-bg);
   }
 
   .icon {
-    color: #14315d;
+    color: var(--color-dark-blue-darkable);
   }
 
   .navitem {
@@ -374,7 +374,7 @@
     left: auto;
     top: 40px;
     right: 30px;
-    background-color: #fff;
+    background-color: var(--body-bg);
     text-align: center;
   }
 
@@ -398,7 +398,7 @@
   .fullnav {
     position: fixed;
     z-index: 1000;
-    background-color: #fff;
+    background-color: var(--body-bg);
     background-image: none;
     box-shadow: 1px 1px 100px 50vw rgba(217, 241, 255, 0.5);
   }
