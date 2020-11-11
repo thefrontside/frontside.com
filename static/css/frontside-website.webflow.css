@@ -1472,6 +1472,11 @@
   margin-bottom: 20px;
 }
 
+.image-12 {
+  width: 137px;
+  height: 34px;
+}
+
 @media screen and (max-width: 991px) {
   .widewrapper {
     -webkit-box-orient: horizontal;
