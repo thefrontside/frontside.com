@@ -170,3 +170,26 @@
 .post-link--arrow {
   color: var(--color-dark-blue-darkable);
 }
+
+@media screen and (max-width: 991px) {
+  .entries-list {
+    flex-flow: column;
+  }
+  .widewrapper.post-list-wrapper {
+    display: block;
+  }
+  .colorborderwrapping.entrypreview {
+    width: 100%;
+    max-width: 100%;
+    &:nth-child(even), &:nth-child(odd) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .entry-preview {
+    padding: 20px 20px 20px;
+  }
+}

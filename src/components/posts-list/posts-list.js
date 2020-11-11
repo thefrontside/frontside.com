@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 
 import './posts-list.css';
 import Text from '../text';
-import Content from '../content';
 
 PostsList.propTypes = {
   heading: PropTypes.node,
@@ -41,11 +40,11 @@ export default function PostsList({
         </div>
       </section>
     : ''}
-    <div className="widewrapper column w-container">
+    <div className="widewrapper post-list-wrapper column w-container">
       <ul className="entries-list">
         {posts.map(post => (
           <li key={post.id} className="colorborderwrapping entrypreview">
-            <dvi className="entry-preview">
+            <div className="entry-preview">
               <h3 className="posts-list-title">
                 <Link to={post.slug}>{post.title}</Link>
               </h3>
@@ -61,10 +60,10 @@ export default function PostsList({
                 <span className="posts-list-date">{post.date}</span>
               </Text>
               <Text tag="p">{post.description}</Text>
-              <Link to={post.slug} class="post-link">
-                Read more <span class="post-link--arrow">→</span>
+              <Link to={post.slug} className="post-link">
+                Read more <span className="post-link--arrow">→</span>
               </Link>
-            </dvi>
+            </div>
           </li>
         ))}
       </ul>

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import { Link } from 'gatsby';
-
-import Logo from "../../img/plork/fs-logo.svg";
 
 import './navbar.css';
 
@@ -77,7 +74,12 @@ export default class Navbar extends Component {
           <nav role="navigation" className="fullnav w-nav-menu">
             <ul role="list" className="navwrap w-list-unstyled">
               <li className="clase-nav">
-                <div className="menu-button-2 w-nav-button"><img src="images/hamburger-menu2x.png" loading="lazy" width="33" alt="" className="image-5" /></div>
+                <div className="menu-button-2 w-nav-button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="33" height="17.5" viewBox="0 0 32.63 17" className="image-5">
+                    <path fill="var(--logo-wordmark-color)" d="M7.4,0,0,4.27v8.46L7.4,17l7.34-4.27V4.27ZM7.34,2.82l5,2.89v5.64L7.4,14.18,2.45,11.35V5.71L4.2,4.64" />
+                    <path fill="var(--logo-wordmark-color)" d="M25.29,0,17.88,4.27v8.46L25.29,17l7.34-4.27V4.27Zm-.07,2.82,5,2.89v5.64l-4.89,2.83-5-2.83V5.71l1.76-1.07" />
+                  </svg>
+                </div>
               </li>
               <li className="navitem homelink">
                 <a href="/" className="main-nav-link w-nav-link">Homepage</a>
@@ -100,7 +102,12 @@ export default class Navbar extends Component {
             </ul>
           </nav>
           <a href="#" className="fs-button cta nav w-button">Contact</a>
-          <div className="menu-button-2 w-nav-button"><img src="images/hamburger-menu2x.png" loading="lazy" width="33" alt="" className="image-4" /></div>
+          <div className="menu-button-2 w-nav-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="17.5" viewBox="0 0 32.63 17" className="image-4">
+              <path fill="var(--logo-wordmark-color)" d="M7.4,0,0,4.27v8.46L7.4,17l7.34-4.27V4.27ZM7.34,2.82l5,2.89v5.64L7.4,14.18,2.45,11.35V5.71L4.2,4.64" />
+              <path fill="var(--logo-wordmark-color)" d="M25.29,0,17.88,4.27v8.46L25.29,17l7.34-4.27V4.27Zm-.07,2.82,5,2.89v5.64l-4.89,2.83-5-2.83V5.71l1.76-1.07" />
+            </svg>
+          </div>
         </div>
       </div>
     );

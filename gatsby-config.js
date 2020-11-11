@@ -17,6 +17,22 @@ module.exports = {
     'SimplecastEpisode.fields.authors': 'MarkdownRemark',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: '/js/webflow.js'
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: 'https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f7f19d60c33ef0c409a8bf8',
+        integrity:
+          'sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=',
+        crossorigin: 'anonymous',
+        onload: '!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);'
+      },
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-postcss',

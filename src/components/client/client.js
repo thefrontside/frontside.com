@@ -13,7 +13,7 @@ Client.propTypes = {
 
 export default function Client({ children, company, link, logo }) {
   return (
-    <div class="client">
+    <div className="client">
       <h3>
         {link ? (
           <Link to={link}>

@@ -105,22 +105,6 @@ ol {
   margin-right: auto;
   max-width: 940px;
 }
-.w-container:before,
-.w-container:after {
-  content: " ";
-  display: table;
-  grid-column-start: 1;
-  grid-row-start: 1;
-  grid-column-end: 2;
-  grid-row-end: 2;
-}
-.w-container:after {
-  clear: both;
-}
-.w-container .w-row {
-  margin-left: -10px;
-  margin-right: -10px;
-}
 @media screen and (max-width: 991px) {
   .w-container {
     max-width: 728px;
