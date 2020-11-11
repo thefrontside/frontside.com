@@ -766,6 +766,7 @@
   overflow: hidden;
   width: 100%;
   max-width: 1280px;
+  min-height: 700px;
   margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
@@ -1333,6 +1334,7 @@
 
 .consultingheroimage {
   width: 420px;
+  min-height: 602px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1384,6 +1386,12 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.aboutheroimage {
+  min-height: 500px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .text-span-43 {
@@ -1455,6 +1463,13 @@
 
 .person-info {
   margin-left: 40px;
+}
+
+.toolsheroimage {
+  width: 600px;
+  min-height: 441px;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 991px) {
@@ -1621,6 +1636,7 @@
   }
 
   .home-hero {
+    min-height: auto;
     margin-top: 0px;
     background-size: cover;
   }
@@ -1763,6 +1779,11 @@
     display: none;
   }
 
+  .aboutheroimage {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
   .person-picture {
     width: 300px;
   }
@@ -1894,6 +1915,7 @@
   .consultingheroimage {
     width: 100%;
     max-width: 350px;
+    min-height: auto;
   }
 
   .dialoguequote {
@@ -1909,6 +1931,10 @@
     background-repeat: no-repeat, no-repeat, no-repeat;
   }
 
+  .aboutheroimage {
+    min-height: auto;
+  }
+
   .person-picture {
     width: 100%;
     padding-bottom: 20px;
@@ -1916,6 +1942,11 @@
 
   .person-info {
     margin-left: 0px;
+  }
+
+  .toolsheroimage {
+    width: 100%;
+    min-height: auto;
   }
 }
 
