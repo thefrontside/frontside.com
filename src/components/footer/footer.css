@@ -5,7 +5,7 @@
   padding-bottom: 60px;
   padding-left: 33px;
   font-family: "Proxima Nova", sans-serif;
-  color: #14315d;
+  color: var(--color-dark-blue-darkable);
   font-size: 20px;
   line-height: 30px;
 }
@@ -14,8 +14,8 @@
   margin-right: 20px;
   margin-left: 20px;
   padding: 10px;
-  border-bottom: 1px none #4f6586;
-  color: #14315d;
+  border-bottom: 1px none var(--body-color-faded);
+  color: var(--color-dark-blue-darkable);
   font-size: 18px;
   line-height: 25px;
   letter-spacing: -0.5px;
@@ -58,13 +58,13 @@
   font-size: 15px;
   font-weight: 300;
   text-align: center;
-  color: #14315d;
+  color: var(--color-dark-blue-darkable);
 }
 
 .copyright {
   font-family: "Proxima Nova", sans-serif;
   margin-top: 40px;
-  color: #4f6586;
+  color: var(--body-color-faded);
   font-size: 12px;
   font-weight: 300;
   text-align: center;
