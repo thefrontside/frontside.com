@@ -94,7 +94,7 @@ export default class Navbar extends Component {
                 <a href="/tools" className="main-nav-link w-nav-link">Tools</a>
               </li>
               <li className="navitem">
-                <a href="/blog" aria-current="page" className="main-nav-link w-nav-link w--current">Insights</a>
+                <a href="/blog" aria-current="page" className="main-nav-link gatsby-perma-current w-nav-link">Insights</a>
               </li>
               <li className="navitem contactin">
                 <a href="#" className="fs-button cta nav in w-button">Contact</a>

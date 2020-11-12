@@ -11,7 +11,6 @@ tags:
   - mirage
 img: /img/2020-07-29-mirage-social.png
 ---
-![MirageJS logo and printer icons to represent output formats](/img/2020-07-29-mirage-intro.png)
 
 MirageJS is one of the pioneers in enabling frontend developers to use mocks systematically for their tests and development. It was originally built for Ember.js in 2015, but due to its popularity the maintainers created a standalone version compatible with any javascript framework.
 

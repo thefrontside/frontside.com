@@ -199,7 +199,7 @@
   text-transform: none;
 }
 
-.main-nav-link.w--current {
+.main-nav-link.gatsby-perma-current {
   margin-bottom: 2px;
   padding: 0px 10px;
   color: var(--color-dark-blue-darkable);

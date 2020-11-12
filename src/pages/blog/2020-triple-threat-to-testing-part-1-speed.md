@@ -10,7 +10,6 @@ tags:
   - testing
 img: /img/2020-triple-threat-to-testing-part-1-speed.png
 ---
-![The Triple Threat to Testing — Part 1\:Speed](/img/2020-triple-threat-to-testing-part-1-speed.png)
 
 Writing tests is like paying taxes. And much like how attitudes vary towards paying taxes, attitudes diverge widely in development circles about writing tests. Some people dread paying their taxes; much in the same way as some developers would rather cut off their arm than spend time testing an app. Other people willingly pay their taxes because of the benefits they confer, like drivable roads, health care and national defense. In similar fashion there are those developers that look forward to testing because of the protection in gives against regressions and the confidence it inspires when making changes. You'll even find people who argue that there’s something inherently good in paying taxes and writing tests—a moral obligation if you will.
 
