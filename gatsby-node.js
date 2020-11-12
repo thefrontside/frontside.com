@@ -3,7 +3,7 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 
-const POSTS_PER_PAGE = 10;
+const POSTS_PER_PAGE = 8;
 const getBlogUrl = page => `/blog${page > 1 ? `/${page}` : ''}`;
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {

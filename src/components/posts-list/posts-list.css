@@ -51,21 +51,14 @@
 }
 
 .entry-preview {
-  padding: 40px 60px 60px;
+  padding: 60px;
   border-radius: 16px;
   background-color: var(--body-bg);
 }
 
-
-@media screen and (max-width: 479px) {
-  .colorborderwrapping.entrypreview {
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-  .entry-preview {
-    padding-right: 20px;
-    padding-left: 20px;
-  }
+.entry-preview-image {
+  max-width: 100%;
+  border-radius: 15px;
 }
 
 .posts-list {
@@ -189,7 +182,11 @@
 }
 
 @media screen and (max-width: 479px) {
+  .colorborderwrapping.entrypreview {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
   .entry-preview {
-    padding: 20px 20px 20px;
+    padding: 20px;
   }
 }

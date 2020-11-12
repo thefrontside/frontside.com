@@ -4,8 +4,6 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostsList from '../components/posts-list';
 import Pagination from '../components/pagination';
-import Text from '../components/text';
-import Hero from '../components/hero';
 
 import BlogHeroImage from '../img/plork/blog-hero@1.5x.png';
 
@@ -25,6 +23,14 @@ export default function BlogPage({
           <p className="subheader">
             Find useful ideas and practical tips on apps engineering through our articles and podcast.
           </p>
+          {page > 1 ? (
+            <div class="hero-navigation">
+              <h2 class="hero-navigation-title">
+                Page <em class="hero-navigation-page">{page}</em>
+              </h2>
+              <Pagination prefix="/blog" page={page} pages={pages} />
+            </div>
+          ) : ''}
         </div>
         <div className="consultingheroimage">
           <img src={BlogHeroImage} alt="" />
@@ -39,6 +45,11 @@ export default function BlogPage({
           date: node.frontmatter.date,
           description: node.frontmatter.description,
           excerpt: node.excerpt,
+          image:
+            (node.frontmatter.img == null)
+              ? null
+              : node.frontmatter.img.childImageSharp.resolutions.src
+          ,
           authors: node.fields.authors.map(author => ({
             slug: author.fields.slug,
             name: author.frontmatter.name,
@@ -89,6 +100,13 @@ export const pageQuery = graphql`
             templateKey
             description
             date(formatString: "MMMM DD, YYYY")
+            img {
+              childImageSharp {
+                resolutions(width: 600) {
+                  src
+                }
+              }
+            }
           }
         }
       }

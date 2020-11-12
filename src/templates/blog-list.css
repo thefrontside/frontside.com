@@ -13,3 +13,23 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.widewrapper.post-list-wrapper {
+  display: block;
+}
+
+.hero-navigation {
+  margin-bottom: 20px;
+}
+
+.hero-navigation-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-dark-blue-darkable);
+  margin-bottom: 20px;
+}
+
+.hero-navigation-page {
+  color: var(--color-pink);
+  font-style: normal;
+}
