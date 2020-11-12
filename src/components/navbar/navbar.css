@@ -400,7 +400,7 @@
     z-index: 1000;
     background-color: var(--body-bg);
     background-image: none;
-    box-shadow: 1px 1px 100px 50vw rgba(217, 241, 255, 0.5);
+    box-shadow: 1px 1px 100px 50vw var(--nav-overlay-shadow);
   }
 }
 
