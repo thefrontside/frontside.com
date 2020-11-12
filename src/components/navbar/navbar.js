@@ -72,7 +72,7 @@ export default class Navbar extends Component {
             </svg>
           </a>
           <nav role="navigation" className="fullnav w-nav-menu">
-            <ul role="list" className="navwrap w-list-unstyled">
+            <ul className="navwrap w-list-unstyled">
               <li className="clase-nav">
                 <div className="menu-button-2 w-nav-button">
                   <svg xmlns="http://www.w3.org/2000/svg" width="33" height="17.5" viewBox="0 0 32.63 17" className="image-5">

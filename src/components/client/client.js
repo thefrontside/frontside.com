@@ -17,10 +17,10 @@ export default function Client({ children, company, link, logo }) {
       <h3>
         {link ? (
           <Link to={link}>
-            <img src={logo} alt={company} class="client-logo" />
+            <img src={logo} alt={company} className="client-logo" />
           </Link>
         ) : (
-          <img src={logo} alt={company} class="client-logo" />
+          <img src={logo} alt={company} className="client-logo" />
         )}
       </h3>
       {children}
