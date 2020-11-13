@@ -36,7 +36,7 @@ In this article, we’ll start by exploring why decoupling front-end and mobile 
           <a href='#adopting-a-simulation-strategy'>Adopting a simulation strategy</a>
       </li>
       <li>
-          <a href='#conclusion-2'>Conclusion</a>
+          <a href='#conclusion-3'>Conclusion</a>
       </li>
   </ul>
 </nav>

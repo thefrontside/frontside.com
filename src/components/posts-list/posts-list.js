@@ -46,7 +46,9 @@ export default function PostsList({
             <li key={post.id} className="colorborderwrapping entrypreview">
               <div className="entry-preview">
                 {post.image ? (
-                  <img src={post.image} alt="" className="entry-preview-image" />
+                  <Link to={post.slug}>
+                    <img src={post.image} alt="" className="entry-preview-image" />
+                  </Link>
                 ) : ''}
                 <h3 className="posts-list-title">
                   <Link to={post.slug}>{post.title}</Link>
