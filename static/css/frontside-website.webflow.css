@@ -151,6 +151,11 @@
   opacity: 0.5;
 }
 
+.client-logo.home {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
 .horizontal-logos {
   display: -webkit-box;
   display: -webkit-flex;
@@ -165,9 +170,9 @@
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
@@ -176,7 +181,8 @@
 
 .horizontal-logos.narrow {
   max-width: 744px;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-bottom: 60px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -247,6 +253,21 @@
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #14315d;
+}
+
+.button.cta {
+  display: inline-block;
+  padding-bottom: 10px;
+  background-image: url('../images/decor-button-twist2x.png'), -webkit-gradient(linear, left top, right top, from(#26abe8), to(#f74d7b));
+  background-image: url('../images/decor-button-twist2x.png'), linear-gradient(90deg, #26abe8, #f74d7b);
+  background-position: -15px -15px, 0px 0px;
+  background-size: 317px, auto;
+}
+
+.button.submit {
+  background-color: #14315d;
+  background-image: -webkit-gradient(linear, left top, right top, from(#26abe8), to(#f74d7b));
+  background-image: linear-gradient(90deg, #26abe8, #f74d7b);
 }
 
 .cta-intro {
@@ -783,12 +804,22 @@
   background-repeat: no-repeat;
 }
 
+.home-hero.contact {
+  max-width: 1195px;
+  min-height: 509px;
+  background-image: url('../images/contact-hero1.5x.png');
+  background-position: 50% 50%;
+  background-size: 1110px;
+}
+
 .midwrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   max-width: 1195px;
+  margin-right: auto;
+  margin-left: auto;
   padding-right: 33px;
   padding-left: 33px;
   -webkit-justify-content: space-around;
@@ -977,9 +1008,16 @@
   margin-bottom: 0px;
   padding: 8px 20px;
   float: none;
-  border-radius: 50px;
+  border-radius: 20px;
   font-family: proxima-nova, sans-serif;
   font-size: 20px;
+}
+
+.text-field.textarea {
+  width: 100%;
+  height: 300px;
+  padding-top: 20px;
+  border-radius: 20px;
 }
 
 .form-row {
@@ -987,6 +1025,8 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  margin-bottom: 40px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -1042,7 +1082,7 @@
 }
 
 .form-block {
-  margin-top: 100px;
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -1483,6 +1523,50 @@
   height: 34px;
 }
 
+.paragraph-3 {
+  margin-top: 20px;
+  padding-left: 20px;
+  color: #4f6586;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.success-message-2 {
+  padding: 50px 50px 30px 40px;
+  background-color: transparent;
+  background-image: url('../images/decor-sphere-c-blur-22x.png'), none;
+  background-position: 0% 100%, 100% 0%;
+  background-size: 50px, 70px;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.input-border-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-right: 20px;
+  padding: 2px;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border-radius: 22px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f74d7b), to(#26abe8));
+  background-image: linear-gradient(90deg, #f74d7b, #26abe8);
+}
+
+.thanks-bold-2 {
+  display: block;
+  margin-bottom: 20px;
+  color: #4f6586;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: 991px) {
   .widewrapper {
     -webkit-box-orient: horizontal;
@@ -1541,6 +1625,11 @@
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+  }
+
+  .horizontal-logos.narrow {
+    margin-top: 20px;
+    margin-bottom: 60px;
   }
 
   .button.cta.nav {
@@ -2012,6 +2101,10 @@
     display: block;
   }
 
+  .button.cta {
+    font-size: 20px;
+  }
+
   .cta-intro {
     font-size: 20px;
     line-height: 25px;
@@ -2176,6 +2269,16 @@
     padding-top: 20px;
     background-position: 50% 100%, 0% 20%, 50% 0%;
     background-size: 100%, 29px, 60px;
+  }
+
+  .paragraph-3 {
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .input-border-2 {
+    margin-right: 0px;
+    margin-bottom: 10px;
   }
 }
 

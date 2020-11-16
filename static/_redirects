@@ -16,6 +16,8 @@
 /consulting.html /consulting 302
 /services /consulting 307
 /tools.html /tools 307
+/contact.html /contact 307
+/contact/thanks.html /contact/thanks 307
 
 /about/:name  /people/:name 302
 
