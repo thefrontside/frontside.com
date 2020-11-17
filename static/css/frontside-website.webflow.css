@@ -2231,7 +2231,9 @@
 
   .home-hero.contact {
     min-height: auto;
-    background-position: 50% -50%;
+    padding-top: 0px;
+    background-position: 50% -80px;
+    background-size: auto 140px;
   }
 
   .midwrapper.wedontapps {
