@@ -1920,6 +1920,14 @@
     margin-bottom: 20px;
   }
 
+  .tools-list-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   .person-picture {
     width: 300px;
   }
