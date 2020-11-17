@@ -92,6 +92,11 @@
   text-align: center;
 }
 
+.subheader.centered.narrow {
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
 .herotext {
   width: 47.6%;
   margin-right: 60px;
@@ -1600,6 +1605,11 @@
     box-shadow: -2px 4px 3px 4px #f74d7b;
   }
 
+  .subheader.centered.narrow {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
   .herotext {
     width: 100%;
     margin-right: 0px;
@@ -1770,13 +1780,39 @@
     margin-bottom: 20px;
   }
 
+  .text-field {
+    width: 100%;
+  }
+
   .form-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 0px;
     margin-left: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .bigtesthero {
     background-position: 50% 100%;
     background-size: 100%;
+  }
+
+  .form-block {
+    width: 100%;
+  }
+
+  .form {
+    width: 100%;
   }
 
   .paragraphimage {
@@ -1887,6 +1923,10 @@
   .person-picture {
     width: 300px;
   }
+
+  .input-border-2 {
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1986,8 +2026,15 @@
     background-size: cover;
   }
 
+  .home-hero.contact {
+    padding-right: 20px;
+    padding-left: 20px;
+    background-position: 50% -55%;
+    background-size: 100%;
+  }
+
   .text-field {
-    width: 300px;
+    width: 100%;
   }
 
   .longtextwrapper {
@@ -2172,6 +2219,11 @@
 
   .home-hero {
     padding-top: 0px;
+  }
+
+  .home-hero.contact {
+    min-height: auto;
+    background-position: 50% -50%;
   }
 
   .midwrapper.wedontapps {
