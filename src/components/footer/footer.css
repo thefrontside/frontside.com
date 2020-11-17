@@ -4,7 +4,7 @@
   padding-right: 33px;
   padding-bottom: 60px;
   padding-left: 33px;
-  font-family: "Proxima Nova", sans-serif;
+  font-family: proxima-nova, sans-serif;
   color: var(--color-dark-blue-darkable);
   font-size: 20px;
   line-height: 30px;
@@ -54,7 +54,7 @@
 }
 
 .footer-notes {
-  font-family: "Proxima Nova", sans-serif;
+  font-family: proxima-nova, sans-serif;
   font-size: 15px;
   font-weight: 300;
   text-align: center;
@@ -62,7 +62,7 @@
 }
 
 .copyright {
-  font-family: "Proxima Nova", sans-serif;
+  font-family: proxima-nova, sans-serif;
   margin-top: 40px;
   color: var(--body-color-faded);
   font-size: 12px;

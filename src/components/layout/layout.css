@@ -1,4 +1,4 @@
-@import '../fonts';
+/* @import '../fonts'; */
 @import '../variables';
 
 /* Default document styles */
@@ -174,7 +174,7 @@ input.w-button {
 
 .subheader {
   color: var(--body-color-faded);
-  font-family: "Proxima Nova", sans-serif;
+  font-family: proxima-nova, sans-serif;
   font-size: 35px;
   line-height: 40px;
   a {

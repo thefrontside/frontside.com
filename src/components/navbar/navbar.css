@@ -164,7 +164,7 @@
 .navbar {
   padding-bottom: 20px;
   background-color: transparent;
-  font-family: "Proxima Nova", sans-serif;
+  font-family: proxima-nova, sans-serif;
   color: var(--color-dark-blue-darkable);
   font-size: 20px;
   line-height: 30px;

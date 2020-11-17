@@ -1,6 +1,6 @@
 :root {
   /* Font Stack */
-  --font-sans-serif: "Proxima Nova", "Helvetica", sans-serif;
+  --font-sans-serif: proxima-nova, "Helvetica", sans-serif;
   --font-serif: "Georgia", "Times", "Times New Roman", serif;
 
   /* Brand Colors */
