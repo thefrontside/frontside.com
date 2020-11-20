@@ -113,7 +113,7 @@ In The Matrix the main character Neo initially doesn’t trust the simulation bu
       </a>
     </h3>
     <p>
-      Mirage is a great library for implemnting HTTP simulation. In this blog post, we overview the basics of serializers in Mirage, and examin in detail the specific format of each JSON API, Active Model, Rest and generic serializers.
+      Mirage is a great library for implemnting HTTP simulation. In this blog post, we overview the basics of serializers in Mirage, and examine in detail the specific format of each JSON API, Active Model, Rest and generic serializers.
     </p>
     <a href="/blog/2020-08-31-mirage-serializers/" class="post-link">
       Continue reading

@@ -5,7 +5,7 @@ title: >-
 date: 2020-08-31T05:00:00.000Z
 author: Min Kim, Jorge Lainfiesta
 description: >-
-  MirageJS ships with four out-of-the-box serializers. In this blog post, we overview the basics of serializers in Mirage, and examin in detail the specific format of each JSON API, Active Model, Rest and generic serializers.
+  MirageJS ships with four out-of-the-box serializers. In this blog post, we overview the basics of serializers in Mirage, and examine in detail the specific format of each JSON API, Active Model, Rest and generic serializers.
 tags:
   - simulation
   - mirage
