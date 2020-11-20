@@ -15,7 +15,7 @@ cta_text: >-
   support services that will fast-track your foundations in practical 
   functional programming for JavaScript.		
 cta_button: "Let's talk!"
-img: /img/2018-09-18-four-reasons-to-use-append-instead-of-object-assign-and-object-spread_merge-sign.jpg
+img: /img/2018-09-18-four-reasons-to-use-append-instead-of-object-assign-and-object-spread_merge-sign.png
 ---
 
 > Warning! This post was manufactured in a facility that also processes Monoids and may contain traces of functional programming.

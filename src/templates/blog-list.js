@@ -4,8 +4,10 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostsList from '../components/posts-list';
 import Pagination from '../components/pagination';
-import Text from '../components/text';
-import Hero from '../components/hero';
+
+import BlogHeroImage from '../img/plork/blog-hero@1.5x.png';
+
+import './blog-list.css';
 
 export default function BlogPage({
   data: {
@@ -15,27 +17,39 @@ export default function BlogPage({
 }) {
   return (
     <Layout title={page === 1 ? 'Blog' : `Blog - page ${page}`}>
-      <Hero
-        heading={<Text>Our Insights</Text>}
-        subheading={
-          <Text>
-            Paradigms, frameworks, and tools <br /> around robust engineering.
-          </Text>
-        }
-      />
+      <section className="widewrapper herowrapper w-container">
+        <div className="herotext">
+          <h1 className="heading">Sharing <span className="gradient-text">Frontside's</span> latest discoveries</h1>
+          <p className="subheader">
+            Find useful ideas and practical tips on apps engineering through our articles and podcast.
+          </p>
+          {page > 1 ? (
+            <div class="hero-navigation">
+              <h2 class="hero-navigation-title">
+                Page <em class="hero-navigation-page">{page}</em>
+              </h2>
+              <Pagination prefix="/blog" page={page} pages={pages} />
+            </div>
+          ) : ''}
+        </div>
+        <div className="consultingheroimage">
+          <img src={BlogHeroImage} alt="" />
+        </div>
+      </section>
       <PostsList
-        heading={
-          <>
-            <Text tag="h2">{page === 1 ? 'Blog' : `Blog on page ${page}`}</Text>
-          </>
-        }
         pagination={<Pagination prefix="/blog" page={page} pages={pages} />}
         posts={posts.map(({ node }) => ({
           id: node.id,
           slug: node.fields.slug,
           title: node.frontmatter.title,
           date: node.frontmatter.date,
+          description: node.frontmatter.description,
           excerpt: node.excerpt,
+          image:
+            (node.frontmatter.img == null)
+              ? null
+              : node.frontmatter.img.childImageSharp.resolutions.src
+          ,
           authors: node.fields.authors.map(author => ({
             slug: author.fields.slug,
             name: author.frontmatter.name,
@@ -84,7 +98,15 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
+            description
             date(formatString: "MMMM DD, YYYY")
+            img {
+              childImageSharp {
+                resolutions(width: 600) {
+                  src
+                }
+              }
+            }
           }
         }
       }

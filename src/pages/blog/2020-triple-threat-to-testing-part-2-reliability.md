@@ -10,8 +10,6 @@ tags:
   - testing
 img: /img/2020-triple-threat-to-testing-part-2-reliability-social.png
 ---
-![The Triple Threat to Testing — Part 2\: Reliability](/img/2020-triple-threat-to-testing-part-2-reliability-intro.png)
-
 
 Imagine you have agreed to carpool with a friend. The first couple of weeks it’s all good: you go to their place to pick them up, the next time they pick you up. But one day you’re waiting in front of your building and it’s getting late. You decide to call your friend and hear them say: “Oh, I’ve been waiting too. I thought it was your turn.” You’re both frustrated with each other, and if this happens a few more times, you know you’ll drop carpooling entirely. But since you want to reduce your carbon footprint, you come up with solutions to try to make it work. Perhaps you set up a shared calendar, or create alarms on each other’s phones, or create a text message strategy. Even if your strategies aren’t foolproof, there are actionable steps you can take to significantly increase the reliability of your carpooling partner.
 

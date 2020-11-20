@@ -1,45 +1,12 @@
-import React, { Component } from 'react';
-import { CSSTransition } from 'react-transition-group';
-import { Link } from 'gatsby';
-import css from 'classnames';
+import React from 'react';
 
 import './navbar.css';
 
-export default class Navbar extends Component {
-  $nav = React.createRef();
-
-  state = {
-    isMenuActive: false,
-  };
-
-  componentDidMount() {
-    // ensure body is not locked on remount
-    document.body.classList.remove('is-locked');
-  }
-
-  toggleMenu(isMenuActive = !this.state.isMenuActive) {
-    this.setState({ isMenuActive }, () => {
-      // ensure the nav is in view and lock the body scroll position
-      if (isMenuActive) {
-        this.$nav.current.scrollIntoView();
-        document.body.classList.add('is-locked');
-      } else {
-        document.body.classList.remove('is-locked');
-      }
-    });
-  }
-
-  handleToggle = e => {
-    e.preventDefault();
-    this.toggleMenu();
-  };
-
-  render() {
-    let { isMenuActive } = this.state;
-
-    return (
-      <nav className="navbar" ref={this.$nav}>
-        <Link to="/" className="navbar-logo">
+const Navbar = () => {
+  return (
+    <div data-collapse="medium" data-animation="over-right" data-duration="200" data-doc-height="1" data-easing="ease-in-out-circ" data-no-scroll="1" role="banner" className="navbar w-nav">
+      <div className="widewrapper w-container">
+        <a href="/" className="w-nav-brand">
           <svg
             width="137"
             height="34"
@@ -71,43 +38,47 @@ export default class Navbar extends Component {
               </g>
             </g>
           </svg>
-        </Link>
-
-        <button
-          onClick={this.handleToggle}
-          className={css('navbar-menu-toggle', {
-            'is-active': isMenuActive,
-          })}
-        >
-          <span className="visually-hidden">Menu</span>
-        </button>
-
-        <CSSTransition
-          timeout={300}
-          in={isMenuActive}
-          classNames={{
-            enter: 'is-active-enter',
-            enterActive: 'is-active',
-            enterDone: 'is-active',
-            exit: 'is-active-exit',
-          }}
-        >
-          <ul className="navbar-menu">
-            <li>
-              <Link to="/about">About</Link>
+        </a>
+        <nav role="navigation" className="fullnav w-nav-menu">
+          <ul className="navwrap w-list-unstyled">
+            <li className="clase-nav">
+              <div className="menu-button-2 w-nav-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="17.5" viewBox="0 0 32.63 17" className="image-5">
+                  <path fill="var(--logo-wordmark-color)" d="M7.4,0,0,4.27v8.46L7.4,17l7.34-4.27V4.27ZM7.34,2.82l5,2.89v5.64L7.4,14.18,2.45,11.35V5.71L4.2,4.64" />
+                  <path fill="var(--logo-wordmark-color)" d="M25.29,0,17.88,4.27v8.46L25.29,17l7.34-4.27V4.27Zm-.07,2.82,5,2.89v5.64l-4.89,2.83-5-2.83V5.71l1.76-1.07" />
+                </svg>
+              </div>
             </li>
-            <li>
-              <Link to="/services">Services</Link>
+            <li className="navitem homelink">
+              <a href="/" className="main-nav-link w-nav-link">Homepage</a>
             </li>
-            <li>
-              <Link to="/blog">Blog</Link>
+            <li className="navitem">
+              <a href="/about" className="main-nav-link w-nav-link">People</a>
             </li>
-            <li>
-              <Link to="/contact">Contact</Link>
+            <li className="navitem">
+              <a href="/consulting" className="main-nav-link w-nav-link">Consulting</a>
+            </li>
+            <li className="navitem">
+              <a href="/tools" className="main-nav-link w-nav-link">Tools</a>
+            </li>
+            <li className="navitem">
+              <a href="/blog" aria-current="page" className="main-nav-link gatsby-perma-current w-nav-link">Insights</a>
+            </li>
+            <li className="navitem contactin">
+              <a href="/contact" className="fs-button cta nav in w-button">Contact</a>
             </li>
           </ul>
-        </CSSTransition>
-      </nav>
-    );
-  }
-}
+        </nav>
+        <a href="/contact" className="fs-button cta nav w-button">Contact</a>
+        <div className="menu-button-2 w-nav-button">
+          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="17.5" viewBox="0 0 32.63 17" className="image-4">
+            <path fill="var(--logo-wordmark-color)" d="M7.4,0,0,4.27v8.46L7.4,17l7.34-4.27V4.27ZM7.34,2.82l5,2.89v5.64L7.4,14.18,2.45,11.35V5.71L4.2,4.64" />
+            <path fill="var(--logo-wordmark-color)" d="M25.29,0,17.88,4.27v8.46L25.29,17l7.34-4.27V4.27Zm-.07,2.82,5,2.89v5.64l-4.89,2.83-5-2.83V5.71l1.76-1.07" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  )
+};
+
+export default Navbar;

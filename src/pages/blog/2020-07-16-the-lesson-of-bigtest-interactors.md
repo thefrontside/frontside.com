@@ -11,8 +11,6 @@ tags:
   - bigtest
 img: /img/2020-07-16-interactors-social.png
 ---
-![Gihub Actions: a deep dive into pull_request](/img/2020-07-16-interactors-intro.png)
-
 
 <aside class="blog-post--saga-box">
 Jonas Nicklas is the original author of <a href="https://github.com/teamcapybara/capybara" target="_blank" rel="nofollow">Capybara</a>, Ruby’s most popular framework for testing web applications. He is based in Sweden and has been working on BigTest since 2019

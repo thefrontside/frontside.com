@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 
 import './posts-list.css';
 import Text from '../text';
-import Content from '../content';
 
 PostsList.propTypes = {
   heading: PropTypes.node,
@@ -15,6 +14,7 @@ PostsList.propTypes = {
       slug: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       date: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
       excerpt: PropTypes.string.isRequired,
       authors: PropTypes.arrayOf(
         PropTypes.shape({
@@ -32,32 +32,53 @@ export default function PostsList({
   pagination = null,
 }) {
   return (
-    <Content className="posts-list">
-      <ul className="posts-list-list">
-        {posts.map(post => (
-          <li key={post.id} className="posts-list-entry">
-            <h3 className="posts-list-title">
-              <Link to={post.slug}>{post.title}</Link>
-            </h3>
-            <Text tag="p" className="posts-list-meta">
-              <span className="posts-list-authors">
-                {post.authors.map(author => (
-                  <Link key={author.slug} to={author.slug}>
-                    <Text>{author.name}</Text>
+    <>
+      { (heading) ?
+        <section className="widewrapper herowrapper w-container">
+          <div className="herotext">
+            {heading}
+          </div>
+        </section>
+        : ''}
+      <div className="widewrapper post-list-wrapper column w-container">
+        <ul className="entries-list">
+          {posts.map(post => (
+            <li key={post.id} className="colorborderwrapping entrypreview">
+              <div className="entry-preview">
+                {post.image ? (
+                  <Link to={post.slug}>
+                    <img src={post.image} alt="" className="entry-preview-image" />
                   </Link>
-                ))}
-              </span>
+                ) : ''}
+                <h3 className="posts-list-title">
+                  <Link to={post.slug}>{post.title}</Link>
+                </h3>
+                <Text tag="p" className="posts-list-meta">
+                  <span className="posts-list-authors">
+                    {post.authors.map((author, i) => (
+                      <>
+                        {i === 0 ? '' : ((post.authors.length) > 2 ? ', ' : ' and ')}
+                        {/* Author links will lead to team member page, which is currently pending. */}
+                        {/* <Link key={author.slug} to={author.slug}>
+                <Text>{author.name}</Text>
+              </Link> */}
+                        <Text key={author.slug} >{author.name}</Text>
+                      </>
+                    ))}
+                  </span>
 
-              <span className="posts-list-date">{post.date}</span>
-            </Text>
-            <Text tag="p">{post.excerpt}</Text>
-            <Link to={post.slug} class="post-link">
-              Keep reading <span class="post-link--arrow">→</span>
-            </Link>
-          </li>
-        ))}
-      </ul>
-      {pagination}
-    </Content>
+                  <span className="posts-list-date">{post.date}</span>
+                </Text>
+                <Text tag="p">{post.description}</Text>
+                <Link to={post.slug} className="post-link">
+                  Read more <span className="post-link--arrow">→</span>
+                </Link>
+              </div>
+            </li>
+          ))}
+        </ul>
+        {pagination}
+      </div>
+    </>
   );
 }

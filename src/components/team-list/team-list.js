@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './team-list.css';
 
 // needed to override default inline style
@@ -42,7 +40,7 @@ export default function TeamList({ people }) {
             </h3>
             <p>{person.intro}</p>
             <Link className="team-member--more" to={person.slug}>
-              Know more <FontAwesomeIcon icon={faArrowRight} />
+              Know more
             </Link>
           </div>
         </li>

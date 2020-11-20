@@ -11,7 +11,6 @@ tags:
   - simulation
 img: /img/2019-12-11-case-study-bluetooth-simulation.png
 ---
-![BlEmulator: an open source cross-platform bluetooth simulator](/img/2019-12-11-case-study-bluetooth-simulation.png)
 
 Today Bluetooth is among the most widely adopted wireless communication technologies, and the popularity of Bluetooth enabled devices shows no signs of warning. With an anticipated annual growth rate of 8% through 2023 [1], it’s no surprise that more organizations than ever before are developing software to connect to and communicate over Bluetooth.
 

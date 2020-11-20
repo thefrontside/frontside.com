@@ -1,6 +1,6 @@
 :root {
   /* Font Stack */
-  --font-sans-serif: "Proxima Nova", "Helvetica", sans-serif;
+  --font-sans-serif: proxima-nova, "Helvetica", sans-serif;
   --font-serif: "Georgia", "Times", "Times New Roman", serif;
 
   /* Brand Colors */
@@ -19,8 +19,9 @@
   /* Light Mode */
   --body-bg: #fff;
   --body-color: #444;
-  --body-color-faded: #888;
+  --body-color-faded: #4f6586;
   --logo-wordmark-color: var(--color-dark-blue);
+  --nav-overlay-shadow: rgba(217, 241, 255, 0.5);
 
   --rgba-light-blue: 38, 171, 232;
 
@@ -112,5 +113,6 @@
     --logo-wordmark-color: #fff;
     --color-dark-blue-darkable: #ffffff;
     --input-color: #ffffff;
+    --nav-overlay-shadow: rgba(0, 0, 0, 0.6);
   }
 }

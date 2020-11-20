@@ -9,7 +9,6 @@ tags:
   - best-practices
 img: /img/2020-7-reasons-for-good-pull-request-descriptions-social.png
 ---
-![7 reasons to write good Pull Request descriptions](2020-7-reasons-for-good-pull-request-descriptions-intro.png)
 
 In large open-source projects writing a good description in a Pull Request (PR) can be the difference between your changes being merged or ignored. These projects essentially necessitate the creation of PR descriptions, as development practices are strictly enforced by tooling and the culture of collaboration. These practices dramatically help improve the quality of the overall project.
 
@@ -30,7 +29,7 @@ By definition, a Pull Request is a proposal to change code in a particular way. 
 ## 2. Descriptions prevent unnecessary code
 Every line of code increases your organization’s liability. Even your best code will become someone’s WTF moment. Think back to the last time that you swore at a piece of code, and moments later realize that you are the author. The best PRs remove source code. The second best are those that never get merged because they turn out to be unnecessary. But without a description such unmerged PRs are likely never to happen, resulting in code that is heavier than it needs to be.
 
-For example, suppose you want to introduce an abstraction to the code that already exists but you were not aware of. You’d be introducing unnecessary complexity by adding a code path for something that already exists in the source code. If you don’t write a pull request description that explains what your abstraction does, you’ll miss out on the opportunity to learn that a similar abstraction already exists. Even a few un-merged pull requests per quarter can add up to a lot of code that you don’t need to worry about and maintain down the line. 
+For example, suppose you want to introduce an abstraction to the code that already exists but you were not aware of. You’d be introducing unnecessary complexity by adding a code path for something that already exists in the source code. If you don’t write a pull request description that explains what your abstraction does, you’ll miss out on the opportunity to learn that a similar abstraction already exists. Even a few un-merged pull requests per quarter can add up to a lot of code that you don’t need to worry about and maintain down the line.
 
 ## 3. Descriptions identify the right change increment
 All programmers strive to write great code, but often this leads to making (a lot) more changes in a single Pull Request than originally intended. If you think this doesn’t apply to you, try making a bullet point list of all of the changes that you introduced in a recent Pull Request. You’ll quickly find that you made numerous changes after running across mixed whitespaces, improperly formatted blocks of code, or a missing null check that were not relevant to the main concern of your PR.
@@ -51,7 +50,7 @@ Code reviews reduce the number of incomplete, poorly tested, and incorrect chang
 
 Most changes require some kind of research. You might have found a solution on StackOverflow, a blog post, or in the documentation. To get the answer, you would have to read a bunch of sources, match an approach to your problem, attempt the solution, and observe the result. This process is enlightening but also time-consuming. It’s important therefore to document your thinking in case someone else has to recreate it, but also because everyone can learn from it. 
 
-When you’re writing a PR description, all of this learning is fresh in your mind. It’s the best time to synthesize what you learned and share it with your team without the overhead of writing a blog post. Including lessons learned in your PR description will allow you to better remember the information that you learned and highlight what you learn for others on your team to benefit. 
+When you’re writing a PR description, all of this learning is fresh in your mind. It’s the best time to synthesize what you learned and share it with your team without the overhead of writing a blog post. Including lessons learned in your PR description will allow you to better remember the information that you learned and highlight what you learn for others on your team to benefit.
 
 ## 7. Descriptions make you invaluable
 

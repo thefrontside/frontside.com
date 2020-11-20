@@ -11,8 +11,6 @@ tags:
   - best-practices
 img: /img/2020-07-29-simulator-social.png
 ---
-![Beyond Mocking: Decoupling teams through Simulation](/img/2020-07-29-simulator-intro.png)
-
 
 Working across teams is challenging. It gets especially tricky when one team depends on another to make progress on their own tasks. For instance, take an all-time classic: the front-end team needs the back-end team to provide them with APIs to advance the UI. Both parts are working towards a common goal, but their dependency may create tensions and frustration, which compromise the quality they would otherwise deliver.
 
@@ -38,7 +36,7 @@ In this article, we’ll start by exploring why decoupling front-end and mobile 
           <a href='#adopting-a-simulation-strategy'>Adopting a simulation strategy</a>
       </li>
       <li>
-          <a href='#conclusion-2'>Conclusion</a>
+          <a href='#conclusion-3'>Conclusion</a>
       </li>
   </ul>
 </nav>

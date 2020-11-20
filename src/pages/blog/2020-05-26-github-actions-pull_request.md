@@ -11,7 +11,6 @@ tags:
   - continuous-delivery
 img: /img/2020-05-26-github-actions-pull_request-social-media.png
 ---
-![Gihub Actions: a deep dive into pull_request](/img/2020-05-26-github-actions-pull_request-intro.png)
 
 Github Actions is an exciting feature that enables teams to construct workflows based on webhook events. It unlocks new possibilities for teams that neatly integrate it into their development flow.
 

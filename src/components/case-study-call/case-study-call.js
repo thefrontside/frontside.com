@@ -3,9 +3,6 @@ import { Link } from 'gatsby';
 import './case-study-call.css';
 import bluetoothSimulationImage from '../../img/case-study-cta.png';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-
 export default function Footer() {
   return (
     <section className="case-study-call">
@@ -26,7 +23,7 @@ export default function Footer() {
           className="case-study-call--link"
           to="/blog/2019-12-11-case-study-bluetooth-simulation/"
         >
-          Read more <FontAwesomeIcon icon={faArrowRight} />
+          Read more
         </Link>
       </content>
       <aside>
