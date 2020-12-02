@@ -33,6 +33,7 @@
 /blog/tags/tvos/ /tags 302
 /blog/2014/09/21/reactive-modeling-with-ember.html /blog 302
 /blog/2014/03/06/a-sprinkling-of-ember.html /blog 302
+/blog/2017-12-22-frontside-forecast-the-growing-importance-of-blockchains /blog 302
 
 /blog/:year/:month/:day/:slug    /blog/:year-:month-:day-:slug   302
 /blog/tags/:slug  /tags/:slug 302
@@ -60,3 +61,4 @@
 /podcast/004-emberconf-recap /podcast/004-ember-conf-recap 302
 
 /people /about 302
+/people/arash-zafarnia /about 302
