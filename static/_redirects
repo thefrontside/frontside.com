@@ -14,10 +14,10 @@
 /about.html /about 302
 /people /about 302
 /consulting.html /consulting 302
-/services /consulting 307
-/tools.html /tools 307
-/contact.html /contact 307
-/contact-thanks.html /contact-thanks 307
+/services /consulting 302
+/tools.html /tools 302
+/contact.html /contact 302
+/contact-thanks.html /contact-thanks 302
 
 /about/:name  /people/:name 302
 
