@@ -1572,6 +1572,11 @@
   text-transform: uppercase;
 }
 
+.article-preview {
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 991px) {
   .widewrapper {
     -webkit-box-orient: horizontal;

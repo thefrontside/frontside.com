@@ -54,24 +54,49 @@ export default function PostsList({
                   <Link to={post.slug}>{post.title}</Link>
                 </h3>
                 <Text tag="p" className="posts-list-meta">
-                  <span className="posts-list-authors">
-                    {post.authors.map((author, i) => (
-                      <>
-                        {i === 0 ? '' : ((post.authors.length) > 2 ? ', ' : ' and ')}
-                        {/* Author links will lead to team member page, which is currently pending. */}
-                        {/* <Link key={author.slug} to={author.slug}>
-                <Text>{author.name}</Text>
-              </Link> */}
-                        <Text key={author.slug} >{author.name}</Text>
-                      </>
-                    ))}
-                  </span>
+                {(!post.fromPodcast) ? (
+                    <>
+                      <span className="posts-list-authors">
+                        {post.authors.map((author, i) => (
+                          <>
+                            {i === 0 ? '' : ((post.authors.length) > 2 ? ', ' : ' and ')}
+                            {/* Author links will lead to team member page, which is currently pending. */}
+                            {/* <Link key={author.slug} to={author.slug}>
+                                  <Text>{author.name}</Text>
+                                </Link>
+                            */}
+                            <Text key={author.slug} >{author.name}</Text>
+                          </>
+                        ))}
+                      </span>
 
-                  <span className="posts-list-date">{post.date}</span>
+                      <span className="posts-list-date">
+                        {post.date}
+                      </span>
+                    </>
+                  ): (
+                    <>
+                      Podcast, hosted by {post.authors.map((author, i) => (
+                          <>
+                            <Text key={author.slug} >{author.name}</Text>
+                          </>
+                        ))}
+                    </>
+                  )}
+                  
                 </Text>
                 <Text tag="p">{post.description}</Text>
                 <Link to={post.slug} className="post-link">
-                  Read more <span className="post-link--arrow">→</span>
+                  {(!post.fromPodcast) ? (
+                    <>
+                      Read article <span className="post-link--arrow">→</span>
+                    </>
+                  ): (
+                    <>
+                      Listen to episode <span className="post-link--arrow">→</span>
+                    </>
+                  )}
+                  
                 </Link>
               </div>
             </li>
