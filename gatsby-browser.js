@@ -1,5 +1,3 @@
-const React = require("react")
-
 exports.onInitialClientRender = () => {
     const jQScript = document.createElement('script');
     jQScript.src = "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5f7f19d60c33ef0c409a8bf8";

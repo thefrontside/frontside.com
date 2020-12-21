@@ -12,7 +12,8 @@ export default function Footer() {
         <a href="/about" className="footerlink">About</a>
         <a href="/consulting" className="footerlink">Consulting</a>
         <a href="/tools" className="footerlink">Tools</a>
-        <a href="/blog" aria-current="page" className="footerlink w--current">Insights</a>
+        <a href="/blog" className="footerlink">Blog</a>
+        <a href="/podcast" className="footerlink">Podcast</a>
         <a href="/contact" className="footerlink">Contact</a>
       </nav>
       <a href="/" className="footer-symbol"><img src={FSIcon} width="32.5" alt="" className="image-6" /></a>
