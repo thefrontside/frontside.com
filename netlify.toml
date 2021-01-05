@@ -7,14 +7,8 @@
   YARN_FLAGS = "--no-ignore-optional"
 
 [[redirects]]
-  from = "/bigtest"
-  to = "https://bigtest.netlify.app/"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/bigtest/*"
-  to = "https://bigtest.netlify.app/:splat"
+  to = "https://bigtest.netlify.app/bigtest/:splat"
   status = 200
   force = true
 
