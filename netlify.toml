@@ -7,6 +7,12 @@
   YARN_FLAGS = "--no-ignore-optional"
 
 [[redirects]]
+  from = "/bigtest/*"
+  to = "https://bigtest.netlify.app/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "https://frontside.io/*"
   to = "https://frontside.com/:splat"
   status = 301
