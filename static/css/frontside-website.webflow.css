@@ -349,6 +349,7 @@
 
 .feature-wrapper.notopspace {
   margin-top: 0px;
+  margin-bottom: 100px;
   padding-top: 0px;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -437,6 +438,10 @@
 .bigquote.dark {
   color: #14315d;
   font-weight: 700;
+}
+
+.bigquote.dark.smallcaps {
+  text-transform: none;
 }
 
 .bigquote.medium {
@@ -1575,6 +1580,14 @@
 .article-preview {
   margin-top: 20px;
   border-radius: 5px;
+}
+
+.text-span-50 {
+  color: #26abe8;
+}
+
+.centeredcontainer {
+  text-align: center;
 }
 
 @media screen and (max-width: 991px) {
