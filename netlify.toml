@@ -23,3 +23,9 @@
   to = "https://frontside.com/:splat"
   status = 301
   force = true
+
+[[headers]]
+  for = "/bigtest/asciinema/iframes/cross-platform.html"
+
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
