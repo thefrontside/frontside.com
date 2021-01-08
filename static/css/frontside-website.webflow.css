@@ -1,3 +1,8 @@
+a {
+  color: #14315d;
+  text-decoration: none;
+}
+
 .widewrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -644,7 +649,7 @@
 }
 
 .copyright {
-  margin-top: 40px;
+  margin-top: 10px;
   color: #4f6586;
   font-size: 12px;
   font-weight: 300;
@@ -1588,6 +1593,10 @@
 
 .centeredcontainer {
   text-align: center;
+}
+
+.link-2 {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 991px) {
