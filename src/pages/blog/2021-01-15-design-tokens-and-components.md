@@ -166,7 +166,7 @@ import { colors } from './tokens.js';
 const form = {
   'border': colors['neutral--700'],
   'border--active': colors['primary'],
-  'bo  rder--disabled': colors['neutral--400'],
+  'border--disabled': colors['neutral--400'],
 
   'content': colors['transparent'],
   'content--active': colors['neutral--100'],
