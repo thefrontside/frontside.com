@@ -12,10 +12,6 @@ tags:
 img: /img/2020-07-16-interactors-social.png
 ---
 
-<aside class="blog-post--saga-box">
-Jonas Nicklas is the original author of <a href="https://github.com/teamcapybara/capybara" target="_blank" rel="nofollow">Capybara</a>, Ruby’s most popular framework for testing web applications. He is based in Sweden and has been working on BigTest since 2019
-</aside>
-
 Testing the frontend of complex applications is often associated with nightmarishly inconsistent test suites, where seemingly random failures cast doubt on the value of the tests themselves and frustrate developers to no end. Our mission with BigTest has been to eliminate flakiness in tests altogether and provide the most stable, easy to use, and best performing test framework out there. 
 
 As the original author of Capybara, an acceptance test framework written in Ruby which has a reputation of being incredibly solid and resistant to flakiness, I know all about how to avoid random test failures. We have taken all of the lessons learned from tweaking Capybara over years and applied them to build BigTest’s Interactor API—a powerful way of defining interactions with your application which allows you to write tests which are even more solid than what Capybara can provide.
@@ -153,6 +149,10 @@ Of course we don't always have control over our application or the ability to ma
 ## Conclusion
 
 Strategies like these are why BigTest is going to be such a significant step forward in test design. BigTest’s Interactor API will make it as easy as possible to write stable tests, but in the meantime we are committed to providing explanations like these to help you understand how to achieve similar results.
+
+<p class="blog-post--guest-intro">
+  Jonas Nicklas is the original author of <a href="https://github.com/teamcapybara/capybara" target="_blank" rel="nofollow">Capybara</a>, Ruby’s most popular framework for testing web applications. He is based in Sweden and has been working on BigTest since 2019
+</p>
 
 <aside class="posts-list-list">
   <h2>Related article:</h2>
