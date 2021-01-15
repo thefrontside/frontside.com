@@ -245,3 +245,10 @@
     color: #818aab;
   }
 }
+
+.blog-post--guest-intro {
+  background: rgba(var(--rgba-light-blue), 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  font-family: 'proxima-nova';
+}

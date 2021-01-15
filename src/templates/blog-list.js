@@ -67,9 +67,9 @@ export default function BlogPage({
 
   if (page === 1) {
     let postsAndEpisodes = [
-      formattedPosts[0],
+      ...formattedPosts.slice(0,2),
       PodcastFeaturedEpisodes[0],
-      ...formattedPosts.slice(1,3),
+      ...formattedPosts.slice(2,5),
       PodcastFeaturedEpisodes[1],
       ...formattedPosts.slice(3),
     ];
