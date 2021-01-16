@@ -174,7 +174,7 @@ const form = {
 
   'background': colors['transparent'],
   'background--active': colors['primary'],
-  'background--disabled': colors['_neutral--400'],
+  'background--disabled': colors['neutral--400'],
 };
 
 const StyledCheckbox = styled.div`
