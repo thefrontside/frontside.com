@@ -62,7 +62,7 @@ const Navbar = () => {
               <a href="/tools" className="main-nav-link w-nav-link">Tools</a>
             </li>
             <li className="navitem">
-              <a href="/blog" aria-current="page" className="main-nav-link gatsby-perma-current w-nav-link">Blog</a>
+              <a href="/blog" aria-current="page" className="main-nav-link gatsby-perma-current w-nav-link">Blog &amp; Podcast</a>
             </li>
             <li className="navitem contactin">
               <a href="/contact" className="fs-button cta nav in w-button">Contact</a>
