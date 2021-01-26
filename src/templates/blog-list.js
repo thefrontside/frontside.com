@@ -13,6 +13,20 @@ const PodcastFeaturedEpisodes = [
   {
     fromPodcast: true,
     id: 'intro-to-rush-js',
+    slug: '/podcast/data-trust-and-transparency-a-covid-19-vaccine-story',
+    image: '/img/podcast-heroes/data-trust-and-transparency-a-covid-19-vaccine-story.png',
+    title: 'Data, Trust, and Transparency: A COVID-19 Vaccine Story',
+    description: 'Data is at the center of everything we do. Yet, how can we trust it in a world where more "organic" food is consumed than produced? As COVID-19 vaccines are getting ready to be offered at a never-seen scale, blockchain can help develop the trust and transparency that we need.',
+    authors: [
+      {
+        key: 'charles-lowell',
+        name: 'Charles Lowell'
+      }
+    ]
+  },
+  {
+    fromPodcast: true,
+    id: 'intro-to-rush-js',
     slug: '/podcast/intro-to-rush-js-with-pete-gonzalez',
     image: '/img/2020-pod-rush.png',
     title: 'Intro to Rush.js with co-author Pete Gonzales',
@@ -67,10 +81,11 @@ export default function BlogPage({
 
   if (page === 1) {
     let postsAndEpisodes = [
-      ...formattedPosts.slice(0,2),
       PodcastFeaturedEpisodes[0],
-      ...formattedPosts.slice(2,5),
+      ...formattedPosts.slice(0,2),
       PodcastFeaturedEpisodes[1],
+      ...formattedPosts.slice(2,5),
+      PodcastFeaturedEpisodes[2],
       ...formattedPosts.slice(3),
     ];
     formattedPosts = postsAndEpisodes;
