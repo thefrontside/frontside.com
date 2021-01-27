@@ -1,0 +1,88 @@
+.podcast-title {
+  font-family: var(--font-sans-serif);
+  font-weight: bold;
+  font-size: var(--size-med-lg);
+  color: var(--color-dark-blue-darkable);
+  margin: 0;
+  line-height: 1;
+  background-image: url(/images/decor-sphere-all-focused2x.png), url(/images/decor-sphere-all-focused2x.png), url(/images/decor-shadow-duo2x.png);
+  background-position: 0% 65%, 100% 0%, 50% 90%;
+  background-size: 24px, 43px, 200px;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+
+  padding: 80px 50px 80px 50px;
+  text-align: right;
+}
+
+.applepodcasts-link {
+  display: block;
+  overflow: hidden;
+  line-height: 1;
+  margin-right: 60px;
+}
+
+.applepodcasts-link > img {
+  height: 45px;
+  display: block;
+}
+
+.rss-box {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.rss-box > .fs-text-field {
+  margin-left: 10px;
+}
+
+.rss-box--copied {
+  font-family: var(--font-sans-serif);
+  padding: 5px 15px;
+  font-size: var(--size-med-sm);
+  font-weight: bold;
+  color: transparent;
+  transition: color 50ms ease-in;
+  position: absolute;
+  right: -35px;
+}
+
+.rss-box--copied__done {
+  color: #469c46;
+}
+
+@media screen and (max-width: 991px) {
+  .podcast-block {
+    flex-flow: row wrap;
+  }
+}
+@media screen and (max-width: 767px) {
+  .podcast-block {
+    flex-flow: column nowrap;
+  }
+  .podcast-title {
+    background-image: url(/images/decor-shadow-duo2x.png);
+    background-position: 50% 90%;
+    background-size: 150px;
+    background-repeat: no-repeat;
+  
+    padding: 20px 20px 50px 20px;
+    text-align: center;
+  }
+
+  .applepodcasts-link {
+    margin: 20px auto;
+  }
+
+  .rss-box {
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+  .rss-box .fs-button {
+    padding: 5px 10px;
+  }
+  .rss-box .fs-text-field {
+    width: 100px;
+  }
+}

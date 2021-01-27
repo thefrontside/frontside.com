@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import { Helmet } from "react-helmet";
 import Layout from '../components/layout';
 import PostsList from '../components/posts-list';
 import Pagination from '../components/pagination';
+import PodcastCTA from '../components/PodcastCTA';
 
 import BlogHeroImage from '../img/plork/blog-hero@1.5x.png';
 
@@ -91,8 +93,13 @@ export default function BlogPage({
     formattedPosts = postsAndEpisodes;
   }
 
+  
+
   return (
     <Layout title={page === 1 ? 'Blog' : `Blog - page ${page}`}>
+      <Helmet>
+        <link rel="alternate" type="application/rss+xml" title="The Frontside Podcast RSS" href="https://rss.simplecast.com/podcasts/96/rss" />
+      </Helmet>
       <section className="widewrapper herowrapper w-container">
         <div className="herotext">
           <h1 className="heading">Sharing <span className="gradient-text">Frontside's</span> latest discoveries</h1>
@@ -112,6 +119,7 @@ export default function BlogPage({
           <img src={BlogHeroImage} alt="" />
         </div>
       </section>
+      <PodcastCTA />
       <PostsList
         pagination={<Pagination prefix="/blog" page={page} pages={pages} />}
         posts={formattedPosts}
