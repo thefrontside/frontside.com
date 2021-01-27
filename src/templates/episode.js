@@ -13,6 +13,7 @@ export default function EpisodeRoute({
     simplecastEpisode: {
       slug,
       title,
+      description,
       longDescriptionHtml,
       authors,
       publishedAt,
@@ -55,15 +56,23 @@ export default function EpisodeRoute({
         </div>
       </section>
       <Content>
+        <section>
+          <p>
+            {description}
+          </p>
+        </section>
         <iframe
-          frameBorder="0"
-          height="200px"
-          scrolling="no"
-          seamless
-          src={`https://embed.simplecast.com/${shareId}?color=f5f5f5`}
-          width="100%"
-          title={title}
-        />
+            frameBorder="0"
+            height="200px"
+            scrolling="no"
+            seamless
+            src={`https://embed.simplecast.com/${shareId}?color=f5f5f5`}
+            width="100%"
+            title={title}
+          />
+      </Content>
+      <PodcastCTA />
+      <Content>
         <section
           className="episode-transcript"
           dangerouslySetInnerHTML={{ __html: longDescriptionHtml }}
