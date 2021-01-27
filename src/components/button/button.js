@@ -7,10 +7,11 @@ import './button.css';
 
 Button.propTypes = {
   to: PropTypes.string,
+  highlight: PropTypes.bool
 };
 
-export default function Button({ className, ...props }) {
+export default function Button({ className, highlight, ...props }) {
   let Component = props.to ? Link : 'button';
 
-  return <Component className={css('button', className)} {...props} />;
+  return <Component className={css('fs-button', { 'fs-button__highlight': highlight }, className)} {...props} />;
 }

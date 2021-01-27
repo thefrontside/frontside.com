@@ -13,8 +13,10 @@
 
   --rgba-light-blue: 38, 171, 232;
 
-  --input-border-color: #ccc;
+  --input-border-color: var(--color-dark-blue-darkable);
   --input-color: #000;
+  --button-background: var(--color-dark-blue-darkable);
+  --button-color: #fff;
 
   /* Light Mode */
   --body-bg: #fff;
@@ -114,5 +116,6 @@
     --color-dark-blue-darkable: #ffffff;
     --input-color: #ffffff;
     --nav-overlay-shadow: rgba(0, 0, 0, 0.6);
+    --button-color: var(--color-dark-blue);
   }
 }

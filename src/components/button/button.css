@@ -1,4 +1,18 @@
-@import '../variables';
+
+.fs-button {
+  font-family: var(--font-sans-serif);
+  background-color: var(--button-background);
+  cursor: pointer;
+  color: var(--button-color);
+  padding: 5px 15px;
+  font-size: var(--size-med-sm);
+  outline: none;
+}
+
+.fs-button__highlight {
+  background-image: -webkit-gradient(linear, left top, right top, from(#26abe8), to(#f74d7b));
+  background-image: linear-gradient(90deg, #26abe8, #f74d7b);
+}
 
 .button {
   display: inline-block;

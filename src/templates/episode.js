@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import Content from '../components/content';
 import format from 'dateformat';
 import Text from '../components/text';
+import PodcastCTA from '../components/PodcastCTA';
 
 import './episode.css';
 
@@ -68,6 +69,7 @@ export default function EpisodeRoute({
           dangerouslySetInnerHTML={{ __html: longDescriptionHtml }}
         />
       </Content>
+      <PodcastCTA />
     </Layout>
   );
 }
