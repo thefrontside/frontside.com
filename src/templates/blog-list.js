@@ -14,7 +14,21 @@ import './blog-list.css';
 const PodcastFeaturedEpisodes = [
   {
     fromPodcast: true,
-    id: 'intro-to-rush-js',
+    id: 'product-roadmaps-and-tooling-planning-with-steve-pereira',
+    slug: '/podcast/product-roadmaps-and-tooling-planning-with-steve-pereira/',
+    image: '/img/podcast-heroes/product-roadmaps-and-tooling-planning-with-steve-pereira.png',
+    title: 'Product Roadmaps and Tooling Planning with Steve Pereira',
+    description: 'In this episode, Steve Pereira—the founder of Visible—talks about how their unique approach to mapping helps customers get products out of the door fast and efficiently.',
+    authors: [
+      {
+        key: 'charles-lowell',
+        name: 'Charles Lowell'
+      }
+    ]
+  },
+  {
+    fromPodcast: true,
+    id: 'data-trust-and-transparency-a-covid-19-vaccine-story',
     slug: '/podcast/data-trust-and-transparency-a-covid-19-vaccine-story',
     image: '/img/podcast-heroes/data-trust-and-transparency-a-covid-19-vaccine-story.png',
     title: 'Data, Trust, and Transparency: A COVID-19 Vaccine Story',
@@ -83,10 +97,10 @@ export default function BlogPage({
 
   if (page === 1) {
     let postsAndEpisodes = [
+      formattedPosts[0],
       PodcastFeaturedEpisodes[0],
-      ...formattedPosts.slice(0,2),
       PodcastFeaturedEpisodes[1],
-      ...formattedPosts.slice(2,5),
+      ...formattedPosts.slice(1,5),
       PodcastFeaturedEpisodes[2],
       ...formattedPosts.slice(3),
     ];
