@@ -16,7 +16,7 @@ Kubernetes is perhaps one of the most exciting developments in the DevOps world 
 
 With modern cloud PaaS (platform as a service) like Google Cloud and AWS, most frontend and many backend developers can deploy services without learning about the architecture and technologies that power these platforms. In the past, not knowing about these platforms could be easily forgiven because the learning curve was too steep.
 
-Kubernetes changes all that. It makes understanding these platforms approachable and manageable, allowing frontend developers to learn all about them fairly quickly. The architecture of Kubernetes and the approach that the Kubernetes community is taking towards building it continuously lowers the barrier for people who otherwise wouldn’t have an opportunity to learn about Cloud Native Deployment.
+Kubernetes changes all that. It makes understanding these platforms approachable and manageable, allowing frontend developers to learn all about them fairly quickly. The architecture of Kubernetes and the approach that the community is taking towards building Kubernetes continuously lowers the barrier for people who otherwise wouldn’t have an opportunity to learn about Cloud Native Deployment.
 
 At its core, Kubernetes is based on a concept that anyone familiar with React would recognize. It’s a declarative system for service management. Similar to how React allows you to declare what components you want to render with it handling the creation of DOM elements, Kubernetes allows you to declare what services you want to deploy and it takes care of deploying them.  
 
@@ -31,7 +31,9 @@ In this tutorial, we’ll show you how to set up MicroK8S, which is Ubuntu’s i
 ## Installation and Start
 
 Let’s go ahead and install MicroK8S for macOS:
-```$ brew install ubuntu/microk8s/microk8s```
+```
+$ brew install ubuntu/microk8s/microk8s
+```
 _For installation instructions for Windows or Linux, go to the [MicroK8S website](https://microk8s.io/)._
 
 Once it has finished installing, run the following commands:
@@ -98,7 +100,7 @@ If you’ve been following along with all of the previous steps, your `k9s` scre
 
 ![k9s with pods listed screenshot](/img/2021-01-kubernetes/k9s-listed-pods.png)
 
-What we’re seeing here are the pods from the service we deployed. We’ll be returning to this page very shortly, but for practice if you want to navigate to the list of deployments, press ‘:’ and type in ‘deployments’.
+What we’re seeing here are the pods from the service we deployed. We’ll be returning to this page very shortly, but for practice if you want to navigate to the list of deployments, press `:` and type in `deployments`.
 
 ![k9s with deployments listed screenshot](/img/2021-01-kubernetes/k9s-deployments.png)
 
