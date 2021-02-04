@@ -285,6 +285,7 @@
   background-image: url('../../img/plork/decor-button-twist2x.png'), linear-gradient(90deg, #26abe8, #f74d7b);
   background-position: -15px -15px, 0px 0px;
   background-size: 317px, auto;
+  color: #fff;
 }
 
 .fs-button.cta.nav {

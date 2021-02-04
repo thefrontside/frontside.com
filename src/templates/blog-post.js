@@ -5,6 +5,7 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import Content from '../components/content';
 import Text from '../components/text';
+import SubscribeForm from '../components/subscribe-form';
 
 import './blog-post.css';
 
@@ -57,6 +58,9 @@ export const BlogPostTemplate = ({ content, tags, title, authors, date, image })
           }}
         />
       </Content>
+      <footer className="widewrapper">
+        <SubscribeForm highlight={true} />
+      </footer>
     </>
   );
 };
