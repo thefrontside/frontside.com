@@ -103,7 +103,7 @@ export default function BlogPage({
       ...formattedPosts.slice(1,3),
       PodcastFeaturedEpisodes[2],
       ...formattedPosts.slice(3,5),
-      PodcastFeaturedEpisodes[2],
+      PodcastFeaturedEpisodes[3],
       ...formattedPosts.slice(5),
     ];
     formattedPosts = postsAndEpisodes;
