@@ -17,6 +17,12 @@ module.exports = {
     'SimplecastEpisode.fields.authors': 'MarkdownRemark',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://bigtestjs.us4.list-manage.com/subscribe/post?u=dbd3b1801544458c2dc306723&amp;id=10a2fa1562'
+      }
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-postcss',

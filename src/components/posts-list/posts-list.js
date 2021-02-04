@@ -4,6 +4,7 @@ import { Link } from 'gatsby';
 
 import './posts-list.css';
 import Text from '../text';
+import SubscribeForm from '../subscribe-form';
 
 PostsList.propTypes = {
   heading: PropTypes.node,
@@ -42,7 +43,9 @@ export default function PostsList({
         : ''}
       <div className="widewrapper post-list-wrapper column w-container">
         <ul className="entries-list">
-          {posts.map(post => (
+          {posts.map((post, i) => (
+            <>
+            {(i === 4) ? <><SubscribeForm /><div></div></> : <></> }
             <li key={post.id} className="colorborderwrapping entrypreview">
               <div className="entry-preview">
                 {post.image ? (
@@ -100,6 +103,7 @@ export default function PostsList({
                 </Link>
               </div>
             </li>
+            </>
           ))}
         </ul>
         {pagination}
