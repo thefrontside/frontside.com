@@ -43,7 +43,7 @@ const PodcastFeaturedEpisodes = [
   {
     fromPodcast: true,
     id: 'intro-to-rush-js',
-    slug: '/podcast/intro-to-rush-js-with-pete-gonzalez',
+    slug: '/podcast/intro-to-rush-js-with-co-author-pete-gonzales/',
     image: '/img/2020-pod-rush.png',
     title: 'Intro to Rush.js with co-author Pete Gonzales',
     description: 'Monorepos are the new muse of library maintainers, but what happens when your project grows past 100 packages in the same repo? What about thousands? Rush.js was created for those cases, and Pete—who started the project while working at Microsoft—is here to tell us about it.',
@@ -100,9 +100,11 @@ export default function BlogPage({
       formattedPosts[0],
       PodcastFeaturedEpisodes[0],
       PodcastFeaturedEpisodes[1],
-      ...formattedPosts.slice(1,5),
+      ...formattedPosts.slice(1,3),
       PodcastFeaturedEpisodes[2],
-      ...formattedPosts.slice(3),
+      ...formattedPosts.slice(3,5),
+      PodcastFeaturedEpisodes[3],
+      ...formattedPosts.slice(5),
     ];
     formattedPosts = postsAndEpisodes;
   }
