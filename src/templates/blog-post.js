@@ -58,7 +58,7 @@ export const BlogPostTemplate = ({ content, tags, title, authors, date, image })
           }}
         />
       </Content>
-      <footer className="widewrapper">
+      <footer className="widewrapper w-container">
         <SubscribeForm highlight={true} />
       </footer>
     </>
