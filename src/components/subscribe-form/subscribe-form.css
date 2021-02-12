@@ -67,7 +67,7 @@
   color: #8a674f;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .subscribe-form {
     width: 100%;
     display: block;
@@ -79,7 +79,7 @@
   }
   .subscribe-form--title__highlight {
     padding: 50px 50px 50px 89px;
-    background-position: 0% 65%, 40% 0%, 10% 90%;
+    background-position: 0% 65%, 200px 0%, 40px 90%;
   }
   .subscribe-form--inputs {
     padding-left: 0;
