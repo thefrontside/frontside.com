@@ -13,6 +13,7 @@ export default function TemplateWrapper({
   description,
   title,
   image,
+  path
 }) {
   return (
     <StaticQuery
@@ -83,7 +84,7 @@ export default function TemplateWrapper({
               }
             />
             <meta property="og:type" content="website" />
-            <meta property="og:url" content={data.site.siteMetadata.siteUrl} />
+            
             <meta
               property="og:image"
               content={
@@ -93,6 +94,11 @@ export default function TemplateWrapper({
               }
             />
           </Helmet>
+          { path && typeof path === 'string' ? (
+            <Helmet>
+              <meta property="og:url" content={`${data.site.siteMetadata.siteUrl}${path}`} />
+            </Helmet>
+          ) : <></>}
           <Navbar />
 
           {children}

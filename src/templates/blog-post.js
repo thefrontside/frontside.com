@@ -82,6 +82,7 @@ const BlogPost = ({ data: { markdownRemark: post } }) => {
           ? null
           : post.frontmatter.img.childImageSharp.resolutions.src
       }
+      path={post.fields.slug}
     >
       <BlogPostTemplate
         content={post.html}
