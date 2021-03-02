@@ -1,7 +1,8 @@
 [build]
   publish = "public"
   command = "yarn build # && yarn verify-sitemap ${URL} ${DEPLOY_URL}"
-  
+  functions = "commands/functions"
+
 [build.environment]
   YARN_VERSION = "1.9.4"
   YARN_FLAGS = "--no-ignore-optional"

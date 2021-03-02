@@ -10,3 +10,6 @@ yarn-error.log
 .env
 .env.development
 sitemap.xml
+
+# Local Netlify folder
+.netlify
