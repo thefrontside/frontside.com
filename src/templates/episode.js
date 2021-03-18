@@ -15,7 +15,7 @@ export default function EpisodeRoute({
       title,
       description,
       longDescriptionHtml,
-      authors,
+      fields: { authors },
       publishedAt,
       sharingUrl,
     },
@@ -98,12 +98,14 @@ export const episodePageQuery = graphql`
       longDescriptionHtml
       publishedAt
       sharingUrl
-      authors {
-        frontmatter {
-          name
-        }
-        fields {
-          slug
+      fields {
+        authors {
+          frontmatter {
+            name
+          }
+          fields {
+            slug
+          }
         }
       }
     }

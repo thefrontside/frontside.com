@@ -7,6 +7,18 @@ const slugify = str => _slugify(str, {
 
 const bySlugPredicate = regEx => node => node.fields.slug && regEx.test(node.fields.slug)
 
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
+  if (node.internal.type === 'SimplecastEpisode') {
+    const authors = node.author.split(', ').map( author => `/people/${slugify(author)}/`);
+    createNodeField({
+      name: 'authors',
+      node,
+      value: authors
+    });
+  }
+}
+
 exports.sourceNodes = function sourceNodes({ actions: { createNodeField }, getNodes }) {
 
   let markdownFiles = getNodes().filter(node => node.internal.type === 'MarkdownRemark')
@@ -82,7 +94,7 @@ exports.sourceNodes = function sourceNodes({ actions: { createNodeField }, getNo
       })
     });
 
-  [...posts, ...episodes].forEach(node => {
+  [...posts].forEach(node => {
     createNodeField({
       node,
       name: 'authors',
