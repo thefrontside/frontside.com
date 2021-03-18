@@ -8,3 +8,13 @@
   margin-left: var(--space-double);
   margin-bottom: var(--space-one-half);
 }
+
+.episode-transcript details {
+  margin-bottom: 40px;
+}
+
+.episode-transcript summary {
+  font-family: var(--font-sans-serif);
+  font-weight: bold;
+  font-size: 20px;
+}

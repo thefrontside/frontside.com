@@ -13,7 +13,7 @@ export default function EpisodeRoute({
     simplecastEpisode: {
       slug,
       title,
-      description,
+      descriptionHtml,
       longDescriptionHtml,
       fields: { authors },
       publishedAt,
@@ -46,7 +46,7 @@ export default function EpisodeRoute({
             </>
           ))}
             <br />
-            <span class="blog-post-date">
+            <span className="blog-post-date">
               {format(publishedAt, `" on " mmmm dS, yyyy"."`)}
             </span>
           </p>
@@ -56,11 +56,9 @@ export default function EpisodeRoute({
         </div>
       </section>
       <Content>
-        <section>
-          <p>
-            {description}
-          </p>
-        </section>
+      <section
+          dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+        />
         <iframe
             frameBorder="0"
             height="200px"
@@ -94,7 +92,7 @@ export const episodePageQuery = graphql`
       id
       slug
       title
-      description
+      descriptionHtml
       longDescriptionHtml
       publishedAt
       sharingUrl
