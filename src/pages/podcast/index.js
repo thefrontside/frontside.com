@@ -16,7 +16,6 @@ const PodcastPage = ({
       <EpisodesList
         heading={<Text tag="h2">The Frontside Podcast</Text>}
         episodes={edges.map(({ node }) => {
-          console.log(node.fields.authors);
           return {
             title: node.title,
             slug: node.slug,

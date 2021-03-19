@@ -35,7 +35,7 @@ export default function EpisodeRoute({
           </h1>
           <p className="subheader blog-post-meta">
             Hosted by
-            {authors.map((author, i) => (
+            {authors.filter(Boolean).map((author, i) => (
             <>
               {i === 0 ? '' : ((authors.length) > 2 ? ', ' : ' and ')}
               {/* Author links will lead to team member page, which is currently pending. */}
