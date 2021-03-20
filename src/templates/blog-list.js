@@ -14,6 +14,34 @@ import './blog-list.css';
 const PodcastFeaturedEpisodes = [
   {
     fromPodcast: true,
+    id: 'open-telemetry-with-austin-parker',
+    slug: '/podcast/open-telemetry-with-austin-parker/',
+    image: '/img/podcast-heroes/open-telemetry-with-austin-parker.png',
+    title: 'OpenTelemetry with Austin Parker',
+    description: 'In this episode, Austin Parker, Principal Developer Advocate at Lightstep talks about the OpenTelemetry Framework, which is an observability framework for cloud-native software and a collection of tools, APIs, and SDKs.',
+    authors: [
+      {
+        key: 'charles-lowell',
+        name: 'Charles Lowell'
+      }
+    ]
+  },
+  {
+    fromPodcast: true,
+    id: 'paying-open-source-contributors-with-puneet-lath',
+    slug: '/podcast/paying-open-source-contributors-with-puneet-lath/',
+    image: '/img/podcast-heroes/paying-open-source-contributors-with-puneet-lath.png',
+    title: 'Paying Open Source Contributors with Puneet Lath',
+    description: 'In this episode, Puneet Lath, Director of Research and Development at Expensify, talks about the unique way Expensify is using open source with their products by not just open-sourcing software tools but also open-sourcing the front end of the product itself',
+    authors: [
+      {
+        key: 'charles-lowell',
+        name: 'Charles Lowell'
+      }
+    ]
+  },
+  {
+    fromPodcast: true,
     id: 'product-roadmaps-and-tooling-planning-with-steve-pereira',
     slug: '/podcast/product-roadmaps-and-tooling-planning-with-steve-pereira/',
     image: '/img/podcast-heroes/product-roadmaps-and-tooling-planning-with-steve-pereira.png',
@@ -97,13 +125,15 @@ export default function BlogPage({
 
   if (page === 1) {
     let postsAndEpisodes = [
-      formattedPosts[0],
       PodcastFeaturedEpisodes[0],
       PodcastFeaturedEpisodes[1],
-      ...formattedPosts.slice(1,3),
+      formattedPosts[0],
       PodcastFeaturedEpisodes[2],
-      ...formattedPosts.slice(3,5),
       PodcastFeaturedEpisodes[3],
+      ...formattedPosts.slice(1,3),
+      PodcastFeaturedEpisodes[4],
+      ...formattedPosts.slice(3,5),
+      PodcastFeaturedEpisodes[5],
       ...formattedPosts.slice(5),
     ];
     formattedPosts = postsAndEpisodes;

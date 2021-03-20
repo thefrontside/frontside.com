@@ -13,9 +13,9 @@ export default function EpisodeRoute({
     simplecastEpisode: {
       slug,
       title,
-      description,
+      descriptionHtml,
       longDescriptionHtml,
-      authors,
+      fields: { authors },
       publishedAt,
       sharingUrl,
     },
@@ -35,7 +35,7 @@ export default function EpisodeRoute({
           </h1>
           <p className="subheader blog-post-meta">
             Hosted by
-            {authors.map((author, i) => (
+            {authors.filter(Boolean).map((author, i) => (
             <>
               {i === 0 ? '' : ((authors.length) > 2 ? ', ' : ' and ')}
               {/* Author links will lead to team member page, which is currently pending. */}
@@ -46,7 +46,7 @@ export default function EpisodeRoute({
             </>
           ))}
             <br />
-            <span class="blog-post-date">
+            <span className="blog-post-date">
               {format(publishedAt, `" on " mmmm dS, yyyy"."`)}
             </span>
           </p>
@@ -56,11 +56,10 @@ export default function EpisodeRoute({
         </div>
       </section>
       <Content>
-        <section>
-          <p>
-            {description}
-          </p>
-        </section>
+      <section
+          className="episode-markdown"
+          dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+        />
         <iframe
             frameBorder="0"
             height="200px"
@@ -74,7 +73,7 @@ export default function EpisodeRoute({
       <PodcastCTA />
       <Content>
         <section
-          className="episode-transcript"
+          className="episode-markdown episode-transcript"
           dangerouslySetInnerHTML={{ __html: longDescriptionHtml }}
         />
       </Content>
@@ -94,16 +93,18 @@ export const episodePageQuery = graphql`
       id
       slug
       title
-      description
+      descriptionHtml
       longDescriptionHtml
       publishedAt
       sharingUrl
-      authors {
-        frontmatter {
-          name
-        }
-        fields {
-          slug
+      fields {
+        authors {
+          frontmatter {
+            name
+          }
+          fields {
+            slug
+          }
         }
       }
     }

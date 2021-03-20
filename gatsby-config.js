@@ -14,7 +14,7 @@ module.exports = {
     'MarkdownRemark.fields.authors': 'MarkdownRemark',
     'MarkdownRemark.fields.posts': 'MarkdownRemark',
     'MarkdownRemark.fields.episodes': 'SimplecastEpisode',
-    'SimplecastEpisode.fields.authors': 'MarkdownRemark',
+    'SimplecastEpisode.fields.authors': 'MarkdownRemark.fields.slug',
   },
   plugins: [
     {

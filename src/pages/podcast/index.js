@@ -15,17 +15,19 @@ const PodcastPage = ({
     <Layout title="Podcast">
       <EpisodesList
         heading={<Text tag="h2">The Frontside Podcast</Text>}
-        episodes={edges.map(({ node }) => ({
-          title: node.title,
-          slug: node.slug,
-          id: node.id,
-          description: node.description,
-          date: new Date(node.publishedAt).toLocaleDateString('en-US'),
-          authors: node.authors.map(author => ({
-            slug: author.fields.slug,
-            name: author.frontmatter.name,
-          })),
-        }))}
+        episodes={edges.map(({ node }) => {
+          return {
+            title: node.title,
+            slug: node.slug,
+            id: node.id,
+            description: node.description,
+            date: new Date(node.publishedAt).toLocaleDateString('en-US'),
+            authors: node.fields.authors.filter(Boolean).map(author => ({
+              slug: author.fields.slug,
+              name: author.frontmatter.name,
+            })),
+          }
+        })}
       />
     </Layout>
   );
@@ -55,12 +57,14 @@ export const episodesQuery = graphql`
           longDescriptionHtml
           slug
           publishedAt
-          authors {
-            frontmatter {
-              name
-            }
-            fields {
-              slug
+          fields {
+            authors {
+              frontmatter {
+                name
+              }
+              fields {
+                slug
+              }
             }
           }
         }
