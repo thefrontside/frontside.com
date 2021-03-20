@@ -18,3 +18,10 @@
   font-weight: bold;
   font-size: 20px;
 }
+
+.episode-markdown a {
+  text-decoration: none;
+  color: var(--body-color);
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--body-color-faded);
+}

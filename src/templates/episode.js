@@ -57,6 +57,7 @@ export default function EpisodeRoute({
       </section>
       <Content>
       <section
+          className="episode-markdown"
           dangerouslySetInnerHTML={{ __html: descriptionHtml }}
         />
         <iframe
@@ -72,7 +73,7 @@ export default function EpisodeRoute({
       <PodcastCTA />
       <Content>
         <section
-          className="episode-transcript"
+          className="episode-markdown episode-transcript"
           dangerouslySetInnerHTML={{ __html: longDescriptionHtml }}
         />
       </Content>
