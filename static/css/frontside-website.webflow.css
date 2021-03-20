@@ -850,6 +850,23 @@ a {
   margin-top: 60px;
 }
 
+.midwrapper.vertical {
+  margin-top: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .homebanner {
   display: block;
   padding-right: 40px;
@@ -1599,6 +1616,64 @@ a {
   text-decoration: none;
 }
 
+.openmic-banner {
+  margin-top: 0px;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: #121212;
+}
+
+.open-mic-title {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-style: none;
+  border-width: 1px;
+  border-color: #fff;
+  color: #fff;
+}
+
+.open-mic-subheader {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.open-mic-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #9bf0e1;
+  color: #121212;
+  font-weight: 800;
+}
+
+.text-span-51 {
+  font-weight: 800;
+}
+
+.text-span-52 {
+  color: #9bf0e1;
+  font-weight: 800;
+}
+
+.column-2 {
+  text-align: center;
+}
+
+.text-block {
+  color: #fff;
+}
+
+.introducing {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: #326960;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: 991px) {
   .widewrapper {
     -webkit-box-orient: horizontal;
@@ -1962,6 +2037,10 @@ a {
   .input-border-2 {
     margin-bottom: 20px;
   }
+
+  .image-13 {
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2129,6 +2208,10 @@ a {
   .toolsheroimage {
     width: 100%;
     min-height: auto;
+  }
+
+  .openmic-banner {
+    padding: 20px;
   }
 }
 
