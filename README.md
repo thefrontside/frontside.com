@@ -20,15 +20,11 @@ At the moment we have a provisional manual process to adjust the webflow generat
 1. Download ZIP of files from webflow
 2. Find and replace for all links in navs of the generated files from `*.html` to `/*` (done manually at the moment).
 3. Find and replace all `target="_blank"` and replace with `target="_blank" rel="nofollow"`
-4. Add hidden field to `contat.html` on top of the form element:
+4. Find and replace with nothing (toxic tracking that webflow is pushing although I disabled it):
+
 ```
-<input type="hidden" name="form-name" value="contact" />
-<div hidden>
-  <label>
-    Don’t fill this out:
-    <input name="bot-field" onChange={this.handleChange} />
-  </label>
-</div>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-44597640-1"></script>
+  <script type="text/javascript">window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-44597640-1', {'anonymize_ip': false});</script>
 ```
 5. Replace typekit's script loading for stylesheet.
 ```
