@@ -32,11 +32,11 @@ For example, you can use blocks from `@storybook/addon-docs` to document your co
 import { ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
 
 export const Palette = () => (
-	<ColorPalette>
-  <ColorItem title="Primary" subtitle="Pink" colors="#F74D7B" />
-  <ColorItem title="Secondary" subtitle="Dark" colors="#15325D" />
-  <ColorItem title="Tertiary" subtitle="Blue" colors="#26ABE7" />
-</ColorPalette>
+  <ColorPalette>
+    <ColorItem title="Primary" subtitle="Pink" colors="#F74D7B" />
+    <ColorItem title="Secondary" subtitle="Dark" colors="#15325D" />
+    <ColorItem title="Tertiary" subtitle="Blue" colors="#26ABE7" />
+  </ColorPalette>
 )
 ```
 
