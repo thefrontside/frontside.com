@@ -43,6 +43,7 @@
     "react-helmet": "^5.2.1",
     "react-transition-group": "^4.3.0",
     "rimraf": "^3.0.2",
+    "simplecast-api-client": "^2.0.0",
     "syntax-highlighting": "^1.0.0",
     "uuid": "^3.4.0"
   },

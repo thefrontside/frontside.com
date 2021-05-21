@@ -51,7 +51,7 @@ export const episodesQuery = graphql`
         node {
           id
           number
-          season
+
           title
           description
           longDescriptionHtml

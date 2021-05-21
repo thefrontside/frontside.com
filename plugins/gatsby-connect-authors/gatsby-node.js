@@ -59,7 +59,7 @@ exports.sourceNodes = function sourceNodes({ actions: { createNodeField }, getNo
     .map(node => append(node, {
       get authors() {
         let episode = this;
-        return node.author.split(', ')
+        return node.authors.collection[0].name.split(', ')
           .map(slugify)
           .map(slug => {
             let person = peopleBySlug[slug];

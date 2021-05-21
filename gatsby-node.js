@@ -28,7 +28,6 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
           node {
             id
             number
-            season
             slug
           }
         }
