@@ -1,7 +1,4 @@
-const assert = require("assert");
-const SimpleCastClient = require("simplecast-api-client");
-const camelCase = require("lodash.camelcase");
-const kebabCase = require("lodash.kebabcase");
+const { camelCase, kebabCase } = require('lodash');
 const { EPISODE_TYPE } = require('./constants');
 const getEpisodes = require('./get-episodes');
 
