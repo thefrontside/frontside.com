@@ -58,13 +58,18 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "start": "yarn develop",
-    "clean": "rimraf .cache public",
-    "build": "yarn clean && gatsby build && cp -R ./static/*.html ./public/",
-    "develop": "yarn clean && gatsby develop",
+    "start": "gatsby develop",
+    "clean": "gatsby clean",
+    "develop:clean": "yarn clean && yarn develop",
+    "build": "gatsby build && cp -R ./static/*.html ./public/",
+    "build:clean": "yarn clean && gatsby build && cp -R ./static/*.html ./public/",
     "serve": "gatsby serve",
     "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "verify-sitemap": "./lib/verify-sitemap/index.js"
+  },
+  "volta": {
+    "node": "14.17.0",
+    "yarn": "1.22.10"
   }
 }
