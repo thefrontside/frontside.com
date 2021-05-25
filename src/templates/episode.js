@@ -11,13 +11,13 @@ import './episode.css';
 export default function EpisodeRoute({
   data: {
     simplecastEpisode: {
-      slug,
+      episodeId,
       title,
+      slug,
       descriptionHtml,
       longDescriptionHtml,
       fields: { authors },
       publishedAt,
-      episodeUrl,
     },
   },
 }) {
@@ -63,7 +63,7 @@ export default function EpisodeRoute({
           height="200px"
           scrolling="no"
           seamless
-          src={`https://embed.simplecast.com/${shareId}?color=f5f5f5`}
+          src={`https://player.simplecast.com/${episodeId}`}
           width="100%"
           title={title}
         />
@@ -88,13 +88,12 @@ export const episodePageQuery = graphql`
       }
     }
     simplecastEpisode(id: { eq: $id }) {
-      id
-      slug
+      episodeId
       title
+      slug
       descriptionHtml
       longDescriptionHtml
       publishedAt
-      sharingUrl
       fields {
         authors {
           frontmatter {

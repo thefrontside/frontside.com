@@ -7,14 +7,16 @@ const slugify = str => _slugify(str, {
 
 const bySlugPredicate = regEx => node => node.fields.slug && regEx.test(node.fields.slug)
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = ({ node, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === 'SimplecastEpisode') {
-    const authors = node.author.split(', ').map( author => `/people/${slugify(author)}/`);
+    const authors = node.authorList.map(
+      author => `/people/${slugify(author)}/`
+    );
     createNodeField({
       name: 'authors',
       node,
-      value: authors
+      value: authors,
     });
   }
 }
@@ -59,14 +61,13 @@ exports.sourceNodes = function sourceNodes({ actions: { createNodeField }, getNo
     .map(node => append(node, {
       get authors() {
         let episode = this;
-        return node.authors.collection[0].name.split(', ')
-          .map(slugify)
-          .map(slug => {
-            let person = peopleBySlug[slug];
+        return node.authorList
+          .map(author => {
+            let person = peopleBySlug[author];
             if (person) {
               return person;
             } else {
-              console.log(`Could not find person:${slug} to relate to episode: ${episode.title}`);
+              console.log(`Could not find person:${author} to relate to episode: ${episode.title}`);
             }
           }).filter(Boolean);
       }
