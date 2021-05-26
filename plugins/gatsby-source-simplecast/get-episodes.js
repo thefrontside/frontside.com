@@ -3,7 +3,7 @@ const path = require('path');
 const assert = require('assert');
 const fetch = require('node-fetch');
 
-const cacheFile = path.join(__dirname, './data.json');
+const storeFile = path.join(__dirname, './data.json');
 
 module.exports = async function getPodcast(apiKey, podcastId) {
   // try reading from the data file
@@ -11,15 +11,15 @@ module.exports = async function getPodcast(apiKey, podcastId) {
     // always fetch for now, for parity with previous workflow
     return fetchEpisodes(apiKey, podcastId);
     // in the future, remove the above line and uncomment the next lines
-    // this will enable caching in which we will need to hook up CI to update the cache
-    // const podcastCache = await fs.readFile(cacheFile);
-    // return JSON.parse(podcastCache);
+    // this will enable caching in which we will need to hook up CI to update the store
+    // const podcastStore = await fs.readFile(storeFile);
+    // return JSON.parse(podcastStore);
   } catch (e) {
     // if it errors, fetch directly and save response
     console.warn(
-      `Could not find ${cacheFile}. Fetching fresh from the simplecast API.`
+      `Could not find ${storeFile}. Fetching fresh from the simplecast API.`
     );
-    return cacheEpisodes(apiKey, podcastId);
+    return storeEpisodes(apiKey, podcastId);
   }
 };
 
@@ -64,12 +64,12 @@ async function fetchEpisodes(apiKey, podcastId, limit = 10000, offset = 0) {
     .catch(error => console.log('error', error));
 }
 
-async function cacheEpisodes(apiKey, podcastId) {
+async function storeEpisodes(apiKey, podcastId) {
   const episodes = await fetchEpisodes(apiKey, podcastId).catch(e => {
     throw new Error(e);
   });
   // write it out to a `data.json` that is adjacent to this file
-  await fs.writeFile(cacheFile, JSON.stringify(episodes, null, 2));
+  await fs.writeFile(storeFile, JSON.stringify(episodes, null, 2));
   return episodes;
 }
 
@@ -91,7 +91,7 @@ if (process.argv0 === 'node' && process.argv[1].endsWith('get-episodes.js')) {
     }
     return log();
   } else {
-    return cacheEpisodes(apiKey, podcastId).catch(e => {
+    return storeEpisodes(apiKey, podcastId).catch(e => {
       console.error(e);
     });
   }
