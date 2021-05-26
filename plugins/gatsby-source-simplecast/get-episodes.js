@@ -8,8 +8,12 @@ const cacheFile = path.join(__dirname, './data.json');
 module.exports = async function getPodcast(apiKey, podcastId) {
   // try reading from the data file
   try {
-    const podcastCache = await fs.readFile(cacheFile);
-    return JSON.parse(podcastCache);
+    // always fetch for now, for parity with previous workflow
+    return fetchEpisodes(apiKey, podcastId);
+    // in the future, remove the above line and uncomment the next lines
+    // this will enable caching in which we will need to hook up CI to update the cache
+    // const podcastCache = await fs.readFile(cacheFile);
+    // return JSON.parse(podcastCache);
   } catch (e) {
     // if it errors, fetch directly and save response
     console.warn(
