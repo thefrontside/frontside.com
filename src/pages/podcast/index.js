@@ -50,11 +50,8 @@ export const episodesQuery = graphql`
       edges {
         node {
           id
-          number
-          season
           title
           description
-          longDescriptionHtml
           slug
           publishedAt
           fields {

@@ -1,31 +1,35 @@
 [build]
-  publish = "public"
-  command = "yarn build # && yarn verify-sitemap ${URL} ${DEPLOY_URL}"
-  
+command = "yarn build # && yarn verify-sitemap ${URL} ${DEPLOY_URL}"
+publish = "public"
+
 [build.environment]
-  YARN_VERSION = "1.9.4"
-  YARN_FLAGS = "--no-ignore-optional"
+YARN_FLAGS = "--no-ignore-optional"
+YARN_VERSION = "1.9.4"
+
+[dev]
+command = "yarn start"
+framework = "gatsby"
 
 [[redirects]]
-  from = "/bigtest/*"
-  to = "https://bigtest.netlify.app/bigtest/:splat"
-  status = 200
-  force = true
+force = true
+from = "/bigtest/*"
+status = 200
+to = "https://bigtest.netlify.app/bigtest/:splat"
 
 [[redirects]]
-  from = "https://frontside.io/*"
-  to = "https://frontside.com/:splat"
-  status = 301
-  force = true
+force = true
+from = "https://frontside.io/*"
+status = 301
+to = "https://frontside.com/:splat"
 
 [[redirects]]
-  from = "https://www.frontside.io/*"
-  to = "https://frontside.com/:splat"
-  status = 301
-  force = true
+force = true
+from = "https://www.frontside.io/*"
+status = 301
+to = "https://frontside.com/:splat"
 
 [[headers]]
-  for = "/bigtest/asciinema/iframes/cross-platform.html"
+for = "/bigtest/asciinema/iframes/cross-platform.html"
 
-  [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
+[headers.values]
+X-Frame-Options = "SAMEORIGIN"

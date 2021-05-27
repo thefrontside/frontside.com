@@ -9,11 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "simplecast-api-client": "1.0.2",
-    "lodash.camelcase": "4.3.0",
-    "lodash.kebabcase": "4.1.1",
-    "remark": "10.0.1",
+    "hast-util-to-html": "5.0.0",
+    "lodash": "^4.17.21",
     "mdast-util-to-hast": "4.0.0",
-    "hast-util-to-html": "5.0.0"
+    "remark": "10.0.1"
   }
 }

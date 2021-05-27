@@ -97,7 +97,6 @@ export const peopleQuery = graphql`
           title
           id
           number
-          season
           slug
         }
         posts {

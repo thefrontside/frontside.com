@@ -144,7 +144,7 @@ module.exports = {
       resolve: 'gatsby-source-simplecast',
       options: {
         apiKey: process.env.SIMPLECAST_API,
-        podcastId: 96,
+        podcastId: 'c27dcb5f-6c33-4c38-99c1-b32d3b52fec1',
       },
     },
     {
