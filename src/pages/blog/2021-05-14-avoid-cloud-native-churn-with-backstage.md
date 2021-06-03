@@ -10,7 +10,7 @@ tags:
   - cloud-native
   - backstage
   - kubernetes
-img: /img/2021-backstage-dx/avoid-developer-churn-with-backstage.jpg
+img: /img/2021-backstage-dx/avoid-developer-churn-with-backstage.png
 ---
 
 When you start breaking your monolithic platform into microservices and deploying components independently, you can’t help but feel excited about adopting a Cloud native strategy. You see releases becoming more frequent and smooth and your teams feel more productive and motivated as they see their work rapidly move into production.
