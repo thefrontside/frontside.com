@@ -18,6 +18,12 @@ to = "https://bigtest.netlify.app/bigtest/:splat"
 
 [[redirects]]
 force = true
+from = "/effection/*"
+status = 200
+to = "https://effection.netlify.app/effection/:splat"
+
+[[redirects]]
+force = true
 from = "https://frontside.io/*"
 status = 301
 to = "https://frontside.com/:splat"
