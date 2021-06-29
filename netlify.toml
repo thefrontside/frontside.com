@@ -1,6 +1,6 @@
 [build]
-command = "yarn build # && yarn verify-sitemap ${URL} ${DEPLOY_URL}"
-publish = "public"
+command = "yarn build" # && yarn verify-sitemap ${URL} ${DEPLOY_URL}
+publish = "public" 
 
 [build.environment]
 YARN_FLAGS = "--no-ignore-optional"

@@ -11,17 +11,15 @@ module.exports = {
     image: 'https://frontside.com/img/frontside-800.png',
   },
   mapping: {
-    'MarkdownRemark.fields.authors': 'MarkdownRemark',
-    'MarkdownRemark.fields.posts': 'MarkdownRemark',
-    'MarkdownRemark.fields.episodes': 'SimplecastEpisode',
-    'SimplecastEpisode.fields.authors': 'MarkdownRemark.fields.slug',
+    'MarkdownRemark.fields.authorNodes': 'People.name', // this helps gatsby know the type is `Person` on blog post authorNodes
   },
   plugins: [
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-        endpoint: 'https://bigtestjs.us4.list-manage.com/subscribe/post?u=dbd3b1801544458c2dc306723&amp;id=10a2fa1562'
-      }
+        endpoint:
+          'https://bigtestjs.us4.list-manage.com/subscribe/post?u=dbd3b1801544458c2dc306723&amp;id=10a2fa1562',
+      },
     },
     'gatsby-plugin-react-helmet',
     {
@@ -52,8 +50,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/pages`,
-        name: 'pages',
+        path: `${__dirname}/src/blog`,
+        name: 'blog',
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/people`,
+        name: 'people',
       },
     },
     {

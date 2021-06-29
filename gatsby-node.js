@@ -9,18 +9,24 @@ const getBlogUrl = page => `/blog${page > 1 ? `/${page}` : ''}`;
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   let result = await graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
-        edges {
-          node {
+      allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
+        totalCount
+        nodes {
+          childMarkdownRemark {
+            frontmatter {
+              tags
+            }
             id
             fields {
               slug
             }
-            frontmatter {
-              tags
-              templateKey
-            }
           }
+        }
+      }
+      allPeople {
+        nodes {
+          id
+          slug
         }
       }
       allSimplecastEpisode {
@@ -40,8 +46,9 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     throw result.errors;
   }
 
-  const posts = result.data.allMarkdownRemark.edges;
+  const posts = result.data.allFile.nodes;
 
+  // creates a set of paginated blog list pages
   const pages = Math.floor(posts.length / POSTS_PER_PAGE);
   _.range(pages - 1).forEach(p => {
     createPage({
@@ -56,38 +63,41 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     });
   });
 
-  posts.forEach(
-    ({
-      node: {
+  // create a page for each post
+  posts.forEach(({ childMarkdownRemark: { id, fields: { slug } } }) =>
+    createPage({
+      path: slug,
+      component: path.resolve(`src/templates/blog-post.js`),
+      // additional data can be passed via context
+      context: {
         id,
-        fields: { slug },
-        frontmatter: { tags, templateKey },
       },
-    }) =>
-      createPage({
-        path: slug,
-        tags: tags,
-        component: path.resolve(`src/templates/${String(templateKey)}.js`),
-        // additional data can be passed via context
-        context: {
-          id,
-        },
-      })
+    })
   );
 
-  // Tag pages:
-  let tags = posts.reduce((acc, { node: { frontmatter: { tags } } }) => {
-    if (tags) {
-      return [...acc, ...tags];
-    } else {
-      return acc;
-    }
-  }, []);
+  // find all tags
+  let tags = posts.reduce(
+    (
+      acc,
+      {
+        childMarkdownRemark: {
+          frontmatter: { tags },
+        },
+      }
+    ) => {
+      if (tags) {
+        return [...acc, ...tags];
+      } else {
+        return acc;
+      }
+    },
+    []
+  );
 
   // Eliminate duplicate tags
   tags = _.uniq(tags);
 
-  // Make tag pages
+  // create a page for each tag
   tags.forEach(tag =>
     createPage({
       path: `/tags/${_.kebabCase(tag)}/`,
@@ -98,6 +108,19 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     })
   );
 
+  // create a page for each person
+  result.data.allPeople.nodes.forEach(node =>
+    createPage({
+      path: node.slug,
+      component: path.resolve(`src/templates/people.js`),
+      // additional data can be passed via context
+      context: {
+        id: node.id,
+      },
+    })
+  );
+
+  // create a page for each podcast episode
   result.data.allSimplecastEpisode.edges.forEach(
     ({ node: { id, season, number, slug } }) =>
       createPage({

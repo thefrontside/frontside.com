@@ -105,9 +105,9 @@ export default function IndexPage({
               slug: node.fields.slug,
               title: node.frontmatter.title,
               date: node.frontmatter.date,
-              authors: node.fields.authors.map(author => ({
-                slug: author.fields.slug,
-                name: author.frontmatter.name,
+              authors: node.fields.authorNodes.map(author => ({
+                slug: author.slug,
+                name: author.name,
               })),
             }))}
           />
@@ -119,9 +119,9 @@ export default function IndexPage({
               slug: `/podcast/${node.slug}`,
               title: node.title,
               date: node.publishedAt,
-              authors: node.fields.authors.filter(Boolean).map(author => ({
-                slug: author.fields.slug,
-                name: author.frontmatter.name,
+              authors: node.authorNodes.filter(Boolean).map(author => ({
+                slug: author.slug,
+                name: author.name,
               })),
             }))}
           />
@@ -155,13 +155,9 @@ export const indexPageQuery = graphql`
           id
           fields {
             slug
-            authors {
-              frontmatter {
-                name
-              }
-              fields {
-                slug
-              }
+            authorNodes {
+              name
+              slug
             }
           }
           frontmatter {
@@ -179,15 +175,9 @@ export const indexPageQuery = graphql`
           title
           slug
           publishedAt(formatString: "MMMM DD, YYYY")
-          fields {
-            authors {
-              frontmatter {
-                name
-              }
-              fields {
-                slug
-              }
-            }
+          authorNodes {
+            name
+            slug
           }
         }
       }
