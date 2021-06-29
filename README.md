@@ -7,7 +7,7 @@ This is the new Frontside website. It uses Gatsby for the blog, and pages genera
 
 ## Blog Development 
 
-You can work on the blog with `yarn start`. Note, however, that you won't be able to see the static pages there.
+You can work on the blog with `yarn start`. Note, however, that you won't be able to see the static pages there. The data is sourced from Simplecast and markdown files. It creates `MarkdownRemark` and `SimplecastEpisode` nodes. The `gatsby-connect-authors` plugin also uses `MarkdownRemark` nodes to create `People` nodes. The `People` nodes tie a person to their blog posts and podcast episodes.
 
 ## Webflow pages changes
 
