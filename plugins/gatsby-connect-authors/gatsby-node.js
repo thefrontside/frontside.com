@@ -23,7 +23,7 @@ exports.onCreateNode = ({
       // create a new People node that links up the person, their posts and their episodes
       return createNode({
         name: node.frontmatter.name,
-        slug: slugify(node.frontmatter.name),
+        slug: `/people/${slugify(node.frontmatter.name)}/`,
         // Required fields.
         id: nodeId,
         parent: node.id,
@@ -90,7 +90,7 @@ exports.createResolvers = ({ createResolvers }) => {
           return context.nodeModel.runQuery({
             query: {
               filter: {
-                authors: { in: source.slug },
+                authors: { in: source.name },
               },
             },
             type: 'SimplecastEpisode',
