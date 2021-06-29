@@ -24,13 +24,8 @@ exports.sourceNodes = async (
         {}
       );
 
-      const authorList = episode.authors.collection.reduce((authors, item) => {
-        const authorArray = item.name.split(',').map(author =>
-          author
-            .trim()
-            .replace(/\s/, '-')
-            .toLowerCase()
-        );
+      const authors = episode.authors.collection.reduce((authors, item) => {
+        const authorArray = item.name.split(',').map(author => author.trim());
         return authors.concat(authorArray);
       }, []);
 
@@ -43,7 +38,7 @@ exports.sourceNodes = async (
       createNode({
         ...data,
         slug,
-        authorList,
+        authors,
         episodeId: episode.id,
         id: nodeId,
         parent: null,
@@ -59,4 +54,31 @@ exports.sourceNodes = async (
     console.error(`Could not retrieve episodes for podcast ${podcastId}`, e);
     return;
   }
+};
+
+// https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/#createResolvers
+// resolve the each item in the array of `authors` to a `People` node
+exports.createResolvers = ({ createResolvers }) => {
+  const resolvers = {
+    SimplecastEpisode: {
+      authorNodes: {
+        type: ['People'],
+        resolve: (source, args, context, info) =>
+          Promise.all(
+            source.authors.map(author =>
+              context.nodeModel.runQuery({
+                query: {
+                  filter: {
+                    name: { eq: author },
+                  },
+                },
+                type: 'People',
+                firstOnly: true,
+              })
+            )
+          ),
+      },
+    },
+  };
+  createResolvers(resolvers);
 };

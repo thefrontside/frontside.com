@@ -1,105 +1,104 @@
-const { append } = require('funcadelic');
 const _slugify = require('slugify');
 
-const slugify = str => _slugify(str, {
-  lower: true
-});
-
-const bySlugPredicate = regEx => node => node.fields.slug && regEx.test(node.fields.slug)
-
-exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions;
-  if (node.internal.type === 'SimplecastEpisode') {
-    const authors = node.authorList.map(
-      author => `/people/${slugify(author)}/`
-    );
-    createNodeField({
-      name: 'authors',
-      node,
-      value: authors,
-    });
-  }
-}
-
-exports.sourceNodes = function sourceNodes({ actions: { createNodeField }, getNodes }) {
-
-  let markdownFiles = getNodes().filter(node => node.internal.type === 'MarkdownRemark')
-
-  let people = markdownFiles
-    .filter(bySlugPredicate(/^\/people/))
-    .map(node => append(node, {
-      get slug() {
-        return slugify(node.frontmatter.name)
-      }
-    }));
-
-  let peopleBySlug = people.reduce((people, person) => ({
-    ...people,
-    [person.slug]: person
-  }), {});
-
-  let posts = markdownFiles
-    .filter(bySlugPredicate(/^\/blog/))
-    .map(node => append(node, {
-      get authors() {
-        let post = this;
-        return node.frontmatter.author.split(', ')
-          .map(slugify)
-          .map(slug => {
-            let person = peopleBySlug[slug];
-            if (person) {
-              return person;
-            } else {
-              console.log(`Could not find person:${slug} to relate post: ${post.frontmatter.title}`);
-            }
-          }).filter(Boolean);
-      }
-    }));
-
-  let episodes = getNodes()
-    .filter(node => node.internal.type === 'SimplecastEpisode')
-    .map(node => append(node, {
-      get authors() {
-        let episode = this;
-        return node.authorList
-          .map(author => {
-            let person = peopleBySlug[author];
-            if (person) {
-              return person;
-            } else {
-              console.log(`Could not find person:${author} to relate to episode: ${episode.title}`);
-            }
-          }).filter(Boolean);
-      }
-    }));
-
-  people
-    .map(person => append(person, {
-      get posts() {
-        return posts.filter(post => post.authors.includes(person))
-      },
-      get episodes() {
-        return episodes.filter(episode => episode.authors.includes(person));
-      }
-    }))
-    .forEach(node => {
-      createNodeField({
-        node,
-        name: 'posts',
-        value: node.posts.map(post => post.id)
-      })
-      createNodeField({
-        node,
-        name: 'episodes',
-        value: node.episodes.map(episode => episode.id)
-      })
-    });
-
-  [...posts].forEach(node => {
-    createNodeField({
-      node,
-      name: 'authors',
-      value: node.authors.map(author => author.id)
-    });
+const slugify = str =>
+  _slugify(str, {
+    lower: true,
   });
+
+// blog posts and people are pulled in through gatsby-source-filesystem and
+// transformed via gatsby-transformer remark, we respond to this and form up the
+// data a bit to make it easier to query
+exports.onCreateNode = ({
+  node,
+  actions: { createNode, createNodeField },
+  createNodeId,
+  createContentDigest,
+  getNode,
+}) => {
+  if (node.internal.type === 'MarkdownRemark') {
+    const parent = getNode(node.parent);
+    // the gatsby-source-filesystem config sets the sourceInstanceName to `people`
+    if (parent.sourceInstanceName === 'people') {
+      let nodeId = createNodeId(`person-${node.id}`);
+      // create a new People node that links up the person, their posts and their episodes
+      return createNode({
+        name: node.frontmatter.name,
+        slug: slugify(node.frontmatter.name),
+        // Required fields.
+        id: nodeId,
+        parent: node.id,
+        person___NODE: node.id,
+        children: [],
+        internal: {
+          type: `People`,
+          contentDigest: createContentDigest(node),
+          description: `A Frontside Team Member."`, // optional
+        },
+      });
+
+      // the gatsby-source-filesystem config sets the sourceInstanceName to `blog`
+    } else if (parent.sourceInstanceName === 'blog') {
+      // add a `fields.authorNodes` that takes the string of authors and
+      // links them to our `Person` nodes created above
+      // we also add a mapping to the gatsby-config.js to let gatsby know the appropriate type
+      // since we don't have real control of this node (in the future maybe we make a BlogPost node?)
+      return createNodeField({
+        node,
+        name: 'authorNodes',
+        value: node.frontmatter.author.split(',').map(author => author.trim()),
+      });
+    }
+  }
+};
+
+// https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/#createSchemaCustomization
+// define the `People` node that we will populate
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type People implements Node {
+      posts: [MarkdownRemark]
+      episodes: [SimplecastEpisode]
+    }
+    `;
+
+  createTypes(typeDefs);
+};
+
+// https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/#createResolvers
+// set up a resolver which links the posts / episodes property to the related nodes
+// based on the `Person` node values
+exports.createResolvers = ({ createResolvers }) => {
+  const resolvers = {
+    People: {
+      posts: {
+        type: ['MarkdownRemark'],
+        resolve: (source, args, context, info) => {
+          return context.nodeModel.runQuery({
+            query: {
+              filter: {
+                frontmatter: { author: { eq: source.name } },
+              },
+            },
+            type: 'MarkdownRemark',
+          });
+        },
+      },
+      episodes: {
+        type: ['SimplecastEpisode'],
+        resolve: (source, args, context, info) => {
+          return context.nodeModel.runQuery({
+            query: {
+              filter: {
+                authors: { in: source.slug },
+              },
+            },
+            type: 'SimplecastEpisode',
+          });
+        },
+      },
+    },
+  };
+
+  createResolvers(resolvers);
 };
