@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
-import Layout from '../../components/layout';
-import EpisodesList from '../../components/episodes-list';
-import Text from '../../components/text';
+import Layout from '../components/layout';
+import EpisodesList from '../components/episodes-list';
+import Text from '../components/text';
 
 const PodcastPage = ({
   data: {
@@ -22,11 +22,11 @@ const PodcastPage = ({
             id: node.id,
             description: node.description,
             date: new Date(node.publishedAt).toLocaleDateString('en-US'),
-            authors: node.fields.authors.filter(Boolean).map(author => ({
-              slug: author.fields.slug,
-              name: author.frontmatter.name,
+            authors: node.authorNodes.filter(Boolean).map(author => ({
+              slug: author.slug,
+              name: author.name,
             })),
-          }
+          };
         })}
       />
     </Layout>
@@ -54,15 +54,9 @@ export const episodesQuery = graphql`
           description
           slug
           publishedAt
-          fields {
-            authors {
-              frontmatter {
-                name
-              }
-              fields {
-                slug
-              }
-            }
+          authorNodes {
+            name
+            slug
           }
         }
       }

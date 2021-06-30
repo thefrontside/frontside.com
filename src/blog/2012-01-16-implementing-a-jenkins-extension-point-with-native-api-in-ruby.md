@@ -3,7 +3,7 @@ templateKey: blog-post
 title: Implementing a Jenkins Extension Point with the Native Java API inside a Ruby Plugin
 date: 2012-01-16T12:00:00.000Z
 author: Charles Lowell
-tags: 
+tags:
   - jenkins
   - ruby
   - java
@@ -57,7 +57,7 @@ a wonderful extension point that allows you to receive callbacks
 at each point during the actual running of a build. There's currently
 no nice ruby API for it, but we won't let that stop us.
 
-First, let's create a new plugin called *my-listener*. We'll do this
+First, let's create a new plugin called _my-listener_. We'll do this
 with the `jpi new` command.
 
     legolas:Jenkins cowboyd$ jpi new my-listener
@@ -87,7 +87,7 @@ go ahead and start our class definition inside that file.
 There's a couple key takeaways here. First, notice that we use
 JRuby integration to extend the class
 `hudson.model.listeners.RunListener` directly. Second, and this is
-a gotcha anytime you extend a Java class: you *must* invoke one of
+a gotcha anytime you extend a Java class: you _must_ invoke one of
 the Java super constructors if it does not have a default
 constructor. I can't tell you how many times I've been bitten by this.
 
@@ -157,8 +157,7 @@ I hope that if you're considering writing your next (or your first!)
 Jenkins plugin in Ruby, you'll feel confident that you can always
 fall back to the native APIs at any point.
 
-
-[1]:http://blog.thefrontside.net/2011/05/12/what-it-take-to-bring-ruby-to-jenkins
-[2]:https://github.com/jenkinsci/jenkins/blob/master/core/src/main/java/hudson/tasks/BuildStep.java
-[3]:https://github.com/jenkinsci/jenkins-plugin-runtime.rb/blob/master/lib/jenkins/tasks/build_step.rb
-[4]:https://github.com/jenkinsci/jenkins/blob/master/core/src/main/java/hudson/model/listeners/RunListener.java
+[1]: http://blog.thefrontside.net/2011/05/12/what-it-take-to-bring-ruby-to-jenkins
+[2]: https://github.com/jenkinsci/jenkins/blob/master/core/src/main/java/hudson/tasks/BuildStep.java
+[3]: https://github.com/jenkinsci/jenkins-plugin-runtime.rb/blob/master/lib/jenkins/tasks/build_step.rb
+[4]: https://github.com/jenkinsci/jenkins/blob/master/core/src/main/java/hudson/model/listeners/RunListener.java

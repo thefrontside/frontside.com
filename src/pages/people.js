@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../../components/layout';
+import Layout from '../components/layout';
 
 const PeoplePage = () => {
   return (
@@ -19,25 +19,23 @@ export const peoplePageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/people/" } }) {
-      group(field: frontmatter___alumnus) {
-        fieldValue
+    allPeople {
+      group(field: person___frontmatter___alumnus) {
         edges {
           node {
-            frontmatter {
-              name
-              title
-              intro
-              img {
-                childImageSharp {
-                  fixed(width: 300) {
-                    ...GatsbyImageSharpFixed
+            name
+            person {
+              frontmatter {
+                title
+                intro
+                img {
+                  childImageSharp {
+                    fixed(width: 300) {
+                      ...GatsbyImageSharpFixed
+                    }
                   }
                 }
               }
-            }
-            fields {
-              slug
             }
           }
         }

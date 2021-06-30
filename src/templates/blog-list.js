@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
 import PostsList from '../components/posts-list';
 import Pagination from '../components/pagination';
@@ -104,7 +104,6 @@ export default function BlogPage({
   },
   pageContext: { page, pages },
 }) {
-
   let formattedPosts = posts.map(({ node }) => ({
     id: node.id,
     slug: node.fields.slug,
@@ -113,13 +112,12 @@ export default function BlogPage({
     description: node.frontmatter.description,
     excerpt: node.excerpt,
     image:
-      (node.frontmatter.img == null)
+      node.frontmatter.img == null
         ? null
-        : node.frontmatter.img.childImageSharp.resolutions.src
-    ,
-    authors: node.fields.authors.map(author => ({
-      slug: author.fields.slug,
-      name: author.frontmatter.name,
+        : node.frontmatter.img.childImageSharp.resolutions.src,
+    authors: node.fields.authorNodes.map(author => ({
+      slug: author.slug,
+      name: author.name,
     })),
   }));
 
@@ -128,29 +126,36 @@ export default function BlogPage({
       formattedPosts[0],
       PodcastFeaturedEpisodes[0],
       PodcastFeaturedEpisodes[1],
-      ...formattedPosts.slice(1,3),
+      ...formattedPosts.slice(1, 3),
       PodcastFeaturedEpisodes[2],
       PodcastFeaturedEpisodes[3],
-      ...formattedPosts.slice(3,5),
+      ...formattedPosts.slice(3, 5),
       PodcastFeaturedEpisodes[4],
       ...formattedPosts.slice(5),
-      PodcastFeaturedEpisodes[5]
+      PodcastFeaturedEpisodes[5],
     ];
     formattedPosts = postsAndEpisodes;
   }
 
-  
-
   return (
     <Layout title={page === 1 ? 'Blog' : `Blog - page ${page}`}>
       <Helmet>
-        <link rel="alternate" type="application/rss+xml" title="The Frontside Podcast RSS" href="https://rss.simplecast.com/podcasts/96/rss" />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="The Frontside Podcast RSS"
+          href="https://rss.simplecast.com/podcasts/96/rss"
+        />
       </Helmet>
       <section className="widewrapper herowrapper w-container">
         <div className="herotext">
-          <h1 className="heading">Sharing <span className="gradient-text">Frontside's</span> latest discoveries</h1>
+          <h1 className="heading">
+            Sharing <span className="gradient-text">Frontside's</span> latest
+            discoveries
+          </h1>
           <p className="subheader">
-            Find useful ideas and practical tips on apps engineering through our articles and podcast.
+            Find useful ideas and practical tips on apps engineering through our
+            articles and podcast.
           </p>
           {page > 1 ? (
             <div class="hero-navigation">
@@ -200,13 +205,9 @@ export const pageQuery = graphql`
           id
           fields {
             slug
-            authors {
-              fields {
-                slug
-              }
-              frontmatter {
-                name
-              }
+            authorNodes {
+              name
+              slug
             }
           }
           frontmatter {

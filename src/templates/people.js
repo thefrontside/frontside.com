@@ -8,9 +8,12 @@ import './people.css';
 
 const PersonPage = ({
   data: {
-    markdownRemark: {
-      frontmatter: { name, title: personTitle, img, twitter, github, bio },
-      fields: { posts, episodes },
+    people: {
+      person: {
+        frontmatter: { name, title: personTitle, img, twitter, github, bio },
+      },
+      posts,
+      episodes,
     },
   },
 }) => {
@@ -75,42 +78,33 @@ export const peopleQuery = graphql`
         title
       }
     }
-    markdownRemark(id: { eq: $id }) {
-      html
-      frontmatter {
-        name
-        title
-        img {
-          childImageSharp {
-            fixed(width: 300) {
-              ...GatsbyImageSharpFixed
-            }
-          }
-        }
-        twitter
-        github
-        bio
-      }
-      fields {
-        slug
-        episodes {
+    people(id: { eq: $id }) {
+      person {
+        frontmatter {
+          name
           title
-          id
-          number
-          slug
-        }
-        posts {
-          frontmatter {
-            title
-          }
-          fields {
-            slug
-            authors {
-              frontmatter {
-                title
+          img {
+            childImageSharp {
+              fixed(width: 300) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
+          twitter
+          github
+          bio
+        }
+      }
+      episodes {
+        title
+        slug
+      }
+      posts {
+        frontmatter {
+          title
+        }
+        fields {
+          slug
         }
       }
     }

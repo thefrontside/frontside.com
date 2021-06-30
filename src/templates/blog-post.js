@@ -9,39 +9,40 @@ import SubscribeForm from '../components/subscribe-form';
 
 import './blog-post.css';
 
-export const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
+export const BlogPostTemplate = ({
+  content,
+  tags,
+  title,
+  authors,
+  date,
+  image,
+}) => {
   tags = Array.isArray(tags) ? tags : [tags].filter(Boolean);
 
   return (
     <>
       <section className="widewrapper herowrapper blog-post-hero w-container">
         <div className="herotext">
-          <h1 className="heading blog-post-heading">
-            {title}
-          </h1>
+          <h1 className="heading blog-post-heading">{title}</h1>
           <p className="subheader blog-post-meta">
             By
             {authors.map((author, i) => (
-            <>
-              {i === 0 ? '' : ((authors.length) > 2 ? ', ' : ' and ')}
-              {/* Author links will lead to team member page, which is currently pending. */}
-              {/* <Link key={author.slug} to={author.slug}>
+              <>
+                {i === 0 ? '' : authors.length > 2 ? ', ' : ' and '}
+                {/* Author links will lead to team member page, which is currently pending. */}
+                {/* <Link key={author.slug} to={author.slug}>
                 <Text>{author.name}</Text>
               </Link> */}
-              <Text key={author.slug} >{author.name}</Text>
-            </>
-          ))}
+                <Text key={author.slug}>{author.name}</Text>
+              </>
+            ))}
             <br />
-            <span class="blog-post-date">
-              {date}
-            </span>
+            <span class="blog-post-date">{date}</span>
           </p>
           <ul class="blog-post-tags">
             {tags.map((tag, i) => (
               <li key={`tag-${tag}`} class="blog-post-tag">
-                <Link to={`/tags/${kebabCase(tag)}/`}>
-                  {tag}
-                </Link>
+                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
               </li>
             ))}
           </ul>
@@ -89,9 +90,9 @@ const BlogPost = ({ data: { markdownRemark: post } }) => {
         description={post.frontmatter.description}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        authors={post.fields.authors.map(author => ({
-          slug: author.fields.slug,
-          name: author.frontmatter.name,
+        authors={post.fields.authorNodes.map(author => ({
+          slug: author.slug,
+          name: author.name,
         }))}
         date={post.frontmatter.date}
         image={
@@ -132,13 +133,9 @@ export const pageQuery = graphql`
       }
       fields {
         slug
-        authors {
-          fields {
-            slug
-          }
-          frontmatter {
-            name
-          }
+        authorNodes {
+          name
+          slug
         }
       }
     }

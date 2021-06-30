@@ -16,8 +16,8 @@ export default function EpisodeRoute({
       slug,
       descriptionHtml,
       longDescriptionHtml,
-      fields: { authors },
       publishedAt,
+      authorNodes,
     },
   },
 }) {
@@ -33,14 +33,14 @@ export default function EpisodeRoute({
           <h1 className="heading blog-post-heading">{title}</h1>
           <p className="subheader blog-post-meta">
             Hosted by
-            {authors.filter(Boolean).map((author, i) => (
+            {authorNodes.filter(Boolean).map((author, i) => (
               <>
-                {i === 0 ? '' : authors.length > 2 ? ', ' : ' and '}
+                {i === 0 ? '' : authorNodes.length > 2 ? ', ' : ' and '}
                 {/* Author links will lead to team member page, which is currently pending. */}
                 {/* <Link key={author.slug} to={author.slug}>
                 <Text>{author.name}</Text>
               </Link> */}
-                <Text key={author.fields.slug}>{author.frontmatter.name}</Text>
+                <Text key={author?.slug}>{author.name}</Text>
               </>
             ))}
             <br />
@@ -94,15 +94,9 @@ export const episodePageQuery = graphql`
       descriptionHtml
       longDescriptionHtml
       publishedAt
-      fields {
-        authors {
-          frontmatter {
-            name
-          }
-          fields {
-            slug
-          }
-        }
+      authorNodes {
+        name
+        slug
       }
     }
   }

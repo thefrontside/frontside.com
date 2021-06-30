@@ -1,8 +1,8 @@
 import React from 'react';
 import { kebabCase } from 'lodash';
 import { Link, graphql } from 'gatsby';
-import Layout from '../../components/layout';
-import Content from '../../components/content';
+import Layout from '../components/layout';
+import Content from '../components/content';
 
 const TagsPage = ({
   data: {

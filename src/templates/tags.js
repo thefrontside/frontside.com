@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostsList from '../components/posts-list';
 
-const TagRoute = ({data, pageContext}) => {
+const TagRoute = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.edges;
   const tag = pageContext.tag;
 
@@ -27,15 +27,15 @@ const TagRoute = ({data, pageContext}) => {
           date: node.frontmatter.date,
           description: node.frontmatter.description,
           excerpt: node.excerpt,
-          authors: node.fields.authors.map(author => ({
-            slug: author.fields.slug,
-            name: author.frontmatter.name,
+          authors: node.fields.authorNodes.map(author => ({
+            slug: author.slug,
+            name: author.name,
           })),
         }))}
       />
     </Layout>
   );
-}
+};
 
 export default TagRoute;
 
@@ -58,18 +58,13 @@ export const tagPageQuery = graphql`
           id
           fields {
             slug
-            authors {
-              fields {
-                slug
-              }
-              frontmatter {
-                name
-              }
+            authorNodes {
+              name
+              slug
             }
           }
           frontmatter {
             title
-            templateKey
             description
             date(formatString: "MMMM DD, YYYY")
           }
