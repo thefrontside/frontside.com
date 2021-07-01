@@ -2,6 +2,7 @@ const _ = require('lodash');
 const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+const fs = require('fs/promises');
 
 const POSTS_PER_PAGE = 8;
 const getBlogUrl = page => `/blog${page > 1 ? `/${page}` : ''}`;
@@ -149,4 +150,38 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       value,
     });
   }
+};
+
+const webflowHTML = [
+  'about',
+  'code-of-conduct',
+  'consulting',
+  'contact-thanks',
+  'contact',
+  'index',
+  'privacy-policy',
+  'tools',
+];
+
+// sets the dev server to serve the webflow files instead of gatsby produced things
+exports.onCreateDevServer = async ({ app }) => {
+  const webflowFiles = await Promise.all(
+    webflowHTML.map(async route => {
+      const file = await fs.readFile(`./static/${route}.html`);
+      return { route, file };
+    })
+  );
+
+  webflowFiles.forEach(staticRoute => {
+    const route = staticRoute.route === 'index' ? '' : staticRoute.route;
+    app.get(`/${route}`, function(req, res) {
+      res.set('Content-Type', 'text/html').send(staticRoute.file.toString());
+    });
+  });
+};
+
+// webflow pages in static get copied automatically, but it won't overwrite
+// if a page exists so we manually do that here
+exports.onPostBuild = async () => {
+  await fs.copyFile('./static/index.html', './public/index.html');
 };

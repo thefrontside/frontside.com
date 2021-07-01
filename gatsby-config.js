@@ -162,7 +162,6 @@ module.exports = {
                 siteUrl
               }
             }
-  
             allSitePage {
               edges {
                 node {
@@ -171,6 +170,22 @@ module.exports = {
               }
             }
         }`,
+        // this won't be supported until we upgrade to gatsby v3
+        // resolvePages: async ({ allSitePage: { edges: allPages } }) => {
+        //   console.debug(allPages);
+        //   return allPages
+        //     .map(edge => ({ path: node.path }))
+        //     .concat([
+        //       'about',
+        //       'code-of-conduct',
+        //       'consulting',
+        //       'contact-thanks',
+        //       'contact',
+        //       'index',
+        //       'privacy-policy',
+        //       'tools',
+        //     ]);
+        // },
       },
     },
     {
