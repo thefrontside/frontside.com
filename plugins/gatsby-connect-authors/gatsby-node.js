@@ -90,7 +90,7 @@ exports.createResolvers = ({ createResolvers }) => {
           return context.nodeModel.runQuery({
             query: {
               filter: {
-                authors: { in: source.name },
+                authors: { eq: source.name },
               },
             },
             type: 'SimplecastEpisode',
