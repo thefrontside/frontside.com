@@ -65,6 +65,7 @@
     "serve": "gatsby serve",
     "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "check-urls": "node ./lib/check-urls/index.js",
     "verify-sitemap": "./lib/verify-sitemap/index.js"
   },
   "volta": {

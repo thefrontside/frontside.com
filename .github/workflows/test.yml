@@ -1,0 +1,21 @@
+name: test
+
+on: pull_request
+
+jobs:
+  stable-urls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v2
+      - uses: volta-cli/action@v1
+      - run: yarn
+      - name: generate url hash
+        run: yarn check-urls
+        id: url-hash
+      - name: build website and sync sitemap.txt
+        run: yarn build
+        env:
+          SIMPLECAST_API: ${{ secrets.SIMPLECAST_API }}
+      - name: check urls are stable
+        run: yarn check-urls ${{ steps.url-hash.outputs.url-hash }}
