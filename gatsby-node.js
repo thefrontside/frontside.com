@@ -178,7 +178,7 @@ exports.onPostBuild = async ({ graphql }) => {
   // then our PR makes makes adding a new page an explicit intention
   const { data: queryRecords, errors } = await graphql(`
     {
-      allSitePage {
+      allSitePage(sort: { fields: path }) {
         edges {
           node {
             path
