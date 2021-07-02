@@ -4,7 +4,7 @@ import Layout from '../components/layout';
 import PostsList from '../components/posts-list';
 
 const TagRoute = ({ data, pageContext }) => {
-  const posts = data.allMarkdownRemark.edges;
+  const posts = data.allBlogPost.edges;
   const tag = pageContext.tag;
 
   return (
@@ -22,12 +22,12 @@ const TagRoute = ({ data, pageContext }) => {
         }
         posts={posts.map(({ node }) => ({
           id: node.id,
-          slug: node.fields.slug,
-          title: node.frontmatter.title,
-          date: node.frontmatter.date,
-          description: node.frontmatter.description,
-          excerpt: node.excerpt,
-          authors: node.fields.authorNodes.map(author => ({
+          slug: node.slug,
+          title: node.post.frontmatter.title,
+          date: node.post.frontmatter.date,
+          description: node.post.frontmatter.description,
+          excerpt: node.post.excerpt,
+          authors: node.authorNodes.map(author => ({
             slug: author.slug,
             name: author.name,
           })),
@@ -46,27 +46,27 @@ export const tagPageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(
+    allBlogPost(
       limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      sort: { fields: [post___frontmatter___date], order: DESC }
+      filter: { post: { frontmatter: { tags: { in: [$tag] } } } }
     ) {
       totalCount
       edges {
         node {
-          excerpt(pruneLength: 200)
           id
-          fields {
+          slug
+          title
+          authorNodes {
+            name
             slug
-            authorNodes {
-              name
-              slug
-            }
           }
-          frontmatter {
-            title
-            description
-            date(formatString: "MMMM DD, YYYY")
+          post {
+            excerpt(pruneLength: 200)
+            frontmatter {
+              description
+              date(formatString: "MMMM DD, YYYY")
+            }
           }
         }
       }

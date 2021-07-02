@@ -41,8 +41,8 @@ const PersonPage = ({
             <h2>Blog Posts</h2>
             <ul className="list-style-none">
               {posts.map(post => (
-                <li key={post.fields.slug}>
-                  <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+                <li key={post.slug}>
+                  <Link to={post.slug}>{post.title}</Link>
                 </li>
               ))}
             </ul>
@@ -100,12 +100,8 @@ export const peopleQuery = graphql`
         slug
       }
       posts {
-        frontmatter {
-          title
-        }
-        fields {
-          slug
-        }
+        title
+        slug
       }
     }
   }

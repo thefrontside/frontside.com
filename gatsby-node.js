@@ -10,16 +10,14 @@ const getBlogUrl = page => `/blog${page > 1 ? `/${page}` : ''}`;
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   let result = await graphql(`
     {
-      allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
+      allBlogPost {
         totalCount
         nodes {
-          childMarkdownRemark {
+          id
+          slug
+          post {
             frontmatter {
               tags
-            }
-            id
-            fields {
-              slug
             }
           }
         }
@@ -47,7 +45,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     throw result.errors;
   }
 
-  const posts = result.data.allFile.nodes;
+  const posts = result.data.allBlogPost.nodes;
 
   // creates a set of paginated blog list pages
   const pages = Math.floor(posts.length / POSTS_PER_PAGE);
@@ -65,7 +63,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   });
 
   // create a page for each post
-  posts.forEach(({ childMarkdownRemark: { id, fields: { slug } } }) =>
+  posts.forEach(({ id, slug }) =>
     createPage({
       path: slug,
       component: path.resolve(`src/templates/blog-post.js`),
@@ -77,23 +75,13 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   );
 
   // find all tags
-  let tags = posts.reduce(
-    (
-      acc,
-      {
-        childMarkdownRemark: {
-          frontmatter: { tags },
-        },
-      }
-    ) => {
-      if (tags) {
-        return [...acc, ...tags];
-      } else {
-        return acc;
-      }
-    },
-    []
-  );
+  let tags = posts.reduce((acc, { post: { frontmatter: { tags } } }) => {
+    if (tags) {
+      return [...acc, ...tags];
+    } else {
+      return acc;
+    }
+  }, []);
 
   // Eliminate duplicate tags
   tags = _.uniq(tags);
@@ -180,8 +168,34 @@ exports.onCreateDevServer = async ({ app }) => {
   });
 };
 
-// webflow pages in static get copied automatically, but it won't overwrite
-// if a page exists so we manually do that here
-exports.onPostBuild = async () => {
+exports.onPostBuild = async ({ graphql }) => {
+  // webflow pages in static get copied automatically, but it won't overwrite
+  // if a page exists so we manually do that here
   await fs.copyFile('./static/index.html', './public/index.html');
+
+  // to confirm all of our urls are coming through as expected
+  // we create and commit a list of urls in the text file
+  // then our PR makes makes adding a new page an explicit intention
+  const { data: queryRecords, errors } = await graphql(`
+    {
+      allSitePage {
+        edges {
+          node {
+            path
+          }
+        }
+      }
+    }
+  `);
+
+  const urlList = queryRecords.allSitePage.edges
+    .map(({ node }) => node.path)
+    .concat(
+      webflowHTML
+        .filter(staticRoute => staticRoute !== 'index')
+        .map(staticRoute => `/${staticRoute}`)
+    )
+    .join('\n');
+
+  await fs.writeFile('./sitemap.txt', urlList);
 };

@@ -22,7 +22,7 @@ import logoStandard from '../img/clients/standard-chartered-logo.svg';
 
 export default function IndexPage({
   data: {
-    allMarkdownRemark: { edges: posts },
+    allBlogPost: { edges: posts },
     allSimplecastEpisode: { edges: episodes },
   },
 }) {
@@ -102,10 +102,10 @@ export default function IndexPage({
             linkTo="/blog"
             posts={posts.map(({ node }) => ({
               id: node.id,
-              slug: node.fields.slug,
-              title: node.frontmatter.title,
-              date: node.frontmatter.date,
-              authors: node.fields.authorNodes.map(author => ({
+              slug: node.slug,
+              title: node.title,
+              date: node.post.frontmatter.date,
+              authors: node.authorNodes.map(author => ({
                 slug: author.slug,
                 name: author.name,
               })),
@@ -116,7 +116,7 @@ export default function IndexPage({
             linkTo="/podcast"
             posts={episodes.map(({ node }) => ({
               id: node.id,
-              slug: `/podcast/${node.slug}`,
+              slug: `${node.slug}`,
               title: node.title,
               date: node.publishedAt,
               authors: node.authorNodes.filter(Boolean).map(author => ({
@@ -144,26 +144,24 @@ IndexPage.propTypes = {
 
 export const indexPageQuery = graphql`
   query IndexQuery {
-    allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+    allBlogPost(
+      sort: { order: DESC, fields: [post___frontmatter___date] }
       limit: 5
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
           id
-          fields {
-            slug
-            authorNodes {
-              name
-              slug
+          title
+          slug
+          post {
+            excerpt(pruneLength: 400)
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
             }
           }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
+          authorNodes {
+            name
+            slug
           }
         }
       }

@@ -18,55 +18,62 @@ const PodcastFeaturedEpisodes = [
     slug: '/podcast/open-telemetry-with-austin-parker/',
     image: '/img/podcast-heroes/open-telemetry-with-austin-parker.png',
     title: 'OpenTelemetry with Austin Parker',
-    description: 'In this episode, Austin Parker, Principal Developer Advocate at Lightstep talks about the OpenTelemetry Framework, which is an observability framework for cloud-native software and a collection of tools, APIs, and SDKs.',
+    description:
+      'In this episode, Austin Parker, Principal Developer Advocate at Lightstep talks about the OpenTelemetry Framework, which is an observability framework for cloud-native software and a collection of tools, APIs, and SDKs.',
     authors: [
       {
         key: 'charles-lowell',
-        name: 'Charles Lowell'
-      }
-    ]
+        name: 'Charles Lowell',
+      },
+    ],
   },
   {
     fromPodcast: true,
     id: 'paying-open-source-contributors-with-puneet-lath',
     slug: '/podcast/paying-open-source-contributors-with-puneet-lath/',
-    image: '/img/podcast-heroes/paying-open-source-contributors-with-puneet-lath.png',
+    image:
+      '/img/podcast-heroes/paying-open-source-contributors-with-puneet-lath.png',
     title: 'Paying Open Source Contributors with Puneet Lath',
-    description: 'In this episode, Puneet Lath, Director of Research and Development at Expensify, talks about the unique way Expensify is using open source with their products by not just open-sourcing software tools but also open-sourcing the front end of the product itself',
+    description:
+      'In this episode, Puneet Lath, Director of Research and Development at Expensify, talks about the unique way Expensify is using open source with their products by not just open-sourcing software tools but also open-sourcing the front end of the product itself',
     authors: [
       {
         key: 'charles-lowell',
-        name: 'Charles Lowell'
-      }
-    ]
+        name: 'Charles Lowell',
+      },
+    ],
   },
   {
     fromPodcast: true,
     id: 'product-roadmaps-and-tooling-planning-with-steve-pereira',
     slug: '/podcast/product-roadmaps-and-tooling-planning-with-steve-pereira/',
-    image: '/img/podcast-heroes/product-roadmaps-and-tooling-planning-with-steve-pereira.png',
+    image:
+      '/img/podcast-heroes/product-roadmaps-and-tooling-planning-with-steve-pereira.png',
     title: 'Product Roadmaps and Tooling Planning with Steve Pereira',
-    description: 'In this episode, Steve Pereira—the founder of Visible—talks about how their unique approach to mapping helps customers get products out of the door fast and efficiently.',
+    description:
+      'In this episode, Steve Pereira—the founder of Visible—talks about how their unique approach to mapping helps customers get products out of the door fast and efficiently.',
     authors: [
       {
         key: 'charles-lowell',
-        name: 'Charles Lowell'
-      }
-    ]
+        name: 'Charles Lowell',
+      },
+    ],
   },
   {
     fromPodcast: true,
     id: 'data-trust-and-transparency-a-covid-19-vaccine-story',
     slug: '/podcast/data-trust-and-transparency-a-covid-19-vaccine-story',
-    image: '/img/podcast-heroes/data-trust-and-transparency-a-covid-19-vaccine-story.png',
+    image:
+      '/img/podcast-heroes/data-trust-and-transparency-a-covid-19-vaccine-story.png',
     title: 'Data, Trust, and Transparency: A COVID-19 Vaccine Story',
-    description: 'Data is at the center of everything we do. Yet, how can we trust it in a world where more "organic" food is consumed than produced? As COVID-19 vaccines are getting ready to be offered at a never-seen scale, blockchain can help develop the trust and transparency that we need.',
+    description:
+      'Data is at the center of everything we do. Yet, how can we trust it in a world where more "organic" food is consumed than produced? As COVID-19 vaccines are getting ready to be offered at a never-seen scale, blockchain can help develop the trust and transparency that we need.',
     authors: [
       {
         key: 'charles-lowell',
-        name: 'Charles Lowell'
-      }
-    ]
+        name: 'Charles Lowell',
+      },
+    ],
   },
   {
     fromPodcast: true,
@@ -74,48 +81,51 @@ const PodcastFeaturedEpisodes = [
     slug: '/podcast/intro-to-rush-js-with-co-author-pete-gonzales/',
     image: '/img/2020-pod-rush.png',
     title: 'Intro to Rush.js with co-author Pete Gonzales',
-    description: 'Monorepos are the new muse of library maintainers, but what happens when your project grows past 100 packages in the same repo? What about thousands? Rush.js was created for those cases, and Pete—who started the project while working at Microsoft—is here to tell us about it.',
+    description:
+      'Monorepos are the new muse of library maintainers, but what happens when your project grows past 100 packages in the same repo? What about thousands? Rush.js was created for those cases, and Pete—who started the project while working at Microsoft—is here to tell us about it.',
     authors: [
       {
         key: 'charles-lowell',
-        name: 'Charles Lowell'
-      }
-    ]
+        name: 'Charles Lowell',
+      },
+    ],
   },
   {
     fromPodcast: true,
     id: 'repkgs-reasonml',
     slug: '/podcast/repkgs-reasonml',
     image: '/img/2020-reason-podcast.png',
-    title: 'Type systems with ReasonML London organizer Marcel Cutts and Shane Wilson',
-    description: '"Java has done an excellent job at ruining types for everyone for quite a while—explains Marcel after describing the tech pub scene in London—but it\'s important to know there\'s more than one kind of type system." Along with Shane, they outline what\'s exciting about ReasonML and their experience with new languages and tools around types.',
+    title:
+      'Type systems with ReasonML London organizer Marcel Cutts and Shane Wilson',
+    description:
+      "\"Java has done an excellent job at ruining types for everyone for quite a while—explains Marcel after describing the tech pub scene in London—but it's important to know there's more than one kind of type system.\" Along with Shane, they outline what's exciting about ReasonML and their experience with new languages and tools around types.",
     authors: [
       {
         key: 'charles-lowell',
-        name: 'Charles Lowell'
-      }
-    ]
-  }
-]
+        name: 'Charles Lowell',
+      },
+    ],
+  },
+];
 
 export default function BlogPage({
   data: {
-    allMarkdownRemark: { edges: posts },
+    allBlogPost: { edges: posts },
   },
   pageContext: { page, pages },
 }) {
   let formattedPosts = posts.map(({ node }) => ({
     id: node.id,
-    slug: node.fields.slug,
-    title: node.frontmatter.title,
-    date: node.frontmatter.date,
-    description: node.frontmatter.description,
-    excerpt: node.excerpt,
+    slug: node.slug,
+    title: node.title,
+    date: node.post.frontmatter.date,
+    description: node.post.frontmatter.description,
+    excerpt: node.post.excerpt,
     image:
-      node.frontmatter.img == null
+      node.post.frontmatter.img == null
         ? null
-        : node.frontmatter.img.childImageSharp.resolutions.src,
-    authors: node.fields.authorNodes.map(author => ({
+        : node.post.frontmatter.img.childImageSharp.resolutions.src,
+    authors: node.authorNodes.map(author => ({
       slug: author.slug,
       name: author.name,
     })),
@@ -164,7 +174,9 @@ export default function BlogPage({
               </h2>
               <Pagination prefix="/blog" page={page} pages={pages} />
             </div>
-          ) : ''}
+          ) : (
+            ''
+          )}
         </div>
         <div className="consultingheroimage">
           <img src={BlogHeroImage} alt="" />
@@ -193,32 +205,30 @@ BlogPage.propTypes = {
 
 export const pageQuery = graphql`
   query BlogQuery($skip: Int!, $limit: Int!) {
-    allMarkdownRemark(
+    allBlogPost(
       limit: $limit
       skip: $skip
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+      sort: { order: DESC, fields: [post___frontmatter___date] }
     ) {
       edges {
         node {
-          excerpt(pruneLength: 200)
           id
-          fields {
+          slug
+          title
+          authorNodes {
+            name
             slug
-            authorNodes {
-              name
-              slug
-            }
           }
-          frontmatter {
-            title
-            templateKey
-            description
-            date(formatString: "MMMM DD, YYYY")
-            img {
-              childImageSharp {
-                resolutions(width: 600) {
-                  src
+          post {
+            excerpt(pruneLength: 200)
+            frontmatter {
+              description
+              date(formatString: "MMMM DD, YYYY")
+              img {
+                childImageSharp {
+                  resolutions(width: 600) {
+                    src
+                  }
                 }
               }
             }

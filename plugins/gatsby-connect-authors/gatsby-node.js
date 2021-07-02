@@ -1,4 +1,5 @@
 const _slugify = require('slugify');
+const { createFilePath } = require('gatsby-source-filesystem');
 
 const slugify = str =>
   _slugify(str, {
@@ -38,14 +39,29 @@ exports.onCreateNode = ({
 
       // the gatsby-source-filesystem config sets the sourceInstanceName to `blog`
     } else if (parent.sourceInstanceName === 'blog') {
+      let nodeId = createNodeId(`blog-${node.id}`);
       // add a `fields.authorNodes` that takes the string of authors and
       // links them to our `Person` nodes created above
       // we also add a mapping to the gatsby-config.js to let gatsby know the appropriate type
       // since we don't have real control of this node (in the future maybe we make a BlogPost node?)
-      return createNodeField({
-        node,
-        name: 'authorNodes',
-        value: node.frontmatter.author.split(',').map(author => author.trim()),
+      // node.frontmatter.author.split(',').map(author => author.trim())
+
+      return createNode({
+        title: node.frontmatter.title,
+        slug: `/blog${createFilePath({ node, getNode })}`,
+        post___NODE: node.id,
+        authors: node.frontmatter.author
+          .split(',')
+          .map(author => author.trim()),
+        // Required fields.
+        id: nodeId,
+        parent: node.id,
+        children: [],
+        internal: {
+          type: `BlogPost`,
+          contentDigest: createContentDigest(node),
+          description: `A Blog Post."`, // optional
+        },
       });
     }
   }
@@ -57,8 +73,15 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions;
   const typeDefs = `
     type People implements Node {
-      posts: [MarkdownRemark]
+      posts: [BlogPost]
       episodes: [SimplecastEpisode]
+    }
+    type BlogPost implements Node {
+      title: String
+      slug: String
+      authors: [String]
+      authorNodes: [People]
+      post: MarkdownRemark
     }
     `;
 
@@ -72,15 +95,15 @@ exports.createResolvers = ({ createResolvers }) => {
   const resolvers = {
     People: {
       posts: {
-        type: ['MarkdownRemark'],
+        type: ['BlogPost'],
         resolve: (source, args, context, info) => {
           return context.nodeModel.runQuery({
             query: {
               filter: {
-                frontmatter: { author: { eq: source.name } },
+                authors: { eq: source.name },
               },
             },
-            type: 'MarkdownRemark',
+            type: 'BlogPost',
           });
         },
       },
@@ -94,6 +117,23 @@ exports.createResolvers = ({ createResolvers }) => {
               },
             },
             type: 'SimplecastEpisode',
+          });
+        },
+      },
+    },
+    BlogPost: {
+      authorNodes: {
+        type: ['People'],
+        resolve: (source, args, context, info) => {
+          return context.nodeModel.runQuery({
+            query: {
+              filter: {
+                name: {
+                  in: source.authors,
+                },
+              },
+            },
+            type: 'People',
           });
         },
       },
