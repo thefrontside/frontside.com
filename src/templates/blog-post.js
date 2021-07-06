@@ -73,32 +73,32 @@ BlogPostTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-const BlogPost = ({ data: { markdownRemark: post } }) => {
+const BlogPost = ({ data: { blogPost } }) => {
   return (
     <Layout
-      title={post.frontmatter.title}
-      description={post.frontmatter.description}
+      title={blogPost.title}
+      description={blogPost.post.frontmatter.description}
       image={
-        post.frontmatter.img == null
+        blogPost.post.frontmatter.img == null
           ? null
-          : post.frontmatter.img.childImageSharp.resolutions.src
+          : blogPost.post.frontmatter.img.childImageSharp.resolutions.src
       }
-      path={post.fields.slug}
+      path={blogPost.slug}
     >
       <BlogPostTemplate
-        content={post.html}
-        description={post.frontmatter.description}
-        tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-        authors={post.fields.authorNodes.map(author => ({
+        content={blogPost.post.html}
+        description={blogPost.post.frontmatter.description}
+        tags={blogPost.post.frontmatter.tags}
+        title={blogPost.title}
+        authors={blogPost.authorNodes.map(author => ({
           slug: author.slug,
           name: author.name,
         }))}
-        date={post.frontmatter.date}
+        date={blogPost.post.frontmatter.date}
         image={
-          post.frontmatter.img == null
+          blogPost.post.frontmatter.img == null
             ? null
-            : post.frontmatter.img.childImageSharp.resolutions.src
+            : blogPost.post.frontmatter.img.childImageSharp.resolutions.src
         }
       />
     </Layout>
@@ -115,27 +115,27 @@ export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
-    markdownRemark(id: { eq: $id }) {
+    blogPost(id: { eq: $id }) {
       id
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        title
-        description
-        tags
-        img {
-          childImageSharp {
-            resolutions(width: 1000) {
-              src
+      title
+      slug
+      authorNodes {
+        name
+        slug
+      }
+      post {
+        html
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          description
+          tags
+          img {
+            childImageSharp {
+              resolutions(width: 1000) {
+                src
+              }
             }
           }
-        }
-      }
-      fields {
-        slug
-        authorNodes {
-          name
-          slug
         }
       }
     }

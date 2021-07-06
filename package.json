@@ -60,11 +60,12 @@
     "start": "gatsby develop",
     "clean": "gatsby clean",
     "develop:clean": "yarn clean && yarn develop",
-    "build": "gatsby build && cp -R ./static/*.html ./public/",
-    "build:clean": "yarn clean && gatsby build && cp -R ./static/*.html ./public/",
+    "build": "gatsby build",
+    "build:clean": "yarn clean && gatsby build",
     "serve": "gatsby serve",
     "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "check-urls": "node ./lib/check-urls/index.js",
     "verify-sitemap": "./lib/verify-sitemap/index.js"
   },
   "volta": {

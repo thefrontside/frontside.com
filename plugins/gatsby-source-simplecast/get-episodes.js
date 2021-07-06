@@ -46,8 +46,10 @@ async function fetchEpisodes(apiKey, podcastId, limit = 10000, offset = 0) {
     requestOptions
   )
     .then(response => response.json()) // returns list of episodes
-    .then(result =>
-      Promise.all(
+    .then(result => {
+      if (result.status >= 400)
+        throw new Error(`code ${result.status}: ${result.error_message}`);
+      return Promise.all(
         // for each episode, query it direct to get more info
         // this is necessary for obtaining authors for example
         result.collection.map(episodeMetadata =>
@@ -58,8 +60,8 @@ async function fetchEpisodes(apiKey, podcastId, limit = 10000, offset = 0) {
             .then(async response => response.json())
             .catch(error => console.log('error', error))
         )
-      ).catch(error => console.log('error', error))
-    )
+      ).catch(error => console.log('error', error));
+    })
     .then(episodes => ({ episodes })) // place episodes in object
     .catch(error => console.log('error', error));
 }
