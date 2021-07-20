@@ -58,13 +58,16 @@
   "main": "n/a",
   "scripts": {
     "start": "gatsby develop",
+    "start:ntl": "ntl dev",
     "clean": "gatsby clean",
     "develop:clean": "yarn clean && yarn develop",
     "build": "gatsby build",
     "build:clean": "yarn clean && gatsby build",
     "serve": "gatsby serve",
     "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "bigtest ci",
+    "test:server": "bigtest server --launch=chrome",
+    "test:run": "bigtest test",
     "check-urls": "node ./lib/check-urls/index.js",
     "verify-sitemap": "./lib/verify-sitemap/index.js"
   },
@@ -73,6 +76,8 @@
     "yarn": "1.22.10"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.14.5",
+    "bigtest": "^0.14.0",
     "netlify-cli": "^3.30.7"
   }
 }

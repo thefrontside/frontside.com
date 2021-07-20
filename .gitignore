@@ -13,3 +13,4 @@ sitemap.xml
 
 # netlify folder
 .netlify
+.bigtest
