@@ -5,7 +5,7 @@ const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 const fs = require('fs/promises');
 
 const POSTS_PER_PAGE = 8;
-const getBlogUrl = page => `/blog${page > 1 ? `/${page}` : ''}`;
+const getBlogUrl = (page) => `/blog${page > 1 ? `/${page}` : ''}`;
 
 exports.createPages = async ({ actions: { createPage }, graphql }) => {
   let result = await graphql(`
@@ -15,7 +15,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
         nodes {
           id
           slug
-          post {
+          markdown {
             frontmatter {
               tags
             }
@@ -41,7 +41,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   `);
 
   if (result.errors) {
-    result.errors.forEach(e => console.error(e.toString()));
+    result.errors.forEach((e) => console.error(e.toString()));
     throw result.errors;
   }
 
@@ -49,7 +49,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
   // creates a set of paginated blog list pages
   const pages = Math.floor(posts.length / POSTS_PER_PAGE);
-  _.range(pages - 1).forEach(p => {
+  _.range(pages - 1).forEach((p) => {
     createPage({
       path: getBlogUrl(p + 1),
       component: path.resolve('./src/templates/blog-list.js'),
@@ -75,19 +75,29 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   );
 
   // find all tags
-  let tags = posts.reduce((acc, { post: { frontmatter: { tags } } }) => {
-    if (tags) {
-      return [...acc, ...tags];
-    } else {
-      return acc;
-    }
-  }, []);
+  let tags = posts.reduce(
+    (
+      acc,
+      {
+        markdown: {
+          frontmatter: { tags },
+        },
+      }
+    ) => {
+      if (tags) {
+        return [...acc, ...tags];
+      } else {
+        return acc;
+      }
+    },
+    []
+  );
 
   // Eliminate duplicate tags
   tags = _.uniq(tags);
 
   // create a page for each tag
-  tags.forEach(tag =>
+  tags.forEach((tag) =>
     createPage({
       path: `/tags/${_.kebabCase(tag)}/`,
       component: path.resolve(`src/templates/tags.js`),
@@ -98,7 +108,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   );
 
   // create a page for each person
-  result.data.allPeople.nodes.forEach(node =>
+  result.data.allPeople.nodes.forEach((node) =>
     createPage({
       path: node.slug,
       component: path.resolve(`src/templates/people.js`),
@@ -154,15 +164,15 @@ const webflowHTML = [
 // sets the dev server to serve the webflow files instead of gatsby produced things
 exports.onCreateDevServer = async ({ app }) => {
   const webflowFiles = await Promise.all(
-    webflowHTML.map(async route => {
+    webflowHTML.map(async (route) => {
       const file = await fs.readFile(`./static/${route}.html`);
       return { route, file };
     })
   );
 
-  webflowFiles.forEach(staticRoute => {
+  webflowFiles.forEach((staticRoute) => {
     const route = staticRoute.route === 'index' ? '' : staticRoute.route;
-    app.get(`/${route}`, function(req, res) {
+    app.get(`/${route}`, function (req, res) {
       res.set('Content-Type', 'text/html').send(staticRoute.file.toString());
     });
   });
@@ -192,8 +202,8 @@ exports.onPostBuild = async ({ graphql }) => {
     .map(({ node }) => node.path)
     .concat(
       webflowHTML
-        .filter(staticRoute => staticRoute !== 'index')
-        .map(staticRoute => `/${staticRoute}`)
+        .filter((staticRoute) => staticRoute !== 'index')
+        .map((staticRoute) => `/${staticRoute}`)
     )
     .join('\n');
 

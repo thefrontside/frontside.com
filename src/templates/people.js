@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import Content from '../components/content';
 import './people.css';
 
@@ -12,7 +12,7 @@ const PersonPage = ({
       person: {
         frontmatter: { name, title: personTitle, img, twitter, github, bio },
       },
-      posts,
+      blogPosts,
       episodes,
     },
   },
@@ -20,7 +20,7 @@ const PersonPage = ({
   return (
     <Layout title="Team">
       <Content>
-        {img && <Img fixed={img.childImageSharp.fixed} />}
+        {img && <GatsbyImage image={img.childImageSharp.gatsbyImageData} />}
         <h1>{name}</h1>
         <div className="person-title">{personTitle}</div>
         <p>{bio}</p>
@@ -36,11 +36,11 @@ const PersonPage = ({
             </li>
           )}
         </ul>
-        {posts && posts.length ? (
+        {blogPosts && blogPosts.length ? (
           <>
             <h2>Blog Posts</h2>
             <ul className="list-style-none">
-              {posts.map(post => (
+              {blogPosts.map((post) => (
                 <li key={post.slug}>
                   <Link to={post.slug}>{post.title}</Link>
                 </li>
@@ -52,7 +52,7 @@ const PersonPage = ({
           <>
             <h2>Podcast Episodes</h2>
             <ul className="list-style-none">
-              {episodes.map(episode => (
+              {episodes.map((episode) => (
                 <li key={episode.number}>
                   <Link to={`/podcast/${episode.slug}`}>{episode.title}</Link>
                 </li>
@@ -85,9 +85,7 @@ export const peopleQuery = graphql`
           title
           img {
             childImageSharp {
-              fixed(width: 300) {
-                ...GatsbyImageSharpFixed
-              }
+              gatsbyImageData(layout: FIXED)
             }
           }
           twitter
@@ -99,7 +97,7 @@ export const peopleQuery = graphql`
         title
         slug
       }
-      posts {
+      blogPosts {
         title
         slug
       }

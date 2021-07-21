@@ -23,11 +23,11 @@ const TagRoute = ({ data, pageContext }) => {
         posts={posts.map(({ node }) => ({
           id: node.id,
           slug: node.slug,
-          title: node.post.frontmatter.title,
-          date: node.post.frontmatter.date,
-          description: node.post.frontmatter.description,
-          excerpt: node.post.excerpt,
-          authors: node.authorNodes.map(author => ({
+          title: node.markdown.frontmatter.title,
+          date: node.markdown.frontmatter.date,
+          description: node.markdown.frontmatter.description,
+          excerpt: node.markdown.excerpt,
+          authors: node.authorNodes.map((author) => ({
             slug: author.slug,
             name: author.name,
           })),
@@ -48,8 +48,8 @@ export const tagPageQuery = graphql`
     }
     allBlogPost(
       limit: 1000
-      sort: { fields: [post___frontmatter___date], order: DESC }
-      filter: { post: { frontmatter: { tags: { in: [$tag] } } } }
+      sort: { fields: [markdown___frontmatter___date], order: DESC }
+      filter: { markdown: { frontmatter: { tags: { in: [$tag] } } } }
     ) {
       totalCount
       edges {
@@ -61,7 +61,7 @@ export const tagPageQuery = graphql`
             name
             slug
           }
-          post {
+          markdown {
             excerpt(pruneLength: 200)
             frontmatter {
               description

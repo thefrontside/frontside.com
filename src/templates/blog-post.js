@@ -9,14 +9,7 @@ import SubscribeForm from '../components/subscribe-form';
 
 import './blog-post.css';
 
-export const BlogPostTemplate = ({
-  content,
-  tags,
-  title,
-  authors,
-  date,
-  image,
-}) => {
+const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
   tags = Array.isArray(tags) ? tags : [tags].filter(Boolean);
 
   return (
@@ -37,11 +30,11 @@ export const BlogPostTemplate = ({
               </>
             ))}
             <br />
-            <span class="blog-post-date">{date}</span>
+            <span className="blog-post-date">{date}</span>
           </p>
-          <ul class="blog-post-tags">
+          <ul className="blog-post-tags">
             {tags.map((tag, i) => (
-              <li key={`tag-${tag}`} class="blog-post-tag">
+              <li key={`tag-${tag}`} className="blog-post-tag">
                 <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
               </li>
             ))}
@@ -73,32 +66,36 @@ BlogPostTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-const BlogPost = ({ data: { blogPost } }) => {
+const BlogPost = ({
+  data: {
+    blogPost: { title, slug, markdown, authorNodes },
+  },
+}) => {
   return (
     <Layout
-      title={blogPost.title}
-      description={blogPost.post.frontmatter.description}
+      title={title}
+      description={markdown.frontmatter.description}
       image={
-        blogPost.post.frontmatter.img == null
+        markdown.frontmatter.img == null
           ? null
-          : blogPost.post.frontmatter.img.childImageSharp.resolutions.src
+          : markdown.frontmatter.img.childImageSharp.fixed.src
       }
-      path={blogPost.slug}
+      path={slug}
     >
       <BlogPostTemplate
-        content={blogPost.post.html}
-        description={blogPost.post.frontmatter.description}
-        tags={blogPost.post.frontmatter.tags}
-        title={blogPost.title}
-        authors={blogPost.authorNodes.map(author => ({
+        content={markdown.html}
+        description={markdown.frontmatter.description}
+        tags={markdown.frontmatter.tags}
+        title={title}
+        authors={authorNodes.map((author) => ({
           slug: author.slug,
           name: author.name,
         }))}
-        date={blogPost.post.frontmatter.date}
+        date={markdown.frontmatter.date}
         image={
-          blogPost.post.frontmatter.img == null
+          markdown.frontmatter.img == null
             ? null
-            : blogPost.post.frontmatter.img.childImageSharp.resolutions.src
+            : markdown.frontmatter.img.childImageSharp.fixed.src
         }
       />
     </Layout>
@@ -107,7 +104,7 @@ const BlogPost = ({ data: { blogPost } }) => {
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
+    markdown: PropTypes.object,
   }),
 };
 
@@ -116,14 +113,13 @@ export default BlogPost;
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     blogPost(id: { eq: $id }) {
-      id
       title
       slug
       authorNodes {
         name
         slug
       }
-      post {
+      markdown {
         html
         frontmatter {
           date(formatString: "MMMM DD, YYYY")
@@ -131,7 +127,7 @@ export const pageQuery = graphql`
           tags
           img {
             childImageSharp {
-              resolutions(width: 1000) {
+              fixed(width: 1000) {
                 src
               }
             }

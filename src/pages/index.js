@@ -104,8 +104,8 @@ export default function IndexPage({
               id: node.id,
               slug: node.slug,
               title: node.title,
-              date: node.post.frontmatter.date,
-              authors: node.authorNodes.map(author => ({
+              date: node.markdown.frontmatter.date,
+              authors: node.authorNodes.map((author) => ({
                 slug: author.slug,
                 name: author.name,
               })),
@@ -119,7 +119,7 @@ export default function IndexPage({
               slug: `${node.slug}`,
               title: node.title,
               date: node.publishedAt,
-              authors: node.authorNodes.filter(Boolean).map(author => ({
+              authors: node.authorNodes.filter(Boolean).map((author) => ({
                 slug: author.slug,
                 name: author.name,
               })),
@@ -145,7 +145,7 @@ IndexPage.propTypes = {
 export const indexPageQuery = graphql`
   query IndexQuery {
     allBlogPost(
-      sort: { order: DESC, fields: [post___frontmatter___date] }
+      sort: { order: DESC, fields: [markdown___frontmatter___date] }
       limit: 5
     ) {
       edges {
@@ -153,7 +153,7 @@ export const indexPageQuery = graphql`
           id
           title
           slug
-          post {
+          markdown {
             excerpt(pruneLength: 400)
             frontmatter {
               date(formatString: "MMMM DD, YYYY")

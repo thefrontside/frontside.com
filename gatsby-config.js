@@ -26,7 +26,6 @@ module.exports = {
       resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [
-          require('autoprefixer'),
           require('precss'),
           require('postcss-color-function'),
           require('postcss-calc'),
@@ -68,18 +67,19 @@ module.exports = {
         name: 'images',
       },
     },
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'uploads',
-            },
-          },
+          // {
+          //   resolve: 'gatsby-remark-relative-images',
+          //   options: {
+          //     name: 'uploads',
+          //   },
+          // },
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -140,12 +140,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`,
-      },
-    },
-    {
       resolve: 'gatsby-source-simplecast',
       options: {
         apiKey: process.env.SIMPLECAST_API,
@@ -163,29 +157,11 @@ module.exports = {
               }
             }
             allSitePage {
-              edges {
-                node {
-                  path
-                }
+              nodes {
+                path
               }
             }
         }`,
-        // this won't be supported until we upgrade to gatsby v3
-        // resolvePages: async ({ allSitePage: { edges: allPages } }) => {
-        //   console.debug(allPages);
-        //   return allPages
-        //     .map(edge => ({ path: node.path }))
-        //     .concat([
-        //       'about',
-        //       'code-of-conduct',
-        //       'consulting',
-        //       'contact-thanks',
-        //       'contact',
-        //       'index',
-        //       'privacy-policy',
-        //       'tools',
-        //     ]);
-        // },
       },
     },
     {

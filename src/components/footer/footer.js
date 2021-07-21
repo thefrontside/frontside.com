@@ -16,7 +16,7 @@ export default function Footer() {
         <a href="/podcast" className="footerlink">Podcast</a>
         <a href="/contact" className="footerlink">Contact</a>
       </nav>
-      <a href="/" className="footer-symbol"><img src={FSIcon} width="32.5" alt="" className="image-6" /></a>
+      <a href="/" className="footer-symbol" aria-label="visit homepage"><img src={FSIcon} width="32.5" alt="" className="image-6" /></a>
       <p className="footer-notes"><br />2301 W Anderson Ln #107<br />Austin, Texas 78757<br />+1 (800) 493-4589</p>
       <p className="copyright">{`\u00A9 2005-${year} The Frontside Software, Inc. All rights reserved.`}</p>
     </footer>

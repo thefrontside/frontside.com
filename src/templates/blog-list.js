@@ -118,14 +118,14 @@ export default function BlogPage({
     id: node.id,
     slug: node.slug,
     title: node.title,
-    date: node.post.frontmatter.date,
-    description: node.post.frontmatter.description,
-    excerpt: node.post.excerpt,
+    date: node.markdown.frontmatter.date,
+    description: node.markdown.frontmatter.description,
+    excerpt: node.markdown.excerpt,
     image:
-      node.post.frontmatter.img == null
+      node.markdown.frontmatter.img == null
         ? null
-        : node.post.frontmatter.img.childImageSharp.resolutions.src,
-    authors: node.authorNodes.map(author => ({
+        : node.markdown.frontmatter.img.childImageSharp.fixed.src,
+    authors: node.authorNodes.map((author) => ({
       slug: author.slug,
       name: author.name,
     })),
@@ -168,9 +168,9 @@ export default function BlogPage({
             articles and podcast.
           </p>
           {page > 1 ? (
-            <div class="hero-navigation">
-              <h2 class="hero-navigation-title">
-                Page <em class="hero-navigation-page">{page}</em>
+            <div className="hero-navigation">
+              <h2 className="hero-navigation-title">
+                Page <em className="hero-navigation-page">{page}</em>
               </h2>
               <Pagination prefix="/blog" page={page} pages={pages} />
             </div>
@@ -208,7 +208,7 @@ export const pageQuery = graphql`
     allBlogPost(
       limit: $limit
       skip: $skip
-      sort: { order: DESC, fields: [post___frontmatter___date] }
+      sort: { order: DESC, fields: [markdown___frontmatter___date] }
     ) {
       edges {
         node {
@@ -219,14 +219,14 @@ export const pageQuery = graphql`
             name
             slug
           }
-          post {
+          markdown {
             excerpt(pruneLength: 200)
             frontmatter {
               description
               date(formatString: "MMMM DD, YYYY")
               img {
                 childImageSharp {
-                  resolutions(width: 600) {
+                  fixed(width: 600) {
                     src
                   }
                 }

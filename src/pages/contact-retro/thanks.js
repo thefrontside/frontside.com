@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../../components/layout';
 import Content from '../../components/content';
 
-export default () => (
+const Thanks = () => (
   <Layout>
     <Content>
       <h1>Thank you!</h1>
@@ -10,3 +10,5 @@ export default () => (
     </Content>
   </Layout>
 );
+
+export default Thanks;
