@@ -1,10 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './navbar.css';
 
 const Navbar = () => {
+  const [hamburgerActive, setHamburgerMenu] = useState(false);
+  const toggleHamburgerMenu = () => setHamburgerMenu(!hamburgerActive);
+
   return (
-    <div data-collapse="medium" data-animation="over-right" data-duration="200" data-doc-height="1" data-easing="ease-in-out-circ" data-no-scroll="1" role="banner" className="navbar w-nav">
+    <div
+      data-collapse="medium"
+      data-animation="over-right"
+      data-duration="200"
+      data-doc-height="1"
+      data-easing="ease-in-out-circ"
+      data-no-scroll="1"
+      role="banner"
+      className="navbar w-nav"
+    >
       <div className="widewrapper w-container">
         <a href="/" className="w-nav-brand">
           <svg
@@ -43,42 +55,200 @@ const Navbar = () => {
           <ul className="navwrap w-list-unstyled">
             <li className="clase-nav">
               <div className="menu-button-2 w-nav-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="17.5" viewBox="0 0 32.63 17" className="image-5">
-                  <path fill="var(--logo-wordmark-color)" d="M7.4,0,0,4.27v8.46L7.4,17l7.34-4.27V4.27ZM7.34,2.82l5,2.89v5.64L7.4,14.18,2.45,11.35V5.71L4.2,4.64" />
-                  <path fill="var(--logo-wordmark-color)" d="M25.29,0,17.88,4.27v8.46L25.29,17l7.34-4.27V4.27Zm-.07,2.82,5,2.89v5.64l-4.89,2.83-5-2.83V5.71l1.76-1.07" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="33"
+                  height="17.5"
+                  viewBox="0 0 32.63 17"
+                  className="image-5"
+                >
+                  <path
+                    fill="var(--logo-wordmark-color)"
+                    d="M7.4,0,0,4.27v8.46L7.4,17l7.34-4.27V4.27ZM7.34,2.82l5,2.89v5.64L7.4,14.18,2.45,11.35V5.71L4.2,4.64"
+                  />
+                  <path
+                    fill="var(--logo-wordmark-color)"
+                    d="M25.29,0,17.88,4.27v8.46L25.29,17l7.34-4.27V4.27Zm-.07,2.82,5,2.89v5.64l-4.89,2.83-5-2.83V5.71l1.76-1.07"
+                  />
                 </svg>
               </div>
             </li>
             <li className="navitem homelink">
-              <a href="/" className="main-nav-link w-nav-link">Homepage</a>
+              <a href="/" className="main-nav-link w-nav-link">
+                Homepage
+              </a>
             </li>
             <li className="navitem">
-              <a href="/about" className="main-nav-link w-nav-link">People</a>
+              <a href="/about" className="main-nav-link w-nav-link">
+                People
+              </a>
             </li>
             <li className="navitem">
-              <a href="/consulting" className="main-nav-link w-nav-link">Consulting</a>
+              <a href="/consulting" className="main-nav-link w-nav-link">
+                Consulting
+              </a>
             </li>
             <li className="navitem">
-              <a href="/tools" className="main-nav-link w-nav-link">Tools</a>
+              <a href="/tools" className="main-nav-link w-nav-link">
+                Tools
+              </a>
             </li>
             <li className="navitem">
-              <a href="/blog" aria-current="page" className="main-nav-link gatsby-perma-current w-nav-link">Blog &amp; Podcast</a>
+              <a
+                href="/blog"
+                aria-current="page"
+                className="main-nav-link gatsby-perma-current w-nav-link"
+              >
+                Blog &amp; Podcast
+              </a>
             </li>
             <li className="navitem contactin">
-              <a href="/contact" className="fs-button cta nav in w-button">Contact</a>
+              <a href="/contact" className="fs-button cta nav in w-button">
+                Contact
+              </a>
             </li>
           </ul>
         </nav>
-        <a href="/contact" className="fs-button cta nav w-button">Contact</a>
-        <div className="menu-button-2 w-nav-button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="17.5" viewBox="0 0 32.63 17" className="image-4">
-            <path fill="var(--logo-wordmark-color)" d="M7.4,0,0,4.27v8.46L7.4,17l7.34-4.27V4.27ZM7.34,2.82l5,2.89v5.64L7.4,14.18,2.45,11.35V5.71L4.2,4.64" />
-            <path fill="var(--logo-wordmark-color)" d="M25.29,0,17.88,4.27v8.46L25.29,17l7.34-4.27V4.27Zm-.07,2.82,5,2.89v5.64l-4.89,2.83-5-2.83V5.71l1.76-1.07" />
+        <a href="/contact" className="fs-button cta nav w-button">
+          Contact
+        </a>
+        <button
+          type="button"
+          className="menu-button-2 w-nav-button"
+          onClick={toggleHamburgerMenu}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="33"
+            height="17.5"
+            viewBox="0 0 32.63 17"
+            className="image-4"
+          >
+            <path
+              fill="var(--logo-wordmark-color)"
+              d="M7.4,0,0,4.27v8.46L7.4,17l7.34-4.27V4.27ZM7.34,2.82l5,2.89v5.64L7.4,14.18,2.45,11.35V5.71L4.2,4.64"
+            />
+            <path
+              fill="var(--logo-wordmark-color)"
+              d="M25.29,0,17.88,4.27v8.46L25.29,17l7.34-4.27V4.27Zm-.07,2.82,5,2.89v5.64l-4.89,2.83-5-2.83V5.71l1.76-1.07"
+            />
           </svg>
-        </div>
+        </button>
+      </div>
+
+      <div
+        className="w-nav-overlay"
+        data-wf-ignore
+        id="w-nav-overlay-0"
+        style={
+          hamburgerActive
+            ? {
+                height: 6425,
+                display: 'block',
+                width: 473,
+              }
+            : { display: 'none' }
+        }
+      >
+        <nav
+          role="navigation"
+          className="fullnav w-nav-menu"
+          style={{
+            transform: 'translateX(0px) translateY(0px)',
+            height: 6425,
+            transition:
+              'transform 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s',
+          }}
+          data-nav-menu-open
+        >
+          <ul role="list" className="navwrap w-list-unstyled">
+            <li className="clase-nav">
+              <button
+                className="menu-button-2 w-nav-button w--open"
+                aria-label="menu"
+                role="button"
+                tabIndex={0}
+                aria-controls="w-nav-overlay-0"
+                aria-haspopup="menu"
+                aria-expanded="true"
+                onClick={toggleHamburgerMenu}
+              >
+                <div className="image-5 w-embed">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width={33}
+                    height="17.5"
+                    viewBox="0 0 32.63 17"
+                    className="image-4"
+                  >
+                    <path
+                      fill="var(--logo-wordmark-color)"
+                      d="M7.4,0,0,4.27v8.46L7.4,17l7.34-4.27V4.27ZM7.34,2.82l5,2.89v5.64L7.4,14.18,2.45,11.35V5.71L4.2,4.64"
+                    />
+                    <path
+                      fill="var(--logo-wordmark-color)"
+                      d="M25.29,0,17.88,4.27v8.46L25.29,17l7.34-4.27V4.27Zm-.07,2.82,5,2.89v5.64l-4.89,2.83-5-2.83V5.71l1.76-1.07"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </li>
+            <li className="navitem homelink">
+              <a
+                href="/"
+                aria-current="page"
+                className="main-nav-link w-nav-link w--current w--nav-link-open"
+                style={{ maxWidth: 1346 }}
+              >
+                Homepage
+              </a>
+            </li>
+            <li className="navitem">
+              <a
+                href="/about"
+                className="main-nav-link w-nav-link w--nav-link-open"
+                style={{ maxWidth: 1346 }}
+              >
+                People
+              </a>
+            </li>
+            <li className="navitem">
+              <a
+                href="/consulting"
+                className="main-nav-link w-nav-link w--nav-link-open"
+                style={{ maxWidth: 1346 }}
+              >
+                Consulting
+              </a>
+            </li>
+            <li className="navitem">
+              <a
+                href="/tools"
+                className="main-nav-link w-nav-link w--nav-link-open"
+                style={{ maxWidth: 1346 }}
+              >
+                Tools
+              </a>
+            </li>
+            <li className="navitem">
+              <a
+                href="/blog"
+                className="main-nav-link w-nav-link w--nav-link-open"
+                style={{ maxWidth: 1346 }}
+              >
+                Blog &amp; Podcast
+              </a>
+            </li>
+            <li className="navitem contactin">
+              <a href="/contact" className="button cta nav in w-button">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </div>
-  )
+  );
 };
 
 export default Navbar;
