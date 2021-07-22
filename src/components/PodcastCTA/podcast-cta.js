@@ -13,16 +13,29 @@ export default function PodcastCTA() {
       <h2 className="podcast-title">
         Subscribe to <br /> our podcast:
       </h2>
-      <a className="applepodcasts-link" href="https://podcasts.apple.com/us/podcast/the-frontside-podcast/id827250386?itsct=podcast_box&amp;itscg=30200" target="_blank" rel="noopener noreferrer">
+      <a
+        className="applepodcasts-link"
+        href="https://podcasts.apple.com/us/podcast/the-frontside-podcast/id827250386?itsct=podcast_box&amp;itscg=30200"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img src={ApplePodcastsBadge} alt="Listen on Apple Podcasts" />
       </a>
       <div className="rss-box">
-        <CopyToClipboard text='https://rss.simplecast.com/podcasts/96/rss'
-          onCopy={() => setCopied(true)}>
+        <CopyToClipboard
+          text="https://rss.simplecast.com/podcasts/96/rss"
+          onCopy={() => setCopied(true)}
+        >
           <Button>Copy RSS</Button>
         </CopyToClipboard>
-        <Input value='https://rss.simplecast.com/podcasts/96/rss' />
-        <span className={`rss-box--copied ${copied ? 'rss-box--copied__done' : 'rss-box--copied__pending'}`}>&#x2713;</span>
+        <Input value="https://rss.simplecast.com/podcasts/96/rss" readOnly />
+        <span
+          className={`rss-box--copied ${
+            copied ? 'rss-box--copied__done' : 'rss-box--copied__pending'
+          }`}
+        >
+          &#x2713;
+        </span>
       </div>
     </section>
   );
