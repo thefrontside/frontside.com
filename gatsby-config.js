@@ -26,6 +26,7 @@ module.exports = {
       resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [
+          require('autoprefixer'), // via transistive deps of postcss
           require('precss'),
           require('postcss-color-function'),
           require('postcss-calc'),
@@ -74,12 +75,6 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          // {
-          //   resolve: 'gatsby-remark-relative-images',
-          //   options: {
-          //     name: 'uploads',
-          //   },
-          // },
           {
             resolve: 'gatsby-remark-images',
             options: {
@@ -88,6 +83,8 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 1280,
               backgroundColor: `transparent`,
+              wrapperStyle: (fluidResult) =>
+                `flex:${_.round(fluidResult.aspectRatio, 2)};`,
             },
           },
           {
