@@ -138,7 +138,11 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
-  fmImagesToRelative(node); // convert image paths for gatsby images
+  // convert image paths for gatsby images
+  // the later versions of this plugin remove this function
+  // in the future, we may choose to remove this plugin and
+  // adjust our folder / file structure to suit
+  fmImagesToRelative(node);
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });
