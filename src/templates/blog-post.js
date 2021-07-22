@@ -20,14 +20,14 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
           <p className="subheader blog-post-meta">
             By
             {authors.map((author, i) => (
-              <>
+              <React.Fragment key={author.slug}>
                 {i === 0 ? '' : authors.length > 2 ? ', ' : ' and '}
                 {/* Author links will lead to team member page, which is currently pending. */}
                 {/* <Link key={author.slug} to={author.slug}>
                 <Text>{author.name}</Text>
               </Link> */}
-                <Text key={author.slug}>{author.name}</Text>
-              </>
+                <Text>{author.name}</Text>
+              </React.Fragment>
             ))}
             <br />
             <span className="blog-post-date">{date}</span>
