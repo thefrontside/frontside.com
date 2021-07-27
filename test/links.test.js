@@ -1,7 +1,10 @@
-import { test, Page, Link, Heading, not, and, including } from 'bigtest';
+import { test, Page, HTML, Link, Heading, not, and, including } from 'bigtest';
 
 export default test('homepage')
-  .step(Page.visit('/'))
+  .step(
+    Page.visit('/'),
+    HTML({ classList: including('menu-button-2') }).click()
+  )
   .assertion(Link('People').exists())
   .assertion(Link('Consulting').exists())
   .assertion(Link('Tools').exists())
