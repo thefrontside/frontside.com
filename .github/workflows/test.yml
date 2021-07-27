@@ -27,6 +27,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: volta-cli/action@v1
       - run: yarn
-      - run: yarn test
+      - run: yarn build
         env:
           SIMPLECAST_API: ${{ secrets.SIMPLECAST_API }}
+      - run: yarn test

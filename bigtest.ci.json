@@ -2,8 +2,8 @@
   "port": 28000,
   "launch": ["chrome.headless"],
   "app": {
-    "command": "yarn start",
-    "url": "http://localhost:8000"
+    "command": "yarn serve",
+    "url": "http://localhost:9000"
   },
   "testFiles": ["test/**/*.test.{ts,js}"],
   "tsconfig": "./bigtest.tsconfig.json"
