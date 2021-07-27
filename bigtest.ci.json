@@ -1,6 +1,6 @@
 {
   "port": 28000,
-  "launch": ["chrome"],
+  "launch": ["chrome.headless"],
   "app": {
     "command": "npx serve public",
     "url": "http://localhost:5000"
