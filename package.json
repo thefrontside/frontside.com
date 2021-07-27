@@ -65,7 +65,7 @@
     "build:clean": "yarn clean && gatsby build",
     "serve": "gatsby serve",
     "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "bigtest ci",
+    "test": "bigtest ci -c bigtest.ci.json",
     "test:server": "bigtest server --launch=chrome",
     "test:run": "bigtest test",
     "check-urls": "node ./lib/check-urls/index.js",
