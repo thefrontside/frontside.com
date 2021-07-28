@@ -1,0 +1,9 @@
+{
+  "port": 28000,
+  "launch": ["default"],
+  "app": {
+    "url": "http://127.0.0.1:8888"
+  },
+  "testFiles": ["test/**/*.test.{ts,js}"],
+  "tsconfig": "./bigtest.tsconfig.json"
+}

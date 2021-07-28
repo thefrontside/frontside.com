@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "skipLibCheck": true,
+    "target": "es6",
+    "lib": ["esnext", "dom"]
+  }
+}
