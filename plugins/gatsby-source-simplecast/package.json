@@ -1,17 +1,5 @@
 {
   "name": "gatsby-source-simplecast",
   "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "hast-util-to-html": "5.0.0",
-    "lodash": "^4.17.21",
-    "mdast-util-to-hast": "4.0.0",
-    "remark": "10.0.1"
-  }
+  "license": "MIT"
 }

@@ -1,13 +1,15 @@
-const { GraphQLString } = require("gatsby/graphql");
-const Remark = require("remark");
-const toHAST = require("mdast-util-to-hast");
-const hastToHTML = require("hast-util-to-html");
+const { GraphQLString } = require('gatsby/graphql');
+const Remark = require('remark');
+const toHAST = require('mdast-util-to-hast');
+const hastToHTML = require('hast-util-to-html');
 
-const pkg = require("./package.json");
-const { EPISODE_TYPE } = require("./constants");
+const pkg = require('./package.json');
+const { EPISODE_TYPE } = require('./constants');
 
-const astCacheKey = (node, property) => `-${pkg.name}-ast-${node.internal.contentDigest}-${property}`;
-const htmlCacheKey = (node, property) => `-${pkg.name}-html-${node.internal.contentDigest}-${property}`;
+const astCacheKey = (node, property) =>
+  `-${pkg.name}-ast-${node.internal.contentDigest}-${property}`;
+const htmlCacheKey = (node, property) =>
+  `-${pkg.name}-html-${node.internal.contentDigest}-${property}`;
 const htmlAstCacheKey = (node, property) =>
   `-${pkg.name}-html-ast-${node.internal.contentDigest}-${property}`;
 
@@ -16,11 +18,11 @@ exports.setFieldsOnGraphQLNodeType = ({ type, cache }) => {
     return {};
   }
 
-  return new Promise(function(resolve) {
-    let remark = new Remark().data("settings", {
+  return new Promise(function (resolve) {
+    let remark = new Remark().data('settings', {
       commonmark: true,
       footnotes: true,
-      pedantic: true
+      pedantic: true,
     });
 
     async function getAST(node, property) {
@@ -57,7 +59,7 @@ exports.setFieldsOnGraphQLNodeType = ({ type, cache }) => {
         const ast = await getHTMLAst(node, property);
         // Save new HTML to cache and return
         const html = hastToHTML(ast, {
-          allowDangerousHTML: true
+          allowDangerousHTML: true,
         });
 
         // Save new HTML to cache and return
@@ -71,14 +73,14 @@ exports.setFieldsOnGraphQLNodeType = ({ type, cache }) => {
         type: GraphQLString,
         async resolve(node) {
           return getHTML(node);
-        }
+        },
       },
       descriptionHtml: {
         type: GraphQLString,
         async resolve(node) {
           return getHTML(node, 'description');
-        }
-      }
+        },
+      },
     });
   });
 };

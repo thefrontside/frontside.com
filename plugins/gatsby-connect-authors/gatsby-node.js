@@ -1,7 +1,7 @@
 const _slugify = require('slugify');
 const { createFilePath } = require('gatsby-source-filesystem');
 
-const slugify = str =>
+const slugify = (str) =>
   _slugify(str, {
     lower: true,
   });
@@ -25,42 +25,39 @@ exports.onCreateNode = ({
       return createNode({
         name: node.frontmatter.name,
         slug: `/people/${slugify(node.frontmatter.name)}/`,
+        parent: node.id,
         // Required fields.
         id: nodeId,
-        parent: node.id,
         person___NODE: node.id,
         children: [],
         internal: {
           type: `People`,
           contentDigest: createContentDigest(node),
-          description: `A Frontside Team Member."`, // optional
+          description: `A Frontside Team Member."`,
         },
       });
 
       // the gatsby-source-filesystem config sets the sourceInstanceName to `blog`
     } else if (parent.sourceInstanceName === 'blog') {
       let nodeId = createNodeId(`blog-${node.id}`);
-      // add a `fields.authorNodes` that takes the string of authors and
-      // links them to our `Person` nodes created above
-      // we also add a mapping to the gatsby-config.js to let gatsby know the appropriate type
-      // since we don't have real control of this node (in the future maybe we make a BlogPost node?)
-      // node.frontmatter.author.split(',').map(author => author.trim())
+      // create a new BlogPost node which sets the slug / title for consistency
+      // and links to the related MarkdownRemark node
 
       return createNode({
         title: node.frontmatter.title,
         slug: `/blog${createFilePath({ node, getNode })}`,
-        post___NODE: node.id,
         authors: node.frontmatter.author
           .split(',')
-          .map(author => author.trim()),
+          .map((author) => author.trim()),
+        markdown___NODE: node.id,
+        parent: node.id,
         // Required fields.
         id: nodeId,
-        parent: node.id,
         children: [],
         internal: {
           type: `BlogPost`,
           contentDigest: createContentDigest(node),
-          description: `A Blog Post."`, // optional
+          description: `A Blog Post."`,
         },
       });
     }
@@ -73,15 +70,16 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions;
   const typeDefs = `
     type People implements Node {
-      posts: [BlogPost]
+      name: String!
+      slug: String!
+      blogPosts: [BlogPost]
       episodes: [SimplecastEpisode]
     }
     type BlogPost implements Node {
-      title: String
-      slug: String
-      authors: [String]
-      authorNodes: [People]
-      post: MarkdownRemark
+      title: String!
+      slug: String!
+      authors: [String]!
+      authorNodes: [People]!
     }
     `;
 
@@ -94,7 +92,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 exports.createResolvers = ({ createResolvers }) => {
   const resolvers = {
     People: {
-      posts: {
+      blogPosts: {
         type: ['BlogPost'],
         resolve: (source, args, context, info) => {
           return context.nodeModel.runQuery({

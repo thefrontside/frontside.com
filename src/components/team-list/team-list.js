@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import './team-list.css';
 
 // needed to override default inline style
@@ -25,11 +25,11 @@ TeamList.propTypes = {
 export default function TeamList({ people }) {
   return (
     <ul className="team-list">
-      {people.map(person => (
+      {people.map((person) => (
         <li className="team-member" key={person.name}>
           <Link to={person.slug} className="team-member--picture">
-            <Img
-              fixed={person.img.childImageSharp.fixed}
+            <GatsbyImage
+              image={img.childImageSharp.gatsbyImageData}
               style={imgStyleOverrides}
               className="team-img"
             />
