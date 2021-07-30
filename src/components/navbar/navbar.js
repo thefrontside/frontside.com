@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 
-import './navbar.css';
-
 const Navbar = () => {
   const [hamburgerActive, setHamburgerMenu] = useState(false);
   const toggleHamburgerMenu = () => setHamburgerMenu(!hamburgerActive);
@@ -140,33 +138,32 @@ const Navbar = () => {
         className="w-nav-overlay"
         data-wf-ignore
         id="w-nav-overlay-0"
-        style={
-          hamburgerActive
-            ? {
-                height: 6425,
-                display: 'block',
-                width: 473,
-              }
-            : { display: 'none' }
-        }
+        // style={
+        //   hamburgerActive
+        //     ? {
+        //         height: 6425,
+        //         display: 'block',
+        //         width: 473,
+        //       }
+        //     : { display: 'none' }
+        // }
       >
         <nav
           role="navigation"
           className="fullnav w-nav-menu"
-          style={{
-            transform: 'translateX(0px) translateY(0px)',
-            height: 6425,
-            transition:
-              'transform 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s',
-          }}
+          // style={{
+          //   transform: 'translateX(0px) translateY(0px)',
+          //   height: 6425,
+          //   transition:
+          //     'transform 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s',
+          // }}
           data-nav-menu-open
         >
-          <ul role="list" className="navwrap w-list-unstyled">
+          <ul className="navwrap w-list-unstyled">
             <li className="clase-nav">
               <button
                 className="menu-button-2 w-nav-button w--open"
                 aria-label="menu"
-                role="button"
                 tabIndex={0}
                 aria-controls="w-nav-overlay-0"
                 aria-haspopup="menu"
@@ -198,7 +195,7 @@ const Navbar = () => {
                 href="/"
                 aria-current="page"
                 className="main-nav-link w-nav-link w--current w--nav-link-open"
-                style={{ maxWidth: 1346 }}
+                // style={{ maxWidth: 1346 }}
               >
                 Homepage
               </a>
@@ -207,7 +204,7 @@ const Navbar = () => {
               <a
                 href="/about"
                 className="main-nav-link w-nav-link w--nav-link-open"
-                style={{ maxWidth: 1346 }}
+                // style={{ maxWidth: 1346 }}
               >
                 People
               </a>
@@ -216,7 +213,7 @@ const Navbar = () => {
               <a
                 href="/consulting"
                 className="main-nav-link w-nav-link w--nav-link-open"
-                style={{ maxWidth: 1346 }}
+                // style={{ maxWidth: 1346 }}
               >
                 Consulting
               </a>
@@ -225,7 +222,7 @@ const Navbar = () => {
               <a
                 href="/tools"
                 className="main-nav-link w-nav-link w--nav-link-open"
-                style={{ maxWidth: 1346 }}
+                // style={{ maxWidth: 1346 }}
               >
                 Tools
               </a>
@@ -234,7 +231,7 @@ const Navbar = () => {
               <a
                 href="/blog"
                 className="main-nav-link w-nav-link w--nav-link-open"
-                style={{ maxWidth: 1346 }}
+                // style={{ maxWidth: 1346 }}
               >
                 Blog &amp; Podcast
               </a>

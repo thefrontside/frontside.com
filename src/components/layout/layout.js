@@ -2,7 +2,8 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 
-import './layout.css';
+import '../global.css.ts';
+import Box from '../box';
 import 'syntax-highlighting/assets/css/prism/prism-base16-ateliersulphurpool.light.css';
 
 import Navbar from '../navbar';
@@ -13,7 +14,7 @@ export default function TemplateWrapper({
   description,
   title,
   image,
-  path
+  path,
 }) {
   return (
     <StaticQuery
@@ -29,8 +30,12 @@ export default function TemplateWrapper({
           }
         }
       `}
-      render={data => (
-        <main className="main">
+      render={(data) => (
+        <Box
+          as="main"
+          background={{ lightMode: 'white', darkMode: 'fs-darkblue' }}
+          padding={{ desktop: 'large', mobile: 'small' }}
+        >
           <Helmet>
             <html lang="en" />
             <title>
@@ -84,7 +89,7 @@ export default function TemplateWrapper({
               }
             />
             <meta property="og:type" content="website" />
-            
+
             <meta
               property="og:image"
               content={
@@ -94,17 +99,22 @@ export default function TemplateWrapper({
               }
             />
           </Helmet>
-          { path && typeof path === 'string' ? (
+          {path && typeof path === 'string' ? (
             <Helmet>
-              <meta property="og:url" content={`${data.site.siteMetadata.siteUrl}${path}`} />
+              <meta
+                property="og:url"
+                content={`${data.site.siteMetadata.siteUrl}${path}`}
+              />
             </Helmet>
-          ) : <></>}
+          ) : (
+            <></>
+          )}
           <Navbar />
 
           {children}
 
           <Footer />
-        </main>
+        </Box>
       )}
     />
   );

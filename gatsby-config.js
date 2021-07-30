@@ -23,17 +23,6 @@ module.exports = {
     },
     'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-plugin-postcss',
-      options: {
-        postCssPlugins: [
-          require('autoprefixer'), // via transistive deps of postcss
-          require('precss'),
-          require('postcss-color-function'),
-          require('postcss-calc'),
-        ],
-      },
-    },
-    {
       resolve: 'gatsby-plugin-react-helmet-canonical-urls',
       options: {
         siteUrl: 'https://frontside.com',

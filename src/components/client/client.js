@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-import './client.css';
-
 Client.propTypes = {
   children: PropTypes.node,
   company: PropTypes.string.isRequired,

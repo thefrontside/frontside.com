@@ -4,8 +4,6 @@ import ApplePodcastsBadge from '../../img/apple-podcasts-badge.svg';
 import Input from '../input';
 import Button from '../button';
 
-import './podcast-cta.css';
-
 export default function PodcastCTA() {
   const [copied, setCopied] = useState(false);
   return (

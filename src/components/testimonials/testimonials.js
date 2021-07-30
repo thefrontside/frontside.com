@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './testimonials.css';
-
 Testimonials.propTypes = {
   testimonials: PropTypes.arrayOf(
     PropTypes.shape({

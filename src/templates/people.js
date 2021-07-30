@@ -4,7 +4,6 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import Content from '../components/content';
-import './people.css';
 
 const PersonPage = ({
   data: {

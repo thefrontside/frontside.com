@@ -6,8 +6,6 @@ import format from 'dateformat';
 import Text from '../components/text';
 import PodcastCTA from '../components/PodcastCTA';
 
-import './episode.css';
-
 export default function EpisodeRoute({
   data: {
     simplecastEpisode: {

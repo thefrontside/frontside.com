@@ -1,8 +1,6 @@
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
-import css from 'classnames';
-
-import './home-logos.css';
+import { atoms } from '../atoms.css.ts';
 
 Logo.propTypes = {
   src: PropTypes.string.isRequired,
@@ -12,7 +10,12 @@ Logo.propTypes = {
 
 export function Logo({ src, alt, square }) {
   return (
-    <li className={css('home-logo', { 'is-square': square })}>
+    <li
+      className={
+        //'home-logo',
+        atoms({})
+      } // 'is-square': square })}
+    >
       <img src={src} alt={alt} />
     </li>
   );
@@ -21,7 +24,7 @@ export function Logo({ src, alt, square }) {
 HomeLogos.propTypes = {
   children: (props, propName, componentName) => {
     let arr = Children.toArray(props[propName]);
-    if (arr.some(child => child instanceof Logo)) {
+    if (arr.some((child) => child instanceof Logo)) {
       throw new Error(`Invalid children for ${componentName}, expected Logo`);
     }
   },

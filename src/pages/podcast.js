@@ -22,7 +22,7 @@ const PodcastPage = ({
             id: node.id,
             description: node.description,
             date: new Date(node.publishedAt).toLocaleDateString('en-US'),
-            authors: node.authorNodes.filter(Boolean).map(author => ({
+            authors: node.authorNodes.filter(Boolean).map((author) => ({
               slug: author.slug,
               name: author.name,
             })),

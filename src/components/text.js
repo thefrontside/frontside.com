@@ -35,7 +35,7 @@ function widowText(text, count) {
     // replace hyphens with non-breaking hyphens
     let end = words
       .slice(safelen)
-      .map(word => {
+      .map((word) => {
         return word.replace(/-/g, '\u2011');
       })
       .join('\u00A0');
