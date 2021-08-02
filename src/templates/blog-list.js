@@ -38,13 +38,13 @@ const PodcastFeaturedEpisodes = [
   },
   {
     fromPodcast: true,
-    slug: '/podcast/intro-to-rush-js-with-co-author-pete-gonzales/',
-    image: '/img/2020-pod-rush.png',
+    slug: '/podcast/type-systems-with-reason-ml-london-organizer-marcel-cutts-and-shane-wilson/',
+    image: '/img/2020-reason-podcast.png',
   },
   {
     fromPodcast: true,
-    slug: '/podcast/repkgs-reasonml',
-    image: '/img/2020-reason-podcast.png',
+    slug: '/podcast/intro-to-rush-js-with-co-author-pete-gonzales/',
+    image: '/img/2020-pod-rush.png',
   },
 ];
 
