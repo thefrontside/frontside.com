@@ -20,7 +20,7 @@ To illustrate this problem, let's say you're building the New Customer registrat
 
 In the image above, we picture a Material UI date picker component using a custom theme. The user needs at least four clicks to select their date of birth. That means that testing the date picking interaction will take you significant maneuvering through the inner selectors or state of the date picker component. An interaction with the date picker using React Testing Library over Cypress could look like this:
 
-```jsx
+```js
 cy.querySelector('#date-of-birth .MuiCalendarPicker-root').within(() => {
 	cy.getByLabelText('calendar view is open, switch to year view').click();
 	cy.getByText('1992').click();
@@ -53,7 +53,7 @@ Let's take a close look at each of these advantages.
 
 We provide basic  [built-in Interactors]([https://frontside.com/bigtest/docs/interactors/built-in-dom](https://frontside.com/bigtest/docs/interactors/built-in-dom))  that correspond to HTML elements, such as `button`, `link`, or `checkbox`. Using these alone, you could interact with and assert the majority of cases of a web UI. Take the following example of a collapsable navigation menu test:
 
-```jsx
+```js
 it('goes to international news page with mobile menu', () => {
   cy.do([
 		Button({'aria-label': 'Show Navigation Menu'}).click(),
@@ -69,7 +69,7 @@ You'll often want to avoid repeating yourself and pack together interactions and
 
 It's likely that `Nav` is indeed a component in our design system. Thus, we can create a `Nav` Interactor that queries the nav and has actions that a user can perform with it. An example of its usage is illustrated below:
 
-```jsx
+```js
 it('goes to international news page with mobile menu', async () => {
   cy.do([
 		Nav().goTo('News')
@@ -87,7 +87,7 @@ Notice that we can target the `Nav` directly and perform the action we care abou
 
 Retaking the example from the introduction, you could provide a `DatePicker` Interactor such that everyone using the pick date component have standard methods to test their features using an interface like this:
 
-```jsx
+```js
 cy.do(DatePicker.setDate({ day: 16, month: "August", year: 1992 }));
 ```
 
@@ -117,7 +117,7 @@ However, Interactors bring in static checks for your tests, which means your IDE
 
 Not everything can be found by static analysis in a test, but Interactors are ready to provide helpful suggestions for common small mistakes that are usually hard to debug. For example, if you were looking for a login button in your test case, but forgot for a moment that the button actually reads "Log In", Interactors will hint that to you:
 
-![Screenshot of interactors suggestion similar elements to the one that was not found](/img/2021-08-04-interactors-design-system/interactors-error-suggest-not-found.png.png)
+![Screenshot of interactors suggestion similar elements to the one that was not found](/img/2021-08-04-interactors-design-system/interactors-error-suggest-not-found.png)
 
 Interactors not only check for presence before committing an action in the UI, they also check if the [element is visible]([https://github.com/thefrontside/element-is-visible](https://github.com/thefrontside/element-is-visible))—through various heuristics—and that it is enabled. For example, if Interactors did find the button and it is visible but not enabled, it will throw an error like this:
 
