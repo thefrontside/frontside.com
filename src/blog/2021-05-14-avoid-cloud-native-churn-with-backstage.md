@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
 title: >-
-  Relieve developers’ churn in your Cloud native strategy with Backstage
+  Relieve developers’ churn in your Cloud Native strategy with Backstage
 date: 2021-05-14T05:00:00.000Z
 author: Taras Mankovski
 description: >-
-  Adopting Cloud native strategies has proven to improve organizations' delivery performance, but the complexity brought in with them is making life harder for developers. Using the example of a unified Secret manager, I present how Backstage can improve DX in the Cloud native world.
+  Adopting Cloud Native strategies has proven to improve organizations' delivery performance, but the complexity brought in with them is making life harder for developers. Using the example of a unified Secret manager, I present how Backstage can improve DX in the Cloud native world.
 tags:
   - cloud-native
   - backstage
@@ -13,33 +13,33 @@ tags:
 img: /img/2021-backstage-dx/avoid-developer-churn-with-backstage.png
 ---
 
-When you start breaking your monolithic platform into microservices and deploying components independently, you can’t help but feel excited about adopting a Cloud native strategy. You see releases becoming more frequent and smooth and your teams feel more productive and motivated as they see their work rapidly move into production.
+When you start breaking your monolithic platform into microservices and deploying components independently, you can’t help but feel excited about adopting a Cloud Native strategy. You see releases becoming more frequent and smooth and your teams feel more productive and motivated as they see their work rapidly move into production.
 
-It’s all great – that is until you hit a critical fragmentation point. As you keep adding microservices to your Cloud native platform, it gets harder and harder to keep track of what’s going on. Who’s building this service and with which stack and patterns? Why do we have three authentication mechanisms? Where are all these Cloud provider bills coming from?
+It’s all great – that is until you hit a critical fragmentation point. As you keep adding microservices to your Cloud Native platform, it gets harder and harder to keep track of what’s going on. Who’s building this service and with which stack and patterns? Why do we have three authentication mechanisms? Where are all these Cloud provider bills coming from?
 
 The landscape for your developers is not much better. They must launch into detective mode and trace APIs and codebases in order to figure out the services they need to build their features. Then they need to figure out how to deploy their own work, which usually turns into an epic quest against the Cloud monster.
 
-The problems with Cloud native practices seem to proliferate with each passing day, yet companies keep pushing towards their adoption across their teams because of its proven track record of increasing software development velocity. What’s a developer to do?
+The problems with Cloud Native practices seem to proliferate with each passing day, yet companies keep pushing towards their adoption across their teams because of its proven track record of increasing software development velocity. What’s a developer to do?
 
-Thankfully, soon everyone will have access to Backstage: an all-purpose platform to make the Cloud native experience better for everyone!
+Thankfully, soon everyone will have access to Backstage: an all-purpose platform to make the Cloud Native experience better for everyone!
 
 Backstage is an Open Source platform for creating Developer Portals. Currently a Cloud Native Computing Foundation sandbox project first developed by Spotify, Backstage is getting a lot of traction among organizations experiencing the problems of microservices at scale when combined with the challenge of supporting dozens of developers on their team.
 
-In this article we’ll cover the challenges developers experience using Cloud native strategies and how Backstage alleviates them. We’ll use the example of a secrets manager to illustrate just how useful Backstage is. By the end of the article I guarantee you’ll want to slip Backstage too and see what’s got everyone excited!
+In this article we’ll cover the challenges developers experience using Cloud Native strategies and how Backstage alleviates them. We’ll use the example of a secrets manager to illustrate just how useful Backstage is. By the end of the article I guarantee you’ll want to slip Backstage too and see what’s got everyone excited!
 
-## Churn ‘n Burn
+## Churn‘n Burn
 
-Organizations who adopt Cloud native strategies do so because they _need_ to in order to stay competitive. Users cannot bear the traditional cadence where a special commission would sit down for months to release one feature. Your customers expect you to deliver new features faster and improve the user experience all the time, and will switch to the competition in the blink of an eye if they’re not getting that from you. Having _no_ bugs is the baseline now, so whenever one sneaks into production you need to be able to roll back immediately. Kubernetes provides you with the automated technology to make all of this possible. But it's an open secret that Kubernetes is quite difficult to use, and that has a direct effect on how your teams operate. What’s gotten lost in the transition to developing Cloud native apps is an awareness of _your_ team’s experience and their comfort level with the tools they use.
+Organizations who adopt Cloud Native strategies do so because they _need_ to in order to stay competitive. Users cannot bear the traditional cadence where a special commission would sit down for months to release one feature. Your customers expect you to deliver new features faster and improve the user experience all the time, and will switch to the competition in the blink of an eye if they’re not getting that from you. Having _no_ bugs is the baseline now, so whenever one sneaks into production you need to be able to roll back immediately. Kubernetes provides you with the automated technology to make all of this possible. But it's an open secret that Kubernetes is quite difficult to use, and that has a direct effect on how your teams operate. What’s gotten lost in the transition to developing Cloud Native apps is an awareness of _your_ team’s experience and their comfort level with the tools they use.
 
 Since the inception of Kubernetes in 2014 and throughout its evolution, a whole industry has spawned to help companies adopt it. And no wonder: Kubernetes is not an easy technology to learn and manage due to the enormous complexity that it’s designed to deal with. For that reason, most Cloud providers have created managed-Kubernetes platforms: Microsoft Azure AKS, Amazon EKS, Google GKE, and IBM CloudFundry are just a few of the most obvious examples. Each of them imagined a UI that would work nicely to manage Kubernetes, and countless other vendors offer tools to monitor and automate different aspects of Kubernetes, each with their own interfaces and abstractions as well.
 
 While the attempt to support the adoption of Cloud based practices is to be applauded, what’s emerged is a very complicated landscape for those people tasked with implementing Kubernetes. Not only must they master this intricate technology, but they must also be proficient at the diverging set of tools that serve it, which change and evolve as fast as Kubernetes itself. Oftentimes, engineers wind up having to manage two or three Cloud solutions providers at a time, forced to use Microsoft’s Azure because of a company-wide policy but also required to handle Amazon’s AWS to spin up macOS containers on demand.
 
-Nor is it just your DevOps team who are experiencing the churn of Cloud native solutions. Developers are also taking the hit with today’s trend of self-service deployment setups. Developers are not only expected to write robust apps, understand the business, and coordinate with other teams – they’re asked to be Cloud native too, which implies getting to know an entirely new world of complexity that seemingly changes every six weeks. That much churn puts developers at risk of burnout.
+Nor is it just your DevOps team who are experiencing the churn of Cloud Native solutions. Developers are also taking the hit with today’s trend of self-service deployment setups. Developers are not only expected to write robust apps, understand the business, and coordinate with other teams – they’re asked to be Cloud Native too, which implies getting to know an entirely new world of complexity that seemingly changes every six weeks. That much churn puts developers at risk of burnout.
 
 ## A one-stop tool shop
 
-Backstage’s mission is to empower developers. Instead of creating yet another platform to manage the infrastructure that supports Cloud native solutions, Backstage’s innovation is to create a portal to manage the organization’s services. While the infrastructure is a critical piece of any service, Backstage sees it as a means to the real end: achieving business goals.
+Backstage’s mission is to empower developers. Instead of creating yet another platform to manage the infrastructure that supports Cloud Native solutions, Backstage’s innovation is to create a portal to manage the organization’s services. While the infrastructure is a critical piece of any service, Backstage sees it as a means to the real end: achieving business goals.
 
 Backstage brings together in one place the various aspects of each service: its codebase, documentation, environments, infrastructure, and of course the people who build them. The teams like Spotify who are adopting Backstage are learning that investing in their developers’ experience pays off. When working with Frontside’s enterprise clients, I see the true magic of Backstage is in how it provides developers real ownership of what they’re building. It’s truly giving them the keys to the castle.
 
@@ -76,4 +76,4 @@ In Backstage, plugins are React components that get added to each service’s pa
 
 ## Conclusion
 
-Backstage not only allows you to keep evolving your Cloud native strategy without compromising the productivity of your developers: it empowers them to take your organization to the next level by uncovering collaboration possibilities and promoting shared solutions on top of the Cloud. Secrets management is but one example! The possibilities are quite broad for expanding Backstage to fit in your needs, from Enterprise API integrations with tools like WSO2 or Mulesoft, to putting together infrastructure workflows for data processing.
+Backstage not only allows you to keep evolving your Cloud Native strategy without compromising the productivity of your developers: it empowers them to take your organization to the next level by uncovering collaboration possibilities and promoting shared solutions on top of the Cloud. Secrets management is but one example! The possibilities are quite broad for expanding Backstage to fit in your needs, from Enterprise API integrations with tools like WSO2 or Mulesoft, to putting together infrastructure workflows for data processing.
