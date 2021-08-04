@@ -33,9 +33,9 @@ There's a well-trod design pattern for fixing this problem: [page objects](https
 
 ## Introducing Interactors
 
-At Frontside, we've built Interactors, a library inspired by page objects that helps teams structure, share, and reuse their UI testing practices.
+At Frontside, we've built [Interactors](https://frontside.com/bigtest/interactors), a library inspired by page objects that helps teams structure, share, and reuse their UI testing practices.
 
-_Interactors_ evolve the idea of a page object. Modern applications are usually arranged into composable components, and the "page" is no longer the dominant unit of organization. An Interactor is similarly composable, and can abstract any level of object in the DOM hierarchy.
+Interactors evolve the idea of a page object. Modern applications are usually arranged into composable components, and the "page" is no longer the dominant unit of organization. An Interactor is similarly composable, and can abstract any level of object in the DOM hierarchy.
 
 Design systems maintainers can build interactors alongside components to reduce the mental distance between the user interface and its testing-friendly abstraction. In the same way strong typing can make components easier to build with, interactors make components easier to test.
 
