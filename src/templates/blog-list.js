@@ -74,15 +74,14 @@ export default function BlogPage({
 
   if (page === 1) {
     let postsAndEpisodes = [
-      formattedPosts[0],
+      ...formattedPosts.slice(0, 3),
       { ...podcastEpisodes[0], ...PodcastFeaturedEpisodes[0] },
       { ...podcastEpisodes[1], ...PodcastFeaturedEpisodes[1] },
-      ...formattedPosts.slice(1, 3),
+      ...formattedPosts.slice(3, 6),
       { ...podcastEpisodes[2], ...PodcastFeaturedEpisodes[2] },
       { ...podcastEpisodes[3], ...PodcastFeaturedEpisodes[3] },
-      ...formattedPosts.slice(3, 5),
+      ...formattedPosts.slice(6),
       { ...podcastEpisodes[4], ...PodcastFeaturedEpisodes[4] },
-      ...formattedPosts.slice(5),
       { ...podcastEpisodes[5], ...PodcastFeaturedEpisodes[5] },
     ];
     formattedPosts = postsAndEpisodes;

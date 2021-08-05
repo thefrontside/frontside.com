@@ -192,3 +192,35 @@ Re-assigning design tokens to per-component variables makes it possible to defin
 <p class="blog-post--guest-intro">
     <a href="https://varya.me/" target="_blank">Varya Stepanova</a> is a design systems architect—and co-creator of <a href="http://getbem.com/" target="_blank" rel="nofollow">BEM</a>—based in Finland. Varya has improved the way dozens of teams, large and small, develop and evolve their design process towards better collaboration among stakeholders.
 </p>
+
+<aside class="posts-list-list">
+  <h2>Related article:</h2>
+  <div class="posts-list-entry">
+    <h3 class="posts-list-title">
+      <a href="/blog/2021-04-07-helping-designers-and-developers-storybook/">
+        Unleashing the Genie: Helping both designers and developers with Storybook
+      </a>
+    </h3>
+    <p>
+      Good documentation is key to design systems. However, what "good" means varies according to the reader. This article will go through tips to generate documentations for designers and developers from a single Storybook—keep everyone happy with minimum effort!
+    </p>
+    <a href="/blog/2021-04-07-helping-designers-and-developers-storybook/" class="post-link">
+      Continue reading
+      <span class="post-link--arrow">→</span>
+    </a>
+  </div>
+  <div class="posts-list-entry">
+    <h3 class="posts-list-title">
+      <a href="/blog/2021-08-04-interactors-design-systems/">
+        Interactors: the design systems testing ally
+      </a>
+    </h3>
+    <p>
+      Components from a design system make building UIs easy. It should be just as easy to test them. Interactors enable more robust tests for component-based UIs, and improve component libraries' maintainability.
+    </p>
+    <a href="/blog/2021-08-04-interactors-design-systems/" class="post-link">
+      Continue reading
+      <span class="post-link--arrow">→</span>
+    </a>
+  </div>
+</aside>

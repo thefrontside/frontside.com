@@ -153,4 +153,18 @@ The tips and tricks written above are indeed not the only things that one can do
       <span class="post-link--arrow">→</span>
     </a>
   </div>
+  <div class="posts-list-entry">
+    <h3 class="posts-list-title">
+      <a href="/blog/2021-08-04-interactors-design-systems/">
+        Interactors: the design systems testing ally
+      </a>
+    </h3>
+    <p>
+      Components from a design system make building UIs easy. It should be just as easy to test them. Interactors enable more robust tests for component-based UIs, and improve component libraries' maintainability.
+    </p>
+    <a href="/blog/2021-08-04-interactors-design-systems/" class="post-link">
+      Continue reading
+      <span class="post-link--arrow">→</span>
+    </a>
+  </div>
 </aside>
