@@ -23,7 +23,7 @@ const TagRoute = ({ data, pageContext }) => {
         posts={posts.map(({ node }) => ({
           id: node.id,
           slug: node.slug,
-          title: node.markdown.frontmatter.title,
+          title: node.title,
           date: node.markdown.frontmatter.date,
           description: node.markdown.frontmatter.description,
           excerpt: node.markdown.excerpt,
