@@ -59,6 +59,7 @@
 /blog/2021-01-29-kubernetes-wet-your-toes/
 /blog/2021-04-07-helping-designers-and-developers-storybook/
 /blog/2021-05-14-avoid-cloud-native-churn-with-backstage/
+/blog/2021-08-04-interactors-design-systems/
 /blog/2021-18-02-there-and-back-again-testing-and-upgrades/
 /blog/3
 /blog/4

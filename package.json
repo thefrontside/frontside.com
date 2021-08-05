@@ -70,6 +70,6 @@
   "devDependencies": {
     "@babel/preset-typescript": "^7.14.5",
     "bigtest": "^0.14.0",
-    "netlify-cli": "^5.2.0"
+    "netlify-cli": "^5.4.16"
   }
 }
