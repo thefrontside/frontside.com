@@ -3253,10 +3253,24 @@
     "@babel/template" "^7.12.13"
     "@vanilla-extract/integration" "^1.0.0"
 
-"@vanilla-extract/css@^1.0.0", "@vanilla-extract/css@^1.1.2":
+"@vanilla-extract/css@^1.0.0":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@vanilla-extract/css/-/css-1.1.2.tgz#ce00e32a3cdb4adf19e3193c08652a95fc8a7b12"
   integrity sha512-ZroX0o25EiRbcgsK/ul9AEq+zlZpyKRI/yrxlTzEnRtqjBuUsFP1U34rUApK13qzHKGjEtGAI17H73bkf6NACQ==
+  dependencies:
+    "@emotion/hash" "^0.8.0"
+    "@vanilla-extract/private" "^1.0.1"
+    chalk "^4.1.1"
+    css-what "^5.0.1"
+    cssesc "^3.0.0"
+    csstype "^3.0.7"
+    dedent "^0.7.0"
+    deep-object-diff "^1.1.0"
+
+"@vanilla-extract/css@^1.2.0", "@vanilla-extract/css@^1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/css/-/css-1.2.2.tgz#2b50d4928a89617754af3d1938303017a3852e83"
+  integrity sha512-l9KMJjqOG6wbq+kWhnRLPKOHDG0pOQmBS14+YKsc7cAzOo4FiU/G8rRxg1F8U5n5nGo93ZJJPitmRxYv2HaQHw==
   dependencies:
     "@emotion/hash" "^0.8.0"
     "@vanilla-extract/private" "^1.0.1"
@@ -3281,22 +3295,36 @@
     javascript-stringify "^2.0.1"
     lodash "^4.17.21"
 
+"@vanilla-extract/integration@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/integration/-/integration-1.1.0.tgz#7a766608327ffad25896b8d509b9acae07ccbcbc"
+  integrity sha512-VzDodGcoPv8loAyqIPya+UuFOr2c6D4rJ4uhIe4hms94FXZ+0qxPOXvFs7PNamt83M1zkInIj+0kEAHFC1D1gg==
+  dependencies:
+    "@vanilla-extract/css" "^1.2.0"
+    chalk "^4.1.1"
+    dedent "^0.7.0"
+    esbuild "^0.11.16"
+    eval "^0.1.6"
+    find-up "^5.0.0"
+    javascript-stringify "^2.0.1"
+    lodash "^4.17.21"
+
 "@vanilla-extract/private@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@vanilla-extract/private/-/private-1.0.1.tgz#c9479cebea7e7fbb07a1fe5b5c988a8753ef04ed"
   integrity sha512-ABrFJGSmF7a1M+eDTsIeAErPhIeRyBY3ypyLQPc4bUVEK1mvF7F2gx4fTP81pm12bkS0GhjSJtM854lcPWhB+w==
 
-"@vanilla-extract/sprinkles@^0.4.4":
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/@vanilla-extract/sprinkles/-/sprinkles-0.4.4.tgz#067364a997f71f152286a160f45babd06afbc24e"
-  integrity sha512-uz77Up4oFXYM2jXg3F+Oqz4dnvOTBan28T8mVK1u0i3DTJHV9MuStknP89gcsPMa1irOsgxv06P7aVEg0QR5xQ==
+"@vanilla-extract/sprinkles@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/sprinkles/-/sprinkles-1.0.0.tgz#44ff25e9782ba48e8a32aa1282d1772df16a2d6d"
+  integrity sha512-owMxzIZ9YIMAUNkHfr4B+GKAOW2jaZLCYk66rwRwY2olHS1MX8I0L5CESzRgkh4shuH7sUCUYLhIS247/SLK4w==
 
-"@vanilla-extract/webpack-plugin@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@vanilla-extract/webpack-plugin/-/webpack-plugin-1.0.3.tgz#765c27a644c5f9a3356c50036a88e8cc004088f1"
-  integrity sha512-lU68fxYa+AtBcWlSzGVR7tinoOBy77iqUdHhU66O8rFp2NAySQBSUDpuMvd96gRmDNP3o5kq7B4tJvnMWzMEuA==
+"@vanilla-extract/webpack-plugin@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vanilla-extract/webpack-plugin/-/webpack-plugin-1.1.0.tgz#9761dbfeb24271c6ca541fca311551413a79462e"
+  integrity sha512-HOcW7TYipzIBor+HruGW96fW9suWA5fgSHdsxngROm/F7AUk6SjAk/AOFD6kq4CLIG33d6ZryjRSPjb9STrfxw==
   dependencies:
-    "@vanilla-extract/integration" "^1.0.0"
+    "@vanilla-extract/integration" "^1.1.0"
     chalk "^4.1.1"
     debug "^4.3.1"
     loader-utils "^2.0.0"

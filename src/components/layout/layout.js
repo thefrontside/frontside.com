@@ -33,7 +33,7 @@ export default function TemplateWrapper({
       render={(data) => (
         <Box
           as="main"
-          background={{ lightMode: 'white', darkMode: 'fs-darkblue' }}
+          background={{ default: 'white', darkMode: 'fs-darkblue' }}
           padding={{ desktop: 'large', mobile: 'small' }}
         >
           <Helmet>
