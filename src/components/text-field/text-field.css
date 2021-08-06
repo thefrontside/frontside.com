@@ -1,9 +1,0 @@
-.text-field {
-  margin-bottom: var(--space-one-half);
-}
-
-.text-field-label {
-  display: block;
-  font-family: var(--font-sans-serif);
-  margin-bottom: var(--space-half);
-}

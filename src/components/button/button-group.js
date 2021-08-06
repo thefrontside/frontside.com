@@ -1,6 +1,6 @@
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
-import css from 'classnames';
+import { atoms } from '../atoms.css.ts';
 
 import Button from './button';
 
@@ -9,7 +9,7 @@ ButtonGroup.propTypes = {
   justify: PropTypes.oneOf(['center', 'between', 'around']),
   children: (props, propName, componentName) => {
     let arr = Children.toArray(props[propName]);
-    if (arr.some(child => child instanceof Button)) {
+    if (arr.some((child) => child instanceof Button)) {
       throw new Error(`Invalid children for ${componentName}, expected Button`);
     }
   },
@@ -24,14 +24,12 @@ export default function ButtonGroup({
 }) {
   return (
     <div
-      className={css(
-        'button-group',
-        {
-          [`align-${align}`]: !!align,
-          [`justify-${justify}`]: !!justify,
-        },
-        className
-      )}
+      className={atoms({
+        // 'button-group',
+        // [`align-${align}`]: !!align,
+        // [`justify-${justify}`]: !!justify,
+        // className
+      })}
       {...props}
     >
       {children}

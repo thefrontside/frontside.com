@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-import './posts-list.css';
 import Text from '../text';
 import SubscribeForm from '../subscribe-form';
 

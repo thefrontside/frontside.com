@@ -1,20 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from 'classnames';
-import './content.css';
+import { atoms } from '../atoms.css.ts';
 
 HTMLContent.propTypes = Content.propTypes;
 
 export function HTMLContent({ align, className, content }) {
   return (
     <section
-      className={css(
-        'content-container',
-        {
-          [`align-${align}`]: !!align,
-        },
-        className
-      )}
+      className={atoms({
+        // [`align-${align}`]: !!align,
+      })}
       dangerouslySetInnerHTML={{
         __html: content,
       }}
@@ -37,13 +32,11 @@ export default function Content({
 }) {
   return (
     <section
-      className={css(
-        'content-container',
-        {
-          [`align-${align}`]: !!align,
-        },
-        className
-      )}
+      className={atoms({
+        // 'content-container',
+        // [`align-${align}`]: !!align,
+        // className
+      })}
     >
       {content}
     </section>

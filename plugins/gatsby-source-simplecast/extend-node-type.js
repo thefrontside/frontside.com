@@ -43,7 +43,7 @@ exports.setFieldsOnGraphQLNodeType = ({ type, cache }) => {
         return cachedAst;
       } else {
         const ast = await getAST(node, property);
-        const htmlAst = toHAST(ast, { allowDangerousHTML: true });
+        const htmlAst = toHAST(ast, { allowDangerousHtml: true });
 
         // Save new HTML AST to cache and return
         cache.set(htmlAstCacheKey(node, property), htmlAst);
@@ -59,7 +59,7 @@ exports.setFieldsOnGraphQLNodeType = ({ type, cache }) => {
         const ast = await getHTMLAst(node, property);
         // Save new HTML to cache and return
         const html = hastToHTML(ast, {
-          allowDangerousHTML: true,
+          allowDangerousHtml: true,
         });
 
         // Save new HTML to cache and return

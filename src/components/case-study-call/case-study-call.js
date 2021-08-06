@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import './case-study-call.css';
 import bluetoothSimulationImage from '../../img/case-study-cta.png';
 
 export default function Footer() {
