@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import css from 'classnames';
-import './hero.css';
+import { atoms } from '../atoms.css.ts';
 
 Hero.propTypes = {
   align: PropTypes.oneOf(['left', 'right', 'center']),
@@ -12,9 +11,12 @@ Hero.propTypes = {
 export default function Hero({ align, heading, subheading }) {
   return (
     <section
-      className={css('hero', {
-        [`align-${align}`]: !!align,
-      })}
+      className={
+        // 'hero'
+        atoms({
+          // [`align-${align}`]: !!align,
+        })
+      }
     >
       <h1>{heading}</h1>
 

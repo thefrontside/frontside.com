@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-import './posts-widget.css';
 import Text from '../text';
 import Button, { ButtonGroup } from '../button';
 
@@ -31,7 +30,7 @@ export default function PostsWidget({ heading, linkTo, posts }) {
       <Text tag="h2">{heading}</Text>
 
       <ul className="posts-widget-list">
-        {posts.map(post => (
+        {posts.map((post) => (
           <li key={post.id} className="posts-widget-entry">
             <h3 className="posts-widget-title">
               <Link to={post.slug}>

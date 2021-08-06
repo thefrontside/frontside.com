@@ -9,8 +9,6 @@ import PodcastCTA from '../components/PodcastCTA';
 
 import BlogHeroImage from '../img/plork/blog-hero@1.5x.png';
 
-import './blog-list.css';
-
 // we manually add the image in the repo so we gather that data here
 const PodcastFeaturedEpisodes = [
   {

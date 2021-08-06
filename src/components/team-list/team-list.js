@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import './team-list.css';
 
 // needed to override default inline style
 const imgStyleOverrides = {
@@ -30,7 +29,7 @@ export default function TeamList({ people }) {
           <Link to={person.slug} className="team-member--picture">
             <GatsbyImage
               image={img.childImageSharp.gatsbyImageData}
-              style={imgStyleOverrides}
+              // style={imgStyleOverrides}
               className="team-img"
             />
           </Link>

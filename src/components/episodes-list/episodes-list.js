@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 
-import './episodes-list.css';
 import Text from '../text';
 import Content from '../content';
 
@@ -30,7 +29,7 @@ export default function EpisodesList({ heading, episodes }) {
       {heading}
 
       <ul className="episodes-list-list">
-        {episodes.map(episode => (
+        {episodes.map((episode) => (
           <li key={episode.id} className="episodes-list-entry">
             <Text tag="h3" className="episodes-list-title">
               <Link to={`/podcast/${episode.slug}`}>

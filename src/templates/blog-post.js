@@ -7,8 +7,6 @@ import Content from '../components/content';
 import Text from '../components/text';
 import SubscribeForm from '../components/subscribe-form';
 
-import './blog-post.css';
-
 const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
   tags = Array.isArray(tags) ? tags : [tags].filter(Boolean);
 
