@@ -60,15 +60,26 @@
     "test:server": "bigtest server --launch=chrome",
     "test:run": "bigtest test",
     "check-urls": "node ./lib/check-urls/index.js",
-    "verify-sitemap": "./lib/verify-sitemap/index.js"
+    "verify-sitemap": "./lib/verify-sitemap/index.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o ./public/storybook"
   },
   "volta": {
     "node": "14.17.3",
     "yarn": "1.22.10"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
     "@babel/preset-typescript": "^7.14.5",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/builder-webpack5": "^6.3.7",
+    "@storybook/manager-webpack5": "^6.3.7",
+    "@storybook/react": "^6.3.7",
+    "babel-loader": "^8.2.2",
     "bigtest": "^0.14.0",
-    "netlify-cli": "^5.2.0"
+    "netlify-cli": "^5.2.0",
+    "storybook-dark-mode": "^1.0.8"
   }
 }

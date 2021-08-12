@@ -2,7 +2,7 @@ import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import { atoms } from '../atoms.css.ts';
 
-import Button from './button';
+import { Button } from './button';
 
 ButtonGroup.propTypes = {
   align: PropTypes.oneOf(['center', 'start', 'end']),
@@ -15,13 +15,7 @@ ButtonGroup.propTypes = {
   },
 };
 
-export default function ButtonGroup({
-  align,
-  justify,
-  children,
-  className,
-  ...props
-}) {
+export function ButtonGroup({ align, justify, children, className, ...props }) {
   return (
     <div
       className={atoms({

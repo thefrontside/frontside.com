@@ -53,7 +53,7 @@ const responsiveStyles = createAtomicStyles({
   },
 });
 
-const colors = {
+export const colors = {
   inherit: 'inherit',
   white: '#fff',
   'fs-red': '#f74d7b',
