@@ -9,7 +9,7 @@ Button.propTypes = {
   large: PropTypes.bool,
 };
 
-export default function Button({ className, highlight, large, ...props }) {
+export function Button({ className, highlight, large, ...props }) {
   let Component = props.to ? Link : 'button';
 
   return (

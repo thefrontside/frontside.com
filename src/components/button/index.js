@@ -1,2 +1,2 @@
-export { default } from './button';
-export { default as ButtonGroup } from './button-group';
+export { Button, Button as default } from './button';
+export { ButtonGroup } from './button-group';

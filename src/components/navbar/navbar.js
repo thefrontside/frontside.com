@@ -26,7 +26,7 @@ const NavItems = [
   { itemUrl: '/blog', itemText: 'Blog & Podcast' },
 ];
 
-const Navbar = () => {
+export const Navbar = () => {
   const [hamburgerActive, setHamburgerMenu] = useState(false);
   const toggleHamburgerMenu = () => setHamburgerMenu(!hamburgerActive);
 
@@ -99,8 +99,6 @@ const Navbar = () => {
     </div>
   );
 };
-
-export default Navbar;
 
 const Logo = () => (
   <svg
