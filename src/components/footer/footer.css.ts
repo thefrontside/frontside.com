@@ -1,21 +1,37 @@
-import { atoms } from '../atoms.css.ts';
+import { style } from '@vanilla-extract/css';
+import vars, { laptopQuery, darkThemeQuery } from '../../styles/frontside-theme.css';
 
-export const NavLinkStyle = atoms({
-  paddingX: 'large',
-  paddingY: 'medium',
-  color: { default: 'fs-blue', darkMode: 'white' },
-  textDecoration: 'none',
-  fontFamily: 'fs',
-  textSize: 'lg',
-});
-
-export const AddressStyle = atoms({
+export const footerNav = style({
   display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  color: { default: 'fs-blue', darkMode: 'white' },
-  fontFamily: 'fs',
-  textSize: 'sm',
+  flexFlow: 'row wrap',
+  justifyContent: 'left',
+  '@media': {
+    [laptopQuery]: {
+      justifyContent: 'center',
+    },
+  }
 });
 
-export const NoMargin = atoms({ marginY: 'none' });
+export const footerNavLink = style({
+  display: 'inline-block',
+  boxSizing: 'border-box',
+  fontSize: vars.fontSize.sm,
+  fontWeight: vars.fontWeights.bold,
+  paddingLeft: vars.space.md,
+  paddingRight: vars.space.md,
+  marginBottom: vars.space.sm,
+  textAlign: 'left',
+  width: '50%',
+  flexShrink: 1,
+  color: vars.colors.blue,
+
+  '@media': {
+    [laptopQuery]: {
+      width: 'inherit',
+      textAlign: 'center',
+    },
+    [darkThemeQuery]: {
+      color: vars.colors.white,
+    }
+  }
+});

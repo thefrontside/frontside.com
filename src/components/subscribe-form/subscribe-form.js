@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { atoms } from '../atoms.css.ts';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import Input from '../input';
 import Button from '../button';
+
+import { atoms } from '../../styles/atoms.css.ts';
 
 SubscribeForm.propTypes = {
   highlight: PropTypes.bool,

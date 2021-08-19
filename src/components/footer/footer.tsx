@@ -1,10 +1,10 @@
 import React from 'react';
 import FSIcon from '../../img/plork/fs-webclip.png';
-import { atoms } from '../atoms.css.ts';
-import { NavLinkStyle, AddressStyle, NoMargin } from './footer.css';
+import { atoms } from '../../styles/atoms.css';
+import { footerNavLink, footerNav } from './footer.css';
 
 const NavItem = ({ itemUrl, itemText }) => (
-  <a href={itemUrl} className={NavLinkStyle}>
+  <a href={itemUrl} className={footerNavLink}>
     {itemText}
   </a>
 );
@@ -23,33 +23,32 @@ export default function Footer() {
   let year = new Date().getFullYear();
 
   return (
-    <footer className={atoms({ paddingY: 'large' })}>
-      <nav className={atoms({ textAlign: 'center' })}>
+    <footer className={atoms({ marginTop: { mobile: 'xl', laptop: '2xl', desktop: '3xl' }, marginBottom: 'lg' })}>
+      <nav className={footerNav}>
         {NavItems.map((item) => (
           <NavItem key={item.itemUrl} {...item} />
         ))}
       </nav>
       <div
         className={atoms({
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+          textAlign: 'center',
+          fontSize: 'xs',
+          marginTop: '3xl',
         })}
       >
         <a
           href="/"
           aria-label="visit homepage"
-          className={atoms({ padding: 'large' })}
+          className={atoms({ padding: 'md' })}
         >
           <img src={FSIcon} width="32.5" alt="Frontside Logo" />
         </a>
-        <div className={AddressStyle}>
-          <p className={NoMargin}>2301 W Anderson Ln #107</p>
-          <p className={NoMargin}>Austin, Texas 78757</p>
-          <p className={NoMargin}>+1 (800) 493-4589</p>
-        </div>
-        <p
-          className={AddressStyle}
+        <p className={atoms({ fontSize: 'xs', marginTop: 'md' })}>
+          2301 W Anderson Ln #107<br />
+          Austin, Texas 78757<br />
+          +1 (800) 493-4589
+        </p>
+        <p className={atoms({ marginTop: 'lg', textTransform: 'uppercase' })}
         >{`\u00A9 2005-${year} The Frontside Software, Inc. All rights reserved.`}</p>
       </div>
     </footer>

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { atoms } from '../atoms.css.ts';
 import Input from '../input';
+
+import { atoms } from '../../styles/atoms.css.ts';
 
 TextField.propTypes = {
   label: PropTypes.string,

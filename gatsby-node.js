@@ -54,7 +54,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   _.range(pages - 1).forEach((p) => {
     createPage({
       path: getBlogUrl(p + 1),
-      component: path.resolve('./src/templates/blog-list.js'),
+      component: path.resolve('./src/templates/blog-list.tsx'),
       context: {
         limit: POSTS_PER_PAGE,
         skip: p * POSTS_PER_PAGE,
@@ -162,7 +162,6 @@ const webflowHTML = [
   'consulting',
   'contact-thanks',
   'contact',
-  'index',
   'privacy-policy',
   'tools',
 ];
@@ -185,10 +184,6 @@ exports.onCreateDevServer = async ({ app }) => {
 };
 
 exports.onPostBuild = async ({ graphql }) => {
-  // webflow pages in static get copied automatically, but it won't overwrite
-  // if a page exists so we manually do that here
-  await fs.copyFile('./static/index.html', './public/index.html');
-
   // to confirm all of our urls are coming through as expected
   // we create and commit a list of urls in the text file
   // then our PR makes makes adding a new page an explicit intention

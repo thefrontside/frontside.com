@@ -1,29 +1,23 @@
 import React, { useState } from 'react';
-import { atoms } from '../atoms.css.ts';
+import { Link } from 'gatsby';
+import { atoms } from '../../styles/atoms.css.ts';
+import { PageWrap } from '../../styles/page.css';
 import {
   NavHorizontalList,
   NavVerticalList,
   NavItemStyle,
   NavLinkStyle,
+  NavLink,
   ContactButton,
   LogoSVGFill,
   MenuSVGFill,
-} from './navbar.css.ts';
-
-const NavItem = ({ itemUrl, itemText }) => (
-  <li className={NavItemStyle}>
-    <a href={itemUrl} className={NavLinkStyle}>
-      {itemText}
-    </a>
-  </li>
-);
+  NavWrap,
+} from './navbar.css';
 
 const NavItems = [
-  { itemUrl: '/', itemText: 'Homepage' },
-  { itemUrl: '/about', itemText: 'People' },
-  { itemUrl: '/consulting', itemText: 'Consulting' },
-  { itemUrl: '/tools', itemText: 'Tools' },
-  { itemUrl: '/blog', itemText: 'Blog & Podcast' },
+  { url: '/consulting', text: 'DX Consulting' },
+  { url: '/backstage', text: 'Backstage' },
+  { url: '/blog', text: 'Resources' },
 ];
 
 export const Navbar = () => {
@@ -31,72 +25,87 @@ export const Navbar = () => {
   const toggleHamburgerMenu = () => setHamburgerMenu(!hamburgerActive);
 
   return (
-    <div role="banner" className={atoms({ position: 'relative' })}>
-      <div
-        className={atoms({
-          display: 'flex',
-        })}
-      >
-        <a href="/" className={atoms({ padding: 'large' })}>
+    <nav className={NavWrap}>
+        <Link to="/" className={atoms({ marginRight: 'auto' })}>
           <Logo />
-        </a>
-        <nav
-          role="navigation"
-          className={atoms({
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            display: { mobile: 'none', tablet: 'flex' },
-          })}
-        >
-          <ul className={NavHorizontalList}>
-            {NavItems.map((item) => (
-              <NavItem key={item.itemUrl} {...item} />
-            ))}
-          </ul>
-        </nav>
-        <a
-          href="/contact"
-          className={atoms({
-            marginLeft: 'auto',
-            marginY: 'auto',
-          })}
-        >
-          <button className={ContactButton}>Contact</button>
-        </a>
-
-        <button
-          type="button"
-          className={atoms({
-            background: 'inherit',
-            borderWidth: 'none',
-            marginLeft: 'large',
-            padding: 'large',
-            display: { mobile: 'block', tablet: 'none' },
-            transform: hamburgerActive ? 'r45' : 'r315',
-            transition: 'large',
-          })}
-          onClick={toggleHamburgerMenu}
-        >
-          <PolygonMenu />
-        </button>
-      </div>
-
-      <div
-        className={atoms({
-          display: hamburgerActive
-            ? { mobile: 'block', tablet: 'none' }
-            : 'none',
-        })}
+        </Link>
+        {NavItems.map((link, i) => (
+          <Link to={link.url} key={i} className={NavLink}>
+            {link.text}
+          </Link>
+        ))}
+      <a
+        href="/contact"
+        className={ContactButton}
       >
-        <nav role="navigation">
-          <ul className={NavVerticalList}>
-            {NavItems.map((item) => (
-              <NavItem key={item.itemUrl} {...item} />
-            ))}
-          </ul>
-        </nav>
-      </div>
-    </div>
+        Contact
+      </a>
+    </nav>
+    // <div role="banner" className={atoms({ position: 'relative' })}>
+    //   <div
+    //     className={atoms({
+    //       display: 'flex',
+    //     })}
+    //   >
+    //     <a href="/" className={atoms({ padding: 'lg' })}>
+    //       <Logo />
+    //     </a>
+    //     <nav
+    //       role="navigation"
+    //       className={atoms({
+    //         marginLeft: 'auto',
+    //         marginRight: 'auto',
+    //         display: { mobile: 'none', laptop: 'flex' },
+    //       })}
+    //     >
+    //       <ul className={NavHorizontalList}>
+    //         {NavItems.map((item) => (
+    //           <NavItem key={item.url} {...item} />
+    //         ))}
+    //       </ul>
+    //     </nav>
+    //     <a
+    //       href="/contact"
+    //       className={atoms({
+    //         marginLeft: 'auto',
+    //         marginY: 'auto',
+    //       })}
+    //     >
+    //       <button className={ContactButton}>Contact</button>
+    //     </a>
+
+    //     <button
+    //       type="button"
+    //       className={atoms({
+    //         borderWidth: 'none',
+    //         marginLeft: 'lg',
+    //         padding: 'lg',
+    //         display: { mobile: 'block', laptop: 'none' },
+    //         transform: hamburgerActive ? 'r45' : 'r315',
+    //         transition: 'lg',
+    //       })}
+    //       onClick={toggleHamburgerMenu}
+    //     >
+    //       <PolygonMenu />
+    //     </button>
+    //   </div>
+
+    //   <div
+    //     className={atoms({
+    //       display: hamburgerActive
+    //         ? { mobile: 'block', laptop: 'none' }
+    //         : 'none',
+    //     })}
+    //   >
+    //     <nav role="navigation">
+    //       <ul className={NavVerticalList}>
+    //         {NavItems.map((item) => (
+    //           <NavItem key={item.url} {...item} />
+    //         ))}
+    //       </ul>
+    //     </nav>
+    //   </div>
+    // </div>
   );
 };
 

@@ -49,10 +49,6 @@ globalFontFace('Proxima Nova', {
 //   url('/fonts/proxima-nova/319CC5_5_0.ttf') format('truetype');
 // });
 
-export const text = style({
-  fontFamily: 'Proxima Nova',
-});
-
 // @font-face {
 //   font-weight: 800;
 //   font-family: 'Proxima Nova';

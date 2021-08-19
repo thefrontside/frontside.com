@@ -8,6 +8,7 @@ description: >-
   Good documentation is key to design systems. However, what "good" means varies according to the reader. This article will go through tips to generate documentations for designers and developers from a single Storybook—keep everyone happy with minimum effort!
 tags:
   - design-systems
+  - dx
 img: /img/2021-helping-designers-and-developers-storybook.png
 ---
 

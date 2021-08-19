@@ -7,28 +7,60 @@ import Content from '../components/content';
 import Text from '../components/text';
 import SubscribeForm from '../components/subscribe-form';
 
+import {
+  PageWrap,
+  HeroWrap,
+  HeroText,
+  HeroImage,
+  HeroBreak,
+  FeatureRow,
+  FeatureText,
+  FeatureTextAlternate,
+  FeatureImage,
+  ClientLogos,
+  SectionHeader,
+  ColumnedHighlights,
+  Highlight,
+  HighlightImage,
+  CardList,
+  Card,
+  CardImage,
+} from '../styles/page.css';
+import {
+  MardownColumn
+} from '../styles/typography.css';
+import { atoms } from '../styles/atoms.css';
+
 const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
   tags = Array.isArray(tags) ? tags : [tags].filter(Boolean);
 
   return (
     <>
-      <section className="widewrapper herowrapper blog-post-hero w-container">
-        <div className="herotext">
-          <h1 className="heading blog-post-heading">{title}</h1>
-          <p className="subheader blog-post-meta">
-            By
-            {authors.map((author, i) => (
-              <React.Fragment key={author.slug}>
-                {i === 0 ? '' : authors.length > 2 ? ', ' : ' and '}
-                {/* Author links will lead to team member page, which is currently pending. */}
-                {/* <Link key={author.slug} to={author.slug}>
-                <Text>{author.name}</Text>
-              </Link> */}
-                <Text>{author.name}</Text>
-              </React.Fragment>
-            ))}
-            <br />
-            <span className="blog-post-date">{date}</span>
+      <header className={HeroWrap}>
+        <div className={HeroText}>
+          <h1
+            className={atoms({
+              fontScale: '3xl',
+              fontWeight: 'extrabold',
+            })}
+          >
+            {title}
+          </h1>
+          <p className={atoms({ fontScale: 'lg' })}>
+            {authors.filter(Boolean).map((author, i) => (
+                <React.Fragment key={author.slug}>
+                  {i === 0 ? '' : authors.length > 2 ? ', ' : ' and '}
+                  {/* Author links will lead to team member page, which is currently pending. */}
+                  {/* <Link key={author.slug} to={author.slug}>
+                          <Text>{author.name}</Text>
+                        </Link>
+                    */}
+                  {author.name}
+                </React.Fragment>
+              ))}{' '}
+          </p>
+          <p className={atoms({ fontScale: 'sm' })}>
+            {date}
           </p>
           <ul className="blog-post-tags">
             {tags.map((tag, i) => (
@@ -38,18 +70,18 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
             ))}
           </ul>
         </div>
-        <div className="blog-post-hero-image">
-          <img src={image} alt="" />
+        <div className={HeroImage}>
+          <img src={image} alt="" className={atoms({ borderRadius: 'sm' })} />
         </div>
-      </section>
-      <Content>
-        <section
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{
-            __html: content,
-          }}
-        />
-      </Content>
+      </header>
+
+      <main
+        className={MardownColumn}
+        dangerouslySetInnerHTML={{
+          __html: content,
+        }}
+      />
+  
       <footer className="widewrapper w-container">
         <SubscribeForm highlight={true} />
       </footer>

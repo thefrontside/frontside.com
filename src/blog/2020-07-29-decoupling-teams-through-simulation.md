@@ -9,6 +9,7 @@ description: >-
 tags:
   - simulation
   - best-practices
+  - dx
 img: /img/2020-07-29-simulator-social.png
 ---
 

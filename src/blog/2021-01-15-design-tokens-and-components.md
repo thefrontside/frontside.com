@@ -8,6 +8,7 @@ description: >-
   Design tokens are used to keep a consistent look across an entire system. How do you name them semantically if they have to make sense everywhere but also respond to the inner logic of individual components which are independently developed? 
 tags:
   - design-systems
+  - dx
 img: /img/2021-design-tokens/design-tokens-header.png
 ---
 

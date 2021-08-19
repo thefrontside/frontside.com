@@ -1,6 +1,6 @@
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
-import { atoms } from '../atoms.css.ts';
+import { atoms } from '../../styles/atoms.css.ts';
 
 import { Button } from './button';
 

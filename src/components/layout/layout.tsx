@@ -1,13 +1,12 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
-
-import '../global.css.ts';
-import Box from '../box';
-import 'syntax-highlighting/assets/css/prism/prism-base16-ateliersulphurpool.light.css';
-
 import Navbar from '../navbar';
 import Footer from '../footer';
+
+import '../../styles/global.css';
+
+import 'syntax-highlighting/assets/css/prism/prism-base16-ateliersulphurpool.light.css';
 
 export default function TemplateWrapper({
   children,
@@ -31,11 +30,7 @@ export default function TemplateWrapper({
         }
       `}
       render={(data) => (
-        <Box
-          as="main"
-          background={{ default: 'white', darkMode: 'fs-darkblue' }}
-          padding={{ desktop: 'large', mobile: 'small' }}
-        >
+        <>
           <Helmet>
             <html lang="en" />
             <title>
@@ -114,7 +109,7 @@ export default function TemplateWrapper({
           {children}
 
           <Footer />
-        </Box>
+        </>
       )}
     />
   );

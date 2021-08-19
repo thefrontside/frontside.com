@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { atoms } from '../atoms.css.ts';
+import { atoms } from '../../styles/atoms.css.ts';
 
 HTMLContent.propTypes = Content.propTypes;
 
