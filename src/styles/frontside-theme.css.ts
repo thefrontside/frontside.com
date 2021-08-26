@@ -81,7 +81,9 @@ const frontsideTheme = createGlobalTheme(':root', {
     dark: darkThemeQuery
   },
   radius: {
+    sm: '0.25rem',
     md: '0.5rem',
+    lg: '1rem'
   },
 });
 

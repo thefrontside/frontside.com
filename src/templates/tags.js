@@ -3,36 +3,57 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostsList from '../components/posts-list';
 
+
+import {
+  PageWrap,
+  SectionHeader,
+} from '../styles/page.css';
+import {
+  TextGradientSkybluePink,
+} from '../styles/typography.css';
+import { atoms } from '../styles/atoms.css';
+import { PaginationButton } from '../styles/buttons.css';
+
 const TagRoute = ({ data, pageContext }) => {
   const posts = data.allBlogPost.edges;
+  const formattedPosts = posts.map(({ node }) => ({
+    id: node.id,
+    slug: node.slug,
+    title: node.title,
+    date: node.markdown.frontmatter.date,
+    description: node.markdown.frontmatter.description,
+    excerpt: node.markdown.excerpt,
+    image:
+      node.markdown.frontmatter.img == null
+        ? null
+        : node.markdown.frontmatter.img.childImageSharp.fixed.src,
+    authors: node.authorNodes.map((author) => ({
+      slug: author.slug,
+      name: author.name,
+    })),
+  }));
   const tag = pageContext.tag;
 
   return (
     <Layout title={tag}>
-      <PostsList
-        heading={
-          <>
-            <h1 className="heading">
-              Articles tagged with <span className="gradient-text">{tag}</span>
-            </h1>
-            <p className="subheader">
-              <Link to="/tags/">Browse all tags</Link>
-            </p>
-          </>
-        }
-        posts={posts.map(({ node }) => ({
-          id: node.id,
-          slug: node.slug,
-          title: node.title,
-          date: node.markdown.frontmatter.date,
-          description: node.markdown.frontmatter.description,
-          excerpt: node.markdown.excerpt,
-          authors: node.authorNodes.map((author) => ({
-            slug: author.slug,
-            name: author.name,
-          })),
-        }))}
-      />
+      <header className={SectionHeader}>
+        <h2
+          className={atoms({
+            fontScale: 'xl',
+            fontWeight: 'extrabold',
+            textTransform: 'uppercase',
+            marginTop: 'xl'
+          })}
+        >
+          Posts tagged with <span className={TextGradientSkybluePink}>{tag}</span>
+        </h2>
+        {/* <Link to="/tags/" className={PaginationButton}>Browse all tags</Link> */}
+      </header>
+      <section className={PageWrap}>
+        <PostsList
+          posts={formattedPosts}
+        />
+      </section>
     </Layout>
   );
 };
@@ -66,6 +87,13 @@ export const tagPageQuery = graphql`
             frontmatter {
               description
               date(formatString: "MMMM DD, YYYY")
+              img {
+                childImageSharp {
+                  fixed(width: 600) {
+                    src
+                  }
+                }
+              }
             }
           }
         }

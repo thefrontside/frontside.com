@@ -281,9 +281,22 @@ globalStyle(`${MardownColumn} tbody td`, {
   borderBottomWidth: '0.035rem',
 });
 
+globalStyle(`${MardownColumn} [class*="language-"]`, {
+  '@media': {
+    [darkThemeQuery]: {
+      background: 'rgba(38, 171, 232, 0.1)',
+      color: '#c2d0e6'
+    }
+  }
+});
+
+globalStyle(`${MardownColumn} [class*="language-"] [class*="language-"]`, {
+  background: 'none',
+});
+
 
 //composeStyles doesn't work so we need to repeat
-globalStyle(`${MardownColumn} > p`, {
+globalStyle(`${MardownColumn} p`, {
   lineHeight: '1.4090909rem',
   marginTop: '0',
   marginBottom: '1.4090909rem',

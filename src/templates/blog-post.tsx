@@ -14,6 +14,7 @@ import {
   MardownColumn
 } from '../styles/typography.css';
 import { atoms } from '../styles/atoms.css';
+import { TagButton } from '../styles/buttons.css';
 
 const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
   tags = Array.isArray(tags) ? tags : [tags].filter(Boolean);
@@ -46,10 +47,10 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
           <p className={atoms({ fontScale: 'sm' })}>
             {date}
           </p>
-          <ul className="blog-post-tags">
+          <ul className={atoms({ listStyle: 'none', padding: 'none', marginTop: 'lg' })}>
             {tags.map((tag, i) => (
-              <li key={`tag-${tag}`} className="blog-post-tag">
-                <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+              <li key={`tag-${tag}`} className={atoms({ display: 'inline-block', marginRight: 'xs' })}>
+                <Link to={`/tags/${kebabCase(tag)}/`} className={TagButton}>{tag}</Link>
               </li>
             ))}
           </ul>

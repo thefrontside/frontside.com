@@ -156,7 +156,7 @@ export default function BlogPage({
                   textTransform: 'uppercase',
                 })}
               >
-                <span className={atoms({ color: 'pink' })}>Resources # group posts and tools by category of resources. ie. backstage open mic with posts about cloud native, interactors with blog posts #</span> for
+                <span className={atoms({ color: 'pink' })}>Resources</span> for
                 engineering teams
               </h1>
               <p className={atoms({ fontScale: 'lg' })}>
