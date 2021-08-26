@@ -3,28 +3,12 @@ import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
-import Content from '../components/content';
-import Text from '../components/text';
 import SubscribeForm from '../components/subscribe-form';
 
 import {
-  PageWrap,
   HeroWrap,
   HeroText,
   HeroImage,
-  HeroBreak,
-  FeatureRow,
-  FeatureText,
-  FeatureTextAlternate,
-  FeatureImage,
-  ClientLogos,
-  SectionHeader,
-  ColumnedHighlights,
-  Highlight,
-  HighlightImage,
-  CardList,
-  Card,
-  CardImage,
 } from '../styles/page.css';
 import {
   MardownColumn
