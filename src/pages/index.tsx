@@ -89,7 +89,7 @@ export default function IndexPage({
 
       <div className={ClientLogos}>
         Trusted by HP, Resideo, Honeywell, Standard Chartered, Dell, HSBC and
-        others
+        others        
       </div>
 
       <section className={PageWrap}>

@@ -1,7 +1,8 @@
 import { style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
-import vars, { laptopQuery, desktopQuery } from './frontside-theme.css';
+import vars, { laptopQuery, desktopQuery, darkThemeQuery } from './frontside-theme.css';
 import clientsLogo from '../img/q3-2021/client-logos.svg';
+import clientsLogoWhite from '../img/q3-2021/client-logos-white.svg';
 
 export const PageWrap = style({
   boxSizing: 'border-box',
@@ -118,7 +119,8 @@ export const FeatureRow = style({
       flexFlow: 'row nowrap',
       paddingLeft: vars.space.lg,
       paddingRight: vars.space.lg,
-      alignItems: 'stretch'
+      alignItems: 'stretch',
+      justifyContent: 'center'
     },
   }
 });
@@ -132,7 +134,12 @@ export const ClientLogos = style({
   textIndent: '-1000px',
   overflow: 'hidden',
   marginTop: vars.space.lg,
-  marginBottom: vars.space['2xl']
+  marginBottom: vars.space['2xl'],
+  '@media': {
+    [darkThemeQuery]: {
+      backgroundImage: `url(${clientsLogoWhite})`,
+    }
+  }
 });
 
 export const SectionHeader = style({

@@ -354,7 +354,7 @@ export default function IndexPage({
           })}
         >
           {teamMembers.map((person, i) => (
-            <li className={FeatureRow}>
+            <li className={FeatureRow} key={i}>
               <div className={FeatureTextAlternate}>
                 <h3
                   className={atoms({
