@@ -25,10 +25,6 @@ import {
 } from '../styles/page.css';
 import {
   TextGradientSkybluePink,
-  TextGradientPinkSkyblue,
-  TextBottomGradient,
-  TextGradientPinkPurple,
-  TextGradientPurpleSkyblue,
   TextGradientSkybluePurple,
   TextGradientDemiSkybluePink,
   TextGradientPurplePink,

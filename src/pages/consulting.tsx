@@ -14,11 +14,7 @@ import {
   FeatureText,
   FeatureTextAlternate,
   FeatureImage,
-  ClientLogos,
   SectionHeader,
-  ColumnedHighlights,
-  Highlight,
-  HighlightImage,
   CardList,
   Card,
   CardImage,
@@ -26,9 +22,6 @@ import {
 import {
   TextGradientSkybluePink,
   TextGradientPinkSkyblue,
-  TextBottomGradient,
-  TextGradientPinkPurple,
-  TextGradientPurpleSkyblue,
 } from '../styles/typography.css';
 import { atoms } from '../styles/atoms.css';
 
@@ -218,8 +211,8 @@ export default function ConsultingPage({
                     */}
                       {author.name}
                     </React.Fragment>
-                  ))}
-                  {' '} &mdash; <span>{post.date}</span>
+                  ))}{' '}
+                  &mdash; <span>{post.date}</span>
                 </p>
                 <p className={atoms({ fontScale: 'sm', paddingX: 'sm' })}>
                   {post.excerpt}

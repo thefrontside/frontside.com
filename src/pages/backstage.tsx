@@ -9,16 +9,11 @@ import {
   HeroWrap,
   HeroText,
   HeroImage,
-  HeroBreak,
   FeatureRow,
   FeatureText,
   FeatureTextAlternate,
   FeatureImage,
-  ClientLogos,
   SectionHeader,
-  ColumnedHighlights,
-  Highlight,
-  HighlightImage,
   CardList,
   Card,
   CardImage,
@@ -26,10 +21,6 @@ import {
 import {
   TextGradientSkybluePink,
   TextGradientSkyblueGreen,
-  TextGradientPinkSkyblue,
-  TextBottomGradient,
-  TextGradientPinkPurple,
-  TextGradientPurpleSkyblue,
 } from '../styles/typography.css';
 import { atoms } from '../styles/atoms.css';
 
@@ -71,7 +62,9 @@ export default function BackstagePage({
             Own your{' '}
             <span className={atoms({ color: 'green' })}>Backstage</span>{' '}
             implementation{' '}
-            <span className={TextGradientSkyblueGreen}>without forking out</span>
+            <span className={TextGradientSkyblueGreen}>
+              without forking out
+            </span>
           </h1>
           <p className={atoms({ fontScale: 'lg' })}>
             We help Cloud native teams create cohesive developer experiences to
