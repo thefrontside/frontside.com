@@ -17,7 +17,7 @@ import {
 const NavItems = [
   { url: '/consulting', text: 'DX Consulting' },
   { url: '/backstage', text: 'Backstage' },
-  { url: '/blog', text: 'Resources' },
+  { url: '/blog', text: 'Blog' },
 ];
 
 export const Navbar = () => {

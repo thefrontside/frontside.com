@@ -22,7 +22,6 @@ export default function BlogPreview({ post }) {
           <h3
             className={atoms({
               fontScale: 'xl',
-              lineHeight: 'lg',
             })}
           >
             {post.title}

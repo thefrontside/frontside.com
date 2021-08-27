@@ -1,5 +1,5 @@
 import { composeStyles, style } from '@vanilla-extract/css';
-import vars from './frontside-theme.css';
+import vars, { darkThemeQuery } from './frontside-theme.css';
 
 export const PaginationButton = style({
   background: vars.colors.blue,
@@ -20,5 +20,11 @@ export const TagButton = style({
   textTransform: 'uppercase',
   border: `1px solid ${vars.colors.blue}`,
   borderRadius: vars.radius.lg,
-  fontSize: vars.fontSize.xs
+  fontSize: vars.fontSize.xs,
+  '@media': {
+    [darkThemeQuery]: {
+      color: vars.colors.white,
+      borderColor: vars.colors.white,
+    }
+  }
 });

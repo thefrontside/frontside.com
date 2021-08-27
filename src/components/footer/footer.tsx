@@ -1,21 +1,20 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import FSIcon from '../../img/plork/fs-webclip.png';
 import { atoms } from '../../styles/atoms.css';
 import { footerNavLink, footerNav } from './footer.css';
 
 const NavItem = ({ itemUrl, itemText }) => (
-  <a href={itemUrl} className={footerNavLink}>
+  <Link to={itemUrl} className={footerNavLink}>
     {itemText}
-  </a>
+  </Link>
 );
 
 const NavItems = [
   { itemUrl: '/', itemText: 'Homepage' },
-  { itemUrl: '/about', itemText: 'People' },
+  { itemUrl: '/about', itemText: 'About' },
   { itemUrl: '/consulting', itemText: 'Consulting' },
-  { itemUrl: '/tools', itemText: 'Tools' },
-  { itemUrl: '/blog', itemText: 'Blog & Podcast' },
-  { itemUrl: '/podcast', itemText: 'Podcast' },
+  { itemUrl: '/blog', itemText: 'Blog' },
   { itemUrl: '/contact', itemText: 'Contact' },
 ];
 

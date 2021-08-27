@@ -336,3 +336,19 @@ globalStyle(`${MardownColumn} > blockquote`, {
   marginTop: '0',
   marginBottom: '1.4090909rem',
 });
+
+export const BigQuote = style({
+  fontSize: vars.fontSize['3xl'],
+  lineHeight: vars.lineHeights['3xl'],
+  letterSpacing: vars.letterSpacing['3xl'],
+  fontWeight: vars.fontWeights.bold,
+  margin: 0,
+  textAlign: 'center',
+
+  '@media': {
+    [laptopQuery]: {
+      marginRight: vars.space['2xl'],
+      marginLeft: vars.space['2xl'],
+    }
+  }
+});

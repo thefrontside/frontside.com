@@ -157,7 +157,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 };
 
 const webflowHTML = [
-  'about',
   'code-of-conduct',
   'consulting',
   'contact-thanks',

@@ -104,6 +104,11 @@ export const FeatureTextAlternate = style({
 
 export const FeatureImage = HeroImage;
 
+export const AboutTeamImg = style({
+  width: '15rem',
+  borderRadius: vars.radius.md,
+});
+
 export const FeatureRow = style({
   marginBottom: vars.space.lg,
 
@@ -140,11 +145,14 @@ export const SectionHeader = style({
 
 export const ColumnedHighlights = style({
   display: 'flex',
-  flexFlow: 'column nowrap',
+  flexFlow: 'column wrap',
+  listStyle: 'none',
+  paddingLeft: '0',
+
   '@media': {
     [laptopQuery]: {
       display: 'flex',
-      flexFlow: 'row nowrap'
+      flexFlow: 'row wrap'
     },
   }
 });
@@ -155,8 +163,11 @@ export const Highlight = style({
   textAlign: 'center',
   paddingLeft: vars.space.md,
   paddingRight: vars.space.md,
+  alignItems: 'stretch',
+
   '@media': {
     [laptopQuery]: {
+      boxSizing: 'border-box',
       width: calc('100%').divide(3).toString(),
       paddingLeft: vars.space.sm,
       paddingRight: vars.space.sm,
@@ -166,6 +177,33 @@ export const Highlight = style({
       paddingRight: vars.space.lg,
     },
   }
+});
+
+// vanilla-extract composeStyles doesn't work, so we need to re-write
+export const AboutHighlight = style({
+  display: 'flex',
+  flexFlow: 'column nowrap',
+  paddingLeft: vars.space.md,
+  paddingRight: vars.space.md,
+  marginBottom: vars.space.md,
+  textAlign: 'left',
+  '@media': {
+    [laptopQuery]: {
+      boxSizing: 'border-box',
+      width: calc('100%').divide(3).toString(),
+      paddingLeft: vars.space.sm,
+      paddingRight: vars.space.sm,
+    },
+    [desktopQuery]: {
+      paddingLeft: vars.space.md,
+      paddingRight: vars.space.md,
+    },
+  }
+});
+
+export const AboutHighlightDecor = style({
+  marginLeft: 'auto',
+  zoom: '50%'
 });
 
 export const HighlightImage = style({

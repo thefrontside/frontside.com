@@ -35,7 +35,7 @@ export default function TemplateWrapper({
             <html lang="en" />
             <title>
               {title
-                ? `${title} | ${data.site.siteMetadata.title}`
+                ? `${title}`
                 : data.site.siteMetadata.title}
             </title>
             <meta
