@@ -82,6 +82,7 @@
     "babel-loader": "^8.2.2",
     "bigtest": "^0.14.0",
     "netlify-cli": "^5.2.0",
+    "storybook-addon-gatsby": "^0.0.2",
     "storybook-dark-mode": "^1.0.8"
   }
 }

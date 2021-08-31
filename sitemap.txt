@@ -1,6 +1,8 @@
 /
 /404.html
 /404/
+/about/
+/backstage/
 /blog
 /blog/2
 /blog/2006-07-08-learning-javascript-from-the-command-line/
@@ -65,9 +67,9 @@
 /blog/4
 /blog/5
 /blog/6
+/consulting/
 /contact-retro/
 /contact-retro/thanks/
-/people/
 /people/alex-ford/
 /people/brandon-hays/
 /people/charles-lowell/
@@ -225,6 +227,7 @@
 /podcast/transparent-development/
 /podcast/type-systems-with-reason-ml-london-organizer-marcel-cutts-and-shane-wilson/
 /podcast/whats-in-a-ui-platform/
+/resources/
 /tags/
 /tags/accessibility/
 /tags/backstage/
@@ -254,6 +257,7 @@
 /tags/devops/
 /tags/dhtml/
 /tags/disability/
+/tags/dx/
 /tags/ember-a-11-y/
 /tags/ember-addon/
 /tags/ember-js/
@@ -318,7 +322,6 @@
 /work/altschool/
 /work/ingaged/
 /work/kasita/
-/about
 /code-of-conduct
 /consulting
 /contact-thanks

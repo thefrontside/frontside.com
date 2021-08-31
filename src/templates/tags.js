@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostsList from '../components/posts-list';
 
@@ -9,10 +9,9 @@ import {
   SectionHeader,
 } from '../styles/page.css';
 import {
+  Heading2,
   TextGradientSkybluePink,
 } from '../styles/typography.css';
-import { atoms } from '../styles/atoms.css';
-import { PaginationButton } from '../styles/buttons.css';
 
 const TagRoute = ({ data, pageContext }) => {
   const posts = data.allBlogPost.edges;
@@ -37,14 +36,7 @@ const TagRoute = ({ data, pageContext }) => {
   return (
     <Layout title={tag}>
       <header className={SectionHeader}>
-        <h2
-          className={atoms({
-            fontScale: 'xl',
-            fontWeight: 'extrabold',
-            textTransform: 'uppercase',
-            marginTop: 'xl'
-          })}
-        >
+        <h2 className={Heading2}>
           Posts tagged with <span className={TextGradientSkybluePink}>{tag}</span>
         </h2>
         {/* <Link to="/tags/" className={PaginationButton}>Browse all tags</Link> */}
@@ -55,6 +47,7 @@ const TagRoute = ({ data, pageContext }) => {
         />
       </section>
     </Layout>
+    // <></>
   );
 };
 

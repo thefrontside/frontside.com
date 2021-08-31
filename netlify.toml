@@ -1,5 +1,5 @@
 [build]
-command = "yarn build && yarn build-storybook" # && yarn verify-sitemap ${URL} ${DEPLOY_URL}
+command = "yarn build && yarn build-storybook" #  && yarn verify-sitemap ${URL} ${DEPLOY_URL}
 publish = "public" 
 
 [build.environment]

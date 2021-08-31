@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
 import PostsList from '../components/posts-list';
 import Pagination from '../components/pagination';
@@ -15,13 +14,17 @@ import {
   HeroText,
   HeroImage,
   SectionHeader,
+  EntriesList
 } from '../styles/page.css';
 import {
+  Heading2,
+  HeroHeading,
   TextGradientPinkPurple,
   TextGradientPurpleSkyblue,
+  TextLg,
+  TextPink,
 } from '../styles/typography.css';
-import { EntriesList } from '../styles/page.css';
-import { atoms } from '../styles/atoms.css';
+
 import PodcastPreview from '../components/podcast-preview/podcast-preview';
 
 // we manually add the image in the repo so we gather that data here
@@ -103,14 +106,7 @@ export default function BlogPage({
       {!isCoverPage ? (
         <>
           <header className={SectionHeader}>
-            <h2
-              className={atoms({
-                fontScale: 'xl',
-                fontWeight: 'extrabold',
-                textTransform: 'uppercase',
-                marginTop: 'xl'
-              })}
-            >
+            <h2 className={Heading2}>
               <span className={TextGradientPinkPurple}>Blog</span>: Page <em>{page}</em>
             </h2>
             <Pagination prefix="/blog" page={page} pages={pages} />
@@ -135,16 +131,12 @@ export default function BlogPage({
           <header className={HeroWrap}>
             <div className={HeroText}>
               <h1
-                className={atoms({
-                  fontScale: '3xl',
-                  fontWeight: 'extrabold',
-                  textTransform: 'uppercase',
-                })}
+                className={HeroHeading}
               >
-                <span className={atoms({ color: 'pink' })}>Resources</span> for
+                <span className={TextPink}>Resources</span> for
                 engineering teams
               </h1>
-              <p className={atoms({ fontScale: 'lg' })}>
+              <p className={TextLg}>
                 We maintain a blog, curate a newsletter about DX, and host a
                 Backstage community.
               </p>
@@ -158,17 +150,11 @@ export default function BlogPage({
           </section>
           <section className={PageWrap}>
             <header className={SectionHeader}>
-              <h2
-                className={atoms({
-                  fontScale: 'xl',
-                  fontWeight: 'extrabold',
-                  textTransform: 'uppercase',
-                })}
-              >
+              <h2 className={Heading2}>
                 Recent <span className={TextGradientPinkPurple}>blog</span>{' '}
                 posts
               </h2>
-              <p className={atoms({ fontScale: 'lg' })}>
+              <p className={TextLg}>
                 We write about testing, design systems, Cloud native, and other
                 DX topics.
               </p>
@@ -182,18 +168,12 @@ export default function BlogPage({
           </section>
           <section className={PageWrap}>
             <header className={SectionHeader}>
-              <h2
-                className={atoms({
-                  fontScale: 'xl',
-                  fontWeight: 'extrabold',
-                  textTransform: 'uppercase',
-                })}
-              >
+              <h2 className={Heading2}>
                 Latest{' '}
                 <span className={TextGradientPurpleSkyblue}>podcast</span>{' '}
                 episodes
               </h2>
-              <p className={atoms({ fontScale: 'lg' })}>
+              <p className={TextLg}>
                 We invite thought leaders to share their ideas about
                 engineering.
               </p>
@@ -209,6 +189,7 @@ export default function BlogPage({
       )}
       
     </Layout>
+    // <></>
   );
 }
 
