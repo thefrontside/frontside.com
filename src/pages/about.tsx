@@ -180,8 +180,7 @@ const teamMembers = [
       Frontside into messages for everyone.
     `,
     image: jorge,
-    imageAlt:
-      "Portrait of Jorge. He has short hair a short stubble.",
+    imageAlt: 'Portrait of Jorge. He has short hair a short stubble.',
   },
 ];
 

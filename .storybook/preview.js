@@ -1,5 +1,5 @@
 import { action } from '@storybook/addon-actions';
-import { colors } from '../src/components/atoms.css';
+import { colorValues } from '../src/styles/frontside-theme.css';
 
 // Gatsby's Link overrides:
 // Gatsby Link calls the `enqueue` & `hovering` methods on the global variable ___loader.
@@ -34,9 +34,9 @@ export const parameters = {
   },
   backgrounds: {
     default: 'Light Mode',
-    values: Object.keys(colors).map((key) => ({
+    values: Object.keys(colorValues).map((key) => ({
       name: key,
-      value: colors[key],
+      value: colorValues[key],
     })),
   },
   viewport: {

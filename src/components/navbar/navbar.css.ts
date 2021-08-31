@@ -1,4 +1,3 @@
-import { atoms } from '../../styles/atoms.css';
 import vars, { laptopQuery, desktopQuery, darkThemeQuery, colorValues } from '../../styles/frontside-theme.css';
 import { style,  } from '@vanilla-extract/css';
 
@@ -73,6 +72,19 @@ export const NavLink = style({
   }
 });
 
+export const LogoMargin = style({
+  marginRight: 'auto',
+});
+
+export const LogoSVGFill = style({
+  fill: vars.colors.blue,
+  '@media': {
+    [darkThemeQuery]: {
+      fill: vars.colors.white,
+    }
+  }
+});
+
 // export const ContactButton = atoms({
 //   color: 'white',
 //   backgroundImage: 'fs-gradient',
@@ -92,23 +104,21 @@ export const NavLink = style({
 //   boxShadow: 'default',
 // });
 
-export const MenuSVGFill = atoms({
-  fill: { default: 'blue', darkMode: 'white' },
-});
+// export const MenuSVGFill = atoms({
+//   fill: { default: 'blue', darkMode: 'white' },
+// });
 
-export const LogoSVGFill = atoms({
-  fill: { darkMode: 'white', default: 'blue' },
-});
 
-export const NavHorizontalList = atoms({
-  display: 'flex',
-  flexDirection: 'row',
-  listStyle: 'none',
-});
 
-export const NavVerticalList = atoms({
-  display: 'flex',
-  flexDirection: 'column',
-  listStyle: 'none',
-  placeItems: 'flex-end',
-});
+// export const NavHorizontalList = atoms({
+//   display: 'flex',
+//   flexDirection: 'row',
+//   listStyle: 'none',
+// });
+
+// export const NavVerticalList = atoms({
+//   display: 'flex',
+//   flexDirection: 'column',
+//   listStyle: 'none',
+//   placeItems: 'flex-end',
+// });

@@ -1,6 +1,32 @@
-import { composeStyles, globalStyle, style } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
 import vars, { darkThemeQuery, desktopQuery, laptopQuery } from './frontside-theme.css';
+
+export const HeroHeading = style({
+  fontSize: vars.fontSize['3xl'],
+  lineHeight: vars.lineHeights['3xl'],
+  letterSpacing: vars.letterSpacing['3xl'],
+  fontWeight: vars.fontWeights.extrabold,
+  textTransform: 'uppercase',
+});
+
+export const Heading2 = style({
+  fontSize: vars.fontSize['xl'],
+  lineHeight: vars.lineHeights['xl'],
+  letterSpacing: vars.letterSpacing['xl'],
+  fontWeight: vars.fontWeights.extrabold,
+  textTransform: 'uppercase',
+});
+
+export const TextLg = style({
+  fontSize: vars.fontSize['lg'],
+  lineHeight: vars.lineHeights['lg'],
+  letterSpacing: vars.letterSpacing['lg'],
+});
+
+export const TextPink = style({
+  color: vars.colors.pink,
+});
 
 // const ClipBackgroundToText = style({
 //   backgroundClip: 'text',
