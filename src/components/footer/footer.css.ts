@@ -12,7 +12,7 @@ export const footerNav = style({
   }
 });
 
-export const footerNavLink = style({
+export const footernavLink = style({
   display: 'inline-block',
   boxSizing: 'border-box',
   fontSize: vars.fontSize.sm,

@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css';
 import vars, { laptopQuery } from '../../styles/frontside-theme.css';
 
-export const EntryPreview = style({
+export const entryPreview = style({
   marginBottom: vars.space.lg,
 
   '@media': {
@@ -20,7 +20,7 @@ export const EntryPreview = style({
 
 });
 
-export const EntryPreviewImage = style({
+export const entryPreviewImage = style({
   borderRadius: vars.radius.md,
 
   '@media': {

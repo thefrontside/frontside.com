@@ -2,10 +2,10 @@ import { Link } from 'gatsby';
 import React from 'react';
 import FSIcon from '../../img/plork/fs-webclip.png';
 import { atoms } from '../../styles/atoms.css';
-import { footerNavLink, footerNav } from './footer.css';
+import { footernavLink, footerNav } from './footer.css';
 
 const NavItem = ({ itemUrl, itemText }) => (
-  <Link to={itemUrl} className={footerNavLink}>
+  <Link to={itemUrl} className={footernavLink}>
     {itemText}
   </Link>
 );

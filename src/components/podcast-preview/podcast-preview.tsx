@@ -2,15 +2,15 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import {
-  EntryPreview,
-  EntryPreviewImage,
+  entryPreview,
+  entryPreviewImage,
 } from '../blog-preview/blog-preview.css';
 import { atoms } from '../../styles/atoms.css';
 
 export default function PodcastPreview({ episode }) {
   return (
     <>
-      <li className={EntryPreview}>
+      <li className={entryPreview}>
         <Link
           to={episode.slug}
           className={atoms({
@@ -18,7 +18,7 @@ export default function PodcastPreview({ episode }) {
           })}
         >
           {episode.image ? (
-            <img src={episode.image} alt="" className={EntryPreviewImage} />
+            <img src={episode.image} alt="" className={entryPreviewImage} />
           ) : (
             ''
           )}

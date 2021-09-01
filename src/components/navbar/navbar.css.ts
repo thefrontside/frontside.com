@@ -1,32 +1,15 @@
 import vars, { laptopQuery, desktopQuery, darkThemeQuery, colorValues } from '../../styles/frontside-theme.css';
-import { style,  } from '@vanilla-extract/css';
+import { style  } from '@vanilla-extract/css';
+import { pageWrap } from '../../styles/page.css';
 
-// // vanilla-extract composeStyles doesn't work, so we need to re-write
-// export const NavWrap = composeStyles(pageWrap, style({
-//   display: 'flex'
-// }));
-
-export const NavWrap = style({
-  boxSizing: 'border-box',
-  width: '100vw',
-  overflow: 'hidden',
-  padding: vars.space.md,
+export const navWrap = style([pageWrap, {
   display: 'flex',
   flexFlow: 'row nowrap',
   alignItems: 'center',
   justifyContent: 'flex-end',
+}]);
 
-  '@media': {
-    [laptopQuery]: {
-      maxWidth: vars.pixelBase.maxWdith,
-    },
-    [desktopQuery]: {
-      margin: '0 auto'
-    },
-  }
-});
-
-export const ContactButton = style({
+export const contactButton = style({
   display: 'inline-block',
   background: `linear-gradient(45deg, ${vars.colors.pink} -20%, ${vars.colors.purple} 100%)`,
   fontWeight: vars.fontWeights.bold,
@@ -43,7 +26,7 @@ export const ContactButton = style({
 });
 
 
-export const NavLink = style({
+export const navLink = style({
   fontWeight: vars.fontWeights.bold,
   fontSize: vars.fontSize.xs,
   letterSpacing: vars.letterSpacing.xs,
@@ -72,11 +55,11 @@ export const NavLink = style({
   }
 });
 
-export const LogoMargin = style({
+export const logoMargin = style({
   marginRight: 'auto',
 });
 
-export const LogoSVGFill = style({
+export const logoSVGFill = style({
   fill: vars.colors.blue,
   '@media': {
     [darkThemeQuery]: {
@@ -85,7 +68,7 @@ export const LogoSVGFill = style({
   }
 });
 
-// export const ContactButton = atoms({
+// export const contactButton = atoms({
 //   color: 'white',
 //   backgroundImage: 'fs-gradient',
 //   backgroundPosition: {

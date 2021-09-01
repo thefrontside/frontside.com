@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { EntryPreview, EntryPreviewImage } from './blog-preview.css';
+import { entryPreview, entryPreviewImage } from './blog-preview.css';
 import { atoms } from '../../styles/atoms.css';
 
 export default function BlogPreview({ post }) {
   return (
     <>
-      <li className={EntryPreview}>
+      <li className={entryPreview}>
         <Link
           to={post.slug}
           className={atoms({
@@ -15,7 +15,7 @@ export default function BlogPreview({ post }) {
           })}
         >
           {post.image ? (
-            <img src={post.image} alt="" className={EntryPreviewImage} />
+            <img src={post.image} alt="" className={entryPreviewImage} />
           ) : (
             ''
           )}
