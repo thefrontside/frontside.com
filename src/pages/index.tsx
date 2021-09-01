@@ -22,12 +22,21 @@ import {
   CardList,
   Card,
   CardImage,
+  HighlightText,
+  HighlightHeading,
 } from '../styles/page.css';
 import {
-  TextGradientSkybluePink,
-  TextGradientSkybluePurple,
-  TextGradientDemiSkybluePink,
-  TextGradientPurplePink,
+  textGradientSkybluePink,
+  textGradientSkybluePurple,
+  textGradientDemiSkybluePink,
+  textGradientPurplePink,
+  heroHeading,
+  textLg,
+  textSkyblue,
+  textGreen,
+  featureHeading,
+  homeBackstageHeading,
+  heading2,
 } from '../styles/typography.css';
 import { atoms } from '../styles/atoms.css';
 
@@ -57,23 +66,17 @@ export default function IndexPage({
   }));
 
   return (
-    <Layout title="Frontside &mdash; DX and Backstage consulting">
+    <Layout title="Frontside Software &mdash; DX and Backstage consulting">
       <header className={HeroWrap}>
         <div className={HeroText}>
-          <h1
-            className={atoms({
-              fontScale: '3xl',
-              fontWeight: 'extrabold',
-              textTransform: 'uppercase',
-            })}
-          >
-            <span className={TextGradientSkybluePurple}>Empower</span> your developers
-            — <br className={HeroBreak} /> from{' '}
-            <strong className={TextGradientDemiSkybluePink}>commit to</strong>{' '}
+          <h1 className={heroHeading}>
+            <span className={textGradientSkybluePurple}>Empower</span> your
+            developers — <br className={HeroBreak} /> from{' '}
+            <strong className={textGradientDemiSkybluePink}>commit to</strong>{' '}
             production{' '}
-            <strong className={TextGradientPurplePink}>release</strong>
+            <strong className={textGradientPurplePink}>release</strong>
           </h1>
-          <p className={atoms({ fontScale: 'lg' })}>
+          <p className={textLg}>
             Frontside creates cohesive development experiences for Cloud native
             teams: from IDE and CLI tools to deployment and developer portals.
           </p>
@@ -85,21 +88,15 @@ export default function IndexPage({
 
       <div className={ClientLogos}>
         Trusted by HP, Resideo, Honeywell, Standard Chartered, Dell, HSBC and
-        others        
+        others
       </div>
 
       <section className={PageWrap}>
         <div className={FeatureRow}>
           <div className={FeatureTextAlternate}>
-            <h2
-              className={atoms({
-                fontScale: 'xl',
-                marginTop: 'none',
-                marginBottom: 'lg',
-              })}
-            >
-              <strong className={atoms({ color: 'skyblue' })}>Re-think</strong>{' '}
-              productivity after Kubernetes
+            <h2 className={featureHeading}>
+              <strong className={textSkyblue}>Re-think</strong> productivity
+              after Kubernetes
             </h2>
             <p>
               Once your break down the monolith, you're on your way of becoming
@@ -118,17 +115,9 @@ export default function IndexPage({
 
         <div className={FeatureRow}>
           <div className={FeatureText}>
-            <h2
-              className={atoms({
-                fontScale: 'xl',
-                marginTop: 'none',
-                marginBottom: 'lg',
-              })}
-            >
-              <strong className={atoms({ color: 'skyblue' })}>
-                Shift left
-              </strong>{' '}
-              your testing strategy
+            <h2 className={featureHeading}>
+              <strong className={textSkyblue}>Shift left</strong> your testing
+              strategy
             </h2>
             <p>
               Test suites are a major source of frustration for developers.
@@ -146,19 +135,9 @@ export default function IndexPage({
 
         <div className={FeatureRow}>
           <div className={FeatureTextAlternate}>
-            <h2
-              className={atoms({
-                fontScale: 'xl',
-                marginTop: 'none',
-                marginBottom: 'lg',
-              })}
-            >
-              <strong className={atoms({ color: 'skyblue' })}>Inject</strong>{' '}
-              technical{' '}
-              <strong className={atoms({ color: 'skyblue' })}>
-                leadership
-              </strong>{' '}
-              into your team
+            <h2 className={featureHeading}>
+              <strong className={textSkyblue}>Inject</strong> technical{' '}
+              <strong className={textSkyblue}>leadership</strong> into your team
             </h2>
             <p>
               Most companies have great developers in their teams, but lack
@@ -175,62 +154,41 @@ export default function IndexPage({
 
       <section className={PageWrap}>
         <header className={SectionHeader}>
-          <h2 className={atoms({ fontScale: '2xl', fontWeight: 'extrabold' })}>
+          <h2 className={homeBackstageHeading}>
             Bring infrastructure, services, and people together with{' '}
-            <strong className={atoms({ color: 'green' })}>Backstage</strong>
+            <strong className={textGreen}>Backstage</strong>
           </h2>
-          <p className={atoms({ fontScale: 'lg' })}>
+          <p className={textLg}>
             We help you adopt and extend Backstage to fit your organization's
             unique ecosystem.
           </p>
         </header>
         <div className={ColumnedHighlights}>
           <div className={Highlight}>
-            <h3
-              className={atoms({
-                fontScale: 'xl',
-                lineHeight: 'lg',
-                fontWeight: 'extrabold',
-                order: { mobile: 1, laptop: 0 },
-              })}
-            >
+            <h3 className={HighlightHeading}>
               Every service at everyone's sight
             </h3>
-            <p className={atoms({ order: { mobile: 2, laptop: 1 } })}>
+            <p className={HighlightText}>
               With Backstage's catalog, you can make your repositories and Cloud
               services visible and arranged around your products and services.
             </p>
             <img src={heroPlaceholder} alt="" className={HighlightImage} />
           </div>
           <div className={Highlight}>
-            <h3
-              className={atoms({
-                fontScale: 'xl',
-                lineHeight: 'lg',
-                fontWeight: 'extrabold',
-                order: { mobile: 1, laptop: 0 },
-              })}
-            >
+            <h3 className={HighlightHeading}>
               Shift cost infrastructure left
             </h3>
-            <p className={atoms({ order: { mobile: 2, laptop: 1 } })}>
+            <p className={HighlightText}>
               Cloud native can allow your teams move faster, but that may lead
               to billing from Cloud providers grow rapidly.
             </p>
             <img src={heroPlaceholder} alt="" className={HighlightImage} />
           </div>
           <div className={Highlight}>
-            <h3
-              className={atoms({
-                fontScale: 'xl',
-                lineHeight: 'lg',
-                fontWeight: 'extrabold',
-                order: { mobile: 1, laptop: 0 },
-              })}
-            >
+            <h3 className={HighlightHeading}>
               De-risk your custom implementation
             </h3>
-            <p className={atoms({ order: { mobile: 2, laptop: 1 } })}>
+            <p className={HighlightText}>
               Every organization has a unique system domain
             </p>
             <img src={heroPlaceholder} alt="" className={HighlightImage} />
@@ -240,17 +198,11 @@ export default function IndexPage({
 
       <section className={PageWrap}>
         <header className={SectionHeader}>
-          <h2
-            className={atoms({
-              fontScale: 'xl',
-              fontWeight: 'extrabold',
-              textTransform: 'uppercase',
-            })}
-          >
+          <h2 className={heading2}>
             Our latest{' '}
-            <strong className={TextGradientSkybluePink}>insights</strong>
+            <strong className={textGradientSkybluePink}>insights</strong>
           </h2>
-          <p className={atoms({ fontScale: 'lg' })}>
+          <p className={textLg}>
             We like sharing the results of our experience and research to start
             discussions.
           </p>

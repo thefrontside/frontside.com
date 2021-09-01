@@ -19,9 +19,9 @@ import {
   AboutTeamImg,
 } from '../styles/page.css';
 import {
-  TextGradientSkybluePink,
-  TextGradientSkybluePurple,
-  BigQuote,
+  textGradientSkybluePink,
+  textGradientSkybluePurple,
+  bigQuote,
 } from '../styles/typography.css';
 import { atoms } from '../styles/atoms.css';
 
@@ -201,7 +201,7 @@ export default function IndexPage({
             })}
           >
             We've been{' '}
-            <span className={TextGradientSkybluePurple}>improving</span>{' '}
+            <span className={textGradientSkybluePurple}>improving</span>{' '}
             engineering orgs{' '}
             <span className={atoms({ color: 'skyblue' })}>since 2005</span>
           </h1>
@@ -216,7 +216,7 @@ export default function IndexPage({
       </header>
 
       <section className={PageWrap}>
-        <blockquote className={BigQuote}>
+        <blockquote className={bigQuote}>
           “Everyone at Frontside has a great attitude of{' '}
           <strong className={atoms({ fontWeight: 'extrabold' })}>can do</strong>{' '}
           and{' '}
@@ -337,7 +337,7 @@ export default function IndexPage({
               textTransform: 'uppercase',
             })}
           >
-            <strong className={TextGradientSkybluePink}>Meet the team</strong>
+            <strong className={textGradientSkybluePink}>Meet the team</strong>
           </h2>
           <p className={atoms({ fontScale: 'lg' })}>
             We bring together people from interdisciplinary backgrounds.

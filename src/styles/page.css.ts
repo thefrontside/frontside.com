@@ -186,6 +186,36 @@ export const Highlight = style({
   }
 });
 
+export const HighlightImage = style({
+  order: 0,
+  width: '15rem',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  '@media': {
+    [laptopQuery]: {
+      order: 3
+    },
+  }
+});
+
+export const HighlightText = style({
+  order: 2,
+  '@media': {
+    [laptopQuery]: {
+      order: 1,
+    }
+  },
+});
+
+// vanilla-extract composeStyles doesn't work, so we need to re-write
+export const HighlightHeading = style({
+  fontSize: vars.fontSize['xl'],
+  lineHeight: vars.lineHeights['xl'],
+  letterSpacing: vars.letterSpacing['xl'],
+  fontWeight: vars.fontWeights.extrabold,
+});
+
+
 // vanilla-extract composeStyles doesn't work, so we need to re-write
 export const AboutHighlight = style({
   display: 'flex',
@@ -211,16 +241,6 @@ export const AboutHighlight = style({
 export const AboutHighlightDecor = style({
   marginLeft: 'auto',
   zoom: '50%'
-});
-
-export const HighlightImage = style({
-  order: 0,
-  width: '15rem',
-  '@media': {
-    [laptopQuery]: {
-      order: 3
-    },
-  }
 });
 
 export const CardList = style({

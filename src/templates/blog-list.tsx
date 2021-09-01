@@ -17,12 +17,12 @@ import {
   EntriesList
 } from '../styles/page.css';
 import {
-  Heading2,
-  HeroHeading,
-  TextGradientPinkPurple,
-  TextGradientPurpleSkyblue,
-  TextLg,
-  TextPink,
+  heading2,
+  heroHeading,
+  textGradientPinkPurple,
+  textGradientPurpleSkyblue,
+  textLg,
+  textPink,
 } from '../styles/typography.css';
 
 import PodcastPreview from '../components/podcast-preview/podcast-preview';
@@ -106,8 +106,8 @@ export default function BlogPage({
       {!isCoverPage ? (
         <>
           <header className={SectionHeader}>
-            <h2 className={Heading2}>
-              <span className={TextGradientPinkPurple}>Blog</span>: Page <em>{page}</em>
+            <h2 className={heading2}>
+              <span className={textGradientPinkPurple}>Blog</span>: Page <em>{page}</em>
             </h2>
             <Pagination prefix="/blog" page={page} pages={pages} />
           </header>
@@ -131,12 +131,12 @@ export default function BlogPage({
           <header className={HeroWrap}>
             <div className={HeroText}>
               <h1
-                className={HeroHeading}
+                className={heroHeading}
               >
-                <span className={TextPink}>Resources</span> for
+                <span className={textPink}>Resources</span> for
                 engineering teams
               </h1>
-              <p className={TextLg}>
+              <p className={textLg}>
                 We maintain a blog, curate a newsletter about DX, and host a
                 Backstage community.
               </p>
@@ -150,11 +150,11 @@ export default function BlogPage({
           </section>
           <section className={PageWrap}>
             <header className={SectionHeader}>
-              <h2 className={Heading2}>
-                Recent <span className={TextGradientPinkPurple}>blog</span>{' '}
+              <h2 className={heading2}>
+                Recent <span className={textGradientPinkPurple}>blog</span>{' '}
                 posts
               </h2>
-              <p className={TextLg}>
+              <p className={textLg}>
                 We write about testing, design systems, Cloud native, and other
                 DX topics.
               </p>
@@ -168,12 +168,12 @@ export default function BlogPage({
           </section>
           <section className={PageWrap}>
             <header className={SectionHeader}>
-              <h2 className={Heading2}>
+              <h2 className={heading2}>
                 Latest{' '}
-                <span className={TextGradientPurpleSkyblue}>podcast</span>{' '}
+                <span className={textGradientPurpleSkyblue}>podcast</span>{' '}
                 episodes
               </h2>
-              <p className={TextLg}>
+              <p className={textLg}>
                 We invite thought leaders to share their ideas about
                 engineering.
               </p>

@@ -79,7 +79,7 @@ export default function TemplateWrapper({
               property="og:title"
               content={
                 title
-                  ? `${title} | ${data.site.siteMetadata.title}`
+                  ? `${title}`
                   : data.site.siteMetadata.title
               }
             />

@@ -24,12 +24,12 @@ import {
   CardImage,
 } from '../styles/page.css';
 import {
-  TextGradientSkybluePink,
-  TextGradientSkyblueGreen,
+  textGradientSkybluePink,
+  textGradientSkyblueGreen,
   TextGradientPinkSkyblue,
-  TextBottomGradient,
-  TextGradientPinkPurple,
-  TextGradientPurpleSkyblue,
+  textBottomGradient,
+  textGradientPinkPurple,
+  textGradientPurpleSkyblue,
 } from '../styles/typography.css';
 import { atoms } from '../styles/atoms.css';
 
@@ -167,7 +167,7 @@ export default function ResourcesPage({
               textTransform: 'uppercase',
             })}
           >
-            Recent <strong className={TextGradientSkybluePink}>DX</strong>{' '}
+            Recent <strong className={textGradientSkybluePink}>DX</strong>{' '}
             articles
           </h2>
           <p className={atoms({ fontScale: 'lg' })}>

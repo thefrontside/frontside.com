@@ -1,137 +1,117 @@
-import { globalStyle, style, composeStyles } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
 import vars, { darkThemeQuery, desktopQuery, laptopQuery } from './frontside-theme.css';
 
-export const HeroHeading = style({
-  fontSize: vars.fontSize['3xl'],
-  lineHeight: vars.lineHeights['3xl'],
-  letterSpacing: vars.letterSpacing['3xl'],
-  fontWeight: vars.fontWeights.extrabold,
-  textTransform: 'uppercase',
-});
-
-export const Heading2 = style({
-  fontSize: vars.fontSize['xl'],
-  lineHeight: vars.lineHeights['xl'],
-  letterSpacing: vars.letterSpacing['xl'],
-  fontWeight: vars.fontWeights.extrabold,
-  textTransform: 'uppercase',
-});
-
-export const TextLg = style({
+export const textLg = style({
   fontSize: vars.fontSize['lg'],
   lineHeight: vars.lineHeights['lg'],
   letterSpacing: vars.letterSpacing['lg'],
 });
 
-export const TextPink = style({
+export const textXl = style({
+  fontSize: vars.fontSize['xl'],
+  lineHeight: vars.lineHeights['xl'],
+  letterSpacing: vars.letterSpacing['xl'],
+});
+
+export const text2Xl = style({
+  fontSize: vars.fontSize['2xl'],
+  lineHeight: vars.lineHeights['2xl'],
+  letterSpacing: vars.letterSpacing['2xl'],
+});
+
+export const text3Xl = style({
+  fontSize: vars.fontSize['3xl'],
+  lineHeight: vars.lineHeights['3xl'],
+  letterSpacing: vars.letterSpacing['3xl'],
+});
+
+export const textExtrabold = style({
+  fontWeight: vars.fontWeights.extrabold,
+});
+
+export const heroHeading = style([text3Xl, {
+  fontWeight: vars.fontWeights.extrabold,
+  textTransform: 'uppercase',
+}]);
+
+export const heading2 = style([textXl, {
+  fontWeight: vars.fontWeights.extrabold,
+  textTransform: 'uppercase',
+}]);
+
+export const textPink = style({
   color: vars.colors.pink,
 });
 
-// const ClipBackgroundToText = style({
-//   backgroundClip: 'text',
-//   WebkitBackgroundClip: 'text',
-//   WebkitTextFillColor: 'transparent',
-//   fontWeight: vars.fontWeights.extrabold
-// })
+export const textSkyblue = style({
+  color: vars.colors.skyblue,
+});
 
-// export const TextGradientPinkSkyblue = composeStyles(ClipBackgroundToText, style({
-//   background: `linear-gradient(90deg, ${vars.colors.pink}, ${vars.colors.skyblue} 95%)`,
-// }));
+export const textGreen = style({
+  color: vars.colors.green,
+});
 
-// // vanilla-extract composeStyles doesn't work, so we need to re-write
-export const TextGradientPinkSkyblue = style({
-  background: `linear-gradient(90deg, ${vars.colors.pink}, ${vars.colors.skyblue} 95%)`,
+export const textBlueDashWhite = style({
+  color: vars.colors.blue,
+  '@media': {
+    [darkThemeQuery]: {
+      color: vars.colors.white,
+    }
+  }
+});
 
+export const featureHeading = style([textXl, {
+  marginTop: 0,
+  marginBottom: vars.space.lg,
+}]);
+
+export const homeBackstageHeading = style([text2Xl, textExtrabold]);
+
+const clipBackgroundToText = style({
   backgroundClip: 'text',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   fontWeight: vars.fontWeights.extrabold
-});
+})
 
-// vanilla-extract composeStyles doesn't work, so we need to re-write
-export const TextGradientSkybluePink = style({
-  background: `linear-gradient(90deg, ${vars.colors.skyblue}, ${vars.colors.pink} 95%)`,
+export const textGradientPinkSkyblue = style([clipBackgroundToText, {
+  backgroundImage: `linear-gradient(90deg, ${vars.colors.pink}, ${vars.colors.skyblue} 95%)`,
+}]);
 
-  backgroundClip: 'text',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  fontWeight: vars.fontWeights.extrabold
-});
+export const textGradientSkybluePink = style([clipBackgroundToText, {
+  backgroundImage: `linear-gradient(90deg, ${vars.colors.skyblue}, ${vars.colors.pink} 95%)`,
+}]);
 
+export const textGradientPinkPurple = style([clipBackgroundToText, {
+  backgroundImage: `linear-gradient(90deg, ${vars.colors.pink} -20%, ${vars.colors.purple} 95%)`,
+}]);
 
-// vanilla-extract composeStyles doesn't work, so we need to re-write
-export const TextGradientPinkPurple = style({
-  background: `linear-gradient(90deg, ${vars.colors.pink} -20%, ${vars.colors.purple} 95%)`,
+export const textGradientPurpleSkyblue = style([clipBackgroundToText, {
+  backgroundImage: `linear-gradient(90deg, ${vars.colors.purple}, ${vars.colors.skyblue} 95%)`,
+}]);
 
-  backgroundClip: 'text',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  fontWeight: vars.fontWeights.extrabold
-});
+export const textGradientSkybluePurple = style([clipBackgroundToText, {
+  backgroundImage: `linear-gradient(90deg, ${vars.colors.skyblue}, ${vars.colors.purple} 95%)`,
+}]);
 
-// vanilla-extract composeStyles doesn't work, so we need to re-write
-export const TextGradientPurpleSkyblue = style({
-  background: `linear-gradient(90deg, ${vars.colors.purple}, ${vars.colors.skyblue} 95%)`,
+export const textGradientDemiSkybluePink =  style([clipBackgroundToText, {
+  backgroundImage: `linear-gradient(90deg, ${vars.colors.skyblue} -60%, ${vars.colors.pink} 180%)`,
+}]);
 
-  backgroundClip: 'text',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  fontWeight: vars.fontWeights.extrabold
-});
+export const textGradientPurplePink = style([clipBackgroundToText, {
+  backgroundImage: `linear-gradient(90deg, ${vars.colors.purple}, ${vars.colors.pink} 95%)`,
+}]);
 
-// vanilla-extract composeStyles doesn't work, so we need to re-write
-export const TextGradientSkybluePurple = style({
-  background: `linear-gradient(90deg, ${vars.colors.skyblue}, ${vars.colors.purple} 95%)`,
+export const textGradientGreenSkyblue = style([clipBackgroundToText, {
+  backgroundImage: `linear-gradient(90deg, ${vars.colors.green}, ${vars.colors.skyblue} 95%)`,
+}]);
 
-  backgroundClip: 'text',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  fontWeight: vars.fontWeights.extrabold
-});
+export const textGradientSkyblueGreen = style([clipBackgroundToText, {
+  backgroundImage: `linear-gradient(90deg, ${vars.colors.skyblue}, ${vars.colors.green} 95%)`,
+}]);
 
-// vanilla-extract composeStyles doesn't work, so we need to re-write
-export const TextGradientDemiSkybluePink = style({
-  background: `linear-gradient(90deg, ${vars.colors.skyblue} -60%, ${vars.colors.pink} 180%)`,
-
-  backgroundClip: 'text',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  fontWeight: vars.fontWeights.extrabold
-});
-
-// vanilla-extract composeStyles doesn't work, so we need to re-write
-export const TextGradientPurplePink = style({
-  background: `linear-gradient(90deg, ${vars.colors.purple}, ${vars.colors.pink} 95%)`,
-
-  backgroundClip: 'text',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  fontWeight: vars.fontWeights.extrabold
-});
-
-// vanilla-extract composeStyles doesn't work, so we need to re-write
-export const TextGradientGreenSkyblue = style({
-  background: `linear-gradient(90deg, ${vars.colors.green}, ${vars.colors.skyblue} 95%)`,
-
-  backgroundClip: 'text',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  fontWeight: vars.fontWeights.extrabold
-});
-
-// vanilla-extract composeStyles doesn't work, so we need to re-write
-export const TextGradientSkyblueGreen = style({
-  background: `linear-gradient(90deg, ${vars.colors.skyblue}, ${vars.colors.green} 95%)`,
-
-  backgroundClip: 'text',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  fontWeight: vars.fontWeights.extrabold
-});
-
-
-export const TextBottomGradient = style({
+export const textBottomGradient = style({
   position: 'relative',
   display: 'inline-block',
   selectors: {
@@ -165,7 +145,7 @@ export const textBottomGreen = style({
   }
 });
 
-export const MardownColumn = style({
+export const mardownColumn = style({
   boxSizing: 'border-box',
   width: '100vw',
   overflow: 'hidden',
@@ -188,7 +168,7 @@ export const MardownColumn = style({
   }
 });
 
-globalStyle(`${MardownColumn} h2`, {
+globalStyle(`${mardownColumn} h2`, {
   fontSize: '1.4545455rem',
   lineHeight: '2.8181818rem',
   marginTop: '1.4090909rem',
@@ -196,7 +176,7 @@ globalStyle(`${MardownColumn} h2`, {
   letterSpacing: vars.letterSpacing.xl
 });
 
-globalStyle(`${MardownColumn} > h3`, {
+globalStyle(`${mardownColumn} > h3`, {
   fontSize: '1rem',
   lineHeight: '2.8181818rem',
   marginTop: '1.4090909rem',
@@ -206,7 +186,7 @@ globalStyle(`${MardownColumn} > h3`, {
   textTransform: 'uppercase'
 });
 
-globalStyle(`${MardownColumn} > h4`, {
+globalStyle(`${mardownColumn} > h4`, {
   fontSize: '1rem',
   lineHeight: '2.8181818rem',
   marginTop: '1.4090909rem',
@@ -215,15 +195,15 @@ globalStyle(`${MardownColumn} > h4`, {
   letterSpacing: vars.letterSpacing.xl,
 });
 
-globalStyle(`${MardownColumn} code`, {
+globalStyle(`${mardownColumn} code`, {
   fontSize: '0.85rem'
 });
 
-globalStyle(`${MardownColumn} a`, {
+globalStyle(`${mardownColumn} a`, {
   color: 'inherit'
 });
 
-globalStyle(`${MardownColumn} p a`, {
+globalStyle(`${mardownColumn} p a`, {
   borderBottomWidth: '0.065rem',
   borderBottomStyle: 'dotted',
   borderBottomColor: vars.colors.blue,
@@ -234,12 +214,12 @@ globalStyle(`${MardownColumn} p a`, {
   }
 });
 
-globalStyle(`${MardownColumn} .markdown-heading-link`, {
+globalStyle(`${mardownColumn} .markdown-heading-link`, {
   position: 'relative',
   display: 'block',
 });
 
-globalStyle(`${MardownColumn} .markdown-heading-link:before`, {
+globalStyle(`${mardownColumn} .markdown-heading-link:before`, {
   content: '""',
   backgroundImage: 'url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGRhdGEtbmFtZT0iTGF5ZXIgMSIgdmlld0JveD0iMCAwIDE2IDE2Ij48cGF0aCBkPSJNMTAuMDUgMTEuODljLS4xOS4yMy0uMDguMTItMi41NiAyLjU5YTQuMjIgNC4yMiAwIDAgMS02LTZMMy40MyA2LjZhLjM2LjM2IDAgMCAxIC42Mi4yNEE1LjU2IDUuNTYgMCAwIDAgNC4xOSA4YS4zNC4zNCAwIDAgMS0uMS4zM0wyLjcxIDkuNzFhMi41MyAyLjUzIDAgMCAwIDMuNTggMy41OEw4LjU2IDExYTIuNTMgMi41MyAwIDAgMCAwLTMuNThBMi43OSAyLjc5IDAgMCAwIDcuODcgN2EuMzYuMzYgMCAwIDEtLjE5LS4zNyAxLjU5IDEuNTkgMCAwIDEgLjQ0LS45MmwuMTMtLjEzYS4zNy4zNyAwIDAgMSAuNDItLjA3IDQuMjggNC4yOCAwIDAgMSAxLjA5Ljc4IDQuMjMgNC4yMyAwIDAgMSAuMjkgNS42em00LjQzLTQuNEwxMi41NyA5LjRhLjM2LjM2IDAgMCAxLS41Ny0uMjRBNS41NiA1LjU2IDAgMCAwIDExLjgxIDhhLjM0LjM0IDAgMCAxIC4xLS4zM2wxLjM4LTEuMzlhMi41MyAyLjUzIDAgMCAwLTMuNTgtMy41N0w3LjQ0IDVhMi41MyAyLjUzIDAgMCAwIDAgMy41OCAyLjc5IDIuNzkgMCAwIDAgLjY5LjQ5LjM2LjM2IDAgMCAxIC4xOS4zNyAxLjU5IDEuNTkgMCAwIDEtLjQ0LjkybC0uMTMuMTNhLjM3LjM3IDAgMCAxLS40Mi4wNyA0LjI4IDQuMjggMCAwIDEtMS4wOS0uNzhBNC4yMyA0LjIzIDAgMCAxIDYgNC4xMWMuMTQtLjIzIDAtLjExIDIuNTEtMi41OWE0LjIyIDQuMjIgMCAwIDEgNiA2eiIvPjwvc3ZnPg==)',
   backgroundSize: 'contain',
@@ -250,11 +230,11 @@ globalStyle(`${MardownColumn} .markdown-heading-link:before`, {
   width: '16px',
 });
 
-globalStyle(`${MardownColumn} .markdown-heading-link:hover:before`, {
+globalStyle(`${mardownColumn} .markdown-heading-link:hover:before`, {
   opacity: 0.6,
 });
 
-globalStyle(`${MardownColumn} img`, {
+globalStyle(`${mardownColumn} img`, {
   width: calc('100%').add(vars.space.md).add(vars.space.md).toString(),
   maxWidth: calc('100%').add(vars.space.md).add(vars.space.md).toString(),
   marginLeft: calc(vars.space.md).negate().toString(),
@@ -275,18 +255,18 @@ globalStyle(`${MardownColumn} img`, {
   }
 });
 
-globalStyle(`${MardownColumn} .blog-post--caption`, {
+globalStyle(`${mardownColumn} .blog-post--caption`, {
   fontStyle: 'italic',
   textAlign: 'center',
   paddingRight: vars.space.md,
   paddingLeft: vars.space.md,
 })
 
-globalStyle(`${MardownColumn} table`, {
+globalStyle(`${mardownColumn} table`, {
   width: '100%'
 });
 
-globalStyle(`${MardownColumn} thead th`, {
+globalStyle(`${mardownColumn} thead th`, {
   background: vars.colors.blue,
   color: vars.colors.white,
   textTransform: 'uppercase',
@@ -298,7 +278,7 @@ globalStyle(`${MardownColumn} thead th`, {
   letterSpacing: vars.letterSpacing.sm,
 });
 
-globalStyle(`${MardownColumn} tbody td`, {
+globalStyle(`${mardownColumn} tbody td`, {
   paddingLeft: vars.space['2xs'],
   paddingTop: vars.space['3xs'],
   paddingBottom: vars.space['3xs'],
@@ -307,7 +287,7 @@ globalStyle(`${MardownColumn} tbody td`, {
   borderBottomWidth: '0.035rem',
 });
 
-globalStyle(`${MardownColumn} [class*="language-"]`, {
+globalStyle(`${mardownColumn} [class*="language-"]`, {
   '@media': {
     [darkThemeQuery]: {
       background: 'rgba(38, 171, 232, 0.1)',
@@ -316,57 +296,54 @@ globalStyle(`${MardownColumn} [class*="language-"]`, {
   }
 });
 
-globalStyle(`${MardownColumn} [class*="language-"] [class*="language-"]`, {
+globalStyle(`${mardownColumn} [class*="language-"] [class*="language-"]`, {
   background: 'none',
 });
 
 
 //composeStyles doesn't work so we need to repeat
-globalStyle(`${MardownColumn} p`, {
+globalStyle(`${mardownColumn} p`, {
   lineHeight: '1.4090909rem',
   marginTop: '0',
   marginBottom: '1.4090909rem',
 });
 
 //composeStyles doesn't work so we need to repeat
-globalStyle(`${MardownColumn} > ul`, {
+globalStyle(`${mardownColumn} > ul`, {
   lineHeight: '1.4090909rem',
   marginTop: '0',
   marginBottom: '1.4090909rem',
 });
 
 //composeStyles doesn't work so we need to repeat
-globalStyle(`${MardownColumn} > ol`, {
+globalStyle(`${mardownColumn} > ol`, {
   lineHeight: '1.4090909rem',
   marginTop: '0',
   marginBottom: '1.4090909rem',
 });
 
 //composeStyles doesn't work so we need to repeat
-globalStyle(`${MardownColumn} > table`, {
+globalStyle(`${mardownColumn} > table`, {
   lineHeight: '1.4090909rem',
   marginTop: '0',
   marginBottom: '1.4090909rem',
 });
 
 //composeStyles doesn't work so we need to repeat
-globalStyle(`${MardownColumn} pre`, {
+globalStyle(`${mardownColumn} pre`, {
   lineHeight: '1.4090909rem',
   marginTop: '0',
   marginBottom: '1.4090909rem',
 });
 
 //composeStyles doesn't work so we need to repeat
-globalStyle(`${MardownColumn} > blockquote`, {
+globalStyle(`${mardownColumn} > blockquote`, {
   lineHeight: '1.4090909rem',
   marginTop: '0',
   marginBottom: '1.4090909rem',
 });
 
-export const BigQuote = style({
-  fontSize: vars.fontSize['3xl'],
-  lineHeight: vars.lineHeights['3xl'],
-  letterSpacing: vars.letterSpacing['3xl'],
+export const bigQuote = style([text3Xl, {
   fontWeight: vars.fontWeights.bold,
   margin: 0,
   textAlign: 'center',
@@ -377,4 +354,4 @@ export const BigQuote = style({
       marginLeft: vars.space['2xl'],
     }
   }
-});
+}]);

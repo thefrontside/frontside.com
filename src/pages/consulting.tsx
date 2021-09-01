@@ -20,8 +20,8 @@ import {
   CardImage,
 } from '../styles/page.css';
 import {
-  TextGradientSkybluePink,
-  TextGradientPinkSkyblue,
+  textGradientSkybluePink,
+  textGradientPinkSkyblue,
 } from '../styles/typography.css';
 import { atoms } from '../styles/atoms.css';
 
@@ -60,9 +60,9 @@ export default function ConsultingPage({
               textTransform: 'uppercase',
             })}
           >
-            <span className={TextGradientPinkSkyblue}>Developer</span>
+            <span className={textGradientPinkSkyblue}>Developer</span>
             <br className={HeroBreak} />
-            <span className={TextGradientPinkSkyblue}>Experience: </span>
+            <span className={textGradientPinkSkyblue}>Experience: </span>
             where deliveries and retention meet
           </h1>
           <p className={atoms({ fontScale: 'lg' })}>
@@ -171,7 +171,7 @@ export default function ConsultingPage({
               textTransform: 'uppercase',
             })}
           >
-            Recent <strong className={TextGradientSkybluePink}>DX</strong>{' '}
+            Recent <strong className={textGradientSkybluePink}>DX</strong>{' '}
             articles
           </h2>
           <p className={atoms({ fontScale: 'lg' })}>

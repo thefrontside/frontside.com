@@ -11,7 +11,7 @@ import {
   HeroImage,
 } from '../styles/page.css';
 import {
-  MardownColumn
+  mardownColumn
 } from '../styles/typography.css';
 import { atoms } from '../styles/atoms.css';
 import { TagButton } from '../styles/buttons.css';
@@ -61,7 +61,7 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
       </header>
 
       <main
-        className={MardownColumn}
+        className={mardownColumn}
         dangerouslySetInnerHTML={{
           __html: content,
         }}

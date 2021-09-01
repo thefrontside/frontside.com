@@ -67,6 +67,7 @@
 /blog/4
 /blog/5
 /blog/6
+/code-of-conduct/
 /consulting/
 /contact-retro/
 /contact-retro/thanks/
@@ -227,6 +228,7 @@
 /podcast/transparent-development/
 /podcast/type-systems-with-reason-ml-london-organizer-marcel-cutts-and-shane-wilson/
 /podcast/whats-in-a-ui-platform/
+/privacy-policy/
 /resources/
 /tags/
 /tags/accessibility/
@@ -322,9 +324,6 @@
 /work/altschool/
 /work/ingaged/
 /work/kasita/
-/code-of-conduct
-/consulting
 /contact-thanks
 /contact
-/privacy-policy
 /tools

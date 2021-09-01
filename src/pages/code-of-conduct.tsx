@@ -3,15 +3,15 @@ import React from 'react';
 import Layout from '../components/layout';
 
 import { SectionHeader } from '../styles/page.css';
-import { Heading2, TextLg, MardownColumn } from '../styles/typography.css';
+import { heading2, textLg, mardownColumn } from '../styles/typography.css';
 
 export default function ConsultingPage() {
   return (
     <Layout title="Code of Conduct">
-      <section className={MardownColumn}>
+      <section className={mardownColumn}>
         <header className={SectionHeader}>
-          <h2 className={Heading2}>Code of Conduct</h2>
-          <p className={TextLg}>
+          <h2 className={heading2}>Code of Conduct</h2>
+          <p className={textLg}>
             All participants of the Frontside Community are expected to abide by
             our Code of Conduct, both online and during in-person events that
             are hosted and/or associated with Frontside.

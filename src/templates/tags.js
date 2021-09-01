@@ -9,8 +9,8 @@ import {
   SectionHeader,
 } from '../styles/page.css';
 import {
-  Heading2,
-  TextGradientSkybluePink,
+  heading2,
+  textGradientSkybluePink,
 } from '../styles/typography.css';
 
 const TagRoute = ({ data, pageContext }) => {
@@ -36,8 +36,8 @@ const TagRoute = ({ data, pageContext }) => {
   return (
     <Layout title={tag}>
       <header className={SectionHeader}>
-        <h2 className={Heading2}>
-          Posts tagged with <span className={TextGradientSkybluePink}>{tag}</span>
+        <h2 className={heading2}>
+          Posts tagged with <span className={textGradientSkybluePink}>{tag}</span>
         </h2>
         {/* <Link to="/tags/" className={PaginationButton}>Browse all tags</Link> */}
       </header>

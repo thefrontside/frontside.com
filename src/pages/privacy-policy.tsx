@@ -3,15 +3,15 @@ import React from 'react';
 import Layout from '../components/layout';
 
 import { SectionHeader } from '../styles/page.css';
-import { Heading2, TextLg, MardownColumn } from '../styles/typography.css';
+import { heading2, textLg, mardownColumn } from '../styles/typography.css';
 
 export default function PrivacyPolicyPage() {
   return (
     <Layout title="Privacy Policy">
-      <section className={MardownColumn}>
+      <section className={mardownColumn}>
         <header className={SectionHeader}>
-          <h2 className={Heading2}>Privacy policy</h2>
-          <p className={TextLg}>
+          <h2 className={heading2}>Privacy policy</h2>
+          <p className={textLg}>
             We are committed to protecting your personal information and your
             right to privacy. Please contact us at privacy @ frontside.com for
             any related query.

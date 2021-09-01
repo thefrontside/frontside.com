@@ -19,8 +19,8 @@ import {
   CardImage,
 } from '../styles/page.css';
 import {
-  TextGradientSkybluePink,
-  TextGradientSkyblueGreen,
+  textGradientSkybluePink,
+  textGradientSkyblueGreen,
 } from '../styles/typography.css';
 import { atoms } from '../styles/atoms.css';
 
@@ -62,7 +62,7 @@ export default function BackstagePage({
             Own your{' '}
             <span className={atoms({ color: 'green' })}>Backstage</span>{' '}
             implementation{' '}
-            <span className={TextGradientSkyblueGreen}>
+            <span className={textGradientSkyblueGreen}>
               without forking out
             </span>
           </h1>
@@ -159,7 +159,7 @@ export default function BackstagePage({
               textTransform: 'uppercase',
             })}
           >
-            Recent <strong className={TextGradientSkybluePink}>DX</strong>{' '}
+            Recent <strong className={textGradientSkybluePink}>DX</strong>{' '}
             articles
           </h2>
           <p className={atoms({ fontScale: 'lg' })}>
