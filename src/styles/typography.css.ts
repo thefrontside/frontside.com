@@ -28,26 +28,26 @@ export const TextPink = style({
   color: vars.colors.pink,
 });
 
-const ClipBackgroundToText = style({
-  backgroundClip: 'text',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  fontWeight: vars.fontWeights.extrabold
-})
-
-export const TextGradientPinkSkyblue = composeStyles(ClipBackgroundToText, style({
-  background: `linear-gradient(90deg, ${vars.colors.pink}, ${vars.colors.skyblue} 95%)`,
-}));
-
-// // vanilla-extract composeStyles doesn't work, so we need to re-write
-// export const TextGradientPinkSkyblue = style({
-//   background: `linear-gradient(90deg, ${vars.colors.pink}, ${vars.colors.skyblue} 95%)`,
-
+// const ClipBackgroundToText = style({
 //   backgroundClip: 'text',
 //   WebkitBackgroundClip: 'text',
 //   WebkitTextFillColor: 'transparent',
 //   fontWeight: vars.fontWeights.extrabold
-// });
+// })
+
+// export const TextGradientPinkSkyblue = composeStyles(ClipBackgroundToText, style({
+//   background: `linear-gradient(90deg, ${vars.colors.pink}, ${vars.colors.skyblue} 95%)`,
+// }));
+
+// // vanilla-extract composeStyles doesn't work, so we need to re-write
+export const TextGradientPinkSkyblue = style({
+  background: `linear-gradient(90deg, ${vars.colors.pink}, ${vars.colors.skyblue} 95%)`,
+
+  backgroundClip: 'text',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  fontWeight: vars.fontWeights.extrabold
+});
 
 // vanilla-extract composeStyles doesn't work, so we need to re-write
 export const TextGradientSkybluePink = style({
