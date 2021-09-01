@@ -6,23 +6,23 @@ import Layout from '../components/layout';
 import SubscribeForm from '../components/subscribe-form';
 
 import {
-  HeroWrap,
-  HeroText,
-  HeroImage,
+  heroWrap,
+  heroText,
+  heroImage,
 } from '../styles/page.css';
 import {
   mardownColumn
 } from '../styles/typography.css';
 import { atoms } from '../styles/atoms.css';
-import { TagButton } from '../styles/buttons.css';
+import { tagButton } from '../styles/buttons.css';
 
 const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
   tags = Array.isArray(tags) ? tags : [tags].filter(Boolean);
 
   return (
     <>
-      <header className={HeroWrap}>
-        <div className={HeroText}>
+      <header className={heroWrap}>
+        <div className={heroText}>
           <h1
             className={atoms({
               fontScale: '3xl',
@@ -50,12 +50,12 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
           <ul className={atoms({ listStyle: 'none', padding: 'none', marginTop: 'lg' })}>
             {tags.map((tag, i) => (
               <li key={`tag-${tag}`} className={atoms({ display: 'inline-block', marginRight: 'xs' })}>
-                <Link to={`/tags/${kebabCase(tag)}/`} className={TagButton}>{tag}</Link>
+                <Link to={`/tags/${kebabCase(tag)}/`} className={tagButton}>{tag}</Link>
               </li>
             ))}
           </ul>
         </div>
-        <div className={HeroImage}>
+        <div className={heroImage}>
           <img src={image} alt="" className={atoms({ borderRadius: 'sm' })} />
         </div>
       </header>

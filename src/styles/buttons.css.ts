@@ -1,7 +1,7 @@
-import { composeStyles, style } from '@vanilla-extract/css';
+import { style } from '@vanilla-extract/css';
 import vars, { darkThemeQuery } from './frontside-theme.css';
 
-export const PaginationButton = style({
+export const paginationButton = style({
   background: vars.colors.blue,
   color: vars.colors.white,
   borderRadius: vars.radius.md,
@@ -12,7 +12,7 @@ export const PaginationButton = style({
   marginRight: vars.space.md,
 });
 
-export const TagButton = style({
+export const tagButton = style({
   color: vars.colors.blue,
   padding: vars.space['3xs'],
   paddingRight: vars.space['2xs'],

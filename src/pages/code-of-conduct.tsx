@@ -2,14 +2,14 @@ import React from 'react';
 
 import Layout from '../components/layout';
 
-import { SectionHeader } from '../styles/page.css';
+import { sectionHeader } from '../styles/page.css';
 import { heading2, textLg, mardownColumn } from '../styles/typography.css';
 
 export default function ConsultingPage() {
   return (
     <Layout title="Code of Conduct">
       <section className={mardownColumn}>
-        <header className={SectionHeader}>
+        <header className={sectionHeader}>
           <h2 className={heading2}>Code of Conduct</h2>
           <p className={textLg}>
             All participants of the Frontside Community are expected to abide by

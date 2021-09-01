@@ -2,7 +2,7 @@ import vars, { laptopQuery, desktopQuery, darkThemeQuery, colorValues } from '..
 import { style,  } from '@vanilla-extract/css';
 
 // // vanilla-extract composeStyles doesn't work, so we need to re-write
-// export const NavWrap = composeStyles(PageWrap, style({
+// export const NavWrap = composeStyles(pageWrap, style({
 //   display: 'flex'
 // }));
 

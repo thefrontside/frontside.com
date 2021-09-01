@@ -5,18 +5,18 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 
 import {
-  PageWrap,
-  HeroWrap,
-  HeroText,
-  HeroImage,
-  FeatureRow,
-  FeatureTextAlternate,
-  FeatureImage,
-  SectionHeader,
-  ColumnedHighlights,
-  AboutHighlight,
-  AboutHighlightDecor,
-  AboutTeamImg,
+  pageWrap,
+  heroWrap,
+  heroText,
+  heroImage,
+  featureRow,
+  featureTextAlternate,
+  featureImage,
+  sectionHeader,
+  columnedhighlights,
+  aboutHighlight,
+  aboutHighlightDecor,
+  aboutTeamImg,
 } from '../styles/page.css';
 import {
   textGradientSkybluePink,
@@ -191,8 +191,8 @@ export default function IndexPage({
 }) {
   return (
     <Layout title="About Frontside">
-      <header className={HeroWrap}>
-        <div className={HeroText}>
+      <header className={heroWrap}>
+        <div className={heroText}>
           <h1
             className={atoms({
               fontScale: '3xl',
@@ -210,12 +210,12 @@ export default function IndexPage({
             scale-ready tools.
           </p>
         </div>
-        <div className={HeroImage}>
+        <div className={heroImage}>
           <img src={aboutHero} alt="" />
         </div>
       </header>
 
-      <section className={PageWrap}>
+      <section className={pageWrap}>
         <blockquote className={bigQuote}>
           “Everyone at Frontside has a great attitude of{' '}
           <strong className={atoms({ fontWeight: 'extrabold' })}>can do</strong>{' '}
@@ -229,8 +229,8 @@ export default function IndexPage({
         <p className={atoms({ textAlign: 'center', marginBottom: '2xl' })}>
           &mdash; Brian Beale, Director of Software Engineering at Resideo
         </p>
-        <ul className={ColumnedHighlights}>
-          <li className={AboutHighlight}>
+        <ul className={columnedhighlights}>
+          <li className={aboutHighlight}>
             <h3
               className={atoms({ textTransform: 'uppercase', fontScale: 'lg' })}
             >
@@ -243,9 +243,9 @@ export default function IndexPage({
               months or years. We design future-forward software system with
               predictable long-term maintenance.
             </p>
-            <img src={decor1} className={AboutHighlightDecor} alt="" />
+            <img src={decor1} className={aboutHighlightDecor} alt="" />
           </li>
-          <li className={AboutHighlight}>
+          <li className={aboutHighlight}>
             <h3
               className={atoms({ textTransform: 'uppercase', fontScale: 'lg' })}
             >
@@ -258,9 +258,9 @@ export default function IndexPage({
               provide robust architectures and tools that enable your team to
               experiment and pivot quickly.
             </p>
-            <img src={decor2} className={AboutHighlightDecor} alt="" />
+            <img src={decor2} className={aboutHighlightDecor} alt="" />
           </li>
-          <li className={AboutHighlight}>
+          <li className={aboutHighlight}>
             <h3
               className={atoms({ textTransform: 'uppercase', fontScale: 'lg' })}
             >
@@ -273,9 +273,9 @@ export default function IndexPage({
               We equip your teams with the tools and know-how to minimize
               regressions and shorten feedback loops.
             </p>
-            <img src={decor3} className={AboutHighlightDecor} alt="" />
+            <img src={decor3} className={aboutHighlightDecor} alt="" />
           </li>
-          <li className={AboutHighlight}>
+          <li className={aboutHighlight}>
             <h3
               className={atoms({ textTransform: 'uppercase', fontScale: 'lg' })}
             >
@@ -288,9 +288,9 @@ export default function IndexPage({
               bottlenecks and untangle technical complexities by automating
               deployments and other repetitive tasks.
             </p>
-            <img src={decor4} className={AboutHighlightDecor} alt="" />
+            <img src={decor4} className={aboutHighlightDecor} alt="" />
           </li>
-          <li className={AboutHighlight}>
+          <li className={aboutHighlight}>
             <h3
               className={atoms({ textTransform: 'uppercase', fontScale: 'lg' })}
             >
@@ -309,7 +309,7 @@ export default function IndexPage({
               alt=""
             />
           </li>
-          <li className={AboutHighlight}>
+          <li className={aboutHighlight}>
             <h3
               className={atoms({ textTransform: 'uppercase', fontScale: 'lg' })}
             >
@@ -323,13 +323,13 @@ export default function IndexPage({
               talent who can address short term needs and identify issues on the
               horizon.
             </p>
-            <img src={decor6} className={AboutHighlightDecor} alt="" />
+            <img src={decor6} className={aboutHighlightDecor} alt="" />
           </li>
         </ul>
       </section>
 
-      <section className={PageWrap}>
-        <header className={SectionHeader}>
+      <section className={pageWrap}>
+        <header className={sectionHeader}>
           <h2
             className={atoms({
               fontScale: 'xl',
@@ -353,8 +353,8 @@ export default function IndexPage({
           })}
         >
           {teamMembers.map((person, i) => (
-            <li className={FeatureRow} key={i}>
-              <div className={FeatureTextAlternate}>
+            <li className={featureRow} key={i}>
+              <div className={featureTextAlternate}>
                 <h3
                   className={atoms({
                     fontScale: 'xl',
@@ -368,11 +368,11 @@ export default function IndexPage({
                 <p>{person.location}</p>
                 <p>{person.bio}</p>
               </div>
-              <div className={FeatureImage}>
+              <div className={featureImage}>
                 <img
                   src={person.image}
                   alt={person.imageAlt}
-                  className={AboutTeamImg}
+                  className={aboutTeamImg}
                 />
               </div>
             </li>

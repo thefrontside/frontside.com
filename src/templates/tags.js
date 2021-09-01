@@ -5,8 +5,8 @@ import PostsList from '../components/posts-list';
 
 
 import {
-  PageWrap,
-  SectionHeader,
+  pageWrap,
+  sectionHeader,
 } from '../styles/page.css';
 import {
   heading2,
@@ -35,13 +35,13 @@ const TagRoute = ({ data, pageContext }) => {
 
   return (
     <Layout title={tag}>
-      <header className={SectionHeader}>
+      <header className={sectionHeader}>
         <h2 className={heading2}>
           Posts tagged with <span className={textGradientSkybluePink}>{tag}</span>
         </h2>
-        {/* <Link to="/tags/" className={PaginationButton}>Browse all tags</Link> */}
+        {/* <Link to="/tags/" className={paginationButton}>Browse all tags</Link> */}
       </header>
-      <section className={PageWrap}>
+      <section className={pageWrap}>
         <PostsList
           posts={formattedPosts}
         />

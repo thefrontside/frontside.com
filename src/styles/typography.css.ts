@@ -95,7 +95,7 @@ export const textGradientSkybluePurple = style([clipBackgroundToText, {
   backgroundImage: `linear-gradient(90deg, ${vars.colors.skyblue}, ${vars.colors.purple} 95%)`,
 }]);
 
-export const textGradientDemiSkybluePink =  style([clipBackgroundToText, {
+export const textGradientDemiSkybluePink = style([clipBackgroundToText, {
   backgroundImage: `linear-gradient(90deg, ${vars.colors.skyblue} -60%, ${vars.colors.pink} 180%)`,
 }]);
 
@@ -300,48 +300,23 @@ globalStyle(`${mardownColumn} [class*="language-"] [class*="language-"]`, {
   background: 'none',
 });
 
-
-//composeStyles doesn't work so we need to repeat
-globalStyle(`${mardownColumn} p`, {
+const markdownBlockDescription = {
   lineHeight: '1.4090909rem',
   marginTop: '0',
   marginBottom: '1.4090909rem',
-});
+};
 
-//composeStyles doesn't work so we need to repeat
-globalStyle(`${mardownColumn} > ul`, {
-  lineHeight: '1.4090909rem',
-  marginTop: '0',
-  marginBottom: '1.4090909rem',
-});
+globalStyle(`${mardownColumn} p`, markdownBlockDescription);
 
-//composeStyles doesn't work so we need to repeat
-globalStyle(`${mardownColumn} > ol`, {
-  lineHeight: '1.4090909rem',
-  marginTop: '0',
-  marginBottom: '1.4090909rem',
-});
+globalStyle(`${mardownColumn} > ul`, markdownBlockDescription);
 
-//composeStyles doesn't work so we need to repeat
-globalStyle(`${mardownColumn} > table`, {
-  lineHeight: '1.4090909rem',
-  marginTop: '0',
-  marginBottom: '1.4090909rem',
-});
+globalStyle(`${mardownColumn} > ol`, markdownBlockDescription);
 
-//composeStyles doesn't work so we need to repeat
-globalStyle(`${mardownColumn} pre`, {
-  lineHeight: '1.4090909rem',
-  marginTop: '0',
-  marginBottom: '1.4090909rem',
-});
+globalStyle(`${mardownColumn} > table`, markdownBlockDescription);
 
-//composeStyles doesn't work so we need to repeat
-globalStyle(`${mardownColumn} > blockquote`, {
-  lineHeight: '1.4090909rem',
-  marginTop: '0',
-  marginBottom: '1.4090909rem',
-});
+globalStyle(`${mardownColumn} pre`, markdownBlockDescription);
+
+globalStyle(`${mardownColumn} > blockquote`, markdownBlockDescription);
 
 export const bigQuote = style([text3Xl, {
   fontWeight: vars.fontWeights.bold,

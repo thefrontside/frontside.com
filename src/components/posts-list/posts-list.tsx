@@ -6,7 +6,7 @@ import Text from '../text';
 import SubscribeForm from '../subscribe-form';
 import BlogPreview from '../blog-preview';
 
-import { EntriesList } from '../../styles/page.css';
+import { entriesList } from '../../styles/page.css';
 import { atoms } from '../../styles/atoms.css';
 
 export default function PostsList({
@@ -23,7 +23,7 @@ export default function PostsList({
       ) : (
         ''
       )}
-      <ul className={EntriesList}>
+      <ul className={entriesList}>
         {posts.map((post, i) => (
           <BlogPreview post={post} key={i} />
         ))}

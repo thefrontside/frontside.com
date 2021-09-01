@@ -2,14 +2,14 @@ import React from 'react';
 
 import Layout from '../components/layout';
 
-import { SectionHeader } from '../styles/page.css';
+import { sectionHeader } from '../styles/page.css';
 import { heading2, textLg, mardownColumn } from '../styles/typography.css';
 
 export default function PrivacyPolicyPage() {
   return (
     <Layout title="Privacy Policy">
       <section className={mardownColumn}>
-        <header className={SectionHeader}>
+        <header className={sectionHeader}>
           <h2 className={heading2}>Privacy policy</h2>
           <p className={textLg}>
             We are committed to protecting your personal information and your

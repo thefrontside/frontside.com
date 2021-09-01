@@ -6,15 +6,15 @@ import PostsList from '../components/posts-list';
 import Pagination from '../components/pagination';
 import PodcastCTA from '../components/PodcastCTA';
 
-import BlogHeroImage from '../img/plork/blog-hero@1.5x.png';
+import BlogheroImage from '../img/plork/blog-hero@1.5x.png';
 
 import {
-  PageWrap,
-  HeroWrap,
-  HeroText,
-  HeroImage,
-  SectionHeader,
-  EntriesList
+  pageWrap,
+  heroWrap,
+  heroText,
+  heroImage,
+  sectionHeader,
+  entriesList
 } from '../styles/page.css';
 import {
   heading2,
@@ -105,7 +105,7 @@ export default function BlogPage({
     >
       {!isCoverPage ? (
         <>
-          <header className={SectionHeader}>
+          <header className={sectionHeader}>
             <h2 className={heading2}>
               <span className={textGradientPinkPurple}>Blog</span>: Page <em>{page}</em>
             </h2>
@@ -117,7 +117,7 @@ export default function BlogPage({
             </h2>
             
           </div>
-          <section className={PageWrap}>
+          <section className={pageWrap}>
             <PostsList
               pagination={
                 <Pagination prefix="/blog" page={page} pages={pages} />
@@ -128,8 +128,8 @@ export default function BlogPage({
         </>
       ) : (
         <>
-          <header className={HeroWrap}>
-            <div className={HeroText}>
+          <header className={heroWrap}>
+            <div className={heroText}>
               <h1
                 className={heroHeading}
               >
@@ -141,15 +141,15 @@ export default function BlogPage({
                 Backstage community.
               </p>
             </div>
-            <div className={HeroImage}>
-              <img src={BlogHeroImage} alt="" />
+            <div className={heroImage}>
+              <img src={BlogheroImage} alt="" />
             </div>
           </header>
-          <section className={PageWrap}>
+          <section className={pageWrap}>
             <h2>Subscribe to our DX Newsletter</h2>
           </section>
-          <section className={PageWrap}>
-            <header className={SectionHeader}>
+          <section className={pageWrap}>
+            <header className={sectionHeader}>
               <h2 className={heading2}>
                 Recent <span className={textGradientPinkPurple}>blog</span>{' '}
                 posts
@@ -166,8 +166,8 @@ export default function BlogPage({
               posts={formattedPosts}
             />
           </section>
-          <section className={PageWrap}>
-            <header className={SectionHeader}>
+          <section className={pageWrap}>
+            <header className={sectionHeader}>
               <h2 className={heading2}>
                 Latest{' '}
                 <span className={textGradientPurpleSkyblue}>podcast</span>{' '}
@@ -178,7 +178,7 @@ export default function BlogPage({
                 engineering.
               </p>
             </header>
-            <ul className={EntriesList}>
+            <ul className={entriesList}>
               {formattedPodcasts.map((episode, i) => (
                 <PodcastPreview episode={episode} key={i} />
               ))}

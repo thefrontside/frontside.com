@@ -5,25 +5,25 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 
 import {
-  PageWrap,
-  HeroWrap,
-  HeroText,
-  HeroImage,
-  HeroBreak,
-  FeatureRow,
-  FeatureText,
-  FeatureTextAlternate,
-  FeatureImage,
-  ClientLogos,
-  SectionHeader,
-  ColumnedHighlights,
-  Highlight,
-  HighlightImage,
-  CardList,
-  Card,
-  CardImage,
-  HighlightText,
-  HighlightHeading,
+  pageWrap,
+  heroWrap,
+  heroText,
+  heroImage,
+  heroBreak,
+  featureRow,
+  featureText,
+  featureTextAlternate,
+  featureImage,
+  clientLogos,
+  sectionHeader,
+  columnedhighlights,
+  highlight,
+  highlightImage,
+  cardList,
+  card,
+  cardImage,
+  highlightText,
+  highlightHeading,
 } from '../styles/page.css';
 import {
   textGradientSkybluePink,
@@ -67,11 +67,11 @@ export default function IndexPage({
 
   return (
     <Layout title="Frontside Software &mdash; DX and Backstage consulting">
-      <header className={HeroWrap}>
-        <div className={HeroText}>
+      <header className={heroWrap}>
+        <div className={heroText}>
           <h1 className={heroHeading}>
             <span className={textGradientSkybluePurple}>Empower</span> your
-            developers — <br className={HeroBreak} /> from{' '}
+            developers — <br className={heroBreak} /> from{' '}
             <strong className={textGradientDemiSkybluePink}>commit to</strong>{' '}
             production{' '}
             <strong className={textGradientPurplePink}>release</strong>
@@ -81,19 +81,19 @@ export default function IndexPage({
             teams: from IDE and CLI tools to deployment and developer portals.
           </p>
         </div>
-        <div className={HeroImage}>
+        <div className={heroImage}>
           <img src={heroPlaceholder} alt="" />
         </div>
       </header>
 
-      <div className={ClientLogos}>
+      <div className={clientLogos}>
         Trusted by HP, Resideo, Honeywell, Standard Chartered, Dell, HSBC and
         others
       </div>
 
-      <section className={PageWrap}>
-        <div className={FeatureRow}>
-          <div className={FeatureTextAlternate}>
+      <section className={pageWrap}>
+        <div className={featureRow}>
+          <div className={featureTextAlternate}>
             <h2 className={featureHeading}>
               <strong className={textSkyblue}>Re-think</strong> productivity
               after Kubernetes
@@ -108,13 +108,13 @@ export default function IndexPage({
               to boost your development teams' success.
             </p>
           </div>
-          <div className={FeatureImage}>
+          <div className={featureImage}>
             <img src={featurePlaceholder} alt="" />
           </div>
         </div>
 
-        <div className={FeatureRow}>
-          <div className={FeatureText}>
+        <div className={featureRow}>
+          <div className={featureText}>
             <h2 className={featureHeading}>
               <strong className={textSkyblue}>Shift left</strong> your testing
               strategy
@@ -128,13 +128,13 @@ export default function IndexPage({
               enjoyable, fast, and reliable.
             </p>
           </div>
-          <div className={FeatureImage}>
+          <div className={featureImage}>
             <img src={featurePlaceholder} alt="" />
           </div>
         </div>
 
-        <div className={FeatureRow}>
-          <div className={FeatureTextAlternate}>
+        <div className={featureRow}>
+          <div className={featureTextAlternate}>
             <h2 className={featureHeading}>
               <strong className={textSkyblue}>Inject</strong> technical{' '}
               <strong className={textSkyblue}>leadership</strong> into your team
@@ -146,14 +146,14 @@ export default function IndexPage({
               network of enterprise partners and Open Source maintainers.
             </p>
           </div>
-          <div className={FeatureImage}>
+          <div className={featureImage}>
             <img src={featurePlaceholder} alt="" />
           </div>
         </div>
       </section>
 
-      <section className={PageWrap}>
-        <header className={SectionHeader}>
+      <section className={pageWrap}>
+        <header className={sectionHeader}>
           <h2 className={homeBackstageHeading}>
             Bring infrastructure, services, and people together with{' '}
             <strong className={textGreen}>Backstage</strong>
@@ -163,41 +163,41 @@ export default function IndexPage({
             unique ecosystem.
           </p>
         </header>
-        <div className={ColumnedHighlights}>
-          <div className={Highlight}>
-            <h3 className={HighlightHeading}>
+        <div className={columnedhighlights}>
+          <div className={highlight}>
+            <h3 className={highlightHeading}>
               Every service at everyone's sight
             </h3>
-            <p className={HighlightText}>
+            <p className={highlightText}>
               With Backstage's catalog, you can make your repositories and Cloud
               services visible and arranged around your products and services.
             </p>
-            <img src={heroPlaceholder} alt="" className={HighlightImage} />
+            <img src={heroPlaceholder} alt="" className={highlightImage} />
           </div>
-          <div className={Highlight}>
-            <h3 className={HighlightHeading}>
+          <div className={highlight}>
+            <h3 className={highlightHeading}>
               Shift cost infrastructure left
             </h3>
-            <p className={HighlightText}>
+            <p className={highlightText}>
               Cloud native can allow your teams move faster, but that may lead
               to billing from Cloud providers grow rapidly.
             </p>
-            <img src={heroPlaceholder} alt="" className={HighlightImage} />
+            <img src={heroPlaceholder} alt="" className={highlightImage} />
           </div>
-          <div className={Highlight}>
-            <h3 className={HighlightHeading}>
+          <div className={highlight}>
+            <h3 className={highlightHeading}>
               De-risk your custom implementation
             </h3>
-            <p className={HighlightText}>
+            <p className={highlightText}>
               Every organization has a unique system domain
             </p>
-            <img src={heroPlaceholder} alt="" className={HighlightImage} />
+            <img src={heroPlaceholder} alt="" className={highlightImage} />
           </div>
         </div>
       </section>
 
-      <section className={PageWrap}>
-        <header className={SectionHeader}>
+      <section className={pageWrap}>
+        <header className={sectionHeader}>
           <h2 className={heading2}>
             Our latest{' '}
             <strong className={textGradientSkybluePink}>insights</strong>
@@ -208,11 +208,11 @@ export default function IndexPage({
           </p>
         </header>
 
-        <div className={CardList}>
+        <div className={cardList}>
           {simplifiedPosts.map((post, key) => (
-            <div key={key} className={Card}>
+            <div key={key} className={card}>
               <Link className={atoms({ color: 'white' })} to={post.slug}>
-                <img src={post.image} alt="" className={CardImage} />
+                <img src={post.image} alt="" className={cardImage} />
                 <h3
                   className={atoms({
                     fontScale: 'xl',

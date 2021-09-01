@@ -5,19 +5,19 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 
 import {
-  PageWrap,
-  HeroWrap,
-  HeroText,
-  HeroImage,
-  HeroBreak,
-  FeatureRow,
-  FeatureText,
-  FeatureTextAlternate,
-  FeatureImage,
-  SectionHeader,
-  CardList,
-  Card,
-  CardImage,
+  pageWrap,
+  heroWrap,
+  heroText,
+  heroImage,
+  heroBreak,
+  featureRow,
+  featureText,
+  featureTextAlternate,
+  featureImage,
+  sectionHeader,
+  cardList,
+  card,
+  cardImage,
 } from '../styles/page.css';
 import {
   textGradientSkybluePink,
@@ -51,8 +51,8 @@ export default function ConsultingPage({
 
   return (
     <Layout title="DX Consulting for Cloud native teams">
-      <header className={HeroWrap}>
-        <div className={HeroText}>
+      <header className={heroWrap}>
+        <div className={heroText}>
           <h1
             className={atoms({
               fontScale: '3xl',
@@ -61,7 +61,7 @@ export default function ConsultingPage({
             })}
           >
             <span className={textGradientPinkSkyblue}>Developer</span>
-            <br className={HeroBreak} />
+            <br className={heroBreak} />
             <span className={textGradientPinkSkyblue}>Experience: </span>
             where deliveries and retention meet
           </h1>
@@ -70,14 +70,14 @@ export default function ConsultingPage({
             make their teams thrive.
           </p>
         </div>
-        <div className={HeroImage}>
+        <div className={heroImage}>
           <img src={heroPlaceholder} alt="" />
         </div>
       </header>
 
-      <section className={PageWrap}>
-        <div className={FeatureRow}>
-          <div className={FeatureTextAlternate}>
+      <section className={pageWrap}>
+        <div className={featureRow}>
+          <div className={featureTextAlternate}>
             <h2
               className={atoms({
                 fontScale: 'xl',
@@ -99,13 +99,13 @@ export default function ConsultingPage({
               other teams, so they can keep shipping smoothly.
             </p>
           </div>
-          <div className={FeatureImage}>
+          <div className={featureImage}>
             <img src={featurePlaceholder} alt="" />
           </div>
         </div>
 
-        <div className={FeatureRow}>
-          <div className={FeatureText}>
+        <div className={featureRow}>
+          <div className={featureText}>
             <h2
               className={atoms({
                 fontScale: 'xl',
@@ -128,13 +128,13 @@ export default function ConsultingPage({
               process and areas of improvement now and in the long-term.
             </p>
           </div>
-          <div className={FeatureImage}>
+          <div className={featureImage}>
             <img src={featurePlaceholder} alt="" />
           </div>
         </div>
 
-        <div className={FeatureRow}>
-          <div className={FeatureTextAlternate}>
+        <div className={featureRow}>
+          <div className={featureTextAlternate}>
             <h2
               className={atoms({
                 fontScale: 'xl',
@@ -156,14 +156,14 @@ export default function ConsultingPage({
               your developers.
             </p>
           </div>
-          <div className={FeatureImage}>
+          <div className={featureImage}>
             <img src={featurePlaceholder} alt="" />
           </div>
         </div>
       </section>
 
-      <section className={PageWrap}>
-        <header className={SectionHeader}>
+      <section className={pageWrap}>
+        <header className={sectionHeader}>
           <h2
             className={atoms({
               fontScale: 'xl',
@@ -180,11 +180,11 @@ export default function ConsultingPage({
           </p>
         </header>
 
-        <div className={CardList}>
+        <div className={cardList}>
           {simplifiedPosts.map((post, key) => (
-            <div key={key} className={Card}>
+            <div key={key} className={card}>
               <Link className={atoms({ color: 'white' })} to={post.slug}>
-                <img src={post.image} alt="" className={CardImage} />
+                <img src={post.image} alt="" className={cardImage} />
                 <h3
                   className={atoms({
                     fontScale: 'xl',

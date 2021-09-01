@@ -3,8 +3,9 @@ import { calc } from '@vanilla-extract/css-utils';
 import vars, { laptopQuery, desktopQuery, darkThemeQuery } from './frontside-theme.css';
 import clientsLogo from '../img/q3-2021/client-logos.svg';
 import clientsLogoWhite from '../img/q3-2021/client-logos-white.svg';
+import { textXl } from './typography.css';
 
-export const PageWrap = style({
+export const pageWrap = style({
   boxSizing: 'border-box',
   width: '100vw',
   overflow: 'hidden',
@@ -20,24 +21,17 @@ export const PageWrap = style({
   }
 });
 
-// vanilla-extract composeStyles doesn't work, so we need to re-write
-export const HeroWrap = style({
-  boxSizing: 'border-box',
-  width: '100vw',
-  overflow: 'hidden',
-  padding: vars.space.md,
-
+export const heroWrap = style([pageWrap, {
   '@media': {
     [laptopQuery]: {
-      maxWidth: vars.pixelBase.maxWdith,
       margin: '0 auto',
       display: 'flex',
       flexFlow: 'row nowrap',
     },
   }
-});
+}]);
 
-export const HeroText = style({
+export const heroText = style({
   '@media': {
     [laptopQuery]: {
       boxSizing: 'border-box',
@@ -54,7 +48,7 @@ export const HeroText = style({
   }
 });
 
-export const HeroBreak = style({
+export const heroBreak = style({
   display: 'none',
   '@media': {
     [laptopQuery]: {
@@ -63,11 +57,11 @@ export const HeroBreak = style({
   }
 });
 
-export const HeroImage = style({
+export const heroImage = style({
   flexShrink: 1,
 })
 
-export const FeatureText = style({
+export const featureText = style({
   '@media': {
     [laptopQuery]: {
       boxSizing: 'border-box',
@@ -84,33 +78,24 @@ export const FeatureText = style({
   }
 });
 
-// vanilla-extract composeStyles doesn't work, so we need to re-write
-export const FeatureTextAlternate = style({
+export const featureTextAlternate = style([featureText, {
   '@media': {
     [laptopQuery]: {
-      boxSizing: 'border-box',
-      width: calc('50%').add(vars.space.lg).toString(),
       paddingLeft: vars.space.lg,
-      flexShrink: 0,
-      display: 'flex',
-      flexFlow: 'column nowrap',
-      justifyContent: 'space-between',
+      paddingRight: 0,
       order: 2
     },
-    [desktopQuery]: {
-      width: calc(vars.pixelBase.maxWdith).subtract(vars.space.lg).subtract(vars.space.lg).divide(2).toString(),
-    },
   }
-});
+}]);
 
-export const FeatureImage = HeroImage;
+export const featureImage = heroImage;
 
-export const AboutTeamImg = style({
+export const aboutTeamImg = style({
   width: '15rem',
   borderRadius: vars.radius.md,
 });
 
-export const FeatureRow = style({
+export const featureRow = style({
   marginBottom: vars.space.lg,
 
   '@media': {
@@ -125,7 +110,7 @@ export const FeatureRow = style({
   }
 });
 
-export const ClientLogos = style({
+export const clientLogos = style({
   backgroundImage: `url(${clientsLogo})`,
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center center',
@@ -142,7 +127,7 @@ export const ClientLogos = style({
   }
 });
 
-export const SectionHeader = style({
+export const sectionHeader = style({
   textAlign: 'center',
   maxWidth: '31.136rem',
   marginLeft: 'auto',
@@ -150,7 +135,7 @@ export const SectionHeader = style({
   marginBottom: vars.space.lg,
 });
 
-export const ColumnedHighlights = style({
+export const columnedhighlights = style({
   display: 'flex',
   flexFlow: 'column wrap',
   listStyle: 'none',
@@ -164,7 +149,7 @@ export const ColumnedHighlights = style({
   }
 });
 
-export const Highlight = style({
+export const highlight = style({
   display: 'flex',
   flexFlow: 'column nowrap',
   textAlign: 'center',
@@ -186,7 +171,7 @@ export const Highlight = style({
   }
 });
 
-export const HighlightImage = style({
+export const highlightImage = style({
   order: 0,
   width: '15rem',
   marginLeft: 'auto',
@@ -198,7 +183,7 @@ export const HighlightImage = style({
   }
 });
 
-export const HighlightText = style({
+export const highlightText = style({
   order: 2,
   '@media': {
     [laptopQuery]: {
@@ -207,49 +192,27 @@ export const HighlightText = style({
   },
 });
 
-// vanilla-extract composeStyles doesn't work, so we need to re-write
-export const HighlightHeading = style({
-  fontSize: vars.fontSize['xl'],
-  lineHeight: vars.lineHeights['xl'],
-  letterSpacing: vars.letterSpacing['xl'],
+export const highlightHeading = style([textXl, {
   fontWeight: vars.fontWeights.extrabold,
-});
+}]);
 
-
-// vanilla-extract composeStyles doesn't work, so we need to re-write
-export const AboutHighlight = style({
-  display: 'flex',
-  flexFlow: 'column nowrap',
-  paddingLeft: vars.space.md,
-  paddingRight: vars.space.md,
+export const aboutHighlight = style([highlight, {
   marginBottom: vars.space.md,
   textAlign: 'left',
-  '@media': {
-    [laptopQuery]: {
-      boxSizing: 'border-box',
-      width: calc('100%').divide(3).toString(),
-      paddingLeft: vars.space.sm,
-      paddingRight: vars.space.sm,
-    },
-    [desktopQuery]: {
-      paddingLeft: vars.space.md,
-      paddingRight: vars.space.md,
-    },
-  }
-});
+}]);
 
-export const AboutHighlightDecor = style({
+export const aboutHighlightDecor = style({
   marginLeft: 'auto',
   zoom: '50%'
 });
 
-export const CardList = style({
+export const cardList = style({
   display: 'flex',
   flexFlow: 'row wrap',
   justifyContent: 'center'
 });
 
-export const Card = style({
+export const card = style({
   background: vars.colors.blue,
   color: vars.colors.white,
   padding: vars.space['2xs'],
@@ -260,12 +223,12 @@ export const Card = style({
   marginBottom: vars.space.lg
 });
 
-export const CardImage = style({
+export const cardImage = style({
   borderRadius: '0.5rem',
   order: 1,
 });
 
-export const EntriesList = style({
+export const entriesList = style({
   listStyle: 'none',
   padding: 0,
   
