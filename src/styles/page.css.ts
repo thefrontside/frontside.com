@@ -238,28 +238,6 @@ export const aboutHighlightHeading = style([textLg, textUppercase, {
   lineHeight: vars.lineHeights.base,
 }]);
 
-export const cardList = style({
-  display: 'flex',
-  flexFlow: 'row wrap',
-  justifyContent: 'center'
-});
-
-export const card = style({
-  background: vars.colors.blue,
-  color: vars.colors.white,
-  padding: vars.space['2xs'],
-  maxWidth: '24rem',
-  borderRadius: '0.5rem',
-  marginLeft: 'auto',
-  marginRight: 'auto',
-  marginBottom: vars.space.lg
-});
-
-export const cardImage = style({
-  borderRadius: '0.5rem',
-  order: 1,
-});
-
 export const entriesList = style({
   listStyle: 'none',
   padding: 0,

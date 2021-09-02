@@ -14,7 +14,8 @@ import {
   heroText,
   heroImage,
   sectionHeader,
-  entriesList
+  entriesList,
+  entriesListEntry
 } from '../styles/page.css';
 import {
   heading2,
@@ -180,7 +181,9 @@ export default function BlogPage({
             </header>
             <ul className={entriesList}>
               {formattedPodcasts.map((episode, i) => (
-                <PodcastPreview episode={episode} key={i} />
+                <li className={entriesListEntry} key={i}>
+                  <PodcastPreview episode={episode} key={i} />
+                </li>
               ))}
             </ul>
             <PodcastCTA />
