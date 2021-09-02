@@ -1,5 +1,20 @@
 import { style } from '@vanilla-extract/css';
-import vars, { laptopQuery, darkThemeQuery } from '../../styles/frontside-theme.css';
+import vars, { laptopQuery, darkThemeQuery, desktopQuery } from '../../styles/frontside-theme.css';
+import { textSm, textXs } from '../../styles/typography.css';
+
+export const footerWrapper = style({
+  marginTop: vars.space.xl,
+  marginBottom: vars.space.lg,
+
+  '@media': {
+    [laptopQuery]: {
+      marginTop: vars.space['xl'],
+    },
+    [desktopQuery]: {
+      marginTop: vars.space['2xl'],
+    }
+  }
+})
 
 export const footerNav = style({
   display: 'flex',
@@ -35,3 +50,20 @@ export const footernavLink = style({
     }
   }
 });
+
+export const footerLegal = style([textSm, {
+  textAlign: 'center',
+  marginTop: vars.space['2xl'],
+}]);
+
+export const footerAddress = style({
+  marginTop: vars.space.md,
+  fontSize: vars.fontSize['xs'],
+  lineHeight: vars.lineHeights['md'],
+  letterSpacing: vars.letterSpacing['xs'],
+});
+
+export const footerCopyright = style([textXs, {
+  textTransform: 'uppercase',
+  marginTop: vars.space.md,
+}]);

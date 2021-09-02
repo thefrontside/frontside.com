@@ -1,8 +1,15 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import FSIcon from '../../img/plork/fs-webclip.png';
-import { atoms } from '../../styles/atoms.css';
-import { footernavLink, footerNav } from './footer.css';
+import { textBlueDashWhite } from '../../styles/typography.css';
+import {
+  footernavLink,
+  footerNav,
+  footerLegal,
+  footerAddress,
+  footerCopyright,
+  footerWrapper,
+} from './footer.css';
 
 const NavItem = ({ itemUrl, itemText }) => (
   <Link to={itemUrl} className={footernavLink}>
@@ -22,32 +29,17 @@ export default function Footer() {
   let year = new Date().getFullYear();
 
   return (
-    <footer
-      className={atoms({
-        marginTop: { mobile: 'xl', laptop: '2xl', desktop: '3xl' },
-        marginBottom: 'lg',
-      })}
-    >
+    <footer className={footerWrapper}>
       <nav className={footerNav}>
         {NavItems.map((item) => (
           <NavItem key={item.itemUrl} {...item} />
         ))}
       </nav>
-      <div
-        className={atoms({
-          textAlign: 'center',
-          fontSize: 'xs',
-          marginTop: '3xl',
-        })}
-      >
-        <a
-          href="/"
-          aria-label="visit homepage"
-          className={atoms({ padding: 'md' })}
-        >
+      <div className={footerLegal}>
+        <a href="/" aria-label="visit homepage">
           <img src={FSIcon} width="32.5" alt="Frontside Logo" />
         </a>
-        <p className={atoms({ fontSize: 'xs', marginTop: 'md' })}>
+        <p className={footerAddress}>
           2301 W Anderson Ln #107
           <br />
           Austin, Texas 78757
@@ -55,20 +47,14 @@ export default function Footer() {
           +1 (800) 493-4589
         </p>
         <p
-          className={atoms({ marginTop: 'lg', textTransform: 'uppercase' })}
+          className={footerCopyright}
         >{`\u00A9 2005-${year} The Frontside Software, Inc. All rights reserved.`}</p>
-        <p>
-          <Link
-            to="/code-of-conduct"
-            className={atoms({ color: { default: 'blue', darkMode: 'white' } })}
-          >
+        <p className={footerCopyright}>
+          <Link to="/code-of-conduct" className={textBlueDashWhite}>
             Code of Conduct
-          </Link>
-          {' '} | {' '} 
-          <Link
-            to="/privacy-policy"
-            className={atoms({ color: { default: 'blue', darkMode: 'white' } })}
-          >
+          </Link>{' '}
+          &mdash;{' '}
+          <Link to="/privacy-policy" className={textBlueDashWhite}>
             Privacy Policy
           </Link>
         </p>

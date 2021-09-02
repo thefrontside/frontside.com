@@ -1,5 +1,5 @@
 import { style, styleVariants } from '@vanilla-extract/css';
-import vars, { desktopQuery, laptopQuery } from '../../styles/frontside-theme.css';
+import vars, { darkThemeQuery, desktopQuery, laptopQuery } from '../../styles/frontside-theme.css';
 import { textBlueDashWhite, textSmCaps, textXl } from '../../styles/typography.css';
 
 const base = style([textBlueDashWhite, {
@@ -75,4 +75,12 @@ export const entryPreviewNewBadge = style([{
   paddingTop: vars.space['3xs'],
   paddingBottom: vars.space['3xs'],
   marginBottom: vars.space.xs,
+  fontWeight: vars.fontWeights.bold,
+  
+  '@media': {
+    [darkThemeQuery]: {
+      backgroundColor: vars.colors.white,
+      color: vars.colors.blue,
+    }
+  }
 }]);

@@ -1,6 +1,7 @@
 import vars, { laptopQuery, desktopQuery, darkThemeQuery, colorValues } from '../../styles/frontside-theme.css';
 import { style  } from '@vanilla-extract/css';
 import { pageWrap } from '../../styles/page.css';
+import gradientDecor from '../../img/q3-2021/button-gradient.svg';
 
 export const navWrap = style([pageWrap, {
   display: 'flex',
@@ -11,7 +12,7 @@ export const navWrap = style([pageWrap, {
 
 export const contactButton = style({
   display: 'inline-block',
-  background: `linear-gradient(45deg, ${vars.colors.pink} -20%, ${vars.colors.purple} 100%)`,
+  background: `url(${gradientDecor}) no-repeat right bottom, linear-gradient(90deg, ${vars.colors.violet}, ${vars.colors.pink} 120%)`,
   fontWeight: vars.fontWeights.bold,
   fontSize: vars.fontSize.xs,
   color: vars.colors.white,

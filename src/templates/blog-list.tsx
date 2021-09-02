@@ -6,24 +6,17 @@ import PostsList from '../components/posts-list';
 import Pagination from '../components/pagination';
 import PodcastCTA from '../components/PodcastCTA';
 
-import BlogheroImage from '../img/plork/blog-hero@1.5x.png';
-
 import {
   pageWrap,
-  heroWrap,
-  heroText,
-  heroImage,
   sectionHeader,
   entriesList,
   entriesListEntry
 } from '../styles/page.css';
 import {
   heading2,
-  heroHeading,
   textGradientPinkPurple,
   textGradientPurpleSkyblue,
   textLg,
-  textPink,
 } from '../styles/typography.css';
 
 import PodcastPreview from '../components/podcast-preview/podcast-preview';
@@ -129,7 +122,7 @@ export default function BlogPage({
         </>
       ) : (
         <>
-          <header className={heroWrap}>
+          {/* <header className={heroWrap}>
             <div className={heroText}>
               <h1
                 className={heroHeading}
@@ -145,10 +138,7 @@ export default function BlogPage({
             <div className={heroImage}>
               <img src={BlogheroImage} alt="" />
             </div>
-          </header>
-          <section className={pageWrap}>
-            <h2>Subscribe to our DX Newsletter</h2>
-          </section>
+          </header> */}
           <section className={pageWrap}>
             <header className={sectionHeader}>
               <h2 className={heading2}>
@@ -160,6 +150,9 @@ export default function BlogPage({
                 DX topics.
               </p>
             </header>
+            <section className={pageWrap}>
+              <h2>Subscribe to our DX Newsletter</h2>
+            </section>
             <PostsList
               pagination={
                 <Pagination prefix="/blog" page={page} pages={pages} />
@@ -190,9 +183,7 @@ export default function BlogPage({
           </section>
         </>
       )}
-      
     </Layout>
-    // <></>
   );
 }
 

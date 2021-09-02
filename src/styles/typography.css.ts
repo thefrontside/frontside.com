@@ -2,12 +2,21 @@ import { globalStyle, style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
 import vars, { darkThemeQuery, desktopQuery, laptopQuery } from './frontside-theme.css';
 
-export const textSmCaps = style({
-  textTransform: 'uppercase',
+export const textXs = style({
+  fontSize: vars.fontSize['xs'],
+  lineHeight: vars.lineHeights['xs'],
+  letterSpacing: vars.letterSpacing['xs'],
+});
+
+export const textSm = style({
   fontSize: vars.fontSize['sm'],
   lineHeight: vars.lineHeights['sm'],
   letterSpacing: vars.letterSpacing['sm'],
 });
+
+export const textSmCaps = style([textSm, {
+  textTransform: 'uppercase',
+}]);
 
 export const textMd = style({
   fontSize: vars.fontSize['base'],
