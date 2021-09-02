@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: >-
-  BigTest Interactors: the design systems testing ally
+  Interactors: the design systems testing ally
 date: 2021-08-04T05:00:00.000Z
 author: Charles Lowell, Jeffrey Cherewaty
 description: >-
@@ -31,9 +31,9 @@ To effectively write a test using this date picker, we had to include specifics 
 
 There's a well-trod design pattern for fixing this problem: [page objects](https://www.martinfowler.com/bliki/PageObject.html). They're object-oriented classes that serve as an interface. As an application matures alongside its accompanying tests, page objects act as a buffer and a more explicit API for the tests to interact with the application.
 
-## Introducing BigTest Interactors
+## Introducing Interactors
 
-At Frontside, we've built [BigTest Interactors](https://frontside.com/bigtest/interactors) (`@bigtest/interactor`), a library inspired by page objects that helps teams structure, share, and reuse their UI testing practices.
+At Frontside, we've built [Interactors](https://frontside.com/bigtest/interactors) (`@interactors/html`), a library inspired by page objects that helps teams structure, share, and reuse their UI testing practices.
 
 Interactors evolve the idea of a page object. Modern applications are usually arranged into composable components, and the "page" is no longer the dominant unit of organization. An Interactor is similarly composable, and can abstract any level of object in the DOM hierarchy.
 
@@ -52,7 +52,7 @@ Let's take a closer look at each of these advantages.
 We provide basic [built-in Interactors](https://frontside.com/bigtest/docs/interactors/built-in-dom) that correspond to HTML elements, like `button`, `link`, and `checkbox`. Using these alone, you could interact with and assert the majority of cases of a web UI. Take the following example of a collapsable navigation menu test:
 
 ```js
-import { Button, Link, Heading } from `@bigtest/interactor`;
+import { Button, Link, Heading } from `@interactors/html`;
 
 it('goes to international news page with mobile menu', () => {
   cy.do([
@@ -121,7 +121,7 @@ Interactors not only check for presence before committing an action in the UI, t
 
 ## Try out Interactors!
 
-If you're still not sure about trying out BigTest Interactors, take a look at this [pull request in FOLIO](https://github.com/folio-org/stripes-testing/pull/112), an open-source project, adopting Interactors in their component library:
+If you're still not sure about trying out Interactors, take a look at this [pull request in FOLIO](https://github.com/folio-org/stripes-testing/pull/112), an open-source project, adopting Interactors in their component library:
 
 ![Screenshot of code diff resulting in refactoring a test using React Testing Library to use Interactors](/img/2021-08-04-interactors-design-system/diff-react-testing-library-vs-interactors.png)
 
