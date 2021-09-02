@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
-import Input from '../input';
-import Button from '../button';
-
-import { atoms } from '../../styles/atoms.css.ts';
 
 SubscribeForm.propTypes = {
   highlight: PropTypes.bool,
@@ -27,16 +23,10 @@ export default function SubscribeForm({ highlight }) {
 
   return (
     <form className="subscribe-form" onSubmit={handleSubmit}>
-      <h2
-        className={atoms({})}
-        //'subscribe-form--title', {'subscribe-form--title__highlight': highlight})
-      >
+      <h2>
         Join our <br /> newsletter
       </h2>
-      <div
-        className={atoms({})}
-        //'subscribe-form--inputs', {'subscribe-form--inputs__sent': status === 'sent'})}
-      >
+      <div>
         <p className="subscribe-form--intro">
           Receive a monthly curation of articles and podcast episodes about
           automated testing, developer experience, and other best practices.
@@ -58,23 +48,23 @@ export default function SubscribeForm({ highlight }) {
           </>
         ) : (
           <>
-            <Input
+            <input
               placeholder="Your email"
               type="email"
               onChange={(e) => setEmail(e.target.value)}
               defaultValue={email}
-              highlight={highlight}
-              large={true}
+              // highlight={highlight}
+              // large={true}
               required={true}
             />
-            <Button
+            <button
               type="submit"
-              highlight={highlight}
-              large={true}
+              // highlight={highlight}
+              // large={true}
               disabled={status === 'sending'}
             >
               {status === 'sending' ? 'Sending...' : 'Sign up!'}
-            </Button>
+            </button>
             {status === 'error' ? (
               <p className="subscribe-form--error">
                 There was an error submitting the form. Please try again, or{' '}

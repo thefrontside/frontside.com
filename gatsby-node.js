@@ -102,7 +102,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   tags.forEach((tag) =>
     createPage({
       path: `/tags/${_.kebabCase(tag)}/`,
-      component: path.resolve(`src/templates/tags.js`),
+      component: path.resolve(`src/templates/tags.tsx`),
       context: {
         tag,
       },
@@ -113,7 +113,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
   result.data.allPeople.nodes.forEach((node) =>
     createPage({
       path: node.slug,
-      component: path.resolve(`src/templates/people.js`),
+      component: path.resolve(`src/templates/people.tsx`),
       // additional data can be passed via context
       context: {
         id: node.id,
@@ -126,7 +126,7 @@ exports.createPages = async ({ actions: { createPage }, graphql }) => {
     ({ node: { id, season, number, slug } }) =>
       createPage({
         path: `/podcast/${slug}/`,
-        component: path.resolve('src/templates/episode.js'),
+        component: path.resolve('src/templates/episode.tsx'),
         context: {
           id,
           season,

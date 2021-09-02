@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ApplePodcastsBadge from '../../img/apple-podcasts-badge.svg';
 import Input from '../input';
-import Button from '../button';
 
 export default function PodcastCTA() {
   const [copied, setCopied] = useState(false);
@@ -24,7 +23,7 @@ export default function PodcastCTA() {
           text="https://rss.simplecast.com/podcasts/96/rss"
           onCopy={() => setCopied(true)}
         >
-          <Button>Copy RSS</Button>
+          <button>Copy RSS</button>
         </CopyToClipboard>
         <Input value="https://rss.simplecast.com/podcasts/96/rss" readOnly />
         <span

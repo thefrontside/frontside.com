@@ -262,3 +262,15 @@ export const entriesListEntry = style({
 export const radiusMd = style({
   borderRadius: vars.radius.md,
 });
+
+export const tagList = style({
+  listStyle: 'none',
+  display: 'flex',
+  flexFlow: 'row wrap',
+  justifyContent: 'center',
+});
+
+export const tagListItem = style({
+  display: 'block',
+  margin: vars.space.sm,
+});

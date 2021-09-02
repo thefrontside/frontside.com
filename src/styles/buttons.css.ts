@@ -1,5 +1,6 @@
 import { style } from '@vanilla-extract/css';
 import vars, { darkThemeQuery } from './frontside-theme.css';
+import { textSmCaps } from './typography.css';
 
 export const paginationButton = style({
   background: vars.colors.blue,
@@ -28,3 +29,22 @@ export const tagButton = style({
     }
   }
 });
+
+export const bigTagButton = style([tagButton, {
+  fontSize: vars.fontSize.lg,
+}]);
+
+export const socialLink = style([textSmCaps, {
+  display: 'inline-block',
+  background: vars.colors.blue,
+  color: vars.colors.white,
+  borderRadius: vars.radius.md,
+  padding: vars.space['2xs'],
+  paddingRight: vars.space['xs'],
+  paddingLeft: vars.space['xs'],
+  textTransform: 'uppercase',
+  fontWeight: vars.fontWeights.bold,
+  marginRight: vars.space.sm,
+  marginTop: vars.space.md,
+  marginBottom: vars.space.md,
+}]);

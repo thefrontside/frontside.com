@@ -1,7 +1,7 @@
 ---
 templateKey: people
 name: Charles Lowell
-title: Gentleman Developer
+title: Founder / CTO 
 img: /img/charles-lowell.png
 twitter: cowboyd
 github: cowboyd

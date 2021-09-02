@@ -11,7 +11,7 @@ import {
   heroImage,
 } from '../styles/page.css';
 import {
-  mardownColumn
+  mardownColumn, textBlueDashWhite
 } from '../styles/typography.css';
 import { atoms } from '../styles/atoms.css';
 import { tagButton } from '../styles/buttons.css';
@@ -36,11 +36,9 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
                 <React.Fragment key={author.slug}>
                   {i === 0 ? '' : authors.length > 2 ? ', ' : ' and '}
                   {/* Author links will lead to team member page, which is currently pending. */}
-                  {/* <Link key={author.slug} to={author.slug}>
-                          <Text>{author.name}</Text>
-                        </Link>
-                    */}
-                  {author.name}
+                  <Link key={author.slug} to={author.slug} className={textBlueDashWhite}>
+                    {author.name}
+                  </Link>
                 </React.Fragment>
               ))}{' '}
           </p>

@@ -365,3 +365,5 @@ export const bigQuoteAuthor = style([textLg, {
   marginBottom: vars.space['2xl'],
   textAlign: 'center',
 }]);
+
+export const peopleHeroHeading = style([heroHeading, textGradientPinkSkyblue]);
