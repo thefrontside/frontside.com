@@ -14,9 +14,8 @@ import {
   featureTextAlternate,
   featureImage,
   sectionHeader,
-  cardList,
-  card,
-  cardImage,
+  entryColumns,
+  entryColumn,
 } from '../styles/page.css';
 import {
   textGradientSkybluePink,
@@ -26,6 +25,7 @@ import { atoms } from '../styles/atoms.css';
 
 import heroPlaceholder from '../img/temp/hero_placeholder.png';
 import featurePlaceholder from '../img/temp/feature_placeholder.png';
+import BlogPreview from '../components/blog-preview';
 
 export default function BackstagePage({
   data: {
@@ -37,7 +37,7 @@ export default function BackstagePage({
     slug: node.slug,
     title: node.title,
     date: node.markdown.frontmatter.date,
-    excerpt: node.markdown.frontmatter.description,
+    description: node.markdown.frontmatter.description,
     authors: node.authorNodes.map((author) => ({
       slug: author.slug,
       name: author.name,
@@ -168,55 +168,10 @@ export default function BackstagePage({
           </p>
         </header>
 
-        <div className={cardList}>
-          {simplifiedPosts.map((post, key) => (
-            <div key={key} className={card}>
-              <Link className={atoms({ color: 'white' })} to={post.slug}>
-                <img src={post.image} alt="" className={cardImage} />
-                <h3
-                  className={atoms({
-                    fontScale: 'xl',
-                    lineHeight: 'lg',
-                    paddingX: 'sm',
-                  })}
-                >
-                  {post.title}
-                </h3>
-                <p
-                  className={atoms({
-                    fontScale: 'sm',
-                    textTransform: 'uppercase',
-                    paddingX: 'sm',
-                  })}
-                >
-                  {post.authors.filter(Boolean).map((author, i) => (
-                    <React.Fragment key={author.slug}>
-                      {i === 0 ? '' : post.authors.length > 2 ? ', ' : ' and '}
-                      {/* Author links will lead to team member page, which is currently pending. */}
-                      {/* <Link key={author.slug} to={author.slug}>
-                          <Text>{author.name}</Text>
-                        </Link>
-                    */}
-                      {author.name}
-                    </React.Fragment>
-                  ))}
-                  &mdash; <span>{post.date}</span>
-                </p>
-                <p className={atoms({ fontScale: 'sm', paddingX: 'sm' })}>
-                  {post.excerpt}
-                </p>
-
-                <strong
-                  className={atoms({
-                    display: 'inline-block',
-                    fontScale: 'sm',
-                    paddingX: 'sm',
-                    paddingBottom: 'sm',
-                  })}
-                >
-                  Continue reading →
-                </strong>
-              </Link>
+        <div className={entryColumns}>
+          {simplifiedPosts.map((post, i) => (
+            <div className={entryColumn} key={i}>
+              <BlogPreview post={post} />
             </div>
           ))}
         </div>
@@ -238,7 +193,7 @@ export const backstagePageQuery = graphql`
     allBlogPost(
       sort: { order: DESC, fields: [markdown___frontmatter___date] }
       filter: { markdown: { frontmatter: { tags: { in: "backstage" } } } }
-      limit: 4
+      limit: 3
     ) {
       edges {
         node {

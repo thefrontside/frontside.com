@@ -10,6 +10,7 @@ export const colorValues = {
   blue: '#14315d',
   skyblue: '#26abe8',
   purple: '#8c7db3',
+  violet: '#44378a',
   green: '#36baa2',
   gray: '#8995aa',
 };
@@ -64,13 +65,13 @@ const frontsideTheme = createGlobalTheme(':root', {
     base: '-0.009rem',
     lg: '-0.023rem',
     xl: '0.013rem',
-    '2xl': '0.025rem',
+    '2xl': '0.020rem',
     '3xl': '0.015rem',
     '4xl': '0.081rem'
   },
   fontWeights: {
     normal: '400',
-    bold: '600',
+    bold: '700',
     extrabold: '800'
   },
   breakpoints: {

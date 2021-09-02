@@ -3,7 +3,7 @@ import { calc } from '@vanilla-extract/css-utils';
 import vars, { laptopQuery, desktopQuery, darkThemeQuery } from './frontside-theme.css';
 import clientsLogo from '../img/q3-2021/client-logos.svg';
 import clientsLogoWhite from '../img/q3-2021/client-logos-white.svg';
-import { textXl } from './typography.css';
+import { textLg, textUppercase, textXl } from './typography.css';
 
 export const pageWrap = style({
   boxSizing: 'border-box',
@@ -144,23 +144,31 @@ export const columnedhighlights = style({
   '@media': {
     [laptopQuery]: {
       display: 'flex',
-      flexFlow: 'row wrap'
+      flexFlow: 'row wrap',
+      justifyContent: 'space-between',
     },
   }
 });
 
-export const highlight = style({
+export const columnThird = style({
   display: 'flex',
   flexFlow: 'column nowrap',
-  textAlign: 'center',
-  paddingLeft: vars.space.md,
-  paddingRight: vars.space.md,
   alignItems: 'stretch',
-
   '@media': {
     [laptopQuery]: {
       boxSizing: 'border-box',
       width: calc('100%').divide(3).toString(),
+    },
+  }
+});
+
+export const highlight = style([columnThird, {
+  textAlign: 'center',
+  paddingLeft: vars.space.md,
+  paddingRight: vars.space.md,
+
+  '@media': {
+    [laptopQuery]: {
       paddingLeft: vars.space.sm,
       paddingRight: vars.space.sm,
     },
@@ -169,7 +177,7 @@ export const highlight = style({
       paddingRight: vars.space.lg,
     },
   }
-});
+}]);
 
 export const highlightImage = style({
   order: 0,
@@ -196,6 +204,22 @@ export const highlightHeading = style([textXl, {
   fontWeight: vars.fontWeights.extrabold,
 }]);
 
+export const entryColumns = style([columnedhighlights, {
+  marginTop: vars.space.xl,
+}]);
+
+export const entryColumn = style([columnThird, {
+  textAlign: 'left',
+  '@media': {
+    [laptopQuery]: {
+      width: calc('100%').divide(3).subtract(vars.space.md).toString(),
+    },
+    [desktopQuery]: {
+      width: calc('100%').divide(3).subtract(vars.space.lg).toString(),
+    },
+  }
+}]);
+
 export const aboutHighlight = style([highlight, {
   marginBottom: vars.space.md,
   textAlign: 'left',
@@ -205,6 +229,14 @@ export const aboutHighlightDecor = style({
   marginLeft: 'auto',
   zoom: '50%'
 });
+
+export const aboutHighlightDecorMarginFix = style({
+  marginLeft: 'auto',
+});
+
+export const aboutHighlightHeading = style([textLg, textUppercase, {
+  lineHeight: vars.lineHeights.base,
+}]);
 
 export const cardList = style({
   display: 'flex',
@@ -231,11 +263,24 @@ export const cardImage = style({
 export const entriesList = style({
   listStyle: 'none',
   padding: 0,
-  
+
   '@media': {
     [laptopQuery]: {
       paddingLeft: vars.space.lg,
       paddingRight: vars.space.lg,
     }
   }
-})
+});
+
+export const entriesListEntry = style({
+  marginBottom: vars.space.lg,
+  '@media': {
+    [laptopQuery]: {
+      marginBottom: vars.space.xl,
+    }
+  }
+});
+
+export const radiusMd = style({
+  borderRadius: vars.radius.md,
+});

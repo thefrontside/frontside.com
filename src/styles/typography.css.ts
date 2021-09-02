@@ -2,6 +2,19 @@ import { globalStyle, style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
 import vars, { darkThemeQuery, desktopQuery, laptopQuery } from './frontside-theme.css';
 
+export const textSmCaps = style({
+  textTransform: 'uppercase',
+  fontSize: vars.fontSize['sm'],
+  lineHeight: vars.lineHeights['sm'],
+  letterSpacing: vars.letterSpacing['sm'],
+});
+
+export const textMd = style({
+  fontSize: vars.fontSize['base'],
+  lineHeight: vars.lineHeights['base'],
+  letterSpacing: vars.letterSpacing['base'],
+});
+
 export const textLg = style({
   fontSize: vars.fontSize['lg'],
   lineHeight: vars.lineHeights['lg'],
@@ -28,6 +41,10 @@ export const text3Xl = style({
 
 export const textExtrabold = style({
   fontWeight: vars.fontWeights.extrabold,
+});
+
+export const textUppercase = style({
+  textTransform: 'uppercase',
 });
 
 export const heroHeading = style([text3Xl, {
@@ -111,6 +128,10 @@ export const textGradientSkyblueGreen = style([clipBackgroundToText, {
   backgroundImage: `linear-gradient(90deg, ${vars.colors.skyblue}, ${vars.colors.green} 95%)`,
 }]);
 
+export const textGradientSkyblueVioletPink = style([clipBackgroundToText, {
+  backgroundImage: `linear-gradient(90deg, ${vars.colors.skyblue}, ${vars.colors.violet}, ${vars.colors.pink})`,
+}]);
+
 export const textBottomGradient = style({
   position: 'relative',
   display: 'inline-block',
@@ -123,7 +144,7 @@ export const textBottomGradient = style({
       left: 0,
       width: '100%',
       height: '0.200rem',
-      background: `linear-gradient(90deg, ${vars.colors.pink}, ${vars.colors.skyblue} 95%)`
+      background: `linear-gradient(90deg, ${vars.colors.skyblue}, ${vars.colors.pink} 95%)`
     }
   }
 });
@@ -329,4 +350,9 @@ export const bigQuote = style([text3Xl, {
       marginLeft: vars.space['2xl'],
     }
   }
+}]);
+
+export const bigQuoteAuthor = style([textLg, {
+  marginBottom: vars.space['2xl'],
+  textAlign: 'center',
 }]);

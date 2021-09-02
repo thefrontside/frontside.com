@@ -1,34 +1,78 @@
-import { style } from '@vanilla-extract/css';
-import vars, { laptopQuery } from '../../styles/frontside-theme.css';
+import { style, styleVariants } from '@vanilla-extract/css';
+import vars, { desktopQuery, laptopQuery } from '../../styles/frontside-theme.css';
+import { textBlueDashWhite, textSmCaps, textXl } from '../../styles/typography.css';
 
-export const entryPreview = style({
-  marginBottom: vars.space.lg,
+const base = style([textBlueDashWhite, {
+  display: 'flex',
+  flexFlow: 'column nowrap',
+}])
 
+const sided = style([base, {
   '@media': {
     [laptopQuery]: {
-      marginBottom: vars.space['xl'],
+      flexFlow: 'row nowrap',
     }
+  }
+}]);
+
+export const entryPreview = styleVariants({
+  default: [base],
+
+  sided: [sided],
+
+  featured: [sided]
+});
+
+export const entryPreviewImage = styleVariants({
+  default: {
+    marginBottom: vars.space.xs,
   },
 
-  'selectors': {
-    '&:after': {
-      content: '""',
-      display: 'table',
-      clear: 'both',
-    }
+  sided: {
+    marginBottom: vars.space.xs,
+
+    '@media': {
+      [laptopQuery]: {
+        marginRight: vars.space.lg,
+        width: '33%',
+        flexShrink: 0,
+      }
+    },
+  },
+
+  featured: {
+    marginBottom: vars.space.xs,
+    '@media': {
+      [laptopQuery]: {
+        marginRight: vars.space.md,
+        width: '40%',
+        maxWidth: '600px',
+        flexShrink: 0,
+      },
+      [desktopQuery]: {
+        width: '600px',
+      }
+    },
   }
+});
+
+export const entryPreviewText = style({
 
 });
 
-export const entryPreviewImage = style({
-  borderRadius: vars.radius.md,
+export const entryPreviewHeading = style([textXl, {
+  marginTop: 0,
+}]);
 
-  '@media': {
-    [laptopQuery]: {
-      float: 'left',
-      marginRight: vars.space.lg,
-      width: '33%',
-      marginBottom: vars.space.xl,
-    }
-  }
-});
+export const entryPreviewNewBadge = style([{
+  display: 'inline-block',
+  backgroundColor: vars.colors.blue,
+  color: vars.colors.white,
+  borderRadius: vars.radius.sm,
+  fontSize: vars.fontSize.sm,
+  paddingLeft: vars.space['xs'],
+  paddingRight: vars.space['xs'],
+  paddingTop: vars.space['3xs'],
+  paddingBottom: vars.space['3xs'],
+  marginBottom: vars.space.xs,
+}]);

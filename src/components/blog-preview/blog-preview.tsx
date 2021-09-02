@@ -1,37 +1,35 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import { entryPreview, entryPreviewImage } from './blog-preview.css';
-import { atoms } from '../../styles/atoms.css';
+import {
+  entryPreview,
+  entryPreviewHeading,
+  entryPreviewImage,
+  entryPreviewNewBadge,
+  entryPreviewText,
+} from './blog-preview.css';
+import { textGradientSkyblueVioletPink, textMd, textSmCaps } from '../../styles/typography.css';
+import { radiusMd } from '../../styles/page.css';
 
-export default function BlogPreview({ post }) {
+export default function BlogPreview({ post, layout = 'default' }) {
   return (
     <>
-      <li className={entryPreview}>
-        <Link
-          to={post.slug}
-          className={atoms({
-            color: { default: 'blue', darkMode: 'white' },
-          })}
-        >
-          {post.image ? (
-            <img src={post.image} alt="" className={entryPreviewImage} />
+      <Link to={post.slug} className={entryPreview[layout]}>
+        {post.image ? (
+          <div className={entryPreviewImage[layout]}>
+            <img src={post.image} alt="" className={radiusMd} />
+          </div>
+        ) : (
+          ''
+        )}
+        <div className={entryPreviewText}>
+          {layout === 'featured' ? (
+            <span className={entryPreviewNewBadge}>New</span>
           ) : (
-            ''
+            <></>
           )}
-          <h3
-            className={atoms({
-              fontScale: 'xl',
-            })}
-          >
-            {post.title}
-          </h3>
-          <p
-            className={atoms({
-              fontScale: 'sm',
-              textTransform: 'uppercase',
-            })}
-          >
+          <h3 className={entryPreviewHeading}>{post.title}</h3>
+          <p className={textSmCaps}>
             {post.authors.filter(Boolean).map((author, i) => (
               <React.Fragment key={author.slug}>
                 {i === 0 ? '' : post.authors.length > 2 ? ', ' : ' and '}
@@ -45,10 +43,10 @@ export default function BlogPreview({ post }) {
             ))}{' '}
             &mdash; <span>{post.date}</span>
           </p>
-          <p className={atoms({ fontScale: 'base' })}>{post.description}</p>
-          <strong>Read article →</strong>
-        </Link>
-      </li>
+          <p className={textMd}>{post.description}</p>
+          <strong className={textGradientSkyblueVioletPink}>Read article &#8674;</strong>
+        </div>
+      </Link>
     </>
   );
 }

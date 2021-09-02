@@ -1,13 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
-
-import Text from '../text';
-import SubscribeForm from '../subscribe-form';
 import BlogPreview from '../blog-preview';
 
-import { entriesList } from '../../styles/page.css';
-import { atoms } from '../../styles/atoms.css';
+import { entriesList, entriesListEntry } from '../../styles/page.css';
 
 export default function PostsList({
   heading = null,
@@ -25,7 +20,9 @@ export default function PostsList({
       )}
       <ul className={entriesList}>
         {posts.map((post, i) => (
-          <BlogPreview post={post} key={i} />
+          <li className={entriesListEntry} key={i}>
+            <BlogPreview post={post} layout='sided' />
+          </li>
         ))}
       </ul>
       {pagination}

@@ -17,11 +17,20 @@ import {
   aboutHighlight,
   aboutHighlightDecor,
   aboutTeamImg,
+  aboutHighlightHeading,
+  aboutHighlightDecorMarginFix,
 } from '../styles/page.css';
 import {
   textGradientSkybluePink,
   textGradientSkybluePurple,
   bigQuote,
+  heroHeading,
+  textSkyblue,
+  textLg,
+  textExtrabold,
+  bigQuoteAuthor,
+  textPink,
+  heading2,
 } from '../styles/typography.css';
 import { atoms } from '../styles/atoms.css';
 
@@ -193,19 +202,13 @@ export default function IndexPage({
     <Layout title="About Frontside">
       <header className={heroWrap}>
         <div className={heroText}>
-          <h1
-            className={atoms({
-              fontScale: '3xl',
-              fontWeight: 'extrabold',
-              textTransform: 'uppercase',
-            })}
-          >
+          <h1 className={heroHeading}>
             We've been{' '}
             <span className={textGradientSkybluePurple}>improving</span>{' '}
             engineering orgs{' '}
-            <span className={atoms({ color: 'skyblue' })}>since 2005</span>
+            <span className={textSkyblue}>since 2005</span>
           </h1>
-          <p className={atoms({ fontScale: 'lg' })}>
+          <p className={textLg}>
             We are a purposefully small group of engineers who want to create
             scale-ready tools.
           </p>
@@ -218,23 +221,23 @@ export default function IndexPage({
       <section className={pageWrap}>
         <blockquote className={bigQuote}>
           “Everyone at Frontside has a great attitude of{' '}
-          <strong className={atoms({ fontWeight: 'extrabold' })}>can do</strong>{' '}
+          <strong className={textExtrabold}>can do</strong>{' '}
           and{' '}
-          <strong className={atoms({ fontWeight: 'extrabold' })}>
+          <strong className={textExtrabold}>
             we will solve this
           </strong>
           . Their work ethic is strong, coupled with the desire to be a great
           partner.”
         </blockquote>
-        <p className={atoms({ textAlign: 'center', marginBottom: '2xl' })}>
+        <p className={bigQuoteAuthor}>
           &mdash; Brian Beale, Director of Software Engineering at Resideo
         </p>
         <ul className={columnedhighlights}>
           <li className={aboutHighlight}>
             <h3
-              className={atoms({ textTransform: 'uppercase', fontScale: 'lg' })}
+              className={aboutHighlightHeading}
             >
-              <span className={atoms({ color: 'pink' })}>We build</span>
+              <span className={textPink}>We build</span>
               <br />
               long-lasting software
             </h3>
@@ -247,9 +250,9 @@ export default function IndexPage({
           </li>
           <li className={aboutHighlight}>
             <h3
-              className={atoms({ textTransform: 'uppercase', fontScale: 'lg' })}
+              className={aboutHighlightHeading}
             >
-              <span className={atoms({ color: 'skyblue' })}>We plan</span>
+              <span className={textSkyblue}>We plan</span>
               <br />
               for evolution
             </h3>
@@ -262,9 +265,9 @@ export default function IndexPage({
           </li>
           <li className={aboutHighlight}>
             <h3
-              className={atoms({ textTransform: 'uppercase', fontScale: 'lg' })}
+              className={aboutHighlightHeading}
             >
-              <span className={atoms({ color: 'pink' })}>We favor</span>
+              <span className={textPink}>We favor</span>
               <br />
               delivering consistenly
             </h3>
@@ -277,9 +280,9 @@ export default function IndexPage({
           </li>
           <li className={aboutHighlight}>
             <h3
-              className={atoms({ textTransform: 'uppercase', fontScale: 'lg' })}
+              className={aboutHighlightHeading}
             >
-              <span className={atoms({ color: 'skyblue' })}>We care</span>
+              <span className={textSkyblue}>We care</span>
               <br />
               about developer experience
             </h3>
@@ -292,9 +295,9 @@ export default function IndexPage({
           </li>
           <li className={aboutHighlight}>
             <h3
-              className={atoms({ textTransform: 'uppercase', fontScale: 'lg' })}
+              className={aboutHighlightHeading}
             >
-              <span className={atoms({ color: 'pink' })}>We lead</span>
+              <span className={textPink}>We lead</span>
               <br />
               with insight
             </h3>
@@ -305,15 +308,15 @@ export default function IndexPage({
             </p>
             <img
               src={decor5}
-              className={atoms({ marginLeft: 'auto' })}
+              className={aboutHighlightDecorMarginFix}
               alt=""
             />
           </li>
           <li className={aboutHighlight}>
             <h3
-              className={atoms({ textTransform: 'uppercase', fontScale: 'lg' })}
+              className={aboutHighlightHeading}
             >
-              <span className={atoms({ color: 'skyblue' })}>We work</span>
+              <span className={textSkyblue}>We work</span>
               <br />
               with OSS contributors
             </h3>
@@ -331,15 +334,11 @@ export default function IndexPage({
       <section className={pageWrap}>
         <header className={sectionHeader}>
           <h2
-            className={atoms({
-              fontScale: 'xl',
-              fontWeight: 'extrabold',
-              textTransform: 'uppercase',
-            })}
+            className={heading2}
           >
             <strong className={textGradientSkybluePink}>Meet the team</strong>
           </h2>
-          <p className={atoms({ fontScale: 'lg' })}>
+          <p className={textLg}>
             We bring together people from interdisciplinary backgrounds.
           </p>
         </header>
