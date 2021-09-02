@@ -4,7 +4,6 @@ import { graphql } from 'gatsby';
 
 import Layout from '../components/layout';
 import EpisodesList from '../components/episodes-list';
-import Text from '../components/text';
 import { pageWrap } from '../styles/page.css';
 
 const PodcastPage = ({
@@ -16,7 +15,6 @@ const PodcastPage = ({
     <Layout title="Podcast">
       <div className={pageWrap}>
         <EpisodesList
-          heading={<Text tag="h2">The Frontside Podcast</Text>}
           episodes={edges.map(({ node }) => {
             return {
               title: node.title,
