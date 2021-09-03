@@ -66,6 +66,11 @@ export const heading2 = style([textXl, {
   textTransform: 'uppercase',
 }]);
 
+export const heading2NoMargin = style([heading2, {
+  marginTop: 0,
+  marginBottom: 0,
+}]);
+
 export const textPink = style({
   color: vars.colors.pink,
 });

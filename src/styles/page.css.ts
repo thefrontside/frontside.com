@@ -95,6 +95,14 @@ export const aboutTeamImg = style({
   borderRadius: vars.radius.md,
 });
 
+export const aboutTeamList = style({
+  listStyle: 'none',
+  padding: 0,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+});
+
 export const featureRow = style({
   marginBottom: vars.space.lg,
 

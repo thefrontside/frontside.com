@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
 
@@ -19,6 +19,7 @@ import {
   aboutTeamImg,
   aboutHighlightHeading,
   aboutHighlightDecorMarginFix,
+  aboutTeamList,
 } from '../styles/page.css';
 import {
   textGradientSkybluePink,
@@ -31,8 +32,9 @@ import {
   bigQuoteAuthor,
   textPink,
   heading2,
+  textBlueDashWhite,
+  heading2NoMargin,
 } from '../styles/typography.css';
-import { atoms } from '../styles/atoms.css';
 
 import aboutHero from '../img/q3-2021/about-hero.png';
 import decor1 from '../img/q3-2021/about-decor-1.png';
@@ -42,162 +44,25 @@ import decor4 from '../img/q3-2021/about-decor-4.png';
 import decor5 from '../img/q3-2021/about-decor-5.png';
 import decor6 from '../img/q3-2021/about-decor-6.png';
 
-import charles from '../img/q3-2021/team/charles.jpg';
-import taras from '../img/q3-2021/team/taras.jpg';
-import jeffrey from '../img/q3-2021/team/jeffrey.jpg';
-import rachelle from '../img/q3-2021/team/rachelle.jpg';
-import paul from '../img/q3-2021/team/paul.jpg';
-import elrick from '../img/q3-2021/team/elrick.jpg';
-import jacob from '../img/q3-2021/team/jacob.jpg';
-import min from '../img/q3-2021/team/min.jpg';
-import jorge from '../img/q3-2021/team/jorge.jpg';
+export default function IndexPage({ data: { allPeople } }) {
+  const formattedPeople = allPeople.edges.map(
+    ({
+      node: {
+        name,
+        slug,
+        person: { frontmatter },
+      },
+    }) => ({
+      name,
+      slug,
+      title: frontmatter.title,
+      location: frontmatter.location,
+      img: frontmatter.img,
+      imgAlt: frontmatter.imgAlt,
+      intro: frontmatter.intro,
+    })
+  );
 
-// FIX: I couldn't make the people query work so I'm hard coding it here
-const teamMembers = [
-  {
-    name: 'Charles Lowell',
-    title: 'Founder / Head of Research \u0026  Development',
-    location: 'Austin, Texas \u2014 Helsinki, Finland',
-    bio: `
-      More than 25 years ago, Charles torched a promising career in
-      biochemistry and joined the dot-com revolution. After coding
-      daily on systems big and small, he founded Frontside in 2005
-      based on the belief that good software development patterns are
-      universal. Charles currently researches testing platforms and
-      structured concurrency to power up every developer’s daily
-      coding life.
-  `,
-    image: charles,
-    imageAlt:
-      'Portrait of Charles Lowell. He has a salt and pepper beard beard and a hat.',
-  },
-  {
-    name: 'Taras Mankovski',
-    title: 'CEO',
-    location: 'Toronto, Canada',
-    bio: `
-      Taras began his journey into the realm of digital technology
-      when in early 2000s his first clients started asking him to
-      build websites. He quickly realized that rather than go it alone
-      how much more satisfying it was to bring together cross
-      disciplinary teams to work collaboratively towards common goals.
-      At Frontside, Taras creates and nourishes relationships among
-      his team, clients and partners to achieve ambitious long-term
-      objectives.
-    `,
-    image: taras,
-    imageAlt:
-      'Portrait of Taras. He has long straight hair. He has no beard in this picture but usually fashions a short stubble.',
-  },
-  {
-    name: 'Jeffrey Cherewaty',
-    title: 'COO',
-    location: 'Austin, Texas',
-    bio: `
-      After succeeding in the trenches of the startup world—leading
-      frontend teams through hyper-growth and a decade consulting for
-      global corporations—Jeffrey now calls himself a "software
-      diplomat." With a masters in Software Engineering from The
-      University of Texas at Austin, he facilitates technical
-      conversations and rolls up his sleeves to make change happen.
-    `,
-    image: jeffrey,
-    imageAlt: 'Portrait of Jeffrey. He has a short haircut and no beard.',
-  },
-  {
-    name: 'Rachelle Stewart',
-    title: 'Business Administrator',
-    location: 'Richmond, Virginia',
-    bio: `
-      After leaving the U.S. Air Force, Rachelle began her decade-long
-      career in business administration. She has successfully managed
-      two businesses of her own and earned an MBA from Capella
-      University. She now orchestrates financial and legal affairs at
-      Frontside and is at the core of its strategic planning.
-    `,
-    image: rachelle,
-    imageAlt: "Portrait of Rachelle. She's wearing a hat and has curly hair.",
-  },
-  {
-    name: 'Paul Cowan',
-    title: 'Engineering Consultant',
-    location: 'Glasgow, Scotland (UK)',
-    bio: `
-      In his more than 20 years of experience, Paul has done it all:
-      from leading the entire frontend division of a key public
-      institution to working on one of the most famous worldwide yacht
-      races. Indeed, large British banks also carry Paul's work in
-      their codebases. Not only is he an elite developer, but he also
-      shines in Competitive Boxing and MMA. At Frontside, Paul
-      specializes in building tools and automation that power up
-      developers.
-    `,
-    image: paul,
-    imageAlt: 'Portrait of Paul sporting trimmed haircut and beard.',
-  },
-  {
-    name: 'Elrick Ryan',
-    title: 'Engineering Consultant',
-    location: 'Boston, Massachusetts',
-    bio: `
-      For over a decade, Elrick has been leading product teams as a
-      creative engineer. Drawing from his background in print design
-      and marketing, he brings together impeccable user experiences
-      that deliver business value.
-    `,
-    image: elrick,
-    imageAlt: 'Portrait of Elrick. He has short hair and a short beard.',
-  },
-  {
-    name: 'Min Kim',
-    title: 'Engineering Consultant',
-    location: 'Toronto, Canada',
-    bio: `
-      Min's career as a professional cellist took a turn when a friend
-      introduced him to programming a few years ago. He now
-      specializes in creating developer tools and CI/CD pipelines, and
-      has two Google Cloud certificates under his belt.
-    `,
-    image: min,
-    imageAlt:
-      "Portrait of Min. He's wearing round glasses and has medium-long hair. He's holding a cello.",
-  },
-  {
-    name: 'Jacob Bolda',
-    title: 'Engineering Consultant',
-    location: 'Milwaukee, Wisconsin',
-    bio: `
-      After designing skylights and touring the US and Europe through
-      structural engineering, Jacob started transitioning to software
-      engineering over the past decade. At Frontside, he combines the
-      rigor he used to make buildings stand up with in-depth technical
-      knowledge to ensure your development tools and apps will run
-      smoothly.
-    `,
-    image: jacob,
-    imageAlt:
-      "Portrait of Jacob. He's sporting a trimmed haircut and a wide smile.",
-  },
-  {
-    name: 'Jorge Lainfiesta',
-    title: 'Director of Communications',
-    location: 'Barcelona, Spain',
-    bio: `
-      After working in software engineering for five years, Jorge
-      pursued his interests with a masters in digital communication at
-      UCLA and AAU. Now Jorge channels the tech enthusiasm at
-      Frontside into messages for everyone.
-    `,
-    image: jorge,
-    imageAlt: 'Portrait of Jorge. He has short hair a short stubble.',
-  },
-];
-
-export default function IndexPage({
-  data: {
-    allPeople: { edges: people },
-  },
-}) {
   return (
     <Layout title="About Frontside">
       <header className={heroWrap}>
@@ -205,8 +70,7 @@ export default function IndexPage({
           <h1 className={heroHeading}>
             We've been{' '}
             <span className={textGradientSkybluePurple}>improving</span>{' '}
-            engineering orgs{' '}
-            <span className={textSkyblue}>since 2005</span>
+            engineering orgs <span className={textSkyblue}>since 2005</span>
           </h1>
           <p className={textLg}>
             We are a purposefully small group of engineers who want to create
@@ -221,22 +85,16 @@ export default function IndexPage({
       <section className={pageWrap}>
         <blockquote className={bigQuote}>
           “Everyone at Frontside has a great attitude of{' '}
-          <strong className={textExtrabold}>can do</strong>{' '}
-          and{' '}
-          <strong className={textExtrabold}>
-            we will solve this
-          </strong>
-          . Their work ethic is strong, coupled with the desire to be a great
-          partner.”
+          <strong className={textExtrabold}>can do</strong> and{' '}
+          <strong className={textExtrabold}>we will solve this</strong>. Their
+          work ethic is strong, coupled with the desire to be a great partner.”
         </blockquote>
         <p className={bigQuoteAuthor}>
           &mdash; Brian Beale, Director of Software Engineering at Resideo
         </p>
         <ul className={columnedhighlights}>
           <li className={aboutHighlight}>
-            <h3
-              className={aboutHighlightHeading}
-            >
+            <h3 className={aboutHighlightHeading}>
               <span className={textPink}>We build</span>
               <br />
               long-lasting software
@@ -249,9 +107,7 @@ export default function IndexPage({
             <img src={decor1} className={aboutHighlightDecor} alt="" />
           </li>
           <li className={aboutHighlight}>
-            <h3
-              className={aboutHighlightHeading}
-            >
+            <h3 className={aboutHighlightHeading}>
               <span className={textSkyblue}>We plan</span>
               <br />
               for evolution
@@ -264,9 +120,7 @@ export default function IndexPage({
             <img src={decor2} className={aboutHighlightDecor} alt="" />
           </li>
           <li className={aboutHighlight}>
-            <h3
-              className={aboutHighlightHeading}
-            >
+            <h3 className={aboutHighlightHeading}>
               <span className={textPink}>We favor</span>
               <br />
               delivering consistenly
@@ -279,9 +133,7 @@ export default function IndexPage({
             <img src={decor3} className={aboutHighlightDecor} alt="" />
           </li>
           <li className={aboutHighlight}>
-            <h3
-              className={aboutHighlightHeading}
-            >
+            <h3 className={aboutHighlightHeading}>
               <span className={textSkyblue}>We care</span>
               <br />
               about developer experience
@@ -294,9 +146,7 @@ export default function IndexPage({
             <img src={decor4} className={aboutHighlightDecor} alt="" />
           </li>
           <li className={aboutHighlight}>
-            <h3
-              className={aboutHighlightHeading}
-            >
+            <h3 className={aboutHighlightHeading}>
               <span className={textPink}>We lead</span>
               <br />
               with insight
@@ -306,16 +156,10 @@ export default function IndexPage({
               codebase level. We develop deep relationships with our clients to
               help them improve their velocity across the organization.
             </p>
-            <img
-              src={decor5}
-              className={aboutHighlightDecorMarginFix}
-              alt=""
-            />
+            <img src={decor5} className={aboutHighlightDecorMarginFix} alt="" />
           </li>
           <li className={aboutHighlight}>
-            <h3
-              className={aboutHighlightHeading}
-            >
+            <h3 className={aboutHighlightHeading}>
               <span className={textSkyblue}>We work</span>
               <br />
               with OSS contributors
@@ -333,46 +177,34 @@ export default function IndexPage({
 
       <section className={pageWrap}>
         <header className={sectionHeader}>
-          <h2
-            className={heading2}
-          >
+          <h2 className={heading2}>
             <strong className={textGradientSkybluePink}>Meet the team</strong>
           </h2>
           <p className={textLg}>
             We bring together people from interdisciplinary backgrounds.
           </p>
         </header>
-        <ul
-          className={atoms({
-            listStyle: 'none',
-            padding: 'none',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          })}
-        >
-          {teamMembers.map((person, i) => (
+        <ul className={aboutTeamList}>
+          {formattedPeople.map((person, i) => (
             <li className={featureRow} key={i}>
               <div className={featureTextAlternate}>
-                <h3
-                  className={atoms({
-                    fontScale: 'xl',
-                    textTransform: 'uppercase',
-                    marginY: 'none',
-                  })}
-                >
-                  {person.name}
+                <h3 className={heading2NoMargin}>
+                  <Link to={person.slug} className={textBlueDashWhite}>
+                    {person.name}
+                  </Link>
                 </h3>
                 <strong>{person.title}</strong>
                 <p>{person.location}</p>
-                <p>{person.bio}</p>
+                <p>{person.intro}</p>
               </div>
               <div className={featureImage}>
-                <img
-                  src={person.image}
-                  alt={person.imageAlt}
-                  className={aboutTeamImg}
-                />
+                {person.img && (
+                  <img
+                    src={person.img.childImageSharp.fixed.src}
+                    alt={person.imgAlt}
+                    className={aboutTeamImg}
+                  />
+                )}
               </div>
             </li>
           ))}
@@ -400,20 +232,26 @@ export const peoplePageQuery = graphql`
         title
       }
     }
-    allPeople {
-      group(field: person___frontmatter___alumnus) {
-        edges {
-          node {
-            name
-            person {
-              frontmatter {
-                title
-                intro
-                img {
-                  childImageSharp {
-                    fixed(width: 300) {
-                      ...GatsbyImageSharpFixed
-                    }
+    allPeople(
+      filter: {
+        person: { frontmatter: { alumnus: { ne: true }, order: { gt: 0 } } }
+      }
+      sort: { order: ASC, fields: [person___frontmatter___order] }
+    ) {
+      edges {
+        node {
+          name
+          slug
+          person {
+            frontmatter {
+              title
+              intro
+              alumnus
+              location
+              img {
+                childImageSharp {
+                  fixed(width: 600) {
+                    src
                   }
                 }
               }

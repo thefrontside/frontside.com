@@ -15,6 +15,7 @@ import {
   heroHeading,
   mardownColumn,
   peopleHeroHeading,
+  textBlueDashWhite,
   textLg,
   textSm,
 } from '../styles/typography.css';
@@ -24,7 +25,17 @@ const PersonPage = ({
   data: {
     people: {
       person: {
-        frontmatter: { name, title: personTitle, img, twitter, github, bio },
+        frontmatter: {
+          name,
+          title: personTitle,
+          img,
+          imgAlt,
+          twitter,
+          github,
+          bio,
+          intro,
+          alumnus,
+        },
       },
       blogPosts,
       episodes,
@@ -35,35 +46,55 @@ const PersonPage = ({
     <Layout title={name}>
       <header className={heroWrap}>
         <div className={heroText}>
-          <h1 className={peopleHeroHeading}>{name}</h1>
-          <h2 className={heading2}>{personTitle}</h2>
-          <p className={textLg}>{bio}</p>
-          <p>
-            {twitter && (
-              <a href={`https://twitter.com/${twitter}`} className={socialLink} target="_blank" rel="noopener noreferrer">
-                Twitter
-              </a>
-            )}
-            {github && (
-              <a href={`https://github.com/${github}`} className={socialLink} target="_blank" rel="noopener noreferrer">
-                Github
-              </a>
-            )}
-          </p>
+          <h1 className={alumnus ? heroHeading : peopleHeroHeading}>{name}</h1>
+
+          <h2 className={heading2}>
+            {alumnus ? 'Frontside alumnus' : personTitle}
+          </h2>
+
+          {alumnus ? (
+            <></>
+          ) : (
+            <>
+              <p className={textLg}>{intro}</p>
+              <p>
+                {twitter && (
+                  <a
+                    href={`https://twitter.com/${twitter}`}
+                    className={socialLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Twitter
+                  </a>
+                )}
+                {github && (
+                  <a
+                    href={`https://github.com/${github}`}
+                    className={socialLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Github
+                  </a>
+                )}
+              </p>
+            </>
+          )}
         </div>
         <div className={heroImage}>
           {img && (
-            <GatsbyImage
-              image={img.childImageSharp.gatsbyImageData}
+            <img
+              src={img.childImageSharp.fixed.src}
+              alt={imgAlt}
               className={radiusMd}
-              alt=""
             />
           )}
         </div>
       </header>
 
       <div className={mardownColumn}>
-
+        <p className={textLg}>{bio}</p>
         {blogPosts && blogPosts.length ? (
           <>
             <h2 className={heading2}>Blog Posts</h2>
@@ -111,14 +142,19 @@ export const peopleQuery = graphql`
         frontmatter {
           name
           title
-          img {
-            childImageSharp {
-              gatsbyImageData(layout: FIXED)
-            }
-          }
           twitter
           github
+          intro
           bio
+          alumnus
+          img {
+            childImageSharp {
+              fixed(width: 600) {
+                src
+              }
+            }
+          }
+          imgAlt
         }
       }
       episodes {
