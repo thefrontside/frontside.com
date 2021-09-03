@@ -282,3 +282,19 @@ export const tagListItem = style({
   display: 'block',
   margin: vars.space.sm,
 });
+
+export const tagListLine = style({
+  listStyle: 'none',
+  padding: 0,
+  marginTop: vars.space.lg,
+});
+
+export const tagListLineItem = style({
+  display: 'inline-block',
+  marginRight: vars.space.xs,
+});
+
+export const paginationWrap = style({
+  marginTop: vars.space.md,
+  textAlign: 'center',
+});

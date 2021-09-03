@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { atoms } from '../../styles/atoms.css';
 import { paginationButton } from '../../styles/buttons.css';
+import { paginationWrap } from '../../styles/page.css';
 
 export default function Pagination({ prefix, page, pages }) {
   return (
-    <div className={atoms({ textAlign: 'center', marginTop: 'md' })}>
+    <div className={paginationWrap}>
       {page > 1 ? (
         <Link
           className={paginationButton}

@@ -20,8 +20,12 @@ import {
 import {
   textGradientSkybluePink,
   textGradientSkyblueGreen,
+  heroHeading,
+  textGreen,
+  textLg,
+  featureHeading,
+  heading2,
 } from '../styles/typography.css';
-import { atoms } from '../styles/atoms.css';
 
 import heroPlaceholder from '../img/temp/hero_placeholder.png';
 import featurePlaceholder from '../img/temp/feature_placeholder.png';
@@ -52,21 +56,13 @@ export default function BackstagePage({
     <Layout title="DX Consulting for Cloud native teams">
       <header className={heroWrap}>
         <div className={heroText}>
-          <h1
-            className={atoms({
-              fontScale: '3xl',
-              fontWeight: 'extrabold',
-              textTransform: 'uppercase',
-            })}
-          >
-            Own your{' '}
-            <span className={atoms({ color: 'green' })}>Backstage</span>{' '}
-            implementation{' '}
+          <h1 className={heroHeading}>
+            Own your <span className={textGreen}>Backstage</span> implementation{' '}
             <span className={textGradientSkyblueGreen}>
               without forking out
             </span>
           </h1>
-          <p className={atoms({ fontScale: 'lg' })}>
+          <p className={textLg}>
             We help Cloud native teams create cohesive developer experiences to
             make their teams thrive.
           </p>
@@ -79,15 +75,9 @@ export default function BackstagePage({
       <section className={pageWrap}>
         <div className={featureRow}>
           <div className={featureTextAlternate}>
-            <h2
-              className={atoms({
-                fontScale: 'xl',
-                marginTop: 'none',
-                marginBottom: 'lg',
-              })}
-            >
+            <h2 className={featureHeading}>
               Make Backstage represent your{' '}
-              <strong className={atoms({ color: 'green' })}>ecosystem</strong>
+              <strong className={textGreen}>ecosystem</strong>
             </h2>
             <p>
               Your combination of stack, services, and people are unique to your
@@ -104,15 +94,9 @@ export default function BackstagePage({
 
         <div className={featureRow}>
           <div className={featureText}>
-            <h2
-              className={atoms({
-                fontScale: 'xl',
-                marginTop: 'none',
-                marginBottom: 'lg',
-              })}
-            >
-              <strong className={atoms({ color: 'green' })}>De-risk</strong>{' '}
-              your Backstage adoption
+            <h2 className={featureHeading}>
+              <strong className={textGreen}>De-risk</strong> your Backstage
+              adoption
             </h2>
             <p>
               Backstage is an alpha software, and requires significant resources
@@ -128,15 +112,9 @@ export default function BackstagePage({
 
         <div className={featureRow}>
           <div className={featureTextAlternate}>
-            <h2
-              className={atoms({
-                fontScale: 'xl',
-                marginTop: 'none',
-                marginBottom: 'lg',
-              })}
-            >
-              <strong className={atoms({ color: 'green' })}>Integrate</strong>{' '}
-              Backstage in your DX
+            <h2 className={featureHeading}>
+              <strong className={textGreen}>Integrate</strong> Backstage in your
+              DX
             </h2>
             <p>
               Setting up Backstage is powerful, but it's the beginning of the
@@ -152,17 +130,11 @@ export default function BackstagePage({
 
       <section className={pageWrap}>
         <header className={sectionHeader}>
-          <h2
-            className={atoms({
-              fontScale: 'xl',
-              fontWeight: 'extrabold',
-              textTransform: 'uppercase',
-            })}
-          >
+          <h2 className={heading2}>
             Recent <strong className={textGradientSkybluePink}>DX</strong>{' '}
             articles
           </h2>
-          <p className={atoms({ fontScale: 'lg' })}>
+          <p className={textLg}>
             We like sharing the results of our experience and research to start
             discussions.
           </p>

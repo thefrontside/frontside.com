@@ -21,8 +21,12 @@ import {
 import {
   textGradientSkybluePink,
   textGradientPinkSkyblue,
+  heroHeading,
+  textLg,
+  featureHeading,
+  textSkyblue,
+  heading2,
 } from '../styles/typography.css';
-import { atoms } from '../styles/atoms.css';
 
 import heroPlaceholder from '../img/temp/hero_placeholder.png';
 import featurePlaceholder from '../img/temp/feature_placeholder.png';
@@ -53,19 +57,13 @@ export default function ConsultingPage({
     <Layout title="DX Consulting for Cloud native teams">
       <header className={heroWrap}>
         <div className={heroText}>
-          <h1
-            className={atoms({
-              fontScale: '3xl',
-              fontWeight: 'extrabold',
-              textTransform: 'uppercase',
-            })}
-          >
+          <h1 className={heroHeading}>
             <span className={textGradientPinkSkyblue}>Developer</span>
             <br className={heroBreak} />
             <span className={textGradientPinkSkyblue}>Experience: </span>
             where deliveries and retention meet
           </h1>
-          <p className={atoms({ fontScale: 'lg' })}>
+          <p className={textLg}>
             We help Cloud native teams create cohesive developer experiences to
             make their teams thrive.
           </p>
@@ -78,17 +76,9 @@ export default function ConsultingPage({
       <section className={pageWrap}>
         <div className={featureRow}>
           <div className={featureTextAlternate}>
-            <h2
-              className={atoms({
-                fontScale: 'xl',
-                marginTop: 'none',
-                marginBottom: 'lg',
-              })}
-            >
+            <h2 className={featureHeading}>
               Developers' problems are{' '}
-              <strong className={atoms({ color: 'skyblue' })}>
-                business problems
-              </strong>
+              <strong className={textSkyblue}>business problems</strong>
             </h2>
             <p>
               There's a clear path from developers complaining about how nobody
@@ -106,18 +96,10 @@ export default function ConsultingPage({
 
         <div className={featureRow}>
           <div className={featureText}>
-            <h2
-              className={atoms({
-                fontScale: 'xl',
-                marginTop: 'none',
-                marginBottom: 'lg',
-              })}
-            >
+            <h2 className={featureHeading}>
               Engineers have{' '}
-              <strong className={atoms({ color: 'skyblue' })}>
-                less patience
-              </strong>{' '}
-              for a frustrating job
+              <strong className={textSkyblue}>less patience</strong> for a
+              frustrating job
             </h2>
             <p>
               The tech industry is witnessing record salaries for engineers in
@@ -135,17 +117,9 @@ export default function ConsultingPage({
 
         <div className={featureRow}>
           <div className={featureTextAlternate}>
-            <h2
-              className={atoms({
-                fontScale: 'xl',
-                marginTop: 'none',
-                marginBottom: 'lg',
-              })}
-            >
+            <h2 className={featureHeading}>
               Sharp engineers need{' '}
-              <strong className={atoms({ color: 'skyblue' })}>
-                sharp tools
-              </strong>
+              <strong className={textSkyblue}>sharp tools</strong>
             </h2>
             <p>
               Your team is incredibly talented, but it’s often bogged down by a
@@ -164,17 +138,11 @@ export default function ConsultingPage({
 
       <section className={pageWrap}>
         <header className={sectionHeader}>
-          <h2
-            className={atoms({
-              fontScale: 'xl',
-              fontWeight: 'extrabold',
-              textTransform: 'uppercase',
-            })}
-          >
+          <h2 className={heading2}>
             Recent <strong className={textGradientSkybluePink}>DX</strong>{' '}
             articles
           </h2>
-          <p className={atoms({ fontScale: 'lg' })}>
+          <p className={textLg}>
             We like sharing the results of our experience and research to start
             discussions.
           </p>

@@ -9,11 +9,13 @@ import {
   heroWrap,
   heroText,
   heroImage,
+  tagListLine,
+  tagListLineItem,
 } from '../styles/page.css';
 import {
-  mardownColumn, textBlueDashWhite
+  heroHeading,
+  mardownColumn, textBlueDashWhite, textLg, textSm
 } from '../styles/typography.css';
-import { atoms } from '../styles/atoms.css';
 import { tagButton } from '../styles/buttons.css';
 
 const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
@@ -24,14 +26,11 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
       <header className={heroWrap}>
         <div className={heroText}>
           <h1
-            className={atoms({
-              fontScale: '3xl',
-              fontWeight: 'extrabold',
-            })}
+            className={heroHeading}
           >
             {title}
           </h1>
-          <p className={atoms({ fontScale: 'lg' })}>
+          <p className={textLg}>
             {authors.filter(Boolean).map((author, i) => (
                 <React.Fragment key={author.slug}>
                   {i === 0 ? '' : authors.length > 2 ? ', ' : ' and '}
@@ -42,19 +41,19 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
                 </React.Fragment>
               ))}{' '}
           </p>
-          <p className={atoms({ fontScale: 'sm' })}>
+          <p className={textSm}>
             {date}
           </p>
-          <ul className={atoms({ listStyle: 'none', padding: 'none', marginTop: 'lg' })}>
+          <ul className={tagListLine}>
             {tags.map((tag, i) => (
-              <li key={`tag-${tag}`} className={atoms({ display: 'inline-block', marginRight: 'xs' })}>
+              <li key={`tag-${tag}`} className={tagListLineItem}>
                 <Link to={`/tags/${kebabCase(tag)}/`} className={tagButton}>{tag}</Link>
               </li>
             ))}
           </ul>
         </div>
         <div className={heroImage}>
-          <img src={image} alt="" className={atoms({ borderRadius: 'sm' })} />
+          <img src={image} alt="" className={textSm} />
         </div>
       </header>
 
