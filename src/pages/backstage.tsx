@@ -17,6 +17,7 @@ import {
   entryColumns,
   entryColumn,
   caseStudySection,
+  consultingTopTCA,
 } from '../styles/page.css';
 import {
   textGradientSkybluePink,
@@ -29,8 +30,10 @@ import {
   textSm,
   text2Xl,
   arrowText,
+  whiteArrowText,
+  textGradientGreenSkyblue,
 } from '../styles/typography.css';
-import { actionButton } from '../styles/buttons.css';
+import { actionButton, actionButtonGreen } from '../styles/buttons.css';
 
 import BlogPreview from '../components/blog-preview';
 
@@ -73,6 +76,13 @@ export default function BackstagePage({
           <p className={textLg}>
             We help Cloud native teams create cohesive developer experiences to
             make their teams thrive.
+          </p>
+          <p className={consultingTopTCA}>
+            <Link to="/" className={actionButtonGreen}>
+              <strong className={whiteArrowText}>
+                Make Backstage work for you
+              </strong>
+            </Link>
           </p>
         </div>
         <div className={heroImage}>
@@ -149,7 +159,7 @@ export default function BackstagePage({
           </p>
           <br />
           <strong className={actionButton}>
-            <span className={arrowText}>Read more</span>
+            <span className={whiteArrowText}>Read more</span>
           </strong>
         </div>
       </section>
@@ -157,13 +167,9 @@ export default function BackstagePage({
       <section className={pageWrap}>
         <header className={sectionHeader}>
           <h2 className={heading2}>
-            Recent <strong className={textGradientSkybluePink}>DX</strong>{' '}
-            articles
+            Latest <strong className={textGradientGreenSkyblue}>Backstage</strong>{' '}
+            insights
           </h2>
-          <p className={textLg}>
-            We like sharing the results of our experience and research to start
-            discussions.
-          </p>
         </header>
 
         <div className={entryColumns}>

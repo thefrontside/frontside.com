@@ -51,7 +51,8 @@ export const navLink = style({
       left: 0,
       width: '100%',
       height: '0.105rem',
-      background: `linear-gradient(90deg, ${colorValues.skyblue}, ${colorValues.violet}, ${colorValues.pink} 95%)`
+      background: `linear-gradient(90deg, ${colorValues.skyblue}, ${colorValues.violet}, ${colorValues.pink} 95%)`,
+      borderRadius: vars.radius.md,
     }
   }
 });

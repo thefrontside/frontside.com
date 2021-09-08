@@ -4,6 +4,7 @@ import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
 import BlogPreview from '../components/blog-preview';
+import { Tabs, Tab } from '../components/tabs/tabs';
 
 import {
   pageWrap,
@@ -18,9 +19,11 @@ import {
   sectionHeader,
   entryColumns,
   entryColumn,
+  homeBottomCTA,
+  homeBottomCTAtext,
+  homeTopCTA,
 } from '../styles/page.css';
 import {
-  textGradientSkybluePink,
   textGradientPinkSkyblue,
   heroHeading,
   textLg,
@@ -29,10 +32,13 @@ import {
   heading2,
   bigQuote,
   bigQuoteAuthor,
-  textExtrabold,
-  arrowText,
+  textXl,
+  text3Xl,
+  textGradientDemiSkybluePink,
+  whiteArrowText,
 } from '../styles/typography.css';
 
+import homePlaceholder from '../img/temp/hero_placeholder.png';
 import featurePlaceholder from '../img/temp/feature_placeholder.png';
 import dxHero from '../img/q3-2021/dx-hero.png';
 import dxProblems from '../img/q3-2021/dx-problems.png';
@@ -86,13 +92,12 @@ export default function ConsultingPage({
           quality. They make sure everything we do is repeatable and scalable.”
         </blockquote>
         <p className={bigQuoteAuthor}>
-          &mdash; Brian Beale, Director of Software Engineering at Resideo <br />
+          &mdash; Brian Beale, Director of Software Engineering at Resideo{' '}
+          <br />
         </p>
-        <p className={bigQuoteAuthor}>
+        <p className={homeTopCTA}>
           <Link to="/" className={actionButton}>
-            <strong className={arrowText}>
-              Request a DX assesment
-            </strong>
+            <strong className={whiteArrowText}>Request a DX assesment</strong>
           </Link>
         </p>
         <div className={featureRow}>
@@ -158,19 +163,69 @@ export default function ConsultingPage({
       </section>
 
       <section className={pageWrap}>
-        Tabs
+        <Tabs title="Ship faster &amp; happier: ">
+          <Tab label="Team Decoupling">
+            <h3 className={textXl}>Team decoupling</h3>
+            <p>
+              Not shipping often eats away the feeling of productivity in
+              developers. But there's many circumstances that are outside of
+              your control of theirs for that to happen. For example, a backend
+              service from another team that is under development, or vendor
+              APIs down due to maintenance.
+            </p>
+            <p>
+              Frontside helps your team implement decoupling strategies with
+              simulation so they can continue working despite external
+              dependencies, and integrate effortlessly once the delays are
+              resolved.
+            </p>
+          </Tab>
+          <Tab label="Local Development">
+            <h3 className={textXl}>Local development</h3>
+            <p>
+              If you have to go to a production or staging environment to see an
+              error, your local development experience is not mature enough.
+              When developers don't have a local environment that resemble
+              production close enough, they'll miss bugs that will be hard to
+              catch later on. Cloud native teams tend to have a harder time
+              achieving this.
+            </p>
+            <p>Frontside ...</p>
+          </Tab>
+          <Tab label="Shift-left testing">
+            <h3 className={textXl}>Shift-left testing</h3>
+            <p>Automated testing harness blah blah blah blah</p>
+            <p>Frontside ...</p>
+          </Tab>
+        </Tabs>
+      </section>
+
+      <section className={pageWrap}>
+        <header className={sectionHeader}>
+          <h2 className={text3Xl}>The whole development cycle is important</h2>
+          <p className={textLg}>
+            You have to optimize every part of the development process if you
+            want to have happy developers. They want to ship, but if the process
+            is slow, convoluted, time consuming, engineers get frustrated.
+          </p>
+          <img src={homePlaceholder} alt="" />
+        </header>
+        <div className={homeBottomCTA}>
+          <p className={homeBottomCTAtext}>
+            Make your developers happier and more productive
+          </p>
+          <Link to="/" className={actionButton}>
+            <strong className={whiteArrowText}>Request a DX assesment</strong>
+          </Link>
+        </div>
       </section>
 
       <section className={pageWrap}>
         <header className={sectionHeader}>
           <h2 className={heading2}>
-            Recent <strong className={textGradientSkybluePink}>DX</strong>{' '}
-            articles
+            Latest <strong className={textGradientDemiSkybluePink}>DX</strong>{' '}
+            insights
           </h2>
-          <p className={textLg}>
-            We like sharing the results of our experience and research to start
-            discussions.
-          </p>
         </header>
 
         <div className={entryColumns}>

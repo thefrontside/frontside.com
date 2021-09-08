@@ -8,7 +8,7 @@ import {
   entryPreviewNewBadge,
 } from './blog-preview.css';
 import {
-  textGradientSkyblueVioletPink,
+  arrowText,
   textMd,
   textSmCaps,
 } from '../../styles/typography.css';
@@ -41,8 +41,8 @@ export default function BlogPreview({ post, layout = 'default' }) {
           &mdash; <span>{post.date}</span>
         </p>
         <p className={textMd}>{post.description}</p>
-        <strong className={textGradientSkyblueVioletPink}>
-          Read article &#8674;
+        <strong className={arrowText}>
+          Read article
         </strong>
       </div>
     </Link>

@@ -106,7 +106,7 @@ export const aboutTeamList = style({
 });
 
 export const featureRow = style({
-  marginBottom: vars.space.lg,
+  marginBottom: vars.space['xl'],
 
   '@media': {
     [laptopQuery]: {
@@ -114,7 +114,7 @@ export const featureRow = style({
       flexFlow: 'row nowrap',
       paddingLeft: vars.space.lg,
       paddingRight: vars.space.lg,
-      alignItems: 'stretch',
+      alignItems: 'center',
       justifyContent: 'center'
     },
   }
@@ -274,6 +274,7 @@ export const radiusMd = style({
 });
 
 export const tagList = style({
+  padding: 0,
   listStyle: 'none',
   display: 'flex',
   flexFlow: 'row wrap',
@@ -313,4 +314,23 @@ export const caseStudySection = style({
       padding: `${vars.space.lg} ${vars.space['3xl']}`
     }
   }
-})
+});
+
+export const homeTopCTA = style({
+  marginBottom: vars.space['2xl'],
+  textAlign: 'center',
+});
+
+export const homeBottomCTA = style({
+  marginTop: vars.space.lg,
+  marginBottom: vars.space.lg,
+  textAlign: 'center',
+});
+
+export const homeBottomCTAtext = style([textLg, {
+  marginBottom: vars.space.md,
+}]);
+
+export const consultingTopTCA = style({
+  marginTop: vars.space.md,
+});

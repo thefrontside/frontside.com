@@ -2,7 +2,8 @@ import { globalStyle, style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
 import vars, { darkThemeQuery, desktopQuery, laptopQuery } from './frontside-theme.css';
 
-import arrow from '../img/q3-2021/arrow.svg';
+import arrowWhite from '../img/q3-2021/arrow-white.svg';
+import arrowBlue from '../img/q3-2021/arrow-blue.svg';
 
 export const textXs = style({
   fontSize: vars.fontSize['xs'],
@@ -94,24 +95,43 @@ export const textBlueDashWhite = style({
   }
 });
 
-export const arrowText = style({
+const baseArrow = style({
   'selectors': {
     '&:before': {
       content: '""',
       display: 'inline-block',
       width: '0.8em',
       height: '0.8rem',
-      background: `url(${arrow}) no-repeat`,
+      background: `url(${arrowWhite}) no-repeat`,
       backgroundSize: 'contain',
       marginRight: '0.5em',
       marginBottom: '-0.05em',
+    }   
+  }
+})
+
+export const arrowText = style([baseArrow, {
+  'selectors': {
+    '&:before': {
+      backgroundImage: `url(${arrowBlue})`,
+    }
+  },
+  '@media': {
+    [darkThemeQuery]: {
+      'selectors': {
+        '&:before': {
+          backgroundImage: `url(${arrowWhite})`
+        }
+      }
     }
   }
-});
+}]);
+
+export const whiteArrowText = style([baseArrow]);
 
 export const featureHeading = style([textXl, {
   marginTop: 0,
-  marginBottom: vars.space.lg,
+  marginBottom: '1rem',
 }]);
 
 export const homeBackstageHeading = style([text2Xl, textExtrabold]);
@@ -384,7 +404,7 @@ export const bigQuote = style([text3Xl, {
 }]);
 
 export const bigQuoteAuthor = style([textLg, {
-  marginBottom: vars.space['2xl'],
+  marginBottom: vars.space['lg'],
   textAlign: 'center',
 }]);
 

@@ -5,7 +5,8 @@ import { textBlueDashWhite, textLg, textSmCaps, textXl } from '../../styles/typo
 const base = style([textBlueDashWhite, {
   display: 'flex',
   flexFlow: 'column nowrap',
-}])
+  marginBottom: vars.space.md,
+}]);
 
 const sided = style([base, {
   '@media': {
