@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'gatsby';
 import {
   navLink,
@@ -15,9 +15,6 @@ const NavItems = [
 ];
 
 export const Navbar = () => {
-  const [hamburgerActive, setHamburgerMenu] = useState(false);
-  const toggleHamburgerMenu = () => setHamburgerMenu(!hamburgerActive);
-
   return (
     <nav className={navWrap}>
         <Link to="/" className={logoMargin}>
@@ -35,71 +32,6 @@ export const Navbar = () => {
         Contact
       </a>
     </nav>
-    // <div role="banner" className={atoms({ position: 'relative' })}>
-    //   <div
-    //     className={atoms({
-    //       display: 'flex',
-    //     })}
-    //   >
-    //     <a href="/" className={atoms({ padding: 'lg' })}>
-    //       <Logo />
-    //     </a>
-    //     <nav
-    //       role="navigation"
-    //       className={atoms({
-    //         marginLeft: 'auto',
-    //         marginRight: 'auto',
-    //         display: { mobile: 'none', laptop: 'flex' },
-    //       })}
-    //     >
-    //       <ul className={NavHorizontalList}>
-    //         {NavItems.map((item) => (
-    //           <NavItem key={item.url} {...item} />
-    //         ))}
-    //       </ul>
-    //     </nav>
-    //     <a
-    //       href="/contact"
-    //       className={atoms({
-    //         marginLeft: 'auto',
-    //         marginY: 'auto',
-    //       })}
-    //     >
-    //       <button className={contactButton}>Contact</button>
-    //     </a>
-
-    //     <button
-    //       type="button"
-    //       className={atoms({
-    //         borderWidth: 'none',
-    //         marginLeft: 'lg',
-    //         padding: 'lg',
-    //         display: { mobile: 'block', laptop: 'none' },
-    //         transform: hamburgerActive ? 'r45' : 'r315',
-    //         transition: 'lg',
-    //       })}
-    //       onClick={toggleHamburgerMenu}
-    //     >
-    //       <PolygonMenu />
-    //     </button>
-    //   </div>
-
-    //   <div
-    //     className={atoms({
-    //       display: hamburgerActive
-    //         ? { mobile: 'block', laptop: 'none' }
-    //         : 'none',
-    //     })}
-    //   >
-    //     <nav role="navigation">
-    //       <ul className={NavVerticalList}>
-    //         {NavItems.map((item) => (
-    //           <NavItem key={item.url} {...item} />
-    //         ))}
-    //       </ul>
-    //     </nav>
-    //   </div>
-    // </div>
   );
 };
 
@@ -136,16 +68,3 @@ const Logo = () => (
     </g>
   </svg>
 );
-
-// const PolygonMenu = () => (
-//   <svg
-//     xmlns="http://www.w3.org/2000/svg"
-//     width="33"
-//     height="17.5"
-//     viewBox="0 0 32.63 17"
-//     className={MenuSVGFill}
-//   >
-//     <path d="M7.4,0,0,4.27v8.46L7.4,17l7.34-4.27V4.27ZM7.34,2.82l5,2.89v5.64L7.4,14.18,2.45,11.35V5.71L4.2,4.64" />
-//     <path d="M25.29,0,17.88,4.27v8.46L25.29,17l7.34-4.27V4.27Zm-.07,2.82,5,2.89v5.64l-4.89,2.83-5-2.83V5.71l1.76-1.07" />
-//   </svg>
-// );
