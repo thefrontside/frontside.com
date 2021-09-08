@@ -30,6 +30,12 @@ to = "https://effection.netlify.app/effection/:splat"
 
 [[redirects]]
 force = true
+from = "/interactors/*"
+status = 200
+to = "https://interactors.netlify.app/interactors/:splat"
+
+[[redirects]]
+force = true
 from = "https://frontside.io/*"
 status = 301
 to = "https://frontside.com/:splat"
