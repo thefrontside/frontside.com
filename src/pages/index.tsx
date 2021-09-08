@@ -41,6 +41,8 @@ import {
 import heroPlaceholder from '../img/temp/hero_placeholder.png';
 import featurePlaceholder from '../img/temp/feature_placeholder.png';
 import BlogPreview from '../components/blog-preview';
+import homeHero from '../img/q3-2021/home-hero.png';
+import homeInject from '../img/q3-2021/home-inject.png';
 
 export default function IndexPage({
   data: {
@@ -84,7 +86,7 @@ export default function IndexPage({
           </p>
         </div>
         <div className={heroImage}>
-          <img src={heroPlaceholder} alt="" />
+          <img src={homeHero} alt="" />
         </div>
       </header>
 
@@ -149,7 +151,7 @@ export default function IndexPage({
             </p>
           </div>
           <div className={featureImage}>
-            <img src={featurePlaceholder} alt="" />
+            <img src={homeInject} alt="" />
           </div>
         </div>
       </section>

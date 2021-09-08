@@ -1,6 +1,6 @@
 import { style, styleVariants } from '@vanilla-extract/css';
 import vars, { darkThemeQuery, desktopQuery, laptopQuery } from '../../styles/frontside-theme.css';
-import { textBlueDashWhite, textSmCaps, textXl } from '../../styles/typography.css';
+import { textBlueDashWhite, textLg, textSmCaps, textXl } from '../../styles/typography.css';
 
 const base = style([textBlueDashWhite, {
   display: 'flex',
@@ -56,13 +56,21 @@ export const entryPreviewImage = styleVariants({
   }
 });
 
-export const entryPreviewText = style({
-
+const noMarginTop = style({
+  marginTop: 0,
 });
 
-export const entryPreviewHeading = style([textXl, {
+const headingLarger = style([textXl, {
   marginTop: 0,
 }]);
+
+export const entryPreviewHeading = styleVariants({
+  default: [textLg, noMarginTop],
+
+  sided: [headingLarger],
+
+  featured: [headingLarger]
+});
 
 export const entryPreviewNewBadge = style([{
   display: 'inline-block',

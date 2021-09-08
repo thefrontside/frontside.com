@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
+import BlogPreview from '../components/blog-preview';
 
 import {
   pageWrap,
@@ -26,11 +27,17 @@ import {
   featureHeading,
   textSkyblue,
   heading2,
+  bigQuote,
+  bigQuoteAuthor,
+  textExtrabold,
+  arrowText,
 } from '../styles/typography.css';
 
-import heroPlaceholder from '../img/temp/hero_placeholder.png';
 import featurePlaceholder from '../img/temp/feature_placeholder.png';
-import BlogPreview from '../components/blog-preview';
+import dxHero from '../img/q3-2021/dx-hero.png';
+import dxProblems from '../img/q3-2021/dx-problems.png';
+import dxFrustration from '../img/q3-2021/dx-frustration.png';
+import { actionButton } from '../styles/buttons.css';
 
 export default function ConsultingPage({
   data: {
@@ -69,11 +76,25 @@ export default function ConsultingPage({
           </p>
         </div>
         <div className={heroImage}>
-          <img src={heroPlaceholder} alt="" />
+          <img src={dxHero} alt="" />
         </div>
       </header>
 
       <section className={pageWrap}>
+        <blockquote className={bigQuote}>
+          “Frontside has an unwavering commitment to Developer Experience and
+          quality. They make sure everything we do is repeatable and scalable.”
+        </blockquote>
+        <p className={bigQuoteAuthor}>
+          &mdash; Brian Beale, Director of Software Engineering at Resideo <br />
+        </p>
+        <p className={bigQuoteAuthor}>
+          <Link to="/" className={actionButton}>
+            <strong className={arrowText}>
+              Request a DX assesment
+            </strong>
+          </Link>
+        </p>
         <div className={featureRow}>
           <div className={featureTextAlternate}>
             <h2 className={featureHeading}>
@@ -90,7 +111,7 @@ export default function ConsultingPage({
             </p>
           </div>
           <div className={featureImage}>
-            <img src={featurePlaceholder} alt="" />
+            <img src={dxProblems} alt="" />
           </div>
         </div>
 
@@ -111,7 +132,7 @@ export default function ConsultingPage({
             </p>
           </div>
           <div className={featureImage}>
-            <img src={featurePlaceholder} alt="" />
+            <img src={dxFrustration} alt="" />
           </div>
         </div>
 
@@ -134,6 +155,10 @@ export default function ConsultingPage({
             <img src={featurePlaceholder} alt="" />
           </div>
         </div>
+      </section>
+
+      <section className={pageWrap}>
+        Tabs
       </section>
 
       <section className={pageWrap}>

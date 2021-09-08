@@ -16,6 +16,7 @@ import {
   sectionHeader,
   entryColumns,
   entryColumn,
+  caseStudySection,
 } from '../styles/page.css';
 import {
   textGradientSkybluePink,
@@ -25,11 +26,18 @@ import {
   textLg,
   featureHeading,
   heading2,
+  textSm,
+  text2Xl,
+  arrowText,
 } from '../styles/typography.css';
+import { actionButton } from '../styles/buttons.css';
 
-import heroPlaceholder from '../img/temp/hero_placeholder.png';
-import featurePlaceholder from '../img/temp/feature_placeholder.png';
 import BlogPreview from '../components/blog-preview';
+
+import backstageHero from '../img/q3-2021/backstage-hero.png';
+import backstageDomain from '../img/q3-2021/backstage-map-domain.png';
+import backstageDerisk from '../img/q3-2021/backstage-derisk.png';
+import backstageDx from '../img/q3-2021/backstage-integrate-dx.png';
 
 export default function BackstagePage({
   data: {
@@ -53,7 +61,7 @@ export default function BackstagePage({
   }));
 
   return (
-    <Layout title="DX Consulting for Cloud native teams">
+    <Layout title="Adopt Backstage your way with Frontside">
       <header className={heroWrap}>
         <div className={heroText}>
           <h1 className={heroHeading}>
@@ -68,7 +76,7 @@ export default function BackstagePage({
           </p>
         </div>
         <div className={heroImage}>
-          <img src={heroPlaceholder} alt="" />
+          <img src={backstageHero} alt="" />
         </div>
       </header>
 
@@ -88,7 +96,7 @@ export default function BackstagePage({
             </p>
           </div>
           <div className={featureImage}>
-            <img src={featurePlaceholder} alt="" />
+            <img src={backstageDomain} alt="" />
           </div>
         </div>
 
@@ -106,7 +114,7 @@ export default function BackstagePage({
             </p>
           </div>
           <div className={featureImage}>
-            <img src={featurePlaceholder} alt="" />
+            <img src={backstageDerisk} alt="" />
           </div>
         </div>
 
@@ -123,8 +131,26 @@ export default function BackstagePage({
             </p>
           </div>
           <div className={featureImage}>
-            <img src={featurePlaceholder} alt="" />
+            <img src={backstageDx} alt="" />
           </div>
+        </div>
+      </section>
+
+      <section className={pageWrap}>
+        <div className={caseStudySection}>
+          <span className={textSm}>Case study</span>
+          <h2 className={text2Xl}>
+            Making a dozen documentation system work with Backstage
+          </h2>
+          <p className={textLg}>
+            Frontside helped Resideo adopt Backstage's Catalog, Scaffolding, and
+            specially, TechDocs to alliviate a critical issue with
+            documentation.
+          </p>
+          <br />
+          <strong className={actionButton}>
+            <span className={arrowText}>Read more</span>
+          </strong>
         </div>
       </section>
 

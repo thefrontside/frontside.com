@@ -3,6 +3,8 @@ import { calc } from '@vanilla-extract/css-utils';
 import vars, { laptopQuery, desktopQuery, darkThemeQuery } from './frontside-theme.css';
 import clientsLogo from '../img/q3-2021/client-logos.svg';
 import clientsLogoWhite from '../img/q3-2021/client-logos-white.svg';
+import backgroundBubbles from '../img/q3-2021/backgruond-blue-bubbles.png';
+
 import { textLg, textUppercase, textXl } from './typography.css';
 
 export const pageWrap = style({
@@ -298,3 +300,17 @@ export const paginationWrap = style({
   marginTop: vars.space.md,
   textAlign: 'center',
 });
+
+export const caseStudySection = style({
+  background: `${vars.colors.blue} url(${backgroundBubbles}) no-repeat`,
+  backgroundPosition: 'center center',
+  color: vars.colors.white,
+  padding: vars.space.md,
+  borderRadius: vars.radius.md,
+  textAlign: 'center',
+  '@media': {
+    [laptopQuery]: {
+      padding: `${vars.space.lg} ${vars.space['3xl']}`
+    }
+  }
+})

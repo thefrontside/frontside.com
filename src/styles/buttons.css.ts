@@ -48,3 +48,12 @@ export const socialLink = style([textSmCaps, {
   marginTop: vars.space.md,
   marginBottom: vars.space.md,
 }]);
+
+export const actionButton = style({
+  backgroundImage: `linear-gradient(135deg, ${vars.colors.pink}, ${vars.colors.violet} 46%, ${vars.colors.violet} 54%, ${vars.colors.skyblue})`,
+  color: vars.colors.white,
+  padding: vars.space['xs'],
+  paddingRight: vars.space['sm'],
+  paddingLeft: vars.space['sm'],
+  borderRadius: vars.radius.md,
+});

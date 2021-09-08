@@ -2,6 +2,8 @@ import { globalStyle, style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
 import vars, { darkThemeQuery, desktopQuery, laptopQuery } from './frontside-theme.css';
 
+import arrow from '../img/q3-2021/arrow.svg';
+
 export const textXs = style({
   fontSize: vars.fontSize['xs'],
   lineHeight: vars.lineHeights['xs'],
@@ -88,6 +90,21 @@ export const textBlueDashWhite = style({
   '@media': {
     [darkThemeQuery]: {
       color: vars.colors.white,
+    }
+  }
+});
+
+export const arrowText = style({
+  'selectors': {
+    '&:before': {
+      content: '""',
+      display: 'inline-block',
+      width: '0.8em',
+      height: '0.8rem',
+      background: `url(${arrow}) no-repeat`,
+      backgroundSize: 'contain',
+      marginRight: '0.5em',
+      marginBottom: '-0.05em',
     }
   }
 });

@@ -69,8 +69,6 @@
 /blog/6
 /code-of-conduct/
 /consulting/
-/contact-retro/
-/contact-retro/thanks/
 /people/alex-ford/
 /people/brandon-hays/
 /people/charles-lowell/
@@ -78,6 +76,7 @@
 /people/david-keathley/
 /people/elrick-ryan/
 /people/ginger-whalen/
+/people/jacob-bolda/
 /people/jeffrey-cherewaty/
 /people/joe-lasala/
 /people/jonas-niklas/
@@ -86,6 +85,8 @@
 /people/lydia-guarino/
 /people/michele-mikell/
 /people/min-kim/
+/people/paul-cowan/
+/people/rachelle-stewart/
 /people/robbie-pitts/
 /people/robert-deluca/
 /people/sam-keathley/
@@ -229,7 +230,6 @@
 /podcast/type-systems-with-reason-ml-london-organizer-marcel-cutts-and-shane-wilson/
 /podcast/whats-in-a-ui-platform/
 /privacy-policy/
-/resources/
 /tags/
 /tags/accessibility/
 /tags/backstage/
@@ -320,10 +320,6 @@
 /tags/web-accessibility/
 /tags/web-standards/
 /tags/x-select/
-/work/
-/work/altschool/
-/work/ingaged/
-/work/kasita/
 /contact-thanks
 /contact
 /tools

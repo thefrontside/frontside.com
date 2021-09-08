@@ -6,7 +6,6 @@ import {
   entryPreviewHeading,
   entryPreviewImage,
   entryPreviewNewBadge,
-  entryPreviewText,
 } from './blog-preview.css';
 import {
   textGradientSkyblueVioletPink,
@@ -25,22 +24,17 @@ export default function BlogPreview({ post, layout = 'default' }) {
       ) : (
         ''
       )}
-      <div className={entryPreviewText}>
+      <div>
         {layout === 'featured' ? (
           <span className={entryPreviewNewBadge}>New</span>
         ) : (
           <></>
         )}
-        <h3 className={entryPreviewHeading}>{post.title}</h3>
+        <h3 className={entryPreviewHeading[layout]}>{post.title}</h3>
         <p className={textSmCaps}>
           {post.authors.filter(Boolean).map((author, i) => (
             <React.Fragment key={author.slug}>
               {i === 0 ? '' : post.authors.length > 2 ? ', ' : ' and '}
-              {/* Author links will lead to team member page, which is currently pending. */}
-              {/* <Link key={author.slug} to={author.slug}>
-                        <Text>{author.name}</Text>
-                      </Link>
-                  */}
               {author.name}
             </React.Fragment>
           ))}{' '}
