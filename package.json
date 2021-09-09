@@ -11,7 +11,6 @@
     "@vanilla-extract/css-utils": "^0.1.1",
     "@vanilla-extract/webpack-plugin": "^2.0.0",
     "dateformat": "4.5.1",
-    "dessert-box": "^0.3.1",
     "gatsby": "^3.10.1",
     "gatsby-plugin-image": "^1.10.1",
     "gatsby-plugin-mailchimp": "^5.2.2",

@@ -207,16 +207,12 @@ exports.onPostBuild = async ({ graphql }) => {
   await fs.writeFile('./sitemap.txt', urlList);
 };
 
-exports.onCreateBabelConfig = ({ actions }, pluginOptions) => {
-  actions.setBabelPlugin({
-    name: require.resolve(`@vanilla-extract/babel-plugin`),
-  });
-};
-
 exports.onCreateWebpackConfig = ({ actions, stage }) => {
   if (stage === "develop" || stage === "build-javascript") {
     actions.setWebpackConfig({
-      plugins: [new VanillaExtractPlugin()],
+      plugins: [new VanillaExtractPlugin({
+        identifiers: (stage === 'develop') ? 'debug' : 'short',
+      })],
     });
   }
 };
