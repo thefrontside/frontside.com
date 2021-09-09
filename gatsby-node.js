@@ -4,7 +4,7 @@ const { createFilePath } = require('gatsby-source-filesystem');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 const fs = require('fs/promises');
 
-const { VanillaExtractPlugin } = require("@vanilla-extract/webpack-plugin");
+const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
 
 const POSTS_PER_PAGE = 8;
 const getBlogUrl = (page) => `/blog${page > 1 ? `/${page}` : ''}`;
@@ -208,11 +208,11 @@ exports.onPostBuild = async ({ graphql }) => {
 };
 
 exports.onCreateWebpackConfig = ({ actions, stage }) => {
-  if (stage === "develop" || stage === "build-javascript") {
-    actions.setWebpackConfig({
-      plugins: [new VanillaExtractPlugin({
-        identifiers: (stage === 'develop') ? 'debug' : 'short',
-      })],
-    });
-  }
+  actions.setWebpackConfig({
+    plugins: [
+      new VanillaExtractPlugin({
+        identifiers: stage === 'develop' ? 'debug' : 'short',
+      }),
+    ],
+  });
 };
