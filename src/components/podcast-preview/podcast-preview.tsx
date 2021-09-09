@@ -6,10 +6,9 @@ import {
   entryPreviewHeading,
   entryPreviewImage,
   entryPreviewNewBadge,
-  entryPreviewText,
 } from '../blog-preview/blog-preview.css';
 import {
-  textGradientSkyblueVioletPink,
+  arrowText,
   textMd,
   textSmCaps,
 } from '../../styles/typography.css';
@@ -25,23 +24,18 @@ export default function PodcastPreview({ episode, layout = 'sided' }) {
       ) : (
         ''
       )}
-      <div className={entryPreviewText}>
+      <div>
         {layout === 'featured' ? (
           <span className={entryPreviewNewBadge}>New</span>
         ) : (
           <></>
         )}
-        <h3 className={entryPreviewHeading}>{episode.title}</h3>
+        <h3 className={entryPreviewHeading['layout']}>{episode.title}</h3>
         <p className={textSmCaps}>
           Hosted by{' '}
           {episode.authors.filter(Boolean).map((author, i) => (
             <React.Fragment key={author.slug}>
               {i === 0 ? '' : episode.authors.length > 2 ? ', ' : ' and '}
-              {/* Author links will lead to team member page, which is currently pending. */}
-              {/* <Link key={author.slug} to={author.slug}>
-                        <Text>{author.name}</Text>
-                      </Link>
-                  */}
               {author.name}
             </React.Fragment>
           ))}{' '}
@@ -50,8 +44,8 @@ export default function PodcastPreview({ episode, layout = 'sided' }) {
           className={textMd}
           dangerouslySetInnerHTML={{ __html: episode.description }}
         />
-        <strong className={textGradientSkyblueVioletPink}>
-          Go to episode &#8674;
+        <strong className={arrowText}>
+          Listen to episode
         </strong>
       </div>
     </Link>
