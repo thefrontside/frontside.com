@@ -13,7 +13,7 @@ import {
   tagListLineItem,
 } from '../styles/page.css';
 import {
-  heroHeading,
+  heading3Xl,
   mardownColumn, textBlueDashWhite, textLg, textSm
 } from '../styles/typography.css';
 import { tagButton } from '../styles/buttons.css';
@@ -26,7 +26,7 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
       <header className={heroWrap}>
         <div className={heroText}>
           <h1
-            className={heroHeading}
+            className={heading3Xl}
           >
             {title}
           </h1>

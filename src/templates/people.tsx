@@ -11,8 +11,8 @@ import {
   radiusMd,
 } from '../styles/page.css';
 import {
-  heading2,
-  heroHeading,
+  headingXl,
+  heading3Xl,
   mardownColumn,
   peopleHeroHeading,
   textBlueDashWhite,
@@ -46,9 +46,9 @@ const PersonPage = ({
     <Layout title={name}>
       <header className={heroWrap}>
         <div className={heroText}>
-          <h1 className={alumnus ? heroHeading : peopleHeroHeading}>{name}</h1>
+          <h1 className={alumnus ? heading3Xl : peopleHeroHeading}>{name}</h1>
 
-          <h2 className={heading2}>
+          <h2 className={headingXl}>
             {alumnus ? 'Frontside alumnus' : personTitle}
           </h2>
 
@@ -97,7 +97,7 @@ const PersonPage = ({
         <p className={textLg}>{bio}</p>
         {blogPosts && blogPosts.length ? (
           <>
-            <h2 className={heading2}>Blog Posts</h2>
+            <h2 className={headingXl}>Blog Posts</h2>
             <ul className="list-style-none">
               {blogPosts.map((post, i) => (
                 <li key={i}>
@@ -109,7 +109,7 @@ const PersonPage = ({
         ) : null}
         {episodes && episodes.length ? (
           <>
-            <h2 className={heading2}>Podcast Episodes</h2>
+            <h2 className={headingXl}>Podcast Episodes</h2>
             <ul className="list-style-none">
               {episodes.map((episode, i) => (
                 <li key={i}>

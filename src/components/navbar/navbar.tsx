@@ -5,10 +5,12 @@ import {
   contactButton,
   navWrap,
   logoMargin,
-  logoSVGFill
+  logoSVGFill,
+  linksGroup,
 } from './navbar.css';
 
 const NavItems = [
+  { url: '/', text: 'Home' },
   { url: '/consulting', text: 'DX Consulting' },
   { url: '/backstage', text: 'Backstage' },
   { url: '/blog', text: 'Blog' },
@@ -17,18 +19,17 @@ const NavItems = [
 export const Navbar = () => {
   return (
     <nav className={navWrap}>
-        <Link to="/" className={logoMargin}>
-          <Logo />
-        </Link>
+      <Link to="/" className={logoMargin}>
+        <Logo />
+      </Link>
+      <div className={linksGroup}>
         {NavItems.map((link, i) => (
           <Link to={link.url} key={i} className={navLink}>
             {link.text}
           </Link>
         ))}
-      <a
-        href="/contact"
-        className={contactButton}
-      >
+      </div>
+      <a href="/contact" className={contactButton}>
         Contact
       </a>
     </nav>

@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
 import { pageWrap, sectionHeader, tagList, tagListItem } from '../styles/page.css';
 import {
-  heading2,
+  headingXl,
   textGradientDemiSkybluePink,
   textGradientPinkPurple,
   textLg,
@@ -18,7 +18,7 @@ const TagsPage = ({
 }) => (
   <Layout title="Tags">
     <header className={sectionHeader}>
-      <h2 className={heading2}>
+      <h2 className={headingXl}>
         <span className={textGradientDemiSkybluePink}>Tags</span>
       </h2>
     </header>

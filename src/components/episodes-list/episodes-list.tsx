@@ -7,7 +7,7 @@ import {
   entriesListEntry,
 } from '../../styles/page.css';
 import {
-  heading2,
+  headingXl,
   textGradientPurpleSkyblue,
 } from '../../styles/typography.css';
 import PodcastPreview from '../podcast-preview/podcast-preview';
@@ -35,7 +35,7 @@ export default function EpisodesList({ heading, episodes }) {
   return (
     <>
       <header className={sectionHeader}>
-        <h2 className={heading2}>
+        <h2 className={headingXl}>
           <span className={textGradientPurpleSkyblue}>Podcast</span> episodes
         </h2>
       </header>

@@ -6,6 +6,8 @@ const base = style([textBlueDashWhite, {
   display: 'flex',
   flexFlow: 'column nowrap',
   marginBottom: vars.space.md,
+  marginLeft: 'auto',
+  marginRight: 'auto',
 }]);
 
 const sided = style([base, {

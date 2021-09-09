@@ -61,6 +61,12 @@ export const heroBreak = style({
 
 export const heroImage = style({
   flexShrink: 1,
+  marginTop: vars.space.md,
+  '@media': {
+    [laptopQuery]: {
+      marginTop: 0,
+    }
+  }
 })
 
 export const featureText = style({
@@ -330,6 +336,40 @@ export const homeBottomCTA = style({
 export const homeBottomCTAtext = style([textLg, {
   marginBottom: vars.space.md,
 }]);
+
+export const homeGraphRow = style({
+  '@media': {
+    [laptopQuery]: {
+      display: 'flex',
+      flexFlow: 'row nowrap',
+      alignItems: 'center',
+      marginTop: vars.space['2xl'],
+      marginBottom: vars.space['2xl'],
+    }
+  }
+});
+
+export const homeGraphText = style({
+  textAlign: 'center',
+
+  '@media': {
+    [laptopQuery]: {
+      paddingLeft: vars.space.sm,
+      paddingRight: vars.space.sm,
+    }
+  }
+})
+
+export const homeGraphImage = style({
+  display: 'none',
+  '@media': {
+    [laptopQuery]: {
+      display: 'block',
+      width: '60%',
+      flexShrink: 0,
+    }
+  }
+});
 
 export const consultingTopTCA = style({
   marginTop: vars.space.md,

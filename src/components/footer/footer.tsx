@@ -18,9 +18,10 @@ const NavItem = ({ itemUrl, itemText }) => (
 );
 
 const NavItems = [
-  { itemUrl: '/', itemText: 'Homepage' },
+  { itemUrl: '/', itemText: 'Home' },
   { itemUrl: '/about', itemText: 'About' },
   { itemUrl: '/consulting', itemText: 'Consulting' },
+  { itemUrl: '/backstage', itemText: 'Backstage' },
   { itemUrl: '/blog', itemText: 'Blog' },
   { itemUrl: '/contact', itemText: 'Contact' },
 ];

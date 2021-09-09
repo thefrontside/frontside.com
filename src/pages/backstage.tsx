@@ -22,11 +22,11 @@ import {
 import {
   textGradientSkybluePink,
   textGradientSkyblueGreen,
-  heroHeading,
+  heading3Xl,
   textGreen,
   textLg,
   featureHeading,
-  heading2,
+  headingXl,
   textSm,
   text2Xl,
   arrowText,
@@ -67,7 +67,7 @@ export default function BackstagePage({
     <Layout title="Adopt Backstage your way with Frontside">
       <header className={heroWrap}>
         <div className={heroText}>
-          <h1 className={heroHeading}>
+          <h1 className={heading3Xl}>
             Own your <span className={textGreen}>Backstage</span> implementation{' '}
             <span className={textGradientSkyblueGreen}>
               without forking out
@@ -166,7 +166,7 @@ export default function BackstagePage({
 
       <section className={pageWrap}>
         <header className={sectionHeader}>
-          <h2 className={heading2}>
+          <h2 className={headingXl}>
             Latest <strong className={textGradientGreenSkyblue}>Backstage</strong>{' '}
             insights
           </h2>
@@ -196,7 +196,7 @@ export const backstagePageQuery = graphql`
   query BackstageQuery {
     allBlogPost(
       sort: { order: DESC, fields: [markdown___frontmatter___date] }
-      filter: { markdown: { frontmatter: { tags: { in: "backstage" } } } }
+      filter: { markdown: { frontmatter: { tags: { in: ["backstage"] } } } }
       limit: 3
     ) {
       edges {

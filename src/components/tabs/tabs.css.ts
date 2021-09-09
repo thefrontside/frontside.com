@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css';
 import { tagList } from '../../styles/page.css';
 import vars, { darkThemeQuery, laptopQuery } from '../../styles/frontside-theme.css';
-import { heading2, textMd } from '../../styles/typography.css';
+import { headingXl, textMd } from '../../styles/typography.css';
 
 export const tabsListNav = style({
   '@media': {
@@ -60,7 +60,7 @@ export const tabPane = style({
   }
 });
 
-export const tabsTitle = style([heading2, {
+export const tabsTitle = style([headingXl, {
   textAlign: 'center',
   '@media': {
     [laptopQuery]: {

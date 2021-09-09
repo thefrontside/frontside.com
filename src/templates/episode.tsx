@@ -11,7 +11,7 @@ import {
   radiusMd,
 } from '../styles/page.css';
 import {
-  heroHeading,
+  heading3Xl,
   mardownColumn,
   textLg,
   textSm
@@ -43,7 +43,7 @@ export default function EpisodeRoute({
       <header className={heroWrap}>
         <div className={heroText}>
           <h1
-            className={heroHeading}
+            className={heading3Xl}
           >
             {title}
           </h1>

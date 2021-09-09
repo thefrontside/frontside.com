@@ -23,19 +23,24 @@ import {
   highlightHeading,
   entryColumn,
   entryColumns,
+  homeGraphRow,
+  homeGraphText,
+  homeGraphImage,
 } from '../styles/page.css';
 import {
   textGradientSkybluePink,
   textGradientSkybluePurple,
   textGradientDemiSkybluePink,
   textGradientPurplePink,
-  heroHeading,
+  heading3Xl,
   textLg,
   textSkyblue,
   textGreen,
   featureHeading,
   homeBackstageHeading,
-  heading2,
+  headingXl,
+  whiteArrowText,
+  heading2Xl,
 } from '../styles/typography.css';
 
 import heroPlaceholder from '../img/temp/hero_placeholder.png';
@@ -43,6 +48,8 @@ import featurePlaceholder from '../img/temp/feature_placeholder.png';
 import BlogPreview from '../components/blog-preview';
 import homeHero from '../img/q3-2021/home-hero.png';
 import homeInject from '../img/q3-2021/home-inject.png';
+import HomeGraph from '../components/home-graph';
+import { actionButton } from '../styles/buttons.css';
 
 export default function IndexPage({
   data: {
@@ -73,7 +80,7 @@ export default function IndexPage({
     <Layout title="Frontside Software &mdash; DX and Backstage consulting">
       <header className={heroWrap}>
         <div className={heroText}>
-          <h1 className={heroHeading}>
+          <h1 className={heading3Xl}>
             <span className={textGradientSkybluePurple}>Empower</span> your
             developers — <br className={heroBreak} /> from{' '}
             <strong className={textGradientDemiSkybluePink}>commit to</strong>{' '}
@@ -154,6 +161,21 @@ export default function IndexPage({
             <img src={homeInject} alt="" />
           </div>
         </div>
+        <div className={homeGraphRow}>
+          <div className={homeGraphText}>
+            <h2 className={heading2Xl}>
+              We help developers thrive in complexity
+            </h2>
+            <Link to="/consulting" className={actionButton}>
+              <strong className={whiteArrowText}>
+                Learn how we approach DX
+              </strong>
+            </Link>
+          </div>
+          <div className={homeGraphImage}>
+            <HomeGraph />
+          </div>
+        </div>
       </section>
 
       <section className={pageWrap}>
@@ -179,9 +201,7 @@ export default function IndexPage({
             <img src={heroPlaceholder} alt="" className={highlightImage} />
           </div>
           <div className={highlight}>
-            <h3 className={highlightHeading}>
-              Shift cost infrastructure left
-            </h3>
+            <h3 className={highlightHeading}>Shift cost infrastructure left</h3>
             <p className={highlightText}>
               Cloud native can allow your teams move faster, but that may lead
               to billing from Cloud providers grow rapidly.
@@ -202,7 +222,7 @@ export default function IndexPage({
 
       <section className={pageWrap}>
         <header className={sectionHeader}>
-          <h2 className={heading2}>
+          <h2 className={headingXl}>
             Our latest{' '}
             <strong className={textGradientSkybluePink}>insights</strong>
           </h2>

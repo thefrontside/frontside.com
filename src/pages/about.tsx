@@ -25,15 +25,15 @@ import {
   textGradientSkybluePink,
   textGradientSkybluePurple,
   bigQuote,
-  heroHeading,
+  heading3Xl,
   textSkyblue,
   textLg,
   textExtrabold,
   bigQuoteAuthor,
   textPink,
-  heading2,
+  headingXl,
   textBlueDashWhite,
-  heading2NoMargin,
+  headingXlNoMargin,
 } from '../styles/typography.css';
 
 import aboutHero from '../img/q3-2021/about-hero.png';
@@ -67,7 +67,7 @@ export default function IndexPage({ data: { allPeople } }) {
     <Layout title="About Frontside">
       <header className={heroWrap}>
         <div className={heroText}>
-          <h1 className={heroHeading}>
+          <h1 className={heading3Xl}>
             We've been{' '}
             <span className={textGradientSkybluePurple}>improving</span>{' '}
             engineering orgs <span className={textSkyblue}>since 2005</span>
@@ -177,7 +177,7 @@ export default function IndexPage({ data: { allPeople } }) {
 
       <section className={pageWrap}>
         <header className={sectionHeader}>
-          <h2 className={heading2}>
+          <h2 className={headingXl}>
             <strong className={textGradientSkybluePink}>Meet the team</strong>
           </h2>
           <p className={textLg}>
@@ -188,7 +188,7 @@ export default function IndexPage({ data: { allPeople } }) {
           {formattedPeople.map((person, i) => (
             <li className={featureRow} key={i}>
               <div className={featureTextAlternate}>
-                <h3 className={heading2NoMargin}>
+                <h3 className={headingXlNoMargin}>
                   <Link to={person.slug} className={textBlueDashWhite}>
                     {person.name}
                   </Link>

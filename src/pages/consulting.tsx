@@ -11,7 +11,6 @@ import {
   heroWrap,
   heroText,
   heroImage,
-  heroBreak,
   featureRow,
   featureText,
   featureTextAlternate,
@@ -25,11 +24,11 @@ import {
 } from '../styles/page.css';
 import {
   textGradientPinkSkyblue,
-  heroHeading,
+  heading3Xl,
   textLg,
   featureHeading,
   textSkyblue,
-  heading2,
+  headingXl,
   bigQuote,
   bigQuoteAuthor,
   textXl,
@@ -70,9 +69,9 @@ export default function ConsultingPage({
     <Layout title="DX Consulting for Cloud native teams">
       <header className={heroWrap}>
         <div className={heroText}>
-          <h1 className={heroHeading}>
+          <h1 className={heading3Xl}>
             <span className={textGradientPinkSkyblue}>Developer</span>
-            <br className={heroBreak} />
+            <br />
             <span className={textGradientPinkSkyblue}>Experience: </span>
             where deliveries and retention meet
           </h1>
@@ -222,7 +221,7 @@ export default function ConsultingPage({
 
       <section className={pageWrap}>
         <header className={sectionHeader}>
-          <h2 className={heading2}>
+          <h2 className={headingXl}>
             Latest <strong className={textGradientDemiSkybluePink}>DX</strong>{' '}
             insights
           </h2>

@@ -21,6 +21,11 @@ export const textSmCaps = style([textSm, {
   textTransform: 'uppercase',
 }]);
 
+export const boldCaps = style({
+  fontWeight: vars.fontWeights.extrabold,
+  textTransform: 'uppercase',
+});
+
 export const textMd = style({
   fontSize: vars.fontSize['base'],
   lineHeight: vars.lineHeights['base'],
@@ -59,17 +64,13 @@ export const textUppercase = style({
   textTransform: 'uppercase',
 });
 
-export const heroHeading = style([text3Xl, {
-  fontWeight: vars.fontWeights.extrabold,
-  textTransform: 'uppercase',
-}]);
+export const heading3Xl = style([text3Xl, boldCaps]);
 
-export const heading2 = style([textXl, {
-  fontWeight: vars.fontWeights.extrabold,
-  textTransform: 'uppercase',
-}]);
+export const heading2Xl = style([text2Xl, boldCaps]);
 
-export const heading2NoMargin = style([heading2, {
+export const headingXl = style([textXl, boldCaps]);
+
+export const headingXlNoMargin = style([headingXl, {
   marginTop: 0,
   marginBottom: 0,
 }]);
@@ -91,6 +92,15 @@ export const textBlueDashWhite = style({
   '@media': {
     [darkThemeQuery]: {
       color: vars.colors.white,
+    }
+  }
+});
+
+export const fillBlueDashWhite = style({
+  fill: vars.colors.blue,
+  '@media': {
+    [darkThemeQuery]: {
+      fill: vars.colors.white,
     }
   }
 });
@@ -408,4 +418,4 @@ export const bigQuoteAuthor = style([textLg, {
   textAlign: 'center',
 }]);
 
-export const peopleHeroHeading = style([heroHeading, textGradientPinkSkyblue]);
+export const peopleHeroHeading = style([heading3Xl, textGradientPinkSkyblue]);

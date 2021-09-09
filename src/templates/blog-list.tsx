@@ -13,7 +13,7 @@ import {
   entriesListEntry
 } from '../styles/page.css';
 import {
-  heading2,
+  headingXl,
   textGradientPinkPurple,
   textGradientPurpleSkyblue,
   textLg,
@@ -100,7 +100,7 @@ export default function BlogPage({
       {!isCoverPage ? (
         <>
           <header className={sectionHeader}>
-            <h2 className={heading2}>
+            <h2 className={headingXl}>
               <span className={textGradientPinkPurple}>Blog</span>: Page <em>{page}</em>
             </h2>
             <Pagination prefix="/blog" page={page} pages={pages} />
@@ -125,7 +125,7 @@ export default function BlogPage({
           {/* <header className={heroWrap}>
             <div className={heroText}>
               <h1
-                className={heroHeading}
+                className={heading3Xl}
               >
                 <span className={textPink}>Resources</span> for
                 engineering teams
@@ -141,7 +141,7 @@ export default function BlogPage({
           </header> */}
           <section className={pageWrap}>
             <header className={sectionHeader}>
-              <h2 className={heading2}>
+              <h2 className={headingXl}>
                 Recent <span className={textGradientPinkPurple}>blog</span>{' '}
                 posts
               </h2>
@@ -162,7 +162,7 @@ export default function BlogPage({
           </section>
           <section className={pageWrap}>
             <header className={sectionHeader}>
-              <h2 className={heading2}>
+              <h2 className={headingXl}>
                 Latest{' '}
                 <span className={textGradientPurpleSkyblue}>podcast</span>{' '}
                 episodes

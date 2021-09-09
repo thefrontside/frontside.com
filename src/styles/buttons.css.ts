@@ -50,6 +50,7 @@ export const socialLink = style([textSmCaps, {
 }]);
 
 const baseActionButton = style({
+  display: 'inline-block',
   color: vars.colors.white,
   padding: vars.space['xs'],
   paddingRight: vars.space['sm'],

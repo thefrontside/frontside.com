@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/layout';
 import { sectionHeader } from '../styles/page.css';
 import {
-  heading2,
+  headingXl,
   textGradientPinkPurple,
   textLg,
 } from '../styles/typography.css';
@@ -10,7 +10,7 @@ import {
 const NotFoundPage = () => (
   <Layout title="404">
     <header className={sectionHeader}>
-      <h2 className={heading2}>
+      <h2 className={headingXl}>
         <span className={textGradientPinkPurple}>Not found</span>
       </h2>
       <p className={textLg}>
