@@ -2,7 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import format from 'dateformat';
-import PodcastCTA from '../components/PodcastCTA';
+import PodcastCTA from '../components/follow-podcast';
+
 import {
   heroWrap,
   heroText,

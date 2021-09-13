@@ -2,16 +2,25 @@ import { style } from '@vanilla-extract/css';
 import vars, { darkThemeQuery, laptopQuery } from './frontside-theme.css';
 import { textLg, textMd, textSmCaps } from './typography.css';
 
-export const paginationButton = style({
+export const baseButton = style({
+  display: 'inline-block',
+  border: 'none',
+  fontFamily: vars.fontFamily.main,
+  fontSize: vars.fontSize.base,
   background: vars.colors.blue,
   color: vars.colors.white,
   borderRadius: vars.radius.md,
+  padding: vars.space['xs'],
+  cursor: 'pointer',
+});
+
+export const paginationButton = style([baseButton, {
   padding: vars.space['2xs'],
   paddingRight: vars.space['xs'],
   paddingLeft: vars.space['xs'],
   marginLeft: vars.space.md,
   marginRight: vars.space.md,
-});
+}]);
 
 export const tagButton = style({
   color: vars.colors.blue,

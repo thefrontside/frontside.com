@@ -4,8 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import PostsList from '../components/posts-list';
 import Pagination from '../components/pagination';
-import PodcastCTA from '../components/PodcastCTA';
-import SubscribeForm from '../components/subscribe-form';
+import PodcastCTA from '../components/follow-podcast';
 
 import {
   pageWrap,

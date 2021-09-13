@@ -1,5 +1,6 @@
-import vars, { laptopQuery, desktopQuery, darkThemeQuery, colorValues } from '../../styles/frontside-theme.css';
+import vars, { darkThemeQuery } from '../../styles/frontside-theme.css';
 import { style } from '@vanilla-extract/css';
+import { inputText } from '../../styles/inputs.css';
 
 export const newsletterForm = style([{
   display: 'block',
@@ -17,22 +18,9 @@ export const inputButtonBar = style({
   display: 'flex',
 });
 
-export const inputElement = style({
-  display: 'block',
-  padding: vars.space['2xs'],
+export const inputElement = style([inputText, {
   border: 'none',
-  borderRadius: vars.radius.md,
-  fontFamily: vars.fontFamily.main,
-  fontSize: vars.fontSize.base,
-  width: '100%',
-  color: vars.colors.blue,
-  '@media': {
-    [darkThemeQuery]: {
-      background: vars.colors.black,
-      color: vars.colors.white,
-    }
-  }
-});
+}]);
 
 export const textButton = style({
   background: 'none',

@@ -2,11 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import {
-  arrowText,
   headingLg,
   textGradientPinkPurple,
-  textSm,
-  arrowTextWhite,
   textArrowWhite,
   textBlueDashWhite,
   textLg,
@@ -15,9 +12,7 @@ import {
 import {
   inputButtonBar,
   inputElement,
-  newsletterDescription,
   newsletterForm,
-  newsletterWrapper,
   textButton,
 } from './subscribe-forms.css';
 import { Link } from 'gatsby';
@@ -26,7 +21,7 @@ SubscribeForm.propTypes = {
   highlight: PropTypes.bool,
 };
 
-export default function SubscribeForm({ highlight }) {
+export default function SubscribeForm() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('');
 
@@ -76,14 +71,10 @@ export default function SubscribeForm({ highlight }) {
               onChange={(e) => setEmail(e.target.value)}
               defaultValue={email}
               className={inputElement}
-              // highlight={highlight}
-              // large={true}
               required={true}
             />
             <button
               type="submit"
-              // highlight={highlight}
-              // large={true}
               disabled={status === 'sending'}
               className={textButton}
             >
