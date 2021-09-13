@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BlogPreview from '../blog-preview';
+import SubscribeForm from '../subscribe-form/subscribe-form';
 
 import { entriesList, entriesListEntry } from '../../styles/page.css';
 
@@ -20,9 +21,12 @@ export default function PostsList({
       )}
       <ul className={entriesList}>
         {posts.map((post, i) => (
-          <li className={entriesListEntry} key={i}>
-            <BlogPreview post={post} layout='sided' />
-          </li>
+          <>
+            <li className={entriesListEntry} key={i}>
+              <BlogPreview post={post} layout="sided" />
+            </li>
+            {i === 1 ? <SubscribeForm /> : <></>}
+          </>
         ))}
       </ul>
       {pagination}

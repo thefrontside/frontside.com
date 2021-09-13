@@ -30,7 +30,7 @@ import {
   textSm,
   text2Xl,
   arrowText,
-  whiteArrowText,
+  arrowTextWhite,
   textGradientGreenSkyblue,
 } from '../styles/typography.css';
 import { actionButton, actionButtonGreen } from '../styles/buttons.css';
@@ -79,7 +79,7 @@ export default function BackstagePage({
           </p>
           <p className={consultingTopTCA}>
             <Link to="/" className={actionButtonGreen}>
-              <strong className={whiteArrowText}>
+              <strong className={arrowTextWhite}>
                 Make Backstage work for you
               </strong>
             </Link>
@@ -159,7 +159,7 @@ export default function BackstagePage({
           </p>
           <br />
           <strong className={actionButton}>
-            <span className={whiteArrowText}>Read more</span>
+            <span className={arrowTextWhite}>Read more</span>
           </strong>
         </div>
       </section>

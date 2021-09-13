@@ -5,12 +5,13 @@ import Layout from '../components/layout';
 import PostsList from '../components/posts-list';
 import Pagination from '../components/pagination';
 import PodcastCTA from '../components/PodcastCTA';
+import SubscribeForm from '../components/subscribe-form';
 
 import {
   pageWrap,
   sectionHeader,
   entriesList,
-  entriesListEntry
+  entriesListEntry,
 } from '../styles/page.css';
 import {
   headingXl,
@@ -93,7 +94,7 @@ export default function BlogPage({
     <Layout
       title={
         isCoverPage
-          ? 'Resources for engineering teams'
+          ? 'Frontside Blog'
           : `Frontside Blog - page ${page}`
       }
     >
@@ -101,15 +102,13 @@ export default function BlogPage({
         <>
           <header className={sectionHeader}>
             <h2 className={headingXl}>
-              <span className={textGradientPinkPurple}>Blog</span>: Page <em>{page}</em>
+              <span className={textGradientPinkPurple}>Blog</span>: Page{' '}
+              <em>{page}</em>
             </h2>
             <Pagination prefix="/blog" page={page} pages={pages} />
           </header>
           <div className="hero-navigation">
-            <h2 className="hero-navigation-title">
-              
-            </h2>
-            
+            <h2 className="hero-navigation-title"></h2>
           </div>
           <section className={pageWrap}>
             <PostsList
@@ -150,9 +149,6 @@ export default function BlogPage({
                 DX topics.
               </p>
             </header>
-            <section className={pageWrap}>
-              <h2>Subscribe to our DX Newsletter</h2>
-            </section>
             <PostsList
               pagination={
                 <Pagination prefix="/blog" page={page} pages={pages} />

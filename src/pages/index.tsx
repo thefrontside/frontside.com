@@ -39,7 +39,7 @@ import {
   featureHeading,
   homeBackstageHeading,
   headingXl,
-  whiteArrowText,
+  arrowTextWhite,
   heading2Xl,
 } from '../styles/typography.css';
 
@@ -167,7 +167,7 @@ export default function IndexPage({
               We help developers thrive in complexity
             </h2>
             <Link to="/consulting" className={actionButton}>
-              <strong className={whiteArrowText}>
+              <strong className={arrowTextWhite}>
                 Learn how we approach DX
               </strong>
             </Link>

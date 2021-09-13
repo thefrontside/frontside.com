@@ -34,7 +34,7 @@ import {
   textXl,
   text3Xl,
   textGradientDemiSkybluePink,
-  whiteArrowText,
+  arrowTextWhite,
 } from '../styles/typography.css';
 
 import homePlaceholder from '../img/temp/hero_placeholder.png';
@@ -96,7 +96,7 @@ export default function ConsultingPage({
         </p>
         <p className={homeTopCTA}>
           <Link to="/" className={actionButton}>
-            <strong className={whiteArrowText}>Request a DX assesment</strong>
+            <strong className={arrowTextWhite}>Request a DX assesment</strong>
           </Link>
         </p>
         <div className={featureRow}>
@@ -214,7 +214,7 @@ export default function ConsultingPage({
             Make your developers happier and more productive
           </p>
           <Link to="/" className={actionButton}>
-            <strong className={whiteArrowText}>Request a DX assesment</strong>
+            <strong className={arrowTextWhite}>Request a DX assesment</strong>
           </Link>
         </div>
       </section>

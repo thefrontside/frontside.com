@@ -70,6 +70,8 @@ export const heading2Xl = style([text2Xl, boldCaps]);
 
 export const headingXl = style([textXl, boldCaps]);
 
+export const headingLg = style([textLg, boldCaps]);
+
 export const headingXlNoMargin = style([headingXl, {
   marginTop: 0,
   marginBottom: 0,
@@ -105,20 +107,34 @@ export const fillBlueDashWhite = style({
   }
 });
 
+const arrowDefinition = {
+  content: '""',
+  display: 'inline-block',
+  width: '0.8em',
+  height: '0.8rem',
+  background: `url(${arrowWhite}) no-repeat`,
+  backgroundSize: 'contain',
+}
+
 const baseArrow = style({
   'selectors': {
     '&:before': {
-      content: '""',
-      display: 'inline-block',
-      width: '0.8em',
-      height: '0.8rem',
-      background: `url(${arrowWhite}) no-repeat`,
-      backgroundSize: 'contain',
+      ...arrowDefinition,
       marginRight: '0.5em',
       marginBottom: '-0.05em',
-    }   
+    }
   }
-})
+});
+
+const baseTextArrow = style({
+  'selectors': {
+    '&:after': {
+      ...arrowDefinition,
+      marginLeft: '0.5em',
+      marginBottom: '-0.1em',
+    }
+  }
+});
 
 export const arrowText = style([baseArrow, {
   'selectors': {
@@ -137,7 +153,27 @@ export const arrowText = style([baseArrow, {
   }
 }]);
 
-export const whiteArrowText = style([baseArrow]);
+export const arrowTextWhite = style([baseArrow]);
+
+export const textArrow = style([baseTextArrow, {
+  'selectors': {
+    '&:after': {
+      backgroundImage: `url(${arrowBlue})`,
+    }
+  },
+  '@media': {
+    [darkThemeQuery]: {
+      'selectors': {
+        '&:after': {
+          backgroundImage: `url(${arrowWhite})`
+        }
+      }
+    }
+  }
+}]);
+
+
+export const textArrowWhite = style([baseTextArrow]);
 
 export const featureHeading = style([textXl, {
   marginTop: 0,
@@ -419,3 +455,12 @@ export const bigQuoteAuthor = style([textLg, {
 }]);
 
 export const peopleHeroHeading = style([heading3Xl, textGradientPinkSkyblue]);
+
+export const textLink = style([textBlueDashWhite, textBottomGradient, {
+  selectors: {
+    '&:before': {
+      height: '0.1rem',
+      bottom: '0rem',
+    }
+  }
+}]);
