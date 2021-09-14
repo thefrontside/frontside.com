@@ -144,8 +144,7 @@ export default function BlogPage({
                 posts
               </h2>
               <p className={textLg}>
-                We write about testing, design systems, Cloud native, and other
-                DX topics.
+                We write about testing, design systems, Cloud native, and Backstage.
               </p>
             </header>
             <PostsList
@@ -153,6 +152,7 @@ export default function BlogPage({
                 <Pagination prefix="/blog" page={page} pages={pages} />
               }
               posts={formattedPosts}
+              includeFeatured={true}
             />
           </section>
           <section className={pageWrap}>

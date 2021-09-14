@@ -36,13 +36,13 @@ import {
   textGradientDemiSkybluePink,
   arrowTextWhite,
 } from '../styles/typography.css';
+import { actionButton } from '../styles/buttons.css';
 
 import homePlaceholder from '../img/temp/hero_placeholder.png';
-import featurePlaceholder from '../img/temp/feature_placeholder.png';
 import dxHero from '../img/q3-2021/dx-hero.png';
 import dxProblems from '../img/q3-2021/dx-problems.png';
 import dxFrustration from '../img/q3-2021/dx-frustration.png';
-import { actionButton } from '../styles/buttons.css';
+import dxTools from '../img/q3-2021/dx-tools.png';
 
 export default function ConsultingPage({
   data: {
@@ -103,7 +103,7 @@ export default function ConsultingPage({
           <div className={featureTextAlternate}>
             <h2 className={featureHeading}>
               Developers' problems are{' '}
-              <strong className={textSkyblue}>business problems</strong>
+              <span className={textSkyblue}>business problems</span>
             </h2>
             <p>
               There's a clear path from developers complaining about how nobody
@@ -123,7 +123,7 @@ export default function ConsultingPage({
           <div className={featureText}>
             <h2 className={featureHeading}>
               Engineers have{' '}
-              <strong className={textSkyblue}>less patience</strong> for a
+              <span className={textSkyblue}>less patience</span> for a
               frustrating job
             </h2>
             <p>
@@ -144,7 +144,7 @@ export default function ConsultingPage({
           <div className={featureTextAlternate}>
             <h2 className={featureHeading}>
               Sharp engineers need{' '}
-              <strong className={textSkyblue}>sharp tools</strong>
+              <span className={textSkyblue}>sharp tools</span>
             </h2>
             <p>
               Your team is incredibly talented, but it’s often bogged down by a
@@ -156,7 +156,7 @@ export default function ConsultingPage({
             </p>
           </div>
           <div className={featureImage}>
-            <img src={featurePlaceholder} alt="" />
+            <img src={dxTools} alt="" />
           </div>
         </div>
       </section>

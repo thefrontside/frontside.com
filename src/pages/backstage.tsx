@@ -95,7 +95,7 @@ export default function BackstagePage({
           <div className={featureTextAlternate}>
             <h2 className={featureHeading}>
               Make Backstage represent your{' '}
-              <strong className={textGreen}>ecosystem</strong>
+              <span className={textGreen}>ecosystem</span>
             </h2>
             <p>
               Your combination of stack, services, and people are unique to your
@@ -113,7 +113,7 @@ export default function BackstagePage({
         <div className={featureRow}>
           <div className={featureText}>
             <h2 className={featureHeading}>
-              <strong className={textGreen}>De-risk</strong> your Backstage
+              <span className={textGreen}>De-risk</span> your Backstage
               adoption
             </h2>
             <p>
@@ -131,7 +131,7 @@ export default function BackstagePage({
         <div className={featureRow}>
           <div className={featureTextAlternate}>
             <h2 className={featureHeading}>
-              <strong className={textGreen}>Integrate</strong> Backstage in your
+              <span className={textGreen}>Integrate</span> Backstage in your
               DX
             </h2>
             <p>

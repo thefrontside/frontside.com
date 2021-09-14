@@ -64,6 +64,10 @@ export const textUppercase = style({
   textTransform: 'uppercase',
 });
 
+export const textCentered = style({
+  textAlign: 'center',
+});
+
 export const heading3Xl = style([text3Xl, boldCaps]);
 
 export const heading2Xl = style([text2Xl, boldCaps]);

@@ -7,6 +7,7 @@ import { entriesList, entriesListEntry } from '../../styles/page.css';
 
 export default function PostsList({
   heading = null,
+  includeFeatured,
   posts,
   pagination = null,
 }) {
@@ -23,9 +24,9 @@ export default function PostsList({
         {posts.map((post, i) => (
           <>
             <li className={entriesListEntry} key={i}>
-              <BlogPreview post={post} layout="sided" />
+              <BlogPreview post={post} layout={(includeFeatured && i === 0) ? 'featured': 'sided'} />
             </li>
-            {i === 1 ? <SubscribeForm /> : <></>}
+            {(includeFeatured && i === 0 || !includeFeatured && i === 2) ? <SubscribeForm /> : <></>}
           </>
         ))}
       </ul>
@@ -37,6 +38,7 @@ export default function PostsList({
 PostsList.propTypes = {
   heading: PropTypes.node,
   pagination: PropTypes.node,
+  includeFeatured: PropTypes.bool,
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

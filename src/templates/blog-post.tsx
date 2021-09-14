@@ -11,6 +11,7 @@ import {
   heroImage,
   tagListLine,
   tagListLineItem,
+  radiusMd,
 } from '../styles/page.css';
 import {
   heading3Xl,
@@ -34,7 +35,6 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
             {authors.filter(Boolean).map((author, i) => (
                 <React.Fragment key={author.slug}>
                   {i === 0 ? '' : authors.length > 2 ? ', ' : ' and '}
-                  {/* Author links will lead to team member page, which is currently pending. */}
                   <Link key={author.slug} to={author.slug} className={textBlueDashWhite}>
                     {author.name}
                   </Link>
@@ -53,7 +53,7 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
           </ul>
         </div>
         <div className={heroImage}>
-          <img src={image} alt="" className={textSm} />
+          <img src={image} alt="" className={radiusMd} />
         </div>
       </header>
 

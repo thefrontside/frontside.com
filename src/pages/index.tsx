@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
+import HomeGraph from '../components/home-graph';
 
 import {
   pageWrap,
@@ -41,15 +42,16 @@ import {
   headingXl,
   arrowTextWhite,
   heading2Xl,
+  textCentered,
 } from '../styles/typography.css';
+import { actionButton, actionButtonGreen } from '../styles/buttons.css';
 
 import heroPlaceholder from '../img/temp/hero_placeholder.png';
-import featurePlaceholder from '../img/temp/feature_placeholder.png';
 import BlogPreview from '../components/blog-preview';
 import homeHero from '../img/q3-2021/home-hero.png';
 import homeInject from '../img/q3-2021/home-inject.png';
-import HomeGraph from '../components/home-graph';
-import { actionButton } from '../styles/buttons.css';
+import homeRethink from '../img/q3-2021/home-rethink.png';
+import homeShiftleft from '../img/q3-2021/home-shift-left.png';
 
 export default function IndexPage({
   data: {
@@ -120,7 +122,7 @@ export default function IndexPage({
             </p>
           </div>
           <div className={featureImage}>
-            <img src={featurePlaceholder} alt="" />
+            <img src={homeRethink} alt="" />
           </div>
         </div>
 
@@ -140,7 +142,7 @@ export default function IndexPage({
             </p>
           </div>
           <div className={featureImage}>
-            <img src={featurePlaceholder} alt="" />
+            <img src={homeShiftleft} alt="" />
           </div>
         </div>
 
@@ -218,6 +220,11 @@ export default function IndexPage({
             <img src={heroPlaceholder} alt="" className={highlightImage} />
           </div>
         </div>
+        <p className={textCentered}>
+          <Link to="/backstage" className={actionButtonGreen}>
+            <strong className={arrowTextWhite}>Adopt Backstage</strong>
+          </Link>
+        </p>
       </section>
 
       <section className={pageWrap}>
