@@ -290,7 +290,7 @@ export default function ConsultingPage({
             <h3 className={headingLg}>Release</h3>
             <p>
               Can you release twice per day? Is the release plan generated or
-              crafted by a human?{' '}
+              crafted by a human?
             </p>
           </div>
           <div className={consultingCycleIllustration}>

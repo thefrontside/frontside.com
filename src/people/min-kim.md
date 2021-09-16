@@ -1,7 +1,7 @@
 ---
 templateKey: people
 name: Min Kim
-title: Software Engineer
+title: Engineering Consultant
 location: Toronto, Canada
 img: ../img/q3-2021/team/min.jpg
 imgAlt: Portrait of Min. He's wearing round glasses and has medium-long hair. He's holding a cello.

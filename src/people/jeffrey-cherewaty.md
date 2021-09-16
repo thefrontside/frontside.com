@@ -1,6 +1,7 @@
 ---
 templateKey: people
 name: Jeffrey Cherewaty
+alumnus: true
 title: COO
 location: Austin, Texas
 img: ../img/q3-2021/team/jeffrey.jpg
@@ -13,5 +14,4 @@ intro: After succeeding in the trenches of the startup world—leading
   diplomat." With a masters in Software Engineering from The
   University of Texas at Austin, he facilitates technical
   conversations and rolls up his sleeves to make change happen.
-order: 300
 ---

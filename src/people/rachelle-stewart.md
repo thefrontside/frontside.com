@@ -10,5 +10,5 @@ intro: After leaving the U.S. Air Force, Rachelle began her decade-long
   two businesses of her own and earned an MBA from Capella
   University. She now orchestrates financial and legal affairs at
   Frontside and is at the core of its strategic planning.
-order: 400
+order: 300
 ---
