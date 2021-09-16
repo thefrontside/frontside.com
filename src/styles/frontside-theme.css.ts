@@ -11,6 +11,7 @@ export const colorValues = {
   skyblue: '#26abe8',
   purple: '#8c7db3',
   violet: '#44378a',
+  lightGreen: '#9bf0e1',
   green: '#36baa2',
   gray: '#8995aa',
 };

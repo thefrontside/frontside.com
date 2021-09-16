@@ -18,6 +18,8 @@ import {
   entryColumn,
   caseStudySection,
   consultingTopTCA,
+  backstageOpenMicBox,
+  backstageOpenMicLine,
 } from '../styles/page.css';
 import {
   textGradientSkybluePink,
@@ -33,8 +35,15 @@ import {
   arrowTextWhite,
   textGradientGreenSkyblue,
   indentLine,
+  textXl,
+  textArrowGreen,
+  arrowTextGreen,
 } from '../styles/typography.css';
-import { actionButton, actionButtonGreen } from '../styles/buttons.css';
+import {
+  actionButton,
+  actionButtonGreen,
+  openmicButton,
+} from '../styles/buttons.css';
 
 import BlogPreview from '../components/blog-preview';
 
@@ -181,13 +190,42 @@ export default function BackstagePage({
       <section className={pageWrap}>
         <header className={sectionHeader}>
           <h2 className={headingXl}>
-            Latest{' '}
             <strong className={textGradientGreenSkyblue}>Backstage</strong>{' '}
-            insights
+            Resources
           </h2>
         </header>
 
         <div className={entryColumns}>
+          <div className={backstageOpenMicBox}>
+            <h3 className={textXl}>Backstage Open Mic</h3>
+            <p className={textLg}>
+              Open Mic is a community of Backstage users, co-hosted by
+              Frontside, who share their insights and help each other.
+            </p>
+            <a
+              href="https://backstage-openmic.com/"
+              className={openmicButton}
+              target="_blank"
+            >
+              <span className={arrowTextGreen}>Join the community</span>
+            </a>
+            <hr className={backstageOpenMicLine}></hr>
+            <h3 className={textXl}>Roadie's Backstage Weekly Newsletter</h3>
+            <p className={textLg}>
+              Our friends at Roadie will keep you up to date with the latest
+              developments in the Backstage project. They also highlight
+              community insights, such as contributions and publications.
+            </p>
+            <a
+              href="https://roadie.io/backstage-weekly/"
+              className={openmicButton}
+              target="_blank"
+            >
+              <span className={arrowTextGreen}>
+                Suscribe to Roadie's Newsletter
+              </span>
+            </a>
+          </div>
           {simplifiedPosts.map((post, i) => (
             <div className={entryColumn} key={i}>
               <BlogPreview post={post} />

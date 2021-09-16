@@ -4,6 +4,7 @@ import vars, { laptopQuery, desktopQuery, darkThemeQuery } from './frontside-the
 import clientsLogo from '../img/q3-2021/client-logos.svg';
 import clientsLogoWhite from '../img/q3-2021/client-logos-white.svg';
 import backgroundBubbles from '../img/q3-2021/backgruond-blue-bubbles.png';
+import openMicBg from '../img/q3-2021/backstage-openmic-bg.png';
 
 import { textLg, textUppercase, textXl } from './typography.css';
 
@@ -378,14 +379,18 @@ export const consultingTopTCA = style({
 });
 
 export const consultingCycleContainer = style({
-  display: 'grid',
-  gridTemplateColumns: '0.8fr 1.4fr 0.8fr',
-  gridTemplateRows: '1fr 1fr 1fr',
-  gap: '1rem',
-  gridTemplateAreas: 
-    `"First Illustration ."
-    ". Illustration Second"
-    "Third Illustration ."`
+  '@media': {
+    [laptopQuery]: {
+      display: 'grid',
+      gridTemplateColumns: '0.8fr 1.4fr 0.8fr',
+      gridTemplateRows: '1fr 1fr 1fr',
+      gap: '1rem',
+      gridTemplateAreas:
+        `"First Illustration ."
+        ". Illustration Second"
+        "Third Illustration ."`
+    }
+  }
 });
 
 export const consultingCycleFirst = style({
@@ -402,7 +407,13 @@ export const consultingCycleThird = style({
 });
 
 export const consultingCycleIllustration = style({
-  gridArea: 'Illustration',
+  display: 'none',
+  '@media': {
+    [laptopQuery]: {
+      gridArea: 'Illustration',
+      display: 'block',
+    }
+  }
 });
 
 export const consultingTab = style({
@@ -427,3 +438,28 @@ export const consultingTabImage = style({
     }
   }
 })
+
+export const backstageOpenMicBox = style({
+  background: `${vars.colors.lightGreen} url(${openMicBg}) no-repeat`,
+  backgroundPosition: '12rem center',
+  backgroundSize: '100%',
+  color: vars.colors.blue,
+  borderRadius: vars.radius.lg,
+  padding: vars.space.lg,
+  paddingTop: vars.space.md,
+  boxSizing: 'border-box',
+  marginBottom: vars.space.lg,
+
+  '@media': {
+    [laptopQuery]: {
+      width: '66%',
+    }
+  }
+});
+
+export const backstageOpenMicLine = style({
+  border: 'none',
+  height: '3px',
+  background: vars.colors.blue,
+  marginTop: vars.space.xl,
+});

@@ -74,3 +74,11 @@ export const actionButton = style([baseActionButton, {
 export const actionButtonGreen = style([baseActionButton, {
   backgroundImage: `linear-gradient(135deg, ${vars.colors.green}, ${vars.colors.violet} 46%, ${vars.colors.violet} 54%, ${vars.colors.skyblue})`,
 }]);
+
+export const openmicButton = style([baseButton, {
+  background: vars.colors.blue,
+  color: vars.colors.lightGreen,
+  fontWeight: vars.fontWeights.bold,
+  paddingTop: vars.space['2xs'],
+  paddingBottom: vars.space['2xs'],
+}]);

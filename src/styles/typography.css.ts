@@ -4,6 +4,7 @@ import vars, { darkThemeQuery, desktopQuery, laptopQuery } from './frontside-the
 
 import arrowWhite from '../img/q3-2021/arrow-white.svg';
 import arrowBlue from '../img/q3-2021/arrow-blue.svg';
+import arrowGreen from '../img/q3-2021/arrow-green.svg';
 
 export const textXs = style({
   fontSize: vars.fontSize['xs'],
@@ -165,6 +166,14 @@ export const arrowText = style([baseArrow, {
 
 export const arrowTextWhite = style([baseArrow]);
 
+export const arrowTextGreen = style([arrowTextWhite, {
+  'selectors': {
+    '&:before': {
+      backgroundImage: `url(${arrowGreen})`,
+    }
+  }
+}]);
+
 export const textArrow = style([baseTextArrow, {
   'selectors': {
     '&:after': {
@@ -182,8 +191,15 @@ export const textArrow = style([baseTextArrow, {
   }
 }]);
 
-
 export const textArrowWhite = style([baseTextArrow]);
+
+export const textArrowGreen = style([textArrowWhite, {
+  'selectors': {
+    '&:after': {
+      backgroundImage: `url(${arrowGreen})`,
+    }
+  }
+}]);
 
 export const featureHeading = style([textXl, {
   marginTop: 0,
