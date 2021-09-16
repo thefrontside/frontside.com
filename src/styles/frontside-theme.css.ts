@@ -39,7 +39,7 @@ const frontsideTheme = createGlobalTheme(':root', {
   lineHeights: {
     xs: '0.818rem',
     sm: '1.136rem',
-    base: '1.235rem',
+    base: '1.335rem',
     lg: '1.500rem',
     xl: '1.800rem',
     '2xl': '2.150rem',

@@ -102,6 +102,12 @@ export const textBlueDashWhite = style({
   }
 });
 
+export const indentLine = style({
+  display: 'inline-block',
+  width: '2em',
+  height: '1em',
+});
+
 export const fillBlueDashWhite = style({
   fill: vars.colors.blue,
   '@media': {

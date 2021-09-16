@@ -56,6 +56,8 @@ export const tabPane = style({
   '@media': {
     [laptopQuery]: {
       padding: vars.space['lg'],
+      paddingLeft: vars.space['xl'],
+      paddingRight: vars.space['xl'],
     }
   }
 });

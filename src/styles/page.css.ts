@@ -202,7 +202,8 @@ export const highlightImage = style({
   marginRight: 'auto',
   '@media': {
     [laptopQuery]: {
-      order: 3
+      order: 3,
+      marginTop: 'auto',
     },
   }
 });
@@ -212,6 +213,7 @@ export const highlightText = style({
   '@media': {
     [laptopQuery]: {
       order: 1,
+      marginBottom: vars.space.md,
     }
   },
 });
@@ -374,3 +376,54 @@ export const homeGraphImage = style({
 export const consultingTopTCA = style({
   marginTop: vars.space.md,
 });
+
+export const consultingCycleContainer = style({
+  display: 'grid',
+  gridTemplateColumns: '0.8fr 1.4fr 0.8fr',
+  gridTemplateRows: '1fr 1fr 1fr',
+  gap: '1rem',
+  gridTemplateAreas: 
+    `"First Illustration ."
+    ". Illustration Second"
+    "Third Illustration ."`
+});
+
+export const consultingCycleFirst = style({
+  gridArea: 'First',
+  marginTop: vars.space.lg,
+});
+
+export const consultingCycleSecond = style({
+  gridArea: 'Second',
+});
+
+export const consultingCycleThird = style({
+  gridArea: 'Third',
+});
+
+export const consultingCycleIllustration = style({
+  gridArea: 'Illustration',
+});
+
+export const consultingTab = style({
+  '@media': {
+    [laptopQuery]: {
+      display: 'flex',
+      alignItems: 'center',
+    }
+  }
+});
+
+export const consultingTabImage = style({
+  display: 'none',
+  '@media': {
+    [laptopQuery]: {
+      display: 'block',
+      flexShrink: 0,
+      marginLeft: vars.space.lg,
+    },
+    [desktopQuery]: {
+      marginLeft: vars.space.xl,
+    }
+  }
+})

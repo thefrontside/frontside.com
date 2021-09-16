@@ -27,6 +27,7 @@ import {
   homeGraphRow,
   homeGraphText,
   homeGraphImage,
+  homeBottomCTA,
 } from '../styles/page.css';
 import {
   textGradientSkybluePink,
@@ -43,6 +44,7 @@ import {
   arrowTextWhite,
   heading2Xl,
   textCentered,
+  indentLine,
 } from '../styles/typography.css';
 import { actionButton, actionButtonGreen } from '../styles/buttons.css';
 
@@ -52,6 +54,9 @@ import homeHero from '../img/q3-2021/home-hero.png';
 import homeInject from '../img/q3-2021/home-inject.png';
 import homeRethink from '../img/q3-2021/home-rethink.png';
 import homeShiftleft from '../img/q3-2021/home-shift-left.png';
+import backstageSight from '../img/q3-2021/home-backstage-sight.png';
+import backstageDerisk from '../img/q3-2021/home-backstage-derisk.png';
+import backstageShiftleft from '../img/q3-2021/home-backstage-shift-left.png';
 
 export default function IndexPage({
   data: {
@@ -85,13 +90,16 @@ export default function IndexPage({
           <h1 className={heading3Xl}>
             <span className={textGradientSkybluePurple}>Empower</span> your
             developers — <br className={heroBreak} /> from{' '}
-            <strong className={textGradientDemiSkybluePink}>commit to</strong>{' '}
+            <strong className={textGradientDemiSkybluePink}>
+              onboarding to
+            </strong>{' '}
             production{' '}
             <strong className={textGradientPurplePink}>release</strong>
           </h1>
           <p className={textLg}>
-            Frontside creates cohesive development experiences for Cloud native
-            teams: from IDE and CLI tools to deployment and developer portals.
+            Frontside creates cohesive Development Experiences for Cloud native
+            teams: from local setup and testing to deployments and developer
+            portals.
           </p>
         </div>
         <div className={heroImage}>
@@ -112,13 +120,14 @@ export default function IndexPage({
               after Kubernetes
             </h2>
             <p>
-              Once your break down the monolith, you're on your way of becoming
-              a top performing software organization. But Cloud native comes
-              with its own challenges, specially for your developers and their
-              collaboration process. Frontside brings in cross-functional
-              consultants who'll help you discover bottlenecks throughout your
-              entire development workflow and propose game-changing strategies
-              to boost your development teams' success.
+              Once your break down the monolith, you're on your way to becoming
+              a top-performing software organization. But Cloud native comes
+              with its challenges, especially for your developers.
+              <br />
+              <span className={indentLine} />
+              Frontside brings in cross-functional consultants who'll help you
+              discover bottlenecks throughout your workflow and propose
+              game-changing strategies to boost your teams' success.
             </p>
           </div>
           <div className={featureImage}>
@@ -133,12 +142,14 @@ export default function IndexPage({
               strategy
             </h2>
             <p>
-              Test suites are a major source of frustration for developers.
-              Often, tests either step in their way because they're hard to
-              write and run too slowly, or tests provide no confidence because
-              they pass or fail arbitrarily. Frontside helps teams move tests
-              closer to development through Open Source tools to make them
-              enjoyable, fast, and reliable.
+              Testing and QA are significant sources of frustration for
+              developers. Yet, all Cloud native manuals point to automated
+              testing being a cornerstone for frequent deliveries.
+              <br />
+              <span className={indentLine} />
+              Using Open Source technologies, Frontside helps teams move tests
+              closer to development while making them enjoyable, fast, and
+              reliable.
             </p>
           </div>
           <div className={featureImage}>
@@ -153,10 +164,14 @@ export default function IndexPage({
               <strong className={textSkyblue}>leadership</strong> into your team
             </h2>
             <p>
-              Most companies have great developers in their teams, but lack
+              Most companies have great developers in their teams but lack
               enough leaders to identify improvement opportunities and socialize
-              technical change. Frontside brings in insights cultivated from our
-              network of enterprise partners and Open Source maintainers.
+              technical change.
+              <br />
+              <span className={indentLine} />
+              Frontside brings in insights cultivated from our network of
+              enterprise partners and Open Source maintainers to create a
+              nurtured Inner Source culture in your organization.
             </p>
           </div>
           <div className={featureImage}>
@@ -197,30 +212,34 @@ export default function IndexPage({
               Every service at everyone's sight
             </h3>
             <p className={highlightText}>
-              With Backstage's catalog, you can make your repositories and Cloud
-              services visible and arranged around your products and services.
+              With Backstage, you can align your organization's code and Cloud
+              services with business and make the relationship visible and
+              actionable for everyone.
             </p>
-            <img src={heroPlaceholder} alt="" className={highlightImage} />
+            <img src={backstageSight} alt="" className={highlightImage} />
           </div>
           <div className={highlight}>
-            <h3 className={highlightHeading}>Shift cost infrastructure left</h3>
+            <h3 className={highlightHeading}>Shift infrastructure costs left</h3>
             <p className={highlightText}>
-              Cloud native can allow your teams move faster, but that may lead
-              to billing from Cloud providers grow rapidly.
+              Cloud native can allow your teams to move faster; Backstage can
+              help prevent infra bills from growing as fast by bringing cost
+              optimization closer to your developers.
             </p>
-            <img src={heroPlaceholder} alt="" className={highlightImage} />
+            <img src={backstageShiftleft} alt="" className={highlightImage} />
           </div>
           <div className={highlight}>
             <h3 className={highlightHeading}>
-              De-risk your custom implementation
+              De-risk your implementation
             </h3>
             <p className={highlightText}>
-              Every organization has a unique system domain
+              Backstage opens up new frontiers for many software organizations,
+              but it is a constantly evolving alpha software that requires deep
+              expertise to guarantee long-term success.{' '}
             </p>
-            <img src={heroPlaceholder} alt="" className={highlightImage} />
+            <img src={backstageDerisk} alt="" className={highlightImage} />
           </div>
         </div>
-        <p className={textCentered}>
+        <p className={homeBottomCTA}>
           <Link to="/backstage" className={actionButtonGreen}>
             <strong className={arrowTextWhite}>Adopt Backstage</strong>
           </Link>
