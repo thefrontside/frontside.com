@@ -12,6 +12,12 @@ framework = "gatsby"
 
 [[redirects]]
 force = true
+from = "/bigtest/docs/interactors"
+status = 301
+to = "https://frontside.com/interactors"
+
+[[redirects]]
+force = true
 from = "/bigtest/*"
 status = 200
 to = "https://bigtest.netlify.app/bigtest/:splat"
