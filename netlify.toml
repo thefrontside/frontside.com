@@ -14,7 +14,7 @@ framework = "gatsby"
 force = true
 from = "/bigtest/docs/interactors"
 status = 301
-to = "https://interactors.netlify.app/interactors/:splat"
+to = "https://frontside.com/interactors"
 
 [[redirects]]
 force = true
