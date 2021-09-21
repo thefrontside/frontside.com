@@ -156,29 +156,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   }
 };
 
-const webflowHTML = [
-  'contact-thanks',
-  'contact',
-  'tools',
-];
-
-// sets the dev server to serve the webflow files instead of gatsby produced things
-exports.onCreateDevServer = async ({ app }) => {
-  const webflowFiles = await Promise.all(
-    webflowHTML.map(async (route) => {
-      const file = await fs.readFile(`./static/${route}.html`);
-      return { route, file };
-    })
-  );
-
-  webflowFiles.forEach((staticRoute) => {
-    const route = staticRoute.route === 'index' ? '' : staticRoute.route;
-    app.get(`/${route}`, function (req, res) {
-      res.set('Content-Type', 'text/html').send(staticRoute.file.toString());
-    });
-  });
-};
-
 exports.onPostBuild = async ({ graphql }) => {
   // to confirm all of our urls are coming through as expected
   // we create and commit a list of urls in the text file

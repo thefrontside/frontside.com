@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { globalStyle, style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
 import vars, { laptopQuery, desktopQuery, darkThemeQuery } from './frontside-theme.css';
 import clientsLogo from '../img/q3-2021/client-logos.svg';
@@ -462,4 +462,15 @@ export const backstageOpenMicLine = style({
   height: '3px',
   background: vars.colors.blue,
   marginTop: vars.space.xl,
+});
+
+export const contactTypeform = style({
+  width: '100%',
+  height: '30rem',
+});
+
+export const contactTitle = style({
+  maxWidth: '720px', // to match typeform container
+  marginLeft: 'auto',
+  marginRight: 'auto',
 });

@@ -4240,6 +4240,18 @@
   resolved "https://registry.yarnpkg.com/@turist/time/-/time-0.0.1.tgz#57637d2a7d1860adb9f9cecbdcc966ce4f551d63"
   integrity sha512-M2BiThcbxMxSKX8W4z5u9jKZn6datnM3+FpEU+eYw0//l31E2xhqi7vTAuJ/Sf0P3yhp66SDJgPu3bRRpvrdQQ==
 
+"@typeform/embed-react@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@typeform/embed-react/-/embed-react-1.1.1.tgz#43c59396836ae340f6dd2aae23e865a1e26cc9ba"
+  integrity sha512-1zlAIl58C8dCEPLy7bpBa7/jX8FU82et8CvHe3jWgknXrSmxgkG6rEF8ARVj1tHrMUcc4ffFK3ij/3R9IoXZxw==
+  dependencies:
+    "@typeform/embed" "^1.10.0"
+
+"@typeform/embed@^1.10.0":
+  version "1.18.1"
+  resolved "https://registry.yarnpkg.com/@typeform/embed/-/embed-1.18.1.tgz#b9b724002cf65fa8067dc4deb5b8a2152f02611a"
+  integrity sha512-L9icCzZArjRmns2W08T+x9ZHUZ20gXo4Ry1YxDPl3Vcp6MUQtCcOPCxM24Z3xc/QY0WT3na4OnPgjOLuoSgIXg==
+
 "@types/body-parser@*":
   version "1.19.1"
   resolved "https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.19.1.tgz#0c0174c42a7d017b818303d4b5d969cb0b75929c"

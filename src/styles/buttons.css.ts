@@ -71,9 +71,17 @@ export const actionButton = style([baseActionButton, {
   backgroundImage: `linear-gradient(135deg, ${vars.colors.pink}, ${vars.colors.violet} 46%, ${vars.colors.violet} 54%, ${vars.colors.skyblue})`,
 }]);
 
+export const toPageButton = style([baseActionButton, {
+  backgroundImage: `linear-gradient(135deg, ${vars.colors.pink}, ${vars.colors.violet} 60%)`,
+}])
+
 export const actionButtonGreen = style([baseActionButton, {
   backgroundImage: `linear-gradient(135deg, ${vars.colors.green}, ${vars.colors.violet} 46%, ${vars.colors.violet} 54%, ${vars.colors.skyblue})`,
 }]);
+
+export const toPageButtonGreen = style([baseActionButton, {
+  backgroundImage: `linear-gradient(135deg, ${vars.colors.green}, ${vars.colors.violet} 60%)`,
+}])
 
 export const openmicButton = style([baseButton, {
   background: vars.colors.blue,

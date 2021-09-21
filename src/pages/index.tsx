@@ -46,7 +46,7 @@ import {
   textCentered,
   indentLine,
 } from '../styles/typography.css';
-import { actionButton, actionButtonGreen } from '../styles/buttons.css';
+import { actionButton, actionButtonGreen, toPageButton, toPageButtonGreen } from '../styles/buttons.css';
 
 import heroPlaceholder from '../img/temp/hero_placeholder.png';
 import BlogPreview from '../components/blog-preview';
@@ -183,7 +183,7 @@ export default function IndexPage({
             <h2 className={heading2Xl}>
               We help developers thrive in complexity
             </h2>
-            <Link to="/consulting" className={actionButton}>
+            <Link to="/consulting" className={toPageButton}>
               <strong className={arrowTextWhite}>
                 Learn how we approach DX
               </strong>
@@ -240,7 +240,7 @@ export default function IndexPage({
           </div>
         </div>
         <p className={homeBottomCTA}>
-          <Link to="/backstage" className={actionButtonGreen}>
+          <Link to="/backstage" className={toPageButtonGreen}>
             <strong className={arrowTextWhite}>Adopt Backstage</strong>
           </Link>
         </p>

@@ -10,12 +10,14 @@
 
 /case-studies/ /work 302
 
+/tools /consulting 302
+
 /index.html / 302
 /about.html /about 302
 /people /about 302
 /consulting.html /consulting 302
 /services /consulting 302
-/tools.html /tools 302
+/tools.html /consulting 302
 /contact.html /contact 302
 /contact-thanks.html /contact-thanks 302
 
