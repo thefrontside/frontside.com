@@ -12,7 +12,7 @@ framework = "gatsby"
 
 [[redirects]]
 force = true
-from = "/bigtest/docs/interactors"
+from = "/bigtest/docs/interactors/*"
 status = 301
 to = "https://frontside.com/interactors"
 
