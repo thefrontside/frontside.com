@@ -28,6 +28,7 @@ import {
   consultingCycleThird,
   consultingTab,
   consultingTabImage,
+  consultingTopTCA,
 } from '../styles/page.css';
 import {
   textGradientPinkSkyblue,
@@ -90,7 +91,12 @@ export default function ConsultingPage({
           </h1>
           <p className={textLg}>
             Frontside helps Cloud native orgs create Developer Experiences that
-            bring productivity and joy to their teams
+            put the joy back in productivity
+          </p>
+          <p className={consultingTopTCA}>
+            <Link to="/" className={actionButton}>
+              <strong className={arrowTextWhite}>Request a DX assesment</strong>
+            </Link>
           </p>
         </div>
         <div className={heroImage}>
@@ -107,11 +113,7 @@ export default function ConsultingPage({
           &mdash; Brian Beale, Director of Software Engineering at Resideo{' '}
           <br />
         </p>
-        <p className={homeTopCTA}>
-          <Link to="/" className={actionButton}>
-            <strong className={arrowTextWhite}>Request a DX assesment</strong>
-          </Link>
-        </p>
+
         <div className={featureRow}>
           <div className={featureTextAlternate}>
             <h2 className={featureHeading}>
@@ -120,13 +122,11 @@ export default function ConsultingPage({
             </h2>
             <p>
               There’s a clear path from engineers complaining about being
-              blocked or stuck to managers concerned about burnout rates to
-              leadership worried about deadlines being continuously pushed back.
-              <br />
-              <span className={indentLine} />
-              Frontside implements strategies that allow developers to work
-              decoupled from external dependencies—including other teams—to keep
-              shipping smoothly.
+              blocked to managers concerned about burnout rates to leadership
+              worried about deadlines being continuously pushed back. Frontside
+              implements strategies that allow developers to decouple their work
+              from external dependencies and even other teams to keep shipping
+              smoothly.
             </p>
           </div>
           <div className={featureImage}>
@@ -141,16 +141,11 @@ export default function ConsultingPage({
               for a frustrating job
             </h2>
             <p>
-              The tech industry is witnessing record salaries for engineers,
-              along with the highest rate of people quitting their job.
-              Developers get frustrated when they stumble upon obstacles in
-              their workflow and start considering new options—outside your
-              company.
-              <br />
-              <span className={indentLine} />
-              Frontside takes a proactive approach to discovering pain points in
-              the development process and areas of improvement now and in the
-              long term.
+              Developers don’t just get frustrated when they stumble upon
+              obstacles in their workflow—they leave to find new opportunities
+              that allow them to rediscover the joy of coding. Frontside takes a
+              proactive approach to discovering pain points in the development
+              process to ensure firms retain their talent and deliver on time.
             </p>
           </div>
           <div className={featureImage}>
@@ -165,14 +160,11 @@ export default function ConsultingPage({
               <span className={textSkyblue}>sharp tools</span>
             </h2>
             <p>
-              Your team is incredibly talented, but a faulty developer
-              experience often bogs it down. Dealing with flimsy CI/CD
-              integrations or antiquated patterns makes development feel like
-              bureaucracy rather than a creative endeavor.
-              <br />
-              <span className={indentLine} />
-              Frontside helps you transform your development workflow into an
-              inspiring process for your developers.
+              Dealing with flimsy CI/CD integrations or antiquated patterns
+              makes development feel like navigating a bureaucracy rather than a
+              creative endeavor. Frontside helps firms transform their
+              development workflow into an inspiring process for developers and
+              management alike.
             </p>
           </div>
           <div className={featureImage}>
@@ -189,17 +181,13 @@ export default function ConsultingPage({
                 <h3 className={textXl}>Decoupled teams &rarr; happier teams</h3>
                 <p>
                   The obstacles preventing developers from feeling productive
-                  are sometimes outside your control. For instance, your
-                  engineers may be blocked while another team rushes to finish a
-                  backend service. Or, an external API is unavailable due to an
-                  upgrade. When your developers are tied to too many external
-                  factors, their success becomes fragile.
-                </p>
-
-                <p>
-                  Frontside helps your team implement decoupling strategies via
-                  simulation and future-forward architecture advice so your
-                  developers can continue working despite external dependencies.
+                  can appear outside of your control. Typical development
+                  processes can lead to engineers being blocked while another
+                  team rushes to finish a backend service or waiting for an
+                  external API to get upgraded. Frontside helps your team
+                  implement decoupling strategies via simulation and
+                  future-forward architecture advice so your developers can
+                  continue working despite external dependencies.
                 </p>
               </div>
               <div className={consultingTabImage}>
@@ -214,18 +202,15 @@ export default function ConsultingPage({
                   Reliable local setup = sound production release
                 </h3>
                 <p>
-                  Cloud native teams rely on a growing set of Cloud vendors for
-                  crucial workflows such as authentication. However, these
-                  services come with compromises in the local development
-                  experience, like integration blind spots that lead to bugs
-                  leaking further in the cycle. There are also security and
-                  compliance risks from using valid tokens from the Cloud
-                  service in development.
-                </p>
-                <p>
-                  Frontside helps teams create a local development environment
-                  that matches production faithfully without sensitive data and
-                  facilitates onboarding new colleagues.
+                  The success of Cloud native teams can feel increasingly
+                  fragile when they depend on Cloud vendors for crucial
+                  workflows such as authentication. These services oftentimes
+                  lead to frustrations in the development experience like
+                  integration blind spots that lead to bugs or security and
+                  compliance risks when using Cloud service tokens. Frontside
+                  helps teams create a local development environment that
+                  matches production faithfully without exposing sensitive data
+                  and facilitates seamlessly onboarding new colleagues.
                 </p>
               </div>
               <div className={consultingTabImage}>
@@ -240,18 +225,13 @@ export default function ConsultingPage({
                   Simplified testing &rarr; shorter feedback loops{' '}
                 </h3>
                 <p>
-                  It is only possible to release multiple times a week, or a
-                  day, if you have a robust testing strategy. However, testing
-                  is usually a frustrating aspect of the development cycle
-                  because it is often slow and unreliable. Furthermore, test
-                  data management can be burdensome as it gets outdated quickly
-                  if not managed correctly.
-                </p>
-                <p>
-                  Frontside helps teams structure their testing strategy by
-                  making it easier for developers to write and maintain
-                  meaningful tests that reduce QA workload and minimize feedback
-                  loops.
+                  Frustration with testing in the development cycle seems
+                  inevitable because too often tests are slow and unreliable. At
+                  the same time test data management can be burdensome and
+                  quickly become outdated if not managed correctly. Frontside
+                  helps teams structure a robust testing strategy by making it
+                  easier for developers to write and maintain meaningful tests
+                  that reduce QA workload and minimize feedback loops.
                 </p>
               </div>
               <div className={consultingTabImage}>
@@ -266,9 +246,10 @@ export default function ConsultingPage({
         <header className={sectionHeader}>
           <h2 className={text3Xl}>The whole development cycle is important</h2>
           <p className={textLg}>
-            You have to optimize every part of the development process if you
-            want to have happy developers. They want to ship, but if the process
-            is slow, convoluted, time consuming, engineers get frustrated.
+            Optimizing every part of the development process is crucial if you
+            want to have happy developers. Engineers quickly get frustrated and
+            releases don’t ship if any part of the development process is slow,
+            convoluted, or time consuming.
           </p>
         </header>
         <div className={consultingCycleContainer}>

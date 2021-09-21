@@ -46,7 +46,12 @@ import {
   textCentered,
   indentLine,
 } from '../styles/typography.css';
-import { actionButton, actionButtonGreen, toPageButton, toPageButtonGreen } from '../styles/buttons.css';
+import {
+  actionButton,
+  actionButtonGreen,
+  toPageButton,
+  toPageButtonGreen,
+} from '../styles/buttons.css';
 
 import heroPlaceholder from '../img/temp/hero_placeholder.png';
 import BlogPreview from '../components/blog-preview';
@@ -89,7 +94,7 @@ export default function IndexPage({
         <div className={heroText}>
           <h1 className={heading3Xl}>
             <span className={textGradientSkybluePurple}>Empower</span> your
-            developers — <br className={heroBreak} /> from{' '}
+            developers <br className={heroBreak} /> from{' '}
             <strong className={textGradientDemiSkybluePink}>
               onboarding to
             </strong>{' '}
@@ -97,20 +102,19 @@ export default function IndexPage({
             <strong className={textGradientPurplePink}>release</strong>
           </h1>
           <p className={textLg}>
-            Frontside creates cohesive Development Experiences for Cloud native
-            teams: from local setup and testing to deployments and developer
-            portals.
+            Frontside creates cohesive development experiences for Cloud native
+            teams – from local setup and testing to deployment and developer
+            portals, we have you covered.
           </p>
+          <div className={clientLogos}>
+            Trusted by HP, Resideo, Honeywell, Standard Chartered, Dell, HSBC
+            and others
+          </div>
         </div>
         <div className={heroImage}>
           <img src={homeHero} alt="" />
         </div>
       </header>
-
-      <div className={clientLogos}>
-        Trusted by HP, Resideo, Honeywell, Standard Chartered, Dell, HSBC and
-        others
-      </div>
 
       <section className={pageWrap}>
         <div className={featureRow}>
@@ -120,14 +124,10 @@ export default function IndexPage({
               after Kubernetes
             </h2>
             <p>
-              Once your break down the monolith, you're on your way to becoming
-              a top-performing software organization. But Cloud native comes
-              with its challenges, especially for your developers.
-              <br />
-              <span className={indentLine} />
-              Frontside brings in cross-functional consultants who'll help you
-              discover bottlenecks throughout your workflow and propose
-              game-changing strategies to boost your teams' success.
+              Being Cloud native comes with its own challenges, especially for
+              your developers. Frontside brings in cross-functional consultants
+              who'll help you remove bottlenecks throughout your workflow and
+              propose game-changing strategies to boost your teams' success.
             </p>
           </div>
           <div className={featureImage}>
@@ -142,14 +142,11 @@ export default function IndexPage({
               strategy
             </h2>
             <p>
-              Testing and QA are significant sources of frustration for
-              developers. Yet, all Cloud native manuals point to automated
-              testing being a cornerstone for frequent deliveries.
-              <br />
-              <span className={indentLine} />
-              Using Open Source technologies, Frontside helps teams move tests
-              closer to development while making them enjoyable, fast, and
-              reliable.
+              Automated testing is a cornerstone for on-time deliveries that
+              work, but QA is a significant source of frustration for
+              developers. Using Open Source technologies, Frontside helps teams
+              move tests inside the development cycle while making them both
+              fast and reliable.
             </p>
           </div>
           <div className={featureImage}>
@@ -164,14 +161,11 @@ export default function IndexPage({
               <strong className={textSkyblue}>leadership</strong> into your team
             </h2>
             <p>
-              Most companies have great developers in their teams but lack
-              enough leaders to identify improvement opportunities and socialize
-              technical change.
-              <br />
-              <span className={indentLine} />
-              Frontside brings in insights cultivated from our network of
-              enterprise partners and Open Source maintainers to create a
-              nurtured Inner Source culture in your organization.
+              Most companies have great developers on their teams but lack the
+              leadership to identify improvement opportunities and implement
+              change. Frontside brings in insights cultivated from our network
+              of enterprise partners and Open Source maintainers to create and
+              nurture an Inner Source culture within your organization.
             </p>
           </div>
           <div className={featureImage}>
@@ -193,12 +187,10 @@ export default function IndexPage({
             <HomeGraph />
           </div>
         </div>
-      </section>
 
-      <section className={pageWrap}>
         <header className={sectionHeader}>
           <h2 className={homeBackstageHeading}>
-            Bring infrastructure, services, and people together with{' '}
+            Bring infrastructure, services and people together with{' '}
             <strong className={textGreen}>Backstage</strong>
           </h2>
           <p className={textLg}>
@@ -208,33 +200,31 @@ export default function IndexPage({
         </header>
         <div className={columnedhighlights}>
           <div className={highlight}>
-            <h3 className={highlightHeading}>
-              Every service at everyone's sight
-            </h3>
+            <h3 className={highlightHeading}>Every service in sight</h3>
             <p className={highlightText}>
               With Backstage, you can align your organization's code and Cloud
-              services with business and make the relationship visible and
-              actionable for everyone.
+              services and make the relationship visible and actionable for
+              everyone.
             </p>
             <img src={backstageSight} alt="" className={highlightImage} />
           </div>
           <div className={highlight}>
-            <h3 className={highlightHeading}>Shift infrastructure costs left</h3>
+            <h3 className={highlightHeading}>
+              Smarten up infrastructure costs
+            </h3>
             <p className={highlightText}>
-              Cloud native can allow your teams to move faster; Backstage can
-              help prevent infra bills from growing as fast by bringing cost
+              Going Cloud native allows your teams to move faster, but Backstage
+              prevents your costs from growing as well by bringing cost
               optimization closer to your developers.
             </p>
             <img src={backstageShiftleft} alt="" className={highlightImage} />
           </div>
           <div className={highlight}>
-            <h3 className={highlightHeading}>
-              De-risk your implementation
-            </h3>
+            <h3 className={highlightHeading}>De-risk your implementation</h3>
             <p className={highlightText}>
-              Backstage opens up new frontiers for many software organizations,
-              but it is a constantly evolving alpha software that requires deep
-              expertise to guarantee long-term success.{' '}
+              Our deep expertise with Backstage’s constantly evolving alpha
+              software means we can open up new frontiers for software
+              organizations that guarantee long-term success.
             </p>
             <img src={backstageDerisk} alt="" className={highlightImage} />
           </div>
