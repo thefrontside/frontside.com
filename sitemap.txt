@@ -69,6 +69,7 @@
 /blog/6
 /code-of-conduct/
 /consulting/
+/contact/
 /people/alex-ford/
 /people/brandon-hays/
 /people/charles-lowell/
@@ -320,6 +321,3 @@
 /tags/web-accessibility/
 /tags/web-standards/
 /tags/x-select/
-/contact-thanks
-/contact
-/tools

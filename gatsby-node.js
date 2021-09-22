@@ -174,11 +174,6 @@ exports.onPostBuild = async ({ graphql }) => {
 
   const urlList = queryRecords.allSitePage.edges
     .map(({ node }) => node.path)
-    .concat(
-      webflowHTML
-        .filter((staticRoute) => staticRoute !== 'index')
-        .map((staticRoute) => `/${staticRoute}`)
-    )
     .join('\n');
 
   await fs.writeFile('./sitemap.txt', urlList);
