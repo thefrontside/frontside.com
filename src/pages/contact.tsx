@@ -12,13 +12,13 @@ import { headingXl, textLg, mardownColumn } from '../styles/typography.css';
 
 export default function ConsultingPage() {
   return (
-    <Layout title="Contact">
+    <Layout title="Contact Frontside">
       <section className={pageWrap}>
         <header className={contactTitle}>
           <h2 className={headingXl}>Contact us</h2>
         </header>
 
-        <Widget id="n5Hz8E9N" className={contactTypeform} opacity={0} />
+        <Widget id="n5Hz8E9N" className={contactTypeform} />
       </section>
     </Layout>
   );

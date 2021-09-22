@@ -58,14 +58,10 @@ export const socialLink = style([textSmCaps, {
   marginBottom: vars.space.md,
 }]);
 
-const baseActionButton = style({
-  display: 'inline-block',
-  color: vars.colors.white,
-  padding: vars.space['xs'],
+const baseActionButton = style([baseButton, {
   paddingRight: vars.space['sm'],
   paddingLeft: vars.space['sm'],
-  borderRadius: vars.radius.md,
-});
+}]);
 
 export const actionButton = style([baseActionButton, {
   backgroundImage: `linear-gradient(135deg, ${vars.colors.pink}, ${vars.colors.violet} 46%, ${vars.colors.violet} 54%, ${vars.colors.skyblue})`,

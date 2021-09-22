@@ -1,4 +1,4 @@
-import { globalStyle, style } from '@vanilla-extract/css';
+import { globalStyle, keyframes, style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
 import vars, { laptopQuery, desktopQuery, darkThemeQuery } from './frontside-theme.css';
 import clientsLogo from '../img/q3-2021/client-logos.svg';
@@ -60,7 +60,7 @@ export const heroBreak = style({
   }
 });
 
-export const heroImage = style({
+const sideImage = style({
   flexShrink: 1,
   marginTop: vars.space.md,
   '@media': {
@@ -68,7 +68,15 @@ export const heroImage = style({
       marginTop: 0,
     }
   }
-})
+});
+
+export const heroImage = style([sideImage, {
+  '@media': {
+    [laptopQuery]: {
+      marginTop: calc(vars.space.md).negate().toString(),
+    }
+  }
+}]);
 
 export const featureText = style({
   '@media': {
@@ -97,7 +105,7 @@ export const featureTextAlternate = style([featureText, {
   }
 }]);
 
-export const featureImage = heroImage;
+export const featureImage = sideImage;
 
 export const aboutTeamImg = style({
   width: '15rem',
@@ -466,11 +474,28 @@ export const backstageOpenMicLine = style({
 
 export const contactTypeform = style({
   width: '100%',
-  height: '30rem',
+  height: '35rem',
 });
 
 export const contactTitle = style({
   maxWidth: '720px', // to match typeform container
   marginLeft: 'auto',
   marginRight: 'auto',
+  marginBottom: vars.space.md,
 });
+
+const fadeIn = keyframes({
+  '0%': {
+    opacity: 0,
+    transform: 'translate3d(0, -100%, 0)',
+  },
+  '100%': {
+    opacity: 1,
+    transform: 'translate3d(0, 0, 0)'
+  }
+});
+
+export const ctaSubmittedBox = style([textLg, {
+  animationName: fadeIn,
+  animationDuration: calc('1s').multiply(0.75).toString(),
+}]);

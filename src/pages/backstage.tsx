@@ -22,7 +22,6 @@ import {
   backstageOpenMicLine,
 } from '../styles/page.css';
 import {
-  textGradientSkybluePink,
   textGradientSkyblueGreen,
   heading3Xl,
   textGreen,
@@ -31,12 +30,10 @@ import {
   headingXl,
   textSm,
   text2Xl,
-  arrowText,
   arrowTextWhite,
   textGradientGreenSkyblue,
   indentLine,
   textXl,
-  textArrowGreen,
   arrowTextGreen,
 } from '../styles/typography.css';
 import {

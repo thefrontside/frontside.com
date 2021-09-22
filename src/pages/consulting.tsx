@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
+import { PopupButton } from '@typeform/embed-react';
 
 import Layout from '../components/layout';
 import BlogPreview from '../components/blog-preview';
@@ -20,7 +21,6 @@ import {
   entryColumn,
   homeBottomCTA,
   homeBottomCTAtext,
-  homeTopCTA,
   consultingCycleContainer,
   consultingCycleIllustration,
   consultingCycleFirst,
@@ -29,6 +29,7 @@ import {
   consultingTab,
   consultingTabImage,
   consultingTopTCA,
+  ctaSubmittedBox,
 } from '../styles/page.css';
 import {
   textGradientPinkSkyblue,
@@ -43,9 +44,9 @@ import {
   text3Xl,
   textGradientDemiSkybluePink,
   arrowTextWhite,
-  indentLine,
   headingLg,
-  mardownColumn,
+  textSm,
+  textGradientPurpleSkyblue,
 } from '../styles/typography.css';
 import { actionButton } from '../styles/buttons.css';
 
@@ -57,6 +58,39 @@ import dxCycle from '../img/q3-2021/dx-cycle.png';
 import dxDecoupled from '../img/q3-2021/dx-decoupled.png';
 import dxLocalDev from '../img/q3-2021/dx-local-dev.png';
 import dxTesting from '../img/q3-2021/dx-shift-left-testing.png';
+
+function ConsultingCTA({submitted, setSubmitted}) {
+
+  const onSubmit = () => {
+    document.body.style.overflow = '';
+    setSubmitted(true);
+  };
+
+  return (
+    <>
+      {!submitted ? (
+        <PopupButton
+          id="n5Hz8E9N"
+          hidden={{ topic: 'dx' }}
+          className={actionButton}
+          onSubmit={onSubmit}
+        >
+          <strong className={arrowTextWhite}>Request a DX assesment</strong>
+        </PopupButton>
+      ) : (
+        <p className={ctaSubmittedBox}>
+          <strong className={textGradientPurpleSkyblue}>
+            Thanks for reaching out!
+          </strong>
+          <br />
+          <span className={textSm}>
+            We'll get back to you within a business day.
+          </span>
+        </p>
+      )}
+    </>
+  );
+}
 
 export default function ConsultingPage({
   data: {
@@ -79,6 +113,8 @@ export default function ConsultingPage({
         : node.markdown.frontmatter.img.childImageSharp.fixed.src,
   }));
 
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <Layout title="DX Consulting for Cloud native teams">
       <header className={heroWrap}>
@@ -94,9 +130,7 @@ export default function ConsultingPage({
             put the joy back in productivity
           </p>
           <p className={consultingTopTCA}>
-            <Link to="/" className={actionButton}>
-              <strong className={arrowTextWhite}>Request a DX assesment</strong>
-            </Link>
+            <ConsultingCTA submitted={submitted} setSubmitted={setSubmitted} />
           </p>
         </div>
         <div className={heroImage}>
@@ -282,9 +316,7 @@ export default function ConsultingPage({
           <p className={homeBottomCTAtext}>
             Make your developers happier and more productive
           </p>
-          <Link to="/" className={actionButton}>
-            <strong className={arrowTextWhite}>Request a DX assesment</strong>
-          </Link>
+          <ConsultingCTA submitted={submitted} setSubmitted={setSubmitted} />
         </div>
       </section>
 
