@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 
@@ -20,6 +20,7 @@ import {
   consultingTopTCA,
   backstageOpenMicBox,
   backstageOpenMicLine,
+  ctaSubmittedBox,
 } from '../styles/page.css';
 import {
   textGradientSkyblueGreen,
@@ -48,6 +49,40 @@ import backstageHero from '../img/q3-2021/backstage-hero.png';
 import backstageDomain from '../img/q3-2021/backstage-map-domain.png';
 import backstageDerisk from '../img/q3-2021/backstage-derisk.png';
 import backstageDx from '../img/q3-2021/backstage-integrate-dx.png';
+import { PopupButton } from '@typeform/embed-react';
+
+function BakcstageCTA({submitted, setSubmitted, label = 'Make Backstage work for you'}) {
+
+  const onSubmit = () => {
+    document.body.style.overflow = '';
+    setSubmitted(true);
+  };
+
+  return (
+    <>
+      {!submitted ? (
+        <PopupButton
+          id="n5Hz8E9N"
+          hidden={{ topic: 'backstage' }}
+          className={actionButtonGreen}
+          onSubmit={onSubmit}
+        >
+          <strong className={arrowTextWhite}>{label}</strong>
+        </PopupButton>
+      ) : (
+        <p className={ctaSubmittedBox}>
+          <strong className={textGradientGreenSkyblue}>
+            Thanks for reaching out!
+          </strong>
+          <br />
+          <span className={textSm}>
+            We'll get back to you within a business day.
+          </span>
+        </p>
+      )}
+    </>
+  );
+}
 
 export default function BackstagePage({
   data: {
@@ -70,6 +105,9 @@ export default function BackstagePage({
         : node.markdown.frontmatter.img.childImageSharp.fixed.src,
   }));
 
+  const [submitted, setSubmitted] = useState(false);
+
+
   return (
     <Layout title="Adopt Backstage your way with Frontside">
       <header className={heroWrap}>
@@ -85,11 +123,7 @@ export default function BackstagePage({
             long-run.
           </p>
           <p className={consultingTopTCA}>
-            <Link to="/" className={actionButtonGreen}>
-              <strong className={arrowTextWhite}>
-                Make Backstage work for you
-              </strong>
-            </Link>
+            <BakcstageCTA submitted={submitted} setSubmitted={setSubmitted} />
           </p>
         </div>
         <div className={heroImage}>

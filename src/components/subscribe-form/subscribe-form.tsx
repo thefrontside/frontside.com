@@ -16,6 +16,7 @@ import {
   textButton,
 } from './subscribe-forms.css';
 import { Link } from 'gatsby';
+import { ctaSubmittedBox } from '../../styles/page.css';
 
 SubscribeForm.propTypes = {
   highlight: PropTypes.bool,
@@ -48,7 +49,7 @@ export default function SubscribeForm() {
       </p>
       {status === 'sent' ? (
         <>
-          <p className="subscribe-form--thanks">
+          <p className={ctaSubmittedBox}>
             <strong className={textLg}>Thanks for joining us!</strong>
             <br /> We also hang out in a{' '}
             <a

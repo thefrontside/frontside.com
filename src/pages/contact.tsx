@@ -6,9 +6,8 @@ import {
   contactTitle,
   contactTypeform,
   pageWrap,
-  sectionHeader,
 } from '../styles/page.css';
-import { headingXl, textLg, mardownColumn } from '../styles/typography.css';
+import { headingXl } from '../styles/typography.css';
 
 export default function ConsultingPage() {
   return (
