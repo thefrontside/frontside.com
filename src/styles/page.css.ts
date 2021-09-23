@@ -6,16 +6,19 @@ import clientsLogoWhite from '../img/q3-2021/client-logos-white.svg';
 import backgroundBubbles from '../img/q3-2021/backgruond-blue-bubbles.png';
 import openMicBg from '../img/q3-2021/backstage-openmic-bg.png';
 
-import { textLg, textUppercase, textXl } from './typography.css';
+import { textBlueDashWhite, textLg, textUppercase, textXl } from './typography.css';
 
 export const pageWrap = style({
   boxSizing: 'border-box',
   width: '100vw',
   overflow: 'hidden',
-  padding: vars.space.md,
+  padding: vars.space.sm,
+  maxWidth: '37rem',
+  margin: '0 auto',
 
   '@media': {
     [laptopQuery]: {
+      padding: vars.space.md,
       maxWidth: vars.pixelBase.maxWdith,
     },
     [desktopQuery]: {
@@ -144,7 +147,6 @@ export const clientLogos = style({
   textIndent: '-1000px',
   overflow: 'hidden',
   marginTop: vars.space.lg,
-  marginBottom: vars.space['2xl'],
   '@media': {
     [darkThemeQuery]: {
       backgroundImage: `url(${clientsLogoWhite})`,
@@ -349,13 +351,14 @@ export const homeBottomCTAtext = style([textLg, {
 }]);
 
 export const homeGraphRow = style({
+  marginBottom: vars.space['2xl'],
+  marginTop: vars.space['2xl'],
   '@media': {
     [laptopQuery]: {
       display: 'flex',
       flexFlow: 'row nowrap',
       alignItems: 'center',
       marginTop: vars.space['2xl'],
-      marginBottom: vars.space['2xl'],
     }
   }
 });
@@ -474,7 +477,12 @@ export const backstageOpenMicLine = style({
 
 export const contactTypeform = style({
   width: '100%',
-  height: '35rem',
+  height: '40rem',
+  '@media': {
+    [laptopQuery]: {
+      height: '35rem',
+    }
+  }
 });
 
 export const contactTitle = style({

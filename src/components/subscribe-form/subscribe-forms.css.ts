@@ -9,6 +9,8 @@ export const newsletterForm = style([{
   marginTop: vars.space.lg,
   marginBottom: vars.space.xl,
   maxWidth: '37rem',
+  paddingRight: vars.space.sm,
+  paddingLeft: vars.space.sm,
 }]);
 
 export const inputButtonBar = style({

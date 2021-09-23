@@ -52,9 +52,17 @@ export const text2Xl = style({
 });
 
 export const text3Xl = style({
-  fontSize: vars.fontSize['3xl'],
-  lineHeight: vars.lineHeights['3xl'],
-  letterSpacing: vars.letterSpacing['3xl'],
+  fontSize: vars.fontSize['2xl'],
+  lineHeight: vars.lineHeights['2xl'],
+  letterSpacing: vars.letterSpacing['2xl'],
+
+  '@media': {
+    [laptopQuery]: {
+      fontSize: vars.fontSize['3xl'],
+      lineHeight: vars.lineHeights['3xl'],
+      letterSpacing: vars.letterSpacing['3xl'],
+    }
+  }
 });
 
 export const textExtrabold = style({
@@ -212,6 +220,7 @@ const clipBackgroundToText = style({
   backgroundClip: 'text',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
+  display: 'inline-block',
   fontWeight: vars.fontWeights.extrabold
 })
 
@@ -293,8 +302,8 @@ export const mardownColumn = style({
   boxSizing: 'border-box',
   width: '100vw',
   overflow: 'hidden',
-  padding: vars.space.md,
-  maxWidth: calc('37rem').add(vars.space.md).add(vars.space.md).toString(),
+  padding: vars.space.sm,
+  maxWidth: calc('37rem').add(vars.space.sm).add(vars.space.sm).toString(),
   marginLeft: 'auto',
   marginRight: 'auto',
 
@@ -314,7 +323,7 @@ export const mardownColumn = style({
 
 globalStyle(`${mardownColumn} h2`, {
   fontSize: '1.4545455rem',
-  lineHeight: '2.8181818rem',
+  lineHeight: '1.8181818rem',
   marginTop: '1.4090909rem',
   marginBottom: '1.4090909rem',
   letterSpacing: vars.letterSpacing.xl
@@ -322,7 +331,7 @@ globalStyle(`${mardownColumn} h2`, {
 
 globalStyle(`${mardownColumn} > h3`, {
   fontSize: '1rem',
-  lineHeight: '2.8181818rem',
+  lineHeight: '1.8181818rem',
   marginTop: '1.4090909rem',
   marginBottom: '0',
   fontWeight: vars.fontWeights.bold,
@@ -370,7 +379,7 @@ globalStyle(`${mardownColumn} .markdown-heading-link:before`, {
   height: '16px',
   opacity: 0.3,
   position: 'absolute',
-  transform: 'translate(-1.3rem, 1rem)',
+  transform: 'translate(-1.3rem, 0.3em)',
   width: '16px',
 });
 
@@ -379,10 +388,10 @@ globalStyle(`${mardownColumn} .markdown-heading-link:hover:before`, {
 });
 
 globalStyle(`${mardownColumn} img`, {
-  width: calc('100%').add(vars.space.md).add(vars.space.md).toString(),
-  maxWidth: calc('100%').add(vars.space.md).add(vars.space.md).toString(),
-  marginLeft: calc(vars.space.md).negate().toString(),
-  marginRight: calc(vars.space.md).negate().toString(),
+  width: calc('100%').add(vars.space.sm).add(vars.space.sm).toString(),
+  maxWidth: calc('100%').add(vars.space.sm).add(vars.space.sm).toString(),
+  marginLeft: calc(vars.space.sm).negate().toString(),
+  marginRight: calc(vars.space.sm).negate().toString(),
   '@media': {
     [laptopQuery]: {
       width: calc('100%').add(vars.space.xl).add(vars.space.xl).toString(),
