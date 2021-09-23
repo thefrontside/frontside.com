@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import Navbar from '../navbar';
 import Footer from '../footer';
-import Plausible from 'plausible-tracker';
 
 import '../../styles/global.css';
 import 'syntax-highlighting/assets/css/prism/prism-base16-ateliersulphurpool.light.css';
@@ -15,10 +14,7 @@ export default function TemplateWrapper({
   image,
   path,
 }) {
-  const { trackPageview } = Plausible({
-    domain: 'frontside.com',
-  });
-  trackPageview();
+
   return (
     <StaticQuery
       query={graphql`

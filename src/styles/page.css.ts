@@ -63,7 +63,7 @@ export const heroBreak = style({
   }
 });
 
-const sideImage = style({
+export const sideImage = style({
   flexShrink: 1,
   marginTop: vars.space.md,
   '@media': {

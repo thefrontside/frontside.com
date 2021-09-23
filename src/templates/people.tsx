@@ -2,24 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
-import { GatsbyImage } from 'gatsby-plugin-image';
+
 import {
-  heroImage,
   heroText,
   heroWrap,
-  pageWrap,
   radiusMd,
+  sideImage,
 } from '../styles/page.css';
 import {
   headingXl,
   heading3Xl,
   mardownColumn,
   peopleHeroHeading,
-  textBlueDashWhite,
   textLg,
-  textSm,
 } from '../styles/typography.css';
-import { paginationButton, socialLink, tagButton } from '../styles/buttons.css';
+import { socialLink } from '../styles/buttons.css';
 
 const PersonPage = ({
   data: {
@@ -82,7 +79,7 @@ const PersonPage = ({
             </>
           )}
         </div>
-        <div className={heroImage}>
+        <div className={sideImage}>
           {img && (
             <img
               src={img.childImageSharp.fixed.src}
