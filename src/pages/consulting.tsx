@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { PopupButton } from '@typeform/embed-react';
+import Plausible from 'plausible-tracker';
 
 import Layout from '../components/layout';
 import BlogPreview from '../components/blog-preview';
@@ -59,11 +60,49 @@ import dxDecoupled from '../img/q3-2021/dx-decoupled.png';
 import dxLocalDev from '../img/q3-2021/dx-local-dev.png';
 import dxTesting from '../img/q3-2021/dx-shift-left-testing.png';
 
-function ConsultingCTA({submitted, setSubmitted}) {
+function ConsultingCTA({ submitted, setSubmitted }) {
+  let questionsTrack = 'dx0';
+  const { trackEvent } = Plausible({
+    domain: 'frontside.com',
+  });
 
   const onSubmit = () => {
     document.body.style.overflow = '';
     setSubmitted(true);
+    trackEvent('cta-dx', {
+      props: {
+        status: 'submitted',
+        qt: questionsTrack,
+      },
+    });
+  };
+
+  const onOpenedForm = () => {
+    trackEvent('cta-consulting', {
+      props: {
+        status: 'active',
+        qt: questionsTrack,
+      },
+    });
+  };
+
+  const onQuestionChange = ({ ref }) => {
+    questionsTrack = `${questionsTrack}->${ref.slice(0, 4)}`;
+    trackEvent('cta-dx', {
+      props: {
+        status: 'active',
+        qt: questionsTrack,
+      },
+    });
+  };
+
+  const onClose = () => {
+    trackEvent('cta-dx', {
+      props: {
+        status: 'closed',
+        qt: questionsTrack,
+      },
+    });
   };
 
   return (
@@ -74,6 +113,9 @@ function ConsultingCTA({submitted, setSubmitted}) {
           hidden={{ topic: 'dx' }}
           className={actionButton}
           onSubmit={onSubmit}
+          onReady={onOpenedForm}
+          onQuestionChanged={onQuestionChange}
+          onClose={onClose}
         >
           <strong className={arrowTextWhite}>Request a DX assesment</strong>
         </PopupButton>
@@ -122,8 +164,8 @@ export default function ConsultingPage({
           <h1 className={heading3Xl}>
             <span className={textGradientPinkSkyblue}>Developer</span>
             <br />
-            <span className={textGradientPinkSkyblue}>Experience: </span>
-            where deliveries and retention meet
+            <span className={textGradientPinkSkyblue}>Experience: </span> where
+            deliveries and retention meet
           </h1>
           <p className={textLg}>
             Frontside helps Cloud native orgs create Developer Experiences that

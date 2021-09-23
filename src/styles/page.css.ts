@@ -380,6 +380,7 @@ export const homeGraphImage = style({
     [laptopQuery]: {
       display: 'block',
       width: '60%',
+      minWidth: '800px',
       flexShrink: 0,
     }
   }

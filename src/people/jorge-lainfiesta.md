@@ -1,7 +1,7 @@
 ---
 templateKey: people
 name: Jorge Lainfiesta
-title: Director of Communications
+title: Communications & Marketing
 location: Barcelona, Spain
 img: ../img/q3-2021/team/jorge.jpg
 imgAlt: Portrait of Jorge. He has short hair a short stubble.

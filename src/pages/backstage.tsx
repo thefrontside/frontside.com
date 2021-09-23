@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
+import Plausible from 'plausible-tracker';
 
 import Layout from '../components/layout';
 
@@ -51,11 +52,52 @@ import backstageDerisk from '../img/q3-2021/backstage-derisk.png';
 import backstageDx from '../img/q3-2021/backstage-integrate-dx.png';
 import { PopupButton } from '@typeform/embed-react';
 
-function BakcstageCTA({submitted, setSubmitted, label = 'Make Backstage work for you'}) {
-
+function BakcstageCTA({
+  submitted,
+  setSubmitted,
+  label = 'Make Backstage work for you',
+}) {
+  let questionsTrack = 'bs0';
+  const { trackEvent } = Plausible({
+    domain: 'frontside.com',
+  });
   const onSubmit = () => {
     document.body.style.overflow = '';
     setSubmitted(true);
+    trackEvent('cta-backstage', {
+      props: {
+        status: 'submitted',
+        qt: questionsTrack,
+      },
+    });
+  };
+
+  const onOpenedForm = () => {
+    trackEvent('cta-backstage', {
+      props: {
+        status: 'active',
+        qt: questionsTrack,
+      },
+    });
+  };
+
+  const onQuestionChange = ({ ref }) => {
+    questionsTrack = `${questionsTrack}->${ref.slice(0, 4)}`;
+    trackEvent('cta-backstage', {
+      props: {
+        status: 'active',
+        qt: questionsTrack,
+      },
+    });
+  };
+
+  const onClose = () => {
+    trackEvent('cta-backstage', {
+      props: {
+        status: 'closed',
+        qt: questionsTrack,
+      },
+    });
   };
 
   return (
@@ -66,6 +108,9 @@ function BakcstageCTA({submitted, setSubmitted, label = 'Make Backstage work for
           hidden={{ topic: 'backstage' }}
           className={actionButtonGreen}
           onSubmit={onSubmit}
+          onReady={onOpenedForm}
+          onQuestionChanged={onQuestionChange}
+          onClose={onClose}
         >
           <strong className={arrowTextWhite}>{label}</strong>
         </PopupButton>
@@ -106,7 +151,6 @@ export default function BackstagePage({
   }));
 
   const [submitted, setSubmitted] = useState(false);
-
 
   return (
     <Layout title="Adopt Backstage your way with Frontside">

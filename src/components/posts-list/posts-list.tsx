@@ -22,12 +22,12 @@ export default function PostsList({
       )}
       <ul className={entriesList}>
         {posts.map((post, i) => (
-          <>
-            <li className={entriesListEntry} key={i}>
+          <React.Fragment key={i}>
+            <li className={entriesListEntry}>
               <BlogPreview post={post} layout={(includeFeatured && i === 0) ? 'featured': 'sided'} />
             </li>
             {(includeFeatured && i === 0 || !includeFeatured && i === 2) ? <SubscribeForm /> : <></>}
-          </>
+          </React.Fragment>
         ))}
       </ul>
       {pagination}

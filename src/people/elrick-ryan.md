@@ -1,7 +1,7 @@
 ---
 templateKey: people
 name: Elrick Ryan
-title: Engineering Consultant
+title: Engineering Consultant / Business Developer
 location: Boston, Massachusetts
 img: ../img/q3-2021/team/elrick.jpg
 imgAlt: Portrait of Elrick. He has short hair and a short beard.
