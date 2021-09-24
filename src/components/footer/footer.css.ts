@@ -8,10 +8,10 @@ export const footerWrapper = style({
 
   '@media': {
     [laptopQuery]: {
-      marginTop: vars.space['xl'],
+      marginTop: vars.space['lg'],
     },
     [desktopQuery]: {
-      marginTop: vars.space['2xl'],
+      marginTop: vars.space['xl'],
     }
   }
 })
@@ -53,7 +53,7 @@ export const footernavLink = style({
 
 export const footerLegal = style([textSm, {
   textAlign: 'center',
-  marginTop: vars.space['2xl'],
+  marginTop: vars.space['lg'],
 }]);
 
 export const footerAddress = style({

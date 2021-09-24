@@ -224,13 +224,20 @@ export const highlightText = style({
   '@media': {
     [laptopQuery]: {
       order: 1,
-      marginBottom: vars.space.md,
+      marginBottom: vars.space.sm,
+      marginTop: vars.space.xs,
     }
   },
 });
 
 export const highlightHeading = style([textXl, {
   fontWeight: vars.fontWeights.extrabold,
+  marginBottom: vars.space.sm,
+  '@media': {
+    [laptopQuery]: {
+      marginBottom: 0,
+    }
+  }
 }]);
 
 export const entryColumns = style([columnedhighlights, {
@@ -465,6 +472,7 @@ export const backstageOpenMicBox = style({
   '@media': {
     [laptopQuery]: {
       width: '66%',
+      backgroundPosition: '20rem center',
     }
   }
 });

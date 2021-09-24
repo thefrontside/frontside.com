@@ -37,6 +37,7 @@ import {
   indentLine,
   textXl,
   arrowTextGreen,
+  headingLg,
 } from '../styles/typography.css';
 import {
   actionButton,
@@ -163,8 +164,7 @@ export default function BackstagePage({
             </span>
           </h1>
           <p className={textLg}>
-            We help you adapt, extend and get the most out of Backstage for the
-            long-run.
+            We help you get the most out of Backstage for the long-run
           </p>
           <p className={consultingTopTCA}>
             <BakcstageCTA submitted={submitted} setSubmitted={setSubmitted} />
@@ -184,13 +184,11 @@ export default function BackstagePage({
             </h2>
             <p>
               Your combination of tech stack, services, and people is unique to
-              your organization. Don't compromise your needs to fit them into
-              what Backstage supports today.
-              <br />
-              <span className={indentLine} />
-              As an active contributor to Backstage, Frontside can help you
-              cover all your use-cases, even those not yet in platform—and
-              without moving away from the OSS project.
+              your organization. But you don't have to compromise your needs to
+              fit them into what Backstage supports today. As an active
+              contributor to Backstage, Frontside can help you cover all your
+              use-cases—even those not yet in platform—without moving away from
+              OSS.
             </p>
           </div>
           <div className={featureImage}>
@@ -204,15 +202,11 @@ export default function BackstagePage({
               <span className={textGreen}>De-risk</span> your Backstage adoption
             </h2>
             <p>
-              Backstage is alpha software and requires significant resources to
-              put in place. Avoid getting locked out of future upgrades with
-              uninformed early choices in your Backstage adoption.
-              <br />
-              <span className={indentLine} />
-              Frontside understands Backstage's current limitations and roadmap
-              in and out and will help you set up the platform so you can keep
-              getting more value out of your Backstage instance in the long
-              term.
+              Avoid getting locked out of future Backstage upgrades with
+              uninformed early choices in your Backstage adoption. Frontside
+              understands Backstage's current alpha software limitations and can
+              help you set up the platform so you can get what you need now and
+              keep getting value in the long term.
             </p>
           </div>
           <div className={featureImage}>
@@ -226,34 +220,29 @@ export default function BackstagePage({
               <span className={textGreen}>Integrate</span> Backstage in your DX
             </h2>
             <p>
-              Setting up Backstage's Catalog brings in power, but it's the
-              beginning of the journey. Once Backstage affordances power up
-              developers, they'll uncover new opportunities for growth and
-              optimization.
-              <br />
-              <span className={indentLine} />
-              Frontside helps your teams integrate more tools into Backstage and
-              streamline their workflow to take advantage of their new
-              self-service capabilities.
+              Setting up Backstage's Catalog unleashes its power, but it's only
+              the beginning of the journey. Once developers familiarize
+              themselves with Backstage’s affordances, they'll uncover new
+              opportunities for growth and optimization. Frontside helps your
+              teams integrate more tools into Backstage and streamline their
+              workflow to take advantage of their new self-service capabilities.
             </p>
           </div>
           <div className={featureImage}>
             <img src={backstageDx} alt="" />
           </div>
         </div>
-      </section>
 
-      <section className={pageWrap}>
         <div className={caseStudySection}>
-          <span className={textSm}>Case study</span>
+          <span className={headingLg}>Case study</span>
           <h2 className={text2Xl}>
             Boosting Resideo's Developers Experience with Backstage
           </h2>
           <p className={textLg}>
             Frontside helped Resideo set up and customize Backstage to enable
-            org-wide service discoverability, standardize the access to
-            documentation across teams and languages, and kick-start
-            shipping-ready projects.
+            org-wide service discoverability, standardize access to
+            documentation across teams and languages, and kick-start ship-ready
+            projects.
           </p>
           <br />
           <strong className={actionButton}>

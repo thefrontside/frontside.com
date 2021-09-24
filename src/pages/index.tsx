@@ -143,10 +143,9 @@ export default function IndexPage({
             </h2>
             <p>
               Automated testing is a cornerstone for on-time deliveries that
-              work, but QA is a significant source of frustration for
-              developers. Using Open Source technologies, Frontside helps teams
-              move tests inside the development cycle while making them both
-              fast and reliable.
+              work, but QA is a significant source of frustration. Using Open
+              Source technologies, Frontside helps teams move tests inside the
+              development cycle while making them both fast and reliable.
             </p>
           </div>
           <div className={featureImage}>
@@ -157,14 +156,14 @@ export default function IndexPage({
         <div className={featureRow}>
           <div className={featureTextAlternate}>
             <h2 className={featureHeading}>
-              <strong className={textSkyblue}>Inject</strong> technical{' '}
-              <strong className={textSkyblue}>leadership</strong> into your team
+              <strong className={textSkyblue}>Inject leadership</strong> into
+              your team
             </h2>
             <p>
               Most companies have great developers on their teams but lack the
               leadership to identify improvement opportunities and implement
-              change. Frontside brings in insights cultivated from our network
-              of enterprise partners and Open Source maintainers to create and
+              change. Frontside offers solutions cultivated from our network of
+              enterprise partners and Open Source maintainers to create and
               nurture an Inner Source culture within your organization.
             </p>
           </div>
@@ -190,7 +189,7 @@ export default function IndexPage({
 
         <header className={sectionHeader}>
           <h2 className={homeBackstageHeading}>
-            Bring infrastructure, services and people together with{' '}
+            Bring infrastructure, services, and people together with{' '}
             <strong className={textGreen}>Backstage</strong>
           </h2>
           <p className={textLg}>
@@ -200,7 +199,11 @@ export default function IndexPage({
         </header>
         <div className={columnedhighlights}>
           <div className={highlight}>
-            <h3 className={highlightHeading}>Every service in sight</h3>
+            <h3 className={highlightHeading}>
+              Every <br className={heroBreak} /> service{' '}
+              <br className={heroBreak} />
+              in sight
+            </h3>
             <p className={highlightText}>
               With Backstage, you can align your organization's code and Cloud
               services and make the relationship visible and actionable for
@@ -210,17 +213,22 @@ export default function IndexPage({
           </div>
           <div className={highlight}>
             <h3 className={highlightHeading}>
-              Smarten up infrastructure costs
+              Smarten up <br className={heroBreak} /> infrastructure{' '}
+              <br className={heroBreak} /> costs
             </h3>
             <p className={highlightText}>
-              Going Cloud native allows your teams to move faster, but Backstage
-              prevents your costs from growing as well by bringing cost
-              optimization closer to your developers.
+              Backstage allows your teams to move faster but prevents costs from
+              growing as well by bringing optimization closer to your
+              developers.
             </p>
             <img src={backstageShiftleft} alt="" className={highlightImage} />
           </div>
           <div className={highlight}>
-            <h3 className={highlightHeading}>De-risk your implementation</h3>
+            <h3 className={highlightHeading}>
+              De-risk
+              <br className={heroBreak} /> your
+              <br className={heroBreak} /> implementation
+            </h3>
             <p className={highlightText}>
               Our deep expertise with Backstage’s constantly evolving alpha
               software means we can open up new frontiers for software
@@ -242,10 +250,6 @@ export default function IndexPage({
             Our latest{' '}
             <strong className={textGradientSkybluePink}>insights</strong>
           </h2>
-          <p className={textLg}>
-            We like sharing the results of our experience and research to start
-            discussions.
-          </p>
         </header>
 
         <BlogPreview post={firstPost} layout="featured" />

@@ -41,7 +41,7 @@ export default function Footer() {
           <img src={FSIcon} width="32.5" alt="Frontside Logo" />
         </a>
         <p className={footerAddress}>
-          2301 W Anderson Ln #107
+          2301 W Anderson Ln #102-8
           <br />
           Austin, Texas 78757
           <br />

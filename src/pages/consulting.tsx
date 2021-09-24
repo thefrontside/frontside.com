@@ -117,7 +117,7 @@ function ConsultingCTA({ submitted, setSubmitted }) {
           onQuestionChanged={onQuestionChange}
           onClose={onClose}
         >
-          <strong className={arrowTextWhite}>Request a DX assesment</strong>
+          <strong className={arrowTextWhite}>Request a DX assessment</strong>
         </PopupButton>
       ) : (
         <p className={ctaSubmittedBox}>
@@ -201,8 +201,7 @@ export default function ConsultingPage({
               blocked to managers concerned about burnout rates to leadership
               worried about deadlines being continuously pushed back. Frontside
               implements strategies that allow developers to decouple their work
-              from external dependencies and even other teams to keep shipping
-              smoothly.
+              from external dependencies to keep shipping smoothly.
             </p>
           </div>
           <div className={featureImage}>
@@ -247,9 +246,7 @@ export default function ConsultingPage({
             <img src={dxTools} alt="" />
           </div>
         </div>
-      </section>
 
-      <section className={pageWrap}>
         <Tabs title="Ship faster &amp; happier: ">
           <Tab label="Decoupled Teams">
             <div className={consultingTab}>
@@ -282,11 +279,10 @@ export default function ConsultingPage({
                   fragile when they depend on Cloud vendors for crucial
                   workflows such as authentication. These services oftentimes
                   lead to frustrations in the development experience like
-                  integration blind spots that lead to bugs or security and
-                  compliance risks when using Cloud service tokens. Frontside
-                  helps teams create a local development environment that
-                  matches production faithfully without exposing sensitive data
-                  and facilitates seamlessly onboarding new colleagues.
+                  integration blind spots or security and compliance risks when
+                  using Cloud service tokens. Frontside helps teams create a
+                  local development environment that matches production
+                  faithfully without exposing sensitive data.
                 </p>
               </div>
               <div className={consultingTabImage}>
@@ -323,9 +319,9 @@ export default function ConsultingPage({
           <h2 className={text3Xl}>The whole development cycle is important</h2>
           <p className={textLg}>
             Optimizing every part of the development process is crucial if you
-            want to have happy developers. Engineers quickly get frustrated and
-            releases don’t ship if any part of the development process is slow,
-            convoluted, or time consuming.
+            want happy and productive developers. Engineers quickly get
+            frustrated and releases don’t ship if any part of the development
+            process is slow or convoluted.
           </p>
         </header>
         <div className={consultingCycleContainer}>
@@ -339,15 +335,13 @@ export default function ConsultingPage({
           <div className={consultingCycleSecond}>
             <h3 className={headingLg}>Verification</h3>
             <p>
-              Do your developers write integration tests? Can developers
-              refactor the application without inadvertently breaking QA tests?
+            Are developers afraid of inadvertently breaking tests? Are dev teams and QA stepping on each other toes?
             </p>
           </div>
           <div className={consultingCycleThird}>
             <h3 className={headingLg}>Release</h3>
             <p>
-              Can you release twice per day? Is the release plan generated or
-              crafted by a human?
+            How much effort does it take your team to make a release? Can they release multiple times a day?
             </p>
           </div>
           <div className={consultingCycleIllustration}>
@@ -355,9 +349,6 @@ export default function ConsultingPage({
           </div>
         </div>
         <div className={homeBottomCTA}>
-          <p className={homeBottomCTAtext}>
-            Make your developers happier and more productive
-          </p>
           <ConsultingCTA submitted={submitted} setSubmitted={setSubmitted} />
         </div>
       </section>
