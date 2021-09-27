@@ -29,9 +29,9 @@ export const Navbar = () => {
           </Link>
         ))}
       </div>
-      <a href="/contact" className={contactButton}>
+      <Link to="/contact" className={contactButton}>
         Contact
-      </a>
+      </Link>
     </nav>
   );
 };
@@ -41,7 +41,7 @@ const Logo = () => (
     width="137"
     height="34"
     xmlns="http://www.w3.org/2000/svg"
-    alt="Frontside"
+    aria-label="Frontside logo"
   >
     <g fill="none" fillRule="evenodd">
       <path
