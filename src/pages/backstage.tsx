@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
-import Plausible from 'plausible-tracker';
-import { PopupButton } from '@typeform/embed-react';
+import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
+import ContactCTA from '../components/contact-cta';
 
 import {
   pageWrap,
@@ -22,7 +21,6 @@ import {
   consultingTopTCA,
   backstageOpenMicBox,
   backstageOpenMicLine,
-  ctaSubmittedBox,
   homeBottomCTA,
 } from '../styles/page.css';
 import {
@@ -32,7 +30,6 @@ import {
   textLg,
   featureHeading,
   headingXl,
-  textSm,
   text2Xl,
   arrowTextWhite,
   textGradientGreenSkyblue,
@@ -53,83 +50,6 @@ import backstageDomain from '../img/q3-2021/backstage-map-domain.png';
 import backstageDerisk from '../img/q3-2021/backstage-derisk.png';
 import backstageDx from '../img/q3-2021/backstage-integrate-dx.png';
 import metaImage from '../img/q3-2021/meta-backstage.png';
-
-function BakcstageCTA({
-  submitted,
-  setSubmitted,
-  label = 'Make Backstage work for you',
-}) {
-  let questionsTrack = 'bs0';
-  const { trackEvent } = Plausible({
-    domain: 'frontside.com',
-  });
-  const onSubmit = () => {
-    document.body.style.overflow = '';
-    setSubmitted(true);
-    trackEvent('cta-backstage', {
-      props: {
-        status: 'submitted',
-        qt: questionsTrack,
-      },
-    });
-  };
-
-  const onOpenedForm = () => {
-    trackEvent('cta-backstage', {
-      props: {
-        status: 'active',
-        qt: questionsTrack,
-      },
-    });
-  };
-
-  const onQuestionChange = ({ ref }) => {
-    questionsTrack = `${questionsTrack}->${ref.slice(0, 4)}`;
-    trackEvent('cta-backstage', {
-      props: {
-        status: 'active',
-        qt: questionsTrack,
-      },
-    });
-  };
-
-  const onClose = () => {
-    trackEvent('cta-backstage', {
-      props: {
-        status: 'closed',
-        qt: questionsTrack,
-      },
-    });
-  };
-
-  return (
-    <>
-      {!submitted ? (
-        <PopupButton
-          id="n5Hz8E9N"
-          hidden={{ topic: 'backstage' }}
-          className={actionButtonGreen}
-          onSubmit={onSubmit}
-          onReady={onOpenedForm}
-          onQuestionChanged={onQuestionChange}
-          onClose={onClose}
-        >
-          <strong className={arrowTextWhite}>{label}</strong>
-        </PopupButton>
-      ) : (
-        <p className={ctaSubmittedBox}>
-          <strong className={textGradientGreenSkyblue}>
-            Thanks for reaching out!
-          </strong>
-          <br />
-          <span className={textSm}>
-            We'll get back to you within a business day.
-          </span>
-        </p>
-      )}
-    </>
-  );
-}
 
 export default function BackstagePage({
   data: {
@@ -172,7 +92,16 @@ export default function BackstagePage({
             We help you get the most out of Backstage for the long-run
           </p>
           <p className={consultingTopTCA}>
-            <BakcstageCTA submitted={submitted} setSubmitted={setSubmitted} />
+            <ContactCTA
+              submitted={submitted}
+              setSubmitted={setSubmitted}
+              label="Make Backstage work for you"
+              topic="backstage"
+              eventId="cta-backstage"
+              ctaId="landing-top"
+              className={actionButtonGreen}
+              thanksClassName={textGradientGreenSkyblue}
+            />
           </p>
         </div>
         <div className={heroImage}>
@@ -238,7 +167,16 @@ export default function BackstagePage({
           </div>
         </div>
         <p className={homeBottomCTA}>
-          <BakcstageCTA submitted={submitted} setSubmitted={setSubmitted} />
+          <ContactCTA
+            submitted={submitted}
+            setSubmitted={setSubmitted}
+            label="Make Backstage work for you"
+            topic="backstage"
+            eventId="cta-backstage"
+            ctaId="landing-bottom"
+            className={actionButtonGreen}
+            thanksClassName={textGradientGreenSkyblue}
+          />
         </p>
 
         <div className={caseStudySection}>
@@ -253,9 +191,9 @@ export default function BackstagePage({
             projects.
           </p>
           <br />
-          <strong className={actionButton}>
+          <Link to="/backstage/resideo" className={actionButton}>
             <span className={arrowTextWhite}>Read more</span>
-          </strong>
+          </Link>
         </div>
       </section>
 

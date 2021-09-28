@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import { PopupButton } from '@typeform/embed-react';
-import Plausible from 'plausible-tracker';
 
 import Layout from '../components/layout';
 import BlogPreview from '../components/blog-preview';
 import { Tabs, Tab } from '../components/tabs/tabs';
 import Animation from '../components/animation';
+import ContactCTA from '../components/contact-cta';
 
 import {
   pageWrap,
@@ -30,7 +29,6 @@ import {
   consultingTab,
   consultingTabImage,
   consultingTopTCA,
-  ctaSubmittedBox,
   heroPlayerForceSize,
 } from '../styles/page.css';
 import {
@@ -45,12 +43,8 @@ import {
   textXl,
   text3Xl,
   textGradientDemiSkybluePink,
-  arrowTextWhite,
   headingLg,
-  textSm,
-  textGradientPurpleSkyblue,
 } from '../styles/typography.css';
-import { actionButton } from '../styles/buttons.css';
 
 import dxProblems from '../img/q3-2021/dx-problems.png';
 import dxFrustration from '../img/q3-2021/dx-frustration.png';
@@ -62,80 +56,6 @@ import dxTesting from '../img/q3-2021/dx-shift-left-testing.png';
 import metaImage from '../img/q3-2021/meta-backstage.png';
 
 import heroAnimation from '../img/q3-2021/animations/test.json';
-
-function ConsultingCTA({ submitted, setSubmitted }) {
-  let questionsTrack = 'dx0';
-  const { trackEvent } = Plausible({
-    domain: 'frontside.com',
-  });
-
-  const onSubmit = () => {
-    document.body.style.overflow = '';
-    setSubmitted(true);
-    trackEvent('cta-dx', {
-      props: {
-        status: 'submitted',
-        qt: questionsTrack,
-      },
-    });
-  };
-
-  const onOpenedForm = () => {
-    trackEvent('cta-consulting', {
-      props: {
-        status: 'active',
-        qt: questionsTrack,
-      },
-    });
-  };
-
-  const onQuestionChange = ({ ref }) => {
-    questionsTrack = `${questionsTrack}->${ref.slice(0, 4)}`;
-    trackEvent('cta-dx', {
-      props: {
-        status: 'active',
-        qt: questionsTrack,
-      },
-    });
-  };
-
-  const onClose = () => {
-    trackEvent('cta-dx', {
-      props: {
-        status: 'closed',
-        qt: questionsTrack,
-      },
-    });
-  };
-
-  return (
-    <>
-      {!submitted ? (
-        <PopupButton
-          id="n5Hz8E9N"
-          hidden={{ topic: 'dx' }}
-          className={actionButton}
-          onSubmit={onSubmit}
-          onReady={onOpenedForm}
-          onQuestionChanged={onQuestionChange}
-          onClose={onClose}
-        >
-          <strong className={arrowTextWhite}>Request a DX assessment</strong>
-        </PopupButton>
-      ) : (
-        <p className={ctaSubmittedBox}>
-          <strong className={textGradientPurpleSkyblue}>
-            Thanks for reaching out!
-          </strong>
-          <br />
-          <span className={textSm}>
-            We'll get back to you within a business day.
-          </span>
-        </p>
-      )}
-    </>
-  );
-}
 
 export default function ConsultingPage({
   data: {
@@ -180,14 +100,18 @@ export default function ConsultingPage({
             put the joy back in productivity
           </p>
           <p className={consultingTopTCA}>
-            <ConsultingCTA submitted={submitted} setSubmitted={setSubmitted} />
+            <ContactCTA
+              submitted={submitted}
+              setSubmitted={setSubmitted}
+              label="Request a DX assessment"
+              topic="dx"
+              eventId="cta-dx"
+              ctaId="landing-top"
+            />
           </p>
         </div>
         <div className={heroImage}>
-          <Animation
-            src={heroAnimation}
-            className={heroPlayerForceSize}
-          />
+          <Animation src={heroAnimation} className={heroPlayerForceSize} />
         </div>
       </header>
 
@@ -362,7 +286,14 @@ export default function ConsultingPage({
           </div>
         </div>
         <div className={homeBottomCTA}>
-          <ConsultingCTA submitted={submitted} setSubmitted={setSubmitted} />
+          <ContactCTA
+            submitted={submitted}
+            setSubmitted={setSubmitted}
+            label="Request a DX assessment"
+            topic="dx"
+            eventId="cta-dx"
+            ctaId="landing-bottom"
+          />
         </div>
       </section>
 

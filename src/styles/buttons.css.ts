@@ -7,6 +7,7 @@ export const baseButton = style({
   border: 'none',
   fontFamily: vars.fontFamily.main,
   fontSize: vars.fontSize.base,
+  fontWeight: vars.fontWeights.bold,
   background: vars.colors.blue,
   color: vars.colors.white,
   borderRadius: vars.radius.md,

@@ -3,6 +3,7 @@
 /404/
 /about/
 /backstage/
+/backstage/resideo/
 /blog
 /blog/2
 /blog/2006-07-08-learning-javascript-from-the-command-line/
