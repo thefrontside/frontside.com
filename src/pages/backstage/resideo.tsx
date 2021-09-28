@@ -4,6 +4,7 @@ import Layout from '../../components/layout';
 
 import {
   consultingTopTCA,
+  homeBottomCTA,
   radiusMd,
   sectionHeader,
 } from '../../styles/page.css';
@@ -112,7 +113,7 @@ export default function ConsultingPage() {
           and making the most out of it—without worrying about utilizing alpha
           software or forking out of the OSS community.
         </p>
-        <p className={consultingTopTCA}>
+        <p className={homeBottomCTA}>
           <ContactCTA
             submitted={submitted}
             setSubmitted={setSubmitted}
