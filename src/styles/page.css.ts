@@ -81,6 +81,13 @@ export const heroImage = style([sideImage, {
   }
 }]);
 
+export const heroPlayerForceSize = style({
+  width: '140%',
+  height: '140%',
+  marginLeft: '-20%',
+  marginTop: '-20%'
+});
+
 export const featureText = style({
   '@media': {
     [laptopQuery]: {
