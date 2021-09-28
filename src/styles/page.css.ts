@@ -69,6 +69,7 @@ export const sideImage = style({
   '@media': {
     [laptopQuery]: {
       marginTop: 0,
+      width: calc('50%').subtract(vars.space.lg).toString(),
     }
   }
 });
@@ -80,6 +81,16 @@ export const heroImage = style([sideImage, {
     }
   }
 }]);
+
+// export const lottieFrame = style({
+//   width: '100%',
+//   maxWidth: '100%'
+// });
+
+// globalStyle(`${lottieFrame} svg`, {
+//   width: '1000px',
+//   maxWidth: '100%'
+// });
 
 export const heroPlayerForceSize = style({
   width: '140%',

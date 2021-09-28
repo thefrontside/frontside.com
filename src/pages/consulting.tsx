@@ -52,7 +52,6 @@ import {
 } from '../styles/typography.css';
 import { actionButton } from '../styles/buttons.css';
 
-import dxHero from '../img/q3-2021/dx-hero.png';
 import dxProblems from '../img/q3-2021/dx-problems.png';
 import dxFrustration from '../img/q3-2021/dx-frustration.png';
 import dxTools from '../img/q3-2021/dx-tools.png';
