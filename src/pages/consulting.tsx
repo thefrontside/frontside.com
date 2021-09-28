@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { PopupButton } from '@typeform/embed-react';
 import Plausible from 'plausible-tracker';
-import { Player } from '@lottiefiles/react-lottie-player';
-import { useInView } from 'react-hook-inview';
 
 import Layout from '../components/layout';
 import BlogPreview from '../components/blog-preview';
 import { Tabs, Tab } from '../components/tabs/tabs';
+import Animation from '../components/animation';
 
 import {
   pageWrap,
@@ -64,34 +63,6 @@ import dxTesting from '../img/q3-2021/dx-shift-left-testing.png';
 import metaImage from '../img/q3-2021/meta-backstage.png';
 
 import heroAnimation from '../img/q3-2021/animations/test.json';
-
-function AnimationWrapper({ src, className }) {
-  const [ref, isVisible] = useInView({
-    threshold: 0.2,
-  });
-
-  const [lotty, setLotty] = useState(null);
-
-  useEffect(() => {
-    if (!!lotty && isVisible) {
-      lotty.play();
-    }
-    if (!!lotty && !isVisible) {
-      lotty.pause();
-    }
-  }, [lotty, isVisible]);
-
-  return (
-    <div ref={ref} className={className}>
-      <Player
-        lottieRef={(instance) => setLotty(instance)}
-        src={src}
-        autoplay
-        loop
-      />
-    </div>
-  );
-}
 
 function ConsultingCTA({ submitted, setSubmitted }) {
   let questionsTrack = 'dx0';
@@ -214,7 +185,7 @@ export default function ConsultingPage({
           </p>
         </div>
         <div className={heroImage}>
-          <AnimationWrapper
+          <Animation
             src={heroAnimation}
             className={heroPlayerForceSize}
           />
