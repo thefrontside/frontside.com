@@ -8,11 +8,8 @@ import {
   sectionHeader,
 } from '../../styles/page.css';
 import {
-  headingXl,
-  textLg,
   mardownColumn,
   text2Xl,
-  text3Xl,
   headingLg,
   textGradientSkyblueGreen,
 } from '../../styles/typography.css';

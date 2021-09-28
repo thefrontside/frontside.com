@@ -22,7 +22,6 @@ export default function ContactCTA({
   let questionsTrack = '0';
   const { trackEvent } = Plausible({
     domain: 'frontside.com',
-    trackLocalhost: true,
   });
 
   const trackCTA = (status) => {
