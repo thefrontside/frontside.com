@@ -7,13 +7,21 @@ import Footer from '../footer';
 import '../../styles/global.css';
 import 'syntax-highlighting/assets/css/prism/prism-base16-ateliersulphurpool.light.css';
 
+type PageProps = {
+  children: any,
+  description?: string,
+  title: string,
+  image?: string,
+  path?: string,
+}
+
 export default function TemplateWrapper({
   children,
   description,
   title,
   image,
   path,
-}) {
+}: PageProps) {
 
   return (
     <StaticQuery

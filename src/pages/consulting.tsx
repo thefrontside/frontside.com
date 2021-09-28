@@ -21,7 +21,6 @@ import {
   entryColumns,
   entryColumn,
   homeBottomCTA,
-  homeBottomCTAtext,
   consultingCycleContainer,
   consultingCycleIllustration,
   consultingCycleFirst,
@@ -59,6 +58,7 @@ import dxCycle from '../img/q3-2021/dx-cycle.png';
 import dxDecoupled from '../img/q3-2021/dx-decoupled.png';
 import dxLocalDev from '../img/q3-2021/dx-local-dev.png';
 import dxTesting from '../img/q3-2021/dx-shift-left-testing.png';
+import metaImage from '../img/q3-2021/meta-backstage.png';
 
 function ConsultingCTA({ submitted, setSubmitted }) {
   let questionsTrack = 'dx0';
@@ -158,7 +158,12 @@ export default function ConsultingPage({
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <Layout title="DX Consulting for Cloud native teams">
+    <Layout
+      title="DX Consulting for Cloud native teams"
+      description="Frontside helps Cloud native orgs create Developer Experiences that
+      put the joy back in productivity"
+      image={metaImage}
+    >
       <header className={heroWrap}>
         <div className={heroText}>
           <h1 className={heading3Xl}>
@@ -299,7 +304,7 @@ export default function ConsultingPage({
                 <p>
                   Frustration with testing in the development cycle seems
                   inevitable because too often tests are slow and unreliable. At
-                  the same time test data management can be burdensome and
+                  the same time, test data management can be burdensome and
                   quickly become outdated if not managed correctly. Frontside
                   helps teams structure a robust testing strategy by making it
                   easier for developers to write and maintain meaningful tests
@@ -335,13 +340,15 @@ export default function ConsultingPage({
           <div className={consultingCycleSecond}>
             <h3 className={headingLg}>Verification</h3>
             <p>
-            Are developers afraid of inadvertently breaking tests? Are dev teams and QA stepping on each other toes?
+              Are developers afraid of inadvertently breaking tests? Are dev
+              teams and QA stepping on each other’s toes?
             </p>
           </div>
           <div className={consultingCycleThird}>
             <h3 className={headingLg}>Release</h3>
             <p>
-            How much effort does it take your team to make a release? Can they release multiple times a day?
+              How much effort does it take your team to make a release? Can they
+              release multiple times a day?
             </p>
           </div>
           <div className={consultingCycleIllustration}>

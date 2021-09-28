@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Plausible from 'plausible-tracker';
+import { PopupButton } from '@typeform/embed-react';
 
 import Layout from '../components/layout';
 
@@ -22,6 +23,7 @@ import {
   backstageOpenMicBox,
   backstageOpenMicLine,
   ctaSubmittedBox,
+  homeBottomCTA,
 } from '../styles/page.css';
 import {
   textGradientSkyblueGreen,
@@ -34,7 +36,6 @@ import {
   text2Xl,
   arrowTextWhite,
   textGradientGreenSkyblue,
-  indentLine,
   textXl,
   arrowTextGreen,
   headingLg,
@@ -51,7 +52,7 @@ import backstageHero from '../img/q3-2021/backstage-hero.png';
 import backstageDomain from '../img/q3-2021/backstage-map-domain.png';
 import backstageDerisk from '../img/q3-2021/backstage-derisk.png';
 import backstageDx from '../img/q3-2021/backstage-integrate-dx.png';
-import { PopupButton } from '@typeform/embed-react';
+import metaImage from '../img/q3-2021/meta-backstage.png';
 
 function BakcstageCTA({
   submitted,
@@ -154,7 +155,11 @@ export default function BackstagePage({
   const [submitted, setSubmitted] = useState(false);
 
   return (
-    <Layout title="Adopt Backstage your way with Frontside">
+    <Layout
+      title="Adopt Backstage your way with Frontside"
+      description="We help you get the most out of Backstage for the long-run"
+      image={metaImage}
+    >
       <header className={heroWrap}>
         <div className={heroText}>
           <h1 className={heading3Xl}>
@@ -232,6 +237,9 @@ export default function BackstagePage({
             <img src={backstageDx} alt="" />
           </div>
         </div>
+        <p className={homeBottomCTA}>
+          <BakcstageCTA submitted={submitted} setSubmitted={setSubmitted} />
+        </p>
 
         <div className={caseStudySection}>
           <span className={headingLg}>Case study</span>

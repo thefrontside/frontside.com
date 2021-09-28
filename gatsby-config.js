@@ -4,11 +4,11 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Frontside',
+    title: 'Frontside Software',
     description:
-      'Austin-based frontend software engineering and architecture consultancy. We help teams build applications at scale.',
+      'Developer Experience and Backstage consultancy based in Austin, Texas.',
     siteUrl: 'https://frontside.com',
-    image: 'https://frontside.com/img/frontside-800.png',
+    image: 'https://frontside.com/img/q3-2021/meta-generic.png',
   },
   mapping: {
     'MarkdownRemark.fields.authorNodes': 'People.name', // this helps gatsby know the type is `Person` on blog post authorNodes

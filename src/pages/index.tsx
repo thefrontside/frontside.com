@@ -43,17 +43,9 @@ import {
   headingXl,
   arrowTextWhite,
   heading2Xl,
-  textCentered,
-  indentLine,
 } from '../styles/typography.css';
-import {
-  actionButton,
-  actionButtonGreen,
-  toPageButton,
-  toPageButtonGreen,
-} from '../styles/buttons.css';
+import { toPageButton, toPageButtonGreen } from '../styles/buttons.css';
 
-import heroPlaceholder from '../img/temp/hero_placeholder.png';
 import BlogPreview from '../components/blog-preview';
 import homeHero from '../img/q3-2021/home-hero.png';
 import homeInject from '../img/q3-2021/home-inject.png';
@@ -62,6 +54,7 @@ import homeShiftleft from '../img/q3-2021/home-shift-left.png';
 import backstageSight from '../img/q3-2021/home-backstage-sight.png';
 import backstageDerisk from '../img/q3-2021/home-backstage-derisk.png';
 import backstageShiftleft from '../img/q3-2021/home-backstage-shift-left.png';
+import metaImage from '../img/q3-2021/meta-home.png';
 
 export default function IndexPage({
   data: {
@@ -89,7 +82,12 @@ export default function IndexPage({
   let morePosts = simplifiedPosts.slice(1);
 
   return (
-    <Layout title="Frontside Software &mdash; DX and Backstage consulting">
+    <Layout
+      title="Frontside Software &mdash; DX and Backstage consulting"
+      description="Frontside creates cohesive development experiences for Cloud native
+      teams"
+      image={metaImage}
+    >
       <header className={heroWrap}>
         <div className={heroText}>
           <h1 className={heading3Xl}>
@@ -205,9 +203,9 @@ export default function IndexPage({
               in sight
             </h3>
             <p className={highlightText}>
-              With Backstage, you can align your organization's code and Cloud
-              services and make the relationship visible and actionable for
-              everyone.
+              With Backstage, you can align your organization's code,
+              collaborators, and Cloud services and make the relationship
+              visible and actionable for everyone.
             </p>
             <img src={backstageSight} alt="" className={highlightImage} />
           </div>
@@ -239,7 +237,9 @@ export default function IndexPage({
         </div>
         <p className={homeBottomCTA}>
           <Link to="/backstage" className={toPageButtonGreen}>
-            <strong className={arrowTextWhite}>Adopt Backstage</strong>
+            <strong className={arrowTextWhite}>
+              Learn how we implement Backstage
+            </strong>
           </Link>
         </p>
       </section>
