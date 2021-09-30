@@ -8,6 +8,8 @@ export const navWrap = style([pageWrap, {
   flexFlow: 'row wrap',
   alignItems: 'center',
   justifyContent: 'flex-end',
+  position: 'relative',
+  zIndex: 10000,
 }]);
 
 export const contactButton = style({

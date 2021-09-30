@@ -11,7 +11,6 @@ import { textLg, textUppercase, textXl } from './typography.css';
 export const pageWrap = style({
   boxSizing: 'border-box',
   width: '100vw',
-  overflow: 'hidden',
   padding: vars.space.sm,
   maxWidth: '37rem',
   margin: '0 auto',
@@ -82,23 +81,42 @@ export const heroImage = style([sideImage, {
   }
 }]);
 
-// export const lottieFrame = style({
-//   width: '100%',
-//   maxWidth: '100%'
-// });
-
-// globalStyle(`${lottieFrame} svg`, {
-//   width: '1000px',
-//   maxWidth: '100%'
-// });
-
 export const heroPlayerForceSize = style({
-  width: '140%',
-  height: '140%',
-  marginLeft: '-20%',
-  marginTop: '-18%',
-  marginBottom: '-20%',
+  width: '100%',
+  height: '100%',
+  '@media': {
+    [laptopQuery]: {
+      width: '140%',
+      height: '140%',
+      marginLeft: '-20%',
+      marginTop: '-18%',
+      marginBottom: '-20%',
+    }
+  }
 });
+
+export const cyclePlayerForceSize = style([heroPlayerForceSize, {
+  '@media': {
+    [laptopQuery]: {
+      marginTop: 0,
+    }
+  }
+}]);
+
+export const featurePlayerForceSize = style({
+  width: '100%',
+  height: '100%',
+  '@media': {
+    [laptopQuery]: {
+      width: '120%',
+      height: '120%',
+      marginLeft: '-10%',
+      marginTop: '-10%',
+      marginBottom: '-10%',
+    }
+  }
+});
+
 
 export const featureText = style({
   '@media': {

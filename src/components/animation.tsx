@@ -5,7 +5,12 @@ import { useInView } from 'react-hook-inview';
 const NORMAL_SPEED = 1;
 const REDUCED_SPEED = 0.5;
 
-export default function Animation({ src, className = undefined }) {
+export default function Animation({
+  src,
+  className = undefined,
+  speed = NORMAL_SPEED,
+  blockedView = false,
+}) {
   const [ref, isVisible] = useInView({
     threshold: 0.2,
   });
@@ -15,18 +20,18 @@ export default function Animation({ src, className = undefined }) {
   const reducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    if (!!lotty && isVisible) {
-      if (isVisible) {
+    if (!!lotty) {
+      if (isVisible && !blockedView) {
         lotty.play();
       } else {
         lotty.pause();
       }
     }
-  }, [lotty, isVisible]);
+  }, [lotty, isVisible, blockedView]);
 
   useEffect(() => {
     if (!!lotty) {
-      lotty.setSpeed(reducedMotion ? REDUCED_SPEED : NORMAL_SPEED);
+      lotty.setSpeed(reducedMotion ? speed * REDUCED_SPEED : speed);
     }
   }, [reducedMotion]);
 
@@ -35,8 +40,7 @@ export default function Animation({ src, className = undefined }) {
       <Player
         lottieRef={(instance) => setLotty(instance)}
         src={src}
-        speed={reducedMotion ? REDUCED_SPEED : NORMAL_SPEED}
-        autoplay
+        speed={reducedMotion ? speed * REDUCED_SPEED : speed}
         loop
       />
     </div>

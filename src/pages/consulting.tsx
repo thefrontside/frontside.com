@@ -30,6 +30,8 @@ import {
   consultingTabImage,
   consultingTopTCA,
   heroPlayerForceSize,
+  featurePlayerForceSize,
+  cyclePlayerForceSize,
 } from '../styles/page.css';
 import {
   textGradientPinkSkyblue,
@@ -55,7 +57,9 @@ import dxLocalDev from '../img/q3-2021/dx-local-dev.png';
 import dxTesting from '../img/q3-2021/dx-shift-left-testing.png';
 import metaImage from '../img/q3-2021/meta-backstage.png';
 
-import heroAnimation from '../img/q3-2021/animations/test.json';
+import heroAnimation from '../img/q3-2021/animations/consulting-hero.json';
+import frustrationAnimation from '../img/q3-2021/animations/consulting-frustration.json';
+import cycleAnimation from '../img/q3-2021/animations/consulting-cycle.json';
 
 export default function ConsultingPage({
   data: {
@@ -79,6 +83,7 @@ export default function ConsultingPage({
   }));
 
   const [submitted, setSubmitted] = useState(false);
+  const [modalIsActive, setModalIsActive] = useState(false);
 
   return (
     <Layout
@@ -111,7 +116,12 @@ export default function ConsultingPage({
           </p>
         </div>
         <div className={heroImage}>
-          <Animation src={heroAnimation} className={heroPlayerForceSize} />
+          <Animation
+            src={heroAnimation}
+            speed={0.75}
+            className={heroPlayerForceSize}
+            blockedView={modalIsActive}
+          />
         </div>
       </header>
 
@@ -159,7 +169,11 @@ export default function ConsultingPage({
             </p>
           </div>
           <div className={featureImage}>
-            <img src={dxFrustration} alt="" />
+            <Animation
+              src={frustrationAnimation}
+              speed={0.75}
+              className={featurePlayerForceSize}
+            />
           </div>
         </div>
 
@@ -282,7 +296,11 @@ export default function ConsultingPage({
             </p>
           </div>
           <div className={consultingCycleIllustration}>
-            <img src={dxCycle} alt="" />
+            <Animation
+              src={cycleAnimation}
+              speed={0.75}
+              className={cyclePlayerForceSize}
+            />
           </div>
         </div>
         <div className={homeBottomCTA}>

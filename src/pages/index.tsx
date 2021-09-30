@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
+import Animation from '../components/animation';
 import HomeGraph from '../components/home-graph';
 
 import {
@@ -28,6 +29,8 @@ import {
   homeGraphText,
   homeGraphImage,
   homeBottomCTA,
+  featurePlayerForceSize,
+  heroPlayerForceSize,
 } from '../styles/page.css';
 import {
   textGradientSkybluePink,
@@ -55,6 +58,10 @@ import backstageSight from '../img/q3-2021/home-backstage-sight.png';
 import backstageDerisk from '../img/q3-2021/home-backstage-derisk.png';
 import backstageShiftleft from '../img/q3-2021/home-backstage-shift-left.png';
 import metaImage from '../img/q3-2021/meta-home.png';
+
+
+import heroAnimation from '../img/q3-2021/animations/home-hero.json';
+import shiftleftAnimation from '../img/q3-2021/animations/home-shift-left.json';
 
 export default function IndexPage({
   data: {
@@ -110,7 +117,8 @@ export default function IndexPage({
           </div>
         </div>
         <div className={heroImage}>
-          <img src={homeHero} alt="" />
+          {/* <img src={homeHero} alt="" /> */}
+          <Animation src={heroAnimation} className={featurePlayerForceSize} />
         </div>
       </header>
 
@@ -147,7 +155,7 @@ export default function IndexPage({
             </p>
           </div>
           <div className={featureImage}>
-            <img src={homeShiftleft} alt="" />
+            <Animation src={shiftleftAnimation} speed={0.75} />
           </div>
         </div>
 

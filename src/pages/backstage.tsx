@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby';
 
 import Layout from '../components/layout';
+import Animation from '../components/animation';
 import ContactCTA from '../components/contact-cta';
 
 import {
@@ -22,6 +23,8 @@ import {
   backstageOpenMicBox,
   backstageOpenMicLine,
   homeBottomCTA,
+  heroPlayerForceSize,
+  featurePlayerForceSize,
 } from '../styles/page.css';
 import {
   textGradientSkyblueGreen,
@@ -50,6 +53,9 @@ import backstageDomain from '../img/q3-2021/backstage-map-domain.png';
 import backstageDerisk from '../img/q3-2021/backstage-derisk.png';
 import backstageDx from '../img/q3-2021/backstage-integrate-dx.png';
 import metaImage from '../img/q3-2021/meta-backstage.png';
+
+import heroAnimation from '../img/q3-2021/animations/backstage-hero.json';
+import deriskAnimation from '../img/q3-2021/animations/backstage-derisk.json';
 
 export default function BackstagePage({
   data: {
@@ -105,7 +111,7 @@ export default function BackstagePage({
           </p>
         </div>
         <div className={heroImage}>
-          <img src={backstageHero} alt="" />
+          <Animation src={heroAnimation} speed={0.75} className={featurePlayerForceSize} />
         </div>
       </header>
 
@@ -144,7 +150,7 @@ export default function BackstagePage({
             </p>
           </div>
           <div className={featureImage}>
-            <img src={backstageDerisk} alt="" />
+            <Animation src={deriskAnimation} className={featurePlayerForceSize}  />
           </div>
         </div>
 
