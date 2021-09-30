@@ -1,0 +1,550 @@
+​
+────────────────────────────────────────────────────────────────
+  Netlify Build                                                 
+────────────────────────────────────────────────────────────────
+​
+❯ Version
+  @netlify/build 17.2.0
+​
+❯ Flags
+  dry: false
+  offline: false
+​
+❯ Current directory
+  /Users/jrlainfiesta/Frontside/frontside.com
+​
+❯ Config file
+  /Users/jrlainfiesta/Frontside/frontside.com/netlify.toml
+​
+❯ Context
+  production
+​
+────────────────────────────────────────────────────────────────
+  1. build.command from netlify.toml                            
+────────────────────────────────────────────────────────────────
+​
+$ yarn build && yarn build-storybook
+yarn run v1.22.11
+$ gatsby build
+success open and validate gatsby-configs, load plugins - 1.127s
+
+[2K[1A[2K[Gsuccess onPreInit - 0.034s
+
+[2K[1A[2K[Gsuccess initialize cache - 0.010s
+
+[2K[1A[2K[Gsuccess copy gatsby files - 0.082s
+
+[2K[1A[2K[Gsuccess Compiling Gatsby Functions - 0.196s
+
+[2K[1A[2K[Gsuccess onPreBootstrap - 0.208s
+
+[2K[1A[2K[Gsuccess createSchemaCustomization - 0.051s
+
+[2K[1A[2K[Gsuccess Checking for changed pages - 0.001s
+
+[2K[1A[2K[Gsuccess source and transform nodes - 10.527s
+
+[2K[1A[2K[Gsuccess building schema - 0.614s
+
+[2K[1A[2K[Gsuccess createPages - 0.122s
+
+[2K[1A[2K[Gsuccess createPagesStatefully - 0.089s
+
+[2K[1A[2K[Ginfo Total nodes: 1255, SitePage nodes: 324 (use --verbose for breakdown)
+
+[2K[1A[2K[Gsuccess Checking for changed pages - 0.006s
+
+[2K[1A[2K[Gsuccess Cleaning up stale page-data - 0.006s
+
+[2K[1A[2K[Gsuccess update schema - 0.064s
+
+[2K[1A[2K[Gsuccess onPreExtractQueries - 0.000s
+
+[2K[1A[2K[Gsuccess extract queries from components - 1.164s
+
+[2K[1A[2K[Gsuccess write out redirect data - 0.002s
+
+[2K[1A[2K[Gsuccess Build manifest and related icons - 0.054s
+
+[2K[1A[2K[Gsuccess onPostBootstrap - 0.088s
+
+[2K[1A[2K[Ginfo bootstrap finished - 16.822s
+
+[2K[1A[2K[Gwarn [gatsby-transformer-sharp] The "fixed" and "fluid" resolvers are now
+deprecated. Switch to "gatsby-plugin-image" for better performance and a simpler
+ API. See https://gatsby.dev/migrate-images to learn how.
+
+[2K[1A[2K[Gsuccess run page queries - 0.056s - 2/2 36.00/s
+
+[2K[1A[2K[Gsuccess write out requires - 0.006s
+
+[2K[1A[2K[Gwarn chunk styles [mini-css-extract-plugin]
+Conflicting order. Following module has been added:
+ * css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[11].oneOf[1].use[
+1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[11].oneOf[1].use[
+2]!./node_modules/virtual-resource-loader/dist/virtual-resource-loader.cjs.js?{"
+source":"Lnp0dmVzNjAgewogIGZvbnQtc2l6ZTogdmFyKC0tXzExbnB4dHBqKTsKICBsaW5lLWhlaWd
+odDogdmFyKC0tXzExbnB4dHByKTsKICBsZXR0ZXItc3BhY2luZzogdmFyKC0tXzExbnB4dHAxYSk7CiA
+gZm9udC13ZWlnaHQ6IHZhcigtLV8xMW5weHRwMWUpOwogIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U
+7Cn0KLnp0dmVzNjEgewogIGZvbnQtc2l6ZTogdmFyKC0tXzExbnB4dHBoKTsKICBsaW5lLWhlaWdodDo
+gdmFyKC0tXzExbnB4dHBwKTsKICBsZXR0ZXItc3BhY2luZzogdmFyKC0tXzExbnB4dHAxOCk7CiAgZm9
+udC13ZWlnaHQ6IHZhcigtLV8xMW5weHRwMWUpOwogIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7Cn0
+KLnp0dmVzNjIgewogIGZvbnQtc2l6ZTogdmFyKC0tXzExbnB4dHBnKTsKICBsaW5lLWhlaWdodDogdmF
+yKC0tXzExbnB4dHBvKTsKICBsZXR0ZXItc3BhY2luZzogdmFyKC0tXzExbnB4dHAxNyk7Cn0KLnp0dmV
+zNjMgewogIGNvbG9yOiB2YXIoLS1fMTFucHh0cDIpOwp9Ci56dHZlczY0IHsKICBiYWNrZ3JvdW5kOiB
+saW5lYXItZ3JhZGllbnQoOTBkZWcsIHZhcigtLV8xMW5weHRwMiksIHZhcigtLV8xMW5weHRwNCkgOTU
+lKTsKICBiYWNrZ3JvdW5kLWNsaXA6IHRleHQ7CiAgLXdlYmtpdC1iYWNrZ3JvdW5kLWNsaXA6IHRleHQ
+7CiAgLXdlYmtpdC10ZXh0LWZpbGwtY29sb3I6IHRyYW5zcGFyZW50OwogIGZvbnQtd2VpZ2h0OiB2YXI
+oLS1fMTFucHh0cDFlKTsKfQouenR2ZXM2NSB7CiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDk
+wZGVnLCB2YXIoLS1fMTFucHh0cDQpLCB2YXIoLS1fMTFucHh0cDIpIDk1JSk7CiAgYmFja2dyb3VuZC1
+jbGlwOiB0ZXh0OwogIC13ZWJraXQtYmFja2dyb3VuZC1jbGlwOiB0ZXh0OwogIC13ZWJraXQtdGV4dC1
+maWxsLWNvbG9yOiB0cmFuc3BhcmVudDsKICBmb250LXdlaWdodDogdmFyKC0tXzExbnB4dHAxZSk7Cn0
+KLnp0dmVzNjYgewogIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCg5MGRlZywgdmFyKC0tXzExbnB
+4dHAyKSAtMjAlLCB2YXIoLS1fMTFucHh0cDUpIDk1JSk7CiAgYmFja2dyb3VuZC1jbGlwOiB0ZXh0Owo
+gIC13ZWJraXQtYmFja2dyb3VuZC1jbGlwOiB0ZXh0OwogIC13ZWJraXQtdGV4dC1maWxsLWNvbG9yOiB
+0cmFuc3BhcmVudDsKICBmb250LXdlaWdodDogdmFyKC0tXzExbnB4dHAxZSk7Cn0KLnp0dmVzNjcgewo
+gIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCg5MGRlZywgdmFyKC0tXzExbnB4dHA1KSwgdmFyKC0
+tXzExbnB4dHA0KSA5NSUpOwogIGJhY2tncm91bmQtY2xpcDogdGV4dDsKICAtd2Via2l0LWJhY2tncm9
+1bmQtY2xpcDogdGV4dDsKICAtd2Via2l0LXRleHQtZmlsbC1jb2xvcjogdHJhbnNwYXJlbnQ7CiAgZm9
+udC13ZWlnaHQ6IHZhcigtLV8xMW5weHRwMWUpOwp9Ci56dHZlczY4IHsKICBiYWNrZ3JvdW5kOiBsaW5
+lYXItZ3JhZGllbnQoOTBkZWcsIHZhcigtLV8xMW5weHRwNCksIHZhcigtLV8xMW5weHRwNSkgOTUlKTs
+KICBiYWNrZ3JvdW5kLWNsaXA6IHRleHQ7CiAgLXdlYmtpdC1iYWNrZ3JvdW5kLWNsaXA6IHRleHQ7CiA
+gLXdlYmtpdC10ZXh0LWZpbGwtY29sb3I6IHRyYW5zcGFyZW50OwogIGZvbnQtd2VpZ2h0OiB2YXIoLS1
+fMTFucHh0cDFlKTsKfQouenR2ZXM2OSB7CiAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDkwZGV
+nLCB2YXIoLS1fMTFucHh0cDQpIC02MCUsIHZhcigtLV8xMW5weHRwMikgMTgwJSk7CiAgYmFja2dyb3V
+uZC1jbGlwOiB0ZXh0OwogIC13ZWJraXQtYmFja2dyb3VuZC1jbGlwOiB0ZXh0OwogIC13ZWJraXQtdGV
+4dC1maWxsLWNvbG9yOiB0cmFuc3BhcmVudDsKICBmb250LXdlaWdodDogdmFyKC0tXzExbnB4dHAxZSk
+7Cn0KLnp0dmVzNmEgewogIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCg5MGRlZywgdmFyKC0tXzE
+xbnB4dHA1KSwgdmFyKC0tXzExbnB4dHAyKSA5NSUpOwogIGJhY2tncm91bmQtY2xpcDogdGV4dDsKICA
+td2Via2l0LWJhY2tncm91bmQtY2xpcDogdGV4dDsKICAtd2Via2l0LXRleHQtZmlsbC1jb2xvcjogdHJ
+hbnNwYXJlbnQ7CiAgZm9udC13ZWlnaHQ6IHZhcigtLV8xMW5weHRwMWUpOwp9Ci56dHZlczZiIHsKICB
+iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoOTBkZWcsIHZhcigtLV8xMW5weHRwNiksIHZhcigtLV8
+xMW5weHRwNCkgOTUlKTsKICBiYWNrZ3JvdW5kLWNsaXA6IHRleHQ7CiAgLXdlYmtpdC1iYWNrZ3JvdW5
+kLWNsaXA6IHRleHQ7CiAgLXdlYmtpdC10ZXh0LWZpbGwtY29sb3I6IHRyYW5zcGFyZW50OwogIGZvbnQ
+td2VpZ2h0OiB2YXIoLS1fMTFucHh0cDFlKTsKfQouenR2ZXM2YyB7CiAgYmFja2dyb3VuZDogbGluZWF
+yLWdyYWRpZW50KDkwZGVnLCB2YXIoLS1fMTFucHh0cDQpLCB2YXIoLS1fMTFucHh0cDYpIDk1JSk7CiA
+gYmFja2dyb3VuZC1jbGlwOiB0ZXh0OwogIC13ZWJraXQtYmFja2dyb3VuZC1jbGlwOiB0ZXh0OwogIC1
+3ZWJraXQtdGV4dC1maWxsLWNvbG9yOiB0cmFuc3BhcmVudDsKICBmb250LXdlaWdodDogdmFyKC0tXzE
+xbnB4dHAxZSk7Cn0KLnp0dmVzNmQgewogIHBvc2l0aW9uOiByZWxhdGl2ZTsKICBkaXNwbGF5OiBpbmx
+pbmUtYmxvY2s7Cn0KLnp0dmVzNmQ6YmVmb3JlIHsKICBkaXNwbGF5OiBibG9jazsKICBjb250ZW50OiA
+iICI7CiAgcG9zaXRpb246IGFic29sdXRlOwogIGJvdHRvbTogMC4yMTByZW07CiAgbGVmdDogMDsKICB
+3aWR0aDogMTAwJTsKICBoZWlnaHQ6IDAuMjAwcmVtOwogIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWV
+udCg5MGRlZywgdmFyKC0tXzExbnB4dHAyKSwgdmFyKC0tXzExbnB4dHA0KSA5NSUpOwp9Ci56dHZlczZ
+lIHsKICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgZGlzcGxheTogaW5saW5lLWJsb2NrOwp9Ci56dHZlczZ
+lOmJlZm9yZSB7CiAgZGlzcGxheTogYmxvY2s7CiAgY29udGVudDogIiAiOwogIHBvc2l0aW9uOiBhYnN
+vbHV0ZTsKICBib3R0b206IDAuMjEwcmVtOwogIGxlZnQ6IDA7CiAgd2lkdGg6IDEwMCU7CiAgaGVpZ2h
+0OiAwLjIwMHJlbTsKICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoOTBkZWcsIHZhcigtLV8xMW5
+weHRwNiksIHZhcigtLV8xMW5weHRwNCkgOTUlKTsKfQouenR2ZXM2ZiB7CiAgYm94LXNpemluZzogYm9
+yZGVyLWJveDsKICB3aWR0aDogMTAwdnc7CiAgb3ZlcmZsb3c6IGhpZGRlbjsKICBwYWRkaW5nOiB2YXI
+oLS1fMTFucHh0cHkpOwogIG1heC13aWR0aDogY2FsYygoMzdyZW0gKyB2YXIoLS1fMTFucHh0cHkpKSA
+rIHZhcigtLV8xMW5weHRweSkpOwogIG1hcmdpbi1sZWZ0OiBhdXRvOwogIG1hcmdpbi1yaWdodDogYXV
+0bzsKfQouenR2ZXM2ZiBoMiB7CiAgZm9udC1zaXplOiAxLjQ1NDU0NTVyZW07CiAgbGluZS1oZWlnaHQ
+6IDIuODE4MTgxOHJlbTsKICBtYXJnaW4tdG9wOiAxLjQwOTA5MDlyZW07CiAgbWFyZ2luLWJvdHRvbTo
+gMS40MDkwOTA5cmVtOwogIGxldHRlci1zcGFjaW5nOiB2YXIoLS1fMTFucHh0cDE4KTsKfQouenR2ZXM
+2ZiA+IGgzIHsKICBmb250LXNpemU6IDFyZW07CiAgbGluZS1oZWlnaHQ6IDIuODE4MTgxOHJlbTsKICB
+tYXJnaW4tdG9wOiAxLjQwOTA5MDlyZW07CiAgbWFyZ2luLWJvdHRvbTogMDsKICBmb250LXdlaWdodDo
+gdmFyKC0tXzExbnB4dHAxZCk7CiAgbGV0dGVyLXNwYWNpbmc6IHZhcigtLV8xMW5weHRwMTgpOwogIHR
+leHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7Cn0KLnp0dmVzNmYgPiBoNCB7CiAgZm9udC1zaXplOiAxcmV
+tOwogIGxpbmUtaGVpZ2h0OiAyLjgxODE4MThyZW07CiAgbWFyZ2luLXRvcDogMS40MDkwOTA5cmVtOwo
+gIG1hcmdpbi1ib3R0b206IDA7CiAgZm9udC13ZWlnaHQ6IHZhcigtLV8xMW5weHRwMWQpOwogIGxldHR
+lci1zcGFjaW5nOiB2YXIoLS1fMTFucHh0cDE4KTsKfQouenR2ZXM2ZiBjb2RlIHsKICBmb250LXNpemU
+6IDAuODVyZW07Cn0KLnp0dmVzNmYgYSB7CiAgY29sb3I6IGluaGVyaXQ7Cn0KLnp0dmVzNmYgcCBhIHs
+KICBib3JkZXItYm90dG9tLXdpZHRoOiAwLjA2NXJlbTsKICBib3JkZXItYm90dG9tLXN0eWxlOiBkb3R
+0ZWQ7CiAgYm9yZGVyLWJvdHRvbS1jb2xvcjogdmFyKC0tXzExbnB4dHAzKTsKfQouenR2ZXM2ZiAubWF
+ya2Rvd24taGVhZGluZy1saW5rIHsKICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgZGlzcGxheTogYmxvY2s
+7Cn0KLnp0dmVzNmYgLm1hcmtkb3duLWhlYWRpbmctbGluazpiZWZvcmUgewogIGNvbnRlbnQ6ICIiOwo
+gIGJhY2tncm91bmQtaW1hZ2U6IHVybChkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBITjJaeUI0Yld
+4dWN6MGlhSFIwY0RvdkwzZDNkeTUzTXk1dmNtY3ZNakF3TUM5emRtY2lJR1JoZEdFdGJtRnRaVDBpVEd
+GNVpYSWdNU0lnZG1sbGQwSnZlRDBpTUNBd0lERTJJREUySWo0OGNHRjBhQ0JrUFNKTk1UQXVNRFVnTVR
+FdU9EbGpMUzR4T1M0eU15MHVNRGd1TVRJdE1pNDFOaUF5TGpVNVlUUXVNaklnTkM0eU1pQXdJREFnTVM
+wMkxUWk1NeTQwTXlBMkxqWmhMak0yTGpNMklEQWdNQ0F4SUM0Mk1pNHlORUUxTGpVMklEVXVOVFlnTUN
+Bd0lEQWdOQzR4T1NBNFlTNHpOQzR6TkNBd0lEQWdNUzB1TVM0ek0wd3lMamN4SURrdU56RmhNaTQxTXl
+BeUxqVXpJREFnTUNBd0lETXVOVGdnTXk0MU9FdzRMalUySURFeFlUSXVOVE1nTWk0MU15QXdJREFnTUN
+Bd0xUTXVOVGhCTWk0M09TQXlMamM1SURBZ01DQXdJRGN1T0RjZ04yRXVNell1TXpZZ01DQXdJREV0TGp
+FNUxTNHpOeUF4TGpVNUlERXVOVGtnTUNBd0lERWdMalEwTFM0NU1td3VNVE10TGpFellTNHpOeTR6Tnl
+Bd0lEQWdNU0F1TkRJdExqQTNJRFF1TWpnZ05DNHlPQ0F3SURBZ01TQXhMakE1TGpjNElEUXVNak1nTkM
+0eU15QXdJREFnTVNBdU1qa2dOUzQyZW0wMExqUXpMVFF1TkV3eE1pNDFOeUE1TGpSaExqTTJMak0ySUR
+BZ01DQXhMUzQxTnkwdU1qUkJOUzQxTmlBMUxqVTJJREFnTUNBd0lERXhMamd4SURoaExqTTBMak0wSUR
+BZ01DQXhJQzR4TFM0ek0yd3hMak00TFRFdU16bGhNaTQxTXlBeUxqVXpJREFnTUNBd0xUTXVOVGd0TXk
+0MU4wdzNMalEwSURWaE1pNDFNeUF5TGpVeklEQWdNQ0F3SURBZ015NDFPQ0F5TGpjNUlESXVOemtnTUN
+Bd0lEQWdMalk1TGpRNUxqTTJMak0ySURBZ01DQXhJQzR4T1M0ek55QXhMalU1SURFdU5Ua2dNQ0F3SUR
+FdExqUTBMamt5YkMwdU1UTXVNVE5oTGpNM0xqTTNJREFnTUNBeExTNDBNaTR3TnlBMExqSTRJRFF1TWp
+nZ01DQXdJREV0TVM0d09TMHVOemhCTkM0eU15QTBMakl6SURBZ01DQXhJRFlnTkM0eE1XTXVNVFF0TGp
+JeklEQXRMakV4SURJdU5URXRNaTQxT1dFMExqSXlJRFF1TWpJZ01DQXdJREVnTmlBMmVpSXZQand2YzN
+ablBnPT0pOwogIGJhY2tncm91bmQtc2l6ZTogY29udGFpbjsKICBoZWlnaHQ6IDE2cHg7CiAgb3BhY2l
+0eTogMC4zOwogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtMS4zcmV
+tLCAxcmVtKTsKICB3aWR0aDogMTZweDsKfQouenR2ZXM2ZiAubWFya2Rvd24taGVhZGluZy1saW5rOmh
+vdmVyOmJlZm9yZSB7CiAgb3BhY2l0eTogMC42Owp9Ci56dHZlczZmIGltZyB7CiAgd2lkdGg6IGNhbGM
+oKDEwMCUgKyB2YXIoLS1fMTFucHh0cHkpKSArIHZhcigtLV8xMW5weHRweSkpOwogIG1heC13aWR0aDo
+gY2FsYygoMTAwJSArIHZhcigtLV8xMW5weHRweSkpICsgdmFyKC0tXzExbnB4dHB5KSk7CiAgbWFyZ2l
+uLWxlZnQ6IGNhbGModmFyKC0tXzExbnB4dHB5KSAqIC0xKTsKICBtYXJnaW4tcmlnaHQ6IGNhbGModmF
+yKC0tXzExbnB4dHB5KSAqIC0xKTsKfQouenR2ZXM2ZiAuYmxvZy1wb3N0LS1jYXB0aW9uIHsKICBmb25
+0LXN0eWxlOiBpdGFsaWM7CiAgdGV4dC1hbGlnbjogY2VudGVyOwogIHBhZGRpbmctcmlnaHQ6IHZhcig
+tLV8xMW5weHRweSk7CiAgcGFkZGluZy1sZWZ0OiB2YXIoLS1fMTFucHh0cHkpOwp9Ci56dHZlczZmIHR
+hYmxlIHsKICB3aWR0aDogMTAwJTsKfQouenR2ZXM2ZiB0aGVhZCB0aCB7CiAgYmFja2dyb3VuZDogdmF
+yKC0tXzExbnB4dHAzKTsKICBjb2xvcjogdmFyKC0tXzExbnB4dHAwKTsKICB0ZXh0LXRyYW5zZm9ybTo
+gdXBwZXJjYXNlOwogIHRleHQtYWxpZ246IGxlZnQ7CiAgcGFkZGluZy1sZWZ0OiB2YXIoLS1fMTFucHh
+0cHYpOwogIHBhZGRpbmctdG9wOiB2YXIoLS1fMTFucHh0cHUpOwogIHBhZGRpbmctYm90dG9tOiB2YXI
+oLS1fMTFucHh0cHUpOwogIGZvbnQtc2l6ZTogdmFyKC0tXzExbnB4dHBlKTsKICBsZXR0ZXItc3BhY2l
+uZzogdmFyKC0tXzExbnB4dHAxNSk7Cn0KLnp0dmVzNmYgdGJvZHkgdGQgewogIHBhZGRpbmctbGVmdDo
+gdmFyKC0tXzExbnB4dHB2KTsKICBwYWRkaW5nLXRvcDogdmFyKC0tXzExbnB4dHB1KTsKICBwYWRkaW5
+nLWJvdHRvbTogdmFyKC0tXzExbnB4dHB1KTsKICBib3JkZXItYm90dG9tLWNvbG9yOiB2YXIoLS1fMTF
+ucHh0cDcpOwogIGJvcmRlci1ib3R0b20tc3R5bGU6IHNvbGlkOwogIGJvcmRlci1ib3R0b20td2lkdGg
+6IDAuMDM1cmVtOwp9Ci56dHZlczZmIFtjbGFzcyo9Imxhbmd1YWdlLSJdIFtjbGFzcyo9Imxhbmd1YWd
+lLSJdIHsKICBiYWNrZ3JvdW5kOiBub25lOwp9Ci56dHZlczZmIHAgewogIGxpbmUtaGVpZ2h0OiAxLjQ
+wOTA5MDlyZW07CiAgbWFyZ2luLXRvcDogMDsKICBtYXJnaW4tYm90dG9tOiAxLjQwOTA5MDlyZW07Cn0
+KLnp0dmVzNmYgPiB1bCB7CiAgbGluZS1oZWlnaHQ6IDEuNDA5MDkwOXJlbTsKICBtYXJnaW4tdG9wOiA
+wOwogIG1hcmdpbi1ib3R0b206IDEuNDA5MDkwOXJlbTsKfQouenR2ZXM2ZiA+IG9sIHsKICBsaW5lLWh
+laWdodDogMS40MDkwOTA5cmVtOwogIG1hcmdpbi10b3A6IDA7CiAgbWFyZ2luLWJvdHRvbTogMS40MDk
+wOTA5cmVtOwp9Ci56dHZlczZmID4gdGFibGUgewogIGxpbmUtaGVpZ2h0OiAxLjQwOTA5MDlyZW07CiA
+gbWFyZ2luLXRvcDogMDsKICBtYXJnaW4tYm90dG9tOiAxLjQwOTA5MDlyZW07Cn0KLnp0dmVzNmYgcHJ
+lIHsKICBsaW5lLWhlaWdodDogMS40MDkwOTA5cmVtOwogIG1hcmdpbi10b3A6IDA7CiAgbWFyZ2luLWJ
+vdHRvbTogMS40MDkwOTA5cmVtOwp9Ci56dHZlczZmID4gYmxvY2txdW90ZSB7CiAgbGluZS1oZWlnaHQ
+6IDEuNDA5MDkwOXJlbTsKICBtYXJnaW4tdG9wOiAwOwogIG1hcmdpbi1ib3R0b206IDEuNDA5MDkwOXJ
+lbTsKfQouenR2ZXM2ZyB7CiAgZm9udC1zaXplOiB2YXIoLS1fMTFucHh0cGopOwogIGxpbmUtaGVpZ2h
+0OiB2YXIoLS1fMTFucHh0cHIpOwogIGxldHRlci1zcGFjaW5nOiB2YXIoLS1fMTFucHh0cDFhKTsKICB
+mb250LXdlaWdodDogdmFyKC0tXzExbnB4dHAxZCk7CiAgbWFyZ2luOiAwOwogIHRleHQtYWxpZ246IGN
+lbnRlcjsKfQpAbWVkaWEgc2NyZWVuIGFuZCAobWluLXdpZHRoOiA5OTJweCkgewogIC56dHZlczZmIHs
+KICAgIHBhZGRpbmctbGVmdDogdmFyKC0tXzExbnB4dHAxMCk7CiAgICBwYWRkaW5nLXJpZ2h0OiB2YXI
+oLS1fMTFucHh0cDEwKTsKICAgIG1heC13aWR0aDogY2FsYygoMzdyZW0gKyB2YXIoLS1fMTFucHh0cDE
+wKSkgKyB2YXIoLS1fMTFucHh0cDEwKSk7CiAgfQogIC56dHZlczZmIGltZyB7CiAgICB3aWR0aDogY2F
+sYygoMTAwJSArIHZhcigtLV8xMW5weHRwMTApKSArIHZhcigtLV8xMW5weHRwMTApKTsKICAgIG1heC1
+3aWR0aDogY2FsYygoMTAwJSArIHZhcigtLV8xMW5weHRwMTApKSArIHZhcigtLV8xMW5weHRwMTApKTs
+KICAgIG1hcmdpbi1sZWZ0OiBjYWxjKHZhcigtLV8xMW5weHRwMTApICogLTEpOwogICAgbWFyZ2luLXJ
+pZ2h0OiBjYWxjKHZhcigtLV8xMW5weHRwMTApICogLTEpOwogIH0KICAuenR2ZXM2ZyB7CiAgICBtYXJ
+naW4tcmlnaHQ6IHZhcigtLV8xMW5weHRwMTEpOwogICAgbWFyZ2luLWxlZnQ6IHZhcigtLV8xMW5weHR
+wMTEpOwogIH0KfQpAbWVkaWEgc2NyZWVuIGFuZCAobWluLXdpZHRoOiAxNDQwcHgpIHsKICAuenR2ZXM
+2ZiB7CiAgICBwYWRkaW5nLWxlZnQ6IHZhcigtLV8xMW5weHRwMTEpOwogICAgcGFkZGluZy1yaWdodDo
+gdmFyKC0tXzExbnB4dHAxMSk7CiAgICBtYXgtd2lkdGg6IGNhbGMoKDM3cmVtICsgdmFyKC0tXzExbnB
+4dHAxMSkpICsgdmFyKC0tXzExbnB4dHAxMSkpOwogIH0KICAuenR2ZXM2ZiBpbWcgewogICAgd2lkdGg
+6IGNhbGMoKDEwMCUgKyB2YXIoLS1fMTFucHh0cDExKSkgKyB2YXIoLS1fMTFucHh0cDExKSk7CiAgICB
+tYXgtd2lkdGg6IGNhbGMoKDEwMCUgKyB2YXIoLS1fMTFucHh0cDExKSkgKyB2YXIoLS1fMTFucHh0cDE
+xKSk7CiAgICBtYXJnaW4tbGVmdDogY2FsYyh2YXIoLS1fMTFucHh0cDExKSAqIC0xKTsKICAgIG1hcmd
+pbi1yaWdodDogY2FsYyh2YXIoLS1fMTFucHh0cDExKSAqIC0xKTsKICB9Cn0KQG1lZGlhIChwcmVmZXJ
+zLWNvbG9yLXNjaGVtZTogZGFyaykgewogIC56dHZlczZmIHAgYSB7CiAgICBib3JkZXItYm90dG9tLWN
+vbG9yOiB2YXIoLS1fMTFucHh0cDApOwogIH0KICAuenR2ZXM2ZiBbY2xhc3MqPSJsYW5ndWFnZS0iXSB
+7CiAgICBiYWNrZ3JvdW5kOiByZ2JhKDM4LCAxNzEsIDIzMiwgMC4xKTsKICAgIGNvbG9yOiAjYzJkMGU
+2OwogIH0KfQ=="}!./node_modules/@vanilla-extract/webpack-plugin/extracted/dist/va
+nilla-extract-webpack-plugin-extracted.cjs.js
+despite it was not able to fulfill desired ordering with these modules:
+ * css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[11].oneOf[1].use[
+1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[11].oneOf[1].use[
+2]!./node_modules/virtual-resource-loader/dist/virtual-resource-loader.cjs.js?{"
+source":"LmEyaWRzYTAgewogIGJhY2tncm91bmQ6IHZhcigtLV8xMW5weHRwMyk7CiAgY29sb3I6IHZ
+hcigtLV8xMW5weHRwMCk7CiAgYm9yZGVyLXJhZGl1czogdmFyKC0tXzExbnB4dHAxaik7CiAgcGFkZGl
+uZzogdmFyKC0tXzExbnB4dHB2KTsKICBwYWRkaW5nLXJpZ2h0OiB2YXIoLS1fMTFucHh0cHcpOwogIHB
+hZGRpbmctbGVmdDogdmFyKC0tXzExbnB4dHB3KTsKICBtYXJnaW4tbGVmdDogdmFyKC0tXzExbnB4dHB
+5KTsKICBtYXJnaW4tcmlnaHQ6IHZhcigtLV8xMW5weHRweSk7Cn0KLmEyaWRzYTEgewogIGNvbG9yOiB
+2YXIoLS1fMTFucHh0cDMpOwogIHBhZGRpbmc6IHZhcigtLV8xMW5weHRwdSk7CiAgcGFkZGluZy1yaWd
+odDogdmFyKC0tXzExbnB4dHB2KTsKICBwYWRkaW5nLWxlZnQ6IHZhcigtLV8xMW5weHRwdik7CiAgdGV
+4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTsKICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1fMTFucHh0cDM
+pOwogIGJvcmRlci1yYWRpdXM6IHZhcigtLV8xMW5weHRwMWspOwogIGZvbnQtc2l6ZTogdmFyKC0tXzE
+xbnB4dHBkKTsKfQpAbWVkaWEgKHByZWZlcnMtY29sb3Itc2NoZW1lOiBkYXJrKSB7CiAgLmEyaWRzYTE
+gewogICAgY29sb3I6IHZhcigtLV8xMW5weHRwMCk7CiAgICBib3JkZXItY29sb3I6IHZhcigtLV8xMW5
+weHRwMCk7CiAgfQp9"}!./node_modules/@vanilla-extract/webpack-plugin/extracted/dis
+t/vanilla-extract-webpack-plugin-extracted.cjs.js
+   - couldn't fulfill desired order of chunk group(s)
+component---src-templates-blog-list-tsx
+   - while fulfilling desired order of chunk group(s)
+component---src-templates-blog-post-tsx
+
+[2K[1A[2K[Gsuccess Building production JavaScript and CSS bundles - 1.164s
+
+[2K[1A[2K[Gsuccess Caching JavaScript and CSS webpack compilation - 0.230s
+
+[2K[1A[2K[Gsuccess Writing page-data.json files to public directory - 0.004s - 2/2 507.37/s
+
+[2K[1A[2K[Gsuccess Building HTML renderer - 1.088s
+
+[2K[1A[2K[Ginfo There are no new or changed html files to build.
+
+[2K[1A[2K[Gsuccess Caching HTML renderer compilation - 0.177s
+
+[2K[1A[2K[Gsuccess onPostBuild - 0.112s
+
+[2K[1A[2K[Ginfo Done building in 20.017050398 sec
+
+Done in 20.39s.
+yarn run v1.22.11
+$ build-storybook -o ./public/storybook
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+​
+────────────────────────────────────────────────────────────────
+  "build.command" failed                                        
+────────────────────────────────────────────────────────────────
+​
+  Error message
+  Command failed with exit code 1: yarn build && yarn build-storybook
+​
+  Error location
+  In build.command from netlify.toml:
+  yarn build && yarn build-storybook
+​
+  Resolved config
+  build:
+    command: yarn build && yarn build-storybook
+    commandOrigin: config
+    environment:
+      - YARN_FLAGS
+      - YARN_VERSION
+    publish: /Users/jrlainfiesta/Frontside/frontside.com/public
+    publishOrigin: config
+  headers:
+    - for: /bigtest/asciinema/iframes/cross-platform.html
+      values:
+        X-Frame-Options: SAMEORIGIN
+    - for: /storybook*
+      values:
+        X-Frame-Options: SAMEORIGIN
+  redirects:
+    - from: /talks/*
+      path: /talks/*
+      status: 302
+      to: /blog
+    - from: /ember-consulting
+      path: /ember-consulting
+      status: 302
+      to: /services
+    - from: /ember-training
+      path: /ember-training
+      status: 302
+      to: /services
+    - from: /calendar
+      path: /calendar
+      status: 302
+      to: /
+    - from: /lunch-and-learn/*
+      path: /lunch-and-learn/*
+      status: 302
+      to: /blog
+    - from: /open-source
+      path: /open-source
+      status: 302
+      to: /about
+    - from: /careers
+      path: /careers
+      status: 302
+      to: /about
+    - from: /learning/*
+      path: /learning/*
+      status: 302
+      to: /about
+    - from: /style-guide
+      path: /style-guide
+      status: 302
+      to: /
+    - from: /case-studies/
+      path: /case-studies/
+      status: 302
+      to: /work
+    - from: /index.html
+      path: /index.html
+      status: 302
+      to: /
+    - from: /about.html
+      path: /about.html
+      status: 302
+      to: /about
+    - from: /people
+      path: /people
+      status: 302
+      to: /about
+    - from: /consulting.html
+      path: /consulting.html
+      status: 302
+      to: /consulting
+    - from: /services
+      path: /services
+      status: 302
+      to: /consulting
+    - from: /tools.html
+      path: /tools.html
+      status: 302
+      to: /tools
+    - from: /contact.html
+      path: /contact.html
+      status: 302
+      to: /contact
+    - from: /contact-thanks.html
+      path: /contact-thanks.html
+      status: 302
+      to: /contact-thanks
+    - from: /about/:name
+      path: /about/:name
+      status: 302
+      to: /people/:name
+    - from: /calendar/*
+      path: /calendar/*
+      status: 302
+      to: /
+    - from: /blog/tags/javascript/page/2/
+      path: /blog/tags/javascript/page/2/
+      status: 302
+      to: /tags
+    - from: /blog/tags/frp/
+      path: /blog/tags/frp/
+      status: 302
+      to: /tags
+    - from: /blog/tags/mvc/
+      path: /blog/tags/mvc/
+      status: 302
+      to: /tags
+    - from: /blog/tags/javascript-functional-programming/
+      path: /blog/tags/javascript-functional-programming/
+      status: 302
+      to: /tags
+    - from: /blog/tags/component/
+      path: /blog/tags/component/
+      status: 302
+      to: /tags
+    - from: /blog/tags/awesome/
+      path: /blog/tags/awesome/
+      status: 302
+      to: /tags
+    - from: /blog/tags/ember-a11y/
+      path: /blog/tags/ember-a11y/
+      status: 302
+      to: /tags
+    - from: /blog/tags/tvos/
+      path: /blog/tags/tvos/
+      status: 302
+      to: /tags
+    - from: /blog/2014/09/21/reactive-modeling-with-ember.html
+      path: /blog/2014/09/21/reactive-modeling-with-ember.html
+      status: 302
+      to: /blog
+    - from: /blog/2014/03/06/a-sprinkling-of-ember.html
+      path: /blog/2014/03/06/a-sprinkling-of-ember.html
+      status: 302
+      to: /blog
+    - from: /blog/2017-12-22-frontside-forecast-the-growing-importance-of-blockchains
+      path: /blog/2017-12-22-frontside-forecast-the-growing-importance-of-blockchains
+      status: 302
+      to: /blog
+    - from: /blog/:year/:month/:day/:slug
+      path: /blog/:year/:month/:day/:slug
+      status: 302
+      to: /blog/:year-:month-:day-:slug
+    - from: /blog/tags/:slug
+      path: /blog/tags/:slug
+      status: 302
+      to: /tags/:slug
+    - from: /blog/page/:page
+      path: /blog/page/:page
+      status: 302
+      to: /blog/:page
+    - from: /podcast/page/*
+      path: /podcast/page/*
+      status: 302
+      to: /podcast
+    - from: /podcast/115-testing-issues-and-bigtest-solutions
+      path: /podcast/115-testing-issues-and-bigtest-solutions
+      status: 302
+      to: /podcast/115-testing-issues-and-big-test-solutions
+    - from: /podcast/109-what-do-you-need-in-a-javascript-framework
+      path: /podcast/109-what-do-you-need-in-a-javascript-framework
+      status: 302
+      to: /podcast/109-what-do-you-need-in-a-java-script-framework
+    - from: /podcast/105-automating-github-with-probot
+      path: /podcast/105-automating-github-with-probot
+      status: 302
+      to: /podcast/105-automating-git-hub-with-probot
+    - from: /podcast/100-100th-episode-celebration-with-brandon-hays
+      path: /podcast/100-100th-episode-celebration-with-brandon-hays
+      status: 302
+      to: /podcast/100-100-th-episode-celebration-with-brandon-hays
+    - from: /podcast/091-rxjs-with-ben-lesh-and-tracy-lee
+      path: /podcast/091-rxjs-with-ben-lesh-and-tracy-lee
+      status: 302
+      to: /podcast/091-rx-js-with-ben-lesh-and-tracy-lee
+    - from: /podcast/090-big-testing-in-javascript
+      path: /podcast/090-big-testing-in-javascript
+      status: 302
+      to: /podcast/090-big-testing-in-java-script
+    - from: /podcast/085-webassembly-with-jay-phelps
+      path: /podcast/085-webassembly-with-jay-phelps
+      status: 302
+      to: /podcast/085-web-assembly-with-jay-phelps
+    - from: /podcast/080-resin-io-with-alison-davis-and-ronald-mccollam
+      path: /podcast/080-resin-io-with-alison-davis-and-ronald-mccollam
+      status: 302
+      to: /podcast/080-resin-io-with-alison-davis-and-ronald-mc-collam
+    - from: /podcast/051-rust-and-apis-with-steve-klabnik
+      path: /podcast/051-rust-and-apis-with-steve-klabnik
+      status: 302
+      to: /podcast/051-rust-and-ap-is-with-steve-klabnik
+    - from: /podcast/049-learning-elm-for-better-javascript-with-jamison-dance
+      path: /podcast/049-learning-elm-for-better-javascript-with-jamison-dance
+      status: 302
+      to: /podcast/049-learning-elm-for-better-java-script-with-jamison-dance
+    - from: /podcast/044-women-in-tech-and-shenomads-with-latoya-allen
+      path: /podcast/044-women-in-tech-and-shenomads-with-latoya-allen
+      status: 302
+      to: /podcast/044-women-in-tech-and-she-nomads-with-la-toya-allen
+    - from: /podcast/038-emberconf-2016-recap-and-highlights
+      path: /podcast/038-emberconf-2016-recap-and-highlights
+      status: 302
+      to: /podcast/038-ember-conf-2016-recap-and-highlights
+    - from: /podcast/032-working-remotely-with-allison-mcmillan
+      path: /podcast/032-working-remotely-with-allison-mcmillan
+      status: 302
+      to: /podcast/032-working-remotely-with-allison-mc-millan
+    - from: /podcast/021-best-of-emberconf-2015-part-2
+      path: /podcast/021-best-of-emberconf-2015-part-2
+      status: 302
+      to: /podcast/021-best-of-ember-conf-2015-part-2
+    - from: /podcast/020-best-of-emberconf-2015-part-1
+      path: /podcast/020-best-of-emberconf-2015-part-1
+      status: 302
+      to: /podcast/020-best-of-ember-conf-2015-part-1
+    - from: /podcast/015-domstep-with-jamison-dance
+      path: /podcast/015-domstep-with-jamison-dance
+      status: 302
+      to: /podcast/015-dom-step-with-jamison-dance/
+    - from: /podcast/013-ember-metal-htmlbars-and-the-death-of-script-tags
+      path: /podcast/013-ember-metal-htmlbars-and-the-death-of-script-tags
+      status: 302
+      to: /podcast/012-is-it-ok-to-not-love-programming-with-sarah-mei
+    - from: /podcast/009-how-to-tell-if-a-jquery-plugin-is-about-to-stab-you
+      path: /podcast/009-how-to-tell-if-a-jquery-plugin-is-about-to-stab-you
+      status: 302
+      to: /podcast/009-how-to-tell-if-a-j-query-plugin-is-about-to-stab-you
+    - from: /podcast/004-emberconf-recap
+      path: /podcast/004-emberconf-recap
+      status: 302
+      to: /podcast/004-ember-conf-recap
+    - from: /people
+      path: /people
+      status: 302
+      to: /about
+    - from: /people/arash-zafarnia
+      path: /people/arash-zafarnia
+      status: 302
+      to: /about
+    - force: true
+      from: /bigtest/*
+      path: /bigtest/*
+      proxy: true
+      status: 200
+      to: https://bigtest.netlify.app/bigtest/:splat
+    - force: true
+      from: /effection/*
+      path: /effection/*
+      proxy: true
+      status: 200
+      to: https://effection.netlify.app/effection/:splat
+    - force: true
+      from: https://frontside.io/*
+      host: frontside.io
+      path: /*
+      scheme: https
+      status: 301
+      to: https://frontside.com/:splat
+    - force: true
+      from: https://www.frontside.io/*
+      host: www.frontside.io
+      path: /*
+      scheme: https
+      status: 301
+      to: https://frontside.com/:splat
+  redirectsOrigin: config

@@ -1,10 +1,10 @@
 ---
 templateKey: people
 name: Robbie Pitts
-title: Cat Pair Programmer
-img: /img/robbie-pitts.jpg
+title: Engineering Consultant
+img: ../img/robbie-pitts.jpg
 twitter: pittst3r
 github: pittst3r
-bio: Robbie has been developing for the web since he was 12. He enjoys solving hard coding problems and is always looking for ways to improve developer ergonomics and efficiency. When Robbie's not working he enjoys hanging out with his wife, cat, and friends.
-intro: Robbie has been developing for the web since he was 12. He enjoys solving hard coding problems and is always looking for ways to improve developer ergonomics and efficiency.
+intro: Driven by a strong passion for technical excellence, Robbie has helped teams with their development tools and testing practices since 2012. With a scrum certification under his belt, Robbie knows how to coordinate developers to deliver quality software on time.
+alumnus: true
 ---

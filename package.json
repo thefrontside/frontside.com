@@ -5,14 +5,19 @@
   "author": "Taras <taras@frontside.com>",
   "private": true,
   "dependencies": {
-    "classnames": "^2.2.6",
+    "@lottiefiles/react-lottie-player": "^3.4.1",
+    "@typeform/embed-react": "^1.1.1",
+    "@types/react-helmet": "^6.1.2",
+    "@vanilla-extract/babel-plugin": "^1.0.1",
+    "@vanilla-extract/css": "^1.4.0",
+    "@vanilla-extract/css-utils": "^0.1.1",
+    "@vanilla-extract/webpack-plugin": "^2.0.0",
     "dateformat": "4.5.1",
     "gatsby": "^3.10.1",
     "gatsby-plugin-image": "^1.10.1",
     "gatsby-plugin-mailchimp": "^5.2.2",
     "gatsby-plugin-manifest": "^3.10.0",
     "gatsby-plugin-netlify": "^3.10.0",
-    "gatsby-plugin-postcss": "^4.10.0",
     "gatsby-plugin-react-helmet": "^4.10.0",
     "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
     "gatsby-plugin-sharp": "^3.10.2",
@@ -27,10 +32,7 @@
     "gatsby-transformer-sharp": "^3.10.0",
     "lodash": "^4.17.21",
     "lodash-webpack-plugin": "^0.11.4",
-    "parcel-bundler": "^1.12.5",
-    "postcss-calc": "^7.0.2",
-    "postcss-color-function": "^4.1.0",
-    "precss": "^4.0.0",
+    "plausible-tracker": "^0.3.1",
     "prettier": "^2.3.2",
     "prismjs": "^1.24.1",
     "prop-types": "^15.6.0",
@@ -38,6 +40,7 @@
     "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
+    "react-hook-inview": "^4.3.11",
     "react-transition-group": "^4.4.2",
     "rimraf": "^3.0.2",
     "syntax-highlighting": "^1.0.0",
@@ -61,15 +64,27 @@
     "test:server": "bigtest server --launch=chrome",
     "test:run": "bigtest test",
     "check-urls": "node ./lib/check-urls/index.js",
-    "verify-sitemap": "./lib/verify-sitemap/index.js"
+    "verify-sitemap": "./lib/verify-sitemap/index.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o ./public/storybook"
   },
   "volta": {
     "node": "14.17.3",
     "yarn": "1.22.10"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.0",
     "@babel/preset-typescript": "^7.14.5",
+    "@storybook/addon-actions": "^6.3.7",
+    "@storybook/addon-essentials": "^6.3.7",
+    "@storybook/addon-links": "^6.3.7",
+    "@storybook/builder-webpack5": "^6.3.7",
+    "@storybook/manager-webpack5": "^6.3.7",
+    "@storybook/react": "^6.3.7",
+    "babel-loader": "^8.2.2",
     "bigtest": "^0.14.0",
-    "netlify-cli": "^5.4.16"
+    "netlify-cli": "^5.2.0",
+    "storybook-addon-gatsby": "^0.0.2",
+    "storybook-dark-mode": "^1.0.8"
   }
 }

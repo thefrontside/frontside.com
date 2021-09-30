@@ -8,6 +8,7 @@ description: >-
   Adopting Cloud native strategies has proven to improve organizations' delivery performance, but the complexity brought in with them is making life harder for developers. Using the example of a unified Secret manager, I present how Backstage can improve DX in the Cloud native world.
 tags:
   - cloud-native
+  - dx
   - backstage
   - kubernetes
 img: /img/2021-backstage-dx/avoid-developer-churn-with-backstage.png

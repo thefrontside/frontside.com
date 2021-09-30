@@ -1,6 +1,9 @@
 /
 /404.html
 /404/
+/about/
+/backstage/
+/backstage/resideo/
 /blog
 /blog/2
 /blog/2006-07-08-learning-javascript-from-the-command-line/
@@ -65,9 +68,9 @@
 /blog/4
 /blog/5
 /blog/6
-/contact-retro/
-/contact-retro/thanks/
-/people/
+/code-of-conduct/
+/consulting/
+/contact/
 /people/alex-ford/
 /people/brandon-hays/
 /people/charles-lowell/
@@ -75,6 +78,7 @@
 /people/david-keathley/
 /people/elrick-ryan/
 /people/ginger-whalen/
+/people/jacob-bolda/
 /people/jeffrey-cherewaty/
 /people/joe-lasala/
 /people/jonas-niklas/
@@ -83,6 +87,8 @@
 /people/lydia-guarino/
 /people/michele-mikell/
 /people/min-kim/
+/people/paul-cowan/
+/people/rachelle-stewart/
 /people/robbie-pitts/
 /people/robert-deluca/
 /people/sam-keathley/
@@ -225,6 +231,7 @@
 /podcast/transparent-development/
 /podcast/type-systems-with-reason-ml-london-organizer-marcel-cutts-and-shane-wilson/
 /podcast/whats-in-a-ui-platform/
+/privacy-policy/
 /tags/
 /tags/accessibility/
 /tags/backstage/
@@ -254,6 +261,7 @@
 /tags/devops/
 /tags/dhtml/
 /tags/disability/
+/tags/dx/
 /tags/ember-a-11-y/
 /tags/ember-addon/
 /tags/ember-js/
@@ -314,14 +322,3 @@
 /tags/web-accessibility/
 /tags/web-standards/
 /tags/x-select/
-/work/
-/work/altschool/
-/work/ingaged/
-/work/kasita/
-/about
-/code-of-conduct
-/consulting
-/contact-thanks
-/contact
-/privacy-policy
-/tools

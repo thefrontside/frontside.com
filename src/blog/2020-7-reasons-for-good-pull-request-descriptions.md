@@ -7,6 +7,7 @@ description: >-
   A good Pull Request description can lead to better reviews, improved solutions, better documentation, and more. In this article, Taras surveys seven big wins of PR descriptions.
 tags:
   - best-practices
+  - dx
 img: /img/2020-7-reasons-for-good-pull-request-descriptions-social.png
 ---
 

@@ -1,27 +1,20 @@
-/talks/*            /blog         302
-/ember-consulting /services     302
-/ember-training   /services     302
-/calendar         /             302
-/lunch-and-learn/*  /blog         302
-/open-source      /about        302
-/careers          /about        302
-/learning/*         /about        302
-/style-guide      /             302
+/talks/*            /blog           302
+/ember-consulting   /consulting     302
+/ember-training     /consulting     302
+/services           /consulting     302
+/tools              /consulting     302
+/case-studies/      /consulting     302
+/calendar           /blog           302
+/calendar/*         /blog           302
+/lunch-and-learn/*  /blog           302
+/learning/*         /blog           302
+/open-source        /about          302
+/careers            /about          302
+/style-guide      /                 302
 
-/case-studies/ /work 302
-
-/index.html / 302
-/about.html /about 302
 /people /about 302
-/consulting.html /consulting 302
-/services /consulting 302
-/tools.html /tools 302
-/contact.html /contact 302
-/contact-thanks.html /contact-thanks 302
-
+/people/arash-zafarnia /about 302
 /about/:name  /people/:name 302
-
-/calendar/* / 302
 
 /blog/tags/javascript/page/2/ /tags 302
 /blog/tags/frp/ /tags 302
@@ -60,5 +53,3 @@
 /podcast/009-how-to-tell-if-a-jquery-plugin-is-about-to-stab-you /podcast/009-how-to-tell-if-a-j-query-plugin-is-about-to-stab-you 302
 /podcast/004-emberconf-recap /podcast/004-ember-conf-recap 302
 
-/people /about 302
-/people/arash-zafarnia /about 302

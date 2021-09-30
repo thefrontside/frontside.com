@@ -1,10 +1,17 @@
 ---
 templateKey: people
 name: Jeffrey Cherewaty
-title: Software Diplomat
-img: /img/jeffrey-cherewaty.jpg
+alumnus: true
+title: COO
+location: Austin, Texas
+img: ../img/q3-2021/team/jeffrey.jpg
+imgAlt: Portrait of Jeffrey. He has a short haircut and no beard.
 twitter: cherewaty
 github: cherewaty
-bio: Jeffrey is a seasoned designer/developer who likes creating thoughtfully designed apps in the browser. He began his career building accessible websites for The University of Texas at Austin. As SpareFoot’s first employee, he led design and front-end engineering through exponential growth and multiple fundraising rounds. At Frontside, Jeffrey prides himself on shipping beautiful, livable code that solves real business problems. He’s currently working on a Master’s in Software Engineering at UT-Austin.
-intro: Jeffrey is a seasoned designer/developer who likes creating thoughtfully designed apps in the browser.  At Frontside, Jeffrey prides himself on shipping beautiful, livable code that solves real business problems. 
+intro: After succeeding in the trenches of the startup world—leading
+  frontend teams through hyper-growth and a decade consulting for
+  global corporations—Jeffrey now calls himself a "software
+  diplomat." With a masters in Software Engineering from The
+  University of Texas at Austin, he facilitates technical
+  conversations and rolls up his sleeves to make change happen.
 ---

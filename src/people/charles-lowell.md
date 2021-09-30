@@ -1,10 +1,18 @@
 ---
 templateKey: people
 name: Charles Lowell
-title: Gentleman Developer
-img: /img/charles-lowell.png
+title: Founder / Head of Research & Development
+img: ../img/q3-2021/team/charles.jpg
+imgAlt: Portrait of Charles Lowell. He has a salt and pepper beard beard and a hat.
+location: Austin, Texas — Helsinki, Finland
 twitter: cowboyd
 github: cowboyd
-bio: Charles has been delivering bullet-proof software for over 18 years. An avid contributor to open source, he founded the Frontside in 2005 to help businesses deliver game-changing user interfaces to their customers. Also, he really, really, really, really likes to code. Really.
-intro: Charles has been delivering bullet-proof software for over 18 years. An avid contributor to open source, he founded the Frontside in 2005 to help businesses deliver game-changing user interfaces to their customers.
+intro: More than 25 years ago, Charles torched a promising career in
+  biochemistry and joined the dot-com revolution. After coding
+  daily on systems big and small, he founded Frontside in 2005
+  based on the belief that good software development patterns are
+  universal. Charles currently researches testing platforms and
+  structured concurrency to power up every developer’s daily
+  coding life.
+order: 100
 ---
