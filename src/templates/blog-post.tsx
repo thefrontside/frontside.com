@@ -8,10 +8,10 @@ import SubscribeForm from '../components/subscribe-form';
 import {
   heroWrap,
   heroText,
-  heroImage,
   tagListLine,
   tagListLineItem,
   radiusMd,
+  sideImage,
 } from '../styles/page.css';
 import {
   heading3Xl,
@@ -52,7 +52,7 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
             ))}
           </ul>
         </div>
-        <div className={heroImage}>
+        <div className={sideImage}>
           <img src={image} alt="" className={radiusMd} />
         </div>
       </header>

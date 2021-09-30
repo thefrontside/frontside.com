@@ -175,9 +175,9 @@ export default function IndexPage({
               We help developers thrive in complexity
             </h2>
             <Link to="/consulting" className={toPageButton}>
-              <strong className={arrowTextWhite}>
+              <span className={arrowTextWhite}>
                 Learn how we approach DX
-              </strong>
+              </span>
             </Link>
           </div>
           <div className={homeGraphImage}>
@@ -237,9 +237,9 @@ export default function IndexPage({
         </div>
         <p className={homeBottomCTA}>
           <Link to="/backstage" className={toPageButtonGreen}>
-            <strong className={arrowTextWhite}>
+            <span className={arrowTextWhite}>
               Learn how we implement Backstage
-            </strong>
+            </span>
           </Link>
         </p>
       </section>

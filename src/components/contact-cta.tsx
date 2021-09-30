@@ -56,7 +56,7 @@ export default function ContactCTA({
           onQuestionChanged={onQuestionChange}
           onClose={() => trackCTA('closed')}
         >
-          <strong className={arrowTextWhite}>{label}</strong>
+          <span className={arrowTextWhite}>{label}</span>
         </PopupButton>
       ) : (
         <p className={ctaSubmittedBox}>

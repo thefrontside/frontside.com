@@ -93,7 +93,7 @@ export default function ConsultingPage({
             <span className={textGradientPinkSkyblue}>Developer</span>
             <br />
             <span className={textGradientPinkSkyblue}>Experience: </span> where
-            deliveries and retention meet
+            delivery and retention meet
           </h1>
           <p className={textLg}>
             Frontside helps Cloud native orgs create Developer Experiences that

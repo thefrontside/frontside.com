@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Layout from '../../components/layout';
 
 import {
-  consultingTopTCA,
   homeBottomCTA,
   radiusMd,
   sectionHeader,
@@ -50,7 +49,6 @@ export default function ConsultingPage() {
           uniform way of viewing these services and accessing their
           repositories, documentation, and the people behind them.
         </p>
-        <p>| screenshot: Catalog with blurred out names |</p>
         <p>
           Frontside also introduced a Blue-Green indicator into Resideo&#39;s
           Catalog so anyone could immediately know the release status,
@@ -97,8 +95,6 @@ export default function ConsultingPage() {
           developers to access the documentation of any Resideo service without
           leaving their work environment.
         </p>
-        <p>| screenshot: techdocs |</p>
-
         <h2 id="discover-use-create">Discover, use, create</h2>
         <p>
           Backstage enables organizations to discover new possibilities through
