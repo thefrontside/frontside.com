@@ -1,4 +1,4 @@
-import { globalStyle, keyframes, style } from '@vanilla-extract/css';
+import { keyframes, style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
 import vars, { laptopQuery, desktopQuery, darkThemeQuery } from './frontside-theme.css';
 import clientsLogo from '../img/q3-2021/client-logos.svg';
@@ -6,7 +6,7 @@ import clientsLogoWhite from '../img/q3-2021/client-logos-white.svg';
 import backgroundBubbles from '../img/q3-2021/backgruond-blue-bubbles.png';
 import openMicBg from '../img/q3-2021/backstage-openmic-bg.png';
 
-import { textBlueDashWhite, textLg, textUppercase, textXl } from './typography.css';
+import { textLg, textUppercase, textXl } from './typography.css';
 
 export const pageWrap = style({
   boxSizing: 'border-box',
