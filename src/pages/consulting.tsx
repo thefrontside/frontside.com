@@ -29,9 +29,7 @@ import {
   consultingTab,
   consultingTabImage,
   consultingTopTCA,
-  heroPlayerForceSize,
-  featurePlayerForceSize,
-  cyclePlayerForceSize,
+  heroPlayerConsulting,
 } from '../styles/page.css';
 import {
   textGradientPinkSkyblue,
@@ -118,8 +116,7 @@ export default function ConsultingPage({
         <div className={heroImage}>
           <Animation
             src={heroAnimation}
-            speed={0.75}
-            className={heroPlayerForceSize}
+            className={heroPlayerConsulting}
             blockedView={modalIsActive}
           />
         </div>
@@ -171,8 +168,6 @@ export default function ConsultingPage({
           <div className={featureImage}>
             <Animation
               src={frustrationAnimation}
-              speed={0.75}
-              className={featurePlayerForceSize}
             />
           </div>
         </div>
@@ -298,8 +293,6 @@ export default function ConsultingPage({
           <div className={consultingCycleIllustration}>
             <Animation
               src={cycleAnimation}
-              speed={0.75}
-              className={cyclePlayerForceSize}
             />
           </div>
         </div>

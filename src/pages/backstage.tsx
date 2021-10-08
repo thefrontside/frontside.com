@@ -111,7 +111,7 @@ export default function BackstagePage({
           </p>
         </div>
         <div className={heroImage}>
-          <Animation src={heroAnimation} speed={0.75} className={featurePlayerForceSize} />
+          <Animation src={heroAnimation} />
         </div>
       </header>
 
@@ -150,7 +150,7 @@ export default function BackstagePage({
             </p>
           </div>
           <div className={featureImage}>
-            <Animation src={deriskAnimation} className={featurePlayerForceSize}  />
+            <Animation src={deriskAnimation} />
           </div>
         </div>
 

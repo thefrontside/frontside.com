@@ -10,7 +10,7 @@ import { textLg, textUppercase, textXl } from './typography.css';
 
 export const pageWrap = style({
   boxSizing: 'border-box',
-  width: '100vw',
+  width: '100%',
   padding: vars.space.sm,
   maxWidth: '37rem',
   margin: '0 auto',
@@ -95,13 +95,18 @@ export const heroPlayerForceSize = style({
   }
 });
 
-export const cyclePlayerForceSize = style([heroPlayerForceSize, {
+export const heroPlayerConsulting = style({
+  width: '100%',
+  height: '100%',
   '@media': {
     [laptopQuery]: {
-      marginTop: 0,
+      width: '110%',
+      height: '110%',
+      marginLeft: '-10%',
+      marginTop: '-10%',
     }
   }
-}]);
+});
 
 export const featurePlayerForceSize = style({
   width: '100%',
@@ -397,6 +402,7 @@ export const homeBottomCTAtext = style([textLg, {
 export const homeGraphRow = style({
   marginBottom: vars.space['2xl'],
   marginTop: vars.space['2xl'],
+  overflow: 'hidden',
   '@media': {
     [laptopQuery]: {
       display: 'flex',
@@ -423,7 +429,6 @@ export const homeGraphImage = style({
   '@media': {
     [laptopQuery]: {
       display: 'block',
-      width: '60%',
       minWidth: '800px',
       flexShrink: 0,
     }
