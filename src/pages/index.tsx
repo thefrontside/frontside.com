@@ -117,8 +117,7 @@ export default function IndexPage({
           </div>
         </div>
         <div className={heroImage}>
-          {/* <img src={homeHero} alt="" /> */}
-          <Animation src={heroAnimation} className={featurePlayerForceSize} />
+          <Animation src={heroAnimation} />
         </div>
       </header>
 
@@ -155,7 +154,7 @@ export default function IndexPage({
             </p>
           </div>
           <div className={featureImage}>
-            <Animation src={shiftleftAnimation} speed={0.75} />
+            <Animation src={shiftleftAnimation} />
           </div>
         </div>
 
