@@ -10,7 +10,7 @@ import { textLg, textUppercase, textXl } from './typography.css';
 
 export const pageWrap = style({
   boxSizing: 'border-box',
-  width: '100vw',
+  width: '100%',
   padding: vars.space.sm,
   maxWidth: '37rem',
   margin: '0 auto',
