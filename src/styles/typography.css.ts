@@ -348,8 +348,12 @@ globalStyle(`${mardownColumn} > h4`, {
   letterSpacing: vars.letterSpacing.xl,
 });
 
-globalStyle(`${mardownColumn} code`, {
+globalStyle(`${mardownColumn} code[class*="language-"]`, {
   fontSize: '0.85rem'
+});
+
+globalStyle(`${mardownColumn} p > code[class*="language-"]`, {
+  fontSize: '0.85em'
 });
 
 globalStyle(`${mardownColumn} a`, {
@@ -469,7 +473,14 @@ globalStyle(`${mardownColumn} > table`, markdownBlockDescription);
 
 globalStyle(`${mardownColumn} pre`, markdownBlockDescription);
 
-globalStyle(`${mardownColumn} > blockquote`, markdownBlockDescription);
+globalStyle(`${mardownColumn} > .gatsby-highlight`, markdownBlockDescription);
+
+globalStyle(`${mardownColumn} > blockquote`, {
+  ...markdownBlockDescription,
+  marginLeft: '1.4090909rem',
+  marginRight: '1.4090909rem',
+  fontSize: '0.90rem',
+});
 
 export const bigQuote = style([text3Xl, {
   fontWeight: vars.fontWeights.bold,
