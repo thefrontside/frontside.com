@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="505.18" height="272.47" viewBox="0 0 505.18 272.47">
+  <defs>
+    <style>
+      .a, .f, .g, .k, .l, .n, .o, .p, .q {
+        fill: none;
+      }
+
+      .b {
+        fill: #44378a;
+      }
+
+      .c {
+        fill: #14305c;
+      }
+
+      .d, .h, .i, .s {
+        isolation: isolate;
+      }
+
+      .d {
+        fill: url(#a);
+      }
+
+      .e {
+        opacity: 0.5;
+      }
+
+      .f, .g, .q {
+        stroke: #fff;
+      }
+
+      .f, .g, .k, .l, .n, .o, .p, .q {
+        stroke-miterlimit: 10;
+      }
+
+      .g {
+        stroke-dasharray: 7.84 3.92;
+      }
+
+      .i {
+        font-size: 10px;
+        font-family: Monaco;
+      }
+
+      .i, .j, .r, .s {
+        fill: #fff;
+      }
+
+      .j {
+        font-size: 12px;
+        font-family: ProximaNova-Bold, Proxima Nova;
+        font-weight: 700;
+      }
+
+      .k, .p {
+        stroke: lime;
+      }
+
+      .k {
+        stroke-dasharray: 1 1;
+      }
+
+      .l {
+        stroke: #26abe8;
+      }
+
+      .l, .n, .o, .q {
+        stroke-width: 2px;
+      }
+
+      .m {
+        fill: #26abe8;
+      }
+
+      .n {
+        stroke: #f74d7b;
+      }
+
+      .o {
+        stroke: #d4145a;
+      }
+
+      .s {
+        font-size: 11px;
+        font-family: ProximaNova-Regular, Proxima Nova;
+      }
+    </style>
+    <pattern id="a" data-name="Purple diagonal" width="12.69" height="12.69" patternTransform="translate(38.07 195)" patternUnits="userSpaceOnUse" viewBox="0 0 12.69 12.69">
+      <rect class="a" width="12.69" height="12.69"/>
+      <g>
+        <polygon class="a" points="10.45 12.69 0 2.24 0 10.45 2.24 12.69 10.45 12.69"/>
+        <polygon class="a" points="2.24 0 12.69 10.45 12.69 2.24 10.45 0 2.24 0"/>
+        <polygon class="b" points="2.24 0 0 0 0 2.24 10.45 12.69 12.69 12.69 12.69 10.45 2.24 0"/>
+        <polygon class="b" points="10.45 0 12.69 2.24 12.69 0 10.45 0"/>
+        <polygon class="b" points="2.24 12.69 0 10.45 0 12.69 2.24 12.69"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect class="c" x="-1.05" y="-0.5" width="518.09" height="274.89"/>
+  <rect class="d" x="260.1" y="50.79" width="202" height="161"/>
+  <g class="e">
+    <g>
+      <line class="f" x1="128.6" y1="50.79" x2="128.6" y2="54.79"/>
+      <line class="g" x1="128.6" y1="58.71" x2="128.6" y2="221.33"/>
+      <line class="f" x1="128.6" y1="223.29" x2="128.6" y2="227.29"/>
+    </g>
+  </g>
+  <g class="e">
+    <g>
+      <line class="f" x1="259.6" y1="50.79" x2="259.6" y2="54.79"/>
+      <line class="g" x1="259.6" y1="58.71" x2="259.6" y2="221.33"/>
+      <line class="f" x1="259.6" y1="223.29" x2="259.6" y2="227.29"/>
+    </g>
+  </g>
+  <g class="h">
+    <text class="i" transform="translate(80.34 241.46)">fetchSomeUsers() </text>
+    <text class="i" transform="translate(110.34 253.46)">called</text>
+  </g>
+  <g class="h">
+    <text class="i" transform="translate(212.34 241.46)">fetchSomeUsers() </text>
+    <text class="i" transform="translate(245.35 253.46)">fails</text>
+  </g>
+  <text class="i" transform="translate(41.56 137.85)">fetchUser(1)</text>
+  <text class="i" transform="translate(40.56 181.85)">fetchUser(2)</text>
+  <text class="i" transform="translate(17.55 93.85)">fetchSomeUsers()</text>
+  <text class="j" transform="translate(213.16 27.99)">EFFECTION</text>
+  <line class="k" x1="174.14" y1="133.31" x2="128.14" y2="89.31"/>
+  <line class="k" x1="174.14" y1="177.31" x2="128.14" y2="89.31"/>
+  <g>
+    <line class="l" x1="176.19" y1="134.79" x2="259.54" y2="134.79"/>
+    <g>
+      <path class="c" d="M176.62,142.31a7.52,7.52,0,1,1,7.52-7.52A7.52,7.52,0,0,1,176.62,142.31Z"/>
+      <path class="m" d="M176.62,143.31a8.52,8.52,0,1,0-8.52-8.52,8.53,8.53,0,0,0,8.52,8.52Zm0-15a6.52,6.52,0,1,1-6.52,6.52,6.52,6.52,0,0,1,6.52-6.52Z"/>
+    </g>
+    <g>
+      <path class="c" d="M259.47,142.31a7.52,7.52,0,1,0-7.52-7.52A7.52,7.52,0,0,0,259.47,142.31Z"/>
+      <path class="m" d="M259.47,143.31a8.52,8.52,0,1,1,8.52-8.52,8.53,8.53,0,0,1-8.52,8.52Zm0-15a6.52,6.52,0,1,0,6.52,6.52,6.52,6.52,0,0,0-6.52-6.52Z"/>
+    </g>
+  </g>
+  <g>
+    <line class="l" x1="128.19" y1="90.79" x2="260.1" y2="90.79"/>
+    <g>
+      <path class="c" d="M128.62,98.31a7.52,7.52,0,1,1,7.52-7.52A7.52,7.52,0,0,1,128.62,98.31Z"/>
+      <path class="m" d="M128.62,99.31a8.52,8.52,0,1,0-8.52-8.52,8.53,8.53,0,0,0,8.52,8.52Zm0-15a6.52,6.52,0,1,1-6.52,6.52,6.52,6.52,0,0,1,6.52-6.52Z"/>
+    </g>
+  </g>
+  <g>
+    <line class="n" x1="253.84" y1="84.63" x2="267.1" y2="97.89"/>
+    <line class="o" x1="253.38" y1="97.8" x2="266.65" y2="84.53"/>
+  </g>
+  <g>
+    <line class="p" x1="256.5" y1="131.62" x2="262.92" y2="138.04"/>
+    <line class="k" x1="256.28" y1="138" x2="262.7" y2="131.58"/>
+  </g>
+  <g>
+    <line class="l" x1="176.19" y1="177.31" x2="259.54" y2="177.31"/>
+    <g>
+      <path class="c" d="M176.62,184.83a7.52,7.52,0,1,1,7.52-7.52A7.52,7.52,0,0,1,176.62,184.83Z"/>
+      <path class="m" d="M176.62,185.83a8.52,8.52,0,1,0-8.52-8.52,8.53,8.53,0,0,0,8.52,8.52Zm0-15a6.52,6.52,0,1,1-6.52,6.52,6.52,6.52,0,0,1,6.52-6.52Z"/>
+    </g>
+    <g>
+      <path class="c" d="M259.47,184.83a7.52,7.52,0,1,0-7.52-7.52A7.52,7.52,0,0,0,259.47,184.83Z"/>
+      <path class="m" d="M259.47,185.83a8.52,8.52,0,1,1,8.52-8.52,8.53,8.53,0,0,1-8.52,8.52Zm0-15a6.52,6.52,0,1,0,6.52,6.52,6.52,6.52,0,0,0-6.52-6.52Z"/>
+    </g>
+  </g>
+  <g>
+    <line class="p" x1="256.5" y1="174.14" x2="262.92" y2="180.56"/>
+    <line class="k" x1="256.28" y1="180.52" x2="262.7" y2="174.1"/>
+  </g>
+  <g>
+    <line class="q" x1="14.57" y1="211.72" x2="486.32" y2="211.23"/>
+    <path class="r" d="M489.18,210.43c-.67-.67-1.34-1.32-2-2s-1.39-1.27-2.13-1.87a36.58,36.58,0,0,0-4.63-3.37,38.32,38.32,0,0,0,3.38,4.62c.6.74,1.25,1.42,1.87,2.13l.12.12.7,1.3-.71.95-.11.12c-.62.71-1.28,1.39-1.87,2.13a35.69,35.69,0,0,0-3.38,4.63,35.69,35.69,0,0,0,4.63-3.38c.74-.59,1.42-1.24,2.13-1.87s1.37-1.29,2-1.95l.81-.81Z"/>
+  </g>
+  <text class="s" transform="translate(460.22 235.22)">Time</text>
+</svg>

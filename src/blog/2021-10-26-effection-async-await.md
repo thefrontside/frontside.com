@@ -130,7 +130,11 @@ async function fetchSomeUsers() {
 
 What will happen in this case? `fetchUser(1)` and `fetchUser(2)` will happily keep running, even though the `fetchSomeUsers` function which initially called them has already failed.
 
+![fetchSomeUsers timing with async/await](/img/2021-effection-intro/intro-effection-async-await.svg)
+
 This can&#39;t happen in Effection. Because given that `fetchUser(1)` and `fetchUser(2)` are scoped to their parent function, they will be terminated when `fetchSomeUsers` enters in an error state.
+
+![fetchSomeUsers timing with effection](/img/2021-effection-intro/intro-effection-effection.svg)
 
 And this is the power of Effection&#39;s structured concurrency: it allows us to build abstractions that would otherwise be impossible to construct. We think it is a fundamentally better way to write JavaScript.
 
