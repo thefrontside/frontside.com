@@ -482,6 +482,11 @@ globalStyle(`${mardownColumn} > blockquote`, {
   marginLeft: '-0.3rem',
   marginRight: '1.4090909rem',
   fontSize: '0.90rem',
+  '@media': {
+    [darkThemeQuery]: {
+      borderColor: 'rgba(255, 255, 255, 0.2)',
+    }
+  }
 });
 
 export const bigQuote = style([text3Xl, {
