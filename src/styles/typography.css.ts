@@ -477,7 +477,9 @@ globalStyle(`${mardownColumn} > .gatsby-highlight`, markdownBlockDescription);
 
 globalStyle(`${mardownColumn} > blockquote`, {
   ...markdownBlockDescription,
-  marginLeft: '1.4090909rem',
+  borderLeft: `0.3rem solid rgba(20, 49, 93, 0.3)`,
+  paddingLeft: '1.4090909rem',
+  marginLeft: '-0.3rem',
   marginRight: '1.4090909rem',
   fontSize: '0.90rem',
 });
