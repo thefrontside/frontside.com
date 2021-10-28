@@ -29,7 +29,7 @@ async function fetchUser(id) {
 }
 ```
 
-There is nothing special about this async function. And this is what happens when we usecall this function from another function:
+There is nothing special about this async function. And this is what happens when we call this function from another function:
 
 ```javascript
 async function fetchSomeUsers() {
