@@ -95,13 +95,13 @@ export default function BackstagePage({
             </span>
           </h1>
           <p className={textLg}>
-            We help you get the most out of Backstage for the long-run
+            We help enterprise teams get the most out of Backstage for the long-run
           </p>
           <p className={consultingTopTCA}>
             <ContactCTA
               submitted={submitted}
               setSubmitted={setSubmitted}
-              label="Make Backstage work for you"
+              label="Adopt Backstage with Frontside"
               topic="backstage"
               eventId="cta-backstage"
               ctaId="landing-top"
