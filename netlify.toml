@@ -36,6 +36,18 @@ to = "https://effection.netlify.app/effection/:splat"
 
 [[redirects]]
 force = true
+from = "/interactors/html/api/*"
+status = 200
+to = "https://main--interactors-html-api.netlify.app/:splat"
+
+[[redirects]]
+force = true
+from = "/interactors/mui/api/*"
+status = 200
+to = "https://main--interactors-mui-api.netlify.app/:splat"
+
+[[redirects]]
+force = true
 from = "/interactors/*"
 status = 200
 to = "https://interactors.netlify.app/interactors/:splat"
