@@ -42,7 +42,7 @@ async function fetchSomeUsers() {
 }
 ```
 
-Here we're calling `fetchUser` twice, and then awaiting both calls. This will cause both calls to `fetchUser` to execute concurrently. We could also implement this using `Promise.all`, which would behave similarly:
+Here we're calling `fetchUser` twice, and then awaiting both calls. This will cause both calls to `fetchUser` to execute concurrently. We could also implement this using `Promise.all`, which would behave similarly and is subject to the exact same pitfalls:
 
 ```javascript
 async function fetchSomeUsers() {
