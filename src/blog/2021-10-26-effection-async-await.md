@@ -41,7 +41,16 @@ async function fetchSomeUsers() {
   }
 }
 ```
-> Note: we could have used `Promise.all()` for this, but the resulting behavior would be the same.
+
+Here we're calling `fetchUser` twice, and then awaiting both calls. This will cause both calls to `fetchUser` to execute concurrently. We could also implement this using `Promise.all`, which would behave similarly:
+
+```javascript
+async function fetchSomeUsers() {
+  let userOne = fetchUser(1);
+  let userTwo = fetchUser(2);
+  return Promise.all([userOne, userTwo]);
+}
+```
 
 It looks like the `fetchSomeUsers` function is nice and self-contained, but in fact it isn&#39;t. We start fetching two users, but both of those fetches are in no way tied to the `fetchSomeUsers` function. They run in the background, and no matter what happens within `fetchSomeUsers`, _they just keep running_. Potentially they could run forever; that&#39;s what we mean when we say that their lifetime is unconstrained.
 
