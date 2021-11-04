@@ -94,7 +94,7 @@ However, the way that this function runs is very different. When we spawn a task
 
 ## Using Effection
 
-This might seem like a trivial outcome but the implications are profound. For example, Effection uses a special operation called `withTimeout`, which adds a time limit to any task. If the time limit is exceeded, an error is thrown.
+This might seem like a trivial outcome but the implications are profound. For example, Effection ships with an operation called `withTimeout`, which adds a time limit to any task. If the time limit is exceeded, an error is thrown.
 
 That means we can now do this:
 
