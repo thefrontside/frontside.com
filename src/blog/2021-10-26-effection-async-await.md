@@ -18,7 +18,7 @@ The problem with concurrent processes in JavaScript is that it is fundamentally 
 
 ## Introducing Effection
 
-The solution is to adopt the ideas of a [structured concurrency](https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/) and apply them to JavaScript. The core idea of structured concurrency is that the lifetime of a task is always constrained. This means that a task must not outlive its parent, or in other words, it is impossible to create a task that runs _forever_. This might seem like an obvious constraint, but it is important to note that this is very much _not_ the case with the core concurrency primitives available in JavaScript.
+The solution is to adopt the ideas of [structured concurrency](https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/) and apply them to JavaScript. The core idea of structured concurrency is that the lifetime of a task is always constrained. This means that a task must not outlive its parent, or in other words, it is impossible to create a task that runs _forever_. This might seem like an obvious constraint, but it is important to note that this is very much _not_ the case with the core concurrency primitives available in JavaScript.
 
 [Effection](http://frontside.com/effection) is an Open Source concurrency framework that replaces async/await with a more structured way of writing code. Let&#39;s look at how this applies to async/await code:
 
