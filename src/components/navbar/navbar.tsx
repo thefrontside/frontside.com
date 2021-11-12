@@ -7,7 +7,9 @@ import {
   logoMargin,
   logoSVGFill,
   linksGroup,
+  homeLink,
 } from './navbar.css';
+import ProjectSelect from './project-select';
 
 const NavItems = [
   { url: '/', text: 'Home' },
@@ -23,11 +25,19 @@ export const Navbar = () => {
         <Logo />
       </Link>
       <div className={linksGroup}>
-        {NavItems.map((link, i) => (
-          <Link to={link.url} key={i} className={navLink}>
-            {link.text}
-          </Link>
-        ))}
+        <Link to={NavItems[0].url} className={homeLink}>
+          {NavItems[0].text}
+        </Link>
+        <Link to={NavItems[1].url} className={navLink}>
+          {NavItems[1].text}
+        </Link>
+        <Link to={NavItems[2].url} className={navLink}>
+          {NavItems[2].text}
+        </Link>
+        <ProjectSelect />
+        <Link to={NavItems[3].url} className={navLink}>
+          {NavItems[3].text}
+        </Link>
       </div>
       <Link to="/contact" className={contactButton}>
         Contact
