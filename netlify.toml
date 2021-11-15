@@ -24,7 +24,7 @@ to = "https://bigtest.netlify.app/bigtest/:splat"
 
 [[redirects]]
 force = true
-from = "/effection/api/"
+from = "/effection/what/"
 status = 200
 to = "/effection/api/index.html"
 
@@ -42,7 +42,7 @@ to = "https://effection.netlify.app/effection/:splat"
 
 [[redirects]]
 force = true
-from = "/interactors/html/api/"
+from = "/interactors/huh"
 status = 200
 to = "/interactors/html/api/index.html"
 
