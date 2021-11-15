@@ -26,7 +26,7 @@ to = "https://bigtest.netlify.app/bigtest/:splat"
 force = true
 from = "/effection/api"
 status = 200
-to = "https://frontside.com/effection/api/index.html"
+to = "/effection/api/index.html"
 
 [[redirects]]
 force = true
@@ -44,7 +44,7 @@ to = "https://effection.netlify.app/effection/:splat"
 force = true
 from = "/interactors/html/api"
 status = 200
-to = "https://frontside.com/interactors/html/api/index.html"
+to = "/interactors/html/api/index.html"
 
 [[redirects]]
 force = true
@@ -56,7 +56,7 @@ to = "https://main--interactors-html-api.netlify.app/:splat"
 force = true
 from = "/interactors/mui/api"
 status = 200
-to = "https://frontside.com/interactors/mui/api/index.html"
+to = "/interactors/mui/api/index.html"
 
 [[redirects]]
 force = true
