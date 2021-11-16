@@ -2,7 +2,7 @@ import vars, { laptopQuery, desktopQuery, darkThemeQuery, colorValues } from '..
 import { style, globalStyle, styleVariants } from '@vanilla-extract/css';
 import { pageWrap } from '../../styles/page.css';
 import gradientDecor from '../../img/q3-2021/button-gradient.png';
-import { fillBlueDashWhite, headingMd, headingSm, textBlue, textBlueDashWhite, textSm } from '../../styles/typography.css';
+import { boldCaps, fillBlueDashWhite, headingMd, headingSm, textBlue, textBlueDashWhite, textSm, textXs } from '../../styles/typography.css';
 import { calc } from "@vanilla-extract/css-utils";
 
 export const navWrap = style([pageWrap, {
@@ -70,13 +70,9 @@ export const navLink = style({
   }
 });
 
-export const homeLink = style([navLink, {
-  '@media': {
-    [laptopQuery]: {
-      display: 'none',
-    }
-  }
-}]);
+export const homeLink = style({
+  display: 'none',
+});
 
 export const logoMargin = style({
   marginRight: 'auto',
@@ -110,7 +106,29 @@ export const linksGroup = style({
 
 export const projectSelectWrap = style({
   position: 'relative',
+  '@media': {
+    [laptopQuery]: {
+      marginLeft: vars.space.md,
+    }
+  },
 })
+
+export const projectSelectLabel = style([navLink, {
+  cursor: 'pointer',
+  '@media': {
+    [laptopQuery]: {
+      marginLeft: 0,
+    }
+  }
+}]);
+
+export const projectsListTitle = style([textXs, boldCaps, {
+  color: vars.colors.blue,
+  padding: vars.space['2xs'],
+  margin: 0,
+  textAlign: 'center',
+  fontWeight: vars.fontWeights.normal,
+}]);
 
 export const projectsList = style({
   background: vars.colors.white,
@@ -166,13 +184,21 @@ export const projectItemHighlighted = style([projectItem, {
   background: 'rgba(38, 171, 232, 0.10);',
 }]);
 
-export const projectTitle = style([headingSm, textBlue, {
-  marginBottom: 0,
+export const projectTitle = style([textXs, textBlue, {
+  marginBottom: vars.space['3xs'],
   letterSpacing: vars.letterSpacing["2xl"],
   display: 'block',
+  fontWeight: vars.fontWeights.bold,
+  textTransform: 'uppercase',
 }]);
 
-export const projectDescription = style([textSm, textBlue, {
+export const projectVersion = style([textXs, {
+  fontWeight: vars.fontWeights.normal,
+  marginLeft: vars.space['3xs'],
+  textTransform: 'none',
+}]);
+
+export const projectDescription = style([textXs, textBlue, {
   marginBottom: 0,
   display: 'block',
 }]);
