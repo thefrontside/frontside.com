@@ -60,13 +60,6 @@ export const navLink = style({
       background: `linear-gradient(90deg, ${colorValues.skyblue}, ${colorValues.violet}, ${colorValues.pink} 95%)`,
       borderRadius: vars.radius.md,
     },
-    // '&:first-child': {
-    //   '@media': {
-    //     [laptopQuery]: {
-    //       display: 'none',
-    //     }
-    //   }
-    // }
   }
 });
 
@@ -144,10 +137,6 @@ export const projectsList = style({
     [darkThemeQuery]: {
       boxShadow: `0 2px 15px rgba(0, 0, 0, 0.40)`
     },
-    [laptopQuery]: {
-      // width: '15rem',
-      // marginLeft: calc(vars.space.md).multiply('-1').toString(),
-    }
   }
 });
 
