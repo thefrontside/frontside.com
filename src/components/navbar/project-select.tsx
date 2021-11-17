@@ -38,7 +38,7 @@ const items = [
   },
   {
     title: 'Bigtest',
-    description: 'Universal test runner using GraphQL',
+    description: 'Universal test runner, GraphQL driven',
     url: 'https://frontside.com/bigtest',
     version: 'v0',
     img: iconBigtest,
