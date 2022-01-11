@@ -13,18 +13,11 @@ img: /img/2021-intro-effection.png # placeholder
 
 ## Introduction (taras)
 
-- talk about backstage
-- explain the problem - so many parts
-  - mac/linux 👍
-  - but on windows 👎
-    - solution: devcontainers
-- overview of tutorial:
-  - get backstage running
-  - configure devcontainer
-  - configure devcontainer to run backstage
-- we're going to do this with the minimal configurations required
-  - if you run into any problems or have any questions, join our discord channel
-    - we have a dedicated backstage channel
+One often underrated aspect of developer onboarding is how quickly a new contributor can go from cloning the source code to running the project on their machine. If your team is not thinking about this then the answer is probably “I don’t know” or “more than a day”. This is especially true for Backstage because it is a full stack application. It requires having a recent version of Node.js, Yarn and PostgreSQL running on the developer’s machine. These are fairly easy to install on MacOS and Linux but can be challenging on Windows, especially for someone who’s new to the Node.js ecosystem. A poor early onboarding experience can be very discouraging and leave a poor impression, especially with the new contributor is visiting from another team. One thing that we learned from experience is that a good onboarding experience for new contributors also improves the developer experience for seasons contributors.
+
+One way that Frontside found to improve onboarding is by using [DevContainers](https://code.visualstudio.com/docs/remote/containers). DevContainers are containerized development environments. They make it easy to run the project by creating a container that has all of the system requirements to run the project. DevContainer uses a combination of several popular tools which include Docker with Docker Compose. It has a CLI called [devcontainer-cli](https://code.visualstudio.com/docs/remote/devcontainer-cli) that you can use to open the container from the command line. It will open in VSCode which uses [Remote Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) to create a smooth integration with VSCode. For the most part, running devcontainers inside of VSCode feels like the application is running on your machine. Once you added DevContainers to your project, it provides a clear path to adopting GitHub Codespaces which [make onboarding even easier](https://github.blog/2021-08-11-githubs-engineering-team-moved-codespaces/). 
+
+This blog post will explain how to setup DevContainers for your Backstage project. It’s important to point out that even though DevContainers are a convenient way to run the project, the DX of developing in DevContainer is still inferior in some ways to running the project locally because it introduces overhead of running Docker containers. It is really meant to lower the barrier for those who can not run the project locally. With that said, we still believe that it’s a very useful tool and will drive the DX of your project in the right direction. The changes that you make in this tutorial will work with or without DevContainers which makes it an easy improvement to make for those who need it without compromising the DX for those who don’t.
 
 ## Requirements
 
