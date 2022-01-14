@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import Plausible from 'plausible-tracker';
 import axios from 'axios';
+import { useLocation } from '@reach/router';
 
 import {
   headingLg,
@@ -19,27 +20,41 @@ import {
 import { Link } from 'gatsby';
 import { ctaSubmittedBox } from '../../styles/page.css';
 
-SubscribeForm.propTypes = {
-  highlight: PropTypes.bool,
-};
-
 export default function SubscribeForm() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('');
+  const location = useLocation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const { trackEvent } = Plausible({
+      domain: 'frontside.com',
+      trackLocalhost: true,
+    });
+
+    const trackCTA = (status) => {
+      trackEvent('subscribed', {
+        props: {
+          path: location.pathname,
+          status,
+        },
+      });
+    };
+
     setStatus('sending');
     try {
       await axios({
         method: 'post',
         url: '/.netlify/functions/subscribe-newsletter',
         data: {
-          email
-        }
+          email,
+        },
       });
+      trackCTA('success');
       setStatus('sent');
     } catch (e) {
+      trackCTA('error');
       setStatus('error');
     }
   };
