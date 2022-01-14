@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import addToMailchimp from 'gatsby-plugin-mailchimp';
+import axios from 'axios';
+
 import {
   headingLg,
   textGradientPinkPurple,
@@ -30,7 +31,13 @@ export default function SubscribeForm() {
     e.preventDefault();
     setStatus('sending');
     try {
-      await addToMailchimp(email);
+      await axios({
+        method: 'post',
+        url: '/.netlify/functions/subscribe-newsletter',
+        data: {
+          email
+        }
+      });
       setStatus('sent');
     } catch (e) {
       setStatus('error');

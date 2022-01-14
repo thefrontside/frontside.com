@@ -1,22 +1,19 @@
 import { Handler } from '@netlify/functions';
 import axios from 'axios';
 
-const mailChimpAPI = process.env.SENDER_API;
+const senderKey = process.env.SENDER_API;
+const url = 'https://api.sender.net/v2/subscribers';
 
 const handler: Handler = async (event) => {
   const formData = JSON.parse(event.body);
   const email = formData.email;
-  let errorMessage = null;
 
   if (!formData || !email) {
-    errorMessage = 'Invalid request';
-    console.log(errorMessage);
+    return { statusCode: 422 };
   }
 
-  const url = 'https://api.sender.net/v2/subscribers';
-
   let headers = {
-    'Authorization': `Bearer ${mailChimpAPI}`,
+    'Authorization': `Bearer ${senderKey}`,
     'Content-Type': 'application/json',
     'Accept': 'application/json',
   };
