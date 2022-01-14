@@ -15,6 +15,7 @@ img: /img/2022-auth-simulator.png
 Auth0 is an excellent service that lets you focus on your app instead of trying to stay up to date with the latest safe and secure authentication practices. However, what’s not so great is having to use Auth0 as part of your local development process or within end-to-end tests.
 
 Recently I had a tough time using Auth0 while running tests that required authentication in a continuous integration environment with no access to the internet. The issue emerged because adding logical branches to my code targeting specific environments and stubbing functions at the test level leaves room for undesired effects.
+
 There are many ways you can address the issue, but most of them are a disaster. Probably the worst solution is to write conditionals that check which environment the code is currently running against. Consider this example:
 
 ```ts
@@ -63,6 +64,7 @@ export const verifyAuth0Token = async (token) => {
 ```
 
 Packages like [mock-jwks](https://www.npmjs.com/package/mock-jwks) help, but it’s still code that needs to be maintained, and as we all know, the less code we write, the fewer problems we have.
+
 A third solution is creating phony Auth0 accounts for different environments, but that too is a maintainability nightmare. The accounts on each environment must now be kept in sync, which is unlikely to happen.
 
 ## Solution
@@ -89,6 +91,7 @@ And in non-production environments it might look like this:
 ```
 
 The only discernable difference is the `domain` field, which points to a localhost when running in non-production environments (such as your very own laptop or maybe even in a continuous integration environment (CI) that does not have access to the internet).
+
 Imagine your very own Auth0 server running locally to configure specific scenarios while developing or running tests. What if we called it “auth0 simulator” and allowed you to create fake data without cluttering up your existing codebase?
 
 ## Auth0 simulator
