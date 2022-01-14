@@ -142,9 +142,13 @@ let person = yield client.given(simulation, 'person', {
 The goal of `@simulacrum/auth0-simulator` is to behave just like the real Auth0 server does. That means that libraries like `@auth0/auth0-react` should not notice any difference so that you can keep using your regular code and expect it to work without any adjustment when you switch to the real deal. The following snippet would work just as well using the Auth0 simulator and the production environment.
 
 ```ts
-import { useAuth0 } from '@auth0/auth0-react';
+import { useAuth0 } from "@auth0/auth0-react";
 
-<Button onClick={() => loginWithRedirect()}>  Log in   </Button>;
+const LoginButton = () => {
+  const { loginWithRedirect } = useAuth0();
+
+  return <button onClick={() => loginWithRedirect()}>Log In</button>;
+};
 ```
 
 ## Testing
