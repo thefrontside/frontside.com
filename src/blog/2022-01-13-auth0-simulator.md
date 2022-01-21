@@ -63,7 +63,13 @@ export const verifyAuth0Token = async (token) => {
 ```
 
 Packages like [mock-jwks](https://www.npmjs.com/package/mock-jwks) help, but it’s still code that needs to be maintained, and as we all know, the less code we write, the fewer problems we have.
-A third solution is creating phony Auth0 accounts for different environments, but that too is a maintainability nightmare. The accounts on each environment must now be kept in sync, which is unlikely to happen.
+
+### The worst solution
+Arguably the most popular solution is possibly the worst, and that is to create phoney auth0 accounts in multiple environments documented in [this post](https://auth0.com/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments). This is needless overhead. You now have to keep all these environments or tenants in sync, and it does not cure the problem of running end to end tests behind a firewall with no internet. 
+
+Another downside of this approach is that all tests that use a particular phoney account will share state in different tests.  
+
+Auth0 tenants are not scalable, and we are moving headfirst into a maintainability nightmare.
 
 ## Solution
 
@@ -167,7 +173,9 @@ describe('log in', () => {
       .visit('/')
       .contains('Log out')
       .should('not.exist')
-      .given()
+      .given({
+        email: 'bob@gmail.com'
+      })
       .login()
       .visit('/')
       .contains('Log out')
