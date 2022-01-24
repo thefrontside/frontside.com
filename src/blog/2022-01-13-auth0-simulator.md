@@ -8,6 +8,8 @@ description: >-
   Auth0 can be difficult to manage in local development and within testing environments such as CI/CD pipelines. An Auth0 simulator can save you from branching your code or maintaining mocks in your tests.
 tags:
   - dx
+  - simulation
+  - testing
   - javascript
 img: /img/2022-auth-simulator.png
 ---
@@ -215,3 +217,5 @@ or you could use `loginWithDefaultDirectory` if you're using 'auth0-js'.
 
 Our Auth0 simulator `@simulacrum/auth0-simulator` makes Auth0’s “pain points” disappear by allowing developers to work locally and test their apps—without introducing fragmentation into their codebase, having to write cumbersome mocking code, or dealing with Auth0 accounts for different environments.
 If you are using Auth0 then you really should give [here](https://github.com/thefrontside/simulacrum/tree/v0/packages/auth0) a spin.
+
+Feel free join our [Discord community](https://discord.gg/r6AvtnU), or [contact us](/contact), for questions or help to get started! 
