@@ -18,6 +18,7 @@ import {
 import iconInteractors from '../../img/icon-interactors.svg';
 import iconEffection from '../../img/icon-effection.svg';
 import iconBigtest from '../../img/icon-bigtest.svg';
+import iconSimulacrum from '../../img/icon-simulacrum.svg';
 
 import DropdownArrow from './dropdown-arrow';
 
@@ -35,6 +36,13 @@ const items = [
     url: 'https://frontside.com/effection',
     version: 'v2',
     img: iconEffection,
+  },
+  {
+    title: 'Auth0 Simulator',
+    description: 'Enabling testing and local development',
+    url: 'https://github.com/thefrontside/simulacrum/tree/v0/packages/auth0',
+    version: 'v0',
+    img: iconSimulacrum,
   },
   {
     title: 'Bigtest',
