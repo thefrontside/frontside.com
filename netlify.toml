@@ -91,3 +91,6 @@ X-Frame-Options = "SAMEORIGIN"
 for = "/storybook*"
 [headers.values]
 X-Frame-Options = "SAMEORIGIN"
+
+[functions]
+  directory = "src/lambda-functions"
