@@ -209,4 +209,4 @@ or you could use `loginWithDefaultDirectory` if you're using 'auth0-js'.
 ## Epilogue
 
 Our Auth0 simulator `@simulacrum/auth0-simulator` makes Auth0’s “pain points” disappear by allowing developers to work locally and test their apps—without introducing fragmentation into their codebase, having to write cumbersome mocking code, or dealing with Auth0 accounts for different environments.
-If you are using Auth0 then you really should give [here](https://github.com/thefrontside/simulacrum) a spin.
+If you are using Auth0 then you really should give [here](https://github.com/thefrontside/simulacrum/tree/v0/packages/auth0) a spin.
