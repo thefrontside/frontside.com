@@ -16,7 +16,7 @@ Auth0 is an excellent service that lets you focus on your app instead of trying 
 
 Recently I had a tough time using Auth0 while running tests that required authentication in a continuous integration environment with no access to the internet. The issue emerged because adding logical branches to my code targeting specific environments and stubbing functions at the test level leaves room for undesired effects.
 
-There are many ways you can address the issue, but most of them are a disaster. Probably the worst solution is to write conditionals that check which environment the code is currently running against. Consider this example:
+There are many ways you can address the issue, but most of them are a disaster. Probably the most naïve solution is to write conditionals that check which environment the code is currently running against. Consider this example:
 
 ```ts
 if (process.env.NODE_ENV !== 'production') {
@@ -65,7 +65,10 @@ export const verifyAuth0Token = async (token) => {
 
 Packages like [mock-jwks](https://www.npmjs.com/package/mock-jwks) help, but it’s still code that needs to be maintained, and as we all know, the less code we write, the fewer problems we have.
 
-A third solution is creating phony Auth0 accounts for different environments, but that too is a maintainability nightmare. The accounts on each environment must now be kept in sync, which is unlikely to happen.
+At last, we arrive at what seems to be the most popular solution but which is arguably the worst: to create phoney Auth0 accounts in multiple environments, as documented in [this post](https://auth0.com/docs/get-started/auth0-overview/create-tenants/set-up-multiple-environments). This is needless overhead. You'll have to keep all these environments or tenants in sync, and it does not cure the problem of running end-to-end tests behind a firewall with no internet. 
+
+Another downside of this approach is that all tests that use a particular phoney account will share state in different tests. Auth0 tenants are not scalable, which means we'd be moving headfirst into a maintainability nightmare.
+
 
 ## Solution
 
@@ -74,9 +77,9 @@ For example, in production we might have this auth0 configuration:
 
 ```JSON
 {
-  domain: myapp.eu.auth0.com,
-  clientId: 'PMkiueyWaFdfsbAKXrIpVPmyBTFs4g5iq',
-  audience: 'https://thefrontside.auth0.com/api/v1/',
+  "domain": "myapp.eu.auth0.com",
+  "clientId": "PMkiueyWaFdfsbAKXrIpVPmyBTFs4g5iq",
+  "audience": "https://thefrontside.auth0.com/api/v1/",
   // etc.
 ```
 
@@ -170,7 +173,9 @@ describe('log in', () => {
       .visit('/')
       .contains('Log out')
       .should('not.exist')
-      .given()
+      .given({
+        email: 'bob@gmail.com'
+      })
       .login()
       .visit('/')
       .contains('Log out')
