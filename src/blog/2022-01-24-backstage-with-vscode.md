@@ -42,7 +42,7 @@ npx @backstage/create-app
 
 For this tutorial, you'll be using PostgreSQL:
 
-![backstage-create-app](/img/2021-12-03-backstage-devcontainer/backstage-create-app.png)
+![backstage-create-app](/img/2022-01-24-backstage-devcontainer/backstage-create-app.png)
 
 Once the app is done installing, open the new app's workspace in visual studio code and set up a dev container.
 
@@ -50,7 +50,7 @@ Once the app is done installing, open the new app's workspace in visual studio c
 
 If you have the [`Remote Containers`](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed, you should be able to access its commands. Press `F1` and select `Remote-Containers: Open Folder in Container...`:
 
-![open-folder-container](/img/2021-12-03-backstage-devcontainer/remote-containers-open.png)
+![open-folder-container](/img/2022-01-24-backstage-devcontainer/remote-containers-open.png)
 
 VSCode will detect that you do not have dev container configurations yet and prompt you to select a predefined container. You can go ahead and select any of the, as you'll be replacing all of those configurations later.
 
