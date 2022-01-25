@@ -107,7 +107,7 @@ ambiguities that we cannot otherwise resolve.
 
 Let's illustrate what we mean by this with an example: Imagine we have a paginated list with a 'Next' link at the bottom. Whenever we press the next link we will load a new set of rows, and we also update the `href` attribute of the next link to point to the next page.
 
-![Image of a page showing a list and "Previous" and "Next" buttons](2020-07-16-interactors-next.png)
+![Image of a page showing a list and "Previous" and "Next" buttons](/img/2020-07-16-interactors-next.png)
 
 Now imagine a written a test written like this:
 
