@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
 title: >-
-  Tutorial: Easier onboarding with Backstage and VSCode dev containers
+  Easier onboarding with Backstage and VSCode dev containers
 date: 2022-01-24T05:00:00.000Z
 author: Min Kim
 description: >-
-  In this tutorial, you'll learn how to set up dev containers to make it easier to onboard developers whether they use macOS or Windows. 
+  In this tutorial, you'll learn how to set up dev containers to make it easier to onboard developers.
 tags:
   - backstage
 img: /img/2022-backstage-dev-containers-windows.png
@@ -15,9 +15,9 @@ An often underrated aspect of developer onboarding is how quickly a new contribu
 
 However, onboarding can be especially challenging for [Backstage](https://backstage.io/) because it is a full-stack application. Developing a Backstage-based Developer Portal requires having a recent version of Node.js, Yarn, and PostgreSQL running on the developer's machine. These are relatively easy to install on macOS and Linux but can be challenging on Windows, especially for someone new to the Node.js ecosystem.
 
-At Frontside, we've had success improving onboarding by using [DevContainers](https://code.visualstudio.com/docs/remote/containers), which spins up a docker-based local environment with all the dependencies that a project needs. 
+At Frontside, we've had success improving onboarding by using [dev containers](https://code.visualstudio.com/docs/remote/containers), which spins up a docker-based local environment with all the dependencies that a project needs. 
 
-DevContainers have a CLI called [devcontainer-cli](https://code.visualstudio.com/docs/remote/devcontainer-cli) you can use to open the container from the command line. It will open in VSCode, which uses [Remote Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) to create a smooth integration.
+Dev containers has a CLI called [devcontainer-cli](https://code.visualstudio.com/docs/remote/devcontainer-cli) you can use to open the container from the command line. It will open in VSCode, which uses [Remote Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) to create a smooth integration.
 
 For the most part, running dev containers inside VSCode feels like the application is running on your machine. Once you've added dev containers to your project, there’s a clear pathway to adopting GitHub Codespaces, which [makes onboarding even easier](https://github.blog/2021-08-11-githubs-engineering-team-moved-codespaces/).
 
@@ -52,10 +52,12 @@ If you have the [`Remote Containers`](https://marketplace.visualstudio.com/items
 
 ![open-folder-container](/img/2022-01-24-backstage-devcontainer/remote-containers-open.png)
 
-VSCode will detect that you do not have dev container configurations yet and prompt you to select a predefined container. You can go ahead and select any of the, as you'll be replacing all of those configurations later.
+VSCode will detect that you do not have dev container configurations yet and prompt you to select a predefined container. You can go ahead and select any of them, as you'll be replacing all of those configurations later.
 
 Once you make your selection, VSCode will create configuration files in the `.devcontainer` directory, build the container according to those files, and launch your workspace in the container. (You can go to your Docker Desktop dashboard to confirm that the new container is running.)
-If you change your dev container configuration, you can run `Remote-Containers: Rebuild Container`. When you are ready to exit out of your dev container, run `Remote-Containers: Reopen Folder Locally`.
+
+If you change your dev container configuration, you can run `Remote-Containers: Rebuild Container`. And when you are ready to exit out of your dev container, run `Remote-Containers: Reopen Folder Locally`.
+
 Now that you know how to launch and exit out of dev containers, you need to add configurations to run Backstage.
 
 ## Docker Compose - Postgres
@@ -93,6 +95,7 @@ services:
       POSTGRES_USER: postgres_username
       POSTGRES_PASSWORD: postgres_password
 ```
+
 For your dev container image, you’re using one of the docker images [created by Microsoft](https://hub.docker.com/_/microsoft-vscode-devcontainers) and running a shell command to prevent the container from exiting on its own as suggested in the [devcontainer docs](https://code.visualstudio.com/docs/remote/create-dev-container#_use-docker-compose).
 
 For a container to have all of the files of the backstage app, you need to add `volumes: .:/workspace` as shown in the previous snippet. This will take the current directory (relative to the docker-compose file) and copy its contents to your container's `/workspace` directory.
