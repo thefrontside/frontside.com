@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: >-
-  Easier onboarding with Backstage and VSCode dev containers
+  Tutorial: Easier onboarding with Backstage and VSCode dev containers
 date: 2022-01-24T05:00:00.000Z
 author: Min Kim
 description: >-
