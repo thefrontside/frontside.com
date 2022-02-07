@@ -67,6 +67,7 @@
 /blog/2021-10-26-effection-async-await/
 /blog/2022-01-13-auth0-simulator/
 /blog/2022-01-24-backstage-with-vscode/
+/blog/2022-01-26-what-is-dx/
 /blog/3
 /blog/4
 /blog/5
@@ -295,6 +296,7 @@
 /tags/microservices/
 /tags/microstates/
 /tags/mirage/
+/tags/newsletter/
 /tags/open-source/
 /tags/oss/
 /tags/platforms/
