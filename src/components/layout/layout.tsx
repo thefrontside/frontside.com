@@ -5,7 +5,6 @@ import Navbar from '../navbar';
 import Footer from '../footer';
 
 import '../../styles/global.css';
-import 'syntax-highlighting/assets/css/prism/prism-base16-ateliersulphurpool.light.css';
 
 type PageProps = {
   children: any,
