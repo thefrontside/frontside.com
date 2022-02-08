@@ -360,14 +360,6 @@ globalStyle(`${mardownColumn} > h4`, {
   letterSpacing: vars.letterSpacing.xl,
 });
 
-globalStyle(`${mardownColumn} code[class*="language-"]`, {
-  fontSize: '0.85rem'
-});
-
-globalStyle(`${mardownColumn} p > code[class*="language-"]`, {
-  fontSize: '0.85em'
-});
-
 globalStyle(`${mardownColumn} a`, {
   color: 'inherit'
 });
@@ -456,17 +448,12 @@ globalStyle(`${mardownColumn} tbody td`, {
   borderBottomWidth: '0.035rem',
 });
 
-globalStyle(`${mardownColumn} [class*="language-"]`, {
-  '@media': {
-    [darkThemeQuery]: {
-      background: 'rgba(38, 171, 232, 0.1)',
-      color: '#c2d0e6'
-    }
-  }
+globalStyle(`${mardownColumn} code[class*="language-"]`, {
+  fontSize: '0.85rem'
 });
 
-globalStyle(`${mardownColumn} [class*="language-"] [class*="language-"]`, {
-  background: 'none',
+globalStyle(`${mardownColumn} p > code[class*="language-"]`, {
+  fontSize: '0.80em'
 });
 
 const markdownBlockDescription = {

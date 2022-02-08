@@ -36,7 +36,7 @@
     "lodash-webpack-plugin": "^0.11.4",
     "plausible-tracker": "^0.3.1",
     "prettier": "^2.3.2",
-    "prismjs": "^1.24.1",
+    "prismjs": "^1.26.0",
     "prop-types": "^15.6.0",
     "react": "^17.0.2",
     "react-copy-to-clipboard": "^5.0.3",
@@ -45,7 +45,6 @@
     "react-hook-inview": "^4.3.11",
     "react-transition-group": "^4.4.2",
     "rimraf": "^3.0.2",
-    "syntax-highlighting": "^1.0.0",
     "uuid": "^8.3.2"
   },
   "keywords": [
