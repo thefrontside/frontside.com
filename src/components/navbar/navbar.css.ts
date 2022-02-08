@@ -86,6 +86,7 @@ export const linksGroup = style({
   width: '100%',
   order: 4,
   justifyContent: 'space-between',
+  alignItems: 'baseline',
   marginTop: vars.space.md,
 
   '@media': {
@@ -145,10 +146,6 @@ export const arrowDropdownButton = style({
   border: 'none',
   cursor: 'pointer',
   marginLeft: 0,
-});
-
-globalStyle(`${arrowDropdownButton}[aria-expanded=true] + ${projectsList}`, {
-  padding: '1px',
 });
 
 export const projectItem = style({
