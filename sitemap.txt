@@ -68,6 +68,7 @@
 /blog/2022-01-13-auth0-simulator/
 /blog/2022-01-24-backstage-with-vscode/
 /blog/2022-01-26-what-is-dx/
+/blog/2022-02-09-semver-or-calver-by-project-type/
 /blog/3
 /blog/4
 /blog/5
