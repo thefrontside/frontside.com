@@ -69,11 +69,12 @@
 /blog/2022-01-24-backstage-with-vscode/
 /blog/2022-01-26-what-is-dx/
 /blog/2022-02-09-semver-or-calver-by-project-type/
-/blog/2022-02-20-component-library-backstage/
+/blog/2022-02-14-component-library-backstage/
 /blog/3
 /blog/4
 /blog/5
 /blog/6
+/blog/7
 /code-of-conduct/
 /consulting/
 /contact/

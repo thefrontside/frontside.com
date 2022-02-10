@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: >-
-  How to use your company’s component library with Backstage
+  Tutorial: How to use your company’s component library with Backstage
 date: 2022-02-14T05:00:00.000Z
 author: Taras Mankovski
 description: >-
