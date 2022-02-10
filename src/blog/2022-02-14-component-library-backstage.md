@@ -41,7 +41,9 @@ You can also go ahead and delete everything in the `packages/app/src/components/
 
 ```tsx
 // packages/app/src/components/Home.tsx
-import React from ‘react’;
+
+import React from 'react';
+
 export const Home = () => {
   return <p>Home</p>;
 }
@@ -52,20 +54,26 @@ Next, you need to remove all the routes and plugins and add the new Home compone
 ```tsx
 import React from 'react';
 import { Route } from 'react-router';
+
 import { apis } from './apis';
 import { createApp } from '@backstage/app-defaults';
 import { FlatRoutes } from '@backstage/core-app-api';
+
 import { Home } from './components/Home';
+
 const app = createApp({
   apis,
 });
+
 const AppProvider = app.getProvider();
 const AppRouter = app.getRouter();
+
 const routes = (
   <FlatRoutes>
     <Route path="/" element={<Home />} />
   </FlatRoutes>
 );
+
 const App = () => (
   <AppProvider>
     <AppRouter>
@@ -73,6 +81,7 @@ const App = () => (
     </AppRouter>
   </AppProvider>
 );
+
 export default App;
 ```
 
@@ -89,9 +98,10 @@ This will allow you to use components from the library in the frontend applicati
 ```diff
 import React from 'react';
 + import { PrimaryButton } from '@fluentui/react';
+
 export const Home = () => {
-- return <p>Home</p>;
-+ return <PrimaryButton>Press me!</PrimaryButton>;
+-  return <p>Home</p>;
++  return <PrimaryButton>Press me!</PrimaryButton>;
 }
 ```
 
@@ -107,21 +117,21 @@ By default, Backstage’s `createApp` uses a Material UI theme provider that add
 + import { ThemeProvider, PartialTheme } from '@fluentui/react';
 ...
 + const myTheme: PartialTheme = {
-+ semanticColors: {
-+ primaryButtonBackground: 'red',
-+ primaryButtonText: 'white',
-+ },
++   semanticColors: {
++     primaryButtonBackground: 'red',
++     primaryButtonText: 'white',
++   },
 + }
 + 
 + const MyThemeProvider: ComponentType<{}> = ({ children }) => {
-+ return (<ThemeProvider theme={myTheme}>{children}</ThemeProvider>);
++   return (<ThemeProvider theme={myTheme}>{children}</ThemeProvider>);
 + }
 +
 const app = createApp({
   apis,
-+ components: {
-+ ThemeProvider: MyThemeProvider,
-+ }
++  components: {
++    ThemeProvider: MyThemeProvider,
++  }
 })
 ```
 
@@ -145,16 +155,17 @@ You can make the Catalog API available in your application by adding an API fact
 
 ```diff
   createApiFactory,
-+ discoveryApiRef
++   discoveryApiRef
 } from '@backstage/core-plugin-api';
 + import { catalogApiRef } from '@backstage/plugin-catalog-react';
 + import { CatalogClient } from '@backstage/catalog-client';
+
 export const apis: AnyApiFactory[] = [
-+ createApiFactory({
-+ api: catalogApiRef,
-+ deps: { discoveryApi: discoveryApiRef },
-+ factory: ({ discoveryApi }) => new CatalogClient({ discoveryApi })
-+ }),
++   createApiFactory({
++     api: catalogApiRef,
++     deps: { discoveryApi: discoveryApiRef },
++     factory: ({ discoveryApi }) => new CatalogClient({ discoveryApi })
++   }),
   createApiFactory({
 ```
 
@@ -168,9 +179,10 @@ Let’s get rid of the `PrimaryButton` from earlier and make the following addit
 - import { PrimaryButton } from '@fluentui/react';
 + import { catalogApiRef } from '@backstage/plugin-catalog-react';
 + import { useApi } from '@backstage/core-plugin-api';
+
 export const Home = () => {
-- return <PrimaryButton>Press me!</PrimaryButton>
-+ const catalogApi = useApi(catalogApiRef);
+-   return <PrimaryButton>Press me!</PrimaryButton>
++   const catalogApi = useApi(catalogApiRef);
 }
 ```
 
@@ -182,19 +194,20 @@ To call the CatalogApi, we need to call `catalogApi.getEntities` function. This 
 
 ```diff
 + import useAsync from 'react-use/lib/useAsync';
+
 export const Home = () => {
   const catalogApi = useApi(catalogApiRef);
-+ const {
-+ value = { items: [] },
-+ // loading,
-+ // error,
-+ } = useAsync(() =>
-+ catalogApi.getEntities({
-+ filter: {
-+ kind: 'Component',
-+ },
-+ }),
-+ );
++   const {
++     value = { items: [] },
++     // loading,
++     // error,
++   } = useAsync(() =>
++     catalogApi.getEntities({
++       filter: {
++         kind: 'Component',
++       },
++     }),
++   );
 }
 ```
 
@@ -207,17 +220,18 @@ FluentUI’s `DetailList` needs to convert results from the CatalogApi. The data
 ```diff
 - import React from 'react';
 + import React, { useMemo } from 'react';
+
 export const Home = () => {
   ...
-+ const items = useMemo(
-+ () =>
-+ value.items.map(item => ({
-+ key: item.metadata.uid,
-+ name: item.metadata.name,
-+ description: item.metadata.description,
-+ })),
-+ [value],
-+ );
++   const items = useMemo(
++     () =>
++       value.items.map(item => ({
++         key: item.metadata.uid,
++         name: item.metadata.name,
++         description: item.metadata.description,
++       })),
++     [value],
++   );
 }
 ```
 
@@ -229,9 +243,10 @@ The final step is to import `DetailList` from `@fluentui/react` and render it. M
 
 ```diff
 + import { DetailsList } from '@fluentui/react';
+
 export const Home = () => {
   ...
-+ return <DetailsList items={items} />;
++   return <DetailsList items={items} />;
 }
 ```
 
