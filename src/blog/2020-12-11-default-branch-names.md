@@ -3,7 +3,7 @@ templateKey: blog-post
 title: >-
   Renaming `main` with purpose 
 date: 2020-12-11T05:00:00.000Z
-author: Robbie Pitts
+author: Jorge Lainfiesta
 description: >-
   As generic default branch names like `master` for Git repos have gone out of fashion, possibilities emerge for more effective and informative naming conventions. Learn about the branch naming strategy Frontside uses for our Open Source libraries and how we name app project branches.
 tags:
