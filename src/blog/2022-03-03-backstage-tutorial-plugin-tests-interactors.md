@@ -33,7 +33,7 @@ Which will generate this output:
 
 That's a lot of generated classes. How do you know which selectors to use for your test actions and assertions? Usually, you'd have to guess and try to craft selectors for each MUI component you use every time you use one.
 
-But, you don't have to worry about it anymore! The Frontside team has gone through the MUI components and created ["Interactors"](https://frontside.com/blog/2021-08-04-interactors-design-systems/) that you can use in your tests like this:
+But, you don't have to worry about it anymore! The [Frontside team](/backstage) has gone through the MUI components and created ["Interactors"](https://frontside.com/blog/2021-08-04-interactors-design-systems/) that you can use in your tests like this:
 
 ```ts
 import { Button } from '@interactors/material-ui';
@@ -130,7 +130,7 @@ describe('The calculator plugin', () => {
 
 ## Act with Interactors
 
-Interactors enforce an AAA (Arrange-Act-Assert) pattern to provide more helpful errors (more on this later down the tutorial). So far, you've seen the function used for assertions. Now let's take a look at actions.
+Interactors enforce an AAA (Arrange-Act-Assert) pattern to provide more helpful errors. So far, you've seen the function used for assertions. Now let's take a look at actions.
 
 The second test you'll write will confirm that the inner navigation of the plugin works correctly. To do that, you'll have Cypress click on a tab that takes the user to another page and verify if the UI reflects that state:
 
@@ -266,3 +266,7 @@ describe('The text calculator', () => {
 Now, if you run the test suite based on Cypress and Interactors, it should look like this:
 
 ![A gif with tests executing on cypress](/img/2022-backstage-interactors/test-suite-whole.gif)
+
+## Conclusion
+
+Using [Interactors](https://frontside.com/interactors) in your Backstage integration tests can help you save time and development efforts. Try them out, and if you need any help, join us in [our Discord server](https://discord.gg/r6AvtnU) and ask away!
