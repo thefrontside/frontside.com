@@ -46,18 +46,18 @@ This tutorial will show you how to set up integration tests for your Backstage p
 In this tutorial you'll learn to:
 
 1. [Set up Cypress and Interactors](#set-up)
-2. Assert with Interactors
-3. Act with Interactors
-4. Extend existing Interactors
-5. Write your own Interactor
-6. Use other Material UI Interactors
+2. [Assert with Interactors](#assert-with-interactors)
+3. [Act with Interactors](#act-with-interactors)
+4. [Extend existing Interactors](#extend-existing-interactors)
+5. [Write your own Interactor](#write-your-own-interactor)
+6. [Use other Material UI Interactors](#other-material-ui-interactors)
 
 
 ## What you'll be testing
 
-I'll use a calculator plugin I created with Material UI in Backstage for this tutorial.
+I created a calculator Backstage plugin using Material UI to use as an example for this tutorial. It features a 'classic calculator' with a button-based UI and a 'text-based calculator' which relies on a text field for input:
 
-[A gif showing the calculator demo](/img/2022-backstage-interactors/demo.gif)
+![A gif showing the calculator demo](/img/2022-backstage-interactors/demo.gif)
 
 The calculator doesn't do anything exciting, so we won't go over the implementation details. You can have a look at the [whole code in this repository](https://github.com/jorgelainfiesta/backstage-calculator-plugin-tutorial).
 
@@ -126,7 +126,7 @@ describe('The calculator plugin', () => {
 
 `cy.expect` is one of the two Interactors bindings with Cypress used for assertions (I'll explain the other in the next section). In the test above, you're telling Cypress to check if a MUI Heading with the text "Classic Calculator" exists and if a MUI Tab with the label "ClASSIC CALCULATOR" is active. 
 
-[Screenshot of tests passing](/img/2022-backstage-interactors/assertion-test-passing.png)
+![Screenshot of tests passing](/img/2022-backstage-interactors/assertion-test-passing.png)
 
 ## Act with Interactors
 
@@ -265,4 +265,4 @@ describe('The text calculator', () => {
 
 Now, if you run the test suite based on Cypress and Interactors, it should look like this:
 
-[A gif with tests executing on cypress](/img/2022-backstage-interactors/test-suite-whole.gif)
+![A gif with tests executing on cypress](/img/2022-backstage-interactors/test-suite-whole.gif)
