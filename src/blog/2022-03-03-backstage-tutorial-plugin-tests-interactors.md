@@ -90,13 +90,13 @@ There's actually only two Interactors-specific settings to consider. First, make
 Next, add the Material UI Interactors to your plugin. You know the drill:
 
 ```bash
-yarn add @interactors/material-ui
+yarn add --dev @interactors/material-ui
 ```
 
 You can [use Interactors with Jest](https://frontside.com/interactors/docs/jest) in this step if you want, but because we'll be using them with Cypress, we need to install specific bindings:
 
 ```bash
-yarn add @interactors/with-cypress
+yarn add --dev @interactors/with-cypress
 ```
 
 ## Assert with Interactors
