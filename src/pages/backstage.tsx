@@ -266,7 +266,7 @@ export const backstagePageQuery = graphql`
     allBlogPost(
       sort: { order: DESC, fields: [markdown___frontmatter___date] }
       filter: { markdown: { frontmatter: { tags: { in: ["backstage"] } } } }
-      limit: 3
+      limit: 4
     ) {
       edges {
         node {
