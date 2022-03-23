@@ -72,6 +72,7 @@
 /blog/2022-02-14-component-library-backstage/
 /blog/2022-02-21-graphgen-graph-factory/
 /blog/2022-03-03-backstage-tutorial-plugin-tests-interactors/
+/blog/2022-03-24-testing-backstage-catalog-ingestors/
 /blog/3
 /blog/4
 /blog/5
