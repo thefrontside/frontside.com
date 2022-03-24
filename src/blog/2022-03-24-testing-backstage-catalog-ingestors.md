@@ -5,7 +5,7 @@ title: >-
 date: 2022-03-24T05:00:00.000Z
 author: Charles Lowell
 description: >-
-  In order to test whether the Backstage is setting up the Catalog properly, you must start a Backstage server, wait for a while, and assert. This feat is easier said than done, but Charles will guide you through it in this article.
+  To test whether the Backstage is setting up the Catalog properly, you must start a Backstage server, wait for a while, and assert. This feat is easier said than done, but Charles will guide you through it in this article.
 tags:
   - backstage
   - testing
@@ -85,7 +85,7 @@ These process guarantees give you incredible flexibility by allowing you to embe
 
 ### Assertions Made Simple
 
-Now that the server process is running, how can you make assertions against it that will be fast and reliable? Ideally, assertions should be as simple, fast, and reliable as if you were unit testing a pure synchronous function.
+Now that the server process is running, how can you make reliable assertions against it? Ideally, assertions should be as simple, fast, and predictable as if you were unit testing a pure synchronous function.
 
 The problem, of course, is that, unlike a pure function, a server is a kinetic mass of state that is in continuous flux. Nevertheless, if you wait long enough, its internal motion will carry it to the point where we will reliably observe the state you expect to see, which is to the presence of the artist lookup service in the Catalog. Now is when the "wait a while" comes into play. The main question is, how long should the test wait? 
 
@@ -111,7 +111,7 @@ Here is when eventual consistency comes to the rescue. If you assume that the se
 
 ![Converging assertion](/img/2022-03-24-backstage-ingestion-testing/convergent-assertion.png)
 
-Convergence guarantees that if the state you expect can be observed, it will be observed and that you'll wait just long enough to observe it and no longer. If there is something wrong, and the state never is achieved, then the test case will time out, and you'll be presented with the last failed assertion.
+Convergence guarantees that if the state you expect can be observed, it will be observed and that you'll wait just long enough to observe it and no longer. If there is something wrong, and the state is never achieved, then the test case will time out, and you'll be presented with the last failed assertion.
 
 That may seem like a lot of conceptual overhead, but it's all put on the table so that when it comes to writing and reading test cases, your assertions are as simple as though your Backstage server were just another object.
 
@@ -140,6 +140,8 @@ Except for the `eventually` marker, that's the kind of assertion you would expec
 The upshot of all this is that you now have a test suite that can answer the most critical question and crystal clear in how those questions are expressed. Not only that, but it does so reliably and without any need to account for the timing of internal server processes.
 
 As a result, we have converted our Backstage server from an "environment" that needs to be set up, torn down, and carefully managed throughout our suite into a lightweight resource to be instantiated and tested according to the usual fashion.
+
+If you want to dig deeper into this testing technique, check out the complete [source code in Github](https://github.com/cowboyd/backstage-integration-testing-example). If you have any questions, ask away in our [discord community](https://discord.gg/r6AvtnU)! 
 
 ### Up Next
 
