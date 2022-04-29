@@ -9,14 +9,12 @@ description: >-
 tags:
   - backstage
   - testing
-img: /img/2022-ingestion-tests-in-backstage-part-2-min.png
+img: /img/2022-04-26-ingestion-test-in-backstage-part-2/2022-ingestion-tests-in-backstage-part-2.png
 ---
 
 In our article on [testing your Backstage catalog ingestion](https://frontside.com/blog/2022-03-24-testing-backstage-catalog-ingestors/), we demonstrated the technique of using the concepts of *structured concurrency* and *eventual consistency* to test a backstage server solely via its external interfaces: as an operating system process and a http server. The payoff for organizing your tests that way is that they end up at the ideal sweet spot intersection: replicating how the server actually runs and behaves in production while still maintaining desirable test properties such as speed, isolation, and repeatability. Rather than reaching into the guts of your ingestion code and testing the inputs and outputs of individual viscera, this approach instead embeds your server as a single holistic unit directly into your test cases. This means that not only can you test anything in your server using the exact same test harness, but also you are free to re-organize the internals of the server as you see fit, and your test cases need never change.
 
 In this article we’ll demonstrate this by refactoring to upgrade a Backstage server from the legacy LDAP org processor to the new LDAP entity provider, all without changing a single line of the test case.
-
-In this article we’ll demonstrate this by refactoring in order to upgrade a Backstage server from the legacy LDAP org processor to the new LDAP entity provider – all without changing a single line of code in the test case.
 
 If you recall, the fundamental strategy of the basic ingestion test case for locations defined in a fixed YAML was as straightforward as we dared to make it:
 
@@ -32,7 +30,7 @@ But wait: there’s a problem here. How are we going to make our tests isolated 
 
 Those are all legitimate concerns, but happily they all have a common solution. We can use a *test double* instead that starts a simulation of the LDAP server. The simulation doesn’t need to do everything that the LDAP server does – it only needs to replicate what Backstage’s LDAP Entity Provider and Processor use.
 
-![Backstage Simulated ldap](/img/backstage-simulated-ldap.png)
+![Backstage Simulated ldap](/img/2022-04-26-ingestion-test-in-backstage-part-2/backstage-simulated-ldap.png)
 
 Using a simulator as a test double means that we get all the benefits of isolation and repeatability when using a mock or stub, but without having to sacrifice any of the confidence in the viability of our test because it’s actually using 100% of the production code with no additives or substitutes.
 
@@ -86,6 +84,8 @@ it.eventually("ingests users from LDAP into the catalog", function*() {
 ```
 
 ## Upgrade with confidence
+
+![Terminal Test Running](/img/2022-04-26-ingestion-test-in-backstage-part-2/tests-running-part-2.gif)
 
 One of the main points I’ve been stressing is that this style of test only ever uses the *public API* of Backstage, which means that no matter what is going on under the covers, our test case verifies the most important aspect of its behavior: what it will do when you actually use it. And because our test only uses the “outside” of Backstage, it means that we have a free hand to change whatever is inside without worrying that we might break our tests.
 
