@@ -42,8 +42,10 @@ yarn workspace backend add @backstage/plugin-catalog-backend-module-github @back
 Then you can import the provider to your catalog builder in `packages/backend/src/plugins/catalog.ts`. Be sure to replace the orgUrl with your own:
 
 ```diff
+- import { CatalogBuilder } from '@backstage/plugin-catalog-backend';
++ import { CatalogBuilder, EntityProvider } from '@backstage/plugin-catalog-backend';
 ...
-+ import { ScmIntegrations, DefaultGithubCredentialsProvider } from '@backstage/plugin-catalog-backend-module-github';
++ import { ScmIntegrations, DefaultGithubCredentialsProvider } from '@backstage/integration';
 + import { GitHubOrgEntityProvider } from '@backstage/plugin-catalog-backend-module-github';
 
 export default async function createPlugin(
