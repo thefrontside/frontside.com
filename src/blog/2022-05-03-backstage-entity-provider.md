@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: >-
   Tutorial: Using Github Webhooks with Backstage Entity Provider
-date: 2022-05-05T05:00:00.000Z
+date: 2022-05-03T05:00:00.000Z
 author: Min Kim
 description: >-
   In this short tutorial, Min will show you how to configure Github Webhooks for Backstage's Github Entity Provider
@@ -90,7 +90,7 @@ Calling `read()` towards the end of the catalog building process will only updat
 
 Let's start by creating your webhook on Github. From your Github organization's settings page, click `Webhooks` in the side bar and then `Add webhook`.
 
-![github-webhook-section-screenshot](/img/2022-05-05-add-webhook.png)
+![github-webhook-section-screenshot](/img/2022-05-03-add-webhook.png)
 
 You can get a `Payload URL` from [smee.io](https://smee.io) - this is a service that proxies payloads from your webhook for local development.
 
