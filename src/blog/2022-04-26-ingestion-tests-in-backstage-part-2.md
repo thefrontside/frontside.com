@@ -85,7 +85,7 @@ it.eventually("ingests users from LDAP into the catalog", function*() {
 
 ## Upgrade with confidence
 
-![Terminal Test Running](/img/2022-04-26-ingestion-test-in-backstage-part-2/tests-running-part-2.gif)
+![Terminal Test Running](/img/2022-04-26-ingestion-test-in-backstage-part-2/tests-running-part-2-big.gif)
 
 One of the main points I’ve been stressing is that this style of test only ever uses the *public API* of Backstage, which means that no matter what is going on under the covers, our test case verifies the most important aspect of its behavior: what it will do when you actually use it. And because our test only uses the “outside” of Backstage, it means that we have a free hand to change whatever is inside without worrying that we might break our tests.
 
