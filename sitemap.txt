@@ -74,7 +74,7 @@
 /blog/2022-03-03-backstage-tutorial-plugin-tests-interactors/
 /blog/2022-03-24-testing-backstage-catalog-ingestors/
 /blog/2022-05-03-backstage-entity-provider/
-/blog/2022-05-16-What-Is-Spotify-Backstage/
+/blog/2022-05-16-what-is-spotify-backstage/
 /blog/3
 /blog/4
 /blog/5
