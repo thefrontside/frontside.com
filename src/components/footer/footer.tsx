@@ -45,7 +45,7 @@ export default function Footer() {
           <br />
           Austin, Texas 78757
           <br />
-          +1 (800) 493-4589
+          +1 (512) 522-0391
         </p>
         <p
           className={footerCopyright}
