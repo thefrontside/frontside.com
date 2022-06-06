@@ -17,6 +17,8 @@ jobs:
         run: yarn build
         env:
           SIMPLECAST_API: ${{ secrets.SIMPLECAST_API }}
+      - name: diff shows uncommitted url changes
+        run: git diff sitemap.txt
       - name: check urls are stable
         run: yarn check-urls ${{ steps.url-hash.outputs.url-hash }}
 
