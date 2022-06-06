@@ -17,6 +17,7 @@ jobs:
         run: yarn build
         env:
           SIMPLECAST_API: ${{ secrets.SIMPLECAST_API }}
+      - run: git diff
       - name: check urls are stable
         run: yarn check-urls ${{ steps.url-hash.outputs.url-hash }}
 
