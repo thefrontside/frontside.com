@@ -123,7 +123,7 @@ export default function IndexPage({ data: { allPeople } }) {
             <h3 className={aboutHighlightHeading}>
               <span className={textPink}>We favor</span>
               <br />
-              delivering consistenly
+              delivering consistently
             </h3>
             <p>
               Not delivering features fast enough can have costly consequences.
