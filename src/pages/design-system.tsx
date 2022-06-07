@@ -15,6 +15,9 @@ import {
   caseStudySection,
   columnedhighlights,
   consultingTopTCA,
+  contentGrow,
+  contentRow,
+  contentShrink,
   entryColumn,
   entryColumns,
   featureImage,
@@ -30,16 +33,20 @@ import {
   highlightImage,
   highlightText,
   homeBottomCTA,
+  logoFlex,
+  logoItem,
   pageWrap,
   sectionHeader,
 } from '../styles/page.css';
 import {
   arrowTextWhite,
-  featureHeading,
+  bigQuoteAuthor,
   heading3Xl,
   headingLg,
   headingXl,
   homeBackstageHeading,
+  medQuote,
+  medQuoteAuthor,
   text2Xl,
   textGradientGreenSkyblue,
   textGradientPinkPurple,
@@ -113,7 +120,7 @@ const DesignSystem = ({
 
       <hr />
       {/* call to action button */}
-      <CTAOptions />
+      <CTAOptions {...{ submitted, setSubmitted }} />
 
       <hr />
       {/* highlight rectangle */}
@@ -126,6 +133,14 @@ const DesignSystem = ({
       <hr />
       {/* feature grid section */}
       <FeatureGrid />
+
+      <hr />
+      {/* trust with logos */}
+      <Trust />
+
+      <hr />
+      {/* simple testimonial */}
+      <Testimonials />
 
       <hr />
       {/* blog preview section */}
@@ -211,14 +226,14 @@ const LeftRight = () => (
   </section>
 );
 
-const CTAOptions = () => (
+const CTAOptions = ({ submitted, setSubmitted }) => (
   <section className={pageWrap}>
     {/* button before submission */}
     <p className={homeBottomCTA}>
       <ContactCTA
-        submitted={false}
+        submitted={false} // use `submitted` when you copy
         // hook this up to a useState
-        setSubmitted={() => console.log('do a thing')}
+        setSubmitted={setSubmitted}
         label="Make Backstage work for you"
         topic="backstage"
         eventId="cta-backstage"
@@ -230,9 +245,9 @@ const CTAOptions = () => (
     {/* button after submission */}
     <p className={homeBottomCTA}>
       <ContactCTA
-        submitted={true}
+        submitted={true} // use `submitted` when you copy
         // hook this up to a useState
-        setSubmitted={() => console.log('do a thing')}
+        setSubmitted={setSubmitted}
         label="Make Backstage work for you"
         topic="backstage"
         eventId="cta-backstage"
@@ -313,7 +328,7 @@ const FeatureGrid = () => (
           <br className={heroBreak} /> implementation
         </h3>
         <p className={highlightText}>
-          Our deep expertise with Backstage’s constantly evolving alpha software
+          Our deep expertise with Backstage's constantly evolving alpha software
           means we can open up new frontiers for software organizations that
           guarantee long-term success.
         </p>
@@ -345,6 +360,52 @@ const BlogPreviewSection = ({ firstPost, morePosts }) => (
         </div>
       ))}
     </div>
+  </section>
+);
+
+const Trust = () => (
+  <section className={pageWrap}>
+    <div className={contentRow}>
+      <div className={contentShrink}>
+        <h2 className={featureHeading}>
+          {'Trusted by '}
+          <strong className={textGreen}>Our Clients</strong>
+        </h2>
+      </div>
+      <div className={contentGrow}>
+        <div className={logoFlex}>
+          <Logo
+            src="https://tailwindui.com/img/logos/workcation-logo-indigo-900.svg"
+            alt="Workcation"
+          />
+          <Logo
+            src="https://tailwindui.com/img/logos/tuple-logo-indigo-900.svg"
+            alt="Tuple"
+          />
+          <Logo
+            src="https://tailwindui.com/img/logos/level-logo-indigo-900.svg"
+            alt="Level"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const Logo = ({ src, alt }) => (
+  <div className={logoItem}>
+    <img src={src} alt={alt} />
+  </div>
+);
+
+const Testimonials = () => (
+  <section className={pageWrap}>
+    <blockquote className={medQuote}>
+      &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+      expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in
+      laborum sed rerum et corporis.&rdquo;
+    </blockquote>
+    <p className={medQuoteAuthor}>&mdash; Amazing Person, CEO, Generic Place</p>
   </section>
 );
 

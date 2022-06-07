@@ -521,6 +521,24 @@ export const bigQuoteAuthor = style([textLg, {
   textAlign: 'center',
 }]);
 
+export const medQuoteAuthor = style([textMd, {
+  marginBottom: vars.space['md'],
+  textAlign: 'center',
+}]);
+
+export const medQuote = style([textXl, {
+  fontWeight: vars.fontWeights.bold,
+  margin: 0,
+  textAlign: 'center',
+
+  '@media': {
+    [laptopQuery]: {
+      marginRight: vars.space['xl'],
+      marginLeft: vars.space['xl'],
+    }
+  }
+}]);
+
 export const peopleHeroHeading = style([heading3Xl, textGradientPinkSkyblue]);
 
 export const textLink = style([textBlueDashWhite, textBottomGradient, {

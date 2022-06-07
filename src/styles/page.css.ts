@@ -196,6 +196,44 @@ export const clientLogos = style({
   }
 });
 
+export const contentRow = style({
+  marginBottom: vars.space['xl'],
+
+  '@media': {
+    [laptopQuery]: {
+      display: 'flex',
+      flexFlow: 'row nowrap',
+      paddingLeft: vars.space.lg,
+      paddingRight: vars.space.lg,
+      alignItems: 'center',
+    },
+  }
+});
+
+export const contentShrink = style({
+  minWidth: 'fit-content',
+  flex: '0 5 auto'
+});
+
+export const contentGrow = style({
+  flex: '5 0 auto'
+});
+
+export const logoFlex = style({
+  display: 'flex',
+  flexFlow: 'row wrap',
+  alignItems: 'center',
+  justifyContent: 'space-evenly'
+});
+
+export const logoItem = style({
+  width: '100%',
+  height: '100%',
+  paddingLeft: vars.space.sm,
+  flexBasis: vars.space['2xl'],
+  flexGrow: 1
+});
+
 export const sectionHeader = style({
   textAlign: 'center',
   maxWidth: '31.136rem',

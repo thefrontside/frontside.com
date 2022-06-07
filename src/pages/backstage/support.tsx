@@ -18,6 +18,11 @@ import {
   sectionHeader,
   consultingTopTCA,
   homeBottomCTA,
+  contentGrow,
+  contentRow,
+  contentShrink,
+  logoFlex,
+  logoItem,
 } from '../../styles/page.css';
 import {
   textGradientSkyblueGreen,
@@ -27,6 +32,8 @@ import {
   featureHeading,
   textGradientGreenSkyblue,
   homeBackstageHeading,
+  medQuote,
+  medQuoteAuthor,
 } from '../../styles/typography.css';
 import { actionButtonGreen } from '../../styles/buttons.css';
 
@@ -170,18 +177,47 @@ const LeftRight = () => (
 
 const Trust = () => (
   <section className={pageWrap}>
-    <h2 className={homeBackstageHeading}>
-      {'Trusted by '}
-      <strong className={textGreen}>Our Clients</strong>
-    </h2>
-    <p className={textLg}>To Be Fleshed Out</p>
+    <div className={contentRow}>
+      <div className={contentShrink}>
+        <h2 className={featureHeading}>
+          {'Trusted by '}
+          <strong className={textGreen}>Our Clients</strong>
+        </h2>
+      </div>
+      <div className={contentGrow}>
+        <div className={logoFlex}>
+          <Logo
+            src="https://tailwindui.com/img/logos/workcation-logo-indigo-900.svg"
+            alt="Workcation"
+          />
+          <Logo
+            src="https://tailwindui.com/img/logos/tuple-logo-indigo-900.svg"
+            alt="Tuple"
+          />
+          <Logo
+            src="https://tailwindui.com/img/logos/level-logo-indigo-900.svg"
+            alt="Level"
+          />
+        </div>
+      </div>
+    </div>
   </section>
+);
+
+const Logo = ({ src, alt }) => (
+  <div className={logoItem}>
+    <img src={src} alt={alt} />
+  </div>
 );
 
 const Testimonials = () => (
   <section className={pageWrap}>
-    <h2 className={homeBackstageHeading}>Testimonials</h2>
-    <p className={textLg}>To Be Fleshed Out</p>
+    <blockquote className={medQuote}>
+      &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
+      expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in
+      laborum sed rerum et corporis.&rdquo;
+    </blockquote>
+    <p className={medQuoteAuthor}>&mdash; Amazing Person, CEO, Generic Place</p>
   </section>
 );
 
