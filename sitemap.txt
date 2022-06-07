@@ -87,6 +87,7 @@
 /code-of-conduct/
 /consulting/
 /contact/
+/design-system/
 /people/alex-ford/
 /people/brandon-hays/
 /people/charles-lowell/
