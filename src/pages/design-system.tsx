@@ -40,7 +40,7 @@ import {
 } from '../styles/page.css';
 import {
   arrowTextWhite,
-  bigQuoteAuthor,
+  featureHeading,
   heading3Xl,
   headingLg,
   headingXl,
