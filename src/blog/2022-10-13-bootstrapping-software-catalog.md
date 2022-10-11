@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: >-
   Bootstrapping Software Catalog Adoption with Backstage
-date: 2022-10-10T05:00:00.000Z
+date: 2022-10-13T05:00:00.000Z
 author: Min Kim, Taras Mankovski
 description: >-
   In this post we outline a developer-friendly adoption strategy for the Backstage Software Catalog
