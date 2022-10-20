@@ -75,7 +75,6 @@
 /blog/2022-03-24-testing-backstage-catalog-ingestors/
 /blog/2022-05-03-backstage-entity-provider/
 /blog/2022-05-16-what-is-spotify-backstage/
-/blog/2022-10-13-bootstrapping-software-catalog/
 /blog/3
 /blog/4
 /blog/5
@@ -288,7 +287,6 @@
 /tags/gitter/
 /tags/hiring/
 /tags/hudson/
-/tags/idp/
 /tags/impagination/
 /tags/inclusiveness/
 /tags/infinite-scroll/
@@ -322,7 +320,6 @@
 /tags/senior-developers/
 /tags/simulation/
 /tags/slack/
-/tags/sourcegraph/
 /tags/storybook/
 /tags/style-guide/
 /tags/talks/
