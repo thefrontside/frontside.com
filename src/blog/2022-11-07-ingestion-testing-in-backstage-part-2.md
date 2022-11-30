@@ -9,7 +9,7 @@ description: >-
 tags:
   - backstage
   - testing
-img: /img/2022-backstage-ingestion-test.png
+img: /img/2022-04-26-ingestion-test-in-backstage-part-2.png
 ---
 
 > Heads up: This is the second part in a series on how to achieve real confidence in your Backstage Ingestion via testing. We’ll be relying on the techniques introduced in the first blog post to test a non-trivial external application. What follows may not make much sense without a grasp of those techniques, so I highly recommend starting with [Part 1][part-1] first and then coming back.
