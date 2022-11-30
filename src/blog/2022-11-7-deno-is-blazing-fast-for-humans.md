@@ -2,12 +2,12 @@
 templateKey: blog-post
 title: >-
   Deno is "blazing fast" for humans
-date: 2022-11-07T05:00:00.000Z
+date: 2022-11-30T05:00:00.000Z
 author: Charles Lowell
 description: >-
   Every systems claims to be "blazing fast", but does that actually mean faster development?
 tags: [javascript, deno]
-img: /img/2022-What-Is-Spotify-Backstage.png
+img: /img/2022-11-30-deno-is-blazing-fast-for-humans.png
 ---
 
 Are you old enough to remember back in the day when Node.js was the new kid on the block? I am. I remember the excitement of having a dead-simple way to run JavaScript on the server. I remember being intrigued by the prospect of running the same code run on both the frontend and the backend. But above all else, I remember the promise that it was going to be fast. Like, really, really fast. And it was…. sort of.
