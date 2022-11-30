@@ -9,7 +9,7 @@ description: >-
 tags:
   - backstage
   - testing
-img: /img/2022-04-26-ingestion-test-in-backstage-part-2/2022-ingestion-tests-in-backstage-part-2.png
+img: /img/2022-04-26-ingestion-test-in-backstage-part-2.png
 ---
 
 In our article on [testing your Backstage catalog ingestion](https://frontside.com/blog/2022-03-24-testing-backstage-catalog-ingestors/), we demonstrated the technique of using the concepts of *structured concurrency* and *eventual consistency* to test a backstage server solely via its external interfaces: as an operating system process and a http server. The payoff for organizing your tests that way is that they end up at the ideal sweet spot intersection: replicating how the server actually runs and behaves in production while still maintaining desirable test properties such as speed, isolation, and repeatability. Rather than reaching into the guts of your ingestion code and testing the inputs and outputs of individual viscera, this approach instead embeds your server as a single holistic unit directly into your test cases. This means that not only can you test anything in your server using the exact same test harness, but also you are free to re-organize the internals of the server as you see fit, and your test cases need never change.
@@ -79,7 +79,7 @@ it.eventually("ingests users from LDAP into the catalog", function*() {
         displayName: 'Charles Lowell'
       }
     }
-  })  
+  })
 });
 ```
 
@@ -108,7 +108,7 @@ async userTransformer(vendor, config, entry) {
 But [this is the old way](https://backstage.io/docs/integrations/ldap/org#using-a-processor-instead-of-a-provider). The new way is to use an entity provider, and a simple set of field mappings in your `app-config.yaml`. We want the transformation to look like this:
 
 ```yaml
-users:    
+users:
   map:
    displayName: name
    picture: avatar
