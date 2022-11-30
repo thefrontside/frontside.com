@@ -9,6 +9,7 @@ description: >-
 tags:
   - github-actions
   - continuous-delivery
+img: /img/2022-08-22-dynamic-github-actions-jobs.png
 ---
 
 # Dynamic Github Action Jobs
