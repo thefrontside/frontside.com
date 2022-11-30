@@ -40,9 +40,9 @@ He glances down at his watch, shakes his head, and turns away from me.
 
 Unfortunately, the dispute between us can never really be resolved to either of our satisfaction and the reason why is that we’re both right.
 
-From my perspective in 2022, I can plainly see all the clear wins that things like TypeScript and JSX offer, not to mention modern comforts like an established testing framework that Jest provides. But just as relevant to that class of time savers is the feeling of fleetness that Node imbued. Yet he’s got a point too: how many hours – no, days – have I spent waiting for the code to build? I’ll never get those back.
+From my perspective in 2022, I can plainly see all the clear wins that things like TypeScript and JSX offer, not to mention modern comforts like an established testing framework that Jest provides. But just as relevant to that class of time savers is the feeling of fleetness that Node imbued. And that's his point: how many hours – no, days – have I spent waiting for the code to build? I’ll never get those back.
 
-Luckily now there’s a tool that both of us can get behind. Deno brings together the best parts of 2010 and 2022 and fuses them together for an outstanding developer experience without compromises. You have all the power and speed of a modern JavaScript runtime but none of the time-intensive install and build steps that you used to have to intermittently run during every portion of the development process. You just get the code and run it.
+Luckily now there’s a tool that both of us can get behind. Deno brings together the best parts of 2010 and 2022 and fuses them together for an outstanding developer experience without compromises. You have all the power and speed of a modern JavaScript runtime but none of the time-intensive install and build steps that you have to intermittently run during every portion of the development process. With Deno, you just get the code and run it.
 
 Why and how is that possible? Because Deno is more than a JavaScript runtime. It’s a fully formed software development kit that contains all the tools you need baked right in.
 
@@ -58,4 +58,4 @@ It even comes pre-rolled with a cross-compiler to turn scripts into platform bin
 
 As a result of all the wins baked in, working on a Deno codebase feels nearly frictionless. The time between when you clone a repository to when you’re running tests or even starting it up is barely noticeable.
 
-So yeah, it’s time to resurrect the cliché – only this time it’s really true. Deno is blazing fast. It runs code quickly to be sure, but even more important than the rate at which it can shove bytes through a CPU is how Deno optimizes my time – and I appreciate that more than anything. That’s what I mean when I say that Deno is blazing fast and why it’s quickly become my tool of choice for JavaScript development.
+So yeah, it’s time to resurrect the cliché – only this time it’s really true. Deno _is_ blazing fast. It runs code quickly to be sure, but even more important than the rate at which it can shove bytes through a CPU is how Deno optimizes _my_ time – and I appreciate that more than anything. That’s what I mean when I say that Deno is blazing fast and why it’s quickly become my tool of choice for JavaScript development.
