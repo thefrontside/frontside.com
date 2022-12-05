@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: >-
   Ingestion tests in Backstage Part 2: Safely refactoring an LDAP integration
-date: 2022-11-07T05:00:00.000Z
+date: 2022-12-05T05:00:00.000Z
 author: Charles Lowell
 description: >-
   To test whether the Backstage is setting up the Catalog properly, you must start a Backstage server, wait for a while, and assert. This feat is easier said than done. Here is part 2 in which Charles will guide you through it in this article.
