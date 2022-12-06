@@ -76,7 +76,7 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-header-link`,
+            resolve: `gatsby-remark-autolink-headers`,
           },
           {
             resolve: `gatsby-remark-prismjs`,
@@ -114,7 +114,7 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-          'gatsby-remark-external-links',
+          '@jd-carroll/gatsby-remark-external-links',
         ],
       },
     },
