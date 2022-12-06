@@ -76,6 +76,13 @@ module.exports = {
             },
           },
           {
+            resolve: `gatsby-remark-figure-caption`,
+            options: {
+              figureClassName: 'figure',
+              captionClassName: 'figure-caption',
+            },
+          },
+          {
             resolve: `gatsby-remark-autolink-headers`,
           },
           {

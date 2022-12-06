@@ -28,67 +28,60 @@ If you recall, the fundamental strategy of the basic ingestion test case for loc
 
 We’ll use the exact same strategy as before with the only difference being that instead of checking that service components are ingested from our YAML files, we’ll check that our user entities are properly ingested from our LDAP server.
 
-<p>
-<div style="display:flex; justify-content: center">
-  <figure class="figure" alt="Image map of deployment solution" style="width: 10%;">
-  <img src="/img/2022-ingestion-testing-in-backstage-part-2/test-architecture.svg"/>
-
-  <figcaption class="figure-caption"> <em>Testing Architecture featuring a simulated LDAP server</em></figcaption>
-  </figure>
-</div>
-</p>
+![Testing Architecture featuring a simulated LDAP server](/img/2022-ingestion-testing-in-backstage-part-2/test-architecture.svg "Backstage Client talks to Backstage Server, which talks to LDAP Simulator")
 
 Using a simulator as a test double means that we get all the benefits of isolation and repeatability when using a mock or stub, but without having to sacrifice any of the confidence in the viability of our test because it’s actually using 100% of the production code with no additives or substitutes.
 
 In fact, we’ve developed an LDAP simulator just for this purpose, which we can use inside of our test case. With this tool in hand, we can start up a simulated LDAP server instantaneously – right before we start our Backstage server – so the only thing that is different is that our test goes from this:
 
-``` typescript
+```typescript
 yield createBackstage();
 ```
 
 to this:
 
-``` typescript
+```typescript
 yield createLDAPServer();
 yield createBackstage();
 ```
 
 That was easy! Now that we have our very own LDAP server embedded in our test case, all we have to do is seed it with user and group data, and then use our convergent assertions to confirm that those records were ingested in the catalog:
 
-``` typescript
+```typescript
 let catalog: CatalogApi;
 
 beforeEach(function* () {
   yield createLDAPServer({
-    users: [{
-      cn: 'cowboyd',
-      uid: 'cowboyd',
-      name: 'Charles Lowell',
-      uuid: 'xyz123-cowboyd',
-      mail: 'cowboyd@example.com',
-      password: 'password',
-      avatar: 'https://avatars.dicebear.com/api/open-peeps/cowboyd.svg'
-    }]
+    users: [
+      {
+        cn: 'cowboyd',
+        uid: 'cowboyd',
+        name: 'Charles Lowell',
+        uuid: 'xyz123-cowboyd',
+        mail: 'cowboyd@example.com',
+        password: 'password',
+        avatar: 'https://avatars.dicebear.com/api/open-peeps/cowboyd.svg',
+      },
+    ],
   });
   catalog = yield createBackstage();
 });
 
 /// other catalog tests
 
-it.eventually("ingests users from LDAP into the catalog", function*() {
-  let user = yield catalog.getEntityByRef('user:cowboyd')
+it.eventually('ingests users from LDAP into the catalog', function* () {
+  let user = yield catalog.getEntityByRef('user:cowboyd');
   expect(user).toMatchObject({
     spec: {
       profile: {
         email: 'cowboyd@example.com',
         picture: 'https://avatars.dicebear.com/api/open-peeps/cowboyd.svg',
-        displayName: 'Charles Lowell'
-      }
-    }
-  })
+        displayName: 'Charles Lowell',
+      },
+    },
+  });
 });
 ```
-
 
 ### Upgrade with confidence
 
@@ -96,7 +89,7 @@ One of the main points I’ve been stressing in these articles is that this styl
 
 In the example repository, our initial LDAP integration used a processor combined with a custom user transformer in order to map the fields from our LDAP user entry into a Backstage user entity. Here is our transformer that maps the name and avatar fields from our entry into the spec.profile.displayName and spec.profile.picture fields of our user entity:
 
-``` typescript
+```typescript
 async userTransformer(vendor, config, entry) {
   let user = await defaultUserTransformer(vendor, config, entry);
   return merge(user, {
@@ -112,16 +105,16 @@ async userTransformer(vendor, config, entry) {
 
 But this is the [old way](https://backstage.io/docs/integrations/ldap/org#using-a-processor-instead-of-a-provider). The new way is to use an entity provider, and a simple set of field mappings in your app-config.yaml. We want the transformation to look like this:
 
-``` yaml
+```yaml
 users:
   map:
-   displayName: name
-   picture: avatar
+    displayName: name
+    picture: avatar
 ```
 
 Let’s start with a passing test suite:
 
-``` text
+```text
 PASS  src/catalog.test.ts (18.847 s)
   catalog ingestion
     ✓ can connect to the catalog (5348 ms)
@@ -137,7 +130,7 @@ Ran all test suites.
 
 If we first migrate our catalog to use the entity provider instead of the processor, but don’t add the field mappings yet, our test suite automatically fails:
 
-``` text
+```text
 FAIL  src/catalog.test.ts (21.039 s)
   catalog ingestion
     ✓ can connect to the catalog (4318 ms)
@@ -184,7 +177,7 @@ Ran all test suites.
 
 Not only has it detected that something is amiss, but it has also told us exactly what went wrong. The record has been found, but the spec.profile.displayName and spec.profile.picture fields are no longer being populated correctly. However, if we add those mappings to our app-config.yaml the tests re-run and pass again:
 
-``` text
+```text
 PASS  src/catalog.test.ts (17.195 s)
   catalog ingestion
     ✓ can connect to the catalog (4962 ms)
@@ -203,6 +196,5 @@ We completely changed the mechanism for ingestion of users from LDAP, and yet ou
 ### Focus on what matters
 
 We know tests are important, but they can be so difficult to set up and such a nightmare to evolve along with your codebase that most of the time we don’t even bother. But a workable and efficient solution is to imagine the simplest, most durable test you can, and then put the work in to attack the complexity – separating that from being able to express that simple, durable test in code. In the case of ingestion, the simplest thing that could possibly work is to turn it all on and see what happens, and take a “wait-and-see” attitude toward complexity.
-
 
 [part-1]: ../2022-03-24-testing-backstage-catalog-ingestors
