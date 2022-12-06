@@ -488,6 +488,21 @@ globalStyle(`${mardownColumn} > blockquote`, {
   }
 });
 
+globalStyle(`${mardownColumn} > .figure`, {
+  marginTop: '2em',
+  marginBottom: '1em'
+})
+
+globalStyle(`${mardownColumn} > .figure img`, {
+  maxHeight: '500px'
+})
+
+globalStyle(`${mardownColumn} > .figure .figure-caption`, {
+  fontStyle: 'italic',
+  textAlign: 'center',
+  fontSize: vars.fontSize['sm']
+})
+
 export const bigQuote = style([text3Xl, {
   fontWeight: vars.fontWeights.bold,
   margin: 0,

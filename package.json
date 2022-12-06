@@ -5,6 +5,7 @@
   "author": "Taras <taras@frontside.com>",
   "private": true,
   "dependencies": {
+    "@jd-carroll/gatsby-remark-external-links": "^0.1.0",
     "@lottiefiles/react-lottie-player": "^3.4.1",
     "@netlify/functions": "^0.10.0",
     "@typeform/embed-react": "^1.1.1",
@@ -24,8 +25,9 @@
     "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
     "gatsby-plugin-sharp": "^3.10.2",
     "gatsby-plugin-sitemap": "4.6.0",
+    "gatsby-remark-autolink-headers": "^4.11.0",
     "gatsby-remark-copy-linked-files": "^4.7.0",
-    "gatsby-remark-external-links": "^0.0.4",
+    "gatsby-remark-figure-caption": "^2.0.0",
     "gatsby-remark-images": "^5.7.0",
     "gatsby-remark-prismjs": "^5.7.0",
     "gatsby-remark-relative-images": "^0.2.3",
@@ -82,7 +84,7 @@
     "@storybook/react": "^6.3.7",
     "babel-loader": "^8.2.2",
     "bigtest": "^0.14.0",
-    "netlify-cli": "^5.2.0",
+    "netlify-cli": "^12.2.8",
     "storybook-addon-gatsby": "^0.0.2",
     "storybook-dark-mode": "^1.0.8"
   }
