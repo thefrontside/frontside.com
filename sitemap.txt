@@ -75,6 +75,7 @@
 /blog/2022-03-24-testing-backstage-catalog-ingestors/
 /blog/2022-05-03-backstage-entity-provider/
 /blog/2022-05-16-what-is-spotify-backstage/
+/blog/2022-08-22-dynamic-github-action-jobs/
 /blog/2022-12-01-deno-is-blazing-fast-for-humans/
 /blog/2022-12-05-ingestion-testing-in-backstage-part-2/
 /blog/3
