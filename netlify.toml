@@ -42,6 +42,12 @@ to = "https://effection.netlify.app/effection/:splat"
 
 [[redirects]]
 force = true
+from = "/graphgen/*"
+status = 200
+to = "https://graphgen.netlify.app/graphgen/:splat"
+
+[[redirects]]
+force = true
 from = "/interactors/html/api"
 status = 301
 to = "/interactors/html/api/index.html"
