@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: >-
   Dynamic Github Action Jobs
-date: 2022-08-22T05:00:00.000Z
+date: 2022-12-12T05:00:00.000Z
 author: Jacob Bolda
 description: >-
   Ever wanted to run parallel jobs in Github Actions with a high level of flexibility? We have, and now you can too!
