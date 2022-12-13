@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: frontside-com
+  annotations:
+    github.com/project-slug: thefrontside/frontside.com
+spec:
+  type: other
+  lifecycle: unknown
+  owner: marketing
