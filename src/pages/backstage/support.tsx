@@ -72,17 +72,17 @@ const Hero = ({ submitted, setSubmitted }) => (
   <header className={heroWrap}>
     <div className={heroText}>
       <h1 className={heading3Xl}>
-        Own your <span className={textGreen}>Backstage</span> implementation{' '}
-        <span className={textGradientSkyblueGreen}>without forking out</span>
+        Enterprise Support for <span className={textGreen}>Backstage</span> {' '}
+        by <span className={textGradientSkyblueGreen}>Frontside</span>
       </h1>
       <p className={textLg}>
-        We help enterprise teams get the most out of Backstage for the long-run
+        Accelerate your Backstage adoption with experience, insight and practical advice from Backstage contributors.
       </p>
       <p className={consultingTopTCA}>
         <ContactCTA
           submitted={submitted}
           setSubmitted={setSubmitted}
-          label="Adopt Backstage with Frontside"
+          label="Get Support today"
           topic="backstage"
           eventId="cta-backstage"
           ctaId="landing-top"
