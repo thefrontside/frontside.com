@@ -118,15 +118,10 @@ const LeftRight = () => (
       {/* class for text on right */}
       <div className={featureTextAlternate}>
         <h2 className={featureHeading}>
-          Master your <span className={textGreen}>ecosystem</span> with
-          Backstage
+          Your DX Team <span className={textGreen}>A Boost</span>
         </h2>
         <p>
-          Your combination of tech stack, services, and people is unique to your
-          organization. But you don't have to compromise your needs to fit them
-          into what Backstage supports today. As an active contributor to
-          Backstage, Frontside can help you cover all your use-cases—even those
-          not yet in platform—without moving away from OSS.
+          Backstage is a powerful tool because it comes complete with an architecture, many plugins and best practices. With power comes a learning curve that can be difficult to master without help. Frontside gives your team information they need to be productive with Backstage.
         </p>
       </div>
       <div className={featureImage}>
@@ -138,14 +133,10 @@ const LeftRight = () => (
       {/* class for text on left */}
       <div className={featureText}>
         <h2 className={featureHeading}>
-          <span className={textGreen}>De-risk</span> your Backstage adoption
+          Gain Traction with <span className={textGreen}>Proven Strategies</span>
         </h2>
         <p>
-          Avoid getting locked out of future Backstage upgrades with uninformed
-          early choices in your Backstage adoption. Frontside understands
-          Backstage's current alpha software limitations and can help you set up
-          the platform so you can get what you need now and keep getting value
-          in the long term.
+          Companies are using Backstage to improve developer experience, impact employee retention and accelerate their Cloud Native adoption strategy. Frontside has seen first hand how successful Backstage adopters design their
         </p>
       </div>
       <div className={featureImage}>
@@ -157,8 +148,7 @@ const LeftRight = () => (
       {/* class for text on right */}
       <div className={featureTextAlternate}>
         <h2 className={featureHeading}>
-          Master your <span className={textGreen}>ecosystem</span> with
-          Backstage
+          Avoiding Forking With <span className={textGreen}>the Lastest Features</span>
         </h2>
         <p>
           Your combination of tech stack, services, and people is unique to your
