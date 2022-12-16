@@ -44,7 +44,8 @@ to = "https://effection.netlify.app/effection/:splat"
 force = true
 from = "/graphgen/*"
 status = 200
-to = "https://graphgen.netlify.app/graphgen/:splat"
+to = "https://graphgen.deno.dev/:splat"
+headers = {X-Base = "https://frontside.com/graphgen/" }
 
 [[redirects]]
 force = true
