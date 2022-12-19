@@ -59,10 +59,10 @@ export default function BackstageSupport({
       image={metaImage}
     >
       <Hero {...{ submitted, setSubmitted }} />
-      <ValueProp />
+      <Testimonials />
       <LeftRight />
       <Trust />
-      <Testimonials />
+      <ValueProp />
       <FinalCTA {...{ submitted, setSubmitted }} />
     </Layout>
   );
@@ -101,11 +101,11 @@ const ValueProp = () => (
   <section className={pageWrap}>
     <header className={sectionHeader}>
       <h2 className={homeBackstageHeading}>
-        The work we do{' '}
-        <strong className={textGreen}>Transcends</strong>
+        TODO: Add a value prop short description
+        <strong className={textGreen}> [Why? Backstage Enterprise Support]</strong>
       </h2>
       <p className={textLg}>
-        Our clients speak.
+        Empower your team with the Expert Knowledge from Leaders of Backstage.
       </p>
     </header>
   </section>
@@ -229,6 +229,15 @@ const Logo = ({ src, alt }) => (
 
 const Testimonials = () => (
   <section className={pageWrap}>
+    <header className={sectionHeader}>
+      <h2 className={homeBackstageHeading}>
+        The work we do{' '}
+        <strong className={textGreen}>Transcends</strong>
+      </h2>
+      <p className={textLg}>
+        Our clients speak.
+      </p>
+    </header>
     <blockquote className={medQuote}>
       &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
       expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in
