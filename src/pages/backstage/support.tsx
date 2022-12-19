@@ -7,22 +7,25 @@ import Animation from '../../components/animation';
 import ContactCTA from '../../components/contact-cta';
 
 import {
-  pageWrap,
-  heroWrap,
-  heroText,
-  heroImage,
+  contentGrow,
+  contentRow,
+  contentShrink,
+  consultingTopTCA,
   featureRow,
   featureText,
   featureTextAlternate,
   featureImage,
-  sectionHeader,
-  consultingTopTCA,
+  heroWrap,
+  heroText,
+  heroImage,
   homeBottomCTA,
   contentGrow,
   contentRow,
   contentShrink,
   logoFlex,
   logoItem,
+  pageWrap,
+  sectionHeader,
 } from '../../styles/page.css';
 import {
   textGradientSkyblueGreen,
