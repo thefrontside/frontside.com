@@ -19,24 +19,25 @@ import {
   heroText,
   heroImage,
   homeBottomCTA,
-  contentGrow,
-  contentRow,
-  contentShrink,
   logoFlex,
   logoItem,
   pageWrap,
   sectionHeader,
+  testimonialCarousel,
+  testimonialQuote,
+  testimonialSource,
+  testimonialWrap,
+  testimonialQuoteChar,
 } from '../../styles/page.css';
 import {
-  textGradientSkyblueGreen,
   heading3Xl,
   textGreen,
   textLg,
+  text4Xl,
   featureHeading,
   textGradientGreenSkyblue,
   homeBackstageHeading,
-  medQuote,
-  medQuoteAuthor,
+  textGradientVioletGreen,
 } from '../../styles/typography.css';
 import { actionButtonGreen } from '../../styles/buttons.css';
 
@@ -57,7 +58,8 @@ export default function BackstageSupport({
   const [submitted, setSubmitted] = useState(false);
   return (
     <Layout
-      title="Adopt Backstage your way with Frontside"
+      title="
+        Adopt Backstage your way with Frontside"
       description="We help you get the most out of Backstage for the long-run"
       image={metaImage}
     >
@@ -75,8 +77,8 @@ const Hero = ({ submitted, setSubmitted }) => (
   <header className={heroWrap}>
     <div className={heroText}>
       <h1 className={heading3Xl}>
-        Enterprise Support for <span className={textGreen}>Backstage</span> {' '}
-        by <span className={textGradientSkyblueGreen}>Frontside</span>
+        Enterprise Support for <span className={textGradientVioletGreen}>Backstage</span> {' '}
+        by <span className={textGradientVioletGreen}>Frontside</span>
       </h1>
       <p className={textLg}>
         Accelerate your Backstage adoption with experience, insight and practical advice from Backstage contributors.
@@ -230,23 +232,44 @@ const Logo = ({ src, alt }) => (
   </div>
 );
 
+const TestimonialCarousel = ({ children }) => (
+  <div className={testimonialCarousel}>
+      {children}
+  </div>
+);
+
+const Testimonial = ({ source, children }) => (
+  <div className={testimonialWrap}>
+      <div className={testimonialQuoteChar}>&ldquo;</div>
+      <div>
+          <span className={testimonialQuote}>{children}</span>
+          <span className={testimonialSource}>{source}</span>
+      </div>
+  </div>
+)
+
 const Testimonials = () => (
   <section className={pageWrap}>
-    <header className={sectionHeader}>
-      <h2 className={homeBackstageHeading}>
-        The work we do{' '}
-        <strong className={textGreen}>Transcends</strong>
-      </h2>
-      <p className={textLg}>
-        Our clients speak.
-      </p>
-    </header>
-    <blockquote className={medQuote}>
-      &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
-      expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in
-      laborum sed rerum et corporis.&rdquo;
-    </blockquote>
-    <p className={medQuoteAuthor}>&mdash; Amazing Person, CEO, Generic Place</p>
+      <header className={sectionHeader}>
+          <h2 className={homeBackstageHeading}>
+              The work we do{' '}
+              <strong className={textGradientVioletGreen}>Transcends</strong>
+          </h2>
+          <p className={textLg}>
+              Our clients speak.
+          </p>
+      </header>
+      <TestimonialCarousel>
+          <Testimonial source="North, at Hewlett-Packard">
+              I learned more working with Frontside for six months than I have in six years.
+          </Testimonial>
+          <Testimonial source="Brian Beale, Engr Manager at Resideo">
+              Frontside has a dedication to engineering excellence.
+          </Testimonial>
+          <Testimonial source="Kaspar for Grünberg, CEO of Humanitec">
+              Hard to find a team more knowledgeable in Backstage than Frontside
+          </Testimonial>
+      </TestimonialCarousel>
   </section>
 );
 
