@@ -151,11 +151,7 @@ const LeftRight = () => (
           Avoiding Forking With <span className={textGreen}>the Lastest Features</span>
         </h2>
         <p>
-          Your combination of tech stack, services, and people is unique to your
-          organization. But you don't have to compromise your needs to fit them
-          into what Backstage supports today. As an active contributor to
-          Backstage, Frontside can help you cover all your use-cases—even those
-          not yet in platform—without moving away from OSS.
+          Sometimes Backstage doesn't do exactly what your team needs. Modifying Backstage without pushing changes to Backstage project makes upgrading difficult and locks you out or using the latest features of Backstage. Frontside keeps your team unblocked by adovcating and contributing changes to the Backstage project so yo can always upgrade and get the latest features with ease.
         </p>
       </div>
       <div className={featureImage}>
