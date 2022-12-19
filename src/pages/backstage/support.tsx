@@ -101,12 +101,11 @@ const ValueProp = () => (
   <section className={pageWrap}>
     <header className={sectionHeader}>
       <h2 className={homeBackstageHeading}>
-        Bring infrastructure, services, and people together with{' '}
-        <strong className={textGreen}>Backstage</strong>
+        The work we do{' '}
+        <strong className={textGreen}>Transcends</strong>
       </h2>
       <p className={textLg}>
-        We help you adopt and extend Backstage to fit your organization's unique
-        ecosystem.
+        Our clients speak.
       </p>
     </header>
   </section>
@@ -171,12 +170,12 @@ const LeftRight = () => (
 
       </div>
       <div className={featureImage}>
-        <img src={backstageDomain} alt="" />
+        <Animation src={deriskAnimation} />
       </div>
     </div>
 
     <div className={featureRow}>
-      {/* class for text from left */}
+      {/* class for text on right */}
       <div className={featureTextAlternate}>
         <h2 className={featureHeading}>
           Ship new DX features with <span className={textGreen}>confidence</span>
