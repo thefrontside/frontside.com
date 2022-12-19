@@ -158,6 +158,38 @@ const LeftRight = () => (
         <img src={backstageDomain} alt="" />
       </div>
     </div>
+
+    <div className={featureRow}>
+      {/* class for text from left */}
+      <div className={featureTextAlternate}>
+        <h2 className={featureHeading}>
+          Be Bold in Face of Ambitious DX<span className={textGreen}>initatives</span>
+        </h2>
+        <p>
+          Each organization is unique. Solutions to your ambitous initaives may not exsist in the open source Backstage project instead of limitiing your project to what is available in open source, Frontside helps you to take on your ambitious iniative knowing that with Frontside's help you'll be able to successfully accomplish your goals. Frontside can help you architect, build and optimize new Backstage plugins.
+        </p>
+
+      </div>
+      <div className={featureImage}>
+        <img src={backstageDomain} alt="" />
+      </div>
+    </div>
+
+    <div className={featureRow}>
+      {/* class for text from left */}
+      <div className={featureTextAlternate}>
+        <h2 className={featureHeading}>
+          Ship new DX features with <span className={textGreen}>confidence</span>
+        </h2>
+        <p>
+          As your Backstage project grows, so withh the risk of breaking exisiting features that your users rely on. Reliable shift-left and shift-right testing practices can prevent frustration for your users by helping you catch problems before they're deployed to your users. Frontside helps DX teams implement integration testing harnesses that give you confidence without blocking your team from shipping new Backstage features.
+        </p>
+
+      </div>
+      <div className={featureImage}>
+        <img src={backstageDomain} alt="" />
+      </div>
+    </div>
   </section>
 );
 
