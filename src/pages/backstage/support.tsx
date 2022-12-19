@@ -118,7 +118,7 @@ const LeftRight = () => (
   <section className={pageWrap}>
     <div className={featureRow}>
       {/* class for text on right */}
-      <div className={featureTextAlternate}>
+      <div className={featureText}>
         <h2 className={featureHeading}>
           Your DX Team <span className={textGreen}>A Boost</span>
         </h2>
@@ -133,7 +133,7 @@ const LeftRight = () => (
 
     <div className={featureRow}>
       {/* class for text on left */}
-      <div className={featureText}>
+      <div className={featureTextAlternate}>
         <h2 className={featureHeading}>
           Gain Traction with <span className={textGreen}>Proven Strategies</span>
         </h2>
@@ -148,7 +148,7 @@ const LeftRight = () => (
 
     <div className={featureRow}>
       {/* class for text on right */}
-      <div className={featureTextAlternate}>
+      <div className={featureText}>
         <h2 className={featureHeading}>
           Avoiding Forking With <span className={textGreen}>the Lastest Features</span>
         </h2>
@@ -179,7 +179,7 @@ const LeftRight = () => (
 
     <div className={featureRow}>
       {/* class for text on right */}
-      <div className={featureTextAlternate}>
+      <div className={featureText}>
         <h2 className={featureHeading}>
           Ship new DX features with <span className={textGreen}>confidence</span>
         </h2>
