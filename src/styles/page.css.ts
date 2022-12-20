@@ -1,4 +1,4 @@
-import { keyframes, style } from '@vanilla-extract/css';
+import { globalStyle, keyframes, style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
 import vars, { laptopQuery, desktopQuery, darkThemeQuery } from './frontside-theme.css';
 import clientsLogo from '../img/q3-2021/client-logos.svg';
@@ -6,7 +6,7 @@ import clientsLogoWhite from '../img/q3-2021/client-logos-white.svg';
 import backgroundBubbles from '../img/q3-2021/backgruond-blue-bubbles.png';
 import openMicBg from '../img/q3-2021/backstage-openmic-bg.png';
 
-import { textLg, textUppercase, textXl } from './typography.css';
+import { boldCaps, textLg, textUppercase, textXl } from './typography.css';
 
 export const pageWrap = style({
   boxSizing: 'border-box',
@@ -596,3 +596,38 @@ export const ctaSubmittedBox = style([textLg, {
   animationName: fadeIn,
   animationDuration: calc('1s').multiply(0.75).toString(),
 }]);
+
+export const testimonialBlock = style({
+
+});
+
+export const comparisonChartGrid = style({
+  backgroundColor: '#fafafa'
+});
+
+export const comparisonChartTable = style({
+  borderCollapse: 'collapse',
+  width: '80%',
+  margin: '0 auto'
+});
+
+export const tableCellLeft = style({
+  padding: '1.25em',
+  textAlign: 'left',
+  verticalAlign: 'middle',
+  fontWeight: '600'
+});
+
+export const tableCellLeftHeader = style([boldCaps, {
+  textAlign: 'left',
+}]);
+
+export const rowBorder = style({
+  borderBottom: '1px solid #e4e4e4'
+});
+
+globalStyle('th, td', {
+  padding: '1.25em',
+  textAlign: 'center',
+  verticalAlign: 'middle'
+});

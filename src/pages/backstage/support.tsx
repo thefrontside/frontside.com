@@ -19,13 +19,15 @@ import {
   heroText,
   heroImage,
   homeBottomCTA,
-  contentGrow,
-  contentRow,
-  contentShrink,
   logoFlex,
   logoItem,
   pageWrap,
   sectionHeader,
+  testimonialBlock,
+  comparisonChartTable,
+  tableCellLeft,
+  rowBorder,
+  tableCellLeftHeader
 } from '../../styles/page.css';
 import {
   textGradientSkyblueGreen,
@@ -37,6 +39,7 @@ import {
   homeBackstageHeading,
   medQuote,
   medQuoteAuthor,
+  boldCaps,
 } from '../../styles/typography.css';
 import { actionButtonGreen } from '../../styles/buttons.css';
 
@@ -66,6 +69,7 @@ export default function BackstageSupport({
       <LeftRight />
       <Trust />
       <ValueProp />
+      <PlansComparisonChart />
       <FinalCTA {...{ submitted, setSubmitted }} />
     </Layout>
   );
@@ -241,12 +245,94 @@ const Testimonials = () => (
         Our clients speak.
       </p>
     </header>
+    <div className={testimonialBlock}>
+      <div>Quote Icon</div>
+      <blockquote className={medQuote}>I learned more working with Frontside for 6 months then I have in 6 years</blockquote>
+      <div>Senior Engineer, HP</div>
+    </div>
     <blockquote className={medQuote}>
       &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
       expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in
       laborum sed rerum et corporis.&rdquo;
     </blockquote>
     <p className={medQuoteAuthor}>&mdash; Amazing Person, CEO, Generic Place</p>
+  </section>
+);
+
+const PlansComparisonChart = () => (
+  <section className={pageWrap}>
+    <h2>Features</h2>
+    {/* Table */}
+    <table className={comparisonChartTable}>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Silver Image</th>
+          <th>Gold image</th>
+          <th>Platnium image</th>
+        </tr>
+        <tr className={rowBorder}>
+          <th className={tableCellLeftHeader}>+Benefits</th>
+          <th className={boldCaps}>Silver<br/>Plan</th>
+          <th className={boldCaps}>Gold<br/>Plan</th>
+          <th className={boldCaps}>Platnium<br/>Plan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr className={rowBorder}>
+          <td className={tableCellLeft}>Adoption Stage</td>
+          <td>POC</td>
+          <td>Early</td>
+          <td>Advanced</td>
+        </tr>
+        <tr className={rowBorder}>
+          <td className={tableCellLeft}>Recommended Teams <br/>(including Managers)</td>
+          <td>1-2 Devs</td>
+          <td>3 Devs <br /> 2 PMs</td>
+          <td>
+            5 Devs <br />
+            1 Designer <br />
+            2 Managers
+          </td>
+        </tr>
+        <tr className={rowBorder}>
+          <td className={tableCellLeft}>Standing Core Meeting</td>
+          <td>x</td>
+          <td>1 per week</td>
+          <td>5 - 6 per month</td>
+        </tr>
+        <tr className={rowBorder}>
+          <td className={tableCellLeft}>Ad-hoc Working Sessions <br />(Pair Programming or planning)</td>
+          <td>2 per week</td>
+          <td>3 per week</td>
+          <td>20 per month</td>
+        </tr>
+        <tr className={rowBorder}>
+          <td className={tableCellLeft}>Code Spikes <br />(POC, Code Samples, Pseudo Code)</td>
+          <td>x</td>
+          <td>2 per month</td>
+          <td>4 per month</td>
+        </tr>
+        <tr className={rowBorder}>
+          <td className={tableCellLeft}>Code Reviews</td>
+          <td>x</td>
+          <td>1 per week</td>
+          <td>12 per month</td>
+        </tr>
+        <tr className={rowBorder}>
+          <td className={tableCellLeft}>Rfcs</td>
+          <td>x</td>
+          <td>1 per month</td>
+          <td>2 per month</td>
+        </tr>
+        <tr>
+          <td className={tableCellLeft}>Chat Support</td>
+          <td>x</td>
+          <td>2 seats</td>
+          <td>4 seats</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 );
 
