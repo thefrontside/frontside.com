@@ -61,7 +61,7 @@ function ProjectSelect() {
     getMenuProps,
     highlightedIndex,
     getItemProps,
-  } = useSelect({ items, itemToString: (item) => item.title });
+  } = useSelect({ items, itemToString: (item) => `${item?.title}` });
   return (
     <div className={projectSelectWrap}>
       <label className={projectSelectLabel} {...getLabelProps()}>
