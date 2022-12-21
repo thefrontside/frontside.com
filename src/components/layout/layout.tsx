@@ -5,14 +5,15 @@ import Navbar from '../navbar';
 import Footer from '../footer';
 
 import '../../styles/global.css';
+import { Head } from './head';
 
 type PageProps = {
-  children: any,
-  description?: string,
-  title: string,
-  image?: string,
-  path?: string,
-}
+  children: any;
+  description?: string;
+  title: string;
+  image?: string;
+  path?: string;
+};
 
 export default function TemplateWrapper({
   children,
@@ -21,7 +22,6 @@ export default function TemplateWrapper({
   image,
   path,
 }: PageProps) {
-
   return (
     <StaticQuery
       query={graphql`
@@ -39,78 +39,19 @@ export default function TemplateWrapper({
       render={(data) => (
         <>
           <Helmet>
-            <html lang="en" />
-            <title>
-              {title
-                ? `${title}`
-                : data.site.siteMetadata.title}
-            </title>
-            <meta
-              name="description"
-              content={
+            <Head
+              title={title ? `${title}` : data.site.siteMetadata.title}
+              description={
                 description ? description : data.site.siteMetadata.description
               }
-            />
-            <meta
-              name="image"
-              content={
+              image={
                 image
                   ? `${data.site.siteMetadata.siteUrl}${image}`
                   : data.site.siteMetadata.image
               }
-            />
-            <meta name="twitter:card" content="summary" />
-            <meta
-              name="twitter:image"
-              content={
-                image
-                  ? `${data.site.siteMetadata.siteUrl}${image}`
-                  : data.site.siteMetadata.image
-              }
-            />
-            <meta
-              name="twitter:title"
-              content={
-                title
-                  ? `${title} | ${data.site.siteMetadata.title}`
-                  : data.site.siteMetadata.title
-              }
-            />
-            <meta
-              name="twitter:description"
-              content={
-                description ? description : data.site.siteMetadata.description
-              }
-            />
-            <meta
-              property="og:title"
-              content={
-                title
-                  ? `${title}`
-                  : data.site.siteMetadata.title
-              }
-            />
-            <meta property="og:type" content="website" />
-
-            <meta
-              property="og:image"
-              content={
-                image
-                  ? `${data.site.siteMetadata.siteUrl}${image}`
-                  : data.site.siteMetadata.image
-              }
+              path={path ? `${data.site.siteMetadata.siteUrl}${path}` : undefined}
             />
           </Helmet>
-          {path && typeof path === 'string' ? (
-            <Helmet>
-              <meta
-                property="og:url"
-                content={`${data.site.siteMetadata.siteUrl}${path}`}
-              />
-            </Helmet>
-          ) : (
-            <></>
-          )}
           <Navbar />
 
           {children}
