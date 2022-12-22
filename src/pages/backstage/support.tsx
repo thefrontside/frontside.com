@@ -43,8 +43,12 @@ import {
 } from '../../styles/typography.css';
 import { actionButtonGreen } from '../../styles/buttons.css';
 
-import backstageHero from '../../img/q3-2021/backstage-hero.png';
-import backstageDomain from '../../img/q3-2021/backstage-map-domain.png';
+import backstageSupportHero from '../../img/backstage-support/backstagesupport-header-40.png';
+import backstageValuePropI48 from '../../img/backstage-support/backstagesupport-48.png';
+import backstageValuePropI49 from '../../img/backstage-support/backstagesupport-49.png';
+import backstageValuePropI50 from '../../img/backstage-support/backstagesupport-50.png';
+import backstageValuePropI51 from '../../img/backstage-support/backstagesupport-51.png';
+import backstageValuePropI52 from '../../img/backstage-support/backstagesupport-52.png';
 import backstageDerisk from '../../img/q3-2021/backstage-derisk.png';
 import backstageDx from '../../img/q3-2021/backstage-integrate-dx.png';
 import metaImage from '../../img/q3-2021/meta-backstage.png';
@@ -99,7 +103,7 @@ const Hero = ({ submitted, setSubmitted }) => (
       </p>
     </div>
     <div className={heroImage}>
-      <Animation src={heroAnimation} />
+      <img src={backstageSupportHero} alt="" />
     </div>
   </header>
 );
@@ -122,7 +126,7 @@ const LeftRight = () => (
   <section className={pageWrap}>
     <div className={featureRow}>
       {/* class for text on right */}
-      <div className={featureText}>
+      <div className={featureTextAlternate}>
         <h2 className={featureHeading}>
           Your DX Team <span className={textGreen}>A Boost</span>
         </h2>
@@ -131,13 +135,13 @@ const LeftRight = () => (
         </p>
       </div>
       <div className={featureImage}>
-        <img src={backstageDomain} alt="" />
+        <img src={backstageValuePropI48} alt="" />
       </div>
     </div>
 
     <div className={featureRow}>
       {/* class for text on left */}
-      <div className={featureTextAlternate}>
+      <div className={featureText}>
         <h2 className={featureHeading}>
           Gain Traction with <span className={textGreen}>Proven Strategies</span>
         </h2>
@@ -146,13 +150,13 @@ const LeftRight = () => (
         </p>
       </div>
       <div className={featureImage}>
-        <Animation src={deriskAnimation} />
+        <img src={backstageValuePropI49} alt="" />
       </div>
     </div>
 
     <div className={featureRow}>
       {/* class for text on right */}
-      <div className={featureText}>
+      <div className={featureTextAlternate}>
         <h2 className={featureHeading}>
           Avoiding Forking With <span className={textGreen}>the Lastest Features</span>
         </h2>
@@ -161,13 +165,13 @@ const LeftRight = () => (
         </p>
       </div>
       <div className={featureImage}>
-        <img src={backstageDomain} alt="" />
+        <img src={backstageValuePropI50} alt="" />
       </div>
     </div>
 
     <div className={featureRow}>
       {/* class for text from left */}
-      <div className={featureTextAlternate}>
+      <div className={featureText}>
         <h2 className={featureHeading}>
           Be Bold in Face of Ambitious DX<span className={textGreen}>initatives</span>
         </h2>
@@ -177,13 +181,13 @@ const LeftRight = () => (
 
       </div>
       <div className={featureImage}>
-        <Animation src={deriskAnimation} />
+        <img src={backstageValuePropI51} alt="" />
       </div>
     </div>
 
     <div className={featureRow}>
       {/* class for text on right */}
-      <div className={featureText}>
+      <div className={featureTextAlternate}>
         <h2 className={featureHeading}>
           Ship new DX features with <span className={textGreen}>confidence</span>
         </h2>
@@ -193,7 +197,7 @@ const LeftRight = () => (
 
       </div>
       <div className={featureImage}>
-        <img src={backstageDomain} alt="" />
+        <img src={backstageValuePropI52} alt="" />
       </div>
     </div>
   </section>
@@ -261,7 +265,7 @@ const Testimonials = () => (
 
 const PlansComparisonChart = () => (
   <section className={pageWrap}>
-    <h2>Features</h2>
+    <h2>Plan Features</h2>
     {/* Table */}
     <table className={comparisonChartTable}>
       <thead>
