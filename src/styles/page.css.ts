@@ -1,12 +1,52 @@
 import { globalStyle, keyframes, style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
 import vars, { laptopQuery, desktopQuery, darkThemeQuery } from './frontside-theme.css';
+import { text4Xl, textXs } from "./typography.css";
 import clientsLogo from '../img/q3-2021/client-logos.svg';
 import clientsLogoWhite from '../img/q3-2021/client-logos-white.svg';
 import backgroundBubbles from '../img/q3-2021/backgruond-blue-bubbles.png';
 import openMicBg from '../img/q3-2021/backstage-openmic-bg.png';
 
 import { boldCaps, textLg, textUppercase, textXl } from './typography.css';
+
+
+export const testimonialCarousel = style({
+  display: 'flex',
+  margin: `0 ${vars.space.xl}`,
+});
+export const testimonialQuote = style({});
+export const testimonialQuoteChar = style([text4Xl, {
+  fontWeight: 'bold',
+  fontSize: '5em',
+}])
+
+export const testimonialSource = style([textXs, {
+  display: 'block',
+  fontStyle: 'italic',
+  marginTop: vars.space.xs,
+}]);
+
+export const testimonialWrap = style({
+  padding: vars.space.sm,
+  fontWeight: vars.fontWeights.bold,
+  margin: `0 ${vars.space['3xs']}`,
+  borderRadius: '1em',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  flex: '1 1 0px',
+  selectors: {
+    '&:nth-of-type(odd)': {
+      color: vars.colors.lightGreen,
+      backgroundColor: vars.colors.blue,
+      margin: '1em 0',
+    },
+    '&:nth-of-type(even)': {
+      color: vars.colors.blue,
+      backgroundColor: vars.colors.lightGreen,
+    }
+  }
+});
 
 export const pageWrap = style({
   boxSizing: 'border-box',

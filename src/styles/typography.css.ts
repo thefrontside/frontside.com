@@ -65,6 +65,20 @@ export const text3Xl = style({
   }
 });
 
+export const text4Xl = style({
+  fontSize: vars.fontSize['3xl'],
+  lineHeight: vars.lineHeights['3xl'],
+  letterSpacing: vars.letterSpacing['3xl'],
+
+  '@media': {
+    [laptopQuery]: {
+      fontSize: vars.fontSize['4xl'],
+      lineHeight: vars.lineHeights['4xl'],
+      letterSpacing: vars.letterSpacing['4xl'],
+    }
+  }
+});
+
 export const textExtrabold = style({
   fontWeight: vars.fontWeights.extrabold,
 });
@@ -266,6 +280,10 @@ export const textGradientPurplePink = style([clipBackgroundToText, {
 
 export const textGradientGreenSkyblue = style([clipBackgroundToText, {
   backgroundImage: `linear-gradient(90deg, ${vars.colors.green}, ${vars.colors.skyblue} 95%)`,
+}]);
+
+export const textGradientVioletGreen = style([clipBackgroundToText, {
+  backgroundImage: `linear-gradient(90deg, ${vars.colors.violet}, ${vars.colors.green} 95%)`,
 }]);
 
 export const textGradientSkyblueGreen = style([clipBackgroundToText, {
