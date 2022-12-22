@@ -135,7 +135,7 @@ const LeftRight = () => (
       {/* class for text on right */}
       <div className={featureTextAlternate}>
         <h2 className={featureHeading}>
-          Your DX Team <span className={textGreen}>A Boost</span>
+          Give your DX Team <span className={textGradientVioletGreen}>A Boost</span>
         </h2>
         <p>
           Backstage is a powerful tool because it comes complete with an architecture, many plugins and best practices. With power comes a learning curve that can be difficult to master without help. Frontside gives your team information they need to be productive with Backstage.
@@ -150,7 +150,7 @@ const LeftRight = () => (
       {/* class for text on left */}
       <div className={featureText}>
         <h2 className={featureHeading}>
-          Gain Traction with <span className={textGreen}>Proven Strategies</span>
+          Gain Traction with <span className={textGradientVioletGreen}>Proven Strategies</span>
         </h2>
         <p>
           Companies are using Backstage to improve developer experience, impact employee retention and accelerate their Cloud Native adoption strategy. Frontside has seen first hand how successful Backstage adopters design their
@@ -165,7 +165,7 @@ const LeftRight = () => (
       {/* class for text on right */}
       <div className={featureTextAlternate}>
         <h2 className={featureHeading}>
-          Avoiding Forking With <span className={textGreen}>the Lastest Features</span>
+          Avoiding Forking With <span className={textGradientVioletGreen}>the Lastest Features</span>
         </h2>
         <p>
           Sometimes Backstage doesn't do exactly what your team needs. Modifying Backstage without pushing changes to Backstage project makes upgrading difficult and locks you out or using the latest features of Backstage. Frontside keeps your team unblocked by adovcating and contributing changes to the Backstage project so yo can always upgrade and get the latest features with ease.
@@ -180,7 +180,7 @@ const LeftRight = () => (
       {/* class for text from left */}
       <div className={featureText}>
         <h2 className={featureHeading}>
-          Be Bold in Face of Ambitious DX<span className={textGreen}>initatives</span>
+          Be Bold in Face of Ambitious <span className={textGradientVioletGreen}>DX&nbsp;initatives</span>
         </h2>
         <p>
           Each organization is unique. Solutions to your ambitous initaives may not exsist in the open source Backstage project instead of limitiing your project to what is available in open source, Frontside helps you to take on your ambitious iniative knowing that with Frontside's help you'll be able to successfully accomplish your goals. Frontside can help you architect, build and optimize new Backstage plugins.
@@ -196,7 +196,7 @@ const LeftRight = () => (
       {/* class for text on right */}
       <div className={featureTextAlternate}>
         <h2 className={featureHeading}>
-          Ship new DX features with <span className={textGreen}>confidence</span>
+          Ship new DX features with <span className={textGradientVioletGreen}>confidence</span>
         </h2>
         <p>
           As your Backstage project grows, so withh the risk of breaking exisiting features that your users rely on. Reliable shift-left and shift-right testing practices can prevent frustration for your users by helping you catch problems before they're deployed to your users. Frontside helps DX teams implement integration testing harnesses that give you confidence without blocking your team from shipping new Backstage features.
@@ -207,7 +207,7 @@ const LeftRight = () => (
         <img src={backstageValuePropI52} alt="" />
       </div>
     </div>
-  </section>
+  </section>n
 );
 
 const Trust = () => (
