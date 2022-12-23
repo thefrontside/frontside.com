@@ -108,7 +108,7 @@ export const heroBreak = style({
   }
 });
 
-export const badgesWrap = style({
+export const badgesWrap = style([pageWrap, {
   display: 'block',
   marginTop: '2rem',
   marginBottom: '3rem',
@@ -120,7 +120,7 @@ export const badgesWrap = style({
       marginBottom: 0,
     }
   }
-});
+}]);
 
 export const badgesHeader = style({
   display: 'flex',
