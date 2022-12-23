@@ -12,7 +12,13 @@ import { boldCaps, textLg, textUppercase, textXl } from './typography.css';
 
 export const testimonialCarousel = style({
   display: 'flex',
+  flexDirection: 'column',
   margin: `0 ${vars.space.xl}`,
+  ['@media']: {
+    [desktopQuery]: {
+      flexDirection: 'row',
+    }
+  }
 });
 export const testimonialQuote = style({});
 export const testimonialQuoteChar = style([text4Xl, {
@@ -104,6 +110,16 @@ export const heroBreak = style({
 
 export const badgesWrap = style({
   display: 'block',
+  marginTop: '2rem',
+  marginBottom: '3rem',
+  ['@media']: {
+    [laptopQuery]: {
+      marginBottom: 0,
+    },
+    [desktopQuery]: {
+      marginBottom: 0,
+    }
+  }
 });
 
 export const badgesHeader = style({
@@ -125,7 +141,6 @@ export const badgesBody = style({
   margin: `${vars.space.md} ${vars.space.md}`,
   textAlign: 'center',
   gridTemplateColumns: '1fr 2fr 4.5fr 2.5fr 4fr',
-  gridTemplateRows: '1fr 2fr',
   gridColumnGap: vars.space.md,
   ['@media']: {
     [laptopQuery]: {
