@@ -9,7 +9,6 @@ import SupportCTA from '../../components/cta-support';
 import {
   contentGrow,
   contentRow,
-  contentShrink,
   consultingTopTCA,
   featureRow,
   featureText,
@@ -29,7 +28,6 @@ import {
   logoContainer,
   pageWrap,
   sectionHeader,
-  testimonialBlock,
   comparisonChartTable,
   tableCellLeft,
   rowBorder,
@@ -45,12 +43,9 @@ import {
   heading3Xl,
   textGreen,
   textLg,
-  text4Xl,
   featureHeading,
   textGradientGreenSkyblue,
   homeBackstageHeading,
-  medQuote,
-  medQuoteAuthor,
   boldCaps,
   textGradientVioletGreen,
 } from '../../styles/typography.css';
@@ -62,8 +57,6 @@ import backstageValuePropI49 from '../../img/backstage-support/backstagesupport-
 import backstageValuePropI50 from '../../img/backstage-support/backstagesupport-50.png';
 import backstageValuePropI51 from '../../img/backstage-support/backstagesupport-51.png';
 import backstageValuePropI52 from '../../img/backstage-support/backstagesupport-52.png';
-import backstageDerisk from '../../img/q3-2021/backstage-derisk.png';
-import backstageDx from '../../img/q3-2021/backstage-integrate-dx.png';
 import metaImage from '../../img/q3-2021/meta-backstage.png';
 
 import leftLaurel from '../../img/backstage-support/artboard-41.png';
@@ -80,9 +73,6 @@ import supportTierPlatnium from '../../img/backstage-support/tierPlatnium-artboa
 
 import clientHpLogo from '../../img/clients/HP_Black_RGB_150_SM.png';
 import clientIndeedLogo from '../../img/clients/Indeed_2021_Logo_RGB_Blue.svg';
-
-import heroAnimation from '../../img/q3-2021/animations/backstage-hero.json';
-import deriskAnimation from '../../img/q3-2021/animations/backstage-derisk.json';
 
 export default function BackstageSupport({
   data: {
