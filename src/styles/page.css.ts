@@ -124,7 +124,7 @@ export const badgesBody = style({
   margin: `${vars.space.md} ${vars.space.md}`,
   textAlign: 'center',
   display: 'grid',
-  gridTemplateColumns: '2fr 2fr 4.5fr 2.5fr 4fr',
+  gridTemplateColumns: '1fr 2fr 4.5fr 2.5fr 4fr',
   gridTemplateRows: '1fr 2fr',
   gridColumnGap: vars.space.md,
 });
