@@ -65,13 +65,13 @@ import backstageDerisk from '../../img/q3-2021/backstage-derisk.png';
 import backstageDx from '../../img/q3-2021/backstage-integrate-dx.png';
 import metaImage from '../../img/q3-2021/meta-backstage.png';
 
-import leftLaurel from '../../img/backstage-support/artboard-41.svg';
-import rightLaurel from '../../img/backstage-support/artboard-42.svg';
-import backstageRibbon from '../../img/backstage-support/artboard-43.svg';
-import backstageContributorOfMonth from '../../img/backstage-support/artboard-44.svg';
-import backstageContributionCount from '../../img/backstage-support/artboard-45.svg';
-import backstageActiveSigParticipants from '../../img/backstage-support/artboard-46.svg';
-import backstageConPresentationCount from '../../img/backstage-support/artboard-47.svg';
+import leftLaurel from '../../img/backstage-support/artboard-41.png';
+import rightLaurel from '../../img/backstage-support/artboard-42.png';
+import backstageRibbon from '../../img/backstage-support/artboard-43.png';
+import backstageContributorOfMonth from '../../img/backstage-support/artboard-44.png';
+import backstageContributionCount from '../../img/backstage-support/artboard-45.png';
+import backstageActiveSigParticipants from '../../img/backstage-support/artboard-46.png';
+import backstageConPresentationCount from '../../img/backstage-support/artboard-47.png';
 
 import heroAnimation from '../../img/q3-2021/animations/backstage-hero.json';
 import deriskAnimation from '../../img/q3-2021/animations/backstage-derisk.json';
