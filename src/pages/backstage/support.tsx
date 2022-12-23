@@ -4,7 +4,7 @@ import { graphql, Link } from 'gatsby';
 
 import Layout from '../../components/layout';
 import Animation from '../../components/animation';
-import ContactCTA from '../../components/contact-cta';
+import SupportCTA from '../../components/cta-support';
 
 import {
   contentGrow,
@@ -112,13 +112,13 @@ const Hero = ({ submitted, setSubmitted }) => (
         Accelerate your Backstage adoption with experience, insight and practical advice from Backstage contributors.
       </p>
       <p className={consultingTopTCA}>
-        <ContactCTA
+        <SupportCTA
           submitted={submitted}
           setSubmitted={setSubmitted}
           label="Get Support today"
-          topic="backstage"
-          eventId="cta-backstage"
-          ctaId="landing-top"
+          topic="backstage-support"
+          eventId="cta-backstage-support"
+          ctaId="support-hero-top"
           className={actionButtonGreen}
           thanksClassName={textGradientGreenSkyblue}
         />
@@ -409,13 +409,13 @@ const PlansComparisonChart = () => (
 const FinalCTA = ({ submitted, setSubmitted }) => (
   <section className={pageWrap}>
     <p className={homeBottomCTA}>
-      <ContactCTA
+      <SupportCTA
         submitted={submitted}
         setSubmitted={setSubmitted}
-        label="Start Today"
-        topic="backstage"
-        eventId="cta-backstage"
-        ctaId="landing-bottom"
+        label="Get Support Today"
+        topic="backstage-support"
+        eventId="cta-backstage-support"
+        ctaId="support-page-bottom"
         className={actionButtonGreen}
         thanksClassName={textGradientGreenSkyblue}
       />
