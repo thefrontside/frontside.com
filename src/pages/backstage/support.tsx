@@ -73,6 +73,10 @@ import backstageContributionCount from '../../img/backstage-support/artboard-45.
 import backstageActiveSigParticipants from '../../img/backstage-support/artboard-46.png';
 import backstageConPresentationCount from '../../img/backstage-support/artboard-47.png';
 
+import supportTierSilver from '../../img/backstage-support/tierSilver-artboard-53.png';
+import supportTierGold from '../../img/backstage-support/tierGold-artboard-54.png';
+import supportTierPlatnium from '../../img/backstage-support/tierPlatnium-artboard-55.png';
+
 import heroAnimation from '../../img/q3-2021/animations/backstage-hero.json';
 import deriskAnimation from '../../img/q3-2021/animations/backstage-derisk.json';
 
@@ -337,9 +341,9 @@ const PlansComparisonChart = () => (
       <thead>
         <tr>
           <th></th>
-          <th>Silver Image</th>
-          <th>Gold image</th>
-          <th>Platnium image</th>
+          <th><img src={supportTierSilver} alt="" /></th>
+          <th><img src={supportTierGold} alt="" /></th>
+          <th><img src={supportTierPlatnium} alt="" /></th>
         </tr>
         <tr className={rowBorder}>
           <th className={tableCellLeftHeader}>+Benefits</th>
