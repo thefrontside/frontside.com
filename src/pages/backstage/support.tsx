@@ -47,6 +47,7 @@ import {
   textGradientGreenSkyblue,
   homeBackstageHeading,
   boldCaps,
+  bodyCopy,
   textGradientVioletGreen,
 } from '../../styles/typography.css';
 import { actionButtonGreen } from '../../styles/buttons.css';
@@ -164,7 +165,7 @@ const ValueProp = () => (
               <strong className={textGradientVioletGreen}> Leaders in Backstage</strong>
           </h2>
       </header>
-          <p className={textLg}>
+          <p className={bodyCopy}>
               Our team are early adopters, core contributors and leaders in Backstage. They have extensive experience with Backstage and have lead Backstage, Developer Experience and Internal Developer Platform (IDPs) projects that support over 100k developers. They have indispensable knowledge that will help you, your team, and organization reach our Backstage project goals.
           </p>
   </section>
@@ -178,7 +179,7 @@ const LeftRight = () => (
         <h2 className={featureHeading}>
           Give your DX Team <span className={textGradientVioletGreen}>A Boost</span>
         </h2>
-        <p>
+        <p className={bodyCopy}>
           Backstage is a powerful tool because it comes complete with an architecture, many plugins and best practices. With power comes a learning curve that can be difficult to master without help. Frontside gives your team information they need to be productive with Backstage.
         </p>
       </div>

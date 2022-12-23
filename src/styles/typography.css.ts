@@ -22,6 +22,12 @@ export const textSmCaps = style([textSm, {
   textTransform: 'uppercase',
 }]);
 
+export const bodyCopy = style({
+  maxWidth: '75ch',
+  textAlign: 'center',
+  margin: 'auto'
+});
+
 export const boldCaps = style({
   fontWeight: vars.fontWeights.extrabold,
   textTransform: 'uppercase',
