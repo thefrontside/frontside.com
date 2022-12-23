@@ -18,6 +18,11 @@ import {
   heroWrap,
   heroText,
   heroImage,
+  badgesWrap,
+  badgesHeader,
+  badgesTextBackstage,
+  badgesBody,
+  badgeCaption,
   homeBottomCTA,
   logoFlex,
   logoItem,
@@ -33,6 +38,7 @@ import {
   testimonialSource,
   testimonialWrap,
   testimonialQuoteChar,
+  badgeRibbon,
 } from '../../styles/page.css';
 import {
   heading3Xl,
@@ -59,6 +65,14 @@ import backstageDerisk from '../../img/q3-2021/backstage-derisk.png';
 import backstageDx from '../../img/q3-2021/backstage-integrate-dx.png';
 import metaImage from '../../img/q3-2021/meta-backstage.png';
 
+import leftLaurel from '../../img/backstage-support/artboard-41.svg';
+import rightLaurel from '../../img/backstage-support/artboard-42.svg';
+import backstageRibbon from '../../img/backstage-support/artboard-43.svg';
+import backstageContributorOfMonth from '../../img/backstage-support/artboard-44.svg';
+import backstageContributionCount from '../../img/backstage-support/artboard-45.svg';
+import backstageActiveSigParticipants from '../../img/backstage-support/artboard-46.svg';
+import backstageConPresentationCount from '../../img/backstage-support/artboard-47.svg';
+
 import heroAnimation from '../../img/q3-2021/animations/backstage-hero.json';
 import deriskAnimation from '../../img/q3-2021/animations/backstage-derisk.json';
 
@@ -76,6 +90,7 @@ export default function BackstageSupport({
       image={metaImage}
     >
       <Hero {...{ submitted, setSubmitted }} />
+      <Badges />
       <Testimonials />
       <LeftRight />
       <Trust />
@@ -110,22 +125,50 @@ const Hero = ({ submitted, setSubmitted }) => (
       </p>
     </div>
     <div className={heroImage}>
-      <img src={backstageSupportHero} alt="" />
+      <img src={backstageSupportHero} alt="backstage support hero illustration" />
     </div>
   </header>
 );
 
+const Badges = () => (
+  <section className={badgesWrap}>
+      <header className={badgesHeader}>
+          <img src={leftLaurel} alt="left side of laurel surrounding the section header" />
+          <div>
+              We Are A Professional
+              <div>
+                  <span className={badgesTextBackstage}>Backstage</span> Services Partner
+              </div>
+          </div>
+
+          <img src={rightLaurel} alt="right side of laurel surrounding the section header" />
+      </header>
+      <p className={badgesBody}>
+          <img className={badgeRibbon} src={backstageRibbon} alt="ribbon showing backstage  achievements" />
+
+          <img src={backstageContributorOfMonth} alt="selected contributor of the month"/>
+          <div className={badgeCaption}>Recognized as "Contributor of the Month"</div>
+          <img src={backstageContributionCount} alt="badge showing 34 pull requests" />
+          <div className={badgeCaption}>34 Pull Requests Merge Into Backstage Project</div>
+          <img src={backstageActiveSigParticipants} alt="many file folder active at once" />
+          <div className={badgeCaption}>Active Participant in Backstage Catalog SIG</div>
+          <img src={backstageConPresentationCount} alt="presentation count" />
+          <div className={badgeCaption}>2 Presentations at Backstage Conf</div>
+      </p>
+  </section>
+)
+
 const ValueProp = () => (
   <section className={pageWrap}>
-    <header className={sectionHeader}>
-      <h2 className={homeBackstageHeading}>
-        TODO: Add a value prop short description
-        <strong className={textGreen}> [Why? Backstage Enterprise Support]</strong>
-      </h2>
-      <p className={textLg}>
-        Empower your team with the Expert Knowledge from Leaders of Backstage.
-      </p>
-    </header>
+      <header className={sectionHeader}>
+          <h2 className={homeBackstageHeading}>
+              TODO: Add a value prop short description
+              <strong className={textGreen}> [Why? Backstage Enterprise Support]</strong>
+          </h2>
+          <p className={textLg}>
+              Empower your team with the Expert Knowledge from Leaders of Backstage.
+          </p>
+      </header>
   </section>
 );
 
@@ -207,7 +250,7 @@ const LeftRight = () => (
         <img src={backstageValuePropI52} alt="" />
       </div>
     </div>
-  </section>n
+  </section>
 );
 
 const Trust = () => (

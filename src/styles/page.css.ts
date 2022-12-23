@@ -102,6 +102,41 @@ export const heroBreak = style({
   }
 });
 
+export const badgesWrap = style({
+  display: 'block',
+});
+
+export const badgesHeader = style({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  textAlign: 'center',
+  fontSize: vars.fontSize.xl,
+  fontWeight: vars.fontWeights.bold,
+  lineHeight: vars.lineHeights.xl,
+});
+
+export const badgesTextBackstage = style({
+  fontWeight: vars.fontWeights.normal,
+});
+
+export const badgesBody = style({
+  margin: `${vars.space.md} ${vars.space.md}`,
+  textAlign: 'center',
+  display: 'grid',
+  gridTemplateColumns: '2fr 2fr 4.5fr 2.5fr 4fr',
+  gridTemplateRows: '1fr 2fr',
+  gridColumnGap: vars.space.md,
+});
+
+export const badgeRibbon = style({
+  gridRow: '1 / span 2',
+})
+
+export const badgeCaption = style({
+  order: 1,
+})
+
 export const sideImage = style({
   flexShrink: 1,
   marginTop: vars.space.md,
