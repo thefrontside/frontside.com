@@ -91,8 +91,8 @@ export default function BackstageSupport({
     >
       <Hero {...{ submitted, setSubmitted }} />
       <Badges />
-      <Testimonials />
       <LeftRight />
+      <Testimonials />
       <Trust />
       <ValueProp />
       <PlansComparisonChart />
