@@ -121,12 +121,20 @@ export const badgesTextBackstage = style({
 });
 
 export const badgesBody = style({
+  display: 'none',
   margin: `${vars.space.md} ${vars.space.md}`,
   textAlign: 'center',
-  display: 'grid',
   gridTemplateColumns: '1fr 2fr 4.5fr 2.5fr 4fr',
   gridTemplateRows: '1fr 2fr',
   gridColumnGap: vars.space.md,
+  ['@media']: {
+    [laptopQuery]: {
+      display: 'grid',
+    },
+    [desktopQuery]: {
+      display: 'grid',
+    }
+  }
 });
 
 export const badgeRibbon = style({
