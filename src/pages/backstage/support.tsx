@@ -335,7 +335,11 @@ const Testimonials = () => (
 
 const PlansComparisonChart = () => (
   <section className={pageWrap}>
-    <h2>Plan Features</h2>
+    <header className={sectionHeader}>
+      <h2 className={homeBackstageHeading}>
+        Choose The Best Plan For Your Enterprise
+      </h2>
+    </header>
     {/* Table */}
     <table className={comparisonChartTable}>
       <thead>
