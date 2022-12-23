@@ -323,7 +323,7 @@ const Testimonials = () => (
               Frontside has a dedication to engineering excellence.
           </Testimonial>
           <Testimonial source="Kaspar for Grünberg, CEO of Humanitec">
-              Hard to find a team more knowledgeable in Backstage than Frontside
+              Hard to find a team more knowledgeable in Backstage than Frontside.
           </Testimonial>
       </TestimonialCarousel>
   </section>
