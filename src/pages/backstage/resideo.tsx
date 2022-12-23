@@ -16,7 +16,7 @@ import {
 
 import greenblueIndicatorScreenshot from '../../img/2021-casestudy-resideo-backstage/backstage-indicator-catalog.png';
 import scaffoldScreenshot from '../../img/2021-casestudy-resideo-backstage/backstage-scaffolding.png';
-import ContactCTA from '../../components/contact-cta';
+import ContactCTA from '../../components/cta-contact';
 import { actionButtonGreen } from '../../styles/buttons.css';
 
 export default function ConsultingPage() {

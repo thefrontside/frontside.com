@@ -2,7 +2,7 @@ import { graphql, Link } from 'gatsby';
 import React, { useState } from 'react';
 
 import Animation from '../components/animation';
-import ContactCTA from '../components/contact-cta';
+import ContactCTA from '../components/cta-contact';
 import Layout from '../components/layout';
 import BlogPreview from '../components/blog-preview';
 
