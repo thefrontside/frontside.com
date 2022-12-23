@@ -26,6 +26,7 @@ import {
   homeBottomCTA,
   logoFlex,
   logoItem,
+  logoContainer,
   pageWrap,
   sectionHeader,
   testimonialBlock,
@@ -77,6 +78,9 @@ import supportTierSilver from '../../img/backstage-support/tierSilver-artboard-5
 import supportTierGold from '../../img/backstage-support/tierGold-artboard-54.png';
 import supportTierPlatnium from '../../img/backstage-support/tierPlatnium-artboard-55.png';
 
+import clientHpLogo from '../../img/clients/HP_Black_RGB_150_SM.png';
+import clientIndeedLogo from '../../img/clients/Indeed_2021_Logo_RGB_Blue.svg';
+
 import heroAnimation from '../../img/q3-2021/animations/backstage-hero.json';
 import deriskAnimation from '../../img/q3-2021/animations/backstage-derisk.json';
 
@@ -95,10 +99,10 @@ export default function BackstageSupport({
     >
       <Hero {...{ submitted, setSubmitted }} />
       <Badges />
+      <ValueProp />
       <LeftRight />
       <Testimonials />
       <Trust />
-      <ValueProp />
       <PlansComparisonChart />
       <FinalCTA {...{ submitted, setSubmitted }} />
     </Layout>
@@ -166,13 +170,13 @@ const ValueProp = () => (
   <section className={pageWrap}>
       <header className={sectionHeader}>
           <h2 className={homeBackstageHeading}>
-              Empower your team with the Expert Knowledge of
-              <strong className={textGreen}> Leaders in Backstage</strong>
+              Expert Knowledge from
+              <strong className={textGradientVioletGreen}> Leaders in Backstage</strong>
           </h2>
+      </header>
           <p className={textLg}>
               Our team are early adopters, core contributors and leaders in Backstage. They have extensive experience with Backstage and have lead Backstage, Developer Experience and Internal Developer Platform (IDPs) projects that support over 100k developers. They have indispensable knowledge that will help you, your team, and organization reach our Backstage project goals.
           </p>
-      </header>
   </section>
 );
 
@@ -259,26 +263,22 @@ const LeftRight = () => (
 
 const Trust = () => (
   <section className={pageWrap}>
-    <div className={contentRow}>
-      <div className={contentShrink}>
+    <header className={sectionHeader}>
         <h2 className={featureHeading}>
           {'Trusted by '}
           <strong className={textGreen}>Our Clients</strong>
         </h2>
-      </div>
+    </header>
+    <div className={contentRow}>
       <div className={contentGrow}>
         <div className={logoFlex}>
           <Logo
-            src="https://tailwindui.com/img/logos/workcation-logo-indigo-900.svg"
-            alt="Workcation"
+            src={clientHpLogo}
+            alt="HP logo"
           />
           <Logo
-            src="https://tailwindui.com/img/logos/tuple-logo-indigo-900.svg"
-            alt="Tuple"
-          />
-          <Logo
-            src="https://tailwindui.com/img/logos/level-logo-indigo-900.svg"
-            alt="Level"
+            src={clientIndeedLogo}
+            alt="Indeed Logo"
           />
         </div>
       </div>
@@ -287,8 +287,8 @@ const Trust = () => (
 );
 
 const Logo = ({ src, alt }) => (
-  <div className={logoItem}>
-    <img src={src} alt={alt} />
+  <div className={logoContainer}>
+    <img className={logoItem} src={src} alt={alt} />
   </div>
 );
 

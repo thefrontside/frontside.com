@@ -324,10 +324,14 @@ export const logoFlex = style({
   justifyContent: 'space-evenly'
 });
 
+export const logoContainer = style({
+  width: '50px',
+  height: '50px'
+})
+
 export const logoItem = style({
-  width: '100%',
-  height: '100%',
-  paddingLeft: vars.space.sm,
+  maxWidth: '100%',
+  height: 'auto',
   flexBasis: vars.space['2xl'],
   flexGrow: 1
 });
