@@ -166,11 +166,11 @@ const ValueProp = () => (
   <section className={pageWrap}>
       <header className={sectionHeader}>
           <h2 className={homeBackstageHeading}>
-              TODO: Add a value prop short description
-              <strong className={textGreen}> [Why? Backstage Enterprise Support]</strong>
+              Empower your team with the Expert Knowledge of
+              <strong className={textGreen}> Leaders in Backstage</strong>
           </h2>
           <p className={textLg}>
-              Empower your team with the Expert Knowledge from Leaders of Backstage.
+              Our team are early adopters, core contributors and leaders in Backstage. They have extensive experience with Backstage and have lead Backstage, Developer Experience and Internal Developer Platform (IDPs) projects that support over 100k developers. They have indispensable knowledge that will help you, your team, and organization reach our Backstage project goals.
           </p>
       </header>
   </section>
