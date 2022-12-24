@@ -48,13 +48,19 @@ export default function ContactCTA({
     <>
       {!submitted ? (
         <PopupButton
-          id="n5Hz8E9N"
+          id="YVQapipT?"
           hidden={{ topic }}
           className={className}
           onSubmit={onSubmit}
           onReady={() => trackCTA('active')}
           onQuestionChanged={onQuestionChange}
           onClose={() => trackCTA('closed')}
+          // enableSandbox={true}
+          autoClose={2000}
+          // these options are in the vanilla embed which they express that
+          // the react component uses, but...
+          // @ts-expect-error included in their base options
+          keepSession={true}
         >
           <span className={arrowTextWhite}>{label}</span>
         </PopupButton>

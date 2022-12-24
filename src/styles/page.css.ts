@@ -1,12 +1,58 @@
-import { keyframes, style } from '@vanilla-extract/css';
+import { globalStyle, keyframes, style } from '@vanilla-extract/css';
 import { calc } from '@vanilla-extract/css-utils';
 import vars, { laptopQuery, desktopQuery, darkThemeQuery } from './frontside-theme.css';
+import { text4Xl, textXs } from "./typography.css";
 import clientsLogo from '../img/q3-2021/client-logos.svg';
 import clientsLogoWhite from '../img/q3-2021/client-logos-white.svg';
 import backgroundBubbles from '../img/q3-2021/backgruond-blue-bubbles.png';
 import openMicBg from '../img/q3-2021/backstage-openmic-bg.png';
 
-import { textLg, textUppercase, textXl } from './typography.css';
+import { boldCaps, textLg, textUppercase, textXl } from './typography.css';
+
+
+export const testimonialCarousel = style({
+  display: 'flex',
+  flexDirection: 'column',
+  margin: `0 ${vars.space.xl}`,
+  ['@media']: {
+    [desktopQuery]: {
+      flexDirection: 'row',
+    }
+  }
+});
+export const testimonialQuote = style({});
+export const testimonialQuoteChar = style([text4Xl, {
+  fontWeight: 'bold',
+  fontSize: '5em',
+}])
+
+export const testimonialSource = style([textXs, {
+  display: 'block',
+  fontStyle: 'italic',
+  marginTop: vars.space.xs,
+}]);
+
+export const testimonialWrap = style({
+  padding: vars.space.sm,
+  fontWeight: vars.fontWeights.bold,
+  margin: `0 ${vars.space['3xs']}`,
+  borderRadius: '1em',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  flex: '1 1 0px',
+  selectors: {
+    '&:nth-of-type(odd)': {
+      color: vars.colors.lightGreen,
+      backgroundColor: vars.colors.blue,
+      margin: '1em 0',
+    },
+    '&:nth-of-type(even)': {
+      color: vars.colors.blue,
+      backgroundColor: vars.colors.lightGreen,
+    }
+  }
+});
 
 export const pageWrap = style({
   boxSizing: 'border-box',
@@ -61,6 +107,58 @@ export const heroBreak = style({
     }
   }
 });
+
+export const badgesWrap = style([pageWrap, {
+  display: 'block',
+  marginTop: '2rem',
+  marginBottom: '3rem',
+  ['@media']: {
+    [laptopQuery]: {
+      marginBottom: 0,
+    },
+    [desktopQuery]: {
+      marginBottom: 0,
+    }
+  }
+}]);
+
+export const badgesHeader = style({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  textAlign: 'center',
+  fontSize: vars.fontSize.xl,
+  fontWeight: vars.fontWeights.bold,
+  lineHeight: vars.lineHeights.xl,
+});
+
+export const badgesTextBackstage = style({
+  fontWeight: vars.fontWeights.normal,
+});
+
+export const badgesBody = style({
+  display: 'none',
+  margin: `${vars.space.md} ${vars.space.md}`,
+  textAlign: 'center',
+  gridTemplateColumns: '1fr 2fr 4.5fr 2.5fr 4fr',
+  gridColumnGap: vars.space.md,
+  ['@media']: {
+    [laptopQuery]: {
+      display: 'grid',
+    },
+    [desktopQuery]: {
+      display: 'grid',
+    }
+  }
+});
+
+export const badgeRibbon = style({
+  gridRow: '1 / span 2',
+})
+
+export const badgeCaption = style({
+  order: 1,
+})
 
 export const sideImage = style({
   flexShrink: 1,
@@ -194,6 +292,48 @@ export const clientLogos = style({
       backgroundImage: `url(${clientsLogoWhite})`,
     }
   }
+});
+
+export const contentRow = style({
+  marginBottom: vars.space['xl'],
+
+  '@media': {
+    [laptopQuery]: {
+      display: 'flex',
+      flexFlow: 'row nowrap',
+      paddingLeft: vars.space.lg,
+      paddingRight: vars.space.lg,
+      alignItems: 'center',
+    },
+  }
+});
+
+export const contentShrink = style({
+  minWidth: 'fit-content',
+  flex: '0 5 auto'
+});
+
+export const contentGrow = style({
+  flex: '5 0 auto'
+});
+
+export const logoFlex = style({
+  display: 'flex',
+  flexFlow: 'row wrap',
+  alignItems: 'center',
+  justifyContent: 'space-evenly'
+});
+
+export const logoContainer = style({
+  width: '50px',
+  height: '50px'
+})
+
+export const logoItem = style({
+  maxWidth: '100%',
+  height: 'auto',
+  flexBasis: vars.space['2xl'],
+  flexGrow: 1
 });
 
 export const sectionHeader = style({
@@ -558,3 +698,38 @@ export const ctaSubmittedBox = style([textLg, {
   animationName: fadeIn,
   animationDuration: calc('1s').multiply(0.75).toString(),
 }]);
+
+export const testimonialBlock = style({
+
+});
+
+export const comparisonChartGrid = style({
+  backgroundColor: '#fafafa'
+});
+
+export const comparisonChartTable = style({
+  borderCollapse: 'collapse',
+  width: '80%',
+  margin: '0 auto'
+});
+
+export const tableCellLeft = style({
+  padding: '1.25em',
+  textAlign: 'left',
+  verticalAlign: 'middle',
+  fontWeight: '600'
+});
+
+export const tableCellLeftHeader = style([boldCaps, {
+  textAlign: 'left',
+}]);
+
+export const rowBorder = style({
+  borderBottom: '1px solid #e4e4e4'
+});
+
+globalStyle('th, td', {
+  padding: '1.25em',
+  textAlign: 'center',
+  verticalAlign: 'middle'
+});

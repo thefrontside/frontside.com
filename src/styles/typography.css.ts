@@ -22,6 +22,12 @@ export const textSmCaps = style([textSm, {
   textTransform: 'uppercase',
 }]);
 
+export const bodyCopy = style({
+  maxWidth: '75ch',
+  textAlign: 'center',
+  margin: 'auto'
+});
+
 export const boldCaps = style({
   fontWeight: vars.fontWeights.extrabold,
   textTransform: 'uppercase',
@@ -61,6 +67,20 @@ export const text3Xl = style({
       fontSize: vars.fontSize['3xl'],
       lineHeight: vars.lineHeights['3xl'],
       letterSpacing: vars.letterSpacing['3xl'],
+    }
+  }
+});
+
+export const text4Xl = style({
+  fontSize: vars.fontSize['3xl'],
+  lineHeight: vars.lineHeights['3xl'],
+  letterSpacing: vars.letterSpacing['3xl'],
+
+  '@media': {
+    [laptopQuery]: {
+      fontSize: vars.fontSize['4xl'],
+      lineHeight: vars.lineHeights['4xl'],
+      letterSpacing: vars.letterSpacing['4xl'],
     }
   }
 });
@@ -266,6 +286,10 @@ export const textGradientPurplePink = style([clipBackgroundToText, {
 
 export const textGradientGreenSkyblue = style([clipBackgroundToText, {
   backgroundImage: `linear-gradient(90deg, ${vars.colors.green}, ${vars.colors.skyblue} 95%)`,
+}]);
+
+export const textGradientVioletGreen = style([clipBackgroundToText, {
+  backgroundImage: `linear-gradient(90deg, ${vars.colors.violet}, ${vars.colors.green} 95%)`,
 }]);
 
 export const textGradientSkyblueGreen = style([clipBackgroundToText, {
@@ -519,6 +543,24 @@ export const bigQuote = style([text3Xl, {
 export const bigQuoteAuthor = style([textLg, {
   marginBottom: vars.space['lg'],
   textAlign: 'center',
+}]);
+
+export const medQuoteAuthor = style([textMd, {
+  marginBottom: vars.space['md'],
+  textAlign: 'center',
+}]);
+
+export const medQuote = style([textXl, {
+  fontWeight: vars.fontWeights.bold,
+  margin: 0,
+  textAlign: 'center',
+
+  '@media': {
+    [laptopQuery]: {
+      marginRight: vars.space['xl'],
+      marginLeft: vars.space['xl'],
+    }
+  }
 }]);
 
 export const peopleHeroHeading = style([heading3Xl, textGradientPinkSkyblue]);

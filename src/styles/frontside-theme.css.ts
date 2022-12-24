@@ -45,6 +45,7 @@ const frontsideTheme = createGlobalTheme(':root', {
     xl: '1.800rem',
     '2xl': '2.150rem',
     '3xl': '2.4250rem',
+    '4xl': '2.7rem',
   },
   space: {
     auto: 'auto',

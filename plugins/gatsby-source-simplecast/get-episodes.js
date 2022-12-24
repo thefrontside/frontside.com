@@ -8,12 +8,16 @@ const storeFile = path.join(__dirname, './data.json');
 module.exports = async function getPodcast(apiKey, podcastId) {
   // try reading from the data file
   try {
-    // always fetch for now, for parity with previous workflow
-    return fetchEpisodes(apiKey, podcastId);
-    // in the future, remove the above line and uncomment the next lines
-    // this will enable caching in which we will need to hook up CI to update the store
-    // const podcastStore = await fs.readFile(storeFile);
-    // return JSON.parse(podcastStore);
+    if (process.env.NODE_ENV !== 'production' && !process.env.SIMPLECAST_API) {
+      console.warn(
+        'Using the Simplecast cache file as the SIMPLECAST_API is not defined.'
+      );
+      const podcastStore = await fs.readFile(storeFile);
+      return JSON.parse(podcastStore);
+    } else {
+      // always fetch for now, for parity with previous workflow
+      return fetchEpisodes(apiKey, podcastId);
+    }
   } catch (e) {
     // if it errors, fetch directly and save response
     console.warn(
@@ -45,29 +49,29 @@ async function fetchEpisodes(apiKey, podcastId, limit = 10000, offset = 0) {
     `https://api.simplecast.com/podcasts/${podcastId}/episodes?limit=${limit}&offset=${offset}`,
     requestOptions
   )
-    .then(response => response.json()) // returns list of episodes
-    .then(result => {
+    .then((response) => response.json()) // returns list of episodes
+    .then((result) => {
       if (result.status >= 400)
         throw new Error(`code ${result.status}: ${result.error_message}`);
       return Promise.all(
         // for each episode, query it direct to get more info
         // this is necessary for obtaining authors for example
-        result.collection.map(episodeMetadata =>
+        result.collection.map((episodeMetadata) =>
           fetch(
             `https://api.simplecast.com/episodes/${episodeMetadata.id}`,
             requestOptions
           )
-            .then(async response => response.json())
-            .catch(error => console.log('error', error))
+            .then(async (response) => response.json())
+            .catch((error) => console.log('error', error))
         )
-      ).catch(error => console.log('error', error));
+      ).catch((error) => console.log('error', error));
     })
-    .then(episodes => ({ episodes })) // place episodes in object
-    .catch(error => console.log('error', error));
+    .then((episodes) => ({ episodes })) // place episodes in object
+    .catch((error) => console.log('error', error));
 }
 
 async function storeEpisodes(apiKey, podcastId) {
-  const episodes = await fetchEpisodes(apiKey, podcastId).catch(e => {
+  const episodes = await fetchEpisodes(apiKey, podcastId).catch((e) => {
     throw new Error(e);
   });
   // write it out to a `data.json` that is adjacent to this file
@@ -93,7 +97,7 @@ if (process.argv0 === 'node' && process.argv[1].endsWith('get-episodes.js')) {
     }
     return log();
   } else {
-    return storeEpisodes(apiKey, podcastId).catch(e => {
+    return storeEpisodes(apiKey, podcastId).catch((e) => {
       console.error(e);
     });
   }
