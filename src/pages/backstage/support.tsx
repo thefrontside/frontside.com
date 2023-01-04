@@ -74,7 +74,7 @@ import supportTierPlatnium from '../../img/backstage-support/tierPlatnium-artboa
 
 import clientHpLogo from '../../img/clients/HP_Black_RGB_150_SM.png';
 import clientIndeedLogo from '../../img/clients/Indeed_2021_Logo_RGB_Blue.svg';
-import clientFannieMaeLogo from '../../img/clients/fannie-mae-logo-h200.png';
+import clientFannieMaeLogo from '../../img/clients/Fannie-Mae-Logo.png';
 
 export default function BackstageSupport({
   data: {
