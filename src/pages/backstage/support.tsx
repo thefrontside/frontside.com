@@ -74,6 +74,7 @@ import supportTierPlatnium from '../../img/backstage-support/tierPlatnium-artboa
 
 import clientHpLogo from '../../img/clients/HP_Black_RGB_150_SM.png';
 import clientIndeedLogo from '../../img/clients/Indeed_2021_Logo_RGB_Blue.svg';
+import clientFannieMaeLogo from '../../img/clients/fannie-mae-logo-h200.png';
 
 export default function BackstageSupport({
   data: {
@@ -266,10 +267,17 @@ const Trust = () => (
           <Logo
             src={clientHpLogo}
             alt="HP logo"
+            width="55px"
+          />
+          <Logo
+            src={clientFannieMaeLogo}
+            alt="Fannie Mae Logo"
+            width="200px"
           />
           <Logo
             src={clientIndeedLogo}
             alt="Indeed Logo"
+            width="100px"
           />
         </div>
       </div>
@@ -277,9 +285,9 @@ const Trust = () => (
   </section>
 );
 
-const Logo = ({ src, alt }) => (
+const Logo = ({ src, alt, width }) => (
   <div className={logoContainer}>
-    <img className={logoItem} src={src} alt={alt} />
+    <img className={logoItem} src={src} alt={alt} width={width} />
   </div>
 );
 

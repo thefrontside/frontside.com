@@ -325,15 +325,17 @@ export const logoFlex = style({
 });
 
 export const logoContainer = style({
-  width: '50px',
-  height: '50px'
+  height: '50px',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 })
 
 export const logoItem = style({
   maxWidth: '100%',
   height: 'auto',
-  flexBasis: vars.space['2xl'],
-  flexGrow: 1
+  filter: 'grayscale(100%)',
+  opacity: '0.7',
 });
 
 export const sectionHeader = style({
