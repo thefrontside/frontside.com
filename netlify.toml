@@ -49,6 +49,13 @@ headers = {X-Base = "https://frontside.com/graphgen/" }
 
 [[redirects]]
 force = true
+from = "/platformscript/*"
+status = 200
+to = "https://platformscript.deno.dev/:splat"
+headers = {X-Base = "https://frontside.com/platformscript/" }
+
+[[redirects]]
+force = true
 from = "/interactors/html/api"
 status = 301
 to = "/interactors/html/api/index.html"
