@@ -16,7 +16,7 @@
     "@vanilla-extract/webpack-plugin": "^2.0.0",
     "axios": "^0.24.0",
     "dateformat": "5.0.3",
-    "downshift": "^6.1.7",
+    "downshift": "^7.1.2",
     "gatsby": "^3.10.1",
     "gatsby-plugin-image": "^1.10.1",
     "gatsby-plugin-manifest": "^3.10.0",
