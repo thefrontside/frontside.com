@@ -1,9 +1,33 @@
 {
-  "name": "platform-frontside",
-  "description": "Frontend Platform for Frontside Website",
+  "name": "website",
+  "description": "frontside.com",
   "version": "2.0.0",
-  "author": "Taras <taras@frontside.com>",
+  "author": "Frontside Team <engineering@frontside.com>",
   "private": true,
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "start": "gatsby develop",
+    "start:ntl": "ntl dev",
+    "clean": "gatsby clean",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
+    "test": "bigtest ci -c bigtest.ci.json",
+    "test:server": "bigtest server --launch=chrome",
+    "test:run": "bigtest test",
+    "check-urls": "node ./lib/check-urls/index.js",
+    "verify-sitemap": "./lib/verify-sitemap/index.js",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -o ./public/storybook"
+  },
+  "volta": {
+    "node": "18.12.0",
+    "yarn": "1.22.10"
+  },
   "dependencies": {
     "@jd-carroll/gatsby-remark-external-links": "^0.1.0",
     "@lottiefiles/react-lottie-player": "^3.4.1",
@@ -49,30 +73,6 @@
     "react-transition-group": "^4.4.2",
     "rimraf": "^3.0.2",
     "uuid": "^8.3.2"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "main": "n/a",
-  "scripts": {
-    "start": "gatsby develop",
-    "start:ntl": "ntl dev",
-    "clean": "gatsby clean",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "format": "prettier --write \"{gatsby-*.js,src/**/*.js}\"",
-    "test": "bigtest ci -c bigtest.ci.json",
-    "test:server": "bigtest server --launch=chrome",
-    "test:run": "bigtest test",
-    "check-urls": "node ./lib/check-urls/index.js",
-    "verify-sitemap": "./lib/verify-sitemap/index.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o ./public/storybook"
-  },
-  "volta": {
-    "node": "18.12.0",
-    "yarn": "1.22.10"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
