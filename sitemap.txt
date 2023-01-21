@@ -79,6 +79,7 @@
 /blog/2022-12-01-deno-is-blazing-fast-for-humans/
 /blog/2022-12-05-ingestion-testing-in-backstage-part-2/
 /blog/2022-12-12-dynamic-github-action-jobs/
+/blog/2023-01-22-seven-ways-to-single-glass-pane/
 /blog/3
 /blog/4
 /blog/5
