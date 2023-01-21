@@ -2,6 +2,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const round = require('lodash.round');
+
 module.exports = {
   siteMetadata: {
     title: 'Frontside Software',
@@ -66,7 +68,7 @@ module.exports = {
               maxWidth: 1280,
               backgroundColor: `transparent`,
               wrapperStyle: (fluidResult) =>
-                `flex:${_.round(fluidResult.aspectRatio, 2)};`,
+                `flex:${round(fluidResult.aspectRatio, 2)};`,
             },
           },
           {
