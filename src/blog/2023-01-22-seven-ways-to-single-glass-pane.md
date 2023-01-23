@@ -10,7 +10,7 @@ description: >-
 tags:
   - backstage
   - internal-developer-platform
-img: /img/2022-08-22-dynamic-github-actions-jobs.png
+img: /img/seven-ways-to-single-glass-pane.png
 ---
 
 The concept of a single glass pane is popular in the Cloud Native ecosystem because it promises to prevent fragmentation within many platforms where users have to interact with different systems to get their work done. Instead of going to one interface to see their builds, another to see their deployments, and yet another to see their logs, a single glass pane would make all of this information available in one place. Increasingly, organizations building platforms see Backstage as the one place to surface everything developers need to be productive.
