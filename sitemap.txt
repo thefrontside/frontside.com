@@ -299,6 +299,7 @@
 /tags/inclusiveness/
 /tags/infinite-scroll/
 /tags/integration/
+/tags/internal-developer-platform/
 /tags/interview/
 /tags/iot/
 /tags/jafafx/
