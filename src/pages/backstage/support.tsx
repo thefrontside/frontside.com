@@ -211,7 +211,7 @@ const LeftRight = () => (
           Avoiding Forking With <span className={textGradientVioletGreen}>the Lastest Features</span>
         </h2>
         <p>
-          Sometimes Backstage doesn't do exactly what your team needs. Modifying Backstage without pushing changes to Backstage project makes upgrading difficult and locks you out or using the latest features of Backstage. Frontside keeps your team unblocked by adovcating and contributing changes to the Backstage project so yo can always upgrade and get the latest features with ease.
+          Sometimes Backstage doesn't do exactly what your team needs. Modifying Backstage without pushing changes to Backstage project makes upgrading difficult and locks you out of using the latest features of Backstage. Frontside keeps your team unblocked by adovcating and contributing changes to the Backstage project so yo can always upgrade and get the latest features with ease.
         </p>
       </div>
       <div className={featureImage}>
