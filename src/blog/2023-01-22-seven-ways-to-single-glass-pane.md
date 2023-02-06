@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: >-
-  Seven ways build a single glass pane with Backstage
+  Seven ways to build a single glass pane with Backstage
 date: 2023-01-22T05:00:00.000Z
 author: Taras Mankovski
 description: >-
