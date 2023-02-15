@@ -69,7 +69,7 @@ export default function ContactCTA({
           <strong className={thanksClassName}>Thanks for reaching out!</strong>
           <br />
           <span className={textSm}>
-            We'll get back to you within a business day.
+            Thank you for submitting a request. We will be in touch shortly.
           </span>
         </p>
       )}
