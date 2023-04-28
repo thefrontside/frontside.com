@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: >-
-  Deno is the  way to author NPM packages
+  Deno is the best tool for maintaining NPM packages
 date: 2023-04-27T05:00:00.000Z
 author: Charles Lowell
 description: >-
@@ -36,10 +36,10 @@ doesn’t mean we’re rejecting the Node ecosystem – far from it!
 
 We have a ton of NPM packages [already][graphgen]
 [developed][effection] that [we][interactors] and [our
-clients][ldap-simulator] critically [rely on][auth0-simulator]
-[include links]. Moving forward we want all of our new packages to be
-available to all JavaScript developers, not just those that happen to
-run their programs on Deno. And finally there is our work with
+clients][ldap-simulator] critically [rely on][auth0-simulator]. Moving
+forward we want all of our new packages to be available to all
+JavaScript developers, not just those that happen to run their
+programs on Deno. And finally there is our work with
 [Backstage][backstage], which comprises the lion’s share of our
 business. It runs on Node and will do so for years to come. In a
 nutshell: we have been and are going to continue to be deeply
@@ -98,7 +98,7 @@ with `"v1.6.0-beta.3"`.
 #### 2.1: Publish to deno.land
 
 The [deno.land][] build/publish is almost a gimme since it uses git
-tags natively. All we have to do is create and register the web hook
+tags natively. All we have to do is create and register the webhook
 for our module and we’re done!  Moving forward, every time
 [deno.land][] sees a release tag, it will snapshot our source at that
 tag and make that version available to users – in perpetuity.
