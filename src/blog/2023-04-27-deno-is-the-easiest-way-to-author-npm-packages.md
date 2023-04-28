@@ -79,6 +79,8 @@ scheme:
 1. Wait until a release tag is pushed
 1. Then use it to build and publish to both deno.land/x and npmjs.com
 
+![The 1.0.0 git tag causes a 1.0.0 version on both deno.land and npmjs.org](../img/2023/deno-is-the-best-tool-for-npm/tag-to-publish.png)
+
 We’ll spend the rest of this blog post showing how we will do this for
 both platforms.
 
