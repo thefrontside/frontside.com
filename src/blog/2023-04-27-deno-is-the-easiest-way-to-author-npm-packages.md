@@ -19,12 +19,14 @@ img: /img/2020-07-29-simulator-social.png
 > https://deno.land/x and https://npmjs.org using nothing more than
 > the deno CLI.
 
-**myth**: You need to use node and npm , yarn , pnmp , etc., to publish packages
-to https://npmjs.org
+**myth**: You need to use `node` and `npm` , `yarn` , `pnpm` , et al. to
+publish packages to https://npmjs.org
 
 **Fact**: Deno is perfectly capable of maintaining NPM packages. Studies
 conclusively show that maintaining NPM packages with Deno instead of Node is up
-to 900% more stress free.
+to 900% more stress free.[^1]
+
+[^1]: Results obtained by conducting a survey of me.
 
 As you may or may not know, here at Frontside [we’re migrating toward
 Deno as our primary tool for JavaScript
