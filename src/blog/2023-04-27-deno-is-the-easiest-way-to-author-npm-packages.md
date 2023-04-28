@@ -161,7 +161,10 @@ found 0 vulnerabilities
 
 Now that we have the script to build an NPM package from source, the
 only remaining step is to add a GitHub workflow to be able to call
-it. The gist of it is this:
+it. Here is an [example from the GraphGen
+repository](https://github.com/thefrontside/graphgen/blob/v1/.github/workflows/npm-release.yml). Each
+step below is linked to the relevant section in it, but the overall
+sequence is:
 
 1. [Listen for any tag that matches our release pattern](https://github.com/thefrontside/graphgen/blob/v1.8.1/.github/workflows/npm-release.yml#L4-L9)
 2. [Capture the target version number based off the tag that triggered the workflow](https://github.com/thefrontside/graphgen/blob/v1.8.1/.github/workflows/npm-release.yml#L28-L30)
