@@ -10,7 +10,7 @@ description: >-
  shows how to publish modules to both https://deno.land/x and https://npmjs.org
  using nothing more than the deno CLI.
 tags: ["Deno", "Node", "NPM" ]
-img: /img/seven-ways-to-single-glass-pane.png
+img: /img/2020-07-29-simulator-social.png
 ---
 
 > **TL;DR** Even if you primarily run your JavaScript in Node, Deno is a
