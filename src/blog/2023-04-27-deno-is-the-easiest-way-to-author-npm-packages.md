@@ -2,7 +2,7 @@
 templateKey: blog-post
 title: >-
   Deno is the best tool for maintaining NPM packages
-date: 2023-04-27T05:00:00.000Z
+date: 2023-05-01T05:00:00.000Z
 author: Charles Lowell
 description: >-
  Even if you primarily run your JavaScript in Node, Deno is a fantastic tool for
@@ -52,7 +52,7 @@ losing what we have in terms of our existing install base of NPM
 packages and Node applications? Simple intuition tells us we should
 use Node to develop Node packages and Deno to develop Deno modules:
 
-![Deno for publishing to Deno ecosystem and Node for publishing to Node ecosystem](../img/2023/deno-is-the-best-tool-for-npm/dev-publish-silo.png)
+![Deno for publishing to Deno ecosystem and Node for publishing to Node ecosystem](../img/2023-q2/deno-is-the-best-tool-for-npm/dev-publish-silo.png)
 
 But as it turns out, Deno has excellent capabilities to build NPM
 packages that we use every day, allowing us to both have our cake and
@@ -60,7 +60,7 @@ eat it too. With a slight tweak to how we think about versioning, we
 can get all the DX goodness of Deno, but our code is accessible to the
 widest possible audience of developers on both deno.land and NPM.
 
-![Deno for publishing to both Deno and Node package managers](../img/2023/deno-is-the-best-tool-for-npm/one-tool-for-both.png)
+![Deno for publishing to both Deno and Node package managers](../img/2023-q2/deno-is-the-best-tool-for-npm/one-tool-for-both.png)
 
 The key change in thinking that enables this transition is to move
 away from package.json as the final source of truth regarding the
@@ -79,7 +79,7 @@ scheme:
 1. Wait until a release tag is pushed
 1. Then use it to build and publish to both deno.land/x and npmjs.com
 
-![The 1.0.0 git tag causes a 1.0.0 version on both deno.land and npmjs.org](../img/2023/deno-is-the-best-tool-for-npm/tag-to-publish.png)
+![The 1.0.0 git tag causes a 1.0.0 version on both deno.land and npmjs.org](../img/2023-q2/deno-is-the-best-tool-for-npm/tag-to-publish.png)
 
 We’ll spend the rest of this blog post showing how we will do this for
 both platforms.
