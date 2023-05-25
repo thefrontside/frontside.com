@@ -1,15 +1,17 @@
 ---
 templateKey: people
 name: Elrick Ryan
-title: Engineering Consultant / Business Developer
+title: CEO
 location: Boston, Massachusetts
 img: ../img/q3-2021/team/elrick.jpg
 imgAlt: Portrait of Elrick. He has short hair and a short beard.
 twitter: elrickvm
 github: elrickvm
-intro: For over a decade, Elrick has been leading product teams as a
-  creative engineer. Drawing from his background in print design
-  and marketing, he brings together impeccable user experiences
-  that deliver business value.
-order: 500
+intro: Elrick has a distinguished track record of over a decade
+  of leading and executing high-impact projects
+  for Fortune 100 corporations and disruptive startups.
+  His inventive leadership, rich multi-hyphenated profile of experience and skills,
+  and unique approach enables us to consistently deliver
+  unparalleled experiences and value to our clients.
+order: 200
 ---
