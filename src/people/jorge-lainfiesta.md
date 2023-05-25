@@ -12,4 +12,5 @@ intro: After working in software engineering for five years, Jorge
   UCLA and AAU. Now Jorge channels the tech enthusiasm at
   Frontside into messages for everyone.
 order: 800
+alumnus: true
 ---
