@@ -11,4 +11,5 @@ intro: After leaving the U.S. Air Force, Rachelle began her decade-long
   University. She now orchestrates financial and legal affairs at
   Frontside and is at the core of its strategic planning.
 order: 300
+alumnus: true
 ---
