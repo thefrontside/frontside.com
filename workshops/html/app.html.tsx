@@ -57,13 +57,8 @@ export default function* AppHtml({ title }: Options): Operation<JSX.Element> {
           <nav aria-label="Site Nav">
             <ul class="flex items-center gap-6">
               <NavLink
-                href="./about"
-                text="About"
-              />
-              <NavLink href="/agenda" text="Course Outline" />
-              <NavLink
-                href="/registration"
-                text="Registration"
+                href="/"
+                text="Frontside"
               />
             </ul>
           </nav>
