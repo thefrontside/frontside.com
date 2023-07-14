@@ -37,10 +37,18 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
           </nav>
           <nav arial-label="Home Nav">
             <menu>
-              <li><a href="/consulting">DX Consulting</a></li>
-              <li><a href="/backstage">Backstage</a></li>
-              <li><a href="/opensource">Open Source</a></li>
-              <li><a href="/blog">DX Consulting</a></li>
+              <li>
+                <a href="/consulting">DX Consulting</a>
+              </li>
+              <li>
+                <a href="/backstage">Backstage</a>
+              </li>
+              <li>
+                <a href="/opensource">Open Source</a>
+              </li>
+              <li>
+                <a href="/blog">DX Consulting</a>
+              </li>
             </menu>
           </nav>
         </header>
