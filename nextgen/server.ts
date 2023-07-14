@@ -16,10 +16,10 @@ export default () =>
         IndexHtml(),
       )
     ),
-    "/workshops": html.get(() =>
+    "/workshops/advanced-backstage-plugin-development": html.get(() =>
       render(
         AppHtml({
-          title: "Frontside: Workshops",
+          title: "Frontside: Advanced Backstage Plugin Development",
           description:
             "Harness Backstage's Potential: Become an Advanced Plugin Developer",
         }),
