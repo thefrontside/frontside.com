@@ -1,5 +1,11 @@
 import { createContext, type Operation } from "effection";
 
+export const URLContext = createContext<URL>("url");
+
+export function* useURL(): Operation<URL> {
+  return yield* URLContext;
+}
+
 const Outlet = createContext<JSX.Element>("outlet");
 
 export const outlet: Operation<JSX.Element> = {
@@ -7,6 +13,12 @@ export const outlet: Operation<JSX.Element> = {
     return yield* Outlet;
   },
 };
+
+export function* url(path?: string): Operation<string> {
+  let base = yield* URLContext;
+  let pathname = path ?? base.pathname;
+  return new URL(pathname, base.origin).toString();
+}
 
 export function* render(
   ...templates: Operation<JSX.Element>[]

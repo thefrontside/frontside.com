@@ -4,13 +4,20 @@ import type { Operation } from "effection";
 import { toHtml } from "https://esm.sh/hast-util-to-html@8.0.4";
 
 import { twind } from "freejack/twind.ts";
+import { URLContext } from "freejack/view.ts";
+
+export interface HtmlHandler {
+  (options: { params: Params; request: Request }): Operation<JSX.Element>;
+}
 
 export const html = {
-  get(operation: (params: Params) => Operation<JSX.Element>): ServeHandler {
+  get(handler: HtmlHandler): ServeHandler {
     return {
       method: "GET",
-      *middleware(params) {
-        let top = yield* operation(params);
+      *middleware(params, request) {
+        yield* URLContext.set(new URL(request.url));
+
+        let top = yield* handler({ params, request });
 
         twind(top);
 

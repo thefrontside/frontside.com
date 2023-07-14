@@ -1,54 +1,55 @@
 import type { Operation } from "effection";
-import { outlet } from "freejack/view.ts";
+import { outlet, url } from "freejack/view.ts";
 
 export interface Options {
   title: string;
+  description: string;
 }
 
-export default function* AppHtml({ title }: Options): Operation<JSX.Element> {
-
+export default function* AppHtml(options: Options): Operation<JSX.Element> {
+  let { title, description } = options;
+  let logoURL = yield* url("assets/fs-logo.svg");
+  let siteURL = yield* url();
   return (
     <html lang="en-US" dir="ltr">
       <head>
         <meta charset="UTF-8" />
         <title>{title}</title>
-        {/* TODO: Fill in all these header tags */}
-        <meta property="og:image" content="https://frontside.com/graphgen/logo.svg" />
+        <meta property="og:image" content={logoURL} />
         <meta
           property="og:title"
-          content="Introduction | Frontside Workshops"
-          data-rh="true"
+          content={title}
         />
         <meta
           property="og:url"
-          content="https://frontside.com/workshops"
+          content={yield* url()}
         />
         <meta
           property="og:description"
-          content="Harness Backstage's Potential: Become an Advanced Plugin Developer"
+          content={description}
         />
         <meta
           name="description"
-          content="Harness Backstage's Potential: Become an Advanced Plugin Developer"
+          content={description}
         />
         <meta
           name="twitter:image"
-          content="https://frontside.com/graphgen/logo.svg"
+          content={logoURL}
         />
-        <link rel="icon" href="https://frontside.com/graphgen/logo.svg" />
+        <link rel="icon" href={logoURL} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="canonical"
-          href="https://frontside.com/workshops"
+          href={siteURL}
         />
         <link
           rel="alternate"
-          href="https://frontside.com/workshops"
+          href={siteURL}
           hreflang="en"
         />
         <link
           rel="alternate"
-          href="https://frontside.com/workshops"
+          href={siteURL}
           hreflang="x-default"
         />
       </head>

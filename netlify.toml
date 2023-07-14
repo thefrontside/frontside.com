@@ -56,6 +56,12 @@ headers = {X-Base = "https://frontside.com/platformscript/", X-Fresh-Base-Url = 
 
 [[redirects]]
 force = true
+from = "/workshops/*"
+status = 200
+to = "https://frontside.deno.dev/workshops/:splat"
+
+[[redirects]]
+force = true
 from = "/interactors/html/api"
 status = 301
 to = "/interactors/html/api/index.html"
