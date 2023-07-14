@@ -8,50 +8,26 @@ export interface Options {
 
 export default function* AppHtml(options: Options): Operation<JSX.Element> {
   let { title, description } = options;
-  let logoURL = yield* url("assets/fs-logo.svg");
   let siteURL = yield* url();
+  let logoNoText = yield* url("assets/fs-logo-no-text.svg");
+
   return (
     <html lang="en-US" dir="ltr">
       <head>
         <meta charset="UTF-8" />
         <title>{title}</title>
-        <meta property="og:image" content={logoURL} />
-        <meta
-          property="og:title"
-          content={title}
-        />
-        <meta
-          property="og:url"
-          content={yield* url()}
-        />
-        <meta
-          property="og:description"
-          content={description}
-        />
-        <meta
-          name="description"
-          content={description}
-        />
-        <meta
-          name="twitter:image"
-          content={logoURL}
-        />
-        <link rel="icon" href={logoURL} />
+        <meta property="og:image" content={logoNoText} />
+        <meta property="og:title" content={title} />
+        <meta property="og:url" content={yield* url()} />
+        <meta property="og:description" content={description} />
+        <meta name="description" content={description} />
+        <meta name="twitter:image" content={yield* url("assets/fs-logo.svg")} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-          rel="canonical"
-          href={siteURL}
-        />
-        <link
-          rel="alternate"
-          href={siteURL}
-          hreflang="en"
-        />
-        <link
-          rel="alternate"
-          href={siteURL}
-          hreflang="x-default"
-        />
+
+        <link rel="icon" href={logoNoText} />
+        <link rel="canonical" href={siteURL} />
+        <link rel="alternate" href={siteURL} hreflang="en" />
+        <link rel="alternate" href={siteURL} hreflang="x-default" />
       </head>
       <body>
         <header class="w-full">
