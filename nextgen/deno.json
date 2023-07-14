@@ -1,0 +1,20 @@
+{
+  "tasks": {
+    "dev": "deno run -A lib/watch.ts html lib -- deno run -A main.ts"
+  },
+  "lint": {
+    "rules": {
+      "exclude": ["prefer-const", "require-yield"]
+    }
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "hastx"
+  },
+  "imports": {
+    "effection": "https://deno.land/x/effection@3.0.0-alpha.9/mod.ts",
+    "freejack/": "./lib/",
+    "hastx/": "https://deno.land/x/hastx@0.0.1/",
+    "hastx/jsx-runtime": "https://deno.land/x/hastx@v0.0.1/jsx-runtime.ts"
+  }
+}
