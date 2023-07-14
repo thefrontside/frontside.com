@@ -16,7 +16,9 @@ export default function* IndexHTML(): Operation<JSX.Element> {
           <nav>
             <ul>
               <li>
-                <a href="./workshops">Workshops</a>
+                <a href="./workshops/advanced-backstage-plugin-development">
+                  Advanced Backstage Plugin Development
+                </a>
               </li>
             </ul>
           </nav>
