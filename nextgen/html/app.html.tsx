@@ -30,13 +30,21 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         <link rel="alternate" href={siteURL} hreflang="en" />
         <link rel="alternate" href={siteURL} hreflang="x-default" />
       </head>
-      <body class="m-5">
+      <body class="p-5 md:mx-auto md:max-w-xl">
         <header class="w-full">
           <nav aria-label="Site Nav">
-            <img width="137" src={logoURL} alt="Frontside Logo" />
+            <menu class="flex justify-between">
+              <a href="/">
+                <img width={137} src={logoURL} alt="Frontside Logo" />
+              </a>
+              <a href="/contact">Contact</a>
+            </menu>
           </nav>
-          <nav arial-label="Home Nav">
-            <menu>
+          <nav
+            class="mt-14 font-bold leading-5 tracking-wide text-indigo-900 text-xs"
+            arial-label="Home Nav"
+          >
+            <menu class="flex justify-between">
               <li>
                 <a href="/consulting">DX Consulting</a>
               </li>
@@ -47,7 +55,7 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
                 <a href="/opensource">Open Source</a>
               </li>
               <li>
-                <a href="/blog">DX Consulting</a>
+                <a href="/blog">Blog</a>
               </li>
             </menu>
           </nav>
