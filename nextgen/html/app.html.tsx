@@ -30,13 +30,21 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         <link rel="alternate" href={siteURL} hreflang="en" />
         <link rel="alternate" href={siteURL} hreflang="x-default" />
       </head>
-      <body class="m-5">
+      <body class="p-5 md:mx-auto md:max-w-xl lg:max-w-5xl">
         <header class="w-full">
           <nav aria-label="Site Nav">
-            <img width="137" src={logoURL} alt="Frontside Logo" />
+            <menu class="flex justify-between">
+              <a href="/">
+                <img width={137} height={34.172} src={logoURL} alt="Frontside Logo" />
+              </a>
+              <a href="/contact">Contact</a>
+            </menu>
           </nav>
-          <nav arial-label="Home Nav">
-            <menu>
+          <nav
+            class="mt-14 font-bold leading-5 tracking-wide text-indigo-900 text-xs lg:text-sm"
+            arial-label="Home Nav"
+          >
+            <menu class="flex justify-between">
               <li>
                 <a href="/consulting">DX Consulting</a>
               </li>
@@ -47,7 +55,7 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
                 <a href="/opensource">Open Source</a>
               </li>
               <li>
-                <a href="/blog">DX Consulting</a>
+                <a href="/blog">Blog</a>
               </li>
             </menu>
           </nav>
@@ -55,11 +63,55 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         <main>
           {yield* outlet}
         </main>
-        <footer>
-          <p>
-            Copyright © 2005 - {new Date().getFullYear()}{" "}
-            The Frontside Software, Inc.
-          </p>
+        <footer class="mt-20 mb-16">
+          <menu class="font-bold text-lg grid grid-cols-2 ml-12 gap-y-5 justify-around lg:flex lg:m-0">
+            <li>
+              <a href={yield* url("/")}>Home</a>
+            </li>
+            <li>
+              <a href={yield* url("/about")}>About</a>
+            </li>
+            <li>
+              <a href={yield* url("/consulting")}>Consulting</a>
+            </li>
+            <li>
+              <a href={yield* url("/backstage")}>Backstage</a>
+            </li>
+            <li>
+              <a href={yield* url("/blog")}>Blog</a>
+            </li>
+            <li>
+              <a href={yield* url("/contact")}>Contact</a>
+            </li>
+          </menu>
+          <section class="text-center text-xs tracking-wide leading-5 mt-20 grid grid-cols-1 gap-y-12 ">
+            <a href={yield* url("/")}>
+              <img
+                alt="Frontside Logo"
+                class="mx-auto"
+                src={yield* url("/assets/fs-logo-no-text.svg")}
+                height={32.5}
+                width={32.5}
+              />
+            </a>
+
+            <address class="whitespace-pre-line not-italic">
+              2301 W Anderson Ln #102-8
+              {"\n"}
+              Austin, Texas 78757
+              {"\n"}
+              <a href="tel:+15124000318">+1 (512) 400 - 0318</a>
+            </address>
+            <p class="uppercase">
+              © 2005 - {new Date().getFullYear()}{" "}
+              The Frontside Software, Inc. All Rights Reserved.
+            </p>
+            <p class="uppercase">
+              <a href={yield* url("/code-of-conduct")}>Code of Conduct</a>
+              —
+              <a href={yield* url("/privacy-policy")}>Privacy Policy</a>
+            </p>
+          </section>
         </footer>
       </body>
     </html>

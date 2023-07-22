@@ -25,6 +25,14 @@ function presetFrontside() {
 const config = defineConfig({
   //@ts-expect-error the tailwind preset types are wiggity whack.
   presets: [presetTailwind(), presetTypography(), presetFrontside()],
+  theme: {
+    fontFamily: {
+      sans: ['Proxima Nova', 'proxima-nova', 'sans-serif'],
+    },
+    fontSize: {
+      xs: "0.71rem",
+    }
+  }
 });
 
 export function twind(document: Element): void {

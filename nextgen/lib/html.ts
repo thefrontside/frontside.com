@@ -2,6 +2,7 @@ import type { Params, ServeHandler } from "./types.ts";
 import type { Operation } from "effection";
 
 import { toHtml } from "https://esm.sh/hast-util-to-html@8.0.4";
+import { assert } from "https://deno.land/std@0.148.0/_util/assert.ts";
 
 import { twind } from "freejack/twind.ts";
 import { URLContext } from "freejack/view.ts";
@@ -19,6 +20,7 @@ export const html = {
 
         let top = yield* handler({ params, request });
 
+        assert(top.type === "element");
         twind(top);
 
         let text = `<!DOCTYPE html>${toHtml(top)}<html>`;
