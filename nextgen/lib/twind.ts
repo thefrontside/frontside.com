@@ -6,7 +6,7 @@ import {
   virtual,
 } from "https://esm.sh/@twind/core@1.1.3";
 
-import type { Element } from "https://esm.sh/@types/hast-format@2.3.0";
+import type { Element } from "hastx/jsx-runtime";
 import presetTailwind from "https://esm.sh/@twind/preset-tailwind@1.1.4";
 import presetTypography from "https://esm.sh/@twind/preset-typography@1.0.7";
 
@@ -27,12 +27,9 @@ const config = defineConfig({
   presets: [presetTailwind(), presetTypography(), presetFrontside()],
   theme: {
     fontFamily: {
-      sans: ['Proxima Nova', 'proxima-nova', 'sans-serif'],
+      sans: ["Proxima Nova", "proxima-nova", "sans-serif"],
     },
-    fontSize: {
-      xs: "0.71rem",
-    }
-  }
+  },
 });
 
 export function twind(document: Element): void {

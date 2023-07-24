@@ -35,7 +35,12 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
           <nav aria-label="Site Nav">
             <menu class="flex justify-between">
               <a href="/">
-                <img width={137} height={34.172} src={logoURL} alt="Frontside Logo" />
+                <img
+                  width={137}
+                  height={34.172}
+                  src={logoURL}
+                  alt="Frontside Logo"
+                />
               </a>
               <a href="/contact">Contact</a>
             </menu>
