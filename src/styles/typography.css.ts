@@ -517,10 +517,6 @@ globalStyle(`${mardownColumn} > .figure`, {
   marginBottom: '1em'
 })
 
-globalStyle(`${mardownColumn} > .figure img`, {
-  maxHeight: '500px'
-})
-
 globalStyle(`${mardownColumn} > .figure .figure-caption`, {
   fontStyle: 'italic',
   textAlign: 'center',
