@@ -88,7 +88,7 @@
     "https://deno.land/x/effection@3.0.0-alpha.9/lib/sleep.ts": "d7000c05ace8143efd80f1e35243f5521316bc334e4051afe692e1a0c7268304",
     "https://deno.land/x/effection@3.0.0-alpha.9/lib/types.ts": "3eab26c41d8d49cf7a60c433805601e889e814e8c7e0cd1db26a8df48611146f",
     "https://deno.land/x/effection@3.0.0-alpha.9/mod.ts": "ffae461c16d4a1bf24c2179582ab8d5c81ad0df61e4ae2fba51ef5e5bdf90345",
-    "https://deno.land/x/hastx@v0.0.2/jsx-runtime.ts": "7ed954dcaef6fb7489409c5e989b6220b0112994d1fc3ed726b3b2e1398fc0bc",
+    "https://deno.land/x/hastx@v0.0.4/jsx-runtime.ts": "5e1db59ceea4834b8d248a018a5adfc73a09922d8dcdaa3a3bb228c884da0f6c",
     "https://esm.sh/@twind/core@1.1.3": "ce5e76495e2502e85aed91268b16015e2866e86c38b0a73ddb6dd7d8a2c290f7",
     "https://esm.sh/@twind/preset-tailwind@1.1.4": "13fe9e76a18a41a5d477b83df8659637eb89f18d45cbe6613f0e5e6c4b377f35",
     "https://esm.sh/@twind/preset-typography@1.0.7": "186f7256b3d6f7a0f52a1e365d20df89f7aff35116e09a75a75aec280e3d54ea",

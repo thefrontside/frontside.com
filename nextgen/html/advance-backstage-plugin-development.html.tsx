@@ -1,15 +1,18 @@
 import type { Operation } from "effection";
+import { url } from "freejack/view.ts";
 
-export function* WorkshopsHtml(): Operation<JSX.Element> {
+export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
+JSX.Element
+> {
   return (
-    <div class="relative isolate px-6 pt-14 lg:px-8">
+    <article class="relative isolate px-6 pt-14 lg:px-8">
       <div class="mx-auto max-w-2xl">
         <div class="hidden sm:mb-8 sm:flex sm:justify-center">
           <div class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             Currently under development
           </div>
         </div>
-        <div class="text-center">
+        <section class="text-center">
           <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             Become an Advanced Backstage Plugin Developer
           </h1>
@@ -36,9 +39,33 @@ export function* WorkshopsHtml(): Operation<JSX.Element> {
               Signup for waitlist ➡
             </a>
           </div>
-        </div>
+        </section>
         <script src="//embed.typeform.com/next/embed.js"></script>
       </div>
-    </div>
+      <section class="mt-12 md:grid md:grid-cols-2">
+        <hgroup class="order-1">
+          <h1 class="font-bold text-3xl leading-7">What you'll learn</h1>
+          <p class="mt-8">
+            Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Etiam dolor justo, auctor sit amet odio at, efficitur consequat
+            massa. Donec velit urna, tempor vitae libero eget, dignissim rutrum
+            sem.
+          </p>
+        </hgroup>
+        <img class="my-auto" alt="imagery depicting what you will learn" src={yield* url("assets/home-rethink.png")} />
+      </section>
+      <section class="mt-12 md:grid md:grid-cols-2">
+        <hgroup>
+          <h1 class="font-bold text-3xl leading-7">Why take this workshop?</h1>
+          <p class="mt-8">
+            Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit. Etiam dolor justo, auctor sit amet odio at, efficitur consequat
+            massa. Donec velit urna, tempor vitae libero eget, dignissim rutrum
+            sem.
+          </p>
+        </hgroup>
+        <img class="my-auto" alt="imagery depicting why take this workshop" src={yield* url("assets/home-shift-left.png")} />
+      </section>
+    </article>
   );
 }
