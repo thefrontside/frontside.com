@@ -30,8 +30,8 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         <link rel="alternate" href={siteURL} hreflang="en" />
         <link rel="alternate" href={siteURL} hreflang="x-default" />
       </head>
-      <body class="p-5 md:mx-auto md:max-w-xl lg:max-w-5xl">
-        <header class="w-full">
+      <body>
+        <header class="p-5 lg:max-w-5xl lg: m-auto">
           <nav aria-label="Site Nav">
             <menu class="flex justify-between">
               <a href="/">
