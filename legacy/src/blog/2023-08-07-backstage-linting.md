@@ -7,7 +7,7 @@ author: Min Kim
 description: >-
   In this guide Min will show you a unique approach to tackling a mountain of linting errors without disrupting delivery
 tags: [ "backstage", "dx" ]
-img: /img/2020-07-29-simulator-social.png // 🚨 update
+img: /img/2023-08-07-backstage-linting.png
 ---
 
 I recently worked with a team that had the lint command in their Backstage project misconfigured. The result? They ended up amassing an overwhelming number of lint errors - literally hundreds upon hundreds. In fact, the report output by the lint command was so long it would max out the terminal.
