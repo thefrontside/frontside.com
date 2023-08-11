@@ -1,7 +1,7 @@
 import type { Operation } from "effection";
 
 export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
-  JSX.Element
+JSX.Element
 > {
   return (
     <article class="pt-14">
@@ -34,15 +34,12 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           Signup for Waitlist
         </a>
         <script src="//embed.typeform.com/next/embed.js"></script>
-        <p class="my-8 md:my-24 m-auto md:max-w-3xl">
-          Join us to elevate your Backstage expertise and transform into a
-          proficient plugin developer. Discover, learn, and kick-start your path
-          to master the art of crafting sophisticated plugins for Backstage in
-          this comprehensive, hands-on workshop.
-        </p>
       </section>
       <section class="bg-gray-50 py-8">
-        <H2 class="text-center">Everything in Backstage is a Plugin!</H2>
+        <H2 class="text-center">
+          <span class="text-pink-500"> Everything </span>
+          in Backstage is a Plugin!
+        </H2>
         <p class="px-4 my-8 md:mx-auto md:max-w-3xl">
           The architecture of Backstage is ingeniously designed around plugins.
           From the Service Catalog and Templates to the Scaffolder, Search and
@@ -53,55 +50,16 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           command Backstage Plugins!
         </p>
       </section>
-      <section class="px-4 my-8 md:mb-16 md:mx-auto md:max-w-3xl">
-        <H2 class="text-center">Topics covered include</H2>
-        <ul class="pt-4 grid grid-cols-2 md:grid-cols-3 md:justify-items-center text-xs font-bold text-blue-900 gap-y-2">
-          <li>Plugin Architecture</li>
-          <li>Customizing Frontend UI</li>
-          <li>Database Access</li>
-          <li>Database Migration</li>
-          <li>Logging</li>
-          <li>Plugin Maintenance</li>
-          <li>Packaging and Publishing Plugins</li>
-          <li>Using Plugin Environment</li>
-          <li>Dependency Injection</li>
-          <li>Communication between Services</li>
-          <li>Code Sharing</li>
-          <li>Sharing Types</li>
-          <li>Frontend Testing</li>
-          <li>Backend Testing</li>
-          <li>API Integration</li>
-        </ul>
-      </section>
-      <section class="mt-12 md:grid md:grid-cols-2 m-auto md:max-w-4xl">
-        <hgroup class="px-4">
-          <H2>
-            Deepen your understanding of Backstage Architecture
-          </H2>
-          <p class="mt-8 py-4 text-sm">
-            Frontside is creating this Backstage SEAL Engagement to allow
-            clients to able to gain the access they need to our experience and
-            expertise around Backstage. Organizations have initiatives around
-            Internal Developer Platforms and Developer Experience and need the
-            injection of Experience to keep the momentum going in their
-            initiatives and teams.
-          </p>
-        </hgroup>
-        <div class="mx-4 md:m-0 bg-gray-200 h-72" />
-      </section>
-      <section class="mt-12 m-auto md:grid md:grid-cols-2 md:max-w-4xl items-center md:text-right">
-        <hgroup class="px-4 order-1">
-          <H2>Become a Proficient Plugin Developer</H2>
-          <p class="mt-8 py-4 text-sm">
-            Frontside is creating this Backstage SEAL Engagement to allow
-            clients to able to gain the access they need to our experience and
-            expertise around Backstage. Organizations have initiatives around
-            Internal Developer Platforms and Developer Experience and need the
-            injection of Experience to keep the momentum going in their
-            initiatives and teams.
-          </p>
-        </hgroup>
-        <div class="mx-4 md:m-0 bg-gray-200 h-72" />
+      <section class="mt-8 text-center">
+        <H2>Mastering Plugins: <br/> Improve Your Internal Developer Portal Without Limitations</H2>
+        <p class="px-4 my-8 md:mx-auto md:max-w-3xl">
+          Frontside is creating this Backstage SEAL Engagement to allow
+          clients to able to gain the access they need to our experience and
+          expertise around Backstage. Organizations have initiatives around
+          Internal Developer Platforms and Developer Experience and need the
+          injection of Experience to keep the momentum going in their
+          initiatives and teams.
+        </p>
       </section>
       <section class="mt-12 md:grid md:grid-cols-2 m-auto md:max-w-4xl">
         <hgroup class="px-4">
@@ -109,22 +67,145 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             Confidence to Innovate
           </H2>
           <p class="mt-8 py-4 text-sm">
-            Frontside is creating this Backstage SEAL Engagement to allow
-            clients to able to gain the access they need to our experience and
-            expertise around Backstage. Organizations have initiatives around
-            Internal Developer Platforms and Developer Experience and need the
-            injection of Experience to keep the momentum going in their
-            initiatives and teams.
+            Grasping the intricacies of plugins doesn't just give you
+            a technical advantage—it fuels your creativity. With this
+            newfound knowledge, you'll confidently design and
+            implement complex features and functionalities, turning
+            your innovative ideas into tangible results.
           </p>
         </hgroup>
         <div class="mx-4 md:m-0 bg-gray-200 h-72" />
+      </section>
+      <section class="mt-12 m-auto md:grid md:grid-cols-2 md:max-w-4xl items-center md:text-right">
+        <hgroup class="px-4 order-1">
+          <H2>Deepen your understanding of Backstage Architecture</H2>
+          <p class="mt-8 py-4 text-sm">
+            Beyond mere plugin creation, understanding plugins is
+            synonymous with unraveling the core of Backstage's
+            architecture. These are not just tools; they're the
+            fundamental building blocks that shape Backstage. As you
+            grow familiar with plugins, you'll naturally expand your
+            comprehension of how the entire Backstage system is
+            meticulously orchestrated.
+          </p>
+        </hgroup>
+        <div class="mx-4 md:m-0 bg-gray-200 h-72" />
+      </section>
+      <section class="mt-12 md:grid md:grid-cols-2 m-auto md:max-w-4xl">
+        <hgroup class="px-4">
+          <H2>
+            Harness the Network Effect of Knowledge
+          </H2>
+          <p class="mt-8 py-4 text-sm">
+            Learning in isolation has its limits. This workshop
+            emphasizes collaborative learning, encouraging you to
+            connect, discuss, and share insights with fellow
+            developers. By networking your knowledge, you'll uncover
+            fresh perspectives, tips, and tricks, enriching your
+            learning experience and fostering a community of Backstage
+            enthusiasts.
+          </p>
+        </hgroup>
+        <div class="mx-4 md:m-0 bg-gray-200 h-72" />
+      </section>
+      <section class="mt-8 bg-gray-50 py-8">
+        <H2 class="text-center">Who is this workshop for?</H2>
+
+        <p class="px-4 my-8 md:mx-auto md:max-w-3xl">
+          <strong>Experienced Backstage Developer:</strong> If you've
+          already dabbled in Backstage and built a foundational
+          understanding, but feel there's more to explore—especially
+          in plugin development—this workshop is your next step. We're
+          here to refine your skills and elevate your mastery.
+        </p>
+        <p class="px-4 my-8 md:mx-auto md:max-w-3xl">
+          <strong>Developers Seeking Direction:</strong> Perhaps you
+          haven't ventured into creating a Backstage plugin yet, If
+          the term 'plugin' sounds daunting or if you’re unsure where
+          to begin, fret not! We’ve tailored segments of our workshop
+          especially for you. Think of this as a guided tour, ensuring
+          you never feel lost, and always feel empowered to ask,
+          learn, and grow.
+        </p>
+        <p class="px-4 my-8 md:mx-auto md:max-w-3xl">
+          <strong>Teams with Aspirations:</strong> For teams eager to
+          amplify their collective proficiency, this workshop is a
+          goldmine. Equip your developer suite with the confidence and
+          competence to craft sophisticated plugins, fostering a
+          harmonized and empowered team environment.
+        </p>
+        <p class="px-4 my-8 md:mx-auto md:max-w-3xl">
+          <strong>Everyone Eager to Learn:</strong> Whether you’re a
+          seasoned developer, a newbie, or someone in between, if you
+          have the zeal to learn, we have the insights to share. Join
+          us, and let’s embark on this enlightening journey together.
+        </p>
+      </section>
+      <section class="mt-8">
+        <H2 class="text-center">What you will build</H2>
+        <p class="px-4 my-8 md:mx-auto md:max-w-3xl">
+          <strong class="block text-center">Pipeline Monitor Plugin</strong>
+
+          In this workshop, we’ll build a Pipeline Monitor plugin to
+          pull information from external services and aggregate that
+          information in a database. The plugin will allow your users
+          to customize it via YAML. The functionality of the YAML
+          syntax will be configurable with custom functions in the
+          backend. We’ll create a backend plugin engine that will use
+          configuration from the YAML file to execute pipeline
+          monitoring by polling each state of the pipeline, retrieving
+          the status, and storing the status in the database. We’ll
+          implement a mechanism for generating and storing information
+          summaries in the database. The raw data about the pipeline
+          and the status will be accessible via the backend REST
+          API. We’ll write a front-end plugin that will show
+          information from the database.
+        </p>
+      </section>
+      <section class="mt-8 md:mt-16 md:grid md:grid-cols-2 gap-8 md:mx-auto md:max-w-5xl">
+        <hgroup>
+          <h3 class="font-bold text-lg text-blue-900 mb-4">Design</h3>
+          <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
+            Dive into custom frontend components tailored for
+            Backstage's APIs. Learn the boundaries between React and
+            Backstage APIs, ensuring components are efficient and
+            interactive. Understand the vital link between frontend
+            design and the plugin backend.
+          </p>
+        </hgroup>
+        <hgroup>
+          <h3 class="font-bold text-lg text-blue-900 mb-4">Build</h3>
+          <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
+            Navigate the creation of a robust backend. Design and
+            deploy a specialized database for your plugin, ensuring
+            optimal data flow between frontend and backend. Master the
+            intricacies of seamless data storage and retrieval.
+          </p>
+        </hgroup>
+        <hgroup>
+          <h3 class="font-bold text-lg text-blue-900 mb-4">Test</h3>
+          <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
+            Embrace the importance of rigorous plugin testing. Uncover
+            best practices to identify and rectify vulnerabilities,
+            ensuring your plugin meets the highest quality benchmarks.
+          </p>
+        </hgroup>
+        <hgroup>
+          <h3 class="font-bold text-lg text-blue-900 mb-4">Ship</h3>
+          <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
+            Learn to bundle, build, and ship your plugin. Ensure your
+            creation is packaged for easy integration, sharing your
+            innovation internally or with the broader Backstage
+            community.
+          </p>
+        </hgroup>
       </section>
     </article>
   );
 }
 
 function H2(
-  { children, class: classes = " " }: { children: string; class?: string },
+  { children, class: classes = " " }: { children: string | JSX.Element | (string | JSX.Element)[]; class?: string },
 ): JSX.Element {
   return (
     <h2 class={`${classes} font-bold text-blue-900 text-2xl`}>{children}</h2>
