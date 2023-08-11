@@ -53,12 +53,14 @@ JSX.Element
       <section class="mt-8 text-center">
         <H2>Mastering Plugins: <br/> Improve Your Internal Developer Portal Without Limitations</H2>
         <p class="px-4 my-8 md:mx-auto md:max-w-3xl">
-          Frontside is creating this Backstage SEAL Engagement to allow
-          clients to able to gain the access they need to our experience and
-          expertise around Backstage. Organizations have initiatives around
-          Internal Developer Platforms and Developer Experience and need the
-          injection of Experience to keep the momentum going in their
-          initiatives and teams.
+          To fully harness and customize Backstage tailored to your
+          company's unique needs, a deep understanding of plugin
+          development is indispensable. Without mastering plugins,
+          you're confined to a limited realm of possibilities in
+          Backstage. Break through these constraints and unlock a
+          world of expansive features. Embrace the power of plugins
+          and propel your capabilities to new horizons. Say yes to
+          boundless innovation!
         </p>
       </section>
       <section class="mt-12 md:grid md:grid-cols-2 m-auto md:max-w-4xl">
@@ -198,6 +200,34 @@ JSX.Element
             innovation internally or with the broader Backstage
             community.
           </p>
+        </hgroup>
+      </section>
+      <section class="prose mt-16 mx-auto">
+        <H2 class="text-center">What you will learn</H2>
+        <hgroup>
+          <h3>Frontend</h3>
+          <li>Create frontend components that work as a page or a card.</li>
+          <li>Create an API client for your backend API</li>
+          <li>Make the API client available via an API Ref.</li>
+          <li>Use your custom API ref in your components.</li>
+          <li>Configure your API ref using Backstage API configuration.</li>
+          <li>Customize the frontend components of a new custom kind.</li>
+        </hgroup>
+        <hgroup>
+          <h3>Catalog</h3>
+          <li>Define a new custom kind</li>
+          <li>Create a new processor that will validate your kind using Zod</li>
+          <li>Emit custom relationships using processors</li>
+        </hgroup>
+        <hgroup>
+          <h3>Backend</h3>
+          <li>Create a new backend plugin using a new backend extension system.</li>
+          <li>Create a REST API backend using OpenAPI specification.</li>
+          <li>Generate types from OpenAPI specification and store in package shared by frontend and backend</li>
+          <li>Write database migrations to create a database.</li>
+          <li>Write database migrations to change the database structure.</li>
+          <li>Connect the database to the REST API</li>
+          <li>Write a backend engine that will execute pipeline monitoring.</li>
         </hgroup>
       </section>
     </article>
