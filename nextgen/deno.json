@@ -14,7 +14,7 @@
   "imports": {
     "effection": "https://deno.land/x/effection@3.0.0-alpha.9/mod.ts",
     "freejack/": "./lib/",
-    "hastx/": "https://deno.land/x/hastx@v0.0.5/",
-    "hastx/jsx-runtime": "https://deno.land/x/hastx@v0.0.5/jsx-runtime.ts"
+    "hastx/": "https://deno.land/x/hastx@v0.0.6/",
+    "hastx/jsx-runtime": "https://deno.land/x/hastx@v0.0.6/jsx-runtime.ts"
   }
 }
