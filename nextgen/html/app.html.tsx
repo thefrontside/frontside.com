@@ -25,6 +25,7 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         <meta name="twitter:image" content={logoURL} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <link rel="stylesheet" href="https://use.typekit.net/ugs0ewy.css" />
         <link rel="icon" href={logoNoText} />
         <link rel="canonical" href={siteURL} />
         <link rel="alternate" href={siteURL} hreflang="en" />
@@ -46,7 +47,7 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
             </menu>
           </nav>
           <nav
-            class="mt-14 font-bold leading-5 tracking-wide text-indigo-900 text-xs lg:text-sm"
+            class="mt-14 font-bold leading-5 tracking-wide text-blue-primary text-xs lg:text-sm"
             arial-label="Home Nav"
           >
             <menu class="flex justify-between">

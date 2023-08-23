@@ -19,6 +19,15 @@ function presetFrontside() {
         color: "#fff",
       }],
     ],
+    theme: {
+      extend: {
+        colors: {
+          "blue-primary": '#14315D',
+          "blue-light": '#26ABE8',
+          "pink-primary": '#F74D7B',
+        }
+      }
+    }
   };
 }
 

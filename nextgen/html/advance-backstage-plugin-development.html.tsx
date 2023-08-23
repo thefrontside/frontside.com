@@ -6,17 +6,17 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
   return (
     <article class="pt-14">
       <aside class="text-center">
-        <p class="border-1 border-sky-500 text-pink-500 rounded-full inline-block text-center py-1 px-6 text-xs">
+        <p class="border-1 border-pink-primary text-blue-primary rounded-full inline-block text-center py-1 px-6 text-xs">
           Coming Soon!
         </p>
       </aside>
       <section class="mt-8 p-5 md:max-w-4xl lg:max-w-5xl m-auto">
-        <h1 class="text-blue-900 text-3xl md:text-6xl lg:text-7xl font-black">
-          <span class="text-sky-500">Discover</span> the{" "}
-          <span class="text-pink-500">Power</span>{" "}
-          of Backstage<span class="text-sky-500">Plugins!</span>
+        <h1 class="text-blue-primary text-3xl md:text-6xl lg:text-7xl font-black">
+          <span class="text-blue-light">Discover</span> the{" "}
+          <span class="text-pink-primary">Power</span>{" "}
+    of Backstage{" "}<span class="text-blue-light">Plugins!</span>
         </h1>
-        <p class="mt-6 font-bold tracking-wide text-sm text-blue-900">
+        <p class="mt-6 font-bold tracking-wide text-sm text-blue-primary">
           Master the Art of Advanced Plugin Development with our Comprehensive
           Workshop
         </p>
@@ -29,7 +29,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           data-tf-medium="snippet"
           id="signup-for-workshop"
           href="#"
-          class="inline-block mt-8 text-center text-xs m-auto w-full md:w-auto rounded-md bg-blue-900 px-12 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          class="inline-block mt-8 text-center text-xs m-auto w-full md:w-auto rounded-md bg-blue-primary px-12 py-2.5 text-sm font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Signup for Waitlist
         </a>
@@ -37,10 +37,10 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="bg-gray-50 py-8">
         <H2 class="text-center">
-          <span class="text-pink-500">Everything</span>{" "}
+          <span class="text-pink-primary">Everything</span>{" "}
           in Backstage is a Plugin!
         </H2>
-        <p class="px-4 my-8 md:mx-auto md:max-w-3xl">
+        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl">
           The architecture of Backstage is ingeniously designed around plugins.
           From the Service Catalog and Templates to the Scaffolder, Search and
           Tech Docs are all plugins! This workshop will only equip you with the
@@ -50,7 +50,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           command Backstage Plugins!
         </p>
       </section>
-      <section class="mt-8 text-center">
+      <section class="mt-8 text-center text-xl">
         <H2>
           Mastering Plugins: <br />{" "}
           Improve Your Internal Developer Portal Without Limitations
@@ -65,12 +65,12 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           innovation!
         </p>
       </section>
-      <section class="mt-12 md:grid md:grid-cols-2 m-auto md:max-w-4xl">
+      <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-4xl">
         <hgroup class="px-4">
           <H2>
             Confidence to Innovate
           </H2>
-          <p class="mt-8 py-4 text-sm">
+          <p class="mt-8 py-4 text-xl">
             Grasping the intricacies of plugins doesn't just give you a
             technical advantage—it fuels your creativity. With this newfound
             knowledge, you'll confidently design and implement complex features
@@ -80,10 +80,10 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </hgroup>
         <div class="mx-4 md:m-0 bg-gray-200 h-72" />
       </section>
-      <section class="mt-12 m-auto md:grid md:grid-cols-2 md:max-w-4xl items-center md:text-right">
+      <section class="mt-12 m-auto md:grid md:grid-cols-2 gap-24 md:max-w-4xl items-center md:text-right">
         <hgroup class="px-4 order-1">
           <H2>Deepen your understanding of Backstage Architecture</H2>
-          <p class="mt-8 py-4 text-sm">
+          <p class="mt-8 py-4 text-xl">
             Beyond mere plugin creation, understanding plugins is synonymous
             with unraveling the core of Backstage's architecture. These are not
             just tools; they're the fundamental building blocks that shape
@@ -94,12 +94,12 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </hgroup>
         <div class="mx-4 md:m-0 bg-gray-200 h-72" />
       </section>
-      <section class="mt-12 md:grid md:grid-cols-2 m-auto md:max-w-4xl">
+      <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-4xl">
         <hgroup class="px-4">
           <H2>
             Harness the Network Effect of Knowledge
           </H2>
-          <p class="mt-8 py-4 text-sm">
+          <p class="mt-8 py-4 text-xl">
             Learning in isolation has its limits. This workshop emphasizes
             collaborative learning, encouraging you to connect, discuss, and
             share insights with fellow developers. By networking your knowledge,
@@ -163,7 +163,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-8 px-8 md:mt-16 md:grid md:grid-cols-2 gap-8 md:mx-auto md:max-w-5xl">
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-900 mb-4">Design</h3>
+          <h3 class="font-bold text-lg text-blue-primary mb-4">Design</h3>
           <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
             Dive into custom frontend components tailored for Backstage's APIs.
             Learn the boundaries between React and Backstage APIs, ensuring
@@ -172,7 +172,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-900 mb-4">Build</h3>
+          <h3 class="font-bold text-lg text-blue-primary mb-4">Build</h3>
           <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
             Navigate the creation of a robust backend. Design and deploy a
             specialized database for your plugin, ensuring optimal data flow
@@ -181,7 +181,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-900 mb-4">Test</h3>
+          <h3 class="font-bold text-lg text-blue-primary mb-4">Test</h3>
           <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
             Embrace the importance of rigorous plugin testing. Uncover best
             practices to identify and rectify vulnerabilities, ensuring your
@@ -189,7 +189,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-900 mb-4">Ship</h3>
+          <h3 class="font-bold text-lg text-blue-primary mb-4">Ship</h3>
           <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
             Learn to bundle, build, and ship your plugin. Ensure your creation
             is packaged for easy integration, sharing your innovation internally
@@ -233,7 +233,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       <H2 class="text-center mt-16">Workshop Instructors</H2>
       <section class="mt-8 px-8 md:mt-16 md:grid md:grid-cols-2 gap-8 md:mx-auto md:max-w-5xl">
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-900 mb-4">
+          <h3 class="font-bold text-lg text-blue-primary mb-4">
             Backstage Professional Services Partners
           </h3>
           <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
@@ -243,7 +243,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-900 mb-4">
+          <h3 class="font-bold text-lg text-blue-primary mb-4">
             Enterprise Level Backstage Experience
           </h3>
           <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
@@ -254,7 +254,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-900 mb-4">
+          <h3 class="font-bold text-lg text-blue-primary mb-4">
             Early-Adopters, Highly Experienced Engineers
           </h3>
           <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
@@ -265,7 +265,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-900 mb-4">
+          <h3 class="font-bold text-lg text-blue-primary mb-4">
             Pioneering the Backstage Ecosystem
           </h3>
           <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
@@ -275,7 +275,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-900 mb-4">
+          <h3 class="font-bold text-lg text-blue-primary mb-4">
             Core Contributors
           </h3>
           <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
@@ -285,7 +285,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-900 mb-4">
+          <h3 class="font-bold text-lg text-blue-primary mb-4">
             Engaged and Invested Community Members
           </h3>
           <p class="before:content-['⃝'] before:block grid grid-cols-[4ch_auto]">
@@ -345,7 +345,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           data-tf-medium="snippet"
           id="signup-for-workshop"
           href="#"
-          class="inline-block mt-8 text-center text-xs m-auto w-full md:w-auto rounded-md bg-blue-900 px-12 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          class="inline-block mt-8 text-center text-xs m-auto w-full md:w-auto rounded-md bg-blue-primary px-12 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Signup for Waitlist Today
         </a>
@@ -361,6 +361,6 @@ function H2(
   },
 ): JSX.Element {
   return (
-    <h2 class={`${classes} font-bold text-blue-900 text-2xl`}>{children}</h2>
+    <h2 class={`${classes} font-black text-blue-primary text-2xl`}>{children}</h2>
   );
 }
