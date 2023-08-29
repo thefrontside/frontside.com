@@ -67,9 +67,9 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-4xl">
         <hgroup class="px-4">
-          <H2>
+          <H3>
             Confidence to Innovate
-          </H2>
+          </H3>
           <p class="mt-8 py-4 text-xl">
             Grasping the intricacies of plugins doesn't just give you a
             technical advantage—it fuels your creativity. With this newfound
@@ -82,7 +82,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-12 m-auto md:grid md:grid-cols-2 gap-24 md:max-w-4xl items-center md:text-right">
         <hgroup class="px-4 order-1">
-          <H2>Deepen your understanding of Backstage Architecture</H2>
+          <H3>Deepen your understanding of Backstage Architecture</H3>
           <p class="mt-8 py-4 text-xl">
             Beyond mere plugin creation, understanding plugins is synonymous
             with unraveling the core of Backstage's architecture. These are not
@@ -96,9 +96,9 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-4xl">
         <hgroup class="px-4">
-          <H2>
+          <H3>
             Harness the Network Effect of Knowledge
-          </H2>
+          </H3>
           <p class="mt-8 py-4 text-xl">
             Learning in isolation has its limits. This workshop emphasizes
             collaborative learning, encouraging you to connect, discuss, and
