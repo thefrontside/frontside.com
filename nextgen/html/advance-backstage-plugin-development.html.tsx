@@ -361,7 +361,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           data-tf-medium="snippet"
           id="signup-for-workshop"
           href="#"
-          class="inline-block mt-8 text-center text-xs m-auto w-full md:w-auto rounded-md bg-blue-primary px-12 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          class="inline-block mt-16 text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Signup for Waitlist Today
         </a>
