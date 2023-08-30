@@ -3,6 +3,11 @@ import type { Operation } from "effection";
 export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
   JSX.Element
 > {
+  let logoHumanitec = yield* url("../assets/client-logos/logo-humanitec.svg");
+  let logoHP = yield* url("../assets/client-logos/logo-HP-black.svg");
+  let logoIndeed = yield* url("../assets/client-logos/logo-indeed.svg");
+  let logoResideo = yield* url("../assets/client-logos/logo-resideo.svg");
+  let logoEricsson = yield* url("../assets/client-logos/logo-ericsson.svg");
   return (
     <article class="pt-14">
       <aside class="text-center">
@@ -34,6 +39,13 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           Signup for Waitlist
         </a>
         <script src="//embed.typeform.com/next/embed.js"></script>
+        <div class="flex justify-evenly align-center mt-16">
+          <img class="" src={logoEricsson}/>
+          <img src={logoHumanitec}/>
+          <img src={logoHP}/>
+          <img src={logoIndeed}/>
+          <img src={logoResideo}/>
+        </div>
       </section>
       <section class="bg-gray-50 py-8">
         <H2 class="text-center">
