@@ -1,4 +1,5 @@
 import type { Operation } from "effection";
+import { url } from "freejack/view.ts";
 
 export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
   JSX.Element
@@ -11,17 +12,20 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
   return (
     <article class="pt-14">
       <aside class="text-center">
-        <p class="border-1 border-pink-primary text-blue-primary rounded-full inline-block text-center py-1 px-6 text-xs">
+        <p class="border-1 border-pink-primary text-blue-primary rounded-full inline-block text-center py-2 px-14 text-xs">
           Coming Soon!
         </p>
       </aside>
-      <section class="mt-8 p-5 md:max-w-4xl lg:max-w-5xl m-auto">
-        <h1 class="text-blue-primary text-3xl md:text-6xl lg:text-7xl font-black">
+      <aside class="text-center uppercase text-slate-400 mt-12 font-black">
+        <p>Workshop & Training: Advanced Backstage Plugin Development</p>
+      </aside>
+      <section class="mb-24 p-5 md:max-w-4xl lg:max-w-5xl m-auto text-center">
+        <h1 class="text-blue-primary text-3xl md:text-6xl lg:text-8xl tracking-[-0.04em] font-black">
           <span class="text-blue-light">Discover</span> the{" "}
           <span class="text-pink-primary">Power</span>{" "}
     of Backstage{" "}<span class="text-blue-light">Plugins!</span>
         </h1>
-        <p class="mt-6 font-bold tracking-wide text-sm text-blue-primary">
+        <p class="mt-6 tracking-wide text-xl text-blue-primary">
           Master the Art of Advanced Plugin Development with our Comprehensive
           Workshop
         </p>
@@ -34,7 +38,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           data-tf-medium="snippet"
           id="signup-for-workshop"
           href="#"
-          class="inline-block mt-8 text-center text-xs m-auto w-full md:w-auto rounded-md bg-blue-primary px-12 py-2.5 text-sm font-semibold text-white shadow-sm  focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          class="inline-block mt-16 text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
         >
           Signup for Waitlist
         </a>
@@ -47,12 +51,12 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <img src={logoResideo}/>
         </div>
       </section>
-      <section class="bg-gray-50 py-8">
+      <section class="bg-gray-50 py-16">
         <H2 class="text-center">
           <span class="text-pink-primary">Everything</span>{" "}
           in Backstage is a Plugin!
         </H2>
-        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl">
+        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl text-center">
           The architecture of Backstage is ingeniously designed around plugins.
           From the Service Catalog and Templates to the Scaffolder, Search and
           Tech Docs are all plugins! This workshop will only equip you with the
@@ -62,12 +66,12 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           command Backstage Plugins!
         </p>
       </section>
-      <section class="mt-8 text-center text-xl">
+      <section class="mt-8 text-center">
         <H2>
           Mastering Plugins: <br />{" "}
           Improve Your Internal Developer Portal Without Limitations
         </H2>
-        <p class="px-4 my-8 md:mx-auto md:max-w-3xl">
+        <p class="px-4 my-8 text-xl md:mx-auto md:max-w-3xl">
           To fully harness and customize Backstage tailored to your company's
           unique needs, a deep understanding of plugin development is
           indispensable. Without mastering plugins, you're confined to a limited
@@ -79,10 +83,10 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-4xl">
         <hgroup class="px-4">
-          <H3>
+          <h3 class="text-2xl text-blue-primary font-black">
             Confidence to Innovate
-          </H3>
-          <p class="mt-8 py-4 text-xl">
+          </h3>
+          <p class="py-4 text-l">
             Grasping the intricacies of plugins doesn't just give you a
             technical advantage—it fuels your creativity. With this newfound
             knowledge, you'll confidently design and implement complex features
@@ -94,8 +98,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-12 m-auto md:grid md:grid-cols-2 gap-24 md:max-w-4xl items-center md:text-right">
         <hgroup class="px-4 order-1">
-          <H3>Deepen your understanding of Backstage Architecture</H3>
-          <p class="mt-8 py-4 text-xl">
+          <h3 class="text-xl">Deepen your understanding of Backstage Architecture</h3>
+          <p class="mt-8 py-4">
             Beyond mere plugin creation, understanding plugins is synonymous
             with unraveling the core of Backstage's architecture. These are not
             just tools; they're the fundamental building blocks that shape
@@ -108,10 +112,10 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-4xl">
         <hgroup class="px-4">
-          <H3>
+          <h3>
             Harness the Network Effect of Knowledge
-          </H3>
-          <p class="mt-8 py-4 text-xl">
+          </h3>
+          <p class="mt-8 py-4 text-l">
             Learning in isolation has its limits. This workshop emphasizes
             collaborative learning, encouraging you to connect, discuss, and
             share insights with fellow developers. By networking your knowledge,
@@ -373,6 +377,6 @@ function H2(
   },
 ): JSX.Element {
   return (
-    <h2 class={`${classes} font-black text-blue-primary text-2xl`}>{children}</h2>
+    <h2 class={`${classes} font-black text-blue-primary text-4xl`}>{children}</h2>
   );
 }
