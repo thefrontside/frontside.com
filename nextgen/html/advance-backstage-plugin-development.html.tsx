@@ -315,23 +315,13 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-16 bg-gray-50 p-16">
         <H2 class="text-center">Trusted By</H2>
-        <ul class="flex flex-wrap justify-between text-center mt-8">
-          <li class="before:block before:content-['⚪️'] before:text-6xl">
-            HP
-          </li>
-          <li class="before:block before:content-['⚪️'] before:text-6xl">
-            Indeed
-          </li>
-          <li class="before:block before:content-['⚪️'] before:text-6xl">
-            Humanitec
-          </li>
-          <li class="before:block before:content-['⚪️'] before:text-6xl">
-            Ericsson
-          </li>
-          <li class="before:block before:content-['⚪️'] before:text-6xl">
-            Resideo
-          </li>
-        </ul>
+        <div class="flex justify-evenly align-center mt-16">
+          <img class="" src={logoEricsson}/>
+          <img src={logoHumanitec}/>
+          <img src={logoHP}/>
+          <img src={logoIndeed}/>
+          <img src={logoResideo}/>
+        </div>
       </section>
       <section class="mt-16 px-8 md:px-16">
         <H2 class="text-center">What our clients say</H2>
