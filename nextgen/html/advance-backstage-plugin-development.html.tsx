@@ -10,7 +10,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
   let logoResideo = yield* url("../assets/client-logos/logo-resideo.svg");
   let logoEricsson = yield* url("../assets/client-logos/logo-ericsson.svg");
   return (
-    <article class="pt-14 text-neutral-800">
+    <article class="pt-14 text-blue-primary">
       <aside class="text-center">
         <p class="border-1 border-pink-primary text-blue-primary rounded-full inline-block text-center py-2 px-14 text-xs">
           Coming Soon!
