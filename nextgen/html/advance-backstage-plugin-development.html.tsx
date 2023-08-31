@@ -20,7 +20,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         <p>Workshop & Training: Advanced Backstage Plugin Development</p>
       </aside>
       <section class="mb-24 p-5 md:max-w-4xl lg:max-w-6xl m-auto text-center">
-        <h1 class="text-blue-primary text-3xl md:text-6xl 2xl:text-9xl tracking-[-0.04em] font-black">
+        <h1 class="text-blue-primary text-4xl sm:text-5xl lg:text-6xl xl:text-8xl tracking-[-0.04em] font-black">
           <span class="text-blue-light">Discover</span> the{" "}
           <span class="text-pink-primary">Power</span>{" "}
     of Backstage{" "}<span class="text-blue-light">Plugins!</span>
@@ -53,11 +53,11 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="bg-gray-50 py-16">
         <div class="container mx-auto md:max-w-5xl">
-          <H2>
+          <H2 class="text-center">
             <span class="text-pink-primary">Everything</span>{" "}
             in Backstage is a Plugin!
           </H2>
-          <p class="font-inter text-xl text-inherit my-4 max-w-prose leading-relaxed">
+          <p class="font-inter text-xl text-center mx-auto text-inherit my-4 max-w-prose leading-relaxed">
             The architecture of Backstage is ingeniously designed around plugins.
             From the Service Catalog and Templates to the Scaffolder, Search and
             Tech Docs are all plugins! This workshop will only equip you with the
@@ -181,13 +181,18 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-24 px-8 md:mt-16 md:grid md:grid-cols-2 gap-8 md:mx-auto md:max-w-5xl">
         <hgroup>
-          <h3 class="font-bold text-xl text-blue-primary mb-2">Design</h3>
-          <p class= "font-inter">
-            Dive into custom frontend components tailored for Backstage's APIs.
-            Learn the boundaries between React and Backstage APIs, ensuring
-            components are efficient and interactive. Understand the vital link
-            between frontend design and the plugin backend.
-          </p>
+          <div class="flex mt-1 items-center bg-blue-primary rounded-full p-2 w-8 h-8">
+            <svg class="stroke-white" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl text-blue-primary mb-2">Design</h3>
+            <p class= "font-inter">
+              Dive into custom frontend components tailored for Backstage's APIs.
+              Learn the boundaries between React and Backstage APIs, ensuring
+              components are efficient and interactive. Understand the vital link
+              between frontend design and the plugin backend.
+            </p>
+          </div>
         </hgroup>
         <hgroup>
           <h3 class="font-bold text-xl text-blue-primary mb-2">Build</h3>
@@ -207,6 +212,9 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
+          <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <svg viewBox="0 0 24 24" class="text-white" astro-icon="bx:bxs-briefcase"><path fill="currentColor" d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v3h20V8c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm5 10h-4v-2H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-8v2z"></path></svg>
+          </div>
           <h3 class="font-bold text-xl text-blue-primary mb-2">Ship</h3>
           <p class= "font-inter">
             Learn to bundle, build, and ship your plugin. Ensure your creation
@@ -257,7 +265,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             Backstage Professional Services Partners
           </h3>
           <p class="font-inter">
-            Frontside is recognized as Professional Services Partners with
+            Frontside is recognized as a Professional Services Partner with
             Backstage and have helped companies of all sizes develop a wide
             range of solutions leveraging Plugins.
           </p>
@@ -278,7 +286,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             Early-Adopters, Highly Experienced Engineers
           </h3>
           <p class="font-inter">
-            Frontside has been using Backstage since before the. 1.0-release.
+            Frontside has been using Backstage before the 1.0-release.
             Our engineers have a wealth of experience in Backstage and Backstage
             plugins, and their underlying technologies such as React and
             Typescript.
@@ -290,8 +298,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </h3>
           <p class="font-inter">
             Frontside both independently and in collaboration with our trusted
-            partners has been at the forefront of Backstage evolution - with
-            plugins such as the Incremental Ingestion 2.0.
+            partners has been at the forefront of Backstage innovation.
           </p>
         </hgroup>
         <hgroup>
@@ -320,7 +327,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       <section class="mt-16 bg-gray-50 p-16">
         <H2 class="text-center">Trusted By</H2>
         <div class="flex justify-evenly align-center mt-16">
-          <img class="" src={logoEricsson}/>
+          <img src={logoEricsson}/>
           <img src={logoHumanitec}/>
           <img src={logoHP}/>
           <img src={logoIndeed}/>
@@ -371,6 +378,7 @@ function H2(
   },
 ): JSX.Element {
   return (
-    <h2 class={`${classes} font-black text-blue-primary text-6xl leading-none tracking-tight`}>{children}</h2>
+    <h2 class={`${classes} font-black text-blue-primary text-5xl leading-none tracking-tight`}>{children}</h2>
   );
 }
+
