@@ -10,7 +10,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
   let logoResideo = yield* url("../assets/client-logos/logo-resideo.svg");
   let logoEricsson = yield* url("../assets/client-logos/logo-ericsson.svg");
   return (
-    <article class="pt-14 text-neutral-700">
+    <article class="pt-14 text-neutral-800">
       <aside class="text-center">
         <p class="border-1 border-pink-primary text-blue-primary rounded-full inline-block text-center py-2 px-14 text-xs">
           Coming Soon!
@@ -19,8 +19,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       <aside class="text-center uppercase text-neutral-400 mt-12 font-black ">
         <p>Workshop & Training: Advanced Backstage Plugin Development</p>
       </aside>
-      <section class="mb-24 p-5 md:max-w-4xl lg:max-w-5xl m-auto text-center">
-        <h1 class="text-blue-primary text-3xl md:text-6xl lg:text-8xl tracking-[-0.04em] font-black">
+      <section class="mb-24 p-5 md:max-w-4xl lg:max-w-6xl m-auto text-center">
+        <h1 class="text-blue-primary text-3xl md:text-6xl 2xl:text-9xl tracking-[-0.04em] font-black">
           <span class="text-blue-light">Discover</span> the{" "}
           <span class="text-pink-primary">Power</span>{" "}
     of Backstage{" "}<span class="text-blue-light">Plugins!</span>
@@ -52,26 +52,28 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </div>
       </section>
       <section class="bg-gray-50 py-16">
-        <H2 class="text-center">
-          <span class="text-pink-primary">Everything</span>{" "}
-          in Backstage is a Plugin!
-        </H2>
-        <p class="font-inter text-xl text-inherit	 px-4 my-4 md:mx-auto max-w-prose text-center leading-relaxed">
-          The architecture of Backstage is ingeniously designed around plugins.
-          From the Service Catalog and Templates to the Scaffolder, Search and
-          Tech Docs are all plugins! This workshop will only equip you with the
-          skills to create and manage plugins - but start to build an
-          understanding of a core component of grand architecture underpinning
-          Backstage. Dive into our workshop, and empower yourself to shape and
-          command Backstage Plugins!
-        </p>
+        <div class="container mx-auto md:max-w-5xl">
+          <H2>
+            <span class="text-pink-primary">Everything</span>{" "}
+            in Backstage is a Plugin!
+          </H2>
+          <p class="font-inter text-xl text-inherit my-4 max-w-prose leading-relaxed">
+            The architecture of Backstage is ingeniously designed around plugins.
+            From the Service Catalog and Templates to the Scaffolder, Search and
+            Tech Docs are all plugins! This workshop will only equip you with the
+            skills to create and manage plugins - but start to build an
+            understanding of a core component of grand architecture underpinning
+            Backstage. Dive into our workshop, and empower yourself to shape and
+            command Backstage Plugins!
+          </p>
+        </div>
       </section>
-      <section class="container mx-auto text-center mt-24 px-4">
+      <section class="container mx-auto mt-24 px-4 md:max-w-5xl">
         <H2>
           Mastering Plugins: <br />{" "}
           Improve Your Internal Developer Portal Without Limitations
         </H2>
-        <p class="px-4 my-8 text-xl text-center text-inherit leading-relaxed max-w-prose mx-auto">
+        <p class="my-8 text-xl text-inherit leading-relaxed max-w-prose">
           To fully harness and customize Backstage tailored to your company's
           unique needs, a deep understanding of plugin development is
           indispensable. Without mastering plugins, you're confined to a limited
@@ -81,7 +83,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           innovation!
         </p>
       </section>
-      <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-5xl">
+      <section class="mt-24 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-5xl">
         <hgroup class="px-4">
           <h3 class="text-2xl text-blue-primary font-black">
             Confidence to Innovate
@@ -126,7 +128,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </hgroup>
         <div class="mx-4 md:m-0 bg-gray-200 h-72" />
       </section>
-      <section class="mt-24 bg-gray-50 py-8">
+      <section class="mt-24 bg-gray-50 py-24">
         <H2 class="text-center">Who is this workshop for?</H2>
 
         <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl leading-relaxed">
@@ -213,38 +215,40 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
       </section>
-      <section class="prose px-8 mt-24 mx-auto text-xl text-inherit">
-        <H2 class="text-center">What you will learn</H2>
-        <hgroup>
-          <h3>Frontend</h3>
-          <li>Create frontend components that work as a page or a card.</li>
-          <li>Create an API client for your backend API</li>
-          <li>Make the API client available via an API Ref.</li>
-          <li>Use your custom API ref in your components.</li>
-          <li>Configure your API ref using Backstage API configuration.</li>
-          <li>Customize the frontend components of a new custom kind.</li>
-        </hgroup>
-        <hgroup>
-          <h3>Catalog</h3>
-          <li>Define a new custom kind</li>
-          <li>Create a new processor that will validate your kind using Zod</li>
-          <li>Emit custom relationships using processors</li>
-        </hgroup>
-        <hgroup>
-          <h3>Backend</h3>
-          <li>
-            Create a new backend plugin using a new backend extension system.
-          </li>
-          <li>Create a REST API backend using OpenAPI specification.</li>
-          <li>
-            Generate types from OpenAPI specification.
-          </li>
-          <li>Store and Share types between frontend and backend.</li>
-          <li>Write database migrations to create a database.</li>
-          <li>Write database migrations to change the database structure.</li>
-          <li>Connect the database to the REST API</li>
-          <li>Write a backend engine that will execute pipeline monitoring.</li>
-        </hgroup>
+      <section class="py-16 mt-24 bg-gray-50">
+        <div class="prose text-xl mx-auto text-inherit leading-tight">
+          <H2 class="text-center">What you will learn</H2>
+          <hgroup>
+            <h3>Frontend</h3>
+            <li>Create frontend components that work as a page or a card.</li>
+            <li>Create an API client for your backend API</li>
+            <li>Make the API client available via an API Ref.</li>
+            <li>Use your custom API ref in your components.</li>
+            <li>Configure your API ref using Backstage API configuration.</li>
+            <li>Customize the frontend components of a new custom kind.</li>
+          </hgroup>
+          <hgroup>
+            <h3>Catalog</h3>
+            <li>Define a new custom kind</li>
+            <li>Create a new processor that will validate your kind using Zod</li>
+            <li>Emit custom relationships using processors</li>
+          </hgroup>
+          <hgroup>
+            <h3>Backend</h3>
+            <li>
+              Create a new backend plugin using a new backend extension system.
+            </li>
+            <li>Create a REST API backend using OpenAPI specification.</li>
+            <li>
+              Generate types from OpenAPI specification.
+            </li>
+            <li>Store and Share types between frontend and backend.</li>
+            <li>Write database migrations to create a database.</li>
+            <li>Write database migrations to change the database structure.</li>
+            <li>Connect the database to the REST API</li>
+            <li>Write a backend engine that will execute pipeline monitoring.</li>
+          </hgroup>
+        </div>
       </section>
       <H2 class="text-center mt-16">Workshop Instructors</H2>
       <section class="mt-24 px-8 md:mt-16 md:grid md:grid-cols-2 gap-x-24 gap-y-8 md:mx-auto md:max-w-5xl">
@@ -367,6 +371,6 @@ function H2(
   },
 ): JSX.Element {
   return (
-    <h2 class={`${classes} font-black text-blue-primary text-4_5xl leading-none`}>{children}</h2>
+    <h2 class={`${classes} font-black text-blue-primary text-6xl leading-none tracking-tight`}>{children}</h2>
   );
 }
