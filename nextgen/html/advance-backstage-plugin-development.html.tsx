@@ -10,13 +10,13 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
   let logoResideo = yield* url("../assets/client-logos/logo-resideo.svg");
   let logoEricsson = yield* url("../assets/client-logos/logo-ericsson.svg");
   return (
-    <article class="pt-14">
+    <article class="pt-14 text-neutral-400">
       <aside class="text-center">
         <p class="border-1 border-pink-primary text-blue-primary rounded-full inline-block text-center py-2 px-14 text-xs">
           Coming Soon!
         </p>
       </aside>
-      <aside class="text-center uppercase text-slate-400 mt-12 font-black">
+      <aside class="text-center uppercase text-neutral-400 mt-12 font-black ">
         <p>Workshop & Training: Advanced Backstage Plugin Development</p>
       </aside>
       <section class="mb-24 p-5 md:max-w-4xl lg:max-w-5xl m-auto text-center">
@@ -44,7 +44,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </a>
         <script src="//embed.typeform.com/next/embed.js"></script>
         <div class="flex justify-evenly align-center mt-16">
-          <img class="" src={logoEricsson}/>
+          <img src={logoEricsson}/>
           <img src={logoHumanitec}/>
           <img src={logoHP}/>
           <img src={logoIndeed}/>
@@ -56,7 +56,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <span class="text-pink-primary">Everything</span>{" "}
           in Backstage is a Plugin!
         </H2>
-        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl text-center">
+        <p class="font-inter text-xl text-inherit	 px-4 my-4 md:mx-auto max-w-prose text-center leading-relaxed">
           The architecture of Backstage is ingeniously designed around plugins.
           From the Service Catalog and Templates to the Scaffolder, Search and
           Tech Docs are all plugins! This workshop will only equip you with the
@@ -66,12 +66,12 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           command Backstage Plugins!
         </p>
       </section>
-      <section class="mt-8 text-center">
+      <section class="container mx-auto text-center mt-24 px-4">
         <H2>
           Mastering Plugins: <br />{" "}
           Improve Your Internal Developer Portal Without Limitations
         </H2>
-        <p class="px-4 my-8 text-xl md:mx-auto md:max-w-3xl">
+        <p class="px-4 my-8 text-xl text-center text-inherit leading-relaxed max-w-prose mx-auto">
           To fully harness and customize Backstage tailored to your company's
           unique needs, a deep understanding of plugin development is
           indispensable. Without mastering plugins, you're confined to a limited
@@ -81,12 +81,12 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           innovation!
         </p>
       </section>
-      <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-4xl">
+      <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-5xl">
         <hgroup class="px-4">
           <h3 class="text-2xl text-blue-primary font-black">
             Confidence to Innovate
           </h3>
-          <p class="py-4 text-l">
+          <p class="py-4 text-l font-inter text-inherit	leading-relaxed">
             Grasping the intricacies of plugins doesn't just give you a
             technical advantage—it fuels your creativity. With this newfound
             knowledge, you'll confidently design and implement complex features
@@ -96,10 +96,10 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </hgroup>
         <div class="mx-4 md:m-0 bg-gray-200 h-72" />
       </section>
-      <section class="mt-12 m-auto md:grid md:grid-cols-2 gap-24 md:max-w-4xl items-center md:text-right">
+      <section class="mt-12 m-auto md:grid md:grid-cols-2 gap-24 md:max-w-5xl items-center md:text-right">
         <hgroup class="px-4 order-1">
           <h3 class="text-2xl text-blue-primary font-black">Deepen your understanding of Backstage Architecture</h3>
-          <p class="py-4 text-1">
+          <p class="py-4 text-1 font-inter text-inherit	leading-relaxed">
             Beyond mere plugin creation, understanding plugins is synonymous
             with unraveling the core of Backstage's architecture. These are not
             just tools; they're the fundamental building blocks that shape
@@ -110,12 +110,12 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </hgroup>
         <div class="mx-4 md:m-0 bg-gray-200 h-72" />
       </section>
-      <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-4xl">
+      <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-5xl">
         <hgroup class="px-4">
           <h3 class="text-2xl text-blue-primary font-black">
             Harness the Network Effect of Knowledge
           </h3>
-          <p class="py-4 text-l">
+          <p class="py-4 text-l font-inter text-inherit leading-relaxed">
             Learning in isolation has its limits. This workshop emphasizes
             collaborative learning, encouraging you to connect, discuss, and
             share insights with fellow developers. By networking your knowledge,
@@ -126,17 +126,17 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </hgroup>
         <div class="mx-4 md:m-0 bg-gray-200 h-72" />
       </section>
-      <section class="mt-8 bg-gray-50 py-8">
+      <section class="mt-24 bg-gray-50 py-8">
         <H2 class="text-center">Who is this workshop for?</H2>
 
-        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl">
+        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl leading-relaxed">
           <strong>Experienced Backstage Developer:</strong>{" "}
           If you've already dabbled in Backstage and built a foundational
           understanding, but feel there's more to explore—especially in plugin
           development—this workshop is your next step. We're here to refine your
           skills and elevate your mastery.
         </p>
-        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl">
+        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl leading-relaxed">
           <strong>Developers Seeking Direction:</strong>{" "}
           Perhaps you haven't ventured into creating a Backstage plugin yet, If
           the term 'plugin' sounds daunting or if you’re unsure where to begin,
@@ -144,24 +144,24 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           Think of this as a guided tour, ensuring you never feel lost, and
           always feel empowered to ask, learn, and grow.
         </p>
-        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl">
+        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl leading-relaxed">
           <strong>Teams with Aspirations:</strong>{" "}
           For teams eager to amplify their collective proficiency, this workshop
           is a goldmine. Equip your developer suite with the confidence and
           competence to craft sophisticated plugins, fostering a harmonized and
           empowered team environment.
         </p>
-        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl">
+        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl leading-relaxed">
           <strong>Everyone Eager to Learn:</strong>{" "}
           Whether you’re a seasoned developer, a newbie, or someone in between,
           if you have the zeal to learn, we have the insights to share. Join us,
           and let’s embark on this enlightening journey together.
         </p>
       </section>
-      <section class="mt-8">
+      <section class="mt-24">
         <H2 class="text-center">What you will build</H2>
-        <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl">
-          <strong class="block text-center">Pipeline Monitor Plugin</strong>
+        <p class="text-xl px-4 font-inter my-8 md:mx-auto max-w-prose leading-relaxed">
+          <strong class="block text-2xl text-center">Pipeline Monitor Plugin</strong>
 
           In this workshop, we’ll build a Pipeline Monitor plugin to pull
           information from external services and aggregate that information in a
@@ -177,10 +177,10 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           that will show information from the database.
         </p>
       </section>
-      <section class="mt-8 px-8 md:mt-16 md:grid md:grid-cols-2 gap-8 md:mx-auto md:max-w-5xl">
+      <section class="mt-24 px-8 md:mt-16 md:grid md:grid-cols-2 gap-8 md:mx-auto md:max-w-5xl">
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-primary mb-4">Design</h3>
-          <p>
+          <h3 class="font-bold text-xl text-blue-primary mb-2">Design</h3>
+          <p class= "font-inter">
             Dive into custom frontend components tailored for Backstage's APIs.
             Learn the boundaries between React and Backstage APIs, ensuring
             components are efficient and interactive. Understand the vital link
@@ -188,8 +188,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-primary mb-4">Build</h3>
-          <p>
+          <h3 class="font-bold text-xl text-blue-primary mb-2">Build</h3>
+          <p class= "font-inter">
             Navigate the creation of a robust backend. Design and deploy a
             specialized database for your plugin, ensuring optimal data flow
             between frontend and backend. Master the intricacies of seamless
@@ -197,23 +197,23 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-primary mb-4">Test</h3>
-          <p>
+          <h3 class="font-bold text-xl text-blue-primary mb-2">Test</h3>
+          <p class= "font-inter">
             Embrace the importance of rigorous plugin testing. Uncover best
             practices to identify and rectify vulnerabilities, ensuring your
             plugin meets the highest quality benchmarks.
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-primary mb-4">Ship</h3>
-          <p>
+          <h3 class="font-bold text-xl text-blue-primary mb-2">Ship</h3>
+          <p class= "font-inter">
             Learn to bundle, build, and ship your plugin. Ensure your creation
             is packaged for easy integration, sharing your innovation internally
             or with the broader Backstage community.
           </p>
         </hgroup>
       </section>
-      <section class="prose px-8 mt-16 mx-auto">
+      <section class="prose px-8 mt-24 mx-auto text-xl text-inherit">
         <H2 class="text-center">What you will learn</H2>
         <hgroup>
           <h3>Frontend</h3>
@@ -237,9 +237,9 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </li>
           <li>Create a REST API backend using OpenAPI specification.</li>
           <li>
-            Generate types from OpenAPI specification and store in package
-            shared by frontend and backend
+            Generate types from OpenAPI specification.
           </li>
+          <li>Store and Share types between frontend and backend.</li>
           <li>Write database migrations to create a database.</li>
           <li>Write database migrations to change the database structure.</li>
           <li>Connect the database to the REST API</li>
@@ -247,22 +247,22 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </hgroup>
       </section>
       <H2 class="text-center mt-16">Workshop Instructors</H2>
-      <section class="mt-8 px-8 md:mt-16 md:grid md:grid-cols-2 gap-8 md:mx-auto md:max-w-5xl">
+      <section class="mt-24 px-8 md:mt-16 md:grid md:grid-cols-2 gap-x-24 gap-y-8 md:mx-auto md:max-w-5xl">
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-primary mb-4">
+          <h3 class="font-bold text-xl text-blue-primary mb-1">
             Backstage Professional Services Partners
           </h3>
-          <p>
+          <p class="font-inter">
             Frontside is recognized as Professional Services Partners with
             Backstage and have helped companies of all sizes develop a wide
             range of solutions leveraging Plugins.
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-primary mb-4">
+          <h3 class="font-bold text-xl text-blue-primary mb-1">
             Enterprise Level Backstage Experience
           </h3>
-          <p>
+          <p class="font-inter">
             Frontside has worked with some of the largest Enterprise companies
             with extremely complex, data models, and requirements for their
             plugins and overall system of plugins. We build plugins that can can
@@ -270,10 +270,10 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-primary mb-4">
+          <h3 class="font-bold text-xl text-blue-primary mb-1">
             Early-Adopters, Highly Experienced Engineers
           </h3>
-          <p>
+          <p class="font-inter">
             Frontside has been using Backstage since before the. 1.0-release.
             Our engineers have a wealth of experience in Backstage and Backstage
             plugins, and their underlying technologies such as React and
@@ -281,30 +281,30 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-primary mb-4">
+          <h3 class="font-bold text-xl text-blue-primary mb-1">
             Pioneering the Backstage Ecosystem
           </h3>
-          <p>
+          <p class="font-inter">
             Frontside both independently and in collaboration with our trusted
             partners has been at the forefront of Backstage evolution - with
             plugins such as the Incremental Ingestion 2.0.
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-primary mb-4">
+          <h3 class="font-bold text-xl text-blue-primary mb-1">
             Core Contributors
           </h3>
-          <p>
+          <p class="font-inter">
             Frontside has been diligently studying the core mechanics, and where
             applicable have contribution code to both the core and by creating
             plugins to enhance core and overall functionality.
           </p>
         </hgroup>
         <hgroup>
-          <h3 class="font-bold text-lg text-blue-primary mb-4">
+          <h3 class="font-bold text-xl text-blue-primary mb-1">
             Engaged and Invested Community Members
           </h3>
-          <p>
+          <p class="font-inter">
             Proactive members of various Special Interest Groups, actively
             engage on the community Discord, and are regular attendees of
             Community and Contributor Backstage Sessions. Frontside’s commitment
@@ -323,7 +323,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <img src={logoResideo}/>
         </div>
       </section>
-      <section class="mt-16 px-8 md:px-16">
+      <section class="mt-24 px-8 md:px-16">
         <H2 class="text-center">What our clients say</H2>
         <blockquote class="mt-8 italic">
           "The Frontside developers have an incredibly high level of
@@ -367,6 +367,6 @@ function H2(
   },
 ): JSX.Element {
   return (
-    <h2 class={`${classes} font-black text-blue-primary text-4xl`}>{children}</h2>
+    <h2 class={`${classes} font-black text-blue-primary text-4_5xl leading-none`}>{children}</h2>
   );
 }
