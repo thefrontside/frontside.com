@@ -26,6 +26,7 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="stylesheet" href="https://use.typekit.net/ugs0ewy.css" />
+        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet"></link>
         <link rel="icon" href={logoNoText} />
         <link rel="canonical" href={siteURL} />
         <link rel="alternate" href={siteURL} hreflang="en" />

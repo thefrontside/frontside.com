@@ -28,6 +28,9 @@ function presetFrontside() {
         },
         boxShadow: {
           "blue-box": '0px 18px 50px 0px rgba(53, 113, 185, 0.25)',
+        },
+        fontSize: {
+          "4_5xl": '2.5rem'
         }
       }
     }
@@ -40,6 +43,7 @@ const config = defineConfig({
   theme: {
     fontFamily: {
       sans: ["Proxima Nova", "proxima-nova", "sans-serif"],
+      inter: ["Inter", "inter", "san-serif"]
     },
   },
 });
