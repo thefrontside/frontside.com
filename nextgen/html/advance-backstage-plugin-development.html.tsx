@@ -52,7 +52,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </div>
       </section>
       <section class="bg-gray-50 py-16">
-        <div class="container mx-auto md:max-w-5xl">
+        <header class="container mx-auto md:max-w-5xl">
           <H2 class="text-center">
             <span class="text-pink-primary">Everything</span>{" "}
             in Backstage is a Plugin!
@@ -66,7 +66,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             Backstage. Dive into our workshop, and empower yourself to shape and
             command Backstage Plugins!
           </p>
-        </div>
+        </header>
       </section>
       <section class="container mx-auto mt-24 px-4 md:max-w-5xl">
         <H2>
@@ -84,7 +84,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </p>
       </section>
       <section class="mt-24 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-5xl">
-        <hgroup class="px-4">
+        <div class="px-4">
           <h3 class="text-2xl text-blue-primary font-black">
             Confidence to Innovate
           </h3>
@@ -95,11 +95,11 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             and functionalities, turning your innovative ideas into tangible
             results.
           </p>
-        </hgroup>
+        </div>
         <div class="mx-4 md:m-0 bg-gray-200 h-72" />
       </section>
       <section class="mt-12 m-auto md:grid md:grid-cols-2 gap-24 md:max-w-5xl items-center md:text-right">
-        <hgroup class="px-4 order-1">
+        <div class="px-4 order-1">
           <h3 class="text-2xl text-blue-primary font-black">Deepen your understanding of Backstage Architecture</h3>
           <p class="py-4 text-1 font-inter text-inherit	leading-relaxed">
             Beyond mere plugin creation, understanding plugins is synonymous
@@ -109,11 +109,11 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             expand your comprehension of how the entire Backstage system is
             meticulously orchestrated.
           </p>
-        </hgroup>
+        </div>
         <div class="mx-4 md:m-0 bg-gray-200 h-72" />
       </section>
       <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-5xl">
-        <hgroup class="px-4">
+        <div class="px-4">
           <h3 class="text-2xl text-blue-primary font-black">
             Harness the Network Effect of Knowledge
           </h3>
@@ -125,7 +125,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             learning experience and fostering a community of Backstage
             enthusiasts.
           </p>
-        </hgroup>
+        </div>
         <div class="mx-4 md:m-0 bg-gray-200 h-72" />
       </section>
       <section class="mt-24 bg-gray-50 py-24">
@@ -180,7 +180,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </p>
       </section>
       <section class="mt-24 px-8 md:mt-16 md:grid md:grid-cols-2 gap-8 md:mx-auto md:max-w-5xl">
-        <hgroup>
+        <div>
           <div class="flex mt-1 items-center bg-blue-primary rounded-full p-2 w-8 h-8">
             <svg class="stroke-white" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
           </div>
@@ -193,8 +193,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
               between frontend design and the plugin backend.
             </p>
           </div>
-        </hgroup>
-        <hgroup>
+        </div>
+        <div>
           <h3 class="font-bold text-xl text-blue-primary mb-2">Build</h3>
           <p class= "font-inter">
             Navigate the creation of a robust backend. Design and deploy a
@@ -202,16 +202,16 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             between frontend and backend. Master the intricacies of seamless
             data storage and retrieval.
           </p>
-        </hgroup>
-        <hgroup>
+        </div>
+        <div>
           <h3 class="font-bold text-xl text-blue-primary mb-2">Test</h3>
           <p class= "font-inter">
             Embrace the importance of rigorous plugin testing. Uncover best
             practices to identify and rectify vulnerabilities, ensuring your
             plugin meets the highest quality benchmarks.
           </p>
-        </hgroup>
-        <hgroup>
+        </div>
+        <div>
           <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
           <svg viewBox="0 0 24 24" class="text-white" astro-icon="bx:bxs-briefcase"><path fill="currentColor" d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v3h20V8c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm5 10h-4v-2H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-8v2z"></path></svg>
           </div>
@@ -221,12 +221,12 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             is packaged for easy integration, sharing your innovation internally
             or with the broader Backstage community.
           </p>
-        </hgroup>
+        </div>
       </section>
       <section class="py-16 mt-24 bg-gray-50">
         <div class="prose text-xl mx-auto text-inherit leading-tight">
           <H2 class="text-center">What you will learn</H2>
-          <hgroup>
+          <div>
             <h3>Frontend</h3>
             <li>Create frontend components that work as a page or a card.</li>
             <li>Create an API client for your backend API</li>
@@ -234,14 +234,14 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             <li>Use your custom API ref in your components.</li>
             <li>Configure your API ref using Backstage API configuration.</li>
             <li>Customize the frontend components of a new custom kind.</li>
-          </hgroup>
-          <hgroup>
+          </div>
+          <div>
             <h3>Catalog</h3>
             <li>Define a new custom kind</li>
             <li>Create a new processor that will validate your kind using Zod</li>
             <li>Emit custom relationships using processors</li>
-          </hgroup>
-          <hgroup>
+          </div>
+          <div>
             <h3>Backend</h3>
             <li>
               Create a new backend plugin using a new backend extension system.
@@ -255,12 +255,12 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             <li>Write database migrations to change the database structure.</li>
             <li>Connect the database to the REST API</li>
             <li>Write a backend engine that will execute pipeline monitoring.</li>
-          </hgroup>
+          </div>
         </div>
       </section>
       <H2 class="text-center mt-16">Workshop Instructors</H2>
       <section class="mt-24 px-8 md:mt-16 md:grid md:grid-cols-2 gap-x-24 gap-y-8 md:mx-auto md:max-w-5xl">
-        <hgroup>
+        <div>
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Backstage Professional Services Partners
           </h3>
@@ -269,8 +269,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             Backstage and have helped companies of all sizes develop a wide
             range of solutions leveraging Plugins.
           </p>
-        </hgroup>
-        <hgroup>
+        </div>
+        <div>
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Enterprise Level Backstage Experience
           </h3>
@@ -280,8 +280,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             plugins and overall system of plugins. We build plugins that can can
             to Enterprise.
           </p>
-        </hgroup>
-        <hgroup>
+        </div>
+        <div>
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Early-Adopters, Highly Experienced Engineers
           </h3>
@@ -291,8 +291,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             plugins, and their underlying technologies such as React and
             Typescript.
           </p>
-        </hgroup>
-        <hgroup>
+        </div>
+        <div>
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Pioneering the Backstage Ecosystem
           </h3>
@@ -300,8 +300,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             Frontside both independently and in collaboration with our trusted
             partners has been at the forefront of Backstage innovation.
           </p>
-        </hgroup>
-        <hgroup>
+        </div>
+        <div>
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Core Contributors
           </h3>
@@ -310,8 +310,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             applicable have contribution code to both the core and by creating
             plugins to enhance core and overall functionality.
           </p>
-        </hgroup>
-        <hgroup>
+        </div>
+        <div>
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Engaged and Invested Community Members
           </h3>
@@ -322,7 +322,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             isn't just superficial; they are genuinely invested in uplifting and
             supporting fellow community members.
           </p>
-        </hgroup>
+        </div>
       </section>
       <section class="mt-16 bg-gray-50 p-16">
         <H2 class="text-center">Trusted By</H2>
