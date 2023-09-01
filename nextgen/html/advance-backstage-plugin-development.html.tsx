@@ -180,13 +180,13 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </p>
       </section>
       <section class="mt-24 px-8 md:mt-16 md:grid md:grid-cols-2 gap-8 md:mx-auto md:max-w-5xl">
-        <div>
-          <div class="flex mt-1 items-center bg-blue-primary rounded-full p-2 w-8 h-8">
-            <svg class="stroke-white" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+        <div class="flex">
+          <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8">
+            <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
           </div>
-          <div>
-            <h3 class="font-bold text-xl text-blue-primary mb-2">Design</h3>
-            <p class= "">
+          <div class="pt-1 pl-2">
+            <h3 class="font-bold text-xl text-blue-primary mb-1">Design</h3>
+            <p>
               Dive into custom frontend components tailored for Backstage's APIs.
               Learn the boundaries between React and Backstage APIs, ensuring
               components are efficient and interactive. Understand the vital link
@@ -194,33 +194,45 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             </p>
           </div>
         </div>
-        <div>
-          <h3 class="font-bold text-xl text-blue-primary mb-2">Build</h3>
-          <p class= "">
-            Navigate the creation of a robust backend. Design and deploy a
-            specialized database for your plugin, ensuring optimal data flow
-            between frontend and backend. Master the intricacies of seamless
-            data storage and retrieval.
-          </p>
-        </div>
-        <div>
-          <h3 class="font-bold text-xl text-blue-primary mb-2">Test</h3>
-          <p class= "">
-            Embrace the importance of rigorous plugin testing. Uncover best
-            practices to identify and rectify vulnerabilities, ensuring your
-            plugin meets the highest quality benchmarks.
-          </p>
-        </div>
-        <div>
-          <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <svg viewBox="0 0 24 24" class="text-white" astro-icon="bx:bxs-briefcase"><path fill="currentColor" d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v3h20V8c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm5 10h-4v-2H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-8v2z"></path></svg>
+        <div class="flex">
+          <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8">
+              <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
           </div>
-          <h3 class="font-bold text-xl text-blue-primary mb-2">Ship</h3>
-          <p class= "">
-            Learn to bundle, build, and ship your plugin. Ensure your creation
-            is packaged for easy integration, sharing your innovation internally
-            or with the broader Backstage community.
-          </p>
+          <div class="pt-1 pl-2">
+            <h3 class="font-bold text-xl text-blue-primary mb-1">Build</h3>
+            <p>
+              Navigate the creation of a robust backend. Design and deploy a
+              specialized database for your plugin, ensuring optimal data flow
+              between frontend and backend. Master the intricacies of seamless
+              data storage and retrieval.
+            </p>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
+            <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+          </div>
+          <div class="pt-1 pl-2">
+            <h3 class="font-bold text-xl text-blue-primary mb-2">Test</h3>
+            <p>
+              Embrace the importance of rigorous plugin testing. Uncover best
+              practices to identify and rectify vulnerabilities, ensuring your
+              plugin meets the highest quality benchmarks.
+            </p>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
+            <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+          </div>
+          <div class="pt-1 pl-2">
+            <h3 class="font-bold text-xl text-blue-primary mb-1">Ship</h3>
+            <p>
+              Learn to bundle, build, and ship your plugin. Ensure your creation
+              is packaged for easy integration, sharing your innovation internally
+              or with the broader Backstage community.
+            </p>
+          </div>
         </div>
       </section>
       <section class="py-16 mt-24 bg-gray-50">
@@ -264,7 +276,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Backstage Professional Services Partners
           </h3>
-          <p class="">
+          <p>
             Frontside is recognized as a Professional Services Partner with
             Backstage and have helped companies of all sizes develop a wide
             range of solutions leveraging Plugins.
@@ -274,7 +286,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Enterprise Level Backstage Experience
           </h3>
-          <p class="">
+          <p>
             Frontside has worked with some of the largest Enterprise companies
             with extremely complex, data models, and requirements for their
             plugins and overall system of plugins. We build plugins that can can
@@ -285,7 +297,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Early-Adopters, Highly Experienced Engineers
           </h3>
-          <p class="">
+          <p>
             Frontside has been using Backstage before the 1.0-release.
             Our engineers have a wealth of experience in Backstage and Backstage
             plugins, and their underlying technologies such as React and
@@ -296,7 +308,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Pioneering the Backstage Ecosystem
           </h3>
-          <p class="">
+          <p>
             Frontside both independently and in collaboration with our trusted
             partners has been at the forefront of Backstage innovation.
           </p>
@@ -305,7 +317,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Core Contributors
           </h3>
-          <p class="">
+          <p>
             Frontside has been diligently studying the core mechanics, and where
             applicable have contribution code to both the core and by creating
             plugins to enhance core and overall functionality.
@@ -315,7 +327,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Engaged and Invested Community Members
           </h3>
-          <p class="">
+          <p>
             Proactive members of various Special Interest Groups, actively
             engage on the community Discord, and are regular attendees of
             Community and Contributor Backstage Sessions. Frontside’s commitment
