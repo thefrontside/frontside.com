@@ -57,7 +57,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             <span class="text-pink-primary">Everything</span>{" "}
             in Backstage is a Plugin!
           </H2>
-          <p class="font-inter text-xl text-center mx-auto text-inherit my-4 max-w-prose leading-relaxed">
+          <p class=" text-xl text-center mx-auto text-inherit my-4 max-w-prose leading-relaxed">
             The architecture of Backstage is ingeniously designed around plugins.
             From the Service Catalog and Templates to the Scaffolder, Search and
             Tech Docs are all plugins! This workshop will only equip you with the
@@ -88,7 +88,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="text-2xl text-blue-primary font-black">
             Confidence to Innovate
           </h3>
-          <p class="py-4 text-l font-inter text-inherit	leading-relaxed">
+          <p class="py-4 text-l  text-inherit	leading-relaxed">
             Grasping the intricacies of plugins doesn't just give you a
             technical advantage—it fuels your creativity. With this newfound
             knowledge, you'll confidently design and implement complex features
@@ -101,7 +101,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       <section class="mt-12 m-auto md:grid md:grid-cols-2 gap-24 md:max-w-5xl items-center md:text-right">
         <div class="px-4 order-1">
           <h3 class="text-2xl text-blue-primary font-black">Deepen your understanding of Backstage Architecture</h3>
-          <p class="py-4 text-1 font-inter text-inherit	leading-relaxed">
+          <p class="py-4 text-1  text-inherit	leading-relaxed">
             Beyond mere plugin creation, understanding plugins is synonymous
             with unraveling the core of Backstage's architecture. These are not
             just tools; they're the fundamental building blocks that shape
@@ -117,7 +117,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="text-2xl text-blue-primary font-black">
             Harness the Network Effect of Knowledge
           </h3>
-          <p class="py-4 text-l font-inter text-inherit leading-relaxed">
+          <p class="py-4 text-l  text-inherit leading-relaxed">
             Learning in isolation has its limits. This workshop emphasizes
             collaborative learning, encouraging you to connect, discuss, and
             share insights with fellow developers. By networking your knowledge,
@@ -162,7 +162,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-24">
         <H2 class="text-center">What you will build</H2>
-        <p class="text-xl px-4 font-inter my-8 md:mx-auto max-w-prose leading-relaxed">
+        <p class="text-xl px-4  my-8 md:mx-auto max-w-prose leading-relaxed">
           <strong class="block text-2xl text-center">Pipeline Monitor Plugin</strong>
 
           In this workshop, we’ll build a Pipeline Monitor plugin to pull
@@ -186,7 +186,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </div>
           <div>
             <h3 class="font-bold text-xl text-blue-primary mb-2">Design</h3>
-            <p class= "font-inter">
+            <p class= "">
               Dive into custom frontend components tailored for Backstage's APIs.
               Learn the boundaries between React and Backstage APIs, ensuring
               components are efficient and interactive. Understand the vital link
@@ -196,7 +196,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </div>
         <div>
           <h3 class="font-bold text-xl text-blue-primary mb-2">Build</h3>
-          <p class= "font-inter">
+          <p class= "">
             Navigate the creation of a robust backend. Design and deploy a
             specialized database for your plugin, ensuring optimal data flow
             between frontend and backend. Master the intricacies of seamless
@@ -205,7 +205,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </div>
         <div>
           <h3 class="font-bold text-xl text-blue-primary mb-2">Test</h3>
-          <p class= "font-inter">
+          <p class= "">
             Embrace the importance of rigorous plugin testing. Uncover best
             practices to identify and rectify vulnerabilities, ensuring your
             plugin meets the highest quality benchmarks.
@@ -216,7 +216,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <svg viewBox="0 0 24 24" class="text-white" astro-icon="bx:bxs-briefcase"><path fill="currentColor" d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v3h20V8c0-1.103-.897-2-2-2zM9 4h6v2H9V4zm5 10h-4v-2H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-8v2z"></path></svg>
           </div>
           <h3 class="font-bold text-xl text-blue-primary mb-2">Ship</h3>
-          <p class= "font-inter">
+          <p class= "">
             Learn to bundle, build, and ship your plugin. Ensure your creation
             is packaged for easy integration, sharing your innovation internally
             or with the broader Backstage community.
@@ -264,7 +264,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Backstage Professional Services Partners
           </h3>
-          <p class="font-inter">
+          <p class="">
             Frontside is recognized as a Professional Services Partner with
             Backstage and have helped companies of all sizes develop a wide
             range of solutions leveraging Plugins.
@@ -274,7 +274,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Enterprise Level Backstage Experience
           </h3>
-          <p class="font-inter">
+          <p class="">
             Frontside has worked with some of the largest Enterprise companies
             with extremely complex, data models, and requirements for their
             plugins and overall system of plugins. We build plugins that can can
@@ -285,7 +285,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Early-Adopters, Highly Experienced Engineers
           </h3>
-          <p class="font-inter">
+          <p class="">
             Frontside has been using Backstage before the 1.0-release.
             Our engineers have a wealth of experience in Backstage and Backstage
             plugins, and their underlying technologies such as React and
@@ -296,7 +296,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Pioneering the Backstage Ecosystem
           </h3>
-          <p class="font-inter">
+          <p class="">
             Frontside both independently and in collaboration with our trusted
             partners has been at the forefront of Backstage innovation.
           </p>
@@ -305,7 +305,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Core Contributors
           </h3>
-          <p class="font-inter">
+          <p class="">
             Frontside has been diligently studying the core mechanics, and where
             applicable have contribution code to both the core and by creating
             plugins to enhance core and overall functionality.
@@ -315,7 +315,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="font-bold text-xl text-blue-primary mb-1">
             Engaged and Invested Community Members
           </h3>
-          <p class="font-inter">
+          <p class="">
             Proactive members of various Special Interest Groups, actively
             engage on the community Discord, and are regular attendees of
             Community and Contributor Backstage Sessions. Frontside’s commitment
