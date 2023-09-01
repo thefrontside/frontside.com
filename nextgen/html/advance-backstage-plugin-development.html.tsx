@@ -38,7 +38,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           data-tf-medium="snippet"
           id="signup-for-workshop"
           href="#"
-          class="inline-block mt-16 text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          class="inline-block mt-16 text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
         >
           Signup for Waitlist
         </a>
@@ -272,15 +272,20 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <H2 class="text-center mt-16">Workshop Instructors</H2>
       <section class="mt-24 px-8 md:mt-16 md:grid md:grid-cols-2 gap-x-24 gap-y-8 md:mx-auto md:max-w-5xl">
-        <div>
-          <h3 class="font-bold text-xl text-blue-primary mb-1">
-            Backstage Professional Services Partners
-          </h3>
-          <p>
-            Frontside is recognized as a Professional Services Partner with
-            Backstage and have helped companies of all sizes develop a wide
-            range of solutions leveraging Plugins.
-          </p>
+        <div class="flex">
+            <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
+              <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+            </div>
+          <div>
+            <h3 class="font-bold text-xl text-blue-primary mb-1">
+              Backstage Professional Services Partners
+            </h3>
+            <p>
+              Frontside is recognized as a Professional Services Partner with
+              Backstage and have helped companies of all sizes develop a wide
+              range of solutions leveraging Plugins.
+            </p>
+          </div>
         </div>
         <div>
           <h3 class="font-bold text-xl text-blue-primary mb-1">
@@ -374,7 +379,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           data-tf-medium="snippet"
           id="signup-for-workshop"
           href="#"
-          class="inline-block mt-16 text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          class="inline-block mt-16 text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
         >
           Signup for Waitlist Today
         </a>
