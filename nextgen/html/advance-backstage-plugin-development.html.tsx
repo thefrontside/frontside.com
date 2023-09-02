@@ -276,7 +276,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
               <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
             </div>
-          <div>
+          <div class="pt-1 pl-2">
             <h3 class="font-bold text-xl text-blue-primary mb-1">
               Backstage Professional Services Partners
             </h3>
@@ -291,7 +291,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
             <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
           </div>
-          <div>
+          <div class="pt-1 pl-2">
             <h3 class="font-bold text-xl text-blue-primary mb-1">
               Enterprise Level Backstage Experience
             </h3>
@@ -307,7 +307,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
             <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
           </div>
-          <div>
+          <div class="pt-1 pl-2">
             <h3 class="font-bold text-xl text-blue-primary mb-1">
               Early-Adopters, Highly Experienced Engineers
             </h3>
@@ -323,7 +323,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
             <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
           </div>
-          <div>
+          <div class="pt-1 pl-2">
             <h3 class="font-bold text-xl text-blue-primary mb-1">
               Pioneering the Backstage Ecosystem
             </h3>
@@ -338,7 +338,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
               <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
             </div>
-            <div>
+            <div class="pt-1 pl-2">
               <h3 class="font-bold text-xl text-blue-primary mb-1">
                 Core Contributors
               </h3>
@@ -354,7 +354,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
             <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
           </div>
-          <div>
+          <div class="pt-1 pl-2">
             <h3 class="font-bold text-xl text-blue-primary mb-1">
               Engaged and Invested Community Members
             </h3>
