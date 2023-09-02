@@ -16,16 +16,16 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           Coming Soon!
         </p>
       </aside>
-      <aside class="text-center uppercase text-neutral-400 mt-12 font-black ">
+      <aside class="p-4 text-center uppercase text-neutral-500 mt-4">
         <p>Workshop & Training: Advanced Backstage Plugin Development</p>
       </aside>
-      <section class="mb-24 p-5 md:max-w-4xl lg:max-w-6xl m-auto text-center">
-        <h1 class="text-blue-primary text-4xl sm:text-5xl lg:text-6xl xl:text-8xl tracking-[-0.04em] font-black">
+      <section class="mb-8 p-5 md:max-w-4xl lg:max-w-6xl m-auto text-center">
+        <h1 class="text-blue-primary text-4xl md:text-6xl lg:text-6xl xl:text-8xl tracking-[-0.04em] font-black">
           <span class="text-blue-light">Discover</span> the{" "}
           <span class="text-pink-primary">Power</span>{" "}
     of Backstage{" "}<span class="text-blue-light">Plugins!</span>
         </h1>
-        <p class="mt-6 tracking-wide text-xl text-blue-primary">
+        <p class="mt-6 mb-12 tracking-wide text-xl text-blue-primary">
           Master the Art of Advanced Plugin Development with our Comprehensive
           Workshop
         </p>
@@ -38,26 +38,26 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           data-tf-medium="snippet"
           id="signup-for-workshop"
           href="#"
-          class="inline-block mt-16 text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
+          class="inline-block text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
         >
           Signup for Waitlist
         </a>
         <script src="//embed.typeform.com/next/embed.js"></script>
-        <div class="flex justify-evenly align-center mt-16">
-          <img src={logoEricsson}/>
-          <img src={logoHumanitec}/>
-          <img src={logoHP}/>
-          <img src={logoIndeed}/>
-          <img src={logoResideo}/>
+        <div class="flex flex-col gap-0 px-28 mt-12 justify-evenly align-center">
+          <img class="h-16" src={logoEricsson}/>
+          <img class="h-16" src={logoHumanitec}/>
+          <img class="p-2 h-16" src={logoHP}/>
+          <img class="p-2 h-16" src={logoIndeed}/>
+          <img class="h-16" src={logoResideo}/>
         </div>
       </section>
-      <section class="bg-gray-50 py-16">
+      <section class="p-4 bg-gray-50 py-16">
         <header class="container mx-auto md:max-w-5xl">
           <H2 class="text-center">
             <span class="text-pink-primary">Everything</span>{" "}
             in Backstage is a Plugin!
           </H2>
-          <p class=" text-xl text-center mx-auto text-inherit my-4 max-w-prose leading-relaxed">
+          <p class=" text-lg text-center mx-auto text-inherit my-4 max-w-prose leading-relaxed">
             The architecture of Backstage is ingeniously designed around plugins.
             From the Service Catalog and Templates to the Scaffolder, Search and
             Tech Docs are all plugins! This workshop will only equip you with the
@@ -162,8 +162,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-24">
         <H2 class="text-center">What you will build</H2>
-        <p class="text-xl px-4  my-8 md:mx-auto max-w-prose leading-relaxed">
-          <strong class="block text-2xl text-center">Pipeline Monitor Plugin</strong>
+        <p class="text-lg md:text-xl px-8 my-8 md:mx-auto max-w-prose leading-relaxed">
+          <strong class="block md:text-2xl text-center">Pipeline Monitor Plugin</strong>
 
           In this workshop, we’ll build a Pipeline Monitor plugin to pull
           information from external services and aggregate that information in a
@@ -236,7 +236,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </div>
       </section>
       <section class="py-16 mt-24 bg-gray-50">
-        <div class="prose text-xl mx-auto text-inherit leading-tight">
+        <div class="p-4 px-8 prose text-lg md:text-xl mx-auto text-inherit leading-tight">
           <H2 class="text-center">What you will learn</H2>
           <div>
             <h3>Frontend</h3>
@@ -368,14 +368,14 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </div>
         </div>
       </section>
-      <section class="mt-16 bg-gray-50 p-16">
+      <section class="mt-16 bg-gray-50 py-16">
         <H2 class="text-center">Trusted By</H2>
-        <div class="flex justify-evenly align-center mt-16">
-          <img src={logoEricsson}/>
-          <img src={logoHumanitec}/>
-          <img src={logoHP}/>
-          <img src={logoIndeed}/>
-          <img src={logoResideo}/>
+        <div class="grid gap-10 mt-8 place-items-center">
+          <img class="w-32 h-16" src={logoEricsson}/>
+          <img class="w-32 h-16" src={logoHumanitec}/>
+          <img class="w-32 h-16" src={logoHP}/>
+          <img class="w-32 h-16" src={logoIndeed}/>
+          <img class="w-32 h-16" src={logoResideo}/>
         </div>
       </section>
       <section class="mt-24 px-8 md:px-16">
@@ -422,7 +422,7 @@ function H2(
   },
 ): JSX.Element {
   return (
-    <h2 class={`${classes} font-black text-blue-primary text-5xl leading-none tracking-tight`}>{children}</h2>
+    <h2 class={`${classes} font-black text-blue-primary text-3xl md:text-5xl leading-none tracking-tight`}>{children}</h2>
   );
 }
 
