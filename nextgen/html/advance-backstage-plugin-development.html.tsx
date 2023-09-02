@@ -43,21 +43,21 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           Signup for Waitlist
         </a>
         <script src="//embed.typeform.com/next/embed.js"></script>
-        <div class="container mx-auto">
-          <div class="grid grid-cols-2 md:grid-cols-5 gap-y-8 md:gap-4 px-8 md:px-0 mt-12 place-items-center">
-            <div class="basis-1/2 grow-0 shrink flex justify-center h-16 col-span-2">
-                <img class="h-full md:w-auto" src={logoHP} />
+        <div class="max-w-fit mx-auto">
+          <div class="grid md:grid-flow-col md:auto-cols-max sm:grid-col-1 gap-8 md:gap-4 px-8 md:px-0 mt-12 place-items-center">
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-14 col-span-2 md:col-span-1 opacity-50">
+                <img class="h-full w-auto" src={logoHP} />
             </div>
-            <div class="basis-1/2 grow-0 shrink flex justify-center h-8">
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-8 opacity-50">
               <img class="h-full md:w-auto" src={logoEricsson} />
             </div>
-            <div class="basis-1/2 grow-0 shrink flex justify-center h-10 md:h-10">
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-10 opacity-50">
                 <img class="h-full md:w-auto" src={logoResideo} />
             </div>
-            <div class="basis-1/2 grow-0 shrink flex justify-center h-8">
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-6 opacity-50">
                 <img class="h-full md:w-auto" src={logoIndeed} />
             </div>
-            <div class="basis-1/2 grow-0 shrink flex justify-center h-6">
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-6 opacity-50">
                 <img class="h-full md:w-auto" src={logoHumanitec} />
             </div>
          </div>
