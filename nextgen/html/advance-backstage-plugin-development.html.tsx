@@ -43,12 +43,24 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           Signup for Waitlist
         </a>
         <script src="//embed.typeform.com/next/embed.js"></script>
-        <div class="flex flex-col gap-0 px-28 mt-12 justify-evenly align-center">
-          <img class="h-16" src={logoEricsson}/>
-          <img class="h-16" src={logoHumanitec}/>
-          <img class="p-2 h-16" src={logoHP}/>
-          <img class="p-2 h-16" src={logoIndeed}/>
-          <img class="h-16" src={logoResideo}/>
+        <div class="container mx-auto">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-y-8 md:gap-4 px-8 md:px-0 mt-12 place-items-center">
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-16 col-span-2">
+                <img class="h-full md:w-auto" src={logoHP} />
+            </div>
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-8">
+              <img class="h-full md:w-auto" src={logoEricsson} />
+            </div>
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-10 md:h-10">
+                <img class="h-full md:w-auto" src={logoResideo} />
+            </div>
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-8">
+                <img class="h-full md:w-auto" src={logoIndeed} />
+            </div>
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-6">
+                <img class="h-full md:w-auto" src={logoHumanitec} />
+            </div>
+         </div>
         </div>
       </section>
       <section class="p-4 bg-gray-50 py-16">
@@ -162,7 +174,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-24">
         <H2 class="text-center">What you will build</H2>
-        <p class="text-lg md:text-xl px-8 my-8 md:mx-auto max-w-prose leading-relaxed">
+        <p class="text-lg md:text-xl px-4  my-8 md:mx-auto max-w-prose leading-relaxed">
           <strong class="block md:text-2xl text-center">Pipeline Monitor Plugin</strong>
 
           In this workshop, we’ll build a Pipeline Monitor plugin to pull
@@ -370,15 +382,26 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section class="mt-16 bg-gray-50 py-16">
         <H2 class="text-center">Trusted By</H2>
-        <div class="grid gap-10 mt-8 place-items-center">
-          <img class="w-32 h-16" src={logoEricsson}/>
-          <img class="w-32 h-16" src={logoHumanitec}/>
-          <img class="w-32 h-16" src={logoHP}/>
-          <img class="w-32 h-16" src={logoIndeed}/>
-          <img class="w-32 h-16" src={logoResideo}/>
+        <div class="container mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 px-8 md:px-0 mt-12 place-items-center">
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-10">
+              <img class="h-full md:w-auto" src={logoEricsson} />
+            </div>
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-14">
+                <img class="h-full md:w-auto" src={logoHP} />
+            </div>
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-10 md:h-10">
+                <img class="h-full md:w-auto" src={logoResideo} />
+            </div>
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-8">
+                <img class="h-full md:w-auto" src={logoIndeed} />
+            </div>
+            <div class="basis-1/2 grow-0 shrink flex justify-center h-6">
+                <img class="h-full md:w-auto" src={logoHumanitec} />
+            </div>
+         </div>
         </div>
-      </section>
-      <section class="mt-24 px-8 md:px-16">
+      </section>      <section class="mt-24 px-8 md:px-16">
         <H2 class="text-center">What our clients say</H2>
         <blockquote class="mt-8 italic">
           "The Frontside developers have an incredibly high level of
