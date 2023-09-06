@@ -9,6 +9,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
   let logoIndeed = yield* url("../assets/client-logos/logo-indeed.svg");
   let logoResideo = yield* url("../assets/client-logos/logo-resideo.svg");
   let logoEricsson = yield* url("../assets/client-logos/logo-ericsson.svg");
+  let headerImage = yield* url("../assets/pluginWorkshopHeaderImagev2.png");
   return (
     <article class="pt-14 text-blue-primary">
       <aside class="text-center">
@@ -16,33 +17,38 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           Coming Soon!
         </p>
       </aside>
-      <aside class="p-4 text-center uppercase text-neutral-500 mt-4">
-        <p>Workshop & Training: Advanced Backstage Plugin Development</p>
-      </aside>
-      <section class="mb-8 p-5 md:max-w-4xl lg:max-w-6xl m-auto text-center">
-        <h1 class="text-blue-primary text-4xl md:text-6xl lg:text-6xl xl:text-8xl tracking-[-0.04em] font-black">
-          <span class="text-blue-light">Discover</span> the{" "}
-          <span class="text-pink-primary">Power</span>{" "}
-    of Backstage{" "}<span class="text-blue-light">Plugins!</span>
-        </h1>
-        <p class="mt-6 mb-12 tracking-wide text-xl text-blue-primary">
-          Master the Art of Advanced Plugin Development with our Comprehensive
-          Workshop
-        </p>
-        <a
-          data-tf-popup="fNHxMLVS"
-          data-tf-opacity="100"
-          data-tf-size="100"
-          data-tf-iframe-props="title=Advanced Plugin Develop Sign up Form"
-          data-tf-transitive-search-params
-          data-tf-medium="snippet"
-          id="signup-for-workshop"
-          href="#"
-          class="inline-block text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
-        >
-          Signup for Waitlist
-        </a>
-        <script src="//embed.typeform.com/next/embed.js"></script>
+      <section class="grid lg:grid-cols-[2fr_1fr] mb-8 p-5 md:max-w-4xl xl:max-w-screen-2xl m-auto text-left">
+        <div class="order-2 lg:order-1">
+          <aside class="text-left uppercase text-neutral-500 mt-12 mb-4">
+            <p><span class="font-black">Workshop & Training:</span> Advanced Backstage Plugin Development</p>
+          </aside>
+          <h1 class="text-blue-primary text-5xl md:text-6xl lg:text-6xl xl:text-8xl tracking-[-0.04em] font-black">
+            <span class="text-blue-light">Discover</span> the{" "}
+            <span class="text-pink-primary">Power</span>{" "}
+      of Backstage{" "}<span class="text-blue-light">Plugins!</span>
+          </h1>
+          <p class="pr-8 mt-6 mb-12 tracking-wide text-xl text-blue-primary">
+            Master the Art of Advanced Plugin Development <br /> with our Comprehensive
+            Workshop
+          </p>
+          <a
+            data-tf-popup="fNHxMLVS"
+            data-tf-opacity="100"
+            data-tf-size="100"
+            data-tf-iframe-props="title=Advanced Plugin Develop Sign up Form"
+            data-tf-transitive-search-params
+            data-tf-medium="snippet"
+            id="signup-for-workshop"
+            href="#"
+            class="inline-block text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
+          >
+            Signup for Waitlist
+          </a>
+          <script src="//embed.typeform.com/next/embed.js"></script>
+        </div>
+        <img class="order-1 w-3/5 lg:w-full m-auto" src={headerImage} alt="Image of Connected Nodes and Plugins" />
+      </section>
+      <section>
         <div class="max-w-fit mx-auto">
           <div class="grid md:grid-flow-col md:auto-cols-max sm:grid-col-1 gap-8 md:gap-4 px-8 md:px-0 mt-12 place-items-center">
             <div class="basis-1/2 grow-0 shrink flex justify-center h-14 col-span-2 md:col-span-1 opacity-50">
@@ -60,7 +66,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             <div class="basis-1/2 grow-0 shrink flex justify-center h-6 opacity-50">
                 <img class="h-full md:w-auto" src={logoHumanitec} />
             </div>
-         </div>
+          </div>
         </div>
       </section>
       <section class="p-4 bg-gray-50 py-16">
