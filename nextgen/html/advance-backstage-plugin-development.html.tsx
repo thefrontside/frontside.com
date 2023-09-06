@@ -370,7 +370,9 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </div>
         <div class="flex">
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
-            <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
+              <path d="M1.5 11L11.5 11.001C12.2793 11.001 12.9204 11.5963 12.9931 12.3566L13 12.501V14.5C12.999 18 9.284 19 6.5 19C3.77787 19 0.1647 18.044 0.00545001 14.7296L0 14.5V12.5C0 11.7207 0.59527 11.0796 1.35561 11.0069L1.5 11ZM13.488 11H18.5C19.2793 11 19.9204 11.5944 19.9931 12.3555L20 12.5V14C19.999 17.062 17.142 18 15 18C14.32 18 13.569 17.904 12.86 17.678C13.5128 16.9277 13.9362 15.9748 13.9934 14.78L14 14.5V12.5C14 12.0056 13.8507 11.5488 13.601 11.1616L13.488 11ZM6.5 0C8.985 0 11 2.015 11 4.5C11 6.985 8.985 9 6.5 9C4.015 9 2 6.985 2 4.5C2 2.015 4.015 0 6.5 0ZM15.5 2C17.433 2 19 3.567 19 5.5C19 7.433 17.433 9 15.5 9C13.567 9 12 7.433 12 5.5C12 3.567 13.567 2 15.5 2Z" fill="#14315D"/>
+            </svg>
           </div>
           <div class="pt-1 pl-2">
             <h3 class="font-bold text-xl text-blue-primary mb-1">
