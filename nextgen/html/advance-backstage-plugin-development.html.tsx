@@ -46,7 +46,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </a>
           <script src="//embed.typeform.com/next/embed.js"></script>
         </div>
-        <img class="w-3/5 lg:w-full m-auto mt-16 md:order-1" src={headerImage} alt="Image of Connected Nodes and Plugins" />
+        <img class="w-3/5 md:w-2/5 lg:w-full m-auto mt-16 md:order-1" src={headerImage} alt="Image of Connected Nodes and Plugins" />
       </section>
       <section>
         <div class="max-w-fit mx-auto">
