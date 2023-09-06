@@ -17,9 +17,9 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           Coming Soon!
         </p>
       </aside>
-      <section class="grid lg:grid-cols-[2fr_1fr] mb-8 p-5 md:max-w-4xl xl:max-w-screen-2xl m-auto text-left">
-        <div class="order-2 lg:order-1">
-          <aside class="text-left uppercase text-neutral-500 mt-12 mb-4">
+      <section class="grid lg:grid-cols-[2fr_1fr] mb-5 px-4 md:max-w-4xl xl:max-w-screen-2xl m-auto text-left">
+        <div class="md:order-2 lg:order-1">
+          <aside class="text-left uppercase text-neutral-500 mt-12 mb-5">
             <p><span class="font-black">Workshop & Training:</span> Advanced Backstage Plugin Development</p>
           </aside>
           <h1 class="text-blue-primary text-5xl md:text-6xl lg:text-6xl xl:text-8xl tracking-[-0.04em] font-black">
@@ -27,7 +27,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             <span class="text-pink-primary">Power</span>{" "}
       of Backstage{" "}<span class="text-blue-light">Plugins!</span>
           </h1>
-          <p class="pr-8 mt-6 mb-12 tracking-wide text-xl text-blue-primary">
+          <p class="pr-8 mt-5 mb-10 tracking-wide text-xl text-blue-primary">
             Master the Art of Advanced Plugin Development <br /> with our Comprehensive
             Workshop
           </p>
@@ -46,11 +46,11 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </a>
           <script src="//embed.typeform.com/next/embed.js"></script>
         </div>
-        <img class="order-1 w-3/5 lg:w-full m-auto" src={headerImage} alt="Image of Connected Nodes and Plugins" />
+        <img class="w-3/5 lg:w-full m-auto mt-16 md:order-1" src={headerImage} alt="Image of Connected Nodes and Plugins" />
       </section>
       <section>
         <div class="max-w-fit mx-auto">
-          <div class="grid md:grid-flow-col md:auto-cols-max sm:grid-col-1 gap-8 md:gap-4 px-8 md:px-0 mt-12 place-items-center">
+          <div class="grid md:grid-flow-col md:auto-cols-max sm:grid-col-1 gap-8 md:gap-4 px-8 md:px-0 mt-20 mb-20 place-items-center">
             <div class="basis-1/2 grow-0 shrink flex justify-center h-14 col-span-2 md:col-span-1 opacity-50">
                 <img class="h-full w-auto" src={logoHP} />
             </div>
