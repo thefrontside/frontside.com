@@ -13,7 +13,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
   return (
     <article class="pt-14 text-blue-primary">
       <aside class="text-center">
-        <p class="border-1 border-pink-primary text-blue-primary rounded-full inline-block text-center py-2 px-14 text-xs">
+        <p class="border-1 border-pink-secondary text-blue-primary rounded-full inline-block text-center py-2 px-14 text-xs">
           Coming Soon!
         </p>
       </aside>
@@ -23,9 +23,9 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             <p><span class="font-black">Workshop & Training:</span> Advanced Backstage Plugin Development</p>
           </aside>
           <h1 class="text-blue-primary text-5xl md:text-6xl lg:text-6xl xl:text-8xl tracking-[-0.04em] font-black">
-            <span class="text-blue-light">Discover</span> the{" "}
-            <span class="text-pink-primary">Power</span>{" "}
-      of Backstage{" "}<span class="text-blue-light">Plugins!</span>
+            <span class="text-blue-secondary">Discover</span> the{" "}
+            <span class="text-pink-secondary">Power</span>{" "}
+      of Backstage{" "}<span class="text-blue-secondary">Plugins!</span>
           </h1>
           <p class="pr-8 mt-5 mb-10 tracking-wide text-xl text-blue-primary">
             Master the Art of Advanced Plugin Development <br /> with our Comprehensive
@@ -72,7 +72,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       <section class="p-4 bg-gray-50 py-16">
         <header class="container mx-auto md:max-w-5xl">
           <H2 class="text-center">
-            <span class="text-pink-primary">Everything</span>{" "}
+            <span class="text-pink-secondary">Everything</span>{" "}
             in Backstage is a Plugin!
           </H2>
           <p class=" text-lg text-center mx-auto text-inherit my-4 max-w-prose leading-relaxed">
