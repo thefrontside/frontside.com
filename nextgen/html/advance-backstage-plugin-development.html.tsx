@@ -311,7 +311,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             </div>
           <div class="pt-1 pl-2">
             <h3 class="font-bold text-xl text-blue-primary mb-1">
-              Backstage Professional Services Partners
+              Official Backstage Professional Services Partners
             </h3>
             <p>
               Frontside is recognized as a Professional Services Partner with
