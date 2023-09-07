@@ -179,26 +179,29 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </p>
       </section>
       <section class="mt-24">
-        <H2 class="text-center">What you will build</H2>
-        <p class="text-lg md:text-xl px-4  my-8 md:mx-auto max-w-prose leading-relaxed">
-          <strong class="block md:text-2xl text-center">Pipeline Monitor Plugin</strong>
-
-          In this workshop, we’ll build a Pipeline Monitor plugin to pull
-          information from external services and aggregate that information in a
-          database. The plugin will allow your users to customize it via YAML.
-          The functionality of the YAML syntax will be configurable with custom
-          functions in the backend. We’ll create a backend plugin engine that
-          will use configuration from the YAML file to execute pipeline
-          monitoring by polling each state of the pipeline, retrieving the
-          status, and storing the status in the database. We’ll implement a
-          mechanism for generating and storing information summaries in the
-          database. The raw data about the pipeline and the status will be
-          accessible via the backend REST API. We’ll write a front-end plugin
-          that will show information from the database.
-        </p>
+        <div class="container m-auto p-4">
+          <H2 class="text-center mb-8">What you will build</H2>
+          <div class="flex flex-col lg:flex-row lg:w-[900px] m-auto">
+            <h3 class="text-2xl lg:text-6xl mb-4 md:mb-0 mr-8 text-center lg:text-left text-pink-secondary font-black">Pipeline Monitor Plugin</h3>
+            <p class="text-lg leading-relaxed">
+              In this workshop, we’ll build a Pipeline Monitor plugin to pull
+              information from external services and aggregate that information in a
+              database. The plugin will allow your users to customize it via YAML.
+              The functionality of the YAML syntax will be configurable with custom
+              functions in the backend. We’ll create a backend plugin engine that
+              will use configuration from the YAML file to execute pipeline
+              monitoring by polling each state of the pipeline, retrieving the
+              status, and storing the status in the database. We’ll implement a
+              mechanism for generating and storing information summaries in the
+              database. The raw data about the pipeline and the status will be
+              accessible via the backend REST API. We’ll write a front-end plugin
+              that will show information from the database.
+            </p>
+          </div>
+        </div>
       </section>
       <section class="mt-24 px-8 md:mt-16 md:grid md:grid-cols-2 gap-8 md:mx-auto md:max-w-5xl">
-        <div class="flex">
+        <div class="flex flex mt-4 md:mt-0">
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
               <path d="M12.2452 1.81511C13.332 0.728297 15.0941 0.728297 16.1809 1.81511C17.2224 2.85663 17.2658 4.51831 16.3111 5.61151L16.1809 5.75078L6.57507 15.3566C6.36998 15.5616 6.12324 15.7192 5.85237 15.819L5.68709 15.8719L1.63212 16.9778C1.28553 17.0723 0.965457 16.7837 1.00301 16.4432L1.01818 16.3638L2.12408 12.3089C2.20039 12.029 2.33646 11.7698 2.52213 11.5488L2.63939 11.4209L12.2452 1.81511ZM11.385 4.09L3.3465 12.128C3.25421 12.2203 3.18118 12.3294 3.13111 12.4491L3.08884 12.572L2.21221 15.7827L5.42397 14.9071C5.50792 14.8842 5.58815 14.8506 5.66278 14.8073L5.77028 14.7352L5.86796 14.6495L13.906 6.611L11.385 4.09ZM15.4738 2.52222C14.8162 1.86461 13.7727 1.82808 13.0722 2.41262L12.9523 2.52222L12.092 3.383L14.613 5.904L15.4738 5.04368C16.1314 4.38608 16.1679 3.3426 15.5834 2.64212L15.4738 2.52222Z" fill="#14315D" stroke="#14315D" stroke-width="0.5"/>
@@ -214,7 +217,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             </p>
           </div>
         </div>
-        <div class="flex">
+        <div class="flex flex mt-4 md:mt-0">
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M11.9582 6.20041C12.0689 5.94742 11.9535 5.65261 11.7005 5.54193C11.4475 5.43124 11.1527 5.54661 11.042 5.79959L7.54205 13.7996C7.43136 14.0526 7.54673 14.3474 7.79972 14.4581C8.05271 14.5688 8.34752 14.4534 8.45821 14.2004L11.9582 6.20041ZM6.85355 7.64645C7.04882 7.84171 7.04882 8.15829 6.85355 8.35355L5.20711 10L6.85355 11.6464C7.04882 11.8417 7.04882 12.1583 6.85355 12.3536C6.65829 12.5488 6.34171 12.5488 6.14645 12.3536L4.14645 10.3536C3.95118 10.1583 3.95118 9.84171 4.14645 9.64645L6.14645 7.64645C6.34171 7.45118 6.65829 7.45118 6.85355 7.64645ZM13.1464 8.35355C12.9512 8.15829 12.9512 7.84171 13.1464 7.64645C13.3417 7.45118 13.6583 7.45118 13.8536 7.64645L15.8536 9.64645C16.0488 9.84171 16.0488 10.1583 15.8536 10.3536L13.8536 12.3536C13.6583 12.5488 13.3417 12.5488 13.1464 12.3536C12.9512 12.1583 12.9512 11.8417 13.1464 11.6464L14.7929 10L13.1464 8.35355ZM10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2ZM3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10Z" fill="#14315D" stroke="#14315D" stroke-width="0.5"/>
@@ -230,7 +233,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             </p>
           </div>
         </div>
-        <div class="flex">
+        <div class="flex flex mt-4 md:mt-0">
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M6 3.5C6 3.22386 6.22386 3 6.5 3H8.5C8.77614 3 9 3.22386 9 3.5V4H9.5C9.7761 4 10 4.22386 10 4.5V6.0304C10.0361 6.02578 10.0732 6.02505 10.1109 6.02861C11.7745 6.18567 13.3137 6.97735 14.409 8.2393C15.5042 9.50126 16.0714 11.1365 15.9928 12.8056C15.9142 14.4748 15.1958 16.0495 13.9868 17.2029C13.671 17.5042 13.328 17.7707 12.9639 18H15.5C15.7761 18 16 18.2239 16 18.5C16 18.7761 15.7761 19 15.5 19H2.5C2.22386 19 2 18.7761 2 18.5C2 18.2239 2.22386 18 2.5 18H9.4872C9.4915 17.9999 9.4957 17.9998 9.5 17.9998C10.9139 17.9998 12.2735 17.4553 13.2965 16.4794C14.3195 15.5034 14.9274 14.1709 14.9939 12.7586C15.0604 11.3463 14.5805 9.96258 13.6537 8.89477C12.727 7.82696 11.4246 7.15708 10.0169 7.02419C10.0113 7.02365 10.0056 7.02302 10 7.0223V12.5C10 12.7761 9.7761 13 9.5 13H9V13.5C9 14.3284 8.32843 15 7.5 15C6.67157 15 6 14.3284 6 13.5V13H5.5C5.22386 13 5 12.7761 5 12.5V4.5C5 4.22386 5.22386 4 5.5 4H6V3.5ZM7 13V13.5C7 13.7761 7.22386 14 7.5 14C7.77614 14 8 13.7761 8 13.5V13H7ZM6 12H9V5H6V12ZM4.5 16C4.22386 16 4 16.2239 4 16.5C4 16.7761 4.22386 17 4.5 17H10.5C10.7761 17 11 16.7761 11 16.5C11 16.2239 10.7761 16 10.5 16H4.5Z" fill="#14315D" stroke="#14315D" stroke-width="0.5"/>
@@ -245,7 +248,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             </p>
           </div>
         </div>
-        <div class="flex">
+        <div class="flex flex mt-4 md:mt-0">
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M10.7548 6.4263C11.5352 5.64589 12.8005 5.64654 13.5808 6.42691C14.3612 7.20727 14.3619 8.47254 13.5814 9.25295C12.801 10.0334 11.5358 10.0327 10.7554 9.25235C9.97503 8.47198 9.97438 7.20672 10.7548 6.4263ZM12.8737 7.13401C12.4835 6.74379 11.8514 6.7439 11.4619 7.13341C11.0724 7.52292 11.0723 8.15502 11.4625 8.54524C11.8527 8.93547 12.4848 8.93536 12.8743 8.54585C13.2638 8.15634 13.264 7.52424 12.8737 7.13401Z" fill="#14315D" stroke="#14315D" stroke-width="0.5"/>
@@ -320,7 +323,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             </p>
           </div>
         </div>
-        <div class="flex">
+        <div class="flex mt-4 md:mt-0">
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M9.72265 2.08397C9.8906 1.97201 10.1094 1.97201 10.2774 2.08397C12.2155 3.3761 14.3117 4.1823 16.5707 4.50503C16.817 4.54021 17 4.75117 17 5V9.5C17 13.3913 14.693 16.2307 10.1795 17.9667C10.064 18.0111 9.93605 18.0111 9.82051 17.9667C5.30699 16.2307 3 13.3913 3 9.5V5C3 4.75117 3.18296 4.54021 3.42929 4.50503C5.68833 4.1823 7.78446 3.3761 9.72265 2.08397ZM9.59914 3.34583C7.85275 4.39606 5.98541 5.09055 4 5.42787V9.5C4 12.892 5.96795 15.3634 10 16.9632C14.0321 15.3634 16 12.892 16 9.5V5.42787C14.0146 5.09055 12.1473 4.39606 10.4009 3.34583L10 3.09715L9.59914 3.34583Z" fill="#14315D" stroke="#14315D" stroke-width="0.5"/>
@@ -338,7 +341,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             </p>
           </div>
         </div>
-        <div class="flex">
+        <div class="flex mt-4 md:mt-0">
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
               <path d="M3 8.5C3 4.35786 6.35786 1 10.5 1C14.6421 1 18 4.35786 18 8.5C18 12.6421 14.6421 16 10.5 16C10.4668 16 10.4336 15.9998 10.4005 15.9994C10.5633 15.6808 10.6959 15.3442 10.7947 14.9934C14.2478 14.8394 17 11.9911 17 8.5C17 4.91015 14.0899 2 10.5 2C7.00897 2 4.16073 4.75214 4.00657 8.20514C3.6558 8.30386 3.31924 8.43651 3.00064 8.5993C3.00022 8.56625 3 8.53315 3 8.5ZM10.5 4C10.7761 4 11 4.22386 11 4.5V8H13.5C13.7761 8 14 8.22386 14 8.5C14 8.77614 13.7761 9 13.5 9H10.5C10.2239 9 10 8.77614 10 8.5V4.5C10 4.22386 10.2239 4 10.5 4ZM5 9.0275C2.75002 9.2762 1 11.1837 1 13.5C1 15.9853 3.01472 18 5.5 18C7.98528 18 10 15.9853 10 13.5C10 11.1837 8.24998 9.2762 6 9.0275V12.7929L6.64645 12.1464C6.84171 11.9512 7.15829 11.9512 7.35355 12.1464C7.54882 12.3417 7.54882 12.6583 7.35355 12.8536L5.85355 14.3536C5.65829 14.5488 5.34171 14.5488 5.14645 14.3536L3.64645 12.8536C3.45118 12.6583 3.45118 12.3417 3.64645 12.1464C3.84171 11.9512 4.15829 11.9512 4.35355 12.1464L5 12.7929V9.0275ZM3.5 15H7.5C7.77614 15 8 15.2239 8 15.5C8 15.7761 7.77614 16 7.5 16H3.5C3.22386 16 3 15.7761 3 15.5C3 15.2239 3.22386 15 3.5 15Z" fill="#14315D" stroke="#14315D" stroke-width="0.5"/>
@@ -356,7 +359,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             </p>
           </div>
         </div>
-        <div class="flex">
+        <div class="flex mt-4 md:mt-0">
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <path d="M10.5 3L16.5428 3.00182L16.6281 3.01661L16.691 3.03779L16.767 3.07719L16.8221 3.11759L16.8824 3.17788L16.9112 3.21534L16.9533 3.2886L16.9834 3.37186L16.9979 3.45421L17 3.5V9.5C17 9.77614 16.7761 10 16.5 10C16.2545 10 16.0504 9.82312 16.0081 9.58988L16 9.5V4.706L4.706 16H9.5C9.74546 16 9.94961 16.1769 9.99194 16.4101L10 16.5C10 16.7455 9.82312 16.9496 9.58988 16.9919L9.5 17L3.47964 16.9996L3.4112 16.9921L3.30896 16.9622L3.23299 16.9228L3.17786 16.8824L3.11758 16.8221L3.08884 16.7847L3.04674 16.7114L3.01661 16.6281L3.01109 16.605C3.00383 16.5713 3 16.5361 3 16.5L3.00546 16.5739L3.00182 16.5428L3 10.5C3 10.2239 3.22386 10 3.5 10C3.74546 10 3.94961 10.1769 3.99194 10.4101L4 10.5V15.292L15.292 4H10.5C10.2545 4 10.0504 3.82312 10.0081 3.58988L10 3.5C10 3.22386 10.2239 3 10.5 3Z" fill="#14315D" stroke="#14315D" stroke-width="0.5"/>
@@ -373,7 +376,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </div>
         </div>
         <div>
-          <div class="flex">
+        <div class="flex mt-4 md:mt-0">
             <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
               <svg class="stroke-primary blue" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
             </div>
@@ -389,7 +392,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             </div>
           </div>
         </div>
-        <div class="flex">
+        <div class="flex mt-4 md:mt-0">
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
               <g clip-path="url(#clip0_993_381)">
