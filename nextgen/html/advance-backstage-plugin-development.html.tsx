@@ -50,7 +50,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section>
         <div class="max-w-fit mx-auto">
-          <div class="grid md:grid-flow-col md:auto-cols-max sm:grid-col-1 gap-8 md:gap-4 px-8 md:px-0 mt-20 mb-20 place-items-center">
+          <div class="grid md:grid-flow-col md:auto-cols-max sm:grid-col-1 gap-8 md:gap-8 xl:gap-12 px-8 md:px-0 my-24 place-items-center">
             <div class="basis-1/2 grow-0 shrink flex justify-center h-14 col-span-2 md:col-span-1 opacity-50">
                 <img class="h-full w-auto" src={logoHP} />
             </div>
@@ -114,7 +114,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             results.
           </p>
         </div>
-        <div class="mx-4 md:m-0 bg-gray-200 h-72" />
+        <div class="mx-4 md:m-0 bg-gray-50 h-72" />
       </section>
       <section class="mt-12 m-auto md:grid md:grid-cols-2 gap-24 md:max-w-5xl items-center md:text-right">
         <div class="px-4 order-1">
@@ -128,7 +128,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             meticulously orchestrated.
           </p>
         </div>
-        <div class="mx-4 md:m-0 bg-gray-200 h-72" />
+        <div class="mx-4 md:m-0 bg-gray-50 h-72" />
       </section>
       <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-5xl">
         <div class="px-4">
@@ -144,7 +144,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             enthusiasts.
           </p>
         </div>
-        <div class="mx-4 md:m-0 bg-gray-200 h-72" />
+        <div class="mx-4 md:m-0 bg-gray-50 h-72" />
       </section>
       <section class="mt-24 bg-gray-50 py-24">
         <H2 class="text-center">Who is this workshop for?</H2>
@@ -445,7 +445,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             </div>
          </div>
         </div>
-      </section>      <section class="mt-24 px-8 md:px-16">
+      </section>
+      <section class="mt-24 px-8 md:px-16">
         <H2 class="text-center">What our clients say</H2>
         <blockquote class="mt-8 italic">
           "The Frontside developers have an incredibly high level of
