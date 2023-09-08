@@ -10,6 +10,10 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
   let logoResideo = yield* url("../assets/client-logos/logo-resideo.svg");
   let logoEricsson = yield* url("../assets/client-logos/logo-ericsson.svg");
   let headerImage = yield* url("../assets/pluginWorkshopHeaderImagev2.png");
+  let benefitsImage1 = yield* url("../assets/benefitsImage1.svg");
+  let benefitsImage2 = yield* url("../assets/benefitsImage2.svg");
+  let benefitsImage3 = yield* url("../assets/benefitsImage3.svg");
+
   return (
     <article class="pt-14 text-blue-primary">
       <aside class="text-center">
@@ -114,12 +118,12 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             results.
           </p>
         </div>
-        <div class="mx-4 md:m-0 bg-gray-50 h-72" />
+        <img src={benefitsImage1} alt="" />
       </section>
-      <section class="mt-12 m-auto md:grid md:grid-cols-2 gap-24 md:max-w-5xl items-center md:text-right">
+      <section class="mt-12 m-auto md:grid md:grid-cols-2 gap-24 md:max-w-5xl items-center md:text-left">
         <div class="px-4 order-1">
           <h3 class="text-2xl text-blue-primary font-black">Deepen your understanding of Backstage Architecture</h3>
-          <p class="py-4 text-1  text-inherit	leading-relaxed">
+          <p class="py-4 text-1 text-inherit leading-relaxed">
             Beyond mere plugin creation, understanding plugins is synonymous
             with unraveling the core of Backstage's architecture. These are not
             just tools; they're the fundamental building blocks that shape
@@ -128,7 +132,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             meticulously orchestrated.
           </p>
         </div>
-        <div class="mx-4 md:m-0 bg-gray-50 h-72" />
+        <img src={benefitsImage3} alt="" />
       </section>
       <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-5xl">
         <div class="px-4">
@@ -144,7 +148,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             enthusiasts.
           </p>
         </div>
-        <div class="mx-4 md:m-0 bg-gray-50 h-72" />
+        <img src={benefitsImage2} alt="" />
       </section>
       <section class="mt-24 bg-gray-50 py-24">
         <H2 class="text-center">Who is this workshop for?</H2>
@@ -425,9 +429,9 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         </div>
       </section>
       <section class="mt-16 bg-gray-50 py-16">
-        <H2 class="text-center">Trusted By</H2>
+        <H2 class="text-center mb-12">Trusted By</H2>
         <div class="container mx-auto">
-          <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 px-8 md:px-0 mt-12 place-items-center">
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 px-8 md:px-0 place-items-center">
             <div class="basis-1/2 grow-0 shrink flex justify-center h-10">
               <img class="h-full md:w-auto" src={logoEricsson} />
             </div>
