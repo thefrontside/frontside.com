@@ -461,7 +461,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
               <p>"I owe so much to [Frontside]...who were like professors to me — and [ when needed ] told me 'no'. And they needed to tell me 'no' [sometimes]. Thank so you very much, guys, for that.”
               </p>
             </blockquote>
-            <cite class="block mt-4 before:content-['－'] before:mr-1">Guilherme B., Senior Software Engineer</cite>
+            <cite class="block mt-4 before:content-['－'] before:mr-1">Guilherme G., Senior Software Engineer</cite>
           </div>
           <div class="rounded-xl p-8 ring-1 ring-neutral-300" aria-label="Testimonial">
             <div>
