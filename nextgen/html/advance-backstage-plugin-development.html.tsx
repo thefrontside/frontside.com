@@ -16,11 +16,6 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
 
   return (
     <article class="pt-14 text-blue-primary">
-      <aside class="text-center">
-        <p class="border-1 border-pink-secondary text-blue-primary rounded-full inline-block text-center py-2 px-14 text-xs">
-          Coming Soon!
-        </p>
-      </aside>
       <section class="grid lg:grid-cols-[2fr_1fr] mb-5 px-4 md:max-w-4xl xl:max-w-screen-2xl m-auto text-left">
         <div class="md:order-2 lg:order-1">
           <aside class="text-left uppercase text-neutral-500 mt-12 mb-5">
@@ -54,7 +49,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       </section>
       <section>
         <div class="max-w-fit mx-auto">
-          <div class="grid md:grid-flow-col md:auto-cols-max sm:grid-col-1 gap-8 md:gap-8 xl:gap-12 px-8 md:px-0 my-24 place-items-center">
+          <div class="grid md:grid-flow-col md:auto-cols-max sm:grid-col-1 gap-8 md:gap-8 xl:gap-12 px-8 md:px-0 my-36 place-items-center">
             <div class="basis-1/2 grow-0 shrink flex justify-center h-14 col-span-2 md:col-span-1 opacity-50">
                 <img class="h-full w-auto" src={logoHP} />
             </div>
@@ -450,9 +445,9 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
          </div>
         </div>
       </section>
-      <section class="container mt-24 px-8 md:px-16 m-auto">
+      <section class="container mt-24 px-8 md:px-4 m-auto">
         <H2 class="text-center mb-12">What our clients say</H2>
-        <div class="grid grid-cols-3 gap-x-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div class="flex flex-col shadow rounded-xl p-8 ring-1 ring-neutral-300" aria-label="Testimonial">
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036"><path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path></svg>
@@ -463,21 +458,21 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             </blockquote>
             <cite class="block mt-4 before:content-['－'] before:mr-1">Guilherme G., Senior Software Engineer</cite>
           </div>
-          <div class="rounded-xl p-8 ring-1 ring-neutral-300" aria-label="Testimonial">
+          <div class="flex flex-col shadow rounded-xl p-8 ring-1 ring-neutral-300" aria-label="Testimonial">
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036"><path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path></svg>
             </div>
-            <blockquote>
+            <blockquote class="grow">
               <p>"Huge, thank you, huge...for investing in me and helping me move forward with my knowledge of the latest technologies. It was a daunting task for me to learn this tech stack, and you guys [invested] a lot in me. I really appreciate that. I really [have] been able to move forward and become confident in this technology set because of your guys' [investment] in me!"
               </p>
             </blockquote>
-            <cite class="block mt-4 before:content-['－'] before:mr-1">North E., Software Engineer</cite>
+            <cite class="block mt-4 before:content-['－'] before:mr-1">North K., Software Engineer</cite>
           </div>
-          <div class="rounded-xl p-8 ring-1 ring-neutral-300" aria-label="Testimonial">
+          <div class="flex flex-col shadow rounded-xl p-8 ring-1 ring-neutral-300" aria-label="Testimonial">
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036"><path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path></svg>
             </div>
-            <blockquote>
+            <blockquote class="grow">
               <p> "The Frontside developers have an incredibly high level of
               technical expertise. They've built complex plug-ins from
               scratch...I consider them educators as much
@@ -490,7 +485,10 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </div>
         </div>
       </section>
-      <section class="py-64 px-8 text-center">
+      <section class="flex flex-col items-center py-64 px-8">
+        <p class="prose text-center">
+        Join us to elevate your Backstage expertise and transform into a proficient plugin developer. Discover, learn, and kick-start your path to master the art of crafting sophisticated plugins for Backstage in this comprehensive, hands-on workshop.
+        </p>
         <a
           data-tf-popup="fNHxMLVS"
           data-tf-opacity="100"
