@@ -73,10 +73,10 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             <span class="text-pink-secondary">Everything</span>{" "}
             in Backstage is a Plugin!
           </H2>
-          <p class=" text-lg text-center mx-auto text-inherit my-4 max-w-prose leading-relaxed">
+          <p class=" text-xl text-center mx-auto text-inherit my-4 max-w-prose leading-relaxed">
             The architecture of Backstage is ingeniously designed around plugins.
             Everything from the Service Catalog, Templates, Scaffolder, Search and
-            Tech Docs are all plugins! This workshop will only equip you with the
+            Tech Docs are all plugins! This workshop will not only equip you with the
             skills to create and manage plugins - but start to build an
             understanding of a core component of grand architecture underpinning
             Backstage. Dive into our workshop, and empower yourself to shape and
