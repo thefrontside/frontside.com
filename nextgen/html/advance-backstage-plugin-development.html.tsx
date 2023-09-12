@@ -167,7 +167,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <H2 class="text-center mb-8">What you will build</H2>
           <div class="flex flex-col lg:flex-row lg:w-[900px] m-auto">
             <h3 class="text-2xl lg:text-6xl mb-4 md:mb-0 mr-8 text-center lg:text-left text-pink-secondary font-black">Pipeline Monitor Plugin</h3>
-            <p class="text-lg leading-relaxed">
+            <p class="text-xl leading-relaxed">
               In this workshop, we’ll build a Pipeline Monitor plugin to pull
               information from external services and aggregate that information in a
               database. The plugin will allow your users to customize it via YAML.
