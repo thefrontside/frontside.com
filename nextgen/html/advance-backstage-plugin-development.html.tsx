@@ -27,8 +27,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       of Backstage{" "}<span class="text-blue-secondary">Plugins!</span>
           </h1>
           <p class="pr-8 mt-5 mb-10 tracking-wide text-xl text-blue-primary prose">
-            Master plugin development with our comprehensive workshop. Dive deep into a core part of the Backstage architecture and supercharge your Internal Developer Platform.
-          </p>
+            Master plugin development with our comprehensive workshop. Born from our hands-on training sessions with our top-tier enterprise clientele. Go beyond mere theory—experience, with a tried and tested blueprint of best practices, insights, strategies and engineering, all distilled for you.
+            </p>
           <a
             data-tf-popup="fNHxMLVS"
             data-tf-opacity="100"
@@ -40,7 +40,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             href="#"
             class="inline-block text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
           >
-            Signup for the Waitlist Now
+            Signup for Waitlist Today
           </a>
           <script src="//embed.typeform.com/next/embed.js"></script>
         </div>
