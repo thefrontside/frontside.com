@@ -40,7 +40,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             href="#"
             class="inline-block text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
           >
-            Signup for the Waitlist Now!
+            Signup for the Waitlist Now
           </a>
           <script src="//embed.typeform.com/next/embed.js"></script>
         </div>
