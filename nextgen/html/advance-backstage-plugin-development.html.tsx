@@ -40,7 +40,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             href="#"
             class="inline-block text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
           >
-            Signup for Waitlist
+            Signup for the Waitlist Now!
           </a>
           <script src="//embed.typeform.com/next/embed.js"></script>
         </div>
@@ -167,7 +167,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <H2 class="text-center mb-8">What you will build</H2>
           <div class="flex flex-col lg:flex-row lg:w-[900px] m-auto">
             <h3 class="text-2xl lg:text-6xl mb-4 md:mb-0 mr-8 text-center lg:text-left text-pink-secondary font-black">Pipeline Monitor Plugin</h3>
-            <p class="text-xl leading-relaxed">
+            <p class="text-xg leading-relaxed">
               In this workshop, we’ll build a Pipeline Monitor plugin to pull
               information from external services and aggregate that information in a
               database. The plugin will allow your users to customize it via YAML.
@@ -470,7 +470,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </div>
         </div>
       </section>
-      <section class="flex flex-col items-center py-64 px-8">
+      <section class="flex flex-col items-center mt-32 px-8">
         <p class="prose text-center">
         Join us to elevate your Backstage expertise and transform into a proficient plugin developer. Discover, learn, and kick-start your path to master the art of crafting sophisticated plugins for Backstage in this comprehensive, hands-on workshop.
         </p>
@@ -485,7 +485,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           href="#"
           class="inline-block mt-16 text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
         >
-          Signup for Waitlist Today
+          Signup for the Waitlist Today
         </a>
       </section>
     </article>
