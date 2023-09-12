@@ -26,8 +26,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             <span class="text-pink-secondary">Power</span>{" "}
       of Backstage{" "}<span class="text-blue-secondary">Plugins!</span>
           </h1>
-          <p class="pr-8 mt-5 mb-10 tracking-wide text-xl text-blue-primary">
-            Master plugin development with our comprehensive workshop. < br /> Dive deep into a core part of the Backstage architecture and supercharge your internal Developer Portal.
+          <p class="pr-8 mt-5 mb-10 tracking-wide text-xl text-blue-primary prose">
+            Master plugin development with our comprehensive workshop. Dive deep into a core part of the Backstage architecture and supercharge your Internal Developer Platform.
           </p>
           <a
             data-tf-popup="fNHxMLVS"
@@ -75,7 +75,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </H2>
           <p class=" text-lg text-center mx-auto text-inherit my-4 max-w-prose leading-relaxed">
             The architecture of Backstage is ingeniously designed around plugins.
-            From the Service Catalog and Templates to the Scaffolder, Search and
+            Everything from the Service Catalog, Templates, Scaffolder, Search and
             Tech Docs are all plugins! This workshop will only equip you with the
             skills to create and manage plugins - but start to build an
             understanding of a core component of grand architecture underpinning
@@ -105,25 +105,16 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             Confidence to Innovate
           </h3>
           <p class="py-4 text-l  text-inherit	leading-relaxed">
-            Grasping the intricacies of plugins doesn't just give you a
-            technical advantage—it fuels your creativity. With this newfound
-            knowledge, you'll confidently design and implement complex features
-            and functionalities, turning your innovative ideas into tangible
-            results.
+            Grasping the intricacies of plugins doesn't just give you a technical advantage—it fuels your creativity. With this newfound knowledge, you'll confidently design and implement complex features and functionalities, turning your innovative ideas into powerful features.
           </p>
         </div>
         <img src={benefitsImage1} alt="" />
       </section>
       <section class="mt-12 m-auto md:grid md:grid-cols-2 gap-24 md:max-w-5xl items-center md:text-left">
         <div class="px-4 order-1">
-          <h3 class="text-2xl text-blue-primary font-black">Deepen your understanding of Backstage Architecture</h3>
+          <h3 class="text-2xl text-blue-primary font-black">Deeper understanding of Backstage Architecture</h3>
           <p class="py-4 text-1 text-inherit leading-relaxed">
-            Beyond mere plugin creation, understanding plugins is synonymous
-            with unraveling the core of Backstage's architecture. These are not
-            just tools; they're the fundamental building blocks that shape
-            Backstage. As you grow familiar with plugins, you'll naturally
-            expand your comprehension of how the entire Backstage system is
-            meticulously orchestrated.
+            Go beyond mere plugin creation, understand plugins and decode the core of Backstage's architecture. These are not just plugins; they're the fundamental building blocks that shape Backstage. As you master plugins, watch your understanding of the entire ecosystem come alive.
           </p>
         </div>
         <img src={benefitsImage3} alt="" />
@@ -131,15 +122,10 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-5xl">
         <div class="px-4">
           <h3 class="text-2xl text-blue-primary font-black">
-            Harness the Network Effect of Knowledge
+            Maximize ROI, Engagement, & Adoption
           </h3>
           <p class="py-4 text-l  text-inherit leading-relaxed">
-            Learning in isolation has its limits. This workshop emphasizes
-            collaborative learning, encouraging you to connect, discuss, and
-            share insights with fellow developers. By networking your knowledge,
-            you'll uncover fresh perspectives, tips, and tricks, enriching your
-            learning experience and fostering a community of Backstage
-            enthusiasts.
+            Mastering plugin development isn't just about technical prowess—it's an investment that brings exponential returns. By customizing Backstage to your unique needs, systems and users, you open doors to unparalleled solutions. Don't just adapt; lead. Witness your investments bear fruit as you craft amazing solutions and experiences for your users, and organizations.
           </p>
         </div>
         <img src={benefitsImage2} alt="" />
