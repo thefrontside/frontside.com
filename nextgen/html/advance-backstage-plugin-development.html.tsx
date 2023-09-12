@@ -27,8 +27,8 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
       of Backstage{" "}<span class="text-blue-secondary">Plugins!</span>
           </h1>
           <p class="pr-8 mt-5 mb-10 tracking-wide text-xl text-blue-primary prose">
-            Master Backstage plugin development, born from our real-world, hands-on trainging sessions and engagements with elite enterprise clients. This isn't just theory—it's a proven blueprint. Dive into a workshop rich in best practices, insights, strategies and cutting-edge engineering, meticulously crafted for you.
-            </p>
+            Master Backstage plugin development, born from our real-world, hands-on training sessions and engagements with elite enterprise clients. This isn't just theory—it's a proven blueprint. Dive into a workshop rich in best practices, insights, strategies, and cutting-edge engineering, meticulously crafted for you.
+          </p>
           <a
             data-tf-popup="fNHxMLVS"
             data-tf-opacity="100"
