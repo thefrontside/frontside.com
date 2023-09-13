@@ -11,6 +11,7 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
   let siteURL = yield* url();
   let logoNoText = yield* url("assets/fs-logo-no-text.svg");
   let logoURL = yield* url("assets/fs-logo.svg");
+  let CRO = yield* url("feedback/js/cro-script.js");
 
   return (
     <html lang="en-US" dir="ltr">
@@ -26,12 +27,15 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="stylesheet" href="https://use.typekit.net/ugs0ewy.css" />
-        <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet"></link>
+        <link
+          href="https://fonts.googleapis.com/css?family=Inter&display=swap"
+          rel="stylesheet"
+        />
         <link rel="icon" href={logoNoText} />
         <link rel="canonical" href={siteURL} />
         <link rel="alternate" href={siteURL} hreflang="en" />
         <link rel="alternate" href={siteURL} hreflang="x-default" />
-        <script src="https://cdn.pagesense.io/js/frontsidesoftware/12a41c994cce49f684b5c690d6e64c74.js"></script>
+        <script async src={CRO}></script>
       </head>
       <body>
         <header class="p-5 lg:max-w-5xl lg: m-auto">
