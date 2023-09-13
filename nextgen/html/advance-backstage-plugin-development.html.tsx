@@ -43,13 +43,13 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             data-tf-iframe-props="title=Advanced Plugin Develop Sign up Form"
             data-tf-transitive-search-params
             data-tf-medium="snippet"
-            id="signup-for-workshop"
+            id="signup-for-workshop-top"
             href="#"
             class="inline-block text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
           >
             Signup for Waitlist Today
           </a>
-          <script src="//embed.typeform.com/next/embed.js"></script>
+          <script defer src="//embed.typeform.com/next/embed.js"></script>
         </div>
         <img
           class="w-3/5 md:w-2/5 lg:w-full m-auto mt-16 md:order-1"
@@ -61,19 +61,35 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         <div class="max-w-fit mx-auto">
           <div class="grid md:grid-flow-col md:auto-cols-max sm:grid-col-1 gap-8 md:gap-8 xl:gap-12 px-8 md:px-0 my-36 place-items-center">
             <div class="basis-1/2 grow-0 shrink flex justify-center h-14 col-span-2 md:col-span-1 opacity-50">
-              <img class="h-full w-auto" src={logoHP} />
+              <img class="h-full w-auto" src={logoHP} alt="HP Logo" />
             </div>
             <div class="basis-1/2 grow-0 shrink flex justify-center h-8 opacity-50">
-              <img class="h-full md:w-auto" src={logoEricsson} />
+              <img
+                class="h-full md:w-auto"
+                src={logoEricsson}
+                alt="Ericsson Logo"
+              />
             </div>
             <div class="basis-1/2 grow-0 shrink flex justify-center h-10 opacity-50">
-              <img class="h-full md:w-auto" src={logoResideo} />
+              <img
+                class="h-full md:w-auto"
+                src={logoResideo}
+                alt="Resideo Logo"
+              />
             </div>
             <div class="basis-1/2 grow-0 shrink flex justify-center h-6 opacity-50">
-              <img class="h-full md:w-auto" src={logoIndeed} />
+              <img
+                class="h-full md:w-auto"
+                src={logoIndeed}
+                alt="Indeed Logo"
+              />
             </div>
             <div class="basis-1/2 grow-0 shrink flex justify-center h-6 opacity-50">
-              <img class="h-full md:w-auto" src={logoHumanitec} />
+              <img
+                class="h-full md:w-auto"
+                src={logoHumanitec}
+                alt="Humanitec Logo"
+              />
             </div>
           </div>
         </div>
@@ -115,7 +131,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           <h3 class="text-2xl text-blue-primary font-black">
             Confidence to Innovate
           </h3>
-          <p class="py-4 text-l  text-inherit	leading-relaxed">
+          <p class="py-4 text-l  text-inherit   leading-relaxed">
             Grasping the intricacies of plugins doesn't just give you a
             technical advantage—it fuels your creativity. With this newfound
             knowledge, you'll confidently design and implement complex features
@@ -335,53 +351,62 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
               />
             </svg>
           </div>
-          <div class="pt-1 pl-2">
+          <hgroup class="pt-1 pl-2">
             <h3 class="font-bold text-xl text-blue-primary mb-1">Ship</h3>
             <p>
               Learn to bundle, build, and ship your plugin. Ensure your creation
               is packaged for easy integration, sharing your innovation
               internally or with the broader Backstage community.
             </p>
-          </div>
+          </hgroup>
         </div>
       </section>
       <section class="py-16 mt-24 bg-gray-50">
         <div class="p-4 px-8 prose text-lg md:text-xl mx-auto text-inherit leading-tight">
           <H2 class="text-center">What you will learn</H2>
-          <div>
+          <hgroup>
             <h3>Frontend</h3>
-            <li>Create frontend components that work as a page or a card.</li>
-            <li>Create an API client for your backend API</li>
-            <li>Make the API client available via an API Ref.</li>
-            <li>Use your custom API ref in your components.</li>
-            <li>Configure your API ref using Backstage API configuration.</li>
-            <li>Customize the frontend components of a new custom kind.</li>
-          </div>
-          <div>
+            <ul>
+              <li>Create frontend components that work as a page or a card.</li>
+              <li>Create an API client for your backend API</li>
+              <li>Make the API client available via an API Ref.</li>
+              <li>Use your custom API ref in your components.</li>
+              <li>Configure your API ref using Backstage API configuration.</li>
+              <li>Customize the frontend components of a new custom kind.</li>
+            </ul>
+          </hgroup>
+          <hgroup>
             <h3>Catalog</h3>
-            <li>Define a new custom kind</li>
-            <li>
-              Create a new processor that will validate your kind using Zod
-            </li>
-            <li>Emit custom relationships using processors</li>
-          </div>
-          <div>
+            <ul>
+              <li>Define a new custom kind</li>
+              <li>
+                Create a new processor that will validate your kind using Zod
+              </li>
+              <li>Emit custom relationships using processors</li>
+            </ul>
+          </hgroup>
+          <hgroup>
             <h3>Backend</h3>
-            <li>
-              Create a new backend plugin using a new backend extension system.
-            </li>
-            <li>Create a REST API backend using OpenAPI specification.</li>
-            <li>
-              Generate types from OpenAPI specification.
-            </li>
-            <li>Store and Share types between frontend and backend.</li>
-            <li>Write database migrations to create a database.</li>
-            <li>Write database migrations to change the database structure.</li>
-            <li>Connect the database to the REST API</li>
-            <li>
-              Write a backend engine that will execute pipeline monitoring.
-            </li>
-          </div>
+            <ul>
+              <li>
+                Create a new backend plugin using a new backend extension
+                system.
+              </li>
+              <li>Create a REST API backend using OpenAPI specification.</li>
+              <li>
+                Generate types from OpenAPI specification.
+              </li>
+              <li>Store and Share types between frontend and backend.</li>
+              <li>Write database migrations to create a database.</li>
+              <li>
+                Write database migrations to change the database structure.
+              </li>
+              <li>Connect the database to the REST API</li>
+              <li>
+                Write a backend engine that will execute pipeline monitoring.
+              </li>
+            </ul>
+          </hgroup>
         </div>
       </section>
       <H2 class="text-center mt-16">Workshop Instructors</H2>
@@ -435,7 +460,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
               />
             </svg>
           </div>
-          <div class="pt-1 pl-2">
+          <hgroup class="pt-1 pl-2">
             <h3 class="font-bold text-xl text-blue-primary mb-1">
               Enterprise Level Backstage Experience
             </h3>
@@ -445,7 +470,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
               plugins and overall system of plugins. We build plugins that can
               can to Enterprise.
             </p>
-          </div>
+          </hgroup>
         </div>
         <div class="flex mt-4 md:mt-0">
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
@@ -464,7 +489,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
               />
             </svg>
           </div>
-          <div class="pt-1 pl-2">
+          <hgroup class="pt-1 pl-2">
             <h3 class="font-bold text-xl text-blue-primary mb-1">
               Early-Adopters, Highly Experienced Engineers
             </h3>
@@ -474,7 +499,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
               plugins, and their underlying technologies such as React and
               Typescript.
             </p>
-          </div>
+          </hgroup>
         </div>
         <div class="flex mt-4 md:mt-0">
           <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
@@ -493,7 +518,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
               />
             </svg>
           </div>
-          <div class="pt-1 pl-2">
+          <hgroup class="pt-1 pl-2">
             <h3 class="font-bold text-xl text-blue-primary mb-1">
               Pioneering the Backstage Ecosystem
             </h3>
@@ -501,7 +526,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
               Frontside both independently and in collaboration with our trusted
               partners has been at the forefront of Backstage innovation.
             </p>
-          </div>
+          </hgroup>
         </div>
         <div>
           <div class="flex mt-4 md:mt-0">
@@ -521,7 +546,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
                 <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
               </svg>
             </div>
-            <div class="pt-1 pl-2">
+            <hgroup class="pt-1 pl-2">
               <h3 class="font-bold text-xl text-blue-primary mb-1">
                 Core Contributors
               </h3>
@@ -530,7 +555,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
                 where applicable have contribution code to both the core and by
                 creating plugins to enhance core and overall functionality.
               </p>
-            </div>
+            </hgroup>
           </div>
         </div>
         <div class="flex mt-4 md:mt-0">
@@ -587,7 +612,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
               </defs>
             </svg>
           </div>
-          <div class="pt-1 pl-2">
+          <hgroup class="pt-1 pl-2">
             <h3 class="font-bold text-xl text-blue-primary mb-1">
               Engaged and Invested Community Members
             </h3>
@@ -598,7 +623,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
               commitment isn't just superficial; they are genuinely invested in
               uplifting and supporting fellow community members.
             </p>
-          </div>
+          </hgroup>
         </div>
       </section>
       <section class="mt-16 bg-gray-50 py-16">
@@ -606,19 +631,35 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
         <div class="container mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 px-8 md:px-0 place-items-center">
             <div class="basis-1/2 grow-0 shrink flex justify-center h-10">
-              <img class="h-full md:w-auto" src={logoEricsson} />
+              <img
+                class="h-full md:w-auto"
+                src={logoEricsson}
+                alt="Ericsson Logo"
+              />
             </div>
             <div class="basis-1/2 grow-0 shrink flex justify-center h-14">
-              <img class="h-full md:w-auto" src={logoHP} />
+              <img class="h-full md:w-auto" src={logoHP} alt="HP Logo" />
             </div>
             <div class="basis-1/2 grow-0 shrink flex justify-center h-10 md:h-10">
-              <img class="h-full md:w-auto" src={logoResideo} />
+              <img
+                class="h-full md:w-auto"
+                src={logoResideo}
+                alt="Resideo Logo"
+              />
             </div>
             <div class="basis-1/2 grow-0 shrink flex justify-center h-8">
-              <img class="h-full md:w-auto" src={logoIndeed} />
+              <img
+                class="h-full md:w-auto"
+                src={logoIndeed}
+                alt="Indeed Logo"
+              />
             </div>
             <div class="basis-1/2 grow-0 shrink flex justify-center h-6">
-              <img class="h-full md:w-auto" src={logoHumanitec} />
+              <img
+                class="h-full md:w-auto"
+                src={logoHumanitec}
+                alt="Humanitec Logo"
+              />
             </div>
           </div>
         </div>
@@ -725,7 +766,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           data-tf-iframe-props="title=Advanced Plugin Develop Sign up Form"
           data-tf-transitive-search-params
           data-tf-medium="snippet"
-          id="signup-for-workshop"
+          id="signup-for-workshop-bottom"
           href="#"
           class="inline-block mt-16 text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
         >
