@@ -1,7 +1,6 @@
 import { serve } from "freejack/server.ts";
 import { html } from "freejack/html.ts";
 import { render } from "freejack/view.ts";
-import { CROScript } from "./server/cro-script.ts";
 
 import {
   AdvancedBackstagePluginDevelopmentHtml,
@@ -31,5 +30,4 @@ export default () =>
         AdvancedBackstagePluginDevelopmentHtml(),
       )
     ),
-    "/feedback/js/cro-script.js": CROScript,
   });

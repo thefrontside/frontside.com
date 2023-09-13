@@ -1,6 +1,8 @@
 import type { Operation } from "effection";
 import { outlet, url } from "freejack/view.ts";
 
+import { PAGE_SENSE_SCRIPT_SRC } from "./env.ts";
+
 export interface Options {
   title: string;
   description: string;
@@ -11,7 +13,10 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
   let siteURL = yield* url();
   let logoNoText = yield* url("assets/fs-logo-no-text.svg");
   let logoURL = yield* url("assets/fs-logo.svg");
-  let CRO = yield* url("feedback/js/cro-script.js");
+
+  let PageSenseScriptTag = PAGE_SENSE_SCRIPT_SRC
+    ? <script async src={PAGE_SENSE_SCRIPT_SRC}></script>
+    : <></>;
 
   return (
     <html lang="en-US" dir="ltr">
@@ -35,7 +40,7 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         <link rel="canonical" href={siteURL} />
         <link rel="alternate" href={siteURL} hreflang="en" />
         <link rel="alternate" href={siteURL} hreflang="x-default" />
-        <script async src={CRO}></script>
+        {PageSenseScriptTag}
       </head>
       <body>
         <header class="p-5 lg:max-w-5xl lg: m-auto">
