@@ -31,6 +31,7 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         <link rel="canonical" href={siteURL} />
         <link rel="alternate" href={siteURL} hreflang="en" />
         <link rel="alternate" href={siteURL} hreflang="x-default" />
+        <script src="https://cdn.pagesense.io/js/frontsidesoftware/12a41c994cce49f684b5c690d6e64c74.js"></script>
       </head>
       <body>
         <header class="p-5 lg:max-w-5xl lg: m-auto">
