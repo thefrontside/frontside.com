@@ -10,6 +10,8 @@ tags: [ "backstage", "dx" ]
 img: /img/2023-08-07-backstage-linting.png
 ---
 
+> **TL;DR** This blog post outlines the steps in creating a patch for the lint command in Backstage, which organizes errors by package, rules, and overall counts. The author explains how to use the generated lint error data to monitor and manage lint issues efficiently, and emphasizes the importance of tracking progress in reducing lint errors.
+
 I recently worked with a team that had the lint command in their Backstage project misconfigured. The result? They ended up amassing an overwhelming number of lint errors - literally hundreds upon hundreds. In fact, the report output by the lint command was so long it would max out the terminal.
 
 Normally, you would run the lint command in CI for every commit of your pull requests. This practice ensures that any new lint errors introduced by the changes would prevent the pull request from being merged. However, we could not set up this configuration right away; doing so would have brought development to a screeching halt.
@@ -18,7 +20,7 @@ With so many lint errors, it was difficult to pinpoint a starting point. To gain
 
 # Writing the Patch
 
-The lint command of the `backstage-cli` package can be found [here](https://github.com/backstage/backstage/blob/a9ce4402a124734dc7f031ca416fd40480f4e431/packages/cli/src/commands/repo/lint.ts). We're going to write a patch for it to produce the summary file so let's start by installing [`patch-package`](https://www.npmjs.com/package/patch-package):
+The lint command of the `backstage-cli` package can be found [here](https://github.com/backstage/backstage/blob/5578c3de6354bf9ef65aaac50fe73b890b0ad0e5/packages/cli/src/commands/repo/lint.ts). We're going to write a patch for it to produce the summary file so let's start by installing [`patch-package`](https://www.npmjs.com/package/patch-package):
 
 ```
 yarn add patch-package -W
