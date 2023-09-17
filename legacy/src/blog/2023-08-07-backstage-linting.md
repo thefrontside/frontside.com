@@ -64,17 +64,19 @@ async function command(opts) {
     fs.rmSync(errors_dir, { recursive: true, force: true });
   }
 
-  var errors_summary = {
+  let errors_summary = {
     total_count: 0,
     per_package: [],
   };
-  var violations_combined = [];
+  let violations_combined = [];
 
   for (const { relativeDir, resultText } of resultsList) {
     const package_dir = path.join(errors_dir, relativeDir);
+    fs.mkdirSync(package_dir, { recursive: true });
+
     const stripAnsi = new RegExp(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g);
     const resultTextFormatted = resultText.replace(stripAnsi, "").split("\n");
-    fs.mkdirSync(package_dir, { recursive: true });
+
     fs.writeFileSync(`${package_dir}/results.txt`, `${relativeDir}\n${resultTextFormatted.join('\n')}\n`);
 
     const violations_count = parseInt(
@@ -88,7 +90,7 @@ async function command(opts) {
       ? resultTextFormatted.indexOf("Errors:")
       : resultTextFormatted.indexOf("Warnings:");
 
-    var package_violations = [];
+    let package_violations = [];
 
     resultTextFormatted.slice(violations_index).forEach(line => {
       if (line.match(/http/)) {
@@ -99,7 +101,8 @@ async function command(opts) {
         package_violations.push(error_details);
         violations_combined.push(error_details);
       }
-    })
+    });
+
     errors_summary.per_package.push({
       package: relativeDir,
       violations_count,
@@ -111,7 +114,6 @@ async function command(opts) {
   };
 
   if (failed) {
-    // process.exit(1)
     const combined_violations_sorted = violations_combined
     .reduce((acc, item) => {
       const already_exists = acc.findIndex(acc_item => acc_item.rule === item.rule);
