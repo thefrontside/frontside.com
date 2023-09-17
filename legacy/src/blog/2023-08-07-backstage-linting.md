@@ -51,7 +51,9 @@ calculate grand total count of lint errors for the entire project
 combine the total count of lint errors by rule for the entire project
 ```
 
-And here's the actual patch. Typically we would use diff syntax to indicate which lines to be added, but in order to make the code easier to read, we will display the code snippet with Javascript syntax highlighting:
+And here's the actual patch. Typically we would use diff syntax to indicate which lines to be added, but in order to make the code easier to read, we will display the code snippet with Javascript syntax highlighting.
+
+> The code snippet below is quite long so you can check out a working demo of a Backstage app with the lint patch [here](https://github.com/minkimcello/backstage-lint-demo). The actual patch can be found [here](https://github.com/minkimcello/backstage-lint-demo/blob/main/patches/%40backstage%2Bcli%2B0.22.12.patch), and you could also follow along its [commit history](https://github.com/minkimcello/backstage-lint-demo/commits/main) for a more step-by-step approach in creating the patch.
 
 ```js
 var fs = require('fs');
