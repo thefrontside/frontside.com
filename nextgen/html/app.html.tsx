@@ -4,20 +4,22 @@ import { outlet, url } from "freejack/view.ts";
 export interface Options {
   title: string;
   description: string;
+  ogImage?: string;
+  twitterXImage?: string;
 }
 
 export default function* AppHtml(options: Options): Operation<JSX.Element> {
-  let { title, description } = options;
+  let { title, description, ogImage, twitterXImage } = options;
   let siteURL = yield* url();
-  let logoNoText = yield* url("assets/fs-logo-no-text.svg");
-  let logoURL = yield* url("assets/fs-logo.svg");
+  let logoNoText = yield* url(ogImage);
+  let logoURL = yield* url(twitterXImage);
 
   return (
     <html lang="en-US" dir="ltr">
       <head>
         <meta charset="UTF-8" />
         <title>{title}</title>
-        <meta property="og:image" content={logoNoText} />
+        <meta name="image" property="og:image" content={logoNoText} />
         <meta property="og:title" content={title} />
         <meta property="og:url" content={yield* url()} />
         <meta property="og:description" content={description} />
