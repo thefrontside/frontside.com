@@ -6,10 +6,11 @@ export interface Options {
   description: string;
   ogImage?: string;
   twitterXImage?: string;
+  author?: string;
 }
 
 export default function* AppHtml(options: Options): Operation<JSX.Element> {
-  let { title, description, ogImage, twitterXImage } = options;
+  let { title, description, ogImage, twitterXImage, author } = options;
   let siteURL = yield* url();
   let logoNoText = yield* url(ogImage);
   let logoURL = yield* url(twitterXImage);
@@ -24,9 +25,10 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         <meta property="og:url" content={yield* url()} />
         <meta property="og:description" content={description} />
         <meta name="description" content={description} />
+        <meta name="author" content={author} />
         <meta name="twitter:image" content={logoURL} />
+        <meta name="twitter:description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         <link rel="stylesheet" href="https://use.typekit.net/ugs0ewy.css" />
         <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet"></link>
         <link rel="icon" href={logoNoText} />
