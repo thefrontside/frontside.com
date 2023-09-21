@@ -6,13 +6,16 @@ import { PAGE_SENSE_SCRIPT_SRC } from "./env.ts";
 export interface Options {
   title: string;
   description: string;
+  ogImage?: string;
+  twitterXImage?: string;
+  author?: string;
 }
 
 export default function* AppHtml(options: Options): Operation<JSX.Element> {
-  let { title, description } = options;
+  let { title, description, ogImage, twitterXImage, author } = options;
   let siteURL = yield* url();
-  let logoNoText = yield* url("assets/fs-logo-no-text.svg");
-  let logoURL = yield* url("assets/fs-logo.svg");
+  let logoNoText = yield* url(ogImage);
+  let logoURL = yield* url(twitterXImage);
 
   let PageSenseScriptTag = PAGE_SENSE_SCRIPT_SRC
     ? <script async src={PAGE_SENSE_SCRIPT_SRC}></script>
@@ -23,12 +26,14 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
       <head>
         <meta charset="UTF-8" />
         <title>{title}</title>
-        <meta property="og:image" content={logoNoText} />
+        <meta name="image" property="og:image" content={logoNoText} />
         <meta property="og:title" content={title} />
         <meta property="og:url" content={yield* url()} />
         <meta property="og:description" content={description} />
         <meta name="description" content={description} />
+        <meta name="author" content={author} />
         <meta name="twitter:image" content={logoURL} />
+        <meta name="twitter:description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="stylesheet" href="https://use.typekit.net/ugs0ewy.css" />
