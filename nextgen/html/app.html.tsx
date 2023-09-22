@@ -14,8 +14,10 @@ export interface Options {
 export default function* AppHtml(options: Options): Operation<JSX.Element> {
   let { title, description, ogImage, twitterXImage, author } = options;
   let siteURL = yield* url();
-  let logoNoText = yield* url(ogImage);
-  let logoURL = yield* url(twitterXImage);
+  let ogImageMeta = yield* url(ogImage);
+  let twitterXImageMeta = yield* url(twitterXImage);
+  let logoNoText = yield* url("assets/fs-logo-no-text.svg");
+  let logoURL = yield* url("assets/fs-logo.svg");
 
   let PageSenseScriptTag = PAGE_SENSE_SCRIPT_SRC
     ? <script async src={PAGE_SENSE_SCRIPT_SRC}></script>
@@ -26,13 +28,13 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
       <head>
         <meta charset="UTF-8" />
         <title>{title}</title>
-        <meta name="image" property="og:image" content={logoNoText} />
+        <meta name="image" property="og:image" content={ogImageMeta} />
         <meta property="og:title" content={title} />
         <meta property="og:url" content={yield* url()} />
         <meta property="og:description" content={description} />
         <meta name="description" content={description} />
         <meta name="author" content={author} />
-        <meta name="twitter:image" content={logoURL} />
+        <meta name="twitter:image" content={twitterXImageMeta} />
         <meta name="twitter:description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
