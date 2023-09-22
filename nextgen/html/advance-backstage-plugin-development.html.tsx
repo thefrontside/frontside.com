@@ -31,6 +31,7 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
           </h1>
           <p class="pr-8 mt-5 mb-10 tracking-wide text-xl text-blue-primary prose">
              Learn from hands-on workshop derived from our work with large enterprise organizations. This isn't mere theory—it's actionable expertise. Join a workshop infused with best practices, insights, and advanced engineering.
+          </p>
           <a
             data-tf-popup="fNHxMLVS"
             data-tf-opacity="100"
