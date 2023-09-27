@@ -50,7 +50,7 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         {PageSenseScriptTag}
       </head>
       <body>
-        <header class="p-5 lg:max-w-5xl lg: m-auto">
+        <header class="p-5 lg:max-w-5xl lg: m-auto grid grid-rows-2 md:grid-rows-1">
           <nav aria-label="Site Nav">
             <menu class="flex justify-between">
               <a href="/">
@@ -61,7 +61,12 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
                   alt="Frontside Logo"
                 />
               </a>
-              <a href="/contact">Contact</a>
+              <a
+                class="btn-contact uppercase rounded-lg font-bold py-2 md:py-1.5 px-2 md:px-2.5 bg-contain text-white text-sm md:text-base"
+                href="/contact"
+              >
+                Contact
+              </a>
             </menu>
           </nav>
           <nav
