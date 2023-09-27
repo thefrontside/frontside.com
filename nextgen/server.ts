@@ -28,7 +28,7 @@ export default () =>
             "Harness Backstage's Potential: Become an Advanced Plugin Developer",
           ogImage: "/assets/pluginWorkshopHeaderImagev2.png",
           twitterXImage: "/assets/pluginWorkshopHeaderImagev2.png",
-          author: "Frontside"
+          author: "Frontside",
         }),
         AdvancedBackstagePluginDevelopmentHtml(),
       )
