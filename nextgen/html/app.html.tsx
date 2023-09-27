@@ -50,30 +50,17 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         {PageSenseScriptTag}
       </head>
       <body>
-        <header class="p-5 lg:max-w-5xl lg: m-auto grid grid-rows-2 md:grid-rows-1">
-          <nav aria-label="Site Nav">
-            <menu class="flex justify-between">
-              <a href="/">
-                <img
-                  width={137}
-                  height={34.172}
-                  src={logoURL}
-                  alt="Frontside Logo"
-                />
-              </a>
-              <a
-                class="btn-contact uppercase rounded-lg font-bold py-2 md:py-1.5 px-2 md:px-2.5 bg-contain text-white text-sm md:text-base"
-                href="/contact"
-              >
-                Contact
-              </a>
-            </menu>
-          </nav>
-          <nav
-            class="mt-14 font-bold leading-5 tracking-wide text-blue-primary text-xs lg:text-sm"
-            arial-label="Home Nav"
-          >
-            <menu class="flex justify-between">
+        <header class="p-5 max-w-screen-sm lg:max-w-screen-2xl m-auto lg:p-12">
+          <nav class="flex flex-wrap items-center justify-end lg:gap-x-10" aria-label="Site Nav">
+            <a class="order-1 mr-auto" href="/">
+              <img
+                width={137}
+                height={34.172}
+                src={logoURL}
+                alt="Frontside Logo"
+              />
+            </a>
+            <menu class="w-full mt-14 font-bold leading-5 tracking-wide text-blue-primary text-sm flex justify-between order-3 lg:order-2 lg:mt-0 lg:w-auto lg:gap-x-12">
               <li>
                 <a href="/consulting">DX Consulting</a>
               </li>
@@ -87,6 +74,12 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
                 <a href="/blog">Blog</a>
               </li>
             </menu>
+            <a
+              class="btn-contact uppercase rounded-lg font-bold py-2 md:py-1.5 px-2 md:px-2.5 bg-contain text-white text-sm md:text-base order-2"
+              href="/contact"
+            >
+              Contact
+            </a>
           </nav>
         </header>
         <main>
