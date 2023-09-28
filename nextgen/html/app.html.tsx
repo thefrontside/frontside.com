@@ -1,6 +1,8 @@
 import type { Operation } from "effection";
 import { outlet, url } from "freejack/view.ts";
 
+import { ProjectSelect } from "../components/project-select.tsx";
+
 import { PAGE_SENSE_SCRIPT_SRC } from "./env.ts";
 
 export interface Options {
@@ -51,7 +53,10 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
       </head>
       <body>
         <header class="p-5 max-w-screen-sm lg:max-w-screen-2xl m-auto lg:p-12">
-          <nav class="flex flex-wrap items-center justify-end lg:gap-x-10" aria-label="Site Nav">
+          <nav
+            class="flex flex-wrap items-center justify-end lg:gap-x-10"
+            aria-label="Site Nav"
+          >
             <a class="order-1 mr-auto" href="/">
               <img
                 width={137}
@@ -68,7 +73,7 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
                 <a href="/backstage">Backstage</a>
               </li>
               <li>
-                <a href="/opensource">Open Source</a>
+                <ProjectSelect />
               </li>
               <li>
                 <a href="/blog">Blog</a>

@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "dev": "deno run -A lib/watch.ts html lib -- deno run --lock-write -A main.ts"
+    "dev": "deno run -A lib/watch.ts html components lib -- deno run --lock-write -A main.ts"
   },
   "lint": {
     "rules": {

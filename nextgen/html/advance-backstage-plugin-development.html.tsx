@@ -30,7 +30,10 @@ export function* AdvancedBackstagePluginDevelopmentHtml(): Operation<
             <span class="text-blue-secondary">Plugins!</span>
           </h1>
           <p class="pr-8 mt-5 mb-10 tracking-wide text-xl text-blue-primary prose">
-             Learn from a hands-on workshop derived from our experience with large enterprises. This isn't theory—it's actionable expertise. Join a workshop loaded with best practices, insights, and advanced engineering.
+            Learn from a hands-on workshop derived from our experience with
+            large enterprises. This isn't theory—it's actionable expertise. Join
+            a workshop loaded with best practices, insights, and advanced
+            engineering.
           </p>
           <a
             data-tf-popup="fNHxMLVS"
