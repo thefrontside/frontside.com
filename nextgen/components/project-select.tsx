@@ -12,6 +12,9 @@ export function ProjectSelect() {
         #${toggleId}:checked ~ label#${openerId} > aside {
           display: none;
         }
+        #${toggleId}:checked ~ label#${closerId} {
+          display: none;
+        }
         #${toggleId} ~ label#${closerId} {
           display: block;
         }
@@ -63,7 +66,7 @@ export function ProjectSelect() {
 
       <label
         id={closerId}
-        class="absolute w-full h-full inset-0 z-50 hidden"
+        class="absolute w-screen h-screen inset-0 z-50 hidden"
         for={toggleId}
       />
     </>
