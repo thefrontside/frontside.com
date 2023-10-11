@@ -24,21 +24,10 @@ to = "https://bigtest.netlify.app/bigtest/:splat"
 
 [[redirects]]
 force = true
-from = "/effection/api"
-status = 301
-to = "/effection/api/index.html"
-
-[[redirects]]
-force = true
-from = "/effection/api/*"
-status = 200
-to = "https://v2--effection-api.netlify.app/:splat"
-
-[[redirects]]
-force = true
 from = "/effection/*"
 status = 200
-to = "https://effection.netlify.app/effection/:splat"
+to = "https://effection.deno.dev/:splat"
+headers = { X-Base-Url = "https://frontside.com/effection" }
 
 [[redirects]]
 force = true
