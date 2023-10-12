@@ -93,26 +93,26 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
         <footer class="mt-20 mb-16">
           <menu class="font-bold text-lg grid grid-cols-2 ml-12 gap-y-5 justify-around lg:flex lg:m-0">
             <li>
-              <a href={yield* url("/")}>Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href={yield* url("/about")}>About</a>
+              <a href="/about">About</a>
             </li>
             <li>
-              <a href={yield* url("/consulting")}>Consulting</a>
+              <a href="/consulting">Consulting</a>
             </li>
             <li>
-              <a href={yield* url("/backstage")}>Backstage</a>
+              <a href="/backstage">Backstage</a>
             </li>
             <li>
-              <a href={yield* url("/blog")}>Blog</a>
+              <a href="/blog">Blog</a>
             </li>
             <li>
-              <a href={yield* url("/contact")}>Contact</a>
+              <a href="/contact">Contact</a>
             </li>
           </menu>
           <section class="text-center text-xs tracking-wide leading-5 mt-20 grid grid-cols-1 gap-y-12 ">
-            <a href={yield* url("/")}>
+            <a href="/">
               <img
                 alt="Frontside Logo"
                 class="mx-auto"
@@ -134,9 +134,9 @@ export default function* AppHtml(options: Options): Operation<JSX.Element> {
               The Frontside Software, Inc. All Rights Reserved.
             </p>
             <p class="uppercase">
-              <a href={yield* url("/code-of-conduct")}>Code of Conduct</a>
+              <a href="/code-of-conduct">Code of Conduct</a>
               —
-              <a href={yield* url("/privacy-policy")}>Privacy Policy</a>
+              <a href="/privacy-policy">Privacy Policy</a>
             </p>
           </section>
         </footer>
