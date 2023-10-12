@@ -1,0 +1,24 @@
+{
+  "tasks": {
+    "dev": "deno run -A lib/watch.ts html components lib sitemap assets src -- deno run --lock-write -A main.ts"
+  },
+  "lint": {
+    "rules": {
+      "exclude": ["prefer-const", "require-yield"]
+    },
+    "exclude": ["legacy"]
+  },
+  "fmt": {
+    "exclude": ["legacy"]
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "hastx"
+  },
+  "imports": {
+    "effection": "https://deno.land/x/effection@3.0.0-alpha.9/mod.ts",
+    "freejack/": "./lib/",
+    "hastx/": "https://deno.land/x/hastx@v0.0.6/",
+    "hastx/jsx-runtime": "https://deno.land/x/hastx@v0.0.6/jsx-runtime.ts"
+  }
+}
