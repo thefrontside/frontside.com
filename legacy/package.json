@@ -35,7 +35,7 @@
     "@typeform/embed-react": "^2.10.0",
     "@types/react-helmet": "^6.1.2",
     "@vanilla-extract/babel-plugin": "^1.0.1",
-    "@vanilla-extract/css": "^1.4.0",
+    "@vanilla-extract/css": "^1.13.0",
     "@vanilla-extract/css-utils": "^0.1.1",
     "@vanilla-extract/webpack-plugin": "^2.0.0",
     "axios": "^0.24.0",
