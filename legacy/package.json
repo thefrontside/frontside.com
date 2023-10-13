@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@jd-carroll/gatsby-remark-external-links": "^0.1.0",
-    "@lottiefiles/react-lottie-player": "^3.4.1",
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "@netlify/functions": "^0.10.0",
     "@typeform/embed-react": "^2.10.0",
     "@types/react-helmet": "^6.1.2",
