@@ -2,12 +2,12 @@
 templateKey: blog-post
 title: >-
   Backstage: How to fix linting errors without slowing down development
-date: 2023-08-07T05:00:00.000Z
+date: 2023-10-16T05:00:00.000Z
 author: Min Kim
 description: >-
   In this guide Min will show you a unique approach to tackling a mountain of linting errors without disrupting delivery
 tags: [ "backstage", "dx" ]
-img: /img/2023-08-07-backstage-linting.png
+img: /img/2023-10-16-backstage-linting.png
 ---
 
 > **TL;DR** This blog post outlines the steps in creating a patch for the lint command in Backstage, which organizes errors by package, rules, and overall counts. The author explains how to use the generated lint error data to monitor and manage lint issues efficiently, and emphasizes the importance of tracking progress in reducing lint errors.
