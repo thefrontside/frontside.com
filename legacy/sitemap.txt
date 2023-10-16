@@ -81,7 +81,7 @@
 /blog/2022-12-12-dynamic-github-action-jobs/
 /blog/2023-01-22-seven-ways-to-single-glass-pane/
 /blog/2023-04-27-deno-is-the-easiest-way-to-author-npm-packages/
-/blog/2023-08-07-backstage-linting/
+/blog/2023-10-16-backstage-linting/
 /blog/3
 /blog/4
 /blog/5
