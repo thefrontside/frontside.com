@@ -85,7 +85,7 @@
     "@storybook/react": "^6.3.7",
     "babel-loader": "^9.1.0",
     "bigtest": "^0.14.0",
-    "netlify-cli": "^12.2.8",
+    "netlify-cli": "^16.9.1",
     "storybook-addon-gatsby": "^0.0.5",
     "storybook-dark-mode": "^1.0.8"
   }
