@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: >-
-  Backstage: Unblock Innersource Development of Backstage portals with Plugins and code owners.
+  Backstage: Unblock Innersource Development with Plugins and Code Owners.
 date: 2023-10-24T05:00:00.000Z
 author: Taras Mankovski
 description: >-
