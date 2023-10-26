@@ -82,6 +82,7 @@
 /blog/2023-01-22-seven-ways-to-single-glass-pane/
 /blog/2023-04-27-deno-is-the-easiest-way-to-author-npm-packages/
 /blog/2023-10-16-backstage-linting/
+/blog/2023-10-24-innersource-codeowners-backstage/
 /blog/3
 /blog/4
 /blog/5
@@ -300,6 +301,7 @@
 /tags/impagination/
 /tags/inclusiveness/
 /tags/infinite-scroll/
+/tags/innersource/
 /tags/integration/
 /tags/internal-developer-platform/
 /tags/interview/
