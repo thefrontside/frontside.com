@@ -38,7 +38,7 @@
     "@vanilla-extract/css": "^1.4.0",
     "@vanilla-extract/css-utils": "^0.1.1",
     "@vanilla-extract/webpack-plugin": "^2.0.0",
-    "axios": "^0.24.0",
+    "axios": "^1.6.0",
     "dateformat": "5.0.3",
     "downshift": "^6.1.7",
     "gatsby": "^3.10.1",
