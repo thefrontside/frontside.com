@@ -33,7 +33,7 @@ There's a well-trod design pattern for fixing this problem: [page objects](https
 
 ## Introducing Interactors
 
-At Frontside, we've built [Interactors](https://frontside.com/bigtest/interactors) (`@interactors/html`), a library inspired by page objects that helps teams structure, share, and reuse their UI testing practices.
+At Frontside, we've built [Interactors](https://frontside.com/interactors) (`@interactors/html`), a library inspired by page objects that helps teams structure, share, and reuse their UI testing practices.
 
 Interactors evolve the idea of a page object. Modern applications are usually arranged into composable components, and the "page" is no longer the dominant unit of organization. An Interactor is similarly composable, and can abstract any level of object in the DOM hierarchy.
 
