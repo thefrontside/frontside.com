@@ -19,6 +19,7 @@ export function proxy(options: ProxyOptions): ServeHandler {
     let base = new URL(`/${options.prefix}`, request.url);
 
     let response = yield* expect(fetch(target, {
+      redirect: "manual",
       headers: {
         ...request.headers,
         "X-Base-Url": base.toString(),
