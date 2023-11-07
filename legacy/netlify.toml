@@ -24,20 +24,6 @@ to = "https://bigtest.netlify.app/bigtest/:splat"
 
 [[redirects]]
 force = true
-from = "/effection/*"
-status = 200
-to = "https://effection.deno.dev/:splat"
-headers = { X-Base-Url = "https://frontside.com/effection" }
-
-[[redirects]]
-force = true
-from = "/graphgen/*"
-status = 200
-to = "https://graphgen.deno.dev/:splat"
-headers = {X-Base = "https://frontside.com/graphgen/" }
-
-[[redirects]]
-force = true
 from = "/platformscript/*"
 status = 200
 to = "https://platformscript.deno.dev/:splat"

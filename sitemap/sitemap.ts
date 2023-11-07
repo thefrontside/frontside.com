@@ -6,6 +6,8 @@ import { GatsbyWebsite } from "../legacy/gatsby-website.ts";
 
 import { AdvancedBackstagePluginDevelopmentHtml, AppHtml } from "../html.ts";
 
+import { proxy } from "./proxy.ts";
+
 export default () =>
   serve({
     "/workshops/advanced-backstage-plugin-development": html.get(() =>
@@ -21,5 +23,13 @@ export default () =>
         AdvancedBackstagePluginDevelopmentHtml(),
       )
     ),
+    "/effection(.*)": proxy({
+      prefix: "effection",
+      website: "https://effection.deno.dev",
+    }),
+    "/graphgen(.*)": proxy({
+      prefix: "graphgen",
+      website: "https://graphgen.deno.dev",
+    }),
     "(.*)": GatsbyWebsite,
   });
