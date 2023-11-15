@@ -39,7 +39,7 @@ await run(function* () {
                 ignores.some((ignore) => path.includes(ignore))
               );
             }),
-          );
+          ).subscribe();
 
           yield* useCommand(cmd, { args });
 
@@ -59,13 +59,17 @@ await run(function* () {
 });
 
 function useFsWatch(paths: string | string[]): Stream<Deno.FsEvent, never> {
-  return resource(function* (provide) {
-    let watcher = Deno.watchFs(paths);
-    try {
-      let subscription = yield* stream(watcher);
-      yield* provide(subscription as Subscription<Deno.FsEvent, never>);
-    } finally {
-      watcher.close();
-    }
-  });
+  return {
+    subscribe() {
+      return resource(function* (provide) {
+        let watcher = Deno.watchFs(paths);
+        try {
+          let subscription = yield* stream(watcher).subscribe();
+          yield* provide(subscription as Subscription<Deno.FsEvent, never>);
+        } finally {
+          watcher.close();
+        }
+      });
+    },
+  };
 }
