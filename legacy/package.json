@@ -87,6 +87,6 @@
     "bigtest": "^0.14.0",
     "netlify-cli": "^12.2.8",
     "storybook-addon-gatsby": "^0.0.5",
-    "storybook-dark-mode": "^1.0.8"
+    "storybook-dark-mode": "^3.0.3"
   }
 }
