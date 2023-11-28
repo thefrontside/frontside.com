@@ -24,6 +24,14 @@ export function pluginWorkshopRoute(): JSXHandler {
       author: "Frontside",
     });
 
+    const signUpButton = <a
+      id="signup-for-workshop-top"
+      href="https://buy.stripe.com/bIY6se1t9bW77AcbII"
+      class="inline-block text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
+    >
+      Sign up for December 7th workshop
+    </a>;
+
     return (
       <AppHtml>
         <article class="pt-14 text-blue-primary">
@@ -46,20 +54,7 @@ export function pluginWorkshopRoute(): JSXHandler {
                 Join a workshop loaded with best practices, insights, and
                 advanced engineering.
               </p>
-              <a
-                data-tf-popup="fNHxMLVS"
-                data-tf-opacity="100"
-                data-tf-size="100"
-                data-tf-iframe-props="title=Advanced Plugin Develop Sign up Form"
-                data-tf-transitive-search-params
-                data-tf-medium="snippet"
-                id="signup-for-workshop-top"
-                href="#"
-                class="inline-block text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
-              >
-                Signup for Waitlist Today
-              </a>
-              <script defer src="//embed.typeform.com/next/embed.js"></script>
+              {signUpButton}
             </div>
             <img
               class="w-3/5 md:w-2/5 lg:w-full m-auto mt-16 md:order-1"
@@ -780,26 +775,38 @@ export function pluginWorkshopRoute(): JSXHandler {
               </div>
             </div>
           </section>
-          <section class="flex flex-col items-center mt-32 px-8">
-            <p class="prose text-center">
-              Join us to elevate your Backstage expertise and transform into a
-              proficient plugin developer. Discover, learn, and kick-start your
-              path to master the art of crafting sophisticated plugins for
-              Backstage in this comprehensive, hands-on workshop.
-            </p>
-            <a
-              data-tf-popup="fNHxMLVS"
-              data-tf-opacity="100"
-              data-tf-size="100"
-              data-tf-iframe-props="title=Advanced Plugin Develop Sign up Form"
-              data-tf-transitive-search-params
-              data-tf-medium="snippet"
-              id="signup-for-workshop-bottom"
-              href="#"
-              class="inline-block mt-16 text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
-            >
-              Signup for the Waitlist Today
-            </a>
+          <section class="mt-32">
+            <div class="xl:w-2/3 mx-auto">
+              <H2 class="text-center mb-12">Upcoming Workshops</H2>
+              <div class="flex flex-col md:flex-row md:flex-col">
+                <div class="p-4 md:w-1/2">
+                  <p class="text-center text-lg">
+                    Join us to elevate your Backstage expertise and transform into a
+                    proficient plugin developer. Discover, learn, and kick-start your
+                    path to master the art of crafting sophisticated plugins for
+                    Backstage in this comprehensive, hands-on workshop.
+                  </p>
+                </div>
+                <div class="md:w-1/2 px-4 justify-self-center">
+                  <div class="border-1 rounded-lg rounded-l-none border-l-4  border-slate-200 border-l-blue-300 p-3 flex flex-col ring-blue-500 pb-5" itemprop="event" itemscope itemtype="https://schema.org/EducationalEvent">
+                    <h3 class="mb-2" itemprop="name">
+                      <a class="text-xl font-bold" href="https://buy.stripe.com/bIY6se1t9bW77AcbII" itemprop="url">Advanced Plugin Development</a>
+                    </h3>
+                    <div class="flex mb-4">
+                      <a class="text-lg pt-1" target="_blank" href="https://www.worldtimebuddy.com/?qm=1&lid=5&h=5&date=2023-12-7&sln=10-17&hf=1&c=1899">
+                        <meta itemprop="startDate" content="2023-12-07T15:00:00" />
+                        Dec 7th, 2023
+                      </a>
+                      <span itemprop="location" class="text-lg ring ring-neutral-100 rounded-md py-0.5 px-2 ml-5">Remote</span>
+                    </div>
+                    <div itemprop="offers" itemscope itemtype="https://schema.org/AggregateOffer">
+                      <meta itemprop="priceCurrency" content="USD" />
+                      <span class="mr-2" itemprop="lowPrice" content="499">$499</span> <a href="https://buy.stripe.com/bIY6se1t9bW77AcbII" itemprop="offers" class="btn-contact bg-contain rounded-lg text-white border p-2 uppercase font-bold text-sm md:text-base order-2">Buy ticket</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
         </article>
       </AppHtml>
