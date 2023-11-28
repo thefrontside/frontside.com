@@ -1,9 +1,8 @@
-import vars, { laptopQuery, desktopQuery, darkThemeQuery, colorValues } from '../../styles/frontside-theme.css';
+import vars, { laptopQuery, desktopQuery, darkThemeQuery, lightThemeQuery, colorValues } from '../../styles/frontside-theme.css';
 import { style, globalStyle, styleVariants } from '@vanilla-extract/css';
 import { pageWrap } from '../../styles/page.css';
 import gradientDecor from '../../img/q3-2021/button-gradient.png';
 import { boldCaps, fillBlueDashWhite, headingMd, headingSm, textBlue, textBlueDashWhite, textSm, textXs } from '../../styles/typography.css';
-import { calc } from "@vanilla-extract/css-utils";
 
 export const navWrap = style([pageWrap, {
   display: 'flex',
@@ -200,3 +199,17 @@ export const projectLink = style({
   display: 'flex',
   flexFlow: 'row nowrap',
 });
+
+export const announcementsContainer = style({
+  display: "flex",
+  justifyContent: "center",
+  backgroundColor: vars.colors.violet,
+  color: vars.colors.white,
+  textAlign: "center",
+  fontSize: vars.fontSize.sm
+})
+
+export const announcementsLink = style({
+  color: vars.colors.white,
+  textDecoration: 'underline'
+})
