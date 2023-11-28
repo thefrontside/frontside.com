@@ -206,7 +206,9 @@ export const announcementsContainer = style({
   backgroundColor: vars.colors.violet,
   color: vars.colors.white,
   textAlign: "center",
-  fontSize: vars.fontSize.sm
+  fontSize: vars.fontSize.sm,
+  paddingLeft: vars.space['sm'],
+  paddingRight: vars.space['sm']
 })
 
 export const announcementsLink = style({
