@@ -9,7 +9,8 @@ import {
   linksGroup,
   homeLink,
   announcementsContainer,
-  announcementsLink
+  announcementsLink,
+  announcementsEmoji
 } from './navbar.css';
 import ProjectSelect from './project-select';
 
@@ -24,8 +25,9 @@ export const Navbar = () => {
   return (
     <>
       <div className={announcementsContainer}>
+        <span className={announcementsEmoji}>✨</span>
         <p>
-          Few seats left for our <strong>Advanced Backstage Plugin Development</strong> workshop on December 6th. <a href="/workshops/advanced-backstage-plugin-development" className={announcementsLink}>Secure your seat today!</a>
+          Few seats left for our <strong>Advanced Backstage Plugin Development</strong> workshop on December 7th. <a href="/workshops/advanced-backstage-plugin-development" className={announcementsLink}>Secure your seat today!</a>
         </p>
       </div>
       <nav className={navWrap}>

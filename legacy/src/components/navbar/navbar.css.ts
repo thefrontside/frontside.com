@@ -203,15 +203,21 @@ export const projectLink = style({
 export const announcementsContainer = style({
   display: "flex",
   justifyContent: "center",
+  alignItems: "center",
   backgroundColor: vars.colors.violet,
   color: vars.colors.white,
   textAlign: "center",
   fontSize: vars.fontSize.sm,
   paddingLeft: vars.space['sm'],
-  paddingRight: vars.space['sm']
+  paddingRight: vars.space['sm'],
 })
 
 export const announcementsLink = style({
   color: vars.colors.white,
   textDecoration: 'underline'
+})
+
+export const announcementsEmoji = style({
+  fontSize: vars.fontSize.xl,
+  paddingRight: vars.space['2xs']
 })
