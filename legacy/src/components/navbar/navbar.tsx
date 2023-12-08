@@ -8,8 +8,6 @@ import {
   logoSVGFill,
   linksGroup,
   homeLink,
-  announcementsContainer,
-  announcementsLink
 } from './navbar.css';
 import ProjectSelect from './project-select';
 
@@ -22,36 +20,29 @@ const NavItems = [
 
 export const Navbar = () => {
   return (
-    <>
-      <div className={announcementsContainer}>
-        <p>
-          Few seats left for our <strong>Advanced Backstage Plugin Development</strong> workshop on December 6th. <a href="/workshops/advanced-backstage-plugin-development" className={announcementsLink}>Secure your seat today!</a>
-        </p>
+    <nav className={navWrap}>
+      <Link to="/" className={logoMargin}>
+        <Logo />
+      </Link>
+      <div className={linksGroup}>
+        <Link to={NavItems[0].url} className={homeLink}>
+          {NavItems[0].text}
+        </Link>
+        <Link to={NavItems[1].url} className={navLink}>
+          {NavItems[1].text}
+        </Link>
+        <Link to={NavItems[2].url} className={navLink}>
+          {NavItems[2].text}
+        </Link>
+        <ProjectSelect />
+        <Link to={NavItems[3].url} className={navLink}>
+          {NavItems[3].text}
+        </Link>
       </div>
-      <nav className={navWrap}>
-        <Link to="/" className={logoMargin}>
-          <Logo />
-        </Link>
-        <div className={linksGroup}>
-          <Link to={NavItems[0].url} className={homeLink}>
-            {NavItems[0].text}
-          </Link>
-          <Link to={NavItems[1].url} className={navLink}>
-            {NavItems[1].text}
-          </Link>
-          <Link to={NavItems[2].url} className={navLink}>
-            {NavItems[2].text}
-          </Link>
-          <ProjectSelect />
-          <Link to={NavItems[3].url} className={navLink}>
-            {NavItems[3].text}
-          </Link>
-        </div>
-        <Link to="/contact" className={contactButton}>
-          Contact
-        </Link>
-      </nav>
-    </>
+      <Link to="/contact" className={contactButton}>
+        Contact
+      </Link>
+    </nav>
   );
 };
 
