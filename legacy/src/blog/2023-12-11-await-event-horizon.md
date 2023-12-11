@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: >-
-  The await event horizon
+  The await event horizon in JavaScript
 date: 2023-12-11T20:00:00.959Z
 author: Charles Lowell
 description: >-
