@@ -98,13 +98,13 @@ The consequence of this is that the *minimum* lifetime of any given `async` func
 
 `protect()` cannot continue until `work()` settles… whenever that may be. So it is `work()` that determines when `protect()` can continue, and it is `protect()` that determines the natural lifetime of our main function. Anything that overruns the exit of our process is in the “danger zone” of being leaked. This includes our hypothetical lock
 
-![Any code that runs longer than needed is in danger of being leaked](/img/2023-12-08-await-event-horizon/leak-zone.png)
+![Any code that runs longer than needed is in danger of being leaked](/img/2023-12-11-await-event-horizon/leak-zone.png)
 
 In fact, this is precisely the opposite of what is required by a Structurally Concurrent system. Namely, that the *maximum* lifetime of a function is constrained by the lifetime of the function that calls it. Instead of waiting around for async operations to complete that have no bearing on the outcome of a computation, a structurally concurrent system will return from those functions immediately the moment they are no longer necessary. In our example of the command line interface, as soon as the user hits ctrl-c, everything else becomes immediately irrelevant.
 
 What we would like to see in this case is the forcible return of control *back* to the `protect()` function, so that it can run its `finally` block so that the lock is not leaked and the process exits gracefully.
 
-![A well behaved operation always returns](/img/2023-12-08-await-event-horizon/graceful-shutdown.png)
+![A well behaved operation always returns](/img/2023-12-11-await-event-horizon/graceful-shutdown.png)
 
 However, in order to enforce the shutdown of these irrelevant functions, there must be some mechanism by which to impose a return of control from the top down. But we’ve just seen how in `async` functions, once control passes through the `await` event horizon, it cannot be brought back. It’s for this reason that primitives based on `async` functions can at best hope for structured concurrency, but they can never guarantee it.
 
