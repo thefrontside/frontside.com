@@ -2,12 +2,12 @@
 templateKey: blog-post
 title: >-
   The await event horizon
-date: 2023-12-08T20:00:00.959Z
+date: 2023-12-11T20:00:00.959Z
 author: Charles Lowell
 description: >-
   Why async functions in JavaScript are insufficient as a Structured Concurrency primitive
 tags: [ "javascript", "structured concurrency"]
-img: /img/2023-12-08-await-event-horizon.png
+img: /img/2023-12-11-await-event-horizon.png
 ---
 
 There is a boundary around every black hole where the velocity required to escape its gravitational pull exceeds the speed of light. Once anything, including light itself, passes over that threshold, it is trapped inside the mysterious interior of the black hole forever. There is no escape, and there is no return back to the rest of the universe. This boundary is called the black hole’s event horizon.
