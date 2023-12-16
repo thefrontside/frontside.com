@@ -84,6 +84,7 @@
 /blog/2023-10-16-backstage-linting/
 /blog/2023-10-24-innersource-codeowners-backstage/
 /blog/2023-12-11-await-event-horizon/
+/blog/2023-12-18-announcing-effection-v3/
 /blog/3
 /blog/4
 /blog/5
