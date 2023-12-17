@@ -10,7 +10,9 @@ tags: [ "javascript", "structured concurrency"]
 img: /img/2023-12-18-announcing-effection-v3.png
 ---
 
-Just over five years ago, in November of 2018, when Structured Concurrency was a little-known peculiarity, we started a helper library to help us coordinate the many moving parts in some of our open-source projects (such as [Interactors](https://frontside.com/interactors)). Since then, Effection has grown into a mature project in its own right, deployed in production worldwide, helping developers use Structured Concurrency to push the limit of what is possible with JavaScript.
+Effection is Structured Concurrency and Effects for JavaScript. It’s a library purpose-built to help developers write code that can easily manage the most complex concurrent computations whether in the frontend or backend. It provides the guarantees of Structured Concurrency in order to make code leak-proof by default, but most of all, it achieves this while being simple to read, understand, and maintain.
+
+Just over five years ago, in November of 2018, when Structured Concurrency was a little-known peculiarity, we started a helper library to coordinate the many moving parts in some of our open-source projects (such as [Interactors](https://frontside.com/interactors)). Since then, it has grown into a mature project in its own right; deployed in production worldwide, helping developers use Structured Concurrency to push the limit of what is possible with JavaScript.
 
 Today, we are pushing things further and concentrating even more power into the hands of JavaScript developers with the release of Effection 3.0. This new version refines and simplifies the abstractions we first created in version 2.0 while introducing some new ones of exceptional power. This release has much to look forward to, including the new Context API and an even better TypeScript experience. Most of all, however, we’re proud of how we’ve realigned all of the APIs so that working with Effection feels just like working with JavaScript, only with the protections of structured concurrency baked in.
 
