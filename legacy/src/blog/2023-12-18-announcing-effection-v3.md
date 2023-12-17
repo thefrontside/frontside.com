@@ -10,7 +10,9 @@ tags: [ "javascript", "structured concurrency"]
 img: /img/2023-12-18-announcing-effection-v3.png
 ---
 
-Effection is Structured Concurrency and Effects for JavaScript. It’s a library purpose-built to help developers write code that can easily manage the most complex concurrent computations whether in the frontend or backend. It provides the guarantees of Structured Concurrency in order to make code leak-proof by default, but most of all, it achieves this while being simple to read, understand, and maintain.
+[Effection] is Structured Concurrency and Effects for JavaScript.
+
+It’s a library purpose-built to help developers write code that can easily manage the most complex concurrent computations whether in the frontend or backend. It provides the guarantees of Structured Concurrency in order to make code leak-proof by default, but most of all, it achieves this while being simple to read, understand, and maintain.
 
 Just over five years ago, in November of 2018, when Structured Concurrency was a little-known peculiarity, we started a helper library to coordinate the many moving parts in some of our open-source projects (such as [Interactors](https://frontside.com/interactors)). Since then, it has grown into a mature project in its own right; deployed in production worldwide, helping developers use Structured Concurrency to push the limit of what is possible with JavaScript.
 
@@ -20,12 +22,15 @@ That’s why we say more than ever before: *Effection is Structured Concurrency 
 
 Here’s an overview of some key features you’ll find in Effection 3.0
 
-- First Class TypeScript Experience: TypeScript types have been carefully re-imagined to be as small and helpful as possible.
-- Embrace JavaScript: Version 3 is easier to learn and safer to integrate into your projects than ever because of its dedication to following JavaScript standards in spirit and form.
-- Context API: Shared environmental data (like auth tokens), shared resources, and contextual (aka algebraic) effect handlers share at least one thing in common: They are all made possible by the new Context API.
-- Rebuilt with Delimited Continuations: The v3 API is so simple it feels like it almost isn’t there. But that doesn’t mean there isn’t some serious brainpower behind the ideas that make this possible.
+\- [Excellent TypeScript Experience](#%EF%B8%8F-first-class-typescript-experience): TypeScript types have been carefully re-imagined to be as small and helpful as possible.
 
-## 🏷️ First Class TypeScript Experience
+\- [Embrace of JavaScript](#%EF%B8%8F-embrace-the-javascript): Version 3 is easier to learn and safer to integrate into your projects than ever because of its dedication to following JavaScript standards in spirit and form.
+
+\- [Context API](#-new-context-api): Shared environmental data (like auth tokens), shared resources, and contextual (aka algebraic) effect handlers have at least one thing in common: They are all made possible by the new Context API.
+
+\- [Rebuilt with Delimited Continuations](#-rebuilt-with-delimited-continuations): The v3 API is so simple it feels like it almost isn’t there. But that doesn’t mean there isn’t some serious brainpower behind the ideas that make this possible.
+
+## 🏷️ Excellent TypeScript Experience
 
 Since version 2.0, Effection itself has been written in TypeScript. As a result, a lot of thought was put into making it pleasant to use there. However, some rough edges remained.
 
@@ -65,7 +70,7 @@ function* operation() {
 
 ## ✨ New Context API
 
-Sometimes, you need to share something across a wide range of operations. It could be anything from a simple string like an auth token to a service that another code needs to function. But so much depends on it that you don’t want to pollute your APIs by passing it around as an argument everywhere.  Instead, you want it to be “just there” as part of the environment in the same way the `document` reference is “just there” on a web page.
+Sometimes, you need to share something across a wide range of operations. It could be anything from a simple string like an auth token to a shared service that other code needs to function. But so much depends on this shared thing that you don’t want to pollute your APIs by passing it around as an argument everywhere.  Instead, you want it to be “just there” as part of the environment in the same way the `document` reference is “just there” on a web page.
 
 Effection now ships with an API that solves this need elegantly. It is deceptively simple, but don’t let that fool you. The new [`Context`](https://deno.land/x/effection/mod.ts?s=Context) API is jam-packed with power, and it’s one of the features we’re most thrilled to be releasing.
 
@@ -139,7 +144,7 @@ Call it a foundation for dependency injection, or a basis for algebraic effect h
 
 Our goal with Effection has always been to make it easy to write JavaScript code protected by Structured Concurrency's guardrails. That’s why our project’s tagline is “Structured Concurrency and Effects for JavaScript.”  We believe you shouldn’t have to learn an entirely new way to write programs to achieve the benefits of Structured Concurrency. Instead, we believe that the *only* new thing you should have to learn is Structured Concurrency, and everything else should feel like plain JavaScript/TypeScript every step of the way.
 
-With version 3.0, we’ve doubled down on this idea by re-imagining our APIs as mirrors to existing counterparts in JavaScript. That way, if you know how to do it in JavaScript, you know how to do it in Effection. We call this conversion between vanilla JavaScript and Effection our “Async Rosetta Stone.”
+With version 3.0, we’ve doubled down on this idea by re-imagining our APIs as mirrors to existing counterparts in JavaScript. That way, if you know how to do it in JavaScript, you know how to do it in Effection. We call this conversion between vanilla JavaScript and Effection our [“Async Rosetta Stone.”](https://frontside.com/effection/docs/async-rosetta-stone)
 
 | Async | Effection |
 | --- | --- |
@@ -198,7 +203,7 @@ Effection is dedicated to keeping this alignment with core JavaScript in place b
 - Easy to adapt to any existing codebase, no matter what other paradigms it may use.
 - Easy to “sprinkle” into a codebase without requiring massive refactors.
 
-# 🧠 Rebuilt with Delimited Continuations
+# 🧠 Rebuilt with Delimited Continuations
 
 You might think that a robust implementation of Structured Concurrency and Effects for JavaScript could easily be large, complex, difficult to understand, and a pain to debug. And if you were talking about Effection prior to version 3.0, you might even be right!
 
@@ -212,6 +217,20 @@ We’re packing a more powerful, performant, and maintainable library into a muc
 
 To delve deeper into the subject of delimited continuations in JavaScript, we recommend:
 
-- [Eric Bower’s talk for Michigan TypeScript](https://www.youtube.com/watch?v=uRbqLGj_6mI)
-- [On Wikipedia](https://en.wikipedia.org/wiki/Delimited_continuation)
-- [TypeScript tutorial on delimited continuations](https://github.com/cowboyd/delimited-continuations-tutorial)
+
+\- [Eric Bower’s talk for Michigan TypeScript](https://www.youtube.com/watch?v=uRbqLGj_6mI)
+
+\- [On Wikipedia](https://en.wikipedia.org/wiki/Delimited_continuation)
+
+\- [TypeScript tutorial on delimited continuations](https://github.com/cowboyd/delimited-continuations-tutorial)
+
+## Get Started With Effection 3.0 Today!
+
+Wondering what the next step is? Whether you're beginning a new project, or wanting to bring more clarity to an existing one, [Effection][effection] is meant to be both the simplest _and_ the easiest way to use structured concurrency and effects in JavaScript.
+
+Check it out on [GitHub][effection-github], have a look at our [guide to getting started][effection-getting-started], or [drop into our Discord Server][effection-discord] to say hi. We're always eager to talk, and look forward to hearing from you all soon.
+
+[effection]: https://frontside.com/effection
+[effection-github]: https://github.com/thefrontside/effection
+[effection-discord]: https://discord.gg/r6AvtnU
+[effection-getting-started]: https://frontside.com/effection/docs/installation
