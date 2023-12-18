@@ -12,7 +12,7 @@ img: /img/2023-12-18-announcing-effection-v3.png
 
 [Effection] is Structured Concurrency and Effects for JavaScript.
 
-It’s a library purpose-built to help developers write code that can easily manage the most complex concurrent computations whether in the frontend or backend. It provides the guarantees of Structured Concurrency in order to make code leak-proof by default, but most of all, it achieves this while being simple to read, understand, and maintain.
+It’s a library purpose-built to help developers write code that can easily manage the most complex concurrent computations whether in the frontend or backend. It provides the guarantees of Structured Concurrency in order to make code leak-proof by default, and it achieves this while being simple to read, understand, and maintain.
 
 Just over five years ago, in November of 2018, when Structured Concurrency was a little-known peculiarity, we started a helper library to coordinate the many moving parts in some of our open-source projects (such as [Interactors](https://frontside.com/interactors)). Since then, it has grown into a mature project in its own right; deployed in production worldwide, helping developers use Structured Concurrency to push the limit of what is possible with JavaScript.
 
@@ -211,9 +211,9 @@ Versions 1.x and 2.x used a combination of state machines and cascading chains o
 
 While that was a worthy tradeoff, Effection 3.0 gets to have its cake and eat it, too by undergirding its entire implementation on the foundation of **delimited continuations**. These curious constructs from the world of functional programming are extraordinarily powerful artifacts. They can express *all* the standard control mechanisms we’re familiar with, from `while` loops to `try/catch`blocks, to algebraic effect handlers.
 
-Having an abstraction of this power drive, Effection v3 means that its core logic can be expressed in only about 150 lines of TypeScript code. And because it isn’t based on asynchronous callbacks but instead delimited continuations, execution is linear and straightforwardly follows its source code. As a result, it is an order of magnitude easier to understand and maintain.
+Having an abstraction of this power drive Effection v3 means that its core logic can be expressed in only about 150 lines of TypeScript. And because it isn’t based on asynchronous callbacks but instead delimited continuations, execution is linear and straightforwardly follows its source code. As a result, it is an order of magnitude easier to understand and maintain.
 
-We’re packing a more powerful, performant, and maintainable library into a much smaller footprint thanks to delimited continuations. The bundle size has been slashed in half and clocks in a tiny 4.6kb gzipped.
+We’re packing a more powerful, performant, and maintainable library into a much smaller footprint thanks to delimited continuations. The bundle size has been slashed in half and clocks in at a miniscule 4.6kb gzipped.
 
 To delve deeper into the subject of delimited continuations in JavaScript, we recommend:
 
