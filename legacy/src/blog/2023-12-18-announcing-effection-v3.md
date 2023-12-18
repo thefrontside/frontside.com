@@ -1,11 +1,11 @@
 ---
 templateKey: blog-post
 title: >-
-  Announcing Effection 3.0
+  Announcing Effection 3.0 -- Structured Concurrency and Effects for JavaScript
 date: 2023-12-11T20:00:00.959Z
 author: Charles Lowell
 description: >-
-  Structured Concurrency and Effects for JavaScript
+  A major milestone in bringing Structured Concurrency and Effects to JavaScript, Effection 3.0 has excellent TypeScript support, a powerful new context API, and harmonizes perfectly with the JavaScript APIs you know and love.
 tags: [ "javascript", "structured concurrency"]
 img: /img/2023-12-18-announcing-effection-v3.png
 ---
