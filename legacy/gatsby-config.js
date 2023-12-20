@@ -38,11 +38,22 @@ module.exports = {
               .filter(edge => edge.node.frontmatter.templateKey === "blog-post")
               .map(edge => {
                 return Object.assign({}, edge.node.frontmatter, {
-                  description: edge.node.excerpt,
-                  date: edge.node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ "content:encoded": edge.node.html }],
+                  url: `${site.siteMetadata.siteUrl}/blog${edge.node.fields.slug}`,
+                  guid: `${site.siteMetadata.siteUrl}/blog${edge.node.fields.slug}`,
+                  categories: edge.node.frontmatter.tags,
+                  custom_elements: [
+                    { "content:encoded": edge.node.html },
+                    ...(edge.node.frontmatter.img?.childImageSharp?.fixed?.src ? [{
+                      "media:content": {
+                        _attr: {
+                          url: `${site.siteMetadata.siteUrl}${edge.node.frontmatter.img.childImageSharp.fixed.src}`,
+                          type: "image/png",
+                          medium: "image",
+                          duration: "30",
+                        }
+                      }
+                    }] : []),
+                  ],
                 })
               })
             },
@@ -58,7 +69,17 @@ module.exports = {
                       fields { slug }
                       frontmatter {
                         title
+                        description
+                        author
                         date
+                        tags
+                        img {
+                          childImageSharp {
+                            fixed(width: 600) {
+                              src
+                            }
+                          }
+                        }
                         templateKey
                       }
                     }
@@ -68,6 +89,9 @@ module.exports = {
             `,
             output: "/rss.xml",
             title: "Frontside Software RSS Feed",
+            custom_namespaces: {
+              media: 'http://search.yahoo.com/mrss/',
+            },
           },
         ],
       },
