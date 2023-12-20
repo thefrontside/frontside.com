@@ -42,6 +42,7 @@
     "dateformat": "5.0.3",
     "downshift": "^6.1.7",
     "gatsby": "^3.10.1",
+    "gatsby-plugin-feed": "^3.10.1",
     "gatsby-plugin-image": "^1.10.1",
     "gatsby-plugin-manifest": "^3.10.0",
     "gatsby-plugin-netlify": "^3.10.0",
