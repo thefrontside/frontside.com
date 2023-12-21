@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
-import SubscribeForm from '../components/subscribe-form';
+import { NewsletterSubscribeCTA } from '../components/newsletter-subscribe-cta';
 
 import {
   heroWrap,
@@ -18,6 +18,7 @@ import {
   mardownColumn, textBlueDashWhite, textLg, textSm
 } from '../styles/typography.css';
 import { tagButton } from '../styles/buttons.css';
+import { postFooter } from "./blog-post.css";
 
 const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
   tags = Array.isArray(tags) ? tags : [tags].filter(Boolean);
@@ -63,9 +64,9 @@ const BlogPostTemplate = ({ content, tags, title, authors, date, image }) => {
           __html: content,
         }}
       />
-  
-      <footer className="widewrapper w-container">
-        <SubscribeForm highlight={true} />
+
+      <footer className={`widewrapper w-container ${postFooter}`}>
+        <NewsletterSubscribeCTA trackingLocationId="blogpost" />
       </footer>
     </>
   );

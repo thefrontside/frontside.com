@@ -1,2 +1,3 @@
 # Local Netlify folder
 .netlify
+legacy/node_modules
