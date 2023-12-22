@@ -3,7 +3,6 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import ApplePodcastsBadge from '../../img/apple-podcasts-badge.svg';
 import { inputText } from '../../styles/inputs.css';
 import { headingLg, textGradientPinkPurple } from '../../styles/typography.css';
-import { newsletterForm } from '../subscribe-form/subscribe-forms.css';
 import {
   appleLink,
   copiedMark,

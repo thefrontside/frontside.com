@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BlogPreview from '../blog-preview';
-import SubscribeForm from '../subscribe-form/subscribe-form';
+import { NewsletterSubscribeCTA } from '../newsletter-subscribe-cta';
 
 import { entriesList, entriesListEntry } from '../../styles/page.css';
 
@@ -26,7 +26,7 @@ export default function PostsList({
             <li className={entriesListEntry}>
               <BlogPreview post={post} layout={(includeFeatured && i === 0) ? 'featured': 'sided'} />
             </li>
-            {(includeFeatured && i === 0 || !includeFeatured && i === 2) ? <SubscribeForm /> : <></>}
+            {(includeFeatured && i === 0 || !includeFeatured && i === 2) ? <NewsletterSubscribeCTA trackingLocationId="blog-index" /> : <></>}
           </React.Fragment>
         ))}
       </ul>

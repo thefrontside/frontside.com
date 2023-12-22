@@ -59,7 +59,8 @@ const frontsideTheme = createGlobalTheme(':root', {
     xl: '4.091rem',
     '2xl': '7.455rem',
     '3xl': '12.091rem',
-    '4xl': '17.136rem'
+    '4xl': '17.136rem',
+    '5xl': '23rem',
   },
   letterSpacing: {
     xs: '0.025rem',

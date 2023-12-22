@@ -1,8 +1,17 @@
 import { style, styleVariants } from "@vanilla-extract/css";
-import { baseButton, paginationButton } from "../../styles/buttons.css";
-import { inputText } from "../../styles/inputs.css";
-import vars, { darkThemeQuery } from '../../styles/frontside-theme.css';
-import { newsletterForm } from "../subscribe-form/subscribe-forms.css";
+import { baseButton } from "../../styles/buttons.css";
+import vars from '../../styles/frontside-theme.css';
+
+const newsletterForm = style([{
+  display: 'block',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  marginTop: vars.space.lg,
+  marginBottom: vars.space.xl,
+  maxWidth: '37rem',
+  paddingRight: vars.space.sm,
+  paddingLeft: vars.space.sm,
+}]);
 
 
 export const ctaWrapper = style([newsletterForm, {
