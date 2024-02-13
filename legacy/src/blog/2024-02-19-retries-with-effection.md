@@ -17,18 +17,18 @@ Intro - "you're a developer..."
 Writing a simple fetch call using effection
 
 ```js
-import { main, useAbortSignal, call } from 'effection';
+import { run, useAbortSignal, call } from 'effection';
 
 function* fetchURL() {
   const signal = yield* useAbortSignal();
   const response = yield* call(fetch("https://foo.bar"), { signal });
 
   if (response.ok) {
-    return yield* call(response.json());
+    return yield* call(() => response.json());
   }
 }
 
-main(function* () {
+run(function* () {
   const result = yield* fetchURL();
   console.log(result);
 });
@@ -41,7 +41,7 @@ explain main, call, useAbortSignal, yield*
 Let's add retry logic with exponential backoff
 
 ```js
-import { main, useAbortSignal, call, sleep } from 'effection';
+import { run, useAbortSignal, call, sleep } from 'effection';
 
 function* fetchWithBackoff() {
   let attempt = -1;
@@ -50,7 +50,7 @@ function* fetchWithBackoff() {
     const response = yield* call(fetch("https://foo.bar"), { signal });
 
     if (response.ok) {
-      return yield* call(response.json());
+      return yield* call(() => response.json());
     }
     let delayMs: number;
 
@@ -67,7 +67,7 @@ function* fetchWithBackoff() {
   }
 }
 
-main(function* () {
+run(function* () {
   const result = yield* fetchWithBackoff();
   console.log(result);
 });
@@ -80,7 +80,7 @@ explain sleep
 Now let's add a timeout using race
 
 ```js
-import { main, useAbortSignal, call, sleep, race } from 'effection';
+import { run, useAbortSignal, call, sleep, race } from 'effection';
 
 function* fetchWithBackoff() {
   let attempt = -1;
@@ -89,7 +89,7 @@ function* fetchWithBackoff() {
     const response = yield* call(fetch("https://foo.bar"), { signal });
 
     if (response.ok) {
-      return yield* call(response.json());
+      return yield* call(() => response.json());
     }
     let delayMs: number;
 
@@ -102,7 +102,7 @@ function* fetchWithBackoff() {
   }  
 }
 
-main(function* () {
+run(function* () {
   const result = yield* race([
     fetchWithBackoff(),
     sleep(60_000),
@@ -150,13 +150,13 @@ function* retryWithBackoff<T>(fn: () => Operation<T>, options: { timeout: number
 then our main function can be:
 
 ```js
-main (function* () {
+run(function* () {
   const result = yield* retryWithBackoff(function* () {
     const signal = yield* useAbortSignal();
     const response = yield* call(fetch("https://foo.bar", { signal }));
 
     if (response.ok) {
-      return yield* call(response.json);
+      return yield* call(() => response.json());
     } else {
       throw new Error(response.statusText);
     }
