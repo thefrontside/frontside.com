@@ -19,9 +19,9 @@ Writing a simple fetch call using effection
 ```js
 import { run, useAbortSignal, call } from 'effection';
 
-function* fetchURL() {
+function* fetchURL(url: URL | string, init?: RequestInit) {
   const signal = yield* useAbortSignal();
-  const response = yield* call(fetch("https://foo.bar"), { signal });
+  const response = yield* call(fetch(url), { ...init, signal });
 
   if (response.ok) {
     return yield* call(() => response.json());
@@ -29,7 +29,7 @@ function* fetchURL() {
 }
 
 run(function* () {
-  const result = yield* fetchURL();
+  const result = yield* fetchURL(url);
   console.log(result);
 });
 ```
@@ -43,11 +43,11 @@ Let's add retry logic with exponential backoff
 ```js
 import { run, useAbortSignal, call, sleep } from 'effection';
 
-function* fetchWithBackoff() {
+function* fetchWithBackoff(url: URL | string, init?: RequestInit) {
   let attempt = -1;
   while (true) {
     const signal = yield* useAbortSignal();
-    const response = yield* call(fetch("https://foo.bar"), { signal });
+    const response = yield* call(fetch(url), { ...init, signal });
 
     if (response.ok) {
       return yield* call(() => response.json());
@@ -68,7 +68,7 @@ function* fetchWithBackoff() {
 }
 
 run(function* () {
-  const result = yield* fetchWithBackoff();
+  const result = yield* fetchWithBackoff("https://foo.bar");
   console.log(result);
 });
 ```
@@ -82,7 +82,7 @@ Now let's add a timeout using race
 ```js
 import { run, useAbortSignal, call, sleep, race } from 'effection';
 
-function* fetchWithBackoff() {
+function* fetchWithBackoff(url: URL | string, init?: RequestInit) {
   let attempt = -1;
   while (true) {
     const signal = yield* useAbortSignal();
@@ -104,7 +104,7 @@ function* fetchWithBackoff() {
 
 run(function* () {
   const result = yield* race([
-    fetchWithBackoff(),
+    fetchWithBackoff("https://foo.bar"),
     sleep(60_000),
   ]);
   console.log(result);
