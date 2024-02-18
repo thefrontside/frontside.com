@@ -10,11 +10,11 @@ tags: [ "javascript", "structured concurrency"]
 img: /img/2023-12-18-announcing-effection-v3.png
 ---
 
-Intro - "you're a developer..."
+// Intro - "you're a developer..."
 
-## Simple Fetch
+## Calling Fetch with Effection
 
-Writing a simple fetch call using effection
+In order to avoid being overwhelmed with unfamiliar syntax, we'll start with a simple fetch call and incrementally build on top of it. So to get started, here's how you would call fetch with Effection:
 
 ```js
 import { run, useAbortSignal, call } from 'effection';
@@ -29,19 +29,28 @@ function* fetchURL(url: URL | string, init?: RequestInit) {
 }
 
 run(function* () {
-  const result = yield* fetchURL(url);
+  const result = yield* fetchURL("https://foo.bar");
+
   console.log(result);
 });
 ```
 
-explain main, call, useAbortSignal, yield*
+Let's breakdown the basics of Effection so that you can understand what's happening in the code above:
 
-## Exponential Backoff
+1. In order to use Effection, you need to wrap your function(s) in either a `run()` or `main()`. The `main()` function is mostly used for standalone scripts so we're using `run()` in our example assuming you would implement fetch with Effection inside an existing app.
+2. The primary building blocks of Effection are Operations. They're similar to async functions in normal Javascript, but the difference is that you need to `yield* myOperation` instead of `await myAsyncFn()`. In the code example above, you can see that we're passing an Operation into `run()` and we've also created an Operation called `fetchURL`.
+3. Effection offers a collection of commonly used Operations for your convenience. In our first example, we're using `call` and `useAbortSignal`.
+  - The `call` function is used for running asynchronous functions inside of Effection. Both `fetch` and `response.json()` are asynchronous, and not an Operation, so we need to wrap it in a `call()`. And as you may have noticed, we do not need to `await` the async functions we invoke inside of `call`.
+  - `useAbortSignal` is another Operation that comes out of the box with Effection. The nice thing about Effection's `useAbortSignal` is that you don't need to explicitly call `.abort()` and it does not need to be threaded throughout your functions. If the function from which you instantiate `useAbortSignal` stops running, it will emit an `abort` event to guarantee that your request is shut down.
 
-Let's add retry logic with exponential backoff
+## Implementing Exponential Backoff
+
+Now that we have covered the basics of Effection, let's expand on our first example by introducing exponential backoff to our fetch call. Although we're adding several new lines, the only new Effection code we're introducing here is another common out-of-the-box Operation:
 
 ```js
-import { run, useAbortSignal, call, sleep } from 'effection';
+import { run, useAbortSignal, call,
+  sleep,
+} from 'effection';
 
 function* fetchWithBackoff(url: URL | string, init?: RequestInit) {
   let attempt = -1;
@@ -69,18 +78,21 @@ function* fetchWithBackoff(url: URL | string, init?: RequestInit) {
 
 run(function* () {
   const result = yield* fetchWithBackoff("https://foo.bar");
+
   console.log(result);
 });
 ```
 
-explain sleep
+We wrapped the previous logic of `fetchURL`, which we've renamed to `fetchWithBackoff`, in a while loop and added the `sleep` Operation to delay the trigger of our next fetch attempt. The function will exit out of its infinite loop when either we receive a successful response from our fetch call or if our delay variable exceeds 4000 milliseconds. Based on the way the exponential backoff logic is written, it means our code will attempt to fetch 4-5 times before it times out.
 
 ## Structured Concurrency
 
-Now let's add a timeout using race
+But what if we don't care about how many fetch attempts we make but instead we just want to keep trying for a set amount of time? Here's how you would achieve that:
 
 ```js
-import { run, useAbortSignal, call, sleep, race } from 'effection';
+import { run, useAbortSignal, call, sleep,
+  race,
+} from 'effection';
 
 function* fetchWithBackoff(url: URL | string, init?: RequestInit) {
   let attempt = -1;
@@ -107,17 +119,18 @@ run(function* () {
     fetchWithBackoff("https://foo.bar"),
     sleep(60_000),
   ]);
+
   console.log(result);
 });
 ```
 
-explain race - abort signal does not need to be threaded through nor do we need to clear timeout, if timeout wins the race, the fetch will be aborted automatically and vice versa
+In this new example, we've removed the conditional for returning a timeout error in the while loop and wrapped our `fetchWithBackoff` function in a `race()` Operation. You can run multiple Operations in parallel by using `race()`. And as you can probably assume from the name of the Operation, `race()` will finish the moment one of its Operations completes. By calling `fetchWithBackoff` and `sleep` inside a race, it will either "timeout" after a minute or once you receive a successful response from your fetch attempts.
 
-composable
+Note how, as we mentioned earlier, an abort controller does not need to be threaded through to our fetch function. In our example, if `sleep` were to complete first, our `useAbortSignal` inside `fetchWithBackoff` will automatically emit abort without you having to tell it do so.
 
-## Reusable
+## Make It Reusable
 
-we can go even further and make the retry function reusable
+Let's take our example one step further and refactor it to be reusable. We're going to extract fetch out from `fetchWithBackoff` and move `sleep` into our Operation:
 
 ```js
 function* retryWithBackoff<T>(fn: () => Operation<T>, options: { timeout: number }) {
@@ -147,7 +160,7 @@ function* retryWithBackoff<T>(fn: () => Operation<T>, options: { timeout: number
 }
 ```
 
-then our main function can be:
+We've renamed `fetchWithBackoff` to a more appropriate name: `retryWithBackoff`. Our new Operation now takes another Operation as an argument along with a second argument for specifying the duration of when you want the whole thing to timeout. Our `run()` would now look like this:
 
 ```js
 run(function* () {
@@ -163,6 +176,9 @@ run(function* () {
   }, {
     timeout: 60_000,
   });
+
   console.log(result);
 });
 ```
+
+// say something about composability
