@@ -10,12 +10,14 @@ import { etagPlugin } from "./plugins/etag.ts";
 import { currentRequestPlugin } from "./plugins/current-request.ts";
 import { twindPlugin } from "./plugins/twind.ts";
 import { config } from "./twind.config.ts";
+import { indexRoute } from "./routes/index.tsx";
 
 await main(function* () {
   let proxies = proxySites();
 
   let revolution = createRevolution({
     app: [
+      route("/",indexRoute()),
       route(
         "/workshops/advanced-backstage-plugin-development",
         pluginWorkshopRoute(),
@@ -33,7 +35,7 @@ await main(function* () {
     ],
   });
 
-  let server = yield* revolution.start();
+  let server = yield* revolution.start({port: 8005});
   console.log(`www -> http://${server.hostname}:${server.port}`);
 
   yield* suspend();
