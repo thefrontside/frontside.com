@@ -31,8 +31,8 @@ export function indexRoute(): JSXHandler {
               </div>
             </div>
             <div class="relative lg:col-span-6">
-              {/* Lottie file will go here */}
-              <img class="lg:absolute lg:inset-0 bg-gray-100 w-full lg:h-full aspect-[3/2] object-cover lg:aspect-auto" alt="" />
+              <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+              <lottie-player src="/assets/animations/home-hero.json" background="transparent" speed=".5" style="width: 100%; height: 100%" direction="1" mode="normal" loop autoplay></lottie-player>
             </div>
           </header>
           <section class="mx-auto mt-20 px-10 max-w-screen-2xl">
