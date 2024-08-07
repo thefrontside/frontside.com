@@ -21,9 +21,9 @@ const NavItems = [
 export const Navbar = () => {
   return (
     <nav className={navWrap}>
-      <Link to="/" className={logoMargin}>
+      <a href="/" className={logoMargin}>
         <Logo />
-      </Link>
+      </a>
       <div className={linksGroup}>
         <Link to={NavItems[0].url} className={homeLink}>
           {NavItems[0].text}
