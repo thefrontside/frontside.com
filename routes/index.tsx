@@ -26,11 +26,11 @@ export function indexRoute(): JSXHandler {
           <header class="lg:gap-x-8 lg:grid lg:grid-cols-12 mx-auto mt-10 lg:px-8 max-w-screen-2xl">
             <div class="lg:col-span-7 xl:col-span-6 lg:px-0 pt-10 lg:pt-24 pb-24 sm:pb-32 lg:pb-56">
               <div class="mx-auto lg:mx-0 max-w-2xl">
-                <h1 class="mt-12 sm:mt-10 font-black text-4xl text-blue-primary sm:text-6xl tracking-tight">Empower your Developers from Onboarding to Production Release</h1>
+                <h1 class="mt-12 sm:mt-10 font-black text-4xl text-blue-primary sm:text-6xl tracking-tight uppercase"><span class="bg-gradient-to-r from-[#26abe8] to-[#8c7db3] text-transparent bg-clip-text">Empower</span> your Developers from Onboarding to Production Release</h1>
                 <p class="mt-6 text-gray-600 text-xl leading-8">Frontside creates cohesive development experiences for Cloud native teams – from local setup and testing to deployment and developer portals, we have you covered</p>
               </div>
             </div>
-            <div class="relative lg:col-span-6">
+            <div class="relative lg:col-span-6 sm:w-3/4 sm:h-3/4 md:w-1/2 md:h-1/2 lg:w-full lg:h-full mx-auto">
               <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
               <lottie-player src="/assets/animations/home-hero.json" background="transparent" speed=".5" style="width: 100%; height: 100%" direction="1" mode="normal" loop autoplay></lottie-player>
             </div>
@@ -38,7 +38,7 @@ export function indexRoute(): JSXHandler {
           <section class="mx-auto mt-20 px-10 max-w-screen-2xl">
             {/* Client and Partner logos will go here */}
             <h2 class="font-bold text-blue-primary text-center text-xl">Trusted by the best companies in the world</h2>
-            <div class="justify-items-center items-center gap-y-20 grid grid-cols-4 mx-auto mt-10">
+            <div class="justify-items-center items-center gap-y-20 grid grid-cols-2 lg:grid-cols-4 mx-auto mt-10">
               <img src="../assets/client-logos/grayscale-client-logos/apple-logo-grayscale.svg" />
               <img src="../assets/client-logos/grayscale-client-logos/hp-logo-grayscale.svg" />
               <img src="../assets/client-logos/grayscale-client-logos/ericcson-logo-grayscale.svg" />
@@ -91,7 +91,7 @@ export function indexRoute(): JSXHandler {
               <img class="order-first" src={homeinject} alt="" />
             </div>
           </section>
-          <section class="grid grid-cols-2 max-w-6xl mx-auto">
+          <section class="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-6xl mx-auto mt-24">
             <div class="flex justify-center items-center">
                 <h2 class="font-bold text-5xl sm:text-5xl text-blue-primary tracking-tight">
                   We help <br />
