@@ -23,14 +23,14 @@ export function indexRoute(): JSXHandler {
     return (
       <AppHtml>
         <article>
-          <header class="lg:gap-x-8 lg:grid lg:grid-cols-12 mx-auto mt-10 lg:px-8 max-w-screen-2xl">
-            <div class="lg:col-span-7 xl:col-span-6 lg:px-0 pt-10 lg:pt-24 pb-24 sm:pb-32 lg:pb-56">
-              <div class="mx-auto lg:mx-0 max-w-2xl">
+          <header class="p-8 lg:p-16 lg:gap-x-8 lg:grid lg:grid-cols-12 mx-auto mt-4 lg:px-8 max-w-screen-2xl">
+            <div class="lg:col-span-7 xl:col-span-6 lg:px-0 pt-10 lg:pt-24 pb-24 sm:pb-8 lg:pb-56">
+              <div class="lg:mx-0 max-w-2xl mx-auto">
                 <h1 class="mt-12 sm:mt-10 font-black text-4xl text-blue-primary sm:text-6xl tracking-tight uppercase"><span class="bg-gradient-to-r from-[#26abe8] to-[#8c7db3] text-transparent bg-clip-text">Empower</span> your Developers from Onboarding to Production Release</h1>
                 <p class="mt-6 text-gray-600 text-xl leading-8">Frontside creates cohesive development experiences for Cloud native teams – from local setup and testing to deployment and developer portals, we have you covered</p>
               </div>
             </div>
-            <div class="relative lg:col-span-6 sm:w-3/4 sm:h-3/4 md:w-1/2 md:h-1/2 lg:w-full lg:h-full mx-auto">
+            <div class="relative h-64 lg:col-span-6 sm:w-3/4 md:w-3/4 md:h-3/4 lg:w-full lg:h-full mx-auto">
               <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
               <lottie-player src="/assets/animations/home-hero.json" background="transparent" speed=".5" style="width: 100%; height: 100%" direction="1" mode="normal" loop autoplay></lottie-player>
             </div>
@@ -54,7 +54,7 @@ export function indexRoute(): JSXHandler {
             </div>
           </section>
           <section class="bg-gray-50 mt-24 px-4 py-15 md:py-20 lg:py-24 xl:py-30">
-            <div class="items-center gap-24 md:grid md:grid-cols-2 m-auto mt-24 md:max-w-5xl">
+            <div class="items-center gap-24 grid grid-cols-1 md:grid-cols-2 m-auto mt-24 md:max-w-5xl">
               <div class="px-4">
                 <h3 class="font-bold text-3xl text-blue-primary">
                   <span class="text-[#26abe8]">Re-think</span> productivity after Kubernetes
@@ -66,9 +66,9 @@ export function indexRoute(): JSXHandler {
                   propose game-changing strategies to boost your teams' success.
                 </p>
               </div>
-              <img class="order-first" src={homeRethink} alt="" />
+              <img class="md:order-first" src={homeRethink} alt="" />
             </div>
-            <div class="items-center gap-24 md:grid md:grid-cols-2 m-auto mt-24 md:max-w-5xl">
+            <div class="items-center gap-24 grid grid-cols-1 md:grid-cols-2 m-auto mt-24 md:max-w-5xl">
               <div class="px-4">
                 <h3 class="font-bold text-3xl text-blue-primary">
                   <span class="text-[#26abe8]">Shift-left</span> your testing strategy
@@ -79,7 +79,7 @@ export function indexRoute(): JSXHandler {
               </div>
               <img src={homeshiftleft} alt="" />
             </div>
-            <div class="items-center gap-24 md:grid md:grid-cols-2 m-auto mt-24 md:max-w-5xl">
+            <div class="items-center gap-24 grid grid-cols-1 md:grid-cols-2 m-auto mt-24 md:max-w-5xl">
               <div class="px-4">
                 <h3 class="font-bold text-3xl text-blue-primary">
                   <span class="text-[#26abe8]">Inject</span> leadership into your team
@@ -88,16 +88,16 @@ export function indexRoute(): JSXHandler {
                   Most companies have great developers on their teams but lack the leadership to identify improvement opportunities and implement change. Frontside offers solutions cultivated from our network of enterprise partners and Open Source maintainers to create and nurture an Inner Source culture within your organization.
                 </p>
               </div>
-              <img class="order-first" src={homeinject} alt="" />
+              <img class="md:order-first" src={homeinject} alt="" />
             </div>
           </section>
           <section class="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-6xl mx-auto mt-24">
             <div class="flex justify-center items-center">
-                <h2 class="font-bold text-5xl sm:text-5xl text-blue-primary tracking-tight">
-                  We help <br />
-                  Developers thrive <br />
-                  in complexity
-                </h2>
+              <h2 class="font-bold text-5xl sm:text-5xl text-blue-primary tracking-tight">
+                We help <br />
+                Developers thrive <br />
+                in complexity
+              </h2>
             </div>
             <div class="">
               <img src={homeTensionGraph} alt="" />
