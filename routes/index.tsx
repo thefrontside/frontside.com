@@ -39,18 +39,18 @@ export function indexRoute(): JSXHandler {
             {/* Client and Partner logos will go here */}
             <h2 class="font-bold text-blue-primary text-center text-xl">Trusted by the best companies in the world</h2>
             <div class="justify-items-center items-center gap-y-20 grid grid-cols-2 lg:grid-cols-4 mx-auto mt-10">
-              <img src="../assets/client-logos/grayscale-client-logos/apple-logo-grayscale.svg" />
-              <img src="../assets/client-logos/grayscale-client-logos/hp-logo-grayscale.svg" />
-              <img src="../assets/client-logos/grayscale-client-logos/ericcson-logo-grayscale.svg" />
-              <img src="../assets/client-logos/grayscale-client-logos/resideo-logo-grayscale.svg" />
-              <img src="../assets/client-logos/grayscale-client-logos/honeywell-logo-grayscale.svg" />
-              <img src="../assets/client-logos/grayscale-client-logos/hsbc-logo-grayscale.svg" />
-              <img src="../assets/client-logos/grayscale-client-logos/dell-logo-grayscale.svg" />
-              <img src="../assets/client-logos/grayscale-client-logos/altschool-logo-grayscale.svg" />
-              <img src="../assets/client-logos/grayscale-client-logos/ebsco-logo-grayscale.svg" />
-              <img src="../assets/client-logos/grayscale-client-logos/sxsw-logo-grayscale.svg" />
-              <img src="../assets/client-logos/grayscale-client-logos/condenast-logo-grayscale.svg" />
-              <img src="../assets/client-logos/grayscale-client-logos/indeed-logo-grayscale.svg" />
+              <img src="../assets/client-logos/grayscale-client-logos/apple-logo-grayscale.svg" alt="client logo Apple" />
+              <img src="../assets/client-logos/grayscale-client-logos/hp-logo-grayscale.svg" alt="client logo HP" />
+              <img src="../assets/client-logos/grayscale-client-logos/ericcson-logo-grayscale.svg" alt="client logo ericsson" />
+              <img src="../assets/client-logos/grayscale-client-logos/resideo-logo-grayscale.svg" alt="client logo resideo" />
+              <img src="../assets/client-logos/grayscale-client-logos/honeywell-logo-grayscale.svg" alt="client logo honeywell" />
+              <img src="../assets/client-logos/grayscale-client-logos/hsbc-logo-grayscale.svg" alt="client logo hsbc" />
+              <img src="../assets/client-logos/grayscale-client-logos/dell-logo-grayscale.svg" alt="client logo dell" />
+              <img src="../assets/client-logos/grayscale-client-logos/altschool-logo-grayscale.svg" alt="client logo altSchool" />
+              <img src="../assets/client-logos/grayscale-client-logos/ebsco-logo-grayscale.svg" alt="client logo Ebsco" />
+              <img src="../assets/client-logos/grayscale-client-logos/sxsw-logo-grayscale.svg" alt="client logo SXSW" />
+              <img src="../assets/client-logos/grayscale-client-logos/condenast-logo-grayscale.svg" alt="client logo Condenast" />
+              <img src="../assets/client-logos/grayscale-client-logos/indeed-logo-grayscale.svg" alt="client logo Indeed" />
             </div>
           </section>
           <section class="bg-gray-50 mt-24 px-4 py-15 md:py-20 lg:py-24 xl:py-30">
