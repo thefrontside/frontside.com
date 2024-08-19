@@ -27,20 +27,20 @@ export function pluginWorkshopRoute(): JSXHandler {
     return (
       <AppHtml>
         <article class="pt-14 text-blue-primary">
-          <section class="grid lg:grid-cols-[2fr_1fr] mb-5 px-4 md:max-w-4xl xl:max-w-screen-2xl m-auto text-left">
+          <section class="grid lg:grid-cols-[2fr_1fr] m-auto mb-5 px-4 md:max-w-4xl xl:max-w-screen-2xl text-left">
             <div class="md:order-2 lg:order-1">
-              <aside class="text-left uppercase text-neutral-500 mt-12 mb-5">
+              <aside class="mt-12 mb-5 text-left text-neutral-500 uppercase">
                 <p>
                   <span class="font-black">Workshop & Training:</span>{" "}
                   Advanced Backstage Plugin Development
                 </p>
               </aside>
-              <h1 class="text-blue-primary text-5xl md:text-6xl lg:text-6xl xl:text-8xl tracking-[-0.04em] font-black">
+              <h1 class="font-black text-5xl text-blue-primary md:text-6xl lg:text-6xl xl:text-8xl tracking-[-0.04em]">
                 <span class="text-blue-secondary">Discover</span> the{" "}
                 <span class="text-pink-secondary">Power</span> of Backstage{" "}
                 <span class="text-blue-secondary">Plugins!</span>
               </h1>
-              <p class="pr-8 mt-5 mb-10 tracking-wide text-xl text-blue-primary prose">
+              <p class="mt-5 mb-10 pr-8 text-blue-primary text-xl tracking-wide prose">
                 Learn from a hands-on workshop derived from our experience with
                 large enterprises. This isn't theory—it's actionable expertise.
                 Join a workshop loaded with best practices, insights, and
@@ -55,48 +55,48 @@ export function pluginWorkshopRoute(): JSXHandler {
                 data-tf-medium="snippet"
                 id="signup-for-workshop-top"
                 href="#"
-                class="inline-block text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
+                class="inline-block bg-blue-primary shadow-blue-box m-auto px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-center text-sm text-white text-xl hover:outline-indigo-600"
               >
                 Signup for Waitlist Today
               </a>
               <script defer src="//embed.typeform.com/next/embed.js"></script>
             </div>
             <img
-              class="w-3/5 md:w-2/5 lg:w-full m-auto mt-16 md:order-1"
+              class="md:order-1 m-auto mt-16 w-3/5 md:w-2/5 lg:w-full"
               src={headerImage}
               alt="Image of Connected Nodes and Plugins"
             />
           </section>
           <section>
-            <div class="max-w-fit mx-auto">
-              <div class="grid md:grid-flow-col md:auto-cols-max sm:grid-col-1 gap-8 md:gap-8 xl:gap-12 px-8 md:px-0 my-36 place-items-center">
-                <div class="basis-1/2 grow-0 shrink flex justify-center h-14 col-span-2 md:col-span-1 opacity-50">
-                  <img class="h-full w-auto" src={logoHP} alt="HP Logo" />
+            <div class="mx-auto max-w-fit">
+              <div class="place-items-center gap-8 md:gap-8 xl:gap-12 grid md:grid-flow-col sm:grid-col-1 md:auto-cols-max my-36 px-8 md:px-0">
+                <div class="flex justify-center col-span-2 md:col-span-1 opacity-50 grow-0 h-14 basis-1/2 shrink">
+                  <img class="w-auto h-full" src={logoHP} alt="HP Logo" />
                 </div>
-                <div class="basis-1/2 grow-0 shrink flex justify-center h-8 opacity-50">
+                <div class="flex justify-center opacity-50 grow-0 h-8 basis-1/2 shrink">
                   <img
-                    class="h-full md:w-auto"
+                    class="md:w-auto h-full"
                     src={logoEricsson}
                     alt="Ericsson Logo"
                   />
                 </div>
-                <div class="basis-1/2 grow-0 shrink flex justify-center h-10 opacity-50">
+                <div class="flex justify-center opacity-50 grow-0 h-10 basis-1/2 shrink">
                   <img
-                    class="h-full md:w-auto"
+                    class="md:w-auto h-full"
                     src={logoResideo}
                     alt="Resideo Logo"
                   />
                 </div>
-                <div class="basis-1/2 grow-0 shrink flex justify-center h-6 opacity-50">
+                <div class="flex justify-center opacity-50 grow-0 h-6 basis-1/2 shrink">
                   <img
-                    class="h-full md:w-auto"
+                    class="md:w-auto h-full"
                     src={logoIndeed}
                     alt="Indeed Logo"
                   />
                 </div>
-                <div class="basis-1/2 grow-0 shrink flex justify-center h-6 opacity-50">
+                <div class="flex justify-center opacity-50 grow-0 h-6 basis-1/2 shrink">
                   <img
-                    class="h-full md:w-auto"
+                    class="md:w-auto h-full"
                     src={logoHumanitec}
                     alt="Humanitec Logo"
                   />
@@ -104,13 +104,13 @@ export function pluginWorkshopRoute(): JSXHandler {
               </div>
             </div>
           </section>
-          <section class="p-4 bg-gray-50 py-16">
-            <header class="container mx-auto md:max-w-5xl">
+          <section class="bg-gray-50 py-16 p-4">
+            <header class="mx-auto md:max-w-5xl container">
               <H2 class="text-center">
                 <span class="text-pink-secondary">Everything</span>{" "}
                 in Backstage is a Plugin!
               </H2>
-              <p class=" text-xl text-center mx-auto text-inherit my-4 max-w-prose leading-relaxed">
+              <p class="mx-auto my-4 max-w-prose text-center text-inherit text-xl leading-relaxed">
                 The architecture of Backstage is ingeniously designed around
                 plugins. Everything from the Service Catalog, Templates,
                 Scaffolder, Search and Tech Docs are all plugins! This workshop
@@ -122,12 +122,12 @@ export function pluginWorkshopRoute(): JSXHandler {
               </p>
             </header>
           </section>
-          <section class="container mx-auto mt-24 px-4 md:max-w-5xl">
+          <section class="mx-auto mt-24 px-4 md:max-w-5xl container">
             <H2>
               Mastering Plugins: <br />{" "}
               Improve Your Internal Developer Portal Without Limitations
             </H2>
-            <p class="my-8 text-xl text-inherit leading-relaxed max-w-prose">
+            <p class="my-8 max-w-prose text-inherit text-xl leading-relaxed">
               To fully harness and customize Backstage tailored to your
               company's unique needs, a deep understanding of plugin development
               is indispensable. Without mastering plugins, you're confined to a
@@ -137,12 +137,12 @@ export function pluginWorkshopRoute(): JSXHandler {
               yes to boundless innovation!
             </p>
           </section>
-          <section class="mt-24 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-5xl">
+          <section class="gap-24 md:grid md:grid-cols-2 m-auto mt-24 md:max-w-5xl">
             <div class="px-4">
-              <h3 class="text-2xl text-blue-primary font-black">
+              <h3 class="font-black text-2xl text-blue-primary">
                 Confidence to Innovate
               </h3>
-              <p class="py-4 text-l  text-inherit   leading-relaxed">
+              <p class="py-4 text-inherit text-l leading-relaxed">
                 Grasping the intricacies of plugins doesn't just give you a
                 technical advantage—it fuels your creativity. With this newfound
                 knowledge, you'll confidently design and implement complex
@@ -152,9 +152,9 @@ export function pluginWorkshopRoute(): JSXHandler {
             </div>
             <img src={benefitsImage1} alt="" />
           </section>
-          <section class="mt-12 m-auto md:grid md:grid-cols-2 gap-24 md:max-w-5xl items-center md:text-left">
-            <div class="px-4 order-1">
-              <h3 class="text-2xl text-blue-primary font-black">
+          <section class="items-center gap-24 md:grid md:grid-cols-2 m-auto mt-12 md:max-w-5xl md:text-left">
+            <div class="order-1 px-4">
+              <h3 class="font-black text-2xl text-blue-primary">
                 Deeper understanding of Backstage Architecture
               </h3>
               <p class="py-4 text-1 text-inherit leading-relaxed">
@@ -167,12 +167,12 @@ export function pluginWorkshopRoute(): JSXHandler {
             </div>
             <img src={benefitsImage3} alt="" />
           </section>
-          <section class="mt-12 md:grid md:grid-cols-2 gap-24 m-auto md:max-w-5xl">
+          <section class="gap-24 md:grid md:grid-cols-2 m-auto mt-12 md:max-w-5xl">
             <div class="px-4">
-              <h3 class="text-2xl text-blue-primary font-black">
+              <h3 class="font-black text-2xl text-blue-primary">
                 Maximize ROI, Engagement, & Adoption
               </h3>
-              <p class="py-4 text-l  text-inherit leading-relaxed">
+              <p class="py-4 text-inherit text-l leading-relaxed">
                 Mastering plugin development isn't just about technical
                 prowess—it's an investment that brings exponential returns. By
                 customizing Backstage to your unique needs, systems and users,
@@ -183,17 +183,17 @@ export function pluginWorkshopRoute(): JSXHandler {
             </div>
             <img src={benefitsImage2} alt="" />
           </section>
-          <section class="mt-24 bg-gray-50 py-24">
+          <section class="bg-gray-50 mt-24 py-24">
             <H2 class="text-center">Who is this workshop for?</H2>
 
-            <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl leading-relaxed">
+            <p class="md:mx-auto my-8 px-4 md:max-w-3xl text-xl leading-relaxed">
               <strong>Experienced Backstage Developer:</strong>{" "}
               If you've already dabbled in Backstage and built a foundational
               understanding, but feel there's more to explore—especially in
               plugin development—this workshop is your next step. We're here to
               refine your skills and elevate your mastery.
             </p>
-            <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl leading-relaxed">
+            <p class="md:mx-auto my-8 px-4 md:max-w-3xl text-xl leading-relaxed">
               <strong>Developers Seeking Direction:</strong>{" "}
               Perhaps you haven't ventured into creating a Backstage plugin yet,
               If the term 'plugin' sounds daunting or if you’re unsure where to
@@ -202,14 +202,14 @@ export function pluginWorkshopRoute(): JSXHandler {
               never feel lost, and always feel empowered to ask, learn, and
               grow.
             </p>
-            <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl leading-relaxed">
+            <p class="md:mx-auto my-8 px-4 md:max-w-3xl text-xl leading-relaxed">
               <strong>Teams with Aspirations:</strong>{" "}
               For teams eager to amplify their collective proficiency, this
               workshop is a goldmine. Equip your developer suite with the
               confidence and competence to craft sophisticated plugins,
               fostering a harmonized and empowered team environment.
             </p>
-            <p class="text-xl px-4 my-8 md:mx-auto md:max-w-3xl leading-relaxed">
+            <p class="md:mx-auto my-8 px-4 md:max-w-3xl text-xl leading-relaxed">
               <strong>Everyone Eager to Learn:</strong>{" "}
               Whether you’re a seasoned developer, a newbie, or someone in
               between, if you have the zeal to learn, we have the insights to
@@ -218,10 +218,10 @@ export function pluginWorkshopRoute(): JSXHandler {
             </p>
           </section>
           <section class="mt-24">
-            <div class="container m-auto p-4">
-              <H2 class="text-center mb-8">What you will build</H2>
-              <div class="flex flex-col lg:flex-row lg:w-[900px] m-auto">
-                <h3 class="text-2xl lg:text-6xl mb-4 md:mb-0 mr-8 text-center lg:text-left text-pink-secondary font-black">
+            <div class="m-auto p-4 container">
+              <H2 class="mb-8 text-center">What you will build</H2>
+              <div class="flex lg:flex-row flex-col m-auto lg:w-[900px]">
+                <h3 class="mr-8 mb-4 md:mb-0 font-black text-2xl text-center text-pink-secondary lg:text-6xl lg:text-left">
                   Pipeline Monitor Plugin
                 </h3>
                 <p class="text-xg leading-relaxed">
@@ -243,9 +243,9 @@ export function pluginWorkshopRoute(): JSXHandler {
               </div>
             </div>
           </section>
-          <section class="mt-24 px-8 md:mt-16 md:grid md:grid-cols-2 gap-8 md:mx-auto md:max-w-5xl">
+          <section class="gap-8 md:grid md:grid-cols-2 md:mx-auto mt-24 md:mt-16 px-8 md:max-w-5xl">
             <div class="flex flex mt-4 md:mt-0">
-              <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8">
+              <div class="flex items-center bg-pink-100 p-2 rounded-full w-8 h-8">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -262,7 +262,7 @@ export function pluginWorkshopRoute(): JSXHandler {
                 </svg>
               </div>
               <div class="pt-1 pl-2">
-                <h3 class="font-bold text-xl text-blue-primary mb-1">Design</h3>
+                <h3 class="mb-1 font-bold text-blue-primary text-xl">Design</h3>
                 <p>
                   Dive into custom frontend components tailored for Backstage's
                   APIs. Learn the boundaries between React and Backstage APIs,
@@ -272,7 +272,7 @@ export function pluginWorkshopRoute(): JSXHandler {
               </div>
             </div>
             <div class="flex flex mt-4 md:mt-0">
-              <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8">
+              <div class="flex items-center bg-pink-100 p-2 rounded-full w-8 h-8">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -289,7 +289,7 @@ export function pluginWorkshopRoute(): JSXHandler {
                 </svg>
               </div>
               <div class="pt-1 pl-2">
-                <h3 class="font-bold text-xl text-blue-primary mb-1">Build</h3>
+                <h3 class="mb-1 font-bold text-blue-primary text-xl">Build</h3>
                 <p>
                   Navigate the creation of a robust backend. Design and deploy a
                   specialized database for your plugin, ensuring optimal data
@@ -299,7 +299,7 @@ export function pluginWorkshopRoute(): JSXHandler {
               </div>
             </div>
             <div class="flex flex mt-4 md:mt-0">
-              <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
+              <div class="flex items-center bg-pink-100 p-2 rounded-full w-8 h-8 shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -316,7 +316,7 @@ export function pluginWorkshopRoute(): JSXHandler {
                 </svg>
               </div>
               <div class="pt-1 pl-2">
-                <h3 class="font-bold text-xl text-blue-primary mb-2">Test</h3>
+                <h3 class="mb-2 font-bold text-blue-primary text-xl">Test</h3>
                 <p>
                   Embrace the importance of rigorous plugin testing. Uncover
                   best practices to identify and rectify vulnerabilities,
@@ -325,7 +325,7 @@ export function pluginWorkshopRoute(): JSXHandler {
               </div>
             </div>
             <div class="flex flex mt-4 md:mt-0">
-              <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
+              <div class="flex items-center bg-pink-100 p-2 rounded-full w-8 h-8 shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -366,7 +366,7 @@ export function pluginWorkshopRoute(): JSXHandler {
                 </svg>
               </div>
               <hgroup class="pt-1 pl-2">
-                <h3 class="font-bold text-xl text-blue-primary mb-1">Ship</h3>
+                <h3 class="mb-1 font-bold text-blue-primary text-xl">Ship</h3>
                 <p>
                   Learn to bundle, build, and ship your plugin. Ensure your
                   creation is packaged for easy integration, sharing your
@@ -375,8 +375,8 @@ export function pluginWorkshopRoute(): JSXHandler {
               </hgroup>
             </div>
           </section>
-          <section class="py-16 mt-24 bg-gray-50">
-            <div class="p-4 px-8 prose text-lg md:text-xl mx-auto text-inherit leading-tight">
+          <section class="bg-gray-50 mt-24 py-16">
+            <div class="mx-auto px-8 p-4 text-inherit text-lg md:text-xl leading-tight prose">
               <H2 class="text-center">What you will learn</H2>
               <hgroup>
                 <h3>Frontend</h3>
@@ -433,10 +433,10 @@ export function pluginWorkshopRoute(): JSXHandler {
               </hgroup>
             </div>
           </section>
-          <H2 class="text-center mt-16">Workshop Instructors</H2>
-          <section class="mt-24 px-8 md:mt-16 md:grid md:grid-cols-2 gap-x-24 gap-y-8 md:mx-auto md:max-w-5xl">
+          <H2 class="mt-16 text-center">Workshop Instructors</H2>
+          <section class="gap-x-24 gap-y-8 md:grid md:grid-cols-2 md:mx-auto mt-24 md:mt-16 px-8 md:max-w-5xl">
             <div class="flex">
-              <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
+              <div class="flex items-center bg-pink-100 p-2 rounded-full w-8 h-8 shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -457,7 +457,7 @@ export function pluginWorkshopRoute(): JSXHandler {
                 </svg>
               </div>
               <div class="pt-1 pl-2">
-                <h3 class="font-bold text-xl text-blue-primary mb-1">
+                <h3 class="mb-1 font-bold text-blue-primary text-xl">
                   Official Backstage Professional Services Partners
                 </h3>
                 <p>
@@ -468,7 +468,7 @@ export function pluginWorkshopRoute(): JSXHandler {
               </div>
             </div>
             <div class="flex mt-4 md:mt-0">
-              <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
+              <div class="flex items-center bg-pink-100 p-2 rounded-full w-8 h-8 shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -485,7 +485,7 @@ export function pluginWorkshopRoute(): JSXHandler {
                 </svg>
               </div>
               <hgroup class="pt-1 pl-2">
-                <h3 class="font-bold text-xl text-blue-primary mb-1">
+                <h3 class="mb-1 font-bold text-blue-primary text-xl">
                   Enterprise Level Backstage Experience
                 </h3>
                 <p>
@@ -497,7 +497,7 @@ export function pluginWorkshopRoute(): JSXHandler {
               </hgroup>
             </div>
             <div class="flex mt-4 md:mt-0">
-              <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
+              <div class="flex items-center bg-pink-100 p-2 rounded-full w-8 h-8 shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="19"
@@ -514,7 +514,7 @@ export function pluginWorkshopRoute(): JSXHandler {
                 </svg>
               </div>
               <hgroup class="pt-1 pl-2">
-                <h3 class="font-bold text-xl text-blue-primary mb-1">
+                <h3 class="mb-1 font-bold text-blue-primary text-xl">
                   Early-Adopters, Highly Experienced Engineers
                 </h3>
                 <p>
@@ -526,7 +526,7 @@ export function pluginWorkshopRoute(): JSXHandler {
               </hgroup>
             </div>
             <div class="flex mt-4 md:mt-0">
-              <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
+              <div class="flex items-center bg-pink-100 p-2 rounded-full w-8 h-8 shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -543,7 +543,7 @@ export function pluginWorkshopRoute(): JSXHandler {
                 </svg>
               </div>
               <hgroup class="pt-1 pl-2">
-                <h3 class="font-bold text-xl text-blue-primary mb-1">
+                <h3 class="mb-1 font-bold text-blue-primary text-xl">
                   Pioneering the Backstage Ecosystem
                 </h3>
                 <p>
@@ -555,9 +555,9 @@ export function pluginWorkshopRoute(): JSXHandler {
             </div>
             <div>
               <div class="flex mt-4 md:mt-0">
-                <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
+                <div class="flex items-center bg-pink-100 p-2 rounded-full w-8 h-8 shrink-0">
                   <svg
-                    class="stroke-primary blue"
+                    class="blue stroke-primary"
                     fill="none"
                     height="24"
                     stroke="currentColor"
@@ -572,7 +572,7 @@ export function pluginWorkshopRoute(): JSXHandler {
                   </svg>
                 </div>
                 <hgroup class="pt-1 pl-2">
-                  <h3 class="font-bold text-xl text-blue-primary mb-1">
+                  <h3 class="mb-1 font-bold text-blue-primary text-xl">
                     Core Contributors
                   </h3>
                   <p>
@@ -585,7 +585,7 @@ export function pluginWorkshopRoute(): JSXHandler {
               </div>
             </div>
             <div class="flex mt-4 md:mt-0">
-              <div class="flex items-center bg-pink-100 rounded-full p-2 w-8 h-8 shrink-0">
+              <div class="flex items-center bg-pink-100 p-2 rounded-full w-8 h-8 shrink-0">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -639,7 +639,7 @@ export function pluginWorkshopRoute(): JSXHandler {
                 </svg>
               </div>
               <hgroup class="pt-1 pl-2">
-                <h3 class="font-bold text-xl text-blue-primary mb-1">
+                <h3 class="mb-1 font-bold text-blue-primary text-xl">
                   Engaged and Invested Community Members
                 </h3>
                 <p>
@@ -652,37 +652,37 @@ export function pluginWorkshopRoute(): JSXHandler {
               </hgroup>
             </div>
           </section>
-          <section class="mt-16 bg-gray-50 py-16">
-            <H2 class="text-center mb-12">Trusted By</H2>
-            <div class="container mx-auto">
-              <div class="grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-4 px-8 md:px-0 place-items-center">
-                <div class="basis-1/2 grow-0 shrink flex justify-center h-10">
+          <section class="bg-gray-50 mt-16 py-16">
+            <H2 class="mb-12 text-center">Trusted By</H2>
+            <div class="mx-auto container">
+              <div class="place-items-center gap-8 md:gap-4 grid grid-cols-1 md:grid-cols-5 px-8 md:px-0">
+                <div class="flex justify-center grow-0 h-10 basis-1/2 shrink">
                   <img
-                    class="h-full md:w-auto"
+                    class="md:w-auto h-full"
                     src={logoEricsson}
                     alt="Ericsson Logo"
                   />
                 </div>
-                <div class="basis-1/2 grow-0 shrink flex justify-center h-14">
-                  <img class="h-full md:w-auto" src={logoHP} alt="HP Logo" />
+                <div class="flex justify-center grow-0 h-14 basis-1/2 shrink">
+                  <img class="md:w-auto h-full" src={logoHP} alt="HP Logo" />
                 </div>
-                <div class="basis-1/2 grow-0 shrink flex justify-center h-10 md:h-10">
+                <div class="flex justify-center grow-0 h-10 md:h-10 basis-1/2 shrink">
                   <img
-                    class="h-full md:w-auto"
+                    class="md:w-auto h-full"
                     src={logoResideo}
                     alt="Resideo Logo"
                   />
                 </div>
-                <div class="basis-1/2 grow-0 shrink flex justify-center h-8">
+                <div class="flex justify-center grow-0 h-8 basis-1/2 shrink">
                   <img
-                    class="h-full md:w-auto"
+                    class="md:w-auto h-full"
                     src={logoIndeed}
                     alt="Indeed Logo"
                   />
                 </div>
-                <div class="basis-1/2 grow-0 shrink flex justify-center h-6">
+                <div class="flex justify-center grow-0 h-6 basis-1/2 shrink">
                   <img
-                    class="h-full md:w-auto"
+                    class="md:w-auto h-full"
                     src={logoHumanitec}
                     alt="Humanitec Logo"
                   />
@@ -690,18 +690,18 @@ export function pluginWorkshopRoute(): JSXHandler {
               </div>
             </div>
           </section>
-          <section class="container mt-24 px-8 md:px-4 m-auto">
-            <H2 class="text-center mb-12">What our clients say</H2>
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <section class="m-auto mt-24 px-8 md:px-4 container">
+            <H2 class="mb-12 text-center">What our clients say</H2>
+            <div class="gap-8 grid grid-cols-1 lg:grid-cols-3">
               <div
-                class="flex flex-col shadow rounded-xl p-8 ring-1 ring-neutral-300"
+                class="flex flex-col shadow p-8 rounded-xl ring-1 ring-neutral-300"
                 aria-label="Testimonial"
               >
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
-                    class="inline-block w-8 h-8 text-gray-400 mb-8"
+                    class="inline-block mb-8 w-8 h-8 text-gray-400"
                     viewBox="0 0 975.036 975.036"
                   >
                     <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
@@ -716,19 +716,19 @@ export function pluginWorkshopRoute(): JSXHandler {
                     that.”
                   </p>
                 </blockquote>
-                <cite class="block mt-4 before:content-['－'] before:mr-1">
+                <cite class="block before:content-['－'] mt-4 before:mr-1">
                   Guilherme G., Senior Software Engineer
                 </cite>
               </div>
               <div
-                class="flex flex-col shadow rounded-xl p-8 ring-1 ring-neutral-300"
+                class="flex flex-col shadow p-8 rounded-xl ring-1 ring-neutral-300"
                 aria-label="Testimonial"
               >
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
-                    class="inline-block w-8 h-8 text-gray-400 mb-8"
+                    class="inline-block mb-8 w-8 h-8 text-gray-400"
                     viewBox="0 0 975.036 975.036"
                   >
                     <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
@@ -746,19 +746,19 @@ export function pluginWorkshopRoute(): JSXHandler {
                     me!"
                   </p>
                 </blockquote>
-                <cite class="block mt-4 before:content-['－'] before:mr-1">
+                <cite class="block before:content-['－'] mt-4 before:mr-1">
                   North K., Software Engineer
                 </cite>
               </div>
               <div
-                class="flex flex-col shadow rounded-xl p-8 ring-1 ring-neutral-300"
+                class="flex flex-col shadow p-8 rounded-xl ring-1 ring-neutral-300"
                 aria-label="Testimonial"
               >
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
-                    class="inline-block w-8 h-8 text-gray-400 mb-8"
+                    class="inline-block mb-8 w-8 h-8 text-gray-400"
                     viewBox="0 0 975.036 975.036"
                   >
                     <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
@@ -774,14 +774,14 @@ export function pluginWorkshopRoute(): JSXHandler {
                     their ideas, and they have deep skills to share."
                   </p>
                 </blockquote>
-                <cite class="block mt-4 before:content-['－'] before:mr-1">
+                <cite class="block before:content-['－'] mt-4 before:mr-1">
                   Benji S., Staff Software Engineer
                 </cite>
               </div>
             </div>
           </section>
           <section class="flex flex-col items-center mt-32 px-8">
-            <p class="prose text-center">
+            <p class="text-center prose">
               Join us to elevate your Backstage expertise and transform into a
               proficient plugin developer. Discover, learn, and kick-start your
               path to master the art of crafting sophisticated plugins for
@@ -796,7 +796,7 @@ export function pluginWorkshopRoute(): JSXHandler {
               data-tf-medium="snippet"
               id="signup-for-workshop-bottom"
               href="#"
-              class="inline-block mt-16 text-center text-xl m-auto w-full md:w-auto rounded-md bg-blue-primary px-14 py-7 text-sm font-semibold text-white shadow-blue-box hover:ring hover:outline-indigo-600"
+              class="inline-block bg-blue-primary shadow-blue-box m-auto mt-16 px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-center text-sm text-white text-xl hover:outline-indigo-600"
             >
               Signup for the Waitlist Today
             </a>
