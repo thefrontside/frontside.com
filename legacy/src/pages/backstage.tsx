@@ -89,7 +89,7 @@ export default function BackstagePage({
       <header className={heroWrap}>
         <div className={heroText}>
           <h1 className={heading3Xl}>
-            !!!Own your <span className={textGreen}>Backstage</span> implementation{' '}
+            Own your <span className={textGreen}>Backstage</span> implementation{' '}
             <span className={textGradientSkyblueGreen}>
               without forking out
             </span>
