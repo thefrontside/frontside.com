@@ -7,6 +7,7 @@ export function backstageServicesRoute(): JSXHandler {
     let backstageDomain = "../assets/img/q3-2021/backstage-map-domain.png";
     let deriskBackstage = "../assets/animations/backstage-derisk.json";
     let backstageDx = "../assets/img/q3-2021/backstage-integrate-dx.png"
+    let backstageHeroAnimation = "../assets/animations/backstage-hero.json"
 
     let AppHtml = yield* useAppHtml({
       title: "Adopt Backstage your way with Frontside",
@@ -47,7 +48,7 @@ export function backstageServicesRoute(): JSXHandler {
             </div>
             <div class="relative lg:col-span-6 mx-auto sm:w-3/4 md:w-3/4 lg:w-full h-64 md:h-3/4 lg:h-full">
               <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-              <lottie-player src="/assets/animations/backstage-hero.json" background="transparent" speed=".5" style="width: 100%; height: 100%" direction="1" mode="normal" loop autoplay></lottie-player>
+              <lottie-player src={backstageHeroAnimation} background="transparent" speed=".5" style="width: 100%; height: 100%" direction="1" mode="normal" loop autoplay></lottie-player>
             </div>
           </header>
           <section class="mx-auto mt-20 px-10 max-w-screen-2xl">
