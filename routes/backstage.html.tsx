@@ -4,13 +4,13 @@ import { useAppHtml } from "./app.html.tsx";
 
 export function backstageServicesRoute(): JSXHandler {
   return function* () {
-    let homeRethink = "../assets/home-rethink.png";
-    let homeshiftleft = "../assets/home-shift-left.png";
-    let homeinject = "../assets/home-inject.png";
+    let backstageDomain = "../assets/img/q3-2021/backstage-map-domain.png";
+    let deriskBackstage = "../assets/animations/backstage-derisk.json";
+    let backstageDx = "../assets/img/q3-2021/backstage-integrate-dx.png"
 
     let AppHtml = yield* useAppHtml({
-      title: "Frontside",
-      description: "Frontside creates cohesive developer experiences for Cloud Native Teams",
+      title: "Adopt Backstage your way with Frontside",
+      description: "We help you get the most out of Backstage for the long-run",
       ogImage: "/assets/index-meta-home-cloud-native.png",
       twitterXImage: "/assets/index-meta-home-cloud-native.png",
       author: "Frontside",
@@ -51,7 +51,6 @@ export function backstageServicesRoute(): JSXHandler {
             </div>
           </header>
           <section class="mx-auto mt-20 px-10 max-w-screen-2xl">
-            {/* Client and Partner logos will go here */}
             <h2 class="font-bold text-blue-primary text-center text-xl">Trusted by the best companies in the world</h2>
             <div class="justify-items-center items-center gap-y-20 grid grid-cols-2 lg:grid-cols-4 mx-auto mt-10">
               <img src="../assets/client-logos/grayscale-client-logos/apple-logo-grayscale.svg" alt="client logo Apple" />
@@ -70,7 +69,7 @@ export function backstageServicesRoute(): JSXHandler {
                   Your combination of tech stack, services, and people is unique to your organization. But you don't have to compromise your needs to fit them into what Backstage supports today. As an active contributor to Backstage, Frontside can help you cover all your use-cases—even those not yet in platform—without moving away from OSS.
                 </p>
               </div>
-              <img class="md:order-first" src={homeRethink} alt="" />
+              <img class="md:order-first" src={backstageDomain} alt="" />
             </div>
             <div class="items-center gap-24 grid grid-cols-1 md:grid-cols-2 m-auto mt-24 md:max-w-5xl">
               <div class="px-4">
@@ -81,7 +80,7 @@ export function backstageServicesRoute(): JSXHandler {
                   Avoid getting locked out of future Backstage upgrades with uninformed early choices in your Backstage adoption. Frontside understands Backstage's current alpha software limitations and can help you set up the platform so you can get what you need now and keep getting value in the long term.
                 </p>
               </div>
-              <img src={homeshiftleft} alt="" />
+                <lottie-player src={deriskBackstage} background="transparent" speed=".5" style="width: 100%; height: 100%" direction="1" mode="normal" loop autoplay></lottie-player>
             </div>
             <div class="items-center gap-24 grid grid-cols-1 md:grid-cols-2 m-auto mt-24 md:max-w-5xl">
               <div class="px-4">
@@ -92,7 +91,7 @@ export function backstageServicesRoute(): JSXHandler {
                   Setting up Backstage's Catalog unleashes its power, but it's only the beginning of the journey. Once developers familiarize themselves with Backstage’s affordances, they'll uncover new opportunities for growth and optimization. Frontside helps your teams integrate more tools into Backstage and streamline their workflow to take advantage of their new self-service capabilities.
                 </p>
               </div>
-              <img class="md:order-first" src={homeinject} alt="" />
+              <img class="md:order-first" src={backstageDx} alt="" />
             </div>
           </section>
           <section class="flex justify-center">
