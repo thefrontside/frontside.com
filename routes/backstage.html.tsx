@@ -28,28 +28,25 @@ export function backstageServicesRoute(): JSXHandler {
               <div class="mx-auto lg:mx-0 max-w-2xl">
                 <h1 class="mt-12 sm:mt-10 font-black text-4xl text-blue-primary sm:text-6xl uppercase tracking-tight"><span class="bg-clip-text bg-gradient-to-r from-[#26abe8] to-[#8c7db3] text-transparent">We help you Own</span> your Backstage Implementation without Forking it</h1>
                 <p class="mt-6 text-gray-600 text-xl leading-8">We help enterprise teams get the most out of Backstage for the long-run</p>
-                <a class="inline-flex items-center bg-gradient-to-r from-[#36baa2] to-[#44378a] p-8 rounded-lg font-bold text-lg text-white" href="/backstage">
+                <a
+                  data-tf-popup="n5Hz8E9N"
+                  data-tf-opacity="100"
+                  data-tf-size="100"
+                  data-tf-iframe-props="title=Adopt Backstage without Forking"
+                  data-tf-transitive-search-params
+                  data-tf-medium="snippet"
+                  data-tf-hidden="topic=backstage"
+                  id="landing-top"
+                  href="#"
+                  class="inline-flex items-center bg-gradient-to-r from-[#099279] to-[#322678] shadow-blue-box m-auto mt-16 px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-center text-sm text-white text-xl hover:outline-indigo-600"
+                >
                   <span class="mr-2">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.49 14.14" class="w-4 h-4">
                       <path d="M12.78 6.36c-.59-.58-1.19-1.16-1.78-1.72S9.74 3.51 9.09 3A33 33 0 0 0 5 0a32.16 32.16 0 0 0 3 4.08c.51.66 1.08 1.26 1.64 1.92l.1.11c-1.54 0-3.39.1-4.74.21a33.28 33.28 0 0 0-5 .78 33.28 33.28 0 0 0 5 .78c1.34.12 3.19.12 4.74.18l-.11.11C9.08 8.8 8.51 9.4 8 10.05a32.93 32.93 0 0 0-3 4.09 32.21 32.21 0 0 0 4.09-3c.65-.53 1.25-1.1 1.88-1.65s1.22-1.15 1.81-1.73l.71-.71Z" style="fill:#fff" />
                     </svg>
                   </span>
-                  Adopt Backstage with Frontside
-                </a>
-                <a
-                  data-tf-popup="n5Hz8E9N"
-                  data-tf-opacity="100"
-                  data-tf-size="100"
-                  data-tf-iframe-props="title=Advanced Plugin Develop Sign up Form"
-                  data-tf-transitive-search-params
-                  data-tf-medium="snippet"
-                  id="landing-top"
-                  href="#"
-                  class="inline-block bg-blue-primary shadow-blue-box m-auto px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-center text-sm text-white text-xl hover:outline-indigo-600"
-                >
                   Adopt Backsage with Frontside
                 </a>
-                <script defer src="//embed.typeform.com/next/embed.js"></script>
               </div>
             </div>
             <div class="relative lg:col-span-6 mx-auto sm:w-3/4 md:w-3/4 lg:w-full h-64 md:h-3/4 lg:h-full">
@@ -103,25 +100,27 @@ export function backstageServicesRoute(): JSXHandler {
             </div>
           </section>
           <section class="flex justify-center">
-            <a
-              data-tf-popup="n5Hz8E9N"
-              data-tf-opacity="100"
-              data-tf-size="100"
-              data-tf-iframe-props="title=Advanced Plugin Develop Sign up Form"
-              data-tf-transitive-search-params
-              data-tf-medium="snippet"
-              id="landing-top"
-              href="#"
-              class="inline-flex items-center bg-gradient-to-r from-[#36baa2] to-[#44378a] p-8 rounded-lg font-bold text-lg text-white hover:outline-indigo-600"
-            >
-              <span class="mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.49 14.14" class="w-4 h-4">
-                  <path d="M12.78 6.36c-.59-.58-1.19-1.16-1.78-1.72S9.74 3.51 9.09 3A33 33 0 0 0 5 0a32.16 32.16 0 0 0 3 4.08c.51.66 1.08 1.26 1.64 1.92l.1.11c-1.54 0-3.39.1-4.74.21a33.28 33.28 0 0 0-5 .78 33.28 33.28 0 0 0 5 .78c1.34.12 3.19.12 4.74.18l-.11.11C9.08 8.8 8.51 9.4 8 10.05a32.93 32.93 0 0 0-3 4.09 32.21 32.21 0 0 0 4.09-3c.65-.53 1.25-1.1 1.88-1.65s1.22-1.15 1.81-1.73l.71-.71Z" style="fill:#fff" />
-                </svg>
-              </span>
-              Make Backstage work for you
-            </a>
+          <a
+                  data-tf-popup="n5Hz8E9N"
+                  data-tf-opacity="100"
+                  data-tf-size="100"
+                  data-tf-iframe-props="title=Adopt Backstage without Forking"
+                  data-tf-transitive-search-params
+                  data-tf-medium="snippet"
+                  data-tf-hidden="topic=backstage"
+                  id="landing-top"
+                  href="#"
+                  class="inline-flex items-center bg-gradient-to-r from-[#099279] to-[#322678] shadow-blue-box m-auto mt-16 px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-center text-sm text-white text-xl hover:outline-indigo-600"
+                >
+                  <span class="mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.49 14.14" class="w-4 h-4">
+                      <path d="M12.78 6.36c-.59-.58-1.19-1.16-1.78-1.72S9.74 3.51 9.09 3A33 33 0 0 0 5 0a32.16 32.16 0 0 0 3 4.08c.51.66 1.08 1.26 1.64 1.92l.1.11c-1.54 0-3.39.1-4.74.21a33.28 33.28 0 0 0-5 .78 33.28 33.28 0 0 0 5 .78c1.34.12 3.19.12 4.74.18l-.11.11C9.08 8.8 8.51 9.4 8 10.05a32.93 32.93 0 0 0-3 4.09 32.21 32.21 0 0 0 4.09-3c.65-.53 1.25-1.1 1.88-1.65s1.22-1.15 1.81-1.73l.71-.71Z" style="fill:#fff" />
+                    </svg>
+                  </span>
+                  Make Backstage work for you
+                </a>
           </section>
+          <script defer src="//embed.typeform.com/next/embed.js"></script>
         </article>
       </AppHtml>
     )
