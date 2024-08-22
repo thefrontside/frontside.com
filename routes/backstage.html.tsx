@@ -7,10 +7,6 @@ export function backstageServicesRoute(): JSXHandler {
     let homeRethink = "../assets/home-rethink.png";
     let homeshiftleft = "../assets/home-shift-left.png";
     let homeinject = "../assets/home-inject.png";
-    let backstageSight = "../assets/home-backstage-sight.png";
-    let backstageDerisk = "../assets/home-backstage-derisk.png";
-    let backstageShiftleft = "../assets/home-backstage-shift-left.png";
-    let homeTensionGraph = "../assets/home-graph-tension.png";
 
     let AppHtml = yield* useAppHtml({
       title: "Frontside",
