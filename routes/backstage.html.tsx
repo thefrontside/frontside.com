@@ -95,7 +95,7 @@ export function backstageServicesRoute(): JSXHandler {
               <img class="md:order-first" src={backstageDx} alt="" />
             </div>
           </section>
-          <section class="flex justify-center">
+          <section class="flex justify-center px-4 py-15 md:py-20 lg:py-24 xl:py-30">
             <a
               data-tf-popup="n5Hz8E9N"
               data-tf-opacity="100"
@@ -106,7 +106,7 @@ export function backstageServicesRoute(): JSXHandler {
               data-tf-hidden="topic=backstage"
               id="landing-top"
               href="#"
-              class="inline-flex items-center bg-gradient-to-r from-[#099279] to-[#322678] shadow-blue-box m-auto mt-20 mb-20 px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-center text-sm text-white text-xl hover:outline-indigo-600"
+              class="inline-flex justify-center items-center bg-gradient-to-r from-[#099279] to-[#322678] shadow-blue-box m-auto mt-20 mb-20 px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-sm text-white text-xl hover:outline-indigo-600"
             >
               <span class="mr-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.49 14.14" class="w-4 h-4">
@@ -125,7 +125,7 @@ export function backstageServicesRoute(): JSXHandler {
               <p class="mx-auto mb-10 max-w-prose text-center text-xl leading-relaxed">Frontside helped Resideo set up and customize Backstage to enable org-wide service discoverability, standardize access to documentation across teams and languages, and kick-start ship-ready projects.</p>
               <a
               href="work/case-studies/resideo"
-              class="inline-flex items-center bg-gradient-to-r from-[#f74d7b] via-[#44378a] to-[#26abe8] shadow-blue-box m-auto px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-center text-sm text-white text-xl hover:outline-indigo-600"
+              class="inline-flex justify-center items-center bg-gradient-to-r from-[#f74d7b] via-[#44378a] to-[#26abe8] shadow-blue-box m-auto px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-sm text-white text-xl justif hover:outline-indigo-600"
               >
                 <span class="mr-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.49 14.14" class="w-4 h-4">
