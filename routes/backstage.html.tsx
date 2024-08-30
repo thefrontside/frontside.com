@@ -42,7 +42,7 @@ export function backstageServicesRoute(): JSXHandler {
                       <path d="M12.78 6.36c-.59-.58-1.19-1.16-1.78-1.72S9.74 3.51 9.09 3A33 33 0 0 0 5 0a32.16 32.16 0 0 0 3 4.08c.51.66 1.08 1.26 1.64 1.92l.1.11c-1.54 0-3.39.1-4.74.21a33.28 33.28 0 0 0-5 .78 33.28 33.28 0 0 0 5 .78c1.34.12 3.19.12 4.74.18l-.11.11C9.08 8.8 8.51 9.4 8 10.05a32.93 32.93 0 0 0-3 4.09 32.21 32.21 0 0 0 4.09-3c.65-.53 1.25-1.1 1.88-1.65s1.22-1.15 1.81-1.73l.71-.71Z" style="fill:#fff" />
                     </svg>
                   </span>
-                  Adopt Backsage with Frontside
+                  Adopt Backstage with Frontside
                 </a>
               </div>
             </div>
@@ -124,15 +124,15 @@ export function backstageServicesRoute(): JSXHandler {
               </header>
               <p class="mx-auto mb-10 max-w-prose text-center text-xl leading-relaxed">Frontside helped Resideo set up and customize Backstage to enable org-wide service discoverability, standardize access to documentation across teams and languages, and kick-start ship-ready projects.</p>
               <a
-              href="work/case-studies/resideo"
-              class="inline-flex justify-center items-center bg-gradient-to-r from-[#f74d7b] via-[#44378a] to-[#26abe8] shadow-blue-box m-auto px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-sm text-white text-xl justif hover:outline-indigo-600"
+                href="work/case-studies/resideo"
+                class="inline-flex justify-center items-center bg-gradient-to-r from-[#f74d7b] via-[#44378a] to-[#26abe8] shadow-blue-box m-auto px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-sm text-white text-xl justif hover:outline-indigo-600"
               >
                 <span class="mr-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.49 14.14" class="w-4 h-4">
-                  <path d="M12.78 6.36c-.59-.58-1.19-1.16-1.78-1.72S9.74 3.51 9.09 3A33 33 0 0 0 5 0a32.16 32.16 0 0 0 3 4.08c.51.66 1.08 1.26 1.64 1.92l.1.11c-1.54 0-3.39.1-4.74.21a33.28 33.28 0 0 0-5 .78 33.28 33.28 0 0 0 5 .78c1.34.12 3.19.12 4.74.18l-.11.11C9.08 8.8 8.51 9.4 8 10.05a32.93 32.93 0 0 0-3 4.09 32.21 32.21 0 0 0 4.09-3c.65-.53 1.25-1.1 1.88-1.65s1.22-1.15 1.81-1.73l.71-.71Z" style="fill:#fff" />
-                </svg>
-              </span>
-              Read More
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.49 14.14" class="w-4 h-4">
+                    <path d="M12.78 6.36c-.59-.58-1.19-1.16-1.78-1.72S9.74 3.51 9.09 3A33 33 0 0 0 5 0a32.16 32.16 0 0 0 3 4.08c.51.66 1.08 1.26 1.64 1.92l.1.11c-1.54 0-3.39.1-4.74.21a33.28 33.28 0 0 0-5 .78 33.28 33.28 0 0 0 5 .78c1.34.12 3.19.12 4.74.18l-.11.11C9.08 8.8 8.51 9.4 8 10.05a32.93 32.93 0 0 0-3 4.09 32.21 32.21 0 0 0 4.09-3c.65-.53 1.25-1.1 1.88-1.65s1.22-1.15 1.81-1.73l.71-.71Z" style="fill:#fff" />
+                  </svg>
+                </span>
+                Read More
               </a>
             </div>
           </section>
