@@ -35,7 +35,7 @@ export function backstageServicesRoute(): JSXHandler {
                   data-tf-hidden="topic=backstage"
                   id="landing-top"
                   href="#"
-                  class="inline-flex items-center bg-gradient-to-r from-[#099279] to-[#322678] shadow-blue-box m-auto mt-16 px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-center text-sm text-white text-xl hover:outline-indigo-600"
+                  class="inline-flex justify-center items-center bg-gradient-to-r from-[#099279] to-[#322678] shadow-blue-box m-auto mt-16 px-14 py-7 rounded-md hover:ring w-full md:w-auto font-semibold text-center text-sm text-white text-xl hover:outline-indigo-600"
                 >
                   <span class="mr-2">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.49 14.14" class="w-4 h-4">
