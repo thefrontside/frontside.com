@@ -2,15 +2,18 @@ import { main, suspend } from "effection";
 
 import { createRevolution, route } from "revolution";
 
+// Routes
 import { proxyRoute } from "./routes/proxy-route.ts";
 import { assetsRoute }  from "./routes/assets-route.ts";
+import { indexRoute } from "./routes/index.tsx";
+import { backstageServicesRoute } from "./routes/backstage.html.tsx";
 import { pluginWorkshopRoute } from "./routes/advanced-backstage-plugin-development-route.tsx";
 
 import { etagPlugin } from "./plugins/etag.ts";
 import { currentRequestPlugin } from "./plugins/current-request.ts";
 import { twindPlugin } from "./plugins/twind.ts";
 import { config } from "./twind.config.ts";
-import { indexRoute } from "./routes/index.tsx";
+
 
 await main(function* () {
   let proxies = proxySites();
@@ -18,6 +21,7 @@ await main(function* () {
   let revolution = createRevolution({
     app: [
       route("/",indexRoute()),
+      route("/backstage", backstageServicesRoute()),
       route(
         "/workshops/advanced-backstage-plugin-development",
         pluginWorkshopRoute(),
