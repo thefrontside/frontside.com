@@ -8,6 +8,7 @@ import { assetsRoute }  from "./routes/assets-route.ts";
 import { indexRoute } from "./routes/index.tsx";
 import { backstageServicesRoute } from "./routes/backstage.html.tsx";
 import { pluginWorkshopRoute } from "./routes/advanced-backstage-plugin-development-route.tsx";
+import { resideoBackstageCaseStudyRoute } from "./routes/resideo.html.tsx";
 
 import { etagPlugin } from "./plugins/etag.ts";
 import { currentRequestPlugin } from "./plugins/current-request.ts";
@@ -22,6 +23,7 @@ await main(function* () {
     app: [
       route("/",indexRoute()),
       route("/backstage", backstageServicesRoute()),
+      route("/work/case-studies/resideo", resideoBackstageCaseStudyRoute()),
       route(
         "/workshops/advanced-backstage-plugin-development",
         pluginWorkshopRoute(),

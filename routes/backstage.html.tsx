@@ -116,7 +116,7 @@ export function backstageServicesRoute(): JSXHandler {
               Make Backstage work for you
             </a>
           </section>
-          <section>
+          <section class="p-4">
             <div class="bg-[url('/assets/img/q3-2021/backgruond-blue-bubbles.png')] bg-no-repeat bg-center mx-auto p-10 rounded-lg text-center text-pretty text-white container">
               <header>
                 <h3 class="mb-4 text-lg uppercase">Case Study</h3>
