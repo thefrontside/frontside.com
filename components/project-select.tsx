@@ -37,10 +37,11 @@ export function ProjectSelect() {
         }
         `}
       </style>
+
       <input type="checkbox" class="hidden" id={toggleId} checked />
-      <label id={openerId} style="position: relative;" for={toggleId}>
+      <label id={openerId} style="position: relative; cursor: pointer;" for={toggleId}>
         Open Source
-        <aside class="z-10 absolute m-4 rounded-md">
+        <aside class="z-20 absolute m-4 rounded-md">
           <h4 class="p-2.5 min-w-max font-normal text-center text-sm uppercase">
             Open Source Projects
           </h4>
@@ -66,7 +67,7 @@ export function ProjectSelect() {
 
       <label
         id={closerId}
-        class="z-50 absolute inset-0 hidden w-screen h-screen"
+        class="z-10 absolute inset-0 hidden w-screen h-screen"
         for={toggleId}
       />
     </>
