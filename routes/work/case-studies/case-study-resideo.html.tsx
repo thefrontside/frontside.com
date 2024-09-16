@@ -22,10 +22,10 @@ export function resideoBackstageCaseStudyRoute(): JSXHandler {
 
     return (
       <AppHtml>
-        <article class="mx-auto px-12 p-8 prose prose-lg">
+        <article class="mx-auto px-12 p-8 text-blue-primary prose prose-lg">
           <header>
-            <span>Case Study</span>
-            <h1>
+            <span class="color-inherit">Case Study</span>
+            <h1 class="text-blue-primary">
               Boosting Resideo's Developers Experience with Backstage
             </h1>
           </header>
@@ -39,7 +39,9 @@ export function resideoBackstageCaseStudyRoute(): JSXHandler {
               documentation across teams and languages, and kick-start
               ship-ready projects.
             </p>
-            <h2>All services and releases at sight</h2>
+            <h2 class="text-blue-primary">
+              All services and releases at sight
+            </h2>
             <p>
               Resideo has several dozen Cloud services and uses a Blue-Green
               strategy for new releases. Leveraging the Backstage Catalog,
@@ -62,7 +64,9 @@ export function resideoBackstageCaseStudyRoute(): JSXHandler {
                 Backstage interface with deployment indicators
               </figcaption>
             </figure>
-            <h2>New Projects with miles of a headstart</h2>
+            <h2 class="text-blue-primary">
+              New Projects with miles of a headstart
+            </h2>
             <p>
               As Resideo continues to grow, new services need to be developed,
               tested, and deployed regularly. Frontside showed how they could
@@ -80,7 +84,9 @@ export function resideoBackstageCaseStudyRoute(): JSXHandler {
                 alt="Screenshot of Backstage Scaffolding feature in Resideo"
               />
             </figure>
-            <h2>A unified reference for documentation</h2>
+            <h2 class="text-blue-primary">
+              A unified reference for documentation
+            </h2>
             <p>
               Like Cloud native organizations, Resideo allows teams to choose
               their toolset and therefore documentation practices, with styles
@@ -92,7 +98,7 @@ export function resideoBackstageCaseStudyRoute(): JSXHandler {
               documentation of any Resideo service without leaving their work
               environment.
             </p>
-            <h2>Discover, use, create</h2>
+            <h2 class="text-blue-primary">Discover, use, create</h2>
             <p>
               Backstage enables organizations to discover new possibilities
               through its Catalog, but that&#39;s only the first step. Resideo
