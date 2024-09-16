@@ -30,7 +30,7 @@ export function ProjectSelect() {
         #${toggleId} ~ #${openerId}::after {
           display: inline-block;
           margin-left: .25em;
-          content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="7.21" class="_77rxr6i _1qxv2iks"><path d="M5.4.61q-.75.75-1.47 1.53c-.46.53-1 1-1.4 1.6A27.54 27.54 0 000 7.21a28.64 28.64 0 003.47-2.54c.55-.44 1.06-.93 1.6-1.4l.09-.09 1-.53.71.54.09.08c.54.47 1.05 1 1.6 1.4A26.65 26.65 0 0012 7.21a27.54 27.54 0 00-2.53-3.47c-.45-.56-.94-1.07-1.4-1.6s-1-1-1.47-1.53L6 0z"></path></svg>');
+          content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="7.21" class="_1qxv2iks _77rxr6i"><path d="M5.4.61q-.75.75-1.47 1.53c-.46.53-1 1-1.4 1.6A27.54 27.54 0 000 7.21a28.64 28.64 0 003.47-2.54c.55-.44 1.06-.93 1.6-1.4l.09-.09 1-.53.71.54.09.08c.54.47 1.05 1 1.6 1.4A26.65 26.65 0 0012 7.21a27.54 27.54 0 00-2.53-3.47c-.45-.56-.94-1.07-1.4-1.6s-1-1-1.47-1.53L6 0z"></path></svg>');
         }
         #${toggleId}:checked ~ label::after {
           transform: rotate(180deg);
@@ -40,8 +40,8 @@ export function ProjectSelect() {
       <input type="checkbox" class="hidden" id={toggleId} checked />
       <label id={openerId} style="position: relative;" for={toggleId}>
         Open Source
-        <aside class="absolute m-4 rounded-md">
-          <h4 class="p-2.5 uppercase text-sm text-center font-normal min-w-max">
+        <aside class="z-10 absolute m-4 rounded-md">
+          <h4 class="p-2.5 min-w-max font-normal text-center text-sm uppercase">
             Open Source Projects
           </h4>
           <ul>
@@ -50,7 +50,7 @@ export function ProjectSelect() {
                 <a class="flex flex-nowrap gap-x-2" href={project.url}>
                   <img src={project.img} alt={`${project.title} Logo`} />
                   <section class="font-normal text-xs">
-                    <h3 class="tracking-wider mb-1.5 leading-3 min-w-max">
+                    <h3 class="mb-1.5 min-w-max leading-3 tracking-wider">
                       <span class="font-bold uppercase">{project.title}</span>
                       {" "}
                       {project.version}
@@ -66,7 +66,7 @@ export function ProjectSelect() {
 
       <label
         id={closerId}
-        class="absolute w-screen h-screen inset-0 z-50 hidden"
+        class="z-50 absolute inset-0 hidden w-screen h-screen"
         for={toggleId}
       />
     </>
