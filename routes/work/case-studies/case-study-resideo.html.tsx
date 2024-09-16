@@ -1,4 +1,3 @@
-/// <reference lib="">
 import type { JSXHandler } from "revolution";
 
 import { useAppHtml } from "../../app.html.tsx";
