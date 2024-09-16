@@ -4,24 +4,23 @@ import { createRevolution, route } from "revolution";
 
 // Routes
 import { proxyRoute } from "./routes/proxy-route.ts";
-import { assetsRoute }  from "./routes/assets-route.ts";
+import { assetsRoute } from "./routes/assets-route.ts";
 import { indexRoute } from "./routes/index.tsx";
 import { backstageServicesRoute } from "./routes/backstage.html.tsx";
 import { pluginWorkshopRoute } from "./routes/advanced-backstage-plugin-development-route.tsx";
-import { resideoBackstageCaseStudyRoute } from "./routes/case-study-resideo.html.tsx";
+import { resideoBackstageCaseStudyRoute } from "./routes/work/case-studies/case-study-resideo.html.tsx";
 
 import { etagPlugin } from "./plugins/etag.ts";
 import { currentRequestPlugin } from "./plugins/current-request.ts";
 import { twindPlugin } from "./plugins/twind.ts";
 import { config } from "./twind.config.ts";
 
-
 await main(function* () {
   let proxies = proxySites();
 
   let revolution = createRevolution({
     app: [
-      route("/",indexRoute()),
+      route("/", indexRoute()),
       route("/backstage", backstageServicesRoute()),
       route("/work/case-studies/resideo", resideoBackstageCaseStudyRoute()),
       route(
@@ -41,7 +40,7 @@ await main(function* () {
     ],
   });
 
-  let server = yield* revolution.start({port: 8005});
+  let server = yield* revolution.start({ port: 8005 });
   console.log(`www -> http://${server.hostname}:${server.port}`);
 
   yield* suspend();
