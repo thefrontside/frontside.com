@@ -7,6 +7,7 @@ import { proxyRoute } from "./routes/proxy-route.ts";
 import { assetsRoute } from "./routes/assets-route.ts";
 import { indexRoute } from "./routes/index.tsx";
 import { backstageServicesRoute } from "./routes/backstage.html.tsx";
+import { dxConsultingServicesRoute } from "./routes/dx-consulting.html.tsx";
 import { pluginWorkshopRoute } from "./routes/advanced-backstage-plugin-development-route.tsx";
 import { resideoBackstageCaseStudyRoute } from "./routes/work/case-studies/case-study-resideo.html.tsx";
 
@@ -22,6 +23,7 @@ await main(function* () {
     app: [
       route("/", indexRoute()),
       route("/backstage", backstageServicesRoute()),
+      route("/dx-consulting", dxConsultingServicesRoute()),
       route("/work/case-studies/resideo", resideoBackstageCaseStudyRoute()),
       route(
         "/workshops/advanced-backstage-plugin-development",

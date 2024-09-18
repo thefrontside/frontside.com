@@ -59,9 +59,9 @@ export function* useAppHtml(
           {PageSenseScriptTag}
         </head>
         <body>
-          <header class="p-5 max-w-screen-sm lg:max-w-screen-2xl m-auto lg:p-12">
+          <header class="m-auto p-5 lg:p-12 max-w-screen-sm lg:max-w-screen-2xl">
             <nav
-              class="flex flex-wrap items-center justify-end lg:gap-x-10"
+              class="flex flex-wrap justify-end items-center lg:gap-x-10"
               aria-label="Site Nav"
             >
               <a class="order-1 mr-auto" href="/">
@@ -72,9 +72,9 @@ export function* useAppHtml(
                   alt="Frontside Logo"
                 />
               </a>
-              <menu class="w-full mt-14 font-bold leading-5 tracking-wide text-blue-primary text-sm flex justify-between order-3 lg:order-2 lg:mt-0 lg:w-auto lg:gap-x-12">
+              <menu class="flex justify-between lg:gap-x-12 order-3 lg:order-2 mt-14 lg:mt-0 w-full lg:w-auto font-bold text-blue-primary text-sm leading-5 tracking-wide">
                 <li>
-                  <a href="/consulting">DX Consulting</a>
+                  <a href="/dx-consulting">DX Consulting</a>
                 </li>
                 <li>
                   <a href="/backstage">Backstage</a>
@@ -87,7 +87,7 @@ export function* useAppHtml(
                 </li>
               </menu>
               <a
-                class="btn-contact uppercase rounded-lg font-bold py-2 md:py-1.5 px-2 md:px-2.5 bg-contain text-white text-sm md:text-base order-2"
+                class="order-2 bg-contain px-2 md:px-2.5 py-2 md:py-1.5 rounded-lg font-bold text-sm text-white md:text-base uppercase btn-contact"
                 href="/contact"
               >
                 Contact
@@ -98,7 +98,7 @@ export function* useAppHtml(
             {children}
           </main>
           <footer class="mt-20 mb-16">
-            <menu class="font-bold text-lg grid grid-cols-2 ml-12 gap-y-5 justify-around lg:flex lg:m-0">
+            <menu class="lg:flex justify-around gap-y-5 grid grid-cols-2 lg:m-0 ml-12 font-bold text-lg">
               <li>
                 <a href="/">Home</a>
               </li>
@@ -118,7 +118,7 @@ export function* useAppHtml(
                 <a href="/contact">Contact</a>
               </li>
             </menu>
-            <section class="text-center text-xs tracking-wide leading-5 mt-20 grid grid-cols-1 gap-y-12 ">
+            <section class="gap-y-12 grid grid-cols-1 mt-20 text-center text-xs leading-5 tracking-wide">
               <a href="/">
                 <img
                   alt="Frontside Logo"
@@ -129,7 +129,7 @@ export function* useAppHtml(
                 />
               </a>
 
-              <address class="whitespace-pre-line not-italic">
+              <address class="not-italic whitespace-pre-line">
                 2301 W Anderson Ln #102-8
                 {"\n"}
                 Austin, Texas 78757
