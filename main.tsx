@@ -30,6 +30,7 @@ await main(function* () {
       route("/effection(.*)", proxyRoute(proxies.effection)),
       route("/graphgen(.*)", proxyRoute(proxies.graphgen)),
       route("/assets(.*)", assetsRoute("assets")),
+      route("/interactors(.*)", proxyRoute(proxies.interactors)),
       proxyRoute(proxies.legacy),
     ],
 
@@ -51,6 +52,11 @@ function proxySites() {
     effection: {
       prefix: "effection",
       website: Deno.env.get("EFFECTION_URL") ?? "https://effection.deno.dev",
+    },
+    interactors: {
+      prefix: "interactors",
+      root: "interactors/",
+      website: Deno.env.get("INTERACTORS_URL") ?? "https://interactors.deno.dev"
     },
     graphgen: {
       prefix: "graphgen",
