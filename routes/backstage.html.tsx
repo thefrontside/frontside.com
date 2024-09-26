@@ -21,7 +21,7 @@ export function backstageServicesRoute(): JSXHandler {
       <AppHtml>
         <article>
           <header class="lg:gap-x-8 lg:grid lg:grid-cols-12 mx-auto mt-4 lg:px-8 p-8 lg:p-16 max-w-screen-2xl">
-            <div class="lg:col-span-7 xl:col-span-6 lg:px-0 pt-10 lg:pt-24 pb-24 sm:pb-8 lg:pb-56">
+            <div class="lg:col-span-7 xl:col-span-6 lg:px-0 pt-10 lg:pt-2 pb-24 sm:pb-8">
               <div class="mx-auto lg:mx-0 max-w-2xl">
                 <h1 class="mt-12 sm:mt-10 font-black text-4xl text-blue-primary sm:text-6xl uppercase tracking-tight">
                   <span class="bg-clip-text bg-gradient-to-r from-[#26abe8] to-[#8c7db3] text-transparent">
