@@ -5,12 +5,16 @@ import { createRevolution, route } from "revolution";
 // Routes
 import { proxyRoute } from "./routes/proxy-route.ts";
 import { assetsRoute } from "./routes/assets-route.ts";
+
+// Website Routes
 import { indexRoute } from "./routes/index.tsx";
+import { aboutUsRoute } from "./routes/about-us.html.tsx";
 import { backstageServicesRoute } from "./routes/backstage.html.tsx";
 import { dxConsultingServicesRoute } from "./routes/dx-consulting.html.tsx";
 import { pluginWorkshopRoute } from "./routes/advanced-backstage-plugin-development-route.tsx";
 import { resideoBackstageCaseStudyRoute } from "./routes/work/case-studies/case-study-resideo.html.tsx";
 
+// App Imports
 import { etagPlugin } from "./plugins/etag.ts";
 import { currentRequestPlugin } from "./plugins/current-request.ts";
 import { twindPlugin } from "./plugins/twind.ts";
@@ -22,6 +26,7 @@ await main(function* () {
   let revolution = createRevolution({
     app: [
       route("/", indexRoute()),
+      route("/about", aboutUsRoute()),
       route("/backstage", backstageServicesRoute()),
       route("/dx-consulting", dxConsultingServicesRoute()),
       route("/work/case-studies/resideo", resideoBackstageCaseStudyRoute()),
@@ -58,7 +63,8 @@ function proxySites() {
     interactors: {
       prefix: "interactors",
       root: "interactors/",
-      website: Deno.env.get("INTERACTORS_URL") ?? "https://interactors.deno.dev"
+      website: Deno.env.get("INTERACTORS_URL") ??
+        "https://interactors.deno.dev",
     },
     graphgen: {
       prefix: "graphgen",
