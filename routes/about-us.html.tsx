@@ -2,6 +2,8 @@ import type { JSXHandler } from "revolution";
 
 import { useAppHtml } from "./app.html.tsx";
 
+import { people } from "./people/people.ts";
+
 export function aboutUsRoute(): JSXHandler {
   return function* () {
     let aboutHero = "../assets/img/q3-2021/about-hero.png";
@@ -83,7 +85,7 @@ export function aboutUsRoute(): JSXHandler {
             </figure>
           </section>
 
-          <section class="bg-gray-50 mt-24 md:py-20 lg:py-24 xl:py-30 p-8">
+          <section class="bg-gray-50 mt-24 md:py-20 lg:py-24 xl:py-30 p-8 pb-10">
             <ul class="grid md:grid-cols-2 max-w-screen-2xl">
               <li class="flex items-start mt-6">
                 <div class="flex-shrink-0 mr-4 w-10 h-10">
@@ -225,36 +227,15 @@ export function aboutUsRoute(): JSXHandler {
               </li>
             </ul>
           </section>
-
           <section>
-            <div class="pt-24 sm:pt-32 text-center">
-              <div class="mx-auto px-6 lg:px-8 max-w-7xl">
-                <div class="mx-auto max-w-2xl">
-                  <h2 class="mt-2 font-bold text-blue-primary text-xl sm:text-6xl tracking-tight">
-                    Ship faster &amp; happier
-                  </h2>
-                  <p class="mt-6 text-gray-600 text-lg leading-8">
-                    Struggling with slow release cycles and frustrated teams?
-                    Your developers deserve an efficient workflow that keeps
-                    them productive and engaged. Frontside helps you break
-                    through common bottlenecks by empowering teams with
-                    decoupling strategies, secure local environments, and
-                    streamlined testing solutions. Discover how to keep your
-                    engineers moving forward—no more delays, just faster,
-                    happier shipping.
-                  </p>
-                </div>
-              </div>
-            </div>
-
             <div class="mx-auto pt-24 sm:pt-32">
               <div class="mx-auto px-6 lg:px-8 max-w-7xl">
                 <div class="mx-auto max-w-2xl">
                   <p class="font-semibold text-[#f74d7b] text-base leading-7">
-                    Decoupling Strategies
+                    We punch above our weight class
                   </p>
-                  <h2 class="mt-2 font-bold text-4xl text-blue-primary sm:text-4xl tracking-tight">
-                    Decoupled teams are happier teams
+                  <h2 class="mt-2 font-bold text-4xl text-blue-primary sm:text-4xl">
+                    Meet the team
                   </h2>
                   <p class="mt-6 text-gray-600 text-lg leading-8">
                     The obstacles preventing developers from feeling productive
@@ -268,171 +249,35 @@ export function aboutUsRoute(): JSXHandler {
                   </p>
                 </div>
               </div>
-            </div>
 
-            <div class="mx-auto pt-24 sm:pt-32">
-              <div class="mx-auto px-6 lg:px-8 max-w-7xl">
-                <div class="mx-auto max-w-2xl">
-                  <p class="font-semibold text-[#f74d7b] text-base leading-7">
-                    Local Environments
-                  </p>
-                  <h2 class="mt-2 font-bold text-3xl text-blue-primary sm:text-4xl tracking-tight">
-                    Reliable local setup = sound production release
-                  </h2>
-                  <p class="mt-6 text-gray-600 text-lg leading-8">
-                    The success of Cloud native teams can feel increasingly
-                    fragile when they depend on Cloud vendors for crucial
-                    workflows such as authentication. These services oftentimes
-                    lead to frustrations in the development experience like
-                    integration blind spots or security and compliance risks
-                    when using Cloud service tokens. Frontside helps teams
-                    create a local development environment that matches
-                    production faithfully without exposing sensitive data.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div class="mx-auto pt-24 sm:pt-32">
-              <div class="mx-auto px-6 lg:px-8 max-w-7xl">
-                <div class="mx-auto max-w-2xl">
-                  <p class="font-semibold text-[#f74d7b] text-base leading-7">
-                    Testing & Feeback
-                  </p>
-                  <h2 class="mt-2 font-bold text-blue-primary text-xl sm:text-4xl tracking-tight">
-                    Simplified testing &rarr; shorter feedback loops{" "}
-                  </h2>
-                  <p class="mt-6 text-gray-600 text-lg leading-8">
-                    Frustration with testing in the development cycle seems
-                    inevitable because too often tests are slow and unreliable.
-                    At the same time, test data management can be burdensome and
-                    quickly become outdated if not managed correctly. Frontside
-                    helps teams structure a robust testing strategy by making it
-                    easier for developers to write and maintain meaningful tests
-                    that reduce QA workload and minimize feedback loops.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="pt-24 sm:pt-32 text-center">
-              <div class="mx-auto px-6 lg:px-8 max-w-7xl">
-                <div class="mx-auto max-w-2xl">
-                  <h2 class="mt-2 font-bold text-blue-primary text-xl sm:text-6xl tracking-tight">
-                    Empower teams with a better workflow
-                  </h2>
-                  <p class="mt-6 text-gray-600 text-lg leading-8">
-                    The whole development cycle is crucial to the productivity
-                    of your team. From development to verification and release,
-                    every step needs to be efficient to avoid frustration and
-                    delays. Frontside helps ensure that your process flows
-                    smoothly, removing bottlenecks and enabling faster, more
-                    reliable shipping. Optimize your workflow and keep your
-                    developers happy by addressing every stage of the cycle.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="bg-white py-24 sm:py-32 overflow-hidden">
-              <div class="mx-auto px-6 lg:px-8 max-w-7xl">
-                <div class="gap-x-8 gap-y-16 sm:gap-y-20 grid grid-cols-1 lg:grid-cols-2 mx-auto lg:mx-0 max-w-2xl lg:max-w-none">
-                  <div class="lg:ml-auto lg:pt-4 lg:pl-4">
-                    <div class="lg:max-w-lg">
-                      <h2 class="font-semibold text-[#f74d7b] text-base leading-7">
-                        Development Cycle
-                      </h2>
-                      <p class="mt-2 font-bold text-3xl text-blue-primary sm:text-4xl tracking-tight">
-                        Optimize Every Step
-                      </p>
-                      <p class="mt-6 text-gray-600 text-lg leading-8">
-                        A streamlined process that reduces developer friction at
-                        every stage. With better workflows, your team can focus
-                        on innovation, not bottlenecks."
-                      </p>
-                      <dl class="space-y-8 mt-10 max-w-xl lg:max-w-none text-base text-gray-600 leading-7">
-                        <div class="relative pl-9">
-                          <dt class="inline font-semibold text-blue-primary">
-                            <svg
-                              class="top-1 left-1 absolute w-5 h-5 text-indigo-600"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                fill-rule="evenodd"
-                                d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
-                                clip-rule="evenodd"
-                              />
-                            </svg>
-                            Development.{" "}
-                          </dt>
-                          <dd class="inline">
-                            How long does it take from the moment a person joins
-                            the team until they submit their first PR?
-                          </dd>
-                        </div>
-                        <div class="relative pl-9">
-                          <dt class="inline font-semibold text-blue-primary">
-                            <svg
-                              class="top-1 left-1 absolute w-5 h-5 text-indigo-600"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path
-                                fill-rule="evenodd"
-                                d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                                clip-rule="evenodd"
-                              />
-                            </svg>
-                            Verfication.{" "}
-                          </dt>
-                          <dd class="inline">
-                            Are developers afraid of inadvertently breaking
-                            tests? Are dev teams and QA stepping on each other’s
-                            toes?
-                          </dd>
-                        </div>
-                        <div class="relative pl-9">
-                          <dt class="inline font-semibold text-blue-primary">
-                            <svg
-                              class="top-1 left-1 absolute w-5 h-5 text-indigo-600"
-                              viewBox="0 0 20 20"
-                              fill="currentColor"
-                              aria-hidden="true"
-                            >
-                              <path d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
-                              <path
-                                fill-rule="evenodd"
-                                d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z"
-                                clip-rule="evenodd"
-                              />
-                            </svg>
-                            Release.{" "}
-                          </dt>
-                          <dd class="inline">
-                            How much effort does it take your team to make a
-                            release? Can they release multiple times a day?
-                          </dd>
-                        </div>
-                      </dl>
-                    </div>
-                  </div>
-                  <div class="flex justify-end items-start lg:order-first w-3/4">
-                    <lottie-player
-                      src={cycleAnimation}
-                      background="transparent"
-                      speed=".5"
-                      style="width: 100%; height: 100%"
-                      direction="1"
-                      mode="normal"
-                      loop
-                      autoplay
-                    >
-                    </lottie-player>
-                  </div>
-                </div>
+              <div>
+                <ul class="flex flex-col items-center">
+                  {people
+                    .filter((person) => !person.alumnus)
+                    .map((person) => {
+                      return (
+                        <li class="flex flex-col">
+                          <div>
+                            <img
+                              src="person.image"
+                              alt={person.imgAlt}
+                              class="w-full h-full object-cover"
+                            />
+                          </div>
+                          <div class="mt-4">
+                            <h3 class="font-semibold text-lg">{person.name}</h3>
+                            <strong class="block text-gray-700">
+                              {person.title}
+                            </strong>
+                            <p class="text-gray-500">{person.location}</p>
+                            <p class="mt-2 text-gray-600 text-sm prose">
+                              {person.intro}
+                            </p>
+                          </div>
+                        </li>
+                      );
+                    })}
+                </ul>
               </div>
             </div>
           </section>
