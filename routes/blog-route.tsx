@@ -26,16 +26,31 @@ export function* blogRoute(): Operation<JSXHandler> {
 
     return (
       <AppHtml>
-        <article class="text-blue-primary p-10 lg:p-0">
-          <header class="flex flex-col md:flex-row justify-between mx-auto max-w-5xl">
+        <article class="p-6 lg:p-0 text-blue-primary">
+          <header class="flex md:flex-row flex-col justify-between mx-auto mb-8 max-w-5xl">
             <section class="basis-1/2">
-              <span class="uppercase text-4xl md:text-5xl font-black">{post.title}</span>
-              <div>{post.author}</div>
-	      <span>{post.date.toLocaleString('default', { month: 'long', day: 'numeric', year: 'numeric'})}</span>
+              <h1 class="mb-4 font-black text-2xl md:text-5xl uppercase">
+                {post.title}
+              </h1>
+              <p class="mb-2">{post.author}</p>
+              <div class="mb-6">
+                {post.date.toLocaleString("default", {
+                  month: "long",
+                  day: "numeric",
+                  year: "numeric",
+                })}
+              </div>
+              <div class="flex flex-wrap gap-2 mb-6">
+                {post.tags.map((tag) => (
+                  <span class="px-3 py-1 border border-blue-300 rounded-full text-blue-primary text-sm capitalize">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </section>
             <div>Hello</div>
           </header>
-          <section class="prose mx-auto text-blue-primary">
+          <section class="mx-auto text-blue-primary prose">
             <link rel="stylesheet" href="/assets/prism-atom-one-dark.css" />
             <post.content />
           </section>
