@@ -15,6 +15,8 @@ import { etagPlugin } from "./plugins/etag.ts";
 import { currentRequestPlugin } from "./plugins/current-request.ts";
 import { twindPlugin } from "./plugins/twind.ts";
 import { config } from "./twind.config.ts";
+import { blogRoute } from "./routes/blog-route.tsx";
+import { blogIndexRoute } from "./routes/blog-index-route.tsx";
 
 await main(function* () {
   let proxies = proxySites();
@@ -22,6 +24,8 @@ await main(function* () {
   let revolution = createRevolution({
     app: [
       route("/", indexRoute()),
+      route("/newblog", blogIndexRoute()),
+      route("/newblog/:id", yield* blogRoute()),
       route("/backstage", backstageServicesRoute()),
       route("/dx-consulting", dxConsultingServicesRoute()),
       route("/work/case-studies/resideo", resideoBackstageCaseStudyRoute()),
@@ -44,7 +48,8 @@ await main(function* () {
   });
 
   let server = yield* revolution.start({ port: 8005 });
-  console.log(`www -> http://${server.hostname}:${server.port}`);
+  let hostname = server.hostname === "0.0.0.0" ? "localhost" : server.hostname;
+  console.log(`www -> http://${hostname}:${server.port}`);
 
   yield* suspend();
 });
