@@ -10,10 +10,10 @@ tags:
 <p>When most folks think about javascript, they think about scripts that they embed into their web pages, but the truth is that it is a general-purpose programming language <em>that has absolutely nothing to do with HTML</em>. In fact, the javascript runtime is so orthogonal to other web browser functionality, that mozilla offers the javascript interpreter that it uses in Firefox and friends as a <a href="http://www.mozilla.org/js/spidermonkey">completely separate download</a>. It's available as both .deb or .rpm package, and just to show it: Here's the wonderful hello world program, as entered into the shell.</p>
 
 ```
-    cowboyd@subzero:~$ js
-    js> alert('hello world')
-    1: ReferenceError: alert is not defined
-    js>    
+cowboyd@subzero:~$ js
+js> alert('hello world')
+1: ReferenceError: alert is not defined
+js>
 ```
 
 <p>OK, so I boobie-trapped that example in an attempt to beat the point I've been making to death. It's an error because `alert()` isn't actually part of javascript. In the context with which we're familiar(DHTML), it's a function that's <em>defined by the browser</em>. Of course, it just so happens that every browser implements `alert()` to behave in almost exactly the same way, but the function itself has nothing to do with the javascript core. Implementing our own version of alert is simple enough though.</p>
