@@ -1,12 +1,12 @@
-import { JSXHandler, respondNotFound, useParams } from "revolution";
+import { JSXHandler, Middleware, respondNotFound, respondRedirect, useParams } from "revolution";
 import { useAppHtml } from "./app.html.tsx";
 import { Operation } from "effection";
 import { initBlog, useBlog } from "../blog/blog.ts";
 
-export function* blogRoute(): Operation<JSXHandler> {
+export function* blogPostRoute(): Operation<JSXHandler> {
   yield* initBlog();
 
-  return function* route() {
+  return clean(function* route() {
     let { id } = yield* useParams<{ id: string }>();
 
     let blog = yield* useBlog();
@@ -58,6 +58,16 @@ export function* blogRoute(): Operation<JSXHandler> {
         </article>
       </AppHtml>
     );
-  };
+  });
 }
 
+// strip `/` off the end of our blog urls
+function clean<T>(middleware: Middleware<Request, T>): Middleware<Request, T> {
+  return function*(request, next) {
+    if (request.url.endsWith("/")) {
+      return yield* respondRedirect(request.url.replace(/\/$/, ''));
+    } else {
+      return yield* middleware(request, next);
+    }
+  }
+}

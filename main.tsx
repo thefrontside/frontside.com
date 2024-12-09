@@ -15,7 +15,7 @@ import { etagPlugin } from "./plugins/etag.ts";
 import { currentRequestPlugin } from "./plugins/current-request.ts";
 import { twindPlugin } from "./plugins/twind.ts";
 import { config } from "./twind.config.ts";
-import { blogRoute } from "./routes/blog-route.tsx";
+import { blogPostRoute } from "./routes/blog-post-route.tsx";
 import { blogIndexRoute } from "./routes/blog-index-route.tsx";
 
 await main(function* () {
@@ -25,7 +25,7 @@ await main(function* () {
     app: [
       route("/", indexRoute()),
       route("/blog", blogIndexRoute()),
-      route("/blog/:id", yield* blogRoute()),
+      route("/blog/:id", yield* blogPostRoute()),
       route("/blog(.*)", assetsRoute("blog")),
       route("/backstage", backstageServicesRoute()),
       route("/dx-consulting", dxConsultingServicesRoute()),
