@@ -47,7 +47,9 @@ function addFoo() {
   <li>While Opera will honor a dynamically created HEAD element, KHTML will not. (That's a bug in KHTML as far as I'm concerned as it violates the DHTML principle that I've been talking about.)</li>
 </ul>
 
-<p>All in all, they're nothing to worry about and do not stand in the way of the fundamental technique. I've created a <a href="/bitbucket/live-stylesheet.html">demo page</a> showing this code in action. As a nice side effect, it works as quick way of playing around with CSS properties and how they effect the styling of elements.</p>
+<p>All in all, they're nothing to worry about and do not stand in the way of the fundamental technique. I've created a demo page showing this code in action. As a nice side effect, it works as quick way of playing around with CSS properties and how they effect the styling of elements.</p>
+
+> ⚠️ NOTE: The demo site has been lost to posterity
 
 <p>Here is the source snippet implementing the technique I've described here:</p>
 
