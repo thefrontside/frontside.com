@@ -5,9 +5,9 @@ tags:
     - javascript
 ---
 
-<p>In the <a href="http://www.drunkandretired/podcast">Drunk and Retired Podcast</a>, <a href="http://www.drunkandretired.com/2006/07/08/drunkandretiredcom-podcast-episode-59-lightside-v-darkside-plus-learning-javascript-the-language-not-the-javascript-the-browser-scriptus/#comments">episode  59</a> I spoke about learning your way around javascript the language independently from the browser, and how you can use the command line tools that come with the various javascript engines to interactively explore the javascript runtime.</p>
+<p>In the [Drunk and Retired Podcast](http://www.drunkandretired/podcast), [episode 59](http://www.drunkandretired.com/2006/07/08/drunkandretiredcom-podcast-episode-59-lightside-v-darkside-plus-learning-javascript-the-language-not-the-javascript-the-browser-scriptus/#comments) I spoke about learning your way around javascript the language independently from the browser, and how you can use the command line tools that come with the various javascript engines to interactively explore the javascript runtime.</p>
 
-<p>When most folks think about javascript, they think about scripts that they embed into their web pages, but the truth is that it is a general-purpose programming language <em>that has absolutely nothing to do with HTML</em>. In fact, the javascript runtime is so orthogonal to other web browser functionality, that mozilla offers the javascript interpreter that it uses in Firefox and friends as a <a href="http://www.mozilla.org/js/spidermonkey">completely separate download</a>. It's available as both .deb or .rpm package, and just to show it: Here's the wonderful hello world program, as entered into the shell.</p>
+<p>When most folks think about javascript, they think about scripts that they embed into their web pages, but the truth is that it is a general-purpose programming language <em>that has absolutely nothing to do with HTML</em>. In fact, the javascript runtime is so orthogonal to other web browser functionality, that mozilla offers the javascript interpreter that it uses in Firefox and friends as a [completely separate download](http://www.mozilla.org/js/spidermonkey). It's available as both .deb or .rpm package, and just to show it: Here's the wonderful hello world program, as entered into the shell.</p>
 
 ```
 cowboyd@subzero:~$ js
