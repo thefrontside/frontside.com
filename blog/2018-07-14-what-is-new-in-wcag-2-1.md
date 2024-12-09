@@ -1,7 +1,5 @@
 ---
-templateKey: blog-post
 title: 'WCAG 2.1: What does it actually mean?'
-date: 2018-07-14T16:00:00.000Z
 author: Robert DeLuca
 description: >-
   WCAG 2.1 has officially been put in place as a standard but what does that
@@ -15,7 +13,7 @@ cta_text: >-
   Does your team need help complying with WCAG? There's more where this came from! 
   Frontside can help your team implement beautiful and accessible interfaces.
 cta_button: "Lets talk accessibility"
-img: /img/2018-06-14-what-is-new-in-wcag-2-1_wcag-2-1-image.jpg
+image: wcag-2-1-image.jpg
 ---
 
 > Publication as a W3C Recommendation finalizes the development process and indicates that the W3C considers the updated guidelines ready for implementation on web content.
