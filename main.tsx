@@ -24,8 +24,9 @@ await main(function* () {
   let revolution = createRevolution({
     app: [
       route("/", indexRoute()),
-      route("/newblog", blogIndexRoute()),
-      route("/newblog/:id", yield* blogRoute()),
+      route("/blog", blogIndexRoute()),
+      route("/blog/:id", yield* blogRoute()),
+      route("/blog(.*)", assetsRoute("blog")),
       route("/backstage", backstageServicesRoute()),
       route("/dx-consulting", dxConsultingServicesRoute()),
       route("/work/case-studies/resideo", resideoBackstageCaseStudyRoute()),

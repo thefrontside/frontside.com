@@ -8,6 +8,7 @@
     "npm:@types/hast@3": "3.0.4",
     "npm:hast-util-from-html@*": "2.0.3",
     "npm:hast-util-select@*": "6.0.2",
+    "npm:hast-util-select@6.0.1": "6.0.1",
     "npm:hast-util-to-html@*": "9.0.3",
     "npm:hast-util-to-html@9.0.0": "9.0.0",
     "npm:rehype-prism-plus@1.5.1": "1.5.1",
@@ -161,6 +162,9 @@
     },
     "comma-separated-tokens@2.0.3": {
       "integrity": "sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg=="
+    },
+    "css-selector-parser@2.3.2": {
+      "integrity": "sha512-JjnG6/pdLJh3iqipq7kteNVtbIczsU2A1cNxb+VAiniSuNmrB/NI3us4rSCfArvlwRXYly+jZhUUfEoInSH9Qg=="
     },
     "css-selector-parser@3.0.5": {
       "integrity": "sha512-3itoDFbKUNx1eKmVpYMFyqKX04Ww9osZ+dLgrk6GEv6KMVeXUhUnp4I5X+evw+u3ZxVU6RFXSSRxlTeMh8bA+g=="
@@ -352,6 +356,27 @@
         "zwitch"
       ]
     },
+    "hast-util-select@6.0.1": {
+      "integrity": "sha512-KPNOtLqeJCcFRyxQm9BakO3bdIQfremXraw4mh9jxsJ+L593v/VdP3G9Dfjahacl/bw8PPvIFseaXzElKOYRpA==",
+      "dependencies": [
+        "@types/hast@3.0.4",
+        "@types/unist@3.0.3",
+        "bcp-47-match",
+        "comma-separated-tokens",
+        "css-selector-parser@2.3.2",
+        "devlop",
+        "direction",
+        "hast-util-has-property",
+        "hast-util-to-string@3.0.1",
+        "hast-util-whitespace",
+        "not",
+        "nth-check",
+        "property-information",
+        "space-separated-tokens",
+        "unist-util-visit@5.0.0",
+        "zwitch"
+      ]
+    },
     "hast-util-select@6.0.2": {
       "integrity": "sha512-hT/SD/d/Meu+iobvgkffo1QecV8WeKWxwsNMzcTJsKw1cKTQKSR/7ArJeURLNJF9HDjp9nVoORyNNJxrvBye8Q==",
       "dependencies": [
@@ -359,7 +384,7 @@
         "@types/unist@3.0.3",
         "bcp-47-match",
         "comma-separated-tokens",
-        "css-selector-parser",
+        "css-selector-parser@3.0.5",
         "devlop",
         "direction",
         "hast-util-has-property",

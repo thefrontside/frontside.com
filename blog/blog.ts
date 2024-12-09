@@ -3,6 +3,7 @@ import remarkGfm from "npm:remark-gfm@4.0.0";
 import remarkFrontmatter from "npm:remark-frontmatter@5.0.0";
 import remarkMdxFrontmatter from "npm:remark-mdx-frontmatter@5.0.0";
 import rehypePrismPlus from "npm:rehype-prism-plus@1.5.1";
+import { selectAll } from "npm:hast-util-select@6.0.1";
 import { Fragment, jsx, JSXElement, jsxs } from "revolution/jsx-runtime";
 import { call, createContext, Operation } from "effection";
 
@@ -15,6 +16,7 @@ export interface BlogPost {
   id: string;
   title: string;
   description: string;
+  image: string;
   date: Date;
   author: string;
   tags: Array<string>;
@@ -23,6 +25,7 @@ export interface BlogPost {
 
 interface Frontmatter {
   title: string;
+  image: string;
   description: string;
   author: string;
   tags: string[];
@@ -61,7 +64,6 @@ export function* initBlog(): Operation<void> {
     let source = yield* call(() => Deno.readTextFile(location));
     let mod = yield* call(() =>
       evaluate(source, {
-        development: true,
         jsx,
         jsxs,
         jsxDEV: jsx,
@@ -77,11 +79,29 @@ export function* initBlog(): Operation<void> {
       })
     );
 
+    let frontmatter = mod.frontmatter as Frontmatter;
+
     posts.set(id, {
-      ...mod.frontmatter as Frontmatter,
+      ...frontmatter,
+      image: `${id}/${frontmatter.image}`,
       id,
       date,
-      content: () => mod.default({}),
+      content: () => {
+        let element = mod.default() as JSXElement;
+        let elements = selectAll("[href],[src]", element);
+
+        for (let element of elements) {
+          let properties = element.properties!;
+
+          if (properties.href && !properties.href.startsWith("/")) {
+            properties.href = `${id}/${properties.href}`;
+          }
+          if (properties.src) {
+            properties.src = `${id}/${properties.src}`;
+          }
+        }
+        return element;
+      },
     });
   }
 
