@@ -16,7 +16,7 @@ export interface BlogPost {
   id: string;
   title: string;
   description: string;
-  image: string;
+  image: string | undefined;
   date: Date;
   author: string;
   tags: Array<string>;
@@ -83,17 +83,17 @@ export function* initBlog(): Operation<void> {
 
     posts.set(id, {
       ...frontmatter,
-      image: `${id}/${frontmatter.image}`,
+      image: frontmatter.image ? `${id}/${frontmatter.image}` : undefined,
       id,
       date,
       content: () => {
-        let element = mod.default() as JSXElement;
+        let element = mod.default({}) as JSXElement;
         let elements = selectAll("[href],[src]", element);
 
         for (let element of elements) {
           let properties = element.properties!;
 
-          if (properties.href && !properties.href.startsWith("/")) {
+          if (typeof properties.href === 'string' && !properties.href.startsWith("/")) {
             properties.href = `${id}/${properties.href}`;
           }
           if (properties.src) {

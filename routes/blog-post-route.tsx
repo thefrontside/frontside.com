@@ -1,4 +1,10 @@
-import { JSXHandler, Middleware, respondNotFound, respondRedirect, useParams } from "revolution";
+import {
+  JSXHandler,
+  Middleware,
+  respondNotFound,
+  respondRedirect,
+  useParams,
+} from "revolution";
 import { useAppHtml } from "./app.html.tsx";
 import { Operation } from "effection";
 import { initBlog, useBlog } from "../blog/blog.ts";
@@ -13,15 +19,17 @@ export function* blogPostRoute(): Operation<JSXHandler> {
 
     let post = blog.get(id)!;
 
-    if (typeof post === 'undefined') {
+    if (typeof post === "undefined") {
       yield* respondNotFound();
     }
+
+    let image = post.image ? post.image : "/assets/fs-logo-no-text.svg";
 
     let AppHtml = yield* useAppHtml({
       title: post.title,
       description: post.description,
-      ogImage: "/assets/index-meta-home-cloud-native.png",
-      twitterXImage: "/assets/index-meta-home-cloud-native.png",
+      ogImage: image,
+      twitterXImage: image,
       author: post.author,
     });
 
@@ -49,7 +57,7 @@ export function* blogPostRoute(): Operation<JSXHandler> {
                 ))}
               </div>
             </section>
-            <img src={post.image} class="rounded-xl max-w-xl "/>
+            <img src={image} class="rounded-xl w-1/3" />
           </header>
           <section class="mx-auto text-blue-primary prose">
             <link rel="stylesheet" href="/assets/prism-atom-one-dark.css" />
@@ -63,11 +71,11 @@ export function* blogPostRoute(): Operation<JSXHandler> {
 
 // strip `/` off the end of our blog urls
 function clean<T>(middleware: Middleware<Request, T>): Middleware<Request, T> {
-  return function*(request, next) {
+  return function* (request, next) {
     if (request.url.endsWith("/")) {
-      return yield* respondRedirect(request.url.replace(/\/$/, ''));
+      return yield* respondRedirect(request.url.replace(/\/$/, ""));
     } else {
       return yield* middleware(request, next);
     }
-  }
+  };
 }
