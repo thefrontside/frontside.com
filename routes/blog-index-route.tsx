@@ -19,7 +19,7 @@ export function blogIndexRoute() {
         <ol>
           {blog.getPosts().map((post) => (
             <li>
-              <a href={`newblog/${post.id}`}>{post.title}</a>
+              <a href={`/blog/${post.id}`}>{post.title}</a>
             </li>
           ))}
         </ol>
