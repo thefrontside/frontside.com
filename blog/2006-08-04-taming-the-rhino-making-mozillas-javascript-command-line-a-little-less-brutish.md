@@ -57,19 +57,19 @@ Embedding goes two ways. Not only can you instantiate and use java objects from 
 <p><strong>Ugh!</strong> Or what happens if the shell didn't take my last command because it was slightly bogus? I'd like to retrieve the command with the up-arrow, edit it a little bit in-place and then try again because after all, it was only <em>slightly</em> bogus. Watch me try and recover from this minor syntax error...</p>
 
 ```
-    cowboyd@subzero:~$ java -classpath /usr/share/java/js.jar org.mozilla.javascript.tools.shell.Main
-    Rhino 1.5 release 5 2004 03 25
-    js> var f = function() {print("oops I forgot to close these parens"}
-    js: "<stdin>", line 29: missing ) after argument list
-    js: var f = function() {print("oops I forgot to close these parens"}
-    js: ...............................................................^
-    js: "<stdin>", line 29: missing } after function body
-    js: var f = function() {print("oops I forgot to close these parens"}
-    js: ...............................................................^
-    js: "<stdin>", line 29: Compilation produced 2 syntax errors.
-    js>
-    js> //I know. Up-arrow to the rescue!
-    js> ^[[A^[[A^[[A^[[A^[[A^[[A //drat, foiled again!
+cowboyd@subzero:~$ java -classpath /usr/share/java/js.jar org.mozilla.javascript.tools.shell.Main
+Rhino 1.5 release 5 2004 03 25
+js> var f = function() {print("oops I forgot to close these parens"}
+js: "<stdin>", line 29: missing ) after argument list
+js: var f = function() {print("oops I forgot to close these parens"}
+js: ...............................................................^
+js: "<stdin>", line 29: missing } after function body
+js: var f = function() {print("oops I forgot to close these parens"}
+js: ...............................................................^
+js: "<stdin>", line 29: Compilation produced 2 syntax errors.
+js>
+js> //I know. Up-arrow to the rescue!
+js> ^[[A^[[A^[[A^[[A^[[A^[[A //drat, foiled again!
 ```
 
 <p>These problems are in particularly nasty contraposition to the technique of exploration via the shell which I advocate because the the cost for failure is so expensive. Indeed, what is so wonderful about most modern shells is that the cost for a syntax error is so small. For some reason, the implementors of the Rhino CLI decided to implement their shell with the typical functionality circa 1962.</p>
@@ -77,14 +77,14 @@ Embedding goes two ways. Not only can you instantiate and use java objects from 
 <p>It's not a problem for me though, thanks to one of my favorite unsung java libraries, <a href="http://jline.sourceforge.net/">JLine</a>. JLine hits a super sweet spot in that it takes somewhere around 0 effort to add loads of standard functionality to your command line interfaces. It seems that no one in the java world bothers with a decent CLI; tragic in my opinion, but probably because it's considered well-understood, non-trivial and therefore tedious. With JLine, building that CLI comes at around 0 cost. What's really cool about JLine is that a program doesn't even need to be written with it. It can transparently intercept the console input for <em>any</em> java program and seamlessly splice on any and all functionality you'd expect from a hot shell: in-place editing, command history, you name it. In a word: <em>perfect</em> for a beast like Rhino.</p>
 
 ```
-    cowboyd@subzero:~$ java -classpath js.jar:jline.jar  jline.ConsoleRunner org.mozilla.javascript.tools.shell.Main
-    Rhino 1.5 release 5 2004 03 25
-    js> prnt("oops let me try that again")
-    js: "<stdin>", line 1: uncaught JavaScript exception: ReferenceError: "prnt" is not defined. (<stdin>; line 1)
-    js> print("oops let me try that again")
-    oops let me try that again
-    js> //trust me, that was easy. Just like it should have been in the first place.
-    js>
+cowboyd@subzero:~$ java -classpath js.jar:jline.jar  jline.ConsoleRunner org.mozilla.javascript.tools.shell.Main
+Rhino 1.5 release 5 2004 03 25
+js> prnt("oops let me try that again")
+js: "<stdin>", line 1: uncaught JavaScript exception: ReferenceError: "prnt" is not defined. (<stdin>; line 1)
+js> print("oops let me try that again")
+oops let me try that again
+js> //trust me, that was easy. Just like it should have been in the first place.
+js>
 ```
 
 <p>JLine truly is a healing salve for your chafing CLI woes. Did I mention that it's cross-platform?</p>
