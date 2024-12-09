@@ -49,7 +49,10 @@ function addFoo() {
 
 <p>All in all, they're nothing to worry about and do not stand in the way of the fundamental technique. I've created a demo page showing this code in action. As a nice side effect, it works as quick way of playing around with CSS properties and how they effect the styling of elements.</p>
 
-> ⚠️ NOTE: The demo site has been lost to posterity
+> ⚠️ NOTE: The demo site has been lost to posterity, but we can assure you that it was really, really cool.
+> We apologize for any inconvenience this may have caused.
+> 
+>   --The Management
 
 <p>Here is the source snippet implementing the technique I've described here:</p>
 
