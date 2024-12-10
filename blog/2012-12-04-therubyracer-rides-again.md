@@ -1,13 +1,10 @@
 ---
-templateKey: blog-post
 title: The Ruby Racer Rides Again
-date: 2012-12-04T12:00:00.000Z
 author: Charles Lowell
 tags: 
     - javascript
     - ruby
     - therubyracer
-directory_index: false
 ---
 
 ## It began during RailsConf.
@@ -77,10 +74,12 @@ As a fallback, I've decided to throw up my hands and eschew GC histrionics in
 favor of more sane memory management in the C extension combined with an explicit
 teardown mechanism for cases where cycles of garbage do occur. e.g.
 
-    context = V8::Context.new
-    context['cycle'] = context #oh no, a vicious cycle!
+```ruby
+context = V8::Context.new
+context['cycle'] = context #oh no, a vicious cycle!
 
-    context.dispose() # Gordion knot is cleaved, sir!
+context.dispose() # Gordion knot is cleaved, sir!
+```
 
 In exchange, we get a kinder, gentler racer that works on MRI as well as
 Rubinius, and which you'll be able to rely on in your production processes.
