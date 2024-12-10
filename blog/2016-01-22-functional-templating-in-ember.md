@@ -5,7 +5,7 @@ description: "See how easy it is to build a fully formed image upload widget com
 tags: 
   - ember
   - javascript
-img: /img/2016-01-22-functional-templating-in-ember_lisp-all.png
+image: lisp-all.png
 ---
 
 > TL;DR --  Avoid using "magically bound" internal component properties in your templates at all costs. Instead be explicit about only passing values around through actions and block params. This will engender a new level of breeziness to your UI.
@@ -75,7 +75,7 @@ Notice how the `x-file-input` component in our chooser places very little restri
 </style>
 
 <figure alt="picture of data flow from file input to template scope">
-  <img style="background-color: rgb(248,248,248); padding 15px; border 1px solid #ddd;" src="/img/2016-01-22-functional-templating-in-ember_file-chooser-only.svg"/>
+  <img style="background-color: rgb(248,248,248); padding 15px; border 1px solid #ddd;" src="file-chooser-only.svg"/>
   <figcaption>Fig 1: Data flows from file input into template scope</figcaption>
 </figure>
 
@@ -96,7 +96,7 @@ All we do is allow the `file` attribute to flow right into the `object-url` comp
 Again, `object-url` has no markup of its own. Instead, its only job is to yield the model that makes the file preview markup possible. In this case, we bind the `url` value yielded by the `x-object-url` to the `background-image` property of a div and we're done.
 
 <figure alt="file value is converted into a url">
-  <img src="/img/2016-01-22-functional-templating-in-ember_choose-files-with-preview.svg"/>
+  <img src="choose-files-with-preview.svg"/>
   <figcaption>Fig 2: object-url :: Blob -> String</figcaption>
 </figure>
 
@@ -107,7 +107,7 @@ This might seem totally nuts at first, but mostly because we’ve been trained o
 We'll just let the file object flow into an `x-xml-http-request` component just like it did the `x-object-url`
 
 <figure alt="file object flows into x-xml-http-request">
-  <img src="/img/2016-01-22-functional-templating-in-ember_full-demo.svg"/>
+  <img src="full-demo.svg"/>
   <figcaption>Fig 3: x-xml-http-request :: File -> XHR </figcaption>
 </figure>
 
@@ -132,6 +132,11 @@ I’m Charles Lowell ([@cowboyd][9] on twitter), and I build UI for a living at 
 Also, If you'd like to work with our team doing stuff like this, then please [get in touch](mailto:cowboyd@frontside.com). We're hiring.
 
 
+
+<link rel="stylesheet" href="demo/dist/assets/file-upload-demo-90508b2fd97899bf2a671c13f6824821.css"/>
+<link rel="stylesheet" href="demo/dist/assets/vendor-ae400704847c1a4d8b91371e3bb4ad12.css"/>
+<script type="text/javascript" src="demo/dist/assets/vendor-390ead2855ba5f4fc8645ea85c394a56.js"></script>
+<script type="text/javascript" src="demo/dist/assets/file-upload-demo-7b74960a3002f8e0d5b8456f8dd2c526.js"></script>
 
 [1]: https://developer.mozilla.org/en-US/docs/Web/API/FileList
 [2]: https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL
