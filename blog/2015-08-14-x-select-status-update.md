@@ -1,15 +1,11 @@
 ---
-templateKey: blog-post
 title: X-Select Status Update
-date: 2015-08-14T12:00:00.000Z
 author: Robert DeLuca
 tags:
   - oss
   - ember
   - ember-addon
   - x-select
-published: true
-directory_index: false
 ---
 At The Frontside, we love open source, and maintaining OSS projects is a high priority.
 
