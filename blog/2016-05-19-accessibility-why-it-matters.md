@@ -9,7 +9,7 @@ tags:
   - disability
   - gaad
   - ember-a11y
-img: /img/2016-05-19-accessibility-why-it-matters_gaad.jpg
+image: gaad-logo.png
 ---
 
 In honor of [GAAD][1] (Global Accessibility Awareness Day), I interviewed a developer who is active in the accessibility community to gain some insights on the importance of web accessibility.
@@ -20,7 +20,7 @@ Applying for jobs, registering your vehicle, selecting classes for the next scho
 [Accessibility][2] refers to the design of products, devices, services, or environments for people who experience disabilities. Usability affects from the blind and color blind to the deaf and seizure prone. People in developing countries use the internet but may not necessarily know English. A site with poor usability makes it challenging for the elderly and those with motor skills disabilities to use.
 
 <figure alt="Blind students enjoying computer games at Techshare India 2012">
-  <img src="/img/2016-05-19-accessibility-why-it-matters_students.jpg"/>
+  <img src="students.jpg"/>
 </figure>
 ([Image][3]:  Blind students enjoying computer games at Techshare India 2012)
 
@@ -30,7 +30,7 @@ Federal websites must adhere to Section [508][4] which is a law that states Gove
 And it's unfortunate. You'd think that with the current tech boom more developers and startups would pay attention to accessibility. The fact of the matter is, unless you have a disability or are directly affected by a family member with one, chances are you've never given it much thought. Even I didn't learn about web accessibility while I was studying web development.
 
 <figure alt="Google Trends graph of web accessibility and guidelines over time, captured May 16, 2012">
-  <img src="/img/2016-05-19-accessibility-why-it-matters_accessibility-chart.png"/>
+  <img src="accessibility-chart.png"/>
 </figure>
 ([Image][6]: Google Trends graph of web accessibility and guidelines over time, captured May 16, 2016)
 
