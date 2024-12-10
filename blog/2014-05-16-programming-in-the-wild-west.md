@@ -5,7 +5,7 @@ tags:
   - community
   - javascript
   - tdd
-img: /img/2014-05-16-programming-in-the-wild-west-1.png
+image: thumbnail.png
 ---
 
 Much like revisiting a neighborhood from my youth, when I reflect on my scant few years in software I'm astonished at how much has changed.
@@ -20,7 +20,7 @@ Studies are revealing that during complex tasks, each of us switches between **"
 
 Sarah Mei spoke about this last year at LoneStarRuby, and compared the TDD cycle to moving between these modes. *(Starting at 12:20)*
 
-<iframe width="640" height="390" src="//www.youtube.com/embed/P4RA7NYyG24" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="390" src="https://www.youtube.com/embed/P4RA7NYyG24" frameborder="0" allowfullscreen></iframe>
 
 The general idea is that at different times, **people are better at thinking about the big picture, or zooming in on the details, but not both simultaneously.**
 
@@ -28,7 +28,7 @@ This sounds like a simple concept, even obvious, but we ignore it so much that w
 
 ### Test-first and open & closed modes
 
-![The TDD cycle](/img/experiment-1.png)
+![The TDD cycle](experiment-1.png)
 
 First, I should clarify that this is representative of how I've learned to define and practice test-first development, and others may have different definitions or methods.
 
@@ -50,13 +50,13 @@ Software communities, unsurprisingly, behave much like the humans who comprise t
 
 Yehuda Katz gave a landmark talk at RailsConf, inspiring this post in the first place. He talks about when it's time to move from *experimentation* mode to *shared solutions* mode in your community. *(Starting at 13:25)*
 
-<iframe width="640" height="390" src="//www.youtube.com/embed/9naDS3r4MbY" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="390" src="https://www.youtube.com/embed/9naDS3r4MbY" frameborder="0" allowfullscreen></iframe>
 
 The talk covers several topics, but the main point to me was that software communities have trouble toggling between experimentation ("open") mode and shared solutions ("closed") mode.
 
 To me, this looks a lot like the test-first cycle above:
 
-![The community cycle](/img/experiment-2.png)
+![The community cycle](experiment-2.png)
 
 **Early in a community's maturity, it may be time for a bazaar of different solutions** while everyone is simply learning the right questions to ask. What does an authentication solution look like? What about persistence? Security? Code sharing? Scalability? Deployment?
 
@@ -74,7 +74,7 @@ The good news is that after agreeing on a solution, even if it's a sub-optimal, 
 
 ### Platforms and scaffolding
 
-![Platforms and scaffolding](/img/experiment-3.png)
+![Platforms and scaffolding](experiment-3.png)
 
 Each new layer adds a level of abstraction, so **you need to have confidence in the layers beneath you.** In software projects, this confidence comes from good tests. In communities, the confidence tends to come from seeing a project in broad use.
 
@@ -140,7 +140,7 @@ You then have a natural break into closed-mode, solution-oriented work, and back
 
 Let's look again at the circular diagrams above. From that perspective, they look positively Sisyphean and don't tell the whole story. In reality, they are the means by which these towering platforms are built, but you have to view the circle from a third dimension to see it:
 
-![The TDD cycle, from the side](/img/experiment-4.png)
+![The TDD cycle, from the side](experiment-4.png)
 
 With good tests, every trip around the loop provides more capabilities on top of a trustworthy codebase. You can keep building without fear of your codebase collapsing under the weight of its own complexity.
 
