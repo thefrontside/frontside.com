@@ -1,15 +1,11 @@
 ---
-templateKey: blog-post
 title: The Insider Track
-date: 2016-03-18T12:00:00.000Z
 author: Lydia Guarino
 description: "A guide to using kindness to elevate your conference experience."
 tags: 
   - conferences
   - community
-img: /img/2016-03-18-the-insider-track_fridayhugsquare.jpg
-published: true
-directory_index: false
+image: fridayhugsquare.jpg
 ---
 
 A guide to using kindness to elevate your conference experience.
