@@ -5,7 +5,7 @@ tags:
   - jenkins
   - ruby
   - java
-img: /img/2012-01-16-implementing-a-jenkins-extension-point-with-native-api-in-ruby-1.png
+image: jenkins-ruby.png
 ---
 
 > In which I elaborate why the idomatic Ruby API is sometimes not enough,
@@ -58,9 +58,9 @@ First, let's create a new plugin called _my-listener_. We'll do this
 with the `jpi new` command.
 
 ```ruby
-    legolas:Jenkins cowboyd$ jpi new my-listener
-        create  my-listener/Gemfile
-        create  my-listener/my-listener.pluginspec
+legolas:Jenkins cowboyd$ jpi new my-listener
+create  my-listener/Gemfile
+create  my-listener/my-listener.pluginspec
 ```
 
 > Fun fact: 'jpi' is an acronym for (J)enkins (P)lug-(I)n. You can
@@ -71,20 +71,20 @@ inside the models/ directory. Jenkins will automatically evaluate
 everything in this directory on plugin initialization.
 
 ```ruby
-    legolas:Jenkins cowboyd$ cd my-listener/
-    legolas:my-listener cowboyd$ mkdir models
-    legolas:my-listener cowboyd$ touch models/my_listener.rb
+legolas:Jenkins cowboyd$ cd my-listener/
+legolas:my-listener cowboyd$ mkdir models
+legolas:my-listener cowboyd$ touch models/my_listener.rb
 ```
 
 Our ultimate goal here is to implement a `RunListener`, so let's
 go ahead and start our class definition inside that file.
 
 ```ruby
-    class MyListener < Java.hudson.model.listeners.RunListener
-      def initialize()
-        super(Java.hudson.model.Run.java_class)
-      end
-    end
+class MyListener < Java.hudson.model.listeners.RunListener
+  def initialize()
+    super(Java.hudson.model.Run.java_class)
+  end
+end
 ```
 
 There's a couple key takeaways here. First, notice that we use
@@ -132,16 +132,16 @@ And that's about it. We can start up our test server with our `jpi`
 tool to see our listener in action.
 
 ```
-    legolas:my-listener cowboyd$ jpi server
-    Listening for transport dt_socket at address: 8000
-    Running from: /Users/cowboyd/.rvm/gems/jruby-1.6.5/gems/jenkins-war-1.446/lib/jenkins/jenkins.war
-    ...
-    Jan 16, 2012 12:46:15 AM ruby.RubyRuntimePlugin start
-    INFO: Injecting JRuby into XStream
-    Loading /Users/cowboyd/Projects/Jenkins/my-listener/models/my_listener.rb
-    INFO: Prepared all plugins
-    ...
-    INFO: Jenkins is fully up and running
+legolas:my-listener cowboyd$ jpi server
+Listening for transport dt_socket at address: 8000
+Running from: /Users/cowboyd/.rvm/gems/jruby-1.6.5/gems/jenkins-war-1.446/lib/jenkins/jenkins.war
+...
+Jan 16, 2012 12:46:15 AM ruby.RubyRuntimePlugin start
+INFO: Injecting JRuby into XStream
+Loading /Users/cowboyd/Projects/Jenkins/my-listener/models/my_listener.rb
+INFO: Prepared all plugins
+...
+INFO: Jenkins is fully up and running
 ```
 
 To view the output, create a freestyle build called HelloWorld that
@@ -149,10 +149,10 @@ doesn't have any build steps at all, build it and view the console
 output. You should see something like this:
 
 ```
-    Started by user anonymous
-    onStarted(#<Java::HudsonModel::FreeStyleBuild:0x2870068a>)
-    onCompleted(#<Java::HudsonModel::FreeStyleBuild:0x2870068a>)
-    Finished: SUCCESS
+Started by user anonymous
+onStarted(#<Java::HudsonModel::FreeStyleBuild:0x2870068a>)
+onCompleted(#<Java::HudsonModel::FreeStyleBuild:0x2870068a>)
+Finished: SUCCESS
 ```
 
 ## The Sweet Reality
