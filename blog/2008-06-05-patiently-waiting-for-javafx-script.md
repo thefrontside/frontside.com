@@ -1,12 +1,9 @@
 ---
-templateKey: blog-post
 title: Patiently waiting for JavaFX
-date: 2008-06-05T12:00:00.000Z
 author: Charles Lowell
 tags: 
   - java
   - jafafx
-directory_index: false
 ---
 
 About a year ago, SUN announced a "new" platform for developing embeddable applications on the web, and they called this platform JavaFX. In reality, this new platform seems to me less of an innovation and more of a rehabilitation of the applet infrastructure which they allowed to languish over the last decade.
