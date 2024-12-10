@@ -93,13 +93,18 @@ export function* initBlog(): Operation<void> {
         for (let element of elements) {
           let properties = element.properties!;
 
-          if (typeof properties.href === 'string' && !properties.href.startsWith("/")) {
-	    if (!properties.href.match(/^\w+:\/\//)) {
-              properties.href = `${id}/${properties.href}`;	      
-	    }
+          if (
+            typeof properties.href === "string" &&
+            !properties.href.startsWith("/")
+          ) {
+            if (!properties.href.match(/^\w+:/)) {
+              properties.href = `${id}/${properties.href}`;
+            }
           }
-          if (properties.src) {
-            properties.src = `${id}/${properties.src}`;
+          if (typeof properties.src === "string") {
+            if (!properties.src.match(/^\w+:/)) {
+              properties.src = `${id}/${properties.src}`;
+            }
           }
         }
         return element;
