@@ -1,7 +1,5 @@
 ---
-templateKey: blog-post
 title: Quickly Build Component Libraries with Storybook
-date: 2017-12-29T23:00:00.000Z
 author: Jeffrey Cherewaty
 description: >-
   Design systems have become an effective way to maintain consistency and
@@ -12,7 +10,7 @@ tags:
   - component library
   - style guide
   - storybook
-img: /img/2017-12-29-quickly-build-component-libraries-with-storybook_storybook.jpg
+image: storybook.jpg
 ---
 
 As long as humans have been building things, we've tried to break up the work. When we can carve out smaller tasks, we can share the work among more people and focus on the quality of each little piece.
@@ -29,7 +27,7 @@ At Frontside, we're frequently working on brand-new projects instead, so we push
 ## Writing Stories
 With Storybook, developers create "stories" that illustrate and describe different versions of each component. In practice, it feels a lot like writing tests: what are all the possible iterations of this component? Because it aligns with test-driven development philosophy, Storybook makes a great base for adding visual regression testing.
 
-```
+```javascript
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Checkbox from './Checkbox';
@@ -52,7 +50,7 @@ Storybook's addon architecture is where the benefits of having an open-source pr
 ### README addon
 The codebase we're working with already had great documentation for many of its components. With [`storybook-readme`](https://github.com/tuchk4/storybook-readme), just a couple lines of configuration had each component's README appear in the Storybook environment
 
-```
+```javascript
 import Readme from './README.md';
 
 storiesOf('Checkbox', module)
@@ -62,7 +60,7 @@ storiesOf('Checkbox', module)
 ### Add a knob
 Another useful Storybook addon: [`storybook-knobs`](https://github.com/storybooks/storybook/tree/master/addons/knobs). Component props can be edited within the Storybook UI.
 
-```
+```javascript
 import { withKnobs, text } from '@storybook/addon-knobs';
 
 storiesOf('Checkbox', module)
@@ -79,7 +77,7 @@ storiesOf('Checkbox', module)
 ### Add an action
 [`storybook-actions`](https://github.com/storybooks/storybook/tree/master/addons/actions) help drive component action development. Component actions get stubs that show up in the Storybook UI.
 
-```
+```javascript
 import { action } from '@storybook/addon-actions';
 
 storiesOf('Checkbox', module)
