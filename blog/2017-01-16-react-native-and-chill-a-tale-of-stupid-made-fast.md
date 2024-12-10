@@ -1,14 +1,11 @@
 ---
-templateKey: blog-post
 title: "React Native and Chill: A tale of stupid made fast"
-date: 2017-01-16T12:00:00.000Z
 author: "Charles Lowell"
 tags: 
     - react native
     - react
     - tvOS
-img: /img/2017-01-16-react-native-and-chill-a-tale-of-stupid-made-fast_monkey.png
-published: true
+image: monkey.gif
 ---
 
 The instant she told me, I knew with the feeling of faith that it was
@@ -42,7 +39,6 @@ abundance of stupid things to do in the universe).
 For me it happened the very next day.
 
 # A dumb idea
-
 
 As a statement of fact rather than complaint, the end of
 2016 and the beginning of 2017 has been a preternaturally stressful
