@@ -1,7 +1,5 @@
 ---
-templateKey: blog-post
 title: Connecting a Slack Channel to Gitter
-date: 2018-04-30T14:00:00.000Z
 author: Robert DeLuca
 description: >-
   Slack communities for open source projects have become very popular over the
@@ -14,7 +12,7 @@ tags:
   - collaboration
   - slack
   - gitter
-img: /img/2018/03/30/connecting-a-slack-channel-to-gitter/sameroom-gitter-slack-blog.jpg
+image: sameroom-gitter-slack-blog.jpg
 ---
 
 Slack communities for open source projects have become very popular
