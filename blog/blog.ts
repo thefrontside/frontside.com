@@ -94,7 +94,9 @@ export function* initBlog(): Operation<void> {
           let properties = element.properties!;
 
           if (typeof properties.href === 'string' && !properties.href.startsWith("/")) {
-            properties.href = `${id}/${properties.href}`;
+	    if (!properties.href.match(/^\w+:\/\//)) {
+              properties.href = `${id}/${properties.href}`;	      
+	    }
           }
           if (properties.src) {
             properties.src = `${id}/${properties.src}`;
