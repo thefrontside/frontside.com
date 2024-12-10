@@ -1,13 +1,10 @@
 ---
-templateKey: blog-post
 title: What it takes to bring Ruby to Jenkins
-date: 2011-05-12T12:00:00.000Z
 author: Charles Lowell
 tags: 
   - java
   - ruby
   - jenkins
-directory_index: false
 ---
 
 "Jenkins Ruby Plugins" are at an important, yet fragile stage of their life. Over the past several months, we have made
