@@ -1,7 +1,5 @@
 ---
-templateKey: blog-post
 title: How Healthy Is Your Build? 
-date: 2017-08-04T12:00:00.000Z
 author: Joe LaSala, Ginger Whalen, Elrick Ryan
 description: "Staying healthy is a lot of work.  Maybe you hit the treadmill before going into the office, and then on the way home you pick up some organic groceries.  But be honest, you probably don't.  Thankfully, maintaining your web application's build health is much easier, and the rewards can be huge!  Take a few minutes to check your build health today: you might regret it if you don't."
 tags: 
@@ -12,9 +10,7 @@ tags:
   - cd
   - build
   - test
-img: /img/2017-08-04-the-importance-of-build-health_creative-commons-heart.png
-directory_index: false
-published: true
+image: creative-commons-heart.png
 ---
 
 When’s the last time you went in for a checkup with your family doctor?  Do you know what your cholesterol level is?  Your blood pressure?  It’s unfortunate that many people can’t answer those questions quickly and honestly.  It usually takes a health scare to prompt people towards that dreaded waiting room with the stale air and old magazines.
