@@ -1,15 +1,11 @@
 ---
-templateKey: blog-post
 title: Ember and the future of the web
-date: 2014-02-24T12:00:00.000Z
 author: Brandon Hays
 tags: 
   - ember
   - platforms
   - prognostication
-img: /img/2014-02-24-ember-and-the-future-of-the-web-peabody.jpg
-published: true
-directory_index: false
+image: peabody.jpg
 ---
 
 If you know me, you know it's easy to get me talking about [Ember.js](http://emberjs.com). A year ago, I was deeply skeptical of developing client-side applications. Now, after spending a year shipping production applications in Ember, I believe that client-side apps represent the same generational leap that database-backed apps with Rails offered circa 2006.
@@ -36,7 +32,7 @@ initSelect2($("#tags"));
 
 But what's actually happening here is not simple (and has [security implications](http://homakov.blogspot.com/2013/05/do-not-use-rjs-like-techniques.html) that bear keeping in mind):
 
-[![](/img/rjs-flow.png)](http://homakov.blogspot.com/2013/05/do-not-use-rjs-like-techniques.html)
+[![](rjs-flow.png)](http://homakov.blogspot.com/2013/05/do-not-use-rjs-like-techniques.html)
 *(Credit: [Egor Homakov's blog](http://homakov.blogspot.com))*
 
 And that's a greatly simplified example. The fact is that if you're building stateful client-side interactions, you're already managing a lot of JavaScript, but your code is probably scattered across jQuery plugins, server-side rendered JavaScript, and custom JS in your assets.
@@ -65,7 +61,7 @@ I never realized how much of my thinking was shaped by the limitations of the to
 
 Let's look at the original Rails app, Basecamp:
 
-![Basecamp](/img/basecamp-marked-up.png)
+![Basecamp](basecamp-marked-up.png)
 
 Yes, the screenshot is outdated. This is not meant as a knock against Basecamp, which has been since rewritten, but rather an example of how most of us write our Rails apps. **Server-side MVC frameworks lay a yellow brick road right to that interface.** It's certainly representative of the majority of *my* vanilla Rails applications.
 
@@ -73,7 +69,7 @@ A few months ago, we started using the chat service Slack. I feel comfortable sa
 
 See if you can spot a direct mapping to database rows in Slack:
 
-![Slack](/img/slack-marked-up.png)
+![Slack](slack-marked-up.png)
 
 I sure couldn't pin it down. In fact, after downloading the standalone Slack app for OS X, I was sure that it was a native app until I right-clicked and saw "inspect element" in the menu. It's not an Ember app, but I can easily see how it would be done.
 
@@ -217,4 +213,4 @@ And if you're going to do something, why not do something awesome?
 
 Ember may not be for every problem or every developer, but if you'll give it a shot on your next project with high front-end ambitions, I promise you'll start feeling less intimidated and more like this:
 
-![](/img/challenge-accepted-l.png)
+![](challenge-accepted-l.png)
