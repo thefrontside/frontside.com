@@ -1,17 +1,14 @@
 ---
-templateKey: blog-post
 title: "RYE: Repeat Yourself Enough"
-date: 2009-06-29T12:00:00.000Z
 author: Charles Lowell
 tags: 
   - proskillz
-directory_index: false
 ---
 
 
 Lately, I've been practicing the exact opposite of the DRY principle. Yup, you read that right:  I repeat myself constantly, and in as many different contexts... including code, database schemas, test-plans and even documentation. The reason: So I won't have to repeat myself. It's not that I don't buy into the DRY principle, or that I'm somehow skeptical about the value its proper application yields. I just find it difficult to achieve in practice.
 
-According to the <a href="pragmaticprogrammer.com">Pragmatic Programmers</a> who coined the term:
+According to the <a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition">Pragmatic Programmers</a> who coined the term:
 
 DRY says that every piece of system knowledge should have one authoritative, unambiguous representation. Every piece of knowledge in the development of something should have a single representation. A system's knowledge is far broader than just its code. It refers to database schemas, test plans, the build system, even documentation.
 
