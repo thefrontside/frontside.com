@@ -7,7 +7,7 @@ tags:
   - clojure
   - macros
   - decorators
-img: /img/2017-06-01-one-helpful-way-to-think-about-javascript-decorators_russian-dolls.jpg
+image: russian-dolls.jpg
 ---
 
 Why Decorators?
@@ -112,7 +112,7 @@ means that there needs to be a
 so that any of the multiple engines can be sure to get it right.
 
 <figure class="figure" alt="a picture of the twenty seven line specification of function syntax in BNF format on the Ecma website">
-  <img class="figure-img img-fluid" src="/img/2017-06-01-one-helpful-way-to-think-about-javascript-decorators_function-syntax.png"/>
+  <img class="figure-img img-fluid" src="function-syntax.png"/>
   <figcaption class="figure-caption"> <em><strong>Figure 1:</strong> Put this in your C++ and smoke it</em></figcaption>
 </figure>
 
@@ -135,7 +135,7 @@ defn :: Code -> Code
 The second thing that makes a macro function special is that it doesn't run when the rest of your program does; it runs when your program is being compiled. When the compiler encounters a macro, it calls it, and then replaces the macro with the code that got returned.
 
 <figure class="figure" alt="the arguments to a macro function are the unevaluated source code">
-  <img class="figure-img img-fluid" src="/img/2017-06-01-one-helpful-way-to-think-about-javascript-decorators_defn-arguments.png"/>
+  <img class="figure-img img-fluid" src="defn-arguments.png"/>
   <figcaption class="figure-caption"> <em><strong>Figure 2:</strong> The arguments to a macro function are unevaluated source code</em></figcaption>
 </figure>
 
@@ -153,7 +153,7 @@ with
 
 <figure class="figure" alt="defn consumes its arguments and returns
   new source code containing those arguments">
-  <img class="figure-img img-fluid" src="/img/2017-06-01-one-helpful-way-to-think-about-javascript-decorators_defn-mapping.png"/>
+  <img class="figure-img img-fluid" src="defn-mapping.png"/>
   <figcaption class="figure-caption"> <em><strong>Figure 3:</strong>
   The defn macro takes code as arguments and returns more code</em></figcaption>
 </figure>
@@ -327,7 +327,7 @@ new set of semantics.
 In a way, by including decorators and allowing them to stand in for
 many of the use-cases where a new syntax might otherwise be desirable,
 the ECMAScript specification is firing itself from its primary
-responsibility of evolving the core language. What previously might
+responsibility of evolving the core langugage. What previously might
 have taken months or years, can now be done in a matter of minutes or
 hours; a huge roadblock gone that has historically stood in the way of progress.
 
