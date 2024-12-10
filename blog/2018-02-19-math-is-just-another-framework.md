@@ -1,7 +1,5 @@
 ---
-templateKey: blog-post
 title: Math is Just Another Framework
-date: 2018-02-19T13:00:00.000Z
 author: Charles Lowell
 description: >-
   Functional programming with typeclasses rooted in category theory may seem
@@ -12,7 +10,7 @@ tags:
   - functional programming
   - typeclasses
   - convention over configuration
-img: /img/2018-02-19-math-is-just-another-framework_graphs.jpg
+image: graphs.jpg
 ---
 
 <p>Monads. Amirite?</p>
@@ -177,10 +175,6 @@ part is that it's a framework that's 100% portable across
 runtimes. Whether you're using JavaScript, Ruby or Python it "just
 works" every time.
 
-If you do happen, however, to be working in JavaScript, you're in
-luck. I wrote a library just for you called [funcadelic.js][3] that
-brings the magic of typeclasses into the reality of everyday JavaScript
-development.
 
 Because Functor is just the beginning. Like a programmer
 learning Ruby on Rails can start with `Controller` first, and then
