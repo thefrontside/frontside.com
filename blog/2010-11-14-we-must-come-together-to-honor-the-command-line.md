@@ -1,11 +1,8 @@
 ---
-templateKey: blog-post
 title: We must come together to honor the command line
-date: 2010-11-14T12:00:00.000Z
 author: Charles Lowell
 tags: 
   - ruby
-directory_index: false
 ---
 
 I reap no joy from writing command line interfaces in Ruby, and about 5 minutes before leaving RubyConf this year I realized that I am not alone.
