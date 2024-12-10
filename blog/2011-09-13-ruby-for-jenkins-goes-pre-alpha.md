@@ -1,12 +1,9 @@
 ---
-templateKey: blog-post
 title: Ruby for Jenkins Goes Pre-Alpha
-date: 2011-09-13T12:00:00.000Z
 author: Charles Lowell
 tags: 
   - java
   - ruby
-directory_index: false
 ---
 
 
@@ -32,4 +29,4 @@ It's 8:20am, but it still feels like Miller time.
 
 [1]: http://wiki.jenkins-ci.org/display/JENKINS/Jenkins+plugin+development+in+Ruby  "Jenkins Ruby Hacking"
 [2]: https://github.com/cowboyd/jenkins-prototype-ruby-plugin "Prototype Ruby Plugin"
-[3]: /2011/05/12/what-it-take-to-bring-ruby-to-jenkins "What it takes to bring Ruby to Jenkins"
+[3]: ../2011-05-12-what-it-take-to-bring-ruby-to-jenkins "What it takes to bring Ruby to Jenkins"
