@@ -1,7 +1,5 @@
 ---
-templateKey: blog-post
 title: Build a Family Tree maker using React Hooks and Microstates
-date: 2018-11-06T05:00:00.000Z
 author: Taras Mankovski
 description: >-
   If you use React, you probably know about the React Hooks RFC that was
@@ -14,9 +12,9 @@ tags:
   - javascript
   - microstates
   - react
-img: /img/2018-06-14-what-is-new-in-wcag-2-1_wcag-2-1-image.jpg
+image: social.jpg
 ---
-![Demo of Family Builder Component](/img/2018-11-06-build-a-family-tree-maker-using-react-hooks-and-microstates_family-builder.gif)
+![Demo of Family Builder Component](builder.gif)
 
 In this tutorial, we will create a Family Tree marker component using React Hooks and Microstates. The Family Tree maker will allow the user to enter their name, then their parent’s names, their parent’s parent’s names and their parent’s parent’s parent’s names, as far back as they can remember.
 
@@ -48,7 +46,7 @@ You should be able to start the server using `npm start` and see the React logo 
 
 ## Build recursive Family Tree builder component
 
-![Demo of Family Builder Component](/img/2018-11-06-build-a-family-tree-maker-using-react-hooks-and-microstates_family-builder.gif)
+![Demo of Family Builder Component](builder.gif)
 
 Our component will allow the user to enter their name. When the name is entered, they’ll see an input field to enter names of their mother and father. When a parent’s name is entered, we’ll show input fields for parent’s parents. This will work recursively as deeply as the user has patience to enter.
 
@@ -180,7 +178,7 @@ It’s not unusual for performance improvements to be left until the end of the 
 
 The key to optimizing React rendering is to ensure that only components that changed get re-rendered. React Devtools has a feature called “Highlight Updates” that makes it easy to see which components get re-rendered when you interact with the application.
 
-![Demo of Family Builder Component before optimization](/img/2018-11-06-build-a-family-tree-maker-using-react-hooks-and-microstates_family-builder-unoptimized.gif)
+![Demo of Family Builder Component before optimization](unoptimized.gif)
 
 When “Highlight Updates” is turned on, the DevTools will highlight areas of the component tree that are being updated. If you look at the example above, you can see that every keystroke causes every component to re-render. This is a lot of unnecessary re-renders.
 
@@ -217,7 +215,7 @@ function FamilyTree({ person }) {
 
 After we make this change, we can check the result and see if we made an improvement. Now when you edit an input field, it’s only changing components above the component that you edited because their microstates were changed.
 
-![Demo of Family Builder Components after optimizations](/img/2018-11-06-build-a-family-tree-maker-using-react-hooks-and-microstates_family-builder-optimized.gif)
+![Demo of Family Builder Components after optimizations](optimized.gif)
 
 It’s worth noting that we only change the input in one component but all of the parent components are marked as changing. This is because when a nested microstate changes, the parents of that microstate have to be re-created as per rules of immutability.
 
