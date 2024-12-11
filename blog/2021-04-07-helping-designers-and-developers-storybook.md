@@ -1,15 +1,13 @@
 ---
-templateKey: blog-post
 title: >-
   Unleashing the Genie: Helping both designers and developers with Storybook
-date: 2021-04-07T05:00:00.000Z
 author: Varya Stepanova
 description: >-
   Good documentation is key to design systems. However, what "good" means varies according to the reader. This article will go through tips to generate documentations for designers and developers from a single Storybook—keep everyone happy with minimum effort!
 tags:
   - design-systems
   - dx
-img: /img/2021-helping-designers-and-developers-storybook.png
+image: helping-designers-and-developers-storybook.png
 ---
 
 
@@ -65,7 +63,7 @@ export const Palette = () => {
 
 We can extend this idea to document helper classes that assign specific text colors, background colors, margins, padding, and borders. These kinds of classes are typically used for fast prototyping. Helper classes are handy for making quick changes and variations like these:
 
-![Screenshot of texts with classes applied on a story](/img/2021-helping-designers-and-developers-storybook/text-classes.png)
+![Screenshot of texts with classes applied on a story](text-classes.png)
 
 Classes are not stored in a hash, but we can iterate through CSS classes directly just as we did for the colors. 
 
@@ -104,7 +102,7 @@ But here’s where things can get messy. Let’s take a closer look at the examp
 
 When we’re confronted with such a situation, bringing in some interactivity to our story can help. To make the list of icons more useful, you can implement a component that generates all of the icons from the codebase but offers filters to show only those that are interesting for the user, depending on type, size, and even name:
 
-![Screenshot of story with generated icons](/img/2021-helping-designers-and-developers-storybook/generated-icons.png)
+![Screenshot of story with generated icons](generated-icons.png)
 
 As you can see in the screenshot above, generating the icons from the codebase has another feature (or challenge): the names are written as they are in the codebase, like `<IconEmailFilled />`. For developers, this is great because that’s exactly what they want to know. However, designers may find such names quite confusing, especially if your designers are consuming your stories through a tool like [ZeroHeight](https://zeroheight.com/). Is there a way we can summon Aladdin’s genie from the lamp and have him grant us a wish to solve this conundrum? 
 
@@ -118,7 +116,7 @@ However, not every component needs separate stories for designers and developers
 
 Let’s go back to that list of all icons where the names were equal to the corresponding React components and therefore served the needs of developers. For designers, I coded a second story. Instead of showing the react component name, it displayed the icon’s name from the component’s meta data. Since I coded the icons story to be generic enough, I didn't have to make any copy-paste to create two stories. Instead, I only need to reuse the story and tell it which kind of name to use by passing in a parameter. The designers’ story would look like this:
 
-![Screenshot of story with generated icons with designer names](/img/2021-helping-designers-and-developers-storybook/generated-icons-designer.png)
+![Screenshot of story with generated icons with designer names](generated-icons-designer.png)
 
 It is possible to keep pushing towards a more refined experience for our readers depending on how they consume Storybook. For example, in a project I lead, developers used a special UI to keep documentation on sight on a side screen while they coded. In that case, a different background and a thicker stroke around stories came a long way to provide a nicer UX for them. However, those styles would look odd for designers who only consumed Storybook through a regular web view.
 

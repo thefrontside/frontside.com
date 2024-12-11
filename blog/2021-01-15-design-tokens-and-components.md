@@ -1,15 +1,13 @@
 ---
-templateKey: blog-post
 title: >-
   The context dilemma: design tokens and components 
-date: 2021-01-15T05:00:00.000Z
 author: Varya Stepanova
 description: >-
   Design tokens are used to keep a consistent look across an entire system. How do you name them semantically if they have to make sense everywhere but also respond to the inner logic of individual components which are independently developed? 
 tags:
   - design-systems
   - dx
-img: /img/2021-design-tokens/design-tokens-header.png
+image: design-tokens-header.png
 ---
 
 Design systems are growing in popularity as organizations realize how greatly they empower their various teams to create accessible on-brand web and mobile apps while avoiding duplicated work. However, they often encounter conflicts when mapping established style architecture patterns onto the new abstractions inherent in a design system. In this article I want to talk about a common problem: context and naming around shared variables.
@@ -33,15 +31,15 @@ $dt-lines: #404041;
 
 When building components, we could use these tokens to define colors for the component elements. In the case of a checkbox, the chosen names work very well.
 
-![Diagram showing how $dt-disabled is assigned as color to a disabled checkbox color](/img/2021-design-tokens/tokens-checks@1.5x.png)
+![Diagram showing how $dt-disabled is assigned as color to a disabled checkbox color](tokens-checks@1.5x.png)
 
 For a component of similar semantic meaning, we can use the same names. You can see below how the design tokens translate to the scope of a radio button:
 
-![Diagram showing how $dt-disabled is assigned as color to a disabled radio color](/img/2021-design-tokens/tokens-radios@1.5x.png)
+![Diagram showing how $dt-disabled is assigned as color to a disabled radio color](tokens-radios@1.5x.png)
 
 However, when it comes to a different component, the same names may not reflect the purpose of the color even though the color palette stays the same. Let's have a closer look at a hypothetical progress bar where we re-use the colors we had available:
 
-![Diagram showing how $dt-disabled is assigned as color to the empty space of a progress bar because for aesthetic purposes](/img/2021-design-tokens/tokens-bar@1.5x.png)
+![Diagram showing how $dt-disabled is assigned as color to the empty space of a progress bar because for aesthetic purposes](tokens-bar@1.5x.png)
 
 The "primary" color works well for the progress content color. But the label text uses "lines" and the bar’s background is “disabled." These names are confusing and make the component styles fragile. We’d be in trouble if, say in a later iteration, the color of the lines is changed to a very light gray, making the progress bar label hard to read as an unintended side-effect.
 
@@ -83,11 +81,11 @@ $dt-form__background--disabled: $ds-color__neutral--400;
 
 Using the middle layer approach we employ these variables in the checkbox component instead of referencing the universal design tokens directly:
 
-![Diagram showing how $dt-form__background--disabled is assigned as color to a disabled radio color](/img/2021-design-tokens/middle-checks@1.5x.png)
+![Diagram showing how $dt-form__background--disabled is assigned as color to a disabled radio color](middle-checks@1.5x.png)
 
 And because radio buttons and check buttons share the same semantics for colors, we can reuse those names for both components:
 
-![Diagram showing how $dt-form__background--disabled is assigned as color to a disabled radio color](/img/2021-design-tokens/middle-radios@1.5x.png)
+![Diagram showing how $dt-form__background--disabled is assigned as color to a disabled radio color](middle-radios@1.5x.png)
 
 Best of all, we don't have the problem of conflicting names for the progress bar. Instead, we can define a local design tokens that make sense for the different elements of the component while still using the overall colors:
 
@@ -96,7 +94,7 @@ $dt-progressbar__background: $ds-color__neutral--400;
 $dt-progressbar__content: $dt-color__primary;
 $dt-progressbar__text: $ds-color__neutral—700;
 ```
-![Diagram showing how $dt-progressbar__background is assigned as color to the empty space of a progress bar](/img/2021-design-tokens/middle-bar@1.5x.png)
+![Diagram showing how $dt-progressbar__background is assigned as color to the empty space of a progress bar](middle-bar@1.5x.png)
 
 ## A naming old-friend: BEM
 
@@ -198,28 +196,28 @@ Re-assigning design tokens to per-component variables makes it possible to defin
   <h2>Related article:</h2>
   <div class="posts-list-entry">
     <h3 class="posts-list-title">
-      <a href="/blog/2021-04-07-helping-designers-and-developers-storybook/">
+      <a href="../2021-04-07-helping-designers-and-developers-storybook/">
         Unleashing the Genie: Helping both designers and developers with Storybook
       </a>
     </h3>
     <p>
       Good documentation is key to design systems. However, what "good" means varies according to the reader. This article will go through tips to generate documentations for designers and developers from a single Storybook—keep everyone happy with minimum effort!
     </p>
-    <a href="/blog/2021-04-07-helping-designers-and-developers-storybook/" class="post-link">
+    <a href="../2021-04-07-helping-designers-and-developers-storybook/" class="post-link">
       Continue reading
       <span class="post-link--arrow">→</span>
     </a>
   </div>
   <div class="posts-list-entry">
     <h3 class="posts-list-title">
-      <a href="/blog/2021-08-04-interactors-design-systems/">
+      <a href="../2021-08-04-interactors-design-systems/">
         Interactors: the design systems testing ally
       </a>
     </h3>
     <p>
       Components from a design system make building UIs easy. It should be just as easy to test them. Interactors enable more robust tests for component-based UIs, and improve component libraries' maintainability.
     </p>
-    <a href="/blog/2021-08-04-interactors-design-systems/" class="post-link">
+    <a href="../2021-08-04-interactors-design-systems/" class="post-link">
       Continue reading
       <span class="post-link--arrow">→</span>
     </a>
