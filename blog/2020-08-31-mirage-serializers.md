@@ -8,7 +8,7 @@ tags:
   - simulation
   - mirage
   - dx
-img: /img/2020-07-29-mirage-social.png
+image: social.png
 ---
 
 MirageJS is one of the pioneers in enabling frontend developers to use mocks systematically for their tests and development. It was originally built for Ember.js in 2015, but due to its popularity the maintainers created a standalone version compatible with any javascript framework.
@@ -68,7 +68,7 @@ In this case you don't have to manually deal with IDs, formats, or the concrete 
 
 In order to do that, you have to set up models, factories, and serializers in Mirage. Models deal with the relationship between records, factories generate sample data for the records' attributes, and serializers format how the records will be mapped in a JSON response. The following diagram illustrates how these pieces come together to enable you to query records in your Mirage route handles:
 
-![Diagram: Set up relationships → configure data generation → specify JSON response format through serializers → Query schema on route handle](/img/2020-08-21-mirage-serializers-setup.png)
+![Diagram: Set up relationships → configure data generation → specify JSON response format through serializers → Query schema on route handle](serializers-setup.png)
 
 
 The role of the serializer is to map the data to a JSON structure that matches your backend needs. The structure of the JSON refers to how the object keys are named and what's nested inside which keys. 
@@ -84,16 +84,16 @@ In the code below we’ll use three models to describe the relationships among o
 ```js
 models: {
   author: Model.extend({
-	blogPosts: hasMany(),
+    blogPosts: hasMany(),
   }),
 
   blogPost: Model.extend({ 
-	author: belongsTo(),
-	post_blogComments: hasMany()
+    author: belongsTo(),
+    post_blogComments: hasMany()
   }),
 
   post_blogComment: Model.extend({
-	blogPost: belongsTo()
+    blogPost: belongsTo()
   })
 }
 ```
@@ -109,8 +109,8 @@ factories: {
   }),
   blogPost: Factory.extend({
     blogPost_title: () => faker.random.words(3)
-  })
- post_blogComment: Factory.extend({
+  }),
+  post_blogComment: Factory.extend({
     comment_paragraph: () => faker.random.words(6)
   }),
 }}
@@ -130,7 +130,7 @@ Before getting into the specific serializers, let’s address first a peculiarit
  
 When we fetch all the blog posts with `schema.blogPosts.all( )` we'll get all the records for blogs posts. If we configure the serializer to `include` relationships, we can expect the authors and comments from such blog posts too. The following diagram illustrates the relationships between blog posts, authors, and comments.
 
-![Diagram: Blog Post has a belongsTo relationship with Author and a hasMany relationship with comments](/img/2020-08-21-mirage-relationships.png)
+![Diagram: Blog Post has a belongsTo relationship with Author and a hasMany relationship with comments](mirage-relationships.png)
 
 Because we’re using `schema.blogPosts.all( )` to get these blog posts, we’ll say that blog posts are the <em class="blog-post-highlight blog-post-highlight__pink">queried records</em>. As mentioned, included in that response we’d have the author of the blog post (through <em class="blog-post-highlight blog-post-highlight__navy">belongsTo</em>). Additionally, we’ll get the blog post comments (through <em class="blog-post-highlight blog-post-highlight__sky">hasMany</em>).
 
