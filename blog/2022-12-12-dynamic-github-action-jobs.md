@@ -1,15 +1,13 @@
 ---
-templateKey: blog-post
 title: >-
   Dynamic Github Action Jobs
-date: 2022-12-12T05:00:00.000Z
 author: Jacob Bolda
 description: >-
   Ever wanted to run parallel jobs in Github Actions with a high level of flexibility? We have, and now you can too!
 tags:
   - github-actions
   - continuous-delivery
-img: /img/2022-08-22-dynamic-github-actions-jobs.png
+image: dynamic-github-actions-jobs.png
 ---
 
 # Dynamic Github Action Jobs
@@ -110,7 +108,7 @@ jobs:
 
 As an example in a monorepo, you may have ten different packages. You can give it an array which includes a list of each of the packages and an array of nodejs versions. The jobs that would be then created based on these two matrix inputs and would produce 20 jobs, 10 services by the two nodejs versions. It enables parallel processing and may increase the speed of your CI runs. This can also increase the transparency as you see the separate jobs in the status section of a pull request.
 
-![[dynamic-github-action-jobs-status-checks.png]]
+![status checks](status-checks.png)
 
 The downside of the static array of values is having multiple sources of truth. If you have multiple workflows, this matrix needs to be replicated across each and kept in sync. The matrix accepts an argument called `include` which allows you to specify additional jobs over and above the jobs derived from the matrix arrays or additional metadata each job(s).
 
