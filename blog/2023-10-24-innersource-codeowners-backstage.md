@@ -1,13 +1,11 @@
 ---
-templateKey: blog-post
 title: >-
   Backstage: Unblock Innersource Development with Plugins and Code Owners.
-date: 2023-10-24T05:00:00.000Z
 author: Taras Mankovski
 description: >-
   Navigating the challenges of inner-source Backstage portals? Discover how successful adopters harness code owners to streamline contributions and maintain code quality.
 tags: ['backstage', 'dx', 'innersource']
-img: /img/2023-10-24-innersource-codeowners-backstage.png
+image: backstage.png
 ---
 
 Backstage empowers platform and product teams within their organization to extend their internal developer portal in an [inner-source](https://en.wikipedia.org/wiki/Inner_source) manner. Keeping up with the growth of an inner-source Backstage portal brings its challenges. In this blog post, we’ll describe how successful Backstage adopters use plugins and the concept of code owners to unblock the development of their Backstage portal.
