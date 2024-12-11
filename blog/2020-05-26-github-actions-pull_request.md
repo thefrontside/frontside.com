@@ -1,15 +1,13 @@
 ---
-templateKey: blog-post
 title: >-
   Github Actions: a deep dive into pull_request
-date: 2020-05-26T05:00:00.000Z
 author: Min Kim
 description: >-
   We have put together specific behaviors and information that you’ll need to use pull_request as a trigger for your Github Actions workflow.
 tags:
   - github-actions
   - continuous-delivery
-img: /img/2020-05-26-github-actions-pull_request-social-media.png
+image: social-media.png
 ---
 
 Github Actions is an exciting feature that enables teams to construct workflows based on webhook events. It unlocks new possibilities for teams that neatly integrate it into their development flow.
@@ -173,14 +171,14 @@ Did we miss anything? Reach out via [Twitter](https://twitter.com/thefrontside) 
   <h2>Related article:</h2>
   <div class="posts-list-entry">
     <h3 class="posts-list-title">
-      <a href="/blog/2020-7-reasons-for-good-pull-request-descriptions/">
+      <a href="/blog/2020-04-15-7-reasons-for-good-pull-request-descriptions">
         7 reasons to write good Pull Request descriptions
       </a>
     </h3>
     <p>
       A good Pull Request description can lead to better reviews, improved solutions, better documentation, and more. In this article, Taras surveys seven big wins of PR descriptions.
     </p>
-    <a href="/blog/2020-7-reasons-for-good-pull-request-descriptions/" class="post-link">
+    <a href="/blog/2020-04-15-7-reasons-for-good-pull-request-descriptions/" class="post-link">
       Continue reading
       <span class="post-link--arrow">→</span>
     </a>
