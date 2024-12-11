@@ -1,14 +1,12 @@
 ---
-templateKey: blog-post
 title: >-
   Tutorial: Easier onboarding with Backstage and VSCode dev containers
-date: 2022-01-24T05:00:00.000Z
 author: Min Kim
 description: >-
   In this tutorial, you'll learn how to set up dev containers to make it easier to onboard developers.
 tags:
   - backstage
-img: /img/2022-backstage-dev-containers-windows.png
+image: backstage-dev-containers-windows.png
 ---
 
 An often underrated aspect of developer onboarding is how quickly a new contributor can go from cloning the source code to running the project on their machine. An onboarding experience full of friction can be discouraging and leave a poor impression, while a smooth one is valuable for new and seasoned contributors alike.
@@ -42,7 +40,7 @@ npx @backstage/create-app
 
 For this tutorial, you'll be using PostgreSQL:
 
-![backstage-create-app](/img/2022-01-24-backstage-devcontainer/backstage-create-app.png)
+![backstage-create-app](backstage-create-app.png)
 
 Once the app is done installing, open the new app's workspace in visual studio code and set up a dev container.
 
@@ -50,7 +48,7 @@ Once the app is done installing, open the new app's workspace in visual studio c
 
 If you have the [`Remote Containers`](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension installed, you should be able to access its commands. Press `F1` and select `Remote-Containers: Open Folder in Container...`:
 
-![open-folder-container](/img/2022-01-24-backstage-devcontainer/remote-containers-open.png)
+![open-folder-container](remote-containers-open.png)
 
 VSCode will detect that you do not have dev container configurations yet and prompt you to select a predefined container. You can go ahead and select any of them, as you'll be replacing all of those configurations later.
 
