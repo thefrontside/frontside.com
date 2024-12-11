@@ -1,8 +1,6 @@
 ---
-templateKey: blog-post
 title: >-
   Relieve developers’ churn in your Cloud native strategy with Backstage
-date: 2021-05-14T05:00:00.000Z
 author: Taras Mankovski
 description: >-
   Adopting Cloud native strategies has proven to improve organizations' delivery performance, but the complexity brought in with them is making life harder for developers. Using the example of a unified Secret manager, I present how Backstage can improve DX in the Cloud native world.
@@ -11,7 +9,7 @@ tags:
   - dx
   - backstage
   - kubernetes
-img: /img/2021-backstage-dx/avoid-developer-churn-with-backstage.png
+image: avoid-developer-churn-with-backstage.png
 ---
 
 When you start breaking your monolithic platform into microservices and deploying components independently, you can’t help but feel excited about adopting a Cloud native strategy. You see releases becoming more frequent and smooth and your teams feel more productive and motivated as they see their work rapidly move into production.
@@ -58,19 +56,19 @@ Every organization’s Cloud platform needs a way to manage secrets and apply th
 
 But when it comes to secret management, it’s not just the UI that changes across providers: each platform has their own idiosyncrasies. For example, the requirements in minimum length for secret values are different in Microsoft Azure and Hashicorp’s Vault. In short, there’s a lot of variables to keep track of. At least one thing is certain, however: expecting your developers to fluidly switch between three different ways of managing secrets will make them want to tear their hair out.
 
-![Screenshots from different secret management UIs - they all look different, yet do the same thing!](/img/2021-backstage-dx/different-managers-ui.png)
+![Screenshots from different secret management UIs - they all look different, yet do the same thing!](different-managers-ui.png)
 _Screenshots from four secrets management UIs from different providers_
 
 A better developer experience would provide your developers with a consistent and familiar interface for managing secrets no matter which Cloud providers come and go. That’s Backstage in a nutshell.
 
 Given that it already aggregates services and other assets, a natural place for such an interface to live is in Backstage. And the benefit of building it in Backstage is that instead of having your developers deal with specificities in a UI, you can abstract them away in a unified API for your aggregator microservice. Your secret manager UI in Backstage will reflect these unified rules, removing these complexities from your team.
 
-![Screenshot of a possible secret manager implemented in Backstage](/img/2021-backstage-dx/backstage-plugin-prototype.png)
+![Screenshot of a possible secret manager implemented in Backstage](backstage-plugin-prototype.png)
 _A Prototype of a Secret Manager plugin build on Backstage_
 
 And best of all, your team already knows how to build a Backstage plugin like this! Somebody familiar with React and the company’s microservices setup can take up the task and have it done in no time at all.
 
-![Architecture diagram for the plugin. The secret manager plugin is inserted in Backstage's UI, which is all rendered in the user's browser. This UI communicates with an aggregating microservice, that contacts external Cloud providres](/img/2021-backstage-dx/plugin-architecture.png)
+![Architecture diagram for the plugin. The secret manager plugin is inserted in Backstage's UI, which is all rendered in the user's browser. This UI communicates with an aggregating microservice, that contacts external Cloud providres](plugin-architecture.png)
 _Basic architecture diagram for the Secret Manager plugin_
 
 In Backstage, plugins are React components that get added to each service’s page. Thus, the secret manager plugin will be a React component with a UI where your developers will create and edit secrets. This component will make HTTP requests to a microservice that will be responsible for retrieving and editing secrets in your current Cloud providers. Going forward, your team will only have to adjust the aggregating microservice whenever there is a change in Cloud providers.
