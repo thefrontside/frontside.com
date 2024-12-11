@@ -1,15 +1,13 @@
 ---
-templateKey: blog-post
 title: >-
   Ingestion tests in Backstage Part 2: Safely refactoring an LDAP integration
-date: 2022-12-05T05:00:00.000Z
 author: Charles Lowell
 description: >-
   To test whether the Backstage is setting up the Catalog properly, you must start a Backstage server, wait for a while, and assert. This feat is easier said than done. Here is part 2 in which Charles will guide you through it in this article.
 tags:
   - backstage
   - testing
-img: /img/2022-04-26-ingestion-test-in-backstage-part-2.png
+image: ingestion-testing-in-backstage-part-2.png
 ---
 
 > Heads up: This is the second part in a series on how to achieve real confidence in your Backstage Ingestion via testing. We’ll be relying on the techniques introduced in the first blog post to test a non-trivial external application. What follows may not make much sense without a grasp of those techniques, so I highly recommend starting with [Part 1][part-1] first and then coming back.
@@ -28,7 +26,7 @@ If you recall, the fundamental strategy of the basic ingestion test case for loc
 
 We’ll use the exact same strategy as before with the only difference being that instead of checking that service components are ingested from our YAML files, we’ll check that our user entities are properly ingested from our LDAP server.
 
-![Testing Architecture featuring a simulated LDAP server](/img/2022-ingestion-testing-in-backstage-part-2/test-architecture.svg "Backstage Client talks to Backstage Server, which talks to LDAP Simulator")
+![Testing Architecture featuring a simulated LDAP server](test-architecture.svg "Backstage Client talks to Backstage Server, which talks to LDAP Simulator")
 
 Using a simulator as a test double means that we get all the benefits of isolation and repeatability when using a mock or stub, but without having to sacrifice any of the confidence in the viability of our test because it’s actually using 100% of the production code with no additives or substitutes.
 
