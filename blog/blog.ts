@@ -8,6 +8,7 @@ import { Fragment, jsx, JSXElement, jsxs } from "revolution/jsx-runtime";
 import { call, createContext, Operation } from "effection";
 
 export interface Blog {
+  slice(...args: Parameters<Array<unknown>["slice"]>): BlogPost[];
   get(id: string): BlogPost | undefined;
   getPosts(): BlogPost[];
 }
@@ -112,8 +113,11 @@ export function* initBlog(): Operation<void> {
     });
   }
 
+  let values = [...posts.values()].sort((a, b) => b.date.getTime() - a.date.getTime());
+
   yield* BlogContext.set({
+    slice: (...args) => values.slice(...args),
     get: (id) => posts.get(id),
-    getPosts: () => [...posts.values()],
+    getPosts: () => values,
   });
 }
