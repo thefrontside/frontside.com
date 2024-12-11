@@ -1,14 +1,12 @@
 ---
-templateKey: blog-post
 title: >-
   What Is Spotify Backstage: a developer portal overview
-date: 2022-05-17T05:00:00.000Z
 author: Javier Lainfiesta
 description: >-
   What can Backstage do for your team? In this post, we are going to discuss how backstage can improve your organization.
 tags:
   - backstage
-img: /img/2022-What-Is-Spotify-Backstage.png
+image: what-is-spotify-backstage.png
 ---
 
 Backstage is a powerful open-source developer portal platform. What started as an internal tool for the Spotify developing team has become a versatile option for creating and managing developer portal ecosystems. Backstage stands out for its flexibility and high degree of customization. Below I want to share some features Backstage offers.
