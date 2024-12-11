@@ -1,14 +1,12 @@
 ---
-templateKey: blog-post
 title: >-
   There and Back Again: Testing and Stack Upgrades
-date: 2021-02-18T05:00:00.000Z
 author: Taras Mankovski
 description: >-
   Upgrading your application stack to new major versions can be terrifying, especially when you have a massive application with 75 developers working on features non-stop. However, a good testing strategy gives you confidence to make bold moves that take your organization to heretofore unexplored lands.
 tags:
   - testing
-img: /img/2021-testing-rings.png
+image: testing-rings.png
 ---
 
 Upgrading your application stack to new major versions can be terrifying, especially when you have a massive application with 75 developers working on features non-stop. The situation gets more complicated when you also have important deadlines pressing down on you, new defects popping up every day, mounting tech debt, and 30% of the team is new to the company. What should be prioritized and what can wait? My call in 2018 was none of the above. Instead I reached for J. R. R. Tolkein for inspiration to find the one “ring” that would address all these issues in one fell swoop. After surveying the options I put automated testing at the front of the queue. But unlike in _Lord of the Rings_, automated testing didn’t cause more problems than it solved – in fact my decision paid off big time.
@@ -39,14 +37,14 @@ Long story short: investing in your test suite pays off, but you need to make su
   <h2>Related article:</h2>
   <div class="posts-list-entry">
     <h3 class="posts-list-title">
-      <a href="/blog/2020-triple-threat-to-testing-part-1-speed/">
+      <a href="../2020-04-06-triple-threat-to-testing-part-1-speed/">
         The Triple Threat to Testing — Part 1: Speed
       </a>
     </h3>
     <p>
       Speed, reliability, and relevance constitute the mains pillars of a robust testing strategy. The faster a test suite can diagnose an issue in its application, the more value it renders. In this article, we navigate through the most significant causes of slow tests and suggest ideas to deal with them.
     </p>
-    <a href="/blog/2020-triple-threat-to-testing-part-1-speed/" class="post-link">
+    <a href="../2020-04-06-triple-threat-to-testing-part-1-speed/" class="post-link">
       Continue reading
       <span class="post-link--arrow">→</span>
     </a>
