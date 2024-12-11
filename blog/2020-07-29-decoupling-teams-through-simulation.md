@@ -1,8 +1,6 @@
 ---
-templateKey: blog-post
 title: >-
   Beyond Mocking: Decoupling teams through Simulation
-date: 2020-07-29T05:00:00.000Z
 author: Charles Lowell, Jorge Lainfiesta
 description: >-
   Decoupling front-end and mobile teams from the back-end makes organizations more effective. In this article we explain why using simulation is an ideal strategy for this purpose, and present important considerations for adopting such practices.
@@ -10,7 +8,7 @@ tags:
   - simulation
   - best-practices
   - dx
-img: /img/2020-07-29-simulator-social.png
+image: social.png
 ---
 
 Working across teams is challenging. It gets especially tricky when one team depends on another to make progress on their own tasks. For instance, take an all-time classic: the front-end team needs the back-end team to provide them with APIs to advance the UI. Both parts are working towards a common goal, but their dependency may create tensions and frustration, which compromise the quality they would otherwise deliver.
@@ -60,7 +58,7 @@ In cases like these, it would be easier for both teams to run at their own speed
 
 No discussion of a simulator is complete without reference the film The Matrix, so let’s start there. The movie shows a world in which humans live in a computer simulation that is very different from their actual physical existence. This simulation is not merely a collection of inert pictures flashing before their eyes—an interface that you passively interact with. It is instead a fully immersive experience that you actively engage—a world so alive don’t notice you’re within it because it feels real.
 
-![Morpheus, from the movie The Matrix (1999), sitting in a couch](/img/2020-07-29-simulator-matrix.png)
+![Morpheus, from the movie The Matrix (1999), sitting in a couch](matrix.png)
 _Morpheus, from the The Matrix (1999)_
 
 To truly be effective, the simulator software developers use has to be alive and dynamic
@@ -75,7 +73,7 @@ We have described mocks and stubs as dead vs. simulators as alive, but to what d
 
 That turns out to be a huge difference. Real APIs are not static JSON objects independent from one another like in a mock or stub. APIs interact among each other, depend on each other, and even consume each other in the back-end. Moreover, each endpoint has errors, tokens, metadata, and side effects. None of that is reflected in a static mock or stub. And after all, how could it? JSON is merely the format over which all the information from the back-end is communicated. The format is not a crucial part of an API, and therefore it is not uncommon to see it change and evolve. But that means the mocks and stubs become quickly outdated in addition to lacking the dynamic character of real APIs.
 
-![Screenshot of Network tab on Firefox's Web Inspector](/img/2020-07-29-simulator-browser.png)
+![Screenshot of Network tab on Firefox's Web Inspector](browser.png)
 _Focusing on the responses' format is important, but it's helpful to be aware of what it represents in the back_
 
 A simulator is designed to accurately represent the API’s inner state, which is reflected in the interactions and relationships between endpoints. For instance, if you edit the user’s name through the UI, the endpoint that returns the user data would reflect such change, although it was introduced as an effect of calling a different endpoint.
