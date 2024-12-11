@@ -1,14 +1,12 @@
 ---
-templateKey: blog-post
 title: >-
   Tutorial: How to use your company’s component library with Backstage
-date: 2022-02-14T05:00:00.000Z
 author: Taras Mankovski
 description: >-
   In this tutorial, Taras will show you how to replace Material UI for your component library in Backstage without losing access to its API.
 tags:
   - backstage
-img: /img/2022-backstage-components.png
+image: backstage-components.png
 ---
 
 One of the first questions that a developer starting a Backstage project has to answer is how to make their developer portal match their company’s corporate style. There are several ways of doing this, but I recommend using an approach that will allow developers to use as much of the Backstage UI as possible so that everyone gets the most value from Backstage. The further the developer portal is from the beaten path, the fewer Backstage elements the development team will have access to.
