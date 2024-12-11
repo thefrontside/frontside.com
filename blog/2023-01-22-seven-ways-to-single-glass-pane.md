@@ -1,8 +1,6 @@
 ---
-templateKey: blog-post
 title: >-
   Seven ways to build a single glass pane with Backstage
-date: 2023-01-22T05:00:00.000Z
 author: Taras Mankovski
 description: >-
   Learn strategies for integrating external services into Backstage that improve discoverability
@@ -10,7 +8,7 @@ description: >-
 tags:
   - backstage
   - internal-developer-platform
-img: /img/seven-ways-to-single-glass-pane.png
+image: seven-ways-to-single-glass-pane.png
 ---
 
 The concept of a single glass pane is popular in the Cloud Native ecosystem because it promises to prevent fragmentation within many platforms where users have to interact with different systems to get their work done. Instead of going to one interface to see their builds, another to see their deployments, and yet another to see their logs, a single glass pane would make all of this information available in one place. Increasingly, organizations building platforms see Backstage as the one place to surface everything developers need to be productive.
@@ -29,7 +27,7 @@ Each approach is valid and has both benefits and tradeoffs. Picking the most sui
 
 ## Background
 
-![Client-Server Architecture in Backstage](../img/seven-ways-to-single-glass-pane/background-architecture.svg)
+![Client-Server Architecture in Backstage](background-architecture.svg)
 
 Backstage has a fairly traditional client-side architecture with a sprinkle of a framework to make integrating easier.
 
@@ -39,27 +37,27 @@ The Backstage Backend is a Node.js service that uses Express.js to mount Backsta
 
 ## Option 1: Explore Backstage Plugin
 
-![Link to external services using the Explore Backstage Plugin](../img/seven-ways-to-single-glass-pane/option-1.svg)
+![Link to external services using the Explore Backstage Plugin](option-1.svg)
 
 One of the most important goals of a single glass pane approach is to give users a unified view of the internal developer platform. This is achieved by using Backstage as a launch pad into the platform by making links to all external services available in Backstage. In effect, this means gathering and listing links to external services in the Backstage App. This is so simple and obvious that it’s easy to overlook how valuable this is for users. One of our clients had a user who maintained a list of 150 links that they shared with others. Without these links it was challenging to do their work. If you’re considering creating a single glass pane, your organization likely is experiencing a similar challenge.
 
-![Explore Backstage Plugin shows cards of links in Backstage App](../img/seven-ways-to-single-glass-pane/options-1-backstage-explore-plugin.png)
+![Explore Backstage Plugin shows cards of links in Backstage App](options-1-backstage-explore-plugin.png)
 
 The easiest way to add a list of links to external services is to use the [Explore Plugin](https://github.com/backstage/backstage/tree/master/plugins/explore). It allows you to show a list of cards for each service with a link and organize these links into tabs. Instead of maintaining a list of links in say a Google Doc, developers will conveniently find these links in the Backstage portal.
 
 ## Option 2: Entity Links
 
-![Eliminate unecessary steps by deep linking to external services using Entity Links](../img/seven-ways-to-single-glass-pane/option-2.svg)
+![Eliminate unecessary steps by deep linking to external services using Entity Links](option-2.svg)
 
 The Explore Backstage Plugin is helpful when linking to a webpage on an external service, but usually those external services have information related to a specific component in your catalog. For example, if your platform offers Kibana for viewing logs, you can add a link from Explore Backstage Plugin to Kibana’s home page. However, the user will still need to navigate Kibana to find the logs of a specific component. Navigating an external service from its home page is very time-consuming and difficult for users unfamiliar with these systems.
 
-![Show links in Entity Links Card by editing Entity Links metadata](../img/seven-ways-to-single-glass-pane/option-2-entity-links-card.svg)
+![Show links in Entity Links Card by editing Entity Links metadata](option-2-entity-links-card.svg)
 
 A single glass pane can make it easier for users to navigate to specific pages in external services by providing URLs in the links property of the entity’s metadata. Backstage Catalog will show these links in the Links card on the Entity Page for that component. This technique provides native security protection by allowing the external system to ensure that the user is authenticated when the user arrives at the external system.
 
 ## Option 3: Custom React Component
 
-![Give users a preview of content in external system by displaying it using a custom React component](../img/seven-ways-to-single-glass-pane/option-3.svg)
+![Give users a preview of content in external system by displaying it using a custom React component](option-3.svg)
 
 An Entity Links Card is helpful when you want to show a simple list of links, but the user has to leave Backstage to see the content behind those links. This can be inefficient because it requires context switching to even simply glance at the information behind a link. We can provide a better user experience by embedding the information from the external service in the catalog’s Entity Page.
 
@@ -67,7 +65,7 @@ If we use Kibana as an example, instead of deep linking to a page on Kibana, we 
 
 ## Option 4: Proxy Backstage Plugin
 
-![Use Proxy Backend Plugin to authenticate requests using a secret](../img/seven-ways-to-single-glass-pane/option-4.svg)
+![Use Proxy Backend Plugin to authenticate requests using a secret](option-4.svg)
 
 Making API requests from a Custom React Component directly an external service is convenient when the user can authenticate directly against the external service and retrieve a token that can be used securely in the browser. Most services do not provide in-browser authentication. In this case, you can use Backstage’s Proxy plugin to call the external service on behalf of the user using a token stored in the Backstage Backend configuration.
 
@@ -75,7 +73,7 @@ Several Backstage Plugins integrate with external services this way (if you’re
 
 ## Custom Backend Plugin as a Gateway
 
-![Combine data from multiple services using a custom Backend Plugin as a gateway](../img/seven-ways-to-single-glass-pane/option-5.svg)
+![Combine data from multiple services using a custom Backend Plugin as a gateway](option-5.svg)
 
 There are various reasons why using the Backstage Proxy Plugin method to expose information to the Backstage App might not be enough. If you want to restrict the information users can retrieve from an external service, format the retrieved information, or combine information from multiple sources, a simple proxy is not enough. In these cases you need a custom Backstage plugin that is a gateway to your external service.
 
@@ -83,7 +81,7 @@ This gateway will respond to requests coming from the front end. It can inspect 
 
 ## Option 6: Custom Processor
 
-![Enrich entity information using Custom Processors](../img/seven-ways-to-single-glass-pane/option-6.svg)
+![Enrich entity information using Custom Processors](option-6.svg)
 
 The five options we described so far all require a browser to access information in the external system. Some external systems (like LDAP) cannot be accessed from the browser. Integrating these kinds of systems while building a single glass pane with Backstage requires a different approach. Since accessing this information is not possible, we can instead use the Catalog’s REST API as a temporary cache. This cache is populated using Backstage Catalog’s processing loop. 
 
@@ -91,7 +89,7 @@ You can configure the processing loop using [Custom Processors](https://backstag
 
 ## Option 7: Custom Entity Provider
 
-![Create new entities using a Custom Entity Provider](../img/seven-ways-to-single-glass-pane/option-7.svg)
+![Create new entities using a Custom Entity Provider](option-7.svg)
 
 A Custom Processor can enrich existing entities, but where do entities come from in the first place? Entities come from [Entity Providers](https://backstage.io/docs/features/software-catalog/external-integrations#custom-entity-providers). An Entity Provider is an extension point of the Catalog that allows you to commit new entities to the processing loop. Entity Providers extract information from external services, format them as entities and commit them for processing. Entities committed by Entity Providers will execute each Custom Processor relevant to that entity kind.
 
