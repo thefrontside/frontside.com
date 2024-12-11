@@ -1,15 +1,13 @@
 ---
-templateKey: blog-post
 title: >-
   Kubernetes: Dip your toes in this
-date: 2021-01-29T05:00:00.000Z
 author: Min Kim
 description: >-
   Kubernetes is on the rise and having it in your toolkit can get you a long way. In this article, Min shows us how to set up a MicoK8s in your local machine.
 tags:
   - kubernetes
   - CI/CD
-img: /img/2021-01-kubernetes/hero.png
+image: hero.png
 ---
 
 Kubernetes is perhaps one of the most exciting developments in the DevOps world in the last 15 years. It is an open source implementation of the Borg system that was Google’s “secret sauce” – the thing that allowed them to deploy and manage thousands of services in their clusters. 
@@ -62,7 +60,7 @@ Forwarding from 0.0.0.0:xxxx -> xxxx
 ```
 Go to your browser and enter in the address provided (including the https://) and copy/paste the token to gain access to your dashboard, which will look something like this:
 
-![Microk8s Dashboard screenshot](/img/2021-01-kubernetes/dashboard.png)
+![Microk8s Dashboard screenshot](dashboard.png)
 
 Now when you go back to your terminal, entering the `microk8s status` command will show that the dashboard has been enabled. If you wish you can run `microk8s disable dashboard` to disable it again.
 
@@ -86,7 +84,7 @@ $ brew install k9s
 ```
 After it finishes installing, you can start it up using the command `k9s`. Your terminal should look something similar to this:
 
-![k9s running on terminal screenshot](/img/2021-01-kubernetes/k9s-terminal.png)
+![k9s running on terminal screenshot](k9s-terminal.png)
 
 > You can exit out of `k9s` with either `ctrl + c` or you can press `:` to initiate a command and enter `quit`.
 
@@ -98,17 +96,17 @@ And now when you start up `k9s` again, you’ll notice the configurations have t
 
 If you’ve been following along with all of the previous steps, your `k9s` screen should show the pods that we deployed earlier:
 
-![k9s with pods listed screenshot](/img/2021-01-kubernetes/k9s-listed-pods.png)
+![k9s with pods listed screenshot](k9s-listed-pods.png)
 
 What we’re seeing here are the pods from the service we deployed. We’ll be returning to this page very shortly, but for practice if you want to navigate to the list of deployments, press `:` and type in `deployments`.
 
-![k9s with deployments listed screenshot](/img/2021-01-kubernetes/k9s-deployments.png)
+![k9s with deployments listed screenshot](k9s-deployments.png)
 
 To port-forward this deployment, press `enter` on `podinfo` to display its pods again.
 
 Navigate to any one of the pods and press `shift + f` to port-forward the service. Then press `f` to see the hosted URL. Copy and paste this URL to your browser and you should be able to see the service.
 
-![Podinfo screenshot](/img/2021-01-kubernetes/podinfo.png)
+![Podinfo screenshot](podinfo.png)
 
 ## Conclusion 
 
