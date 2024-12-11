@@ -1,15 +1,13 @@
 ---
-templateKey: blog-post
 title: >-
   Effection: for when async/await is not enough
-date: 2021-10-26T05:00:00.000Z
 author: Jonas Niklas
 description: >-
   Everyone who has built a complex system in JavaScript has hit a critical moment when concurrent processes become unmanageable. But with Effection—an OSS async/await alternative—you'll spare memory leaks and headaches. 
 tags:
   - dx
   - javascript
-img: /img/2021-intro-effection.png
+image: intro-effection.png
 ---
 
 Everyone who has built a complex system in JavaScript has hit a critical moment where the illusion of control comes crashing down. Those are the moments when there are dozens (maybe hundreds) of concurrent processes running and it feels like you&#39;ve lost control over them. Maybe a promise handler or callback executes even though it is no longer relevant and messes up the state of the system. Or perhaps an error disappears into the void or a socket is not closed when it should be.
@@ -126,11 +124,11 @@ async function fetchSomeUsers() {
 
 What will happen in this case? `fetchUser(1)` and `fetchUser(2)` will happily keep running, even though the `fetchSomeUsers` function which initially called them has already failed.
 
-![fetchSomeUsers timing with async/await](/img/2021-effection-intro/intro-effection-async-await.svg)
+![fetchSomeUsers timing with async/await](intro-effection-async-await.svg)
 
 This can&#39;t happen in Effection. Because given that `fetchUser(1)` and `fetchUser(2)` are scoped to their parent function, they will be terminated when `fetchSomeUsers` enters into an error state.
 
-![fetchSomeUsers timing with effection](/img/2021-effection-intro/intro-effection-effection.svg)
+![fetchSomeUsers timing with effection](intro-effection-effection.svg)
 
 And this is the power of Effection&#39;s structured concurrency: it allows us to build abstractions that would otherwise be impossible to construct. We think it is a fundamentally better way to write JavaScript.
 
