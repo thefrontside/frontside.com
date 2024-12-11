@@ -1,15 +1,13 @@
 ---
-templateKey: blog-post
 title: >-
   Backstage tutorial: plugin integration tests with Cypress + Interactors
-date: 2022-03-03T05:00:00.000Z
 author: Jorge Lainfiesta
 description: >-
   In this tutorial, you'll learn how to set up integration tests for your Backstage plugins using Material UI Interactors
 tags:
   - backstage
   - testing
-img: /img/2022-backstage-cypress-interactors.png
+image: backstage-cypress-interactors.png
 ---
 
 Plugins are the most common way to extend the power of Backstage. A plugin most often includes a UI built using [`@backstage/core-components`](https://backstage.io/docs/reference/core-components) and other [Material UI](https://mui.com/getting-started/installation/) components.
@@ -35,12 +33,12 @@ It generates the following output:
 
 That's _a lot_ of generated classes. How will you know which selectors to use for your test actions and assertions? Usually you'd have to guess and try to craft selectors for each MUI component you use every time you use one.
 
-Happily you don't have to worry about this anymore! The [Frontside team](/backstage) has gone through the MUI components and created ["Interactors"](https://frontside.com/blog/2021-08-04-interactors-design-systems/) like the following that you can use in your tests:
+Happily you don't have to worry about this anymore! The [Frontside team](/backstage) has gone through the MUI components and created ["Interactors"](../2021-08-04-interactors-design-systems/) like the following that you can use in your tests:
 
 ```ts
 import { Button } from '@interactors/material-ui';
 //...
-Button('=').exists()
+Button('=').exists()g
 ```
 
 This tutorial will show you how to set up integration tests for your Backstage plugin using Cypress and Interactors. In it you’ll learn how to:
@@ -57,7 +55,7 @@ This tutorial will show you how to set up integration tests for your Backstage p
 
 I created a Backstage plugin calculator with Material UI to use as an example for this tutorial. It features a 'classic calculator' with a button-based UI and a 'text-based calculator' which relies on a text field for input:
 
-![A gif showing the calculator demo](/img/2022-backstage-interactors/demo.gif)
+![A gif showing the calculator demo](demo.gif)
 
 The calculator doesn't do anything exciting, so we won't go over the implementation details. You can have a look at the [whole code in this repository](https://github.com/jorgelainfiesta/backstage-calculator-plugin-tutorial).
 
@@ -122,7 +120,7 @@ describe('The calculator plugin', () => {
 
 `cy.expect` is one of Interactors bindings for Cypress and it's used for assertions (the ther binding is explained [next section](#act-with-interactors)). In the test above, you're telling Cypress to check if a MUI Heading with the text "Classic Calculator" exists and if a MUI Tab with the label "CLASSIC CALCULATOR" is active. 
 
-![Screenshot of tests passing](/img/2022-backstage-interactors/assertion-test-passing.png)
+![Screenshot of tests passing](assertion-test-passing.png)
 
 ## Act with Interactors
 
@@ -263,7 +261,7 @@ describe('The text calculator', () => {
 
 If you run the test suite based on Cypress and Interactors, it should look like this:
 
-![A gif with tests executing on cypress](/img/2022-backstage-interactors/test-suite-whole.gif)
+![A gif with tests executing on cypress](test-suite-whole.gif)
 
 ## Conclusion
 
