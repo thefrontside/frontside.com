@@ -1,15 +1,13 @@
 ---
-templateKey: blog-post
 title: >-
   Testing Backstage Catalog's ingestion
-date: 2022-03-24T05:00:00.000Z
 author: Charles Lowell
 description: >-
   To test whether the Backstage is setting up the Catalog properly, you must start a Backstage server, wait for a while, and assert. This feat is easier said than done, but Charles will guide you through it in this article.
 tags:
   - backstage
   - testing
-img: /img/2022-backstage-ingestion-test.png
+image: backstage-ingestion-test.png
 ---
 
 A test is a mechanism to answer a simple yes or no question. In my case, the question I want to ask is, "When my Backstage server runs, is it going to ingest stuff into the Catalog properly?" 
@@ -97,19 +95,19 @@ It turns out the theory of [eventual consistency](https://en.wikipedia.org/wiki/
 
 In a regular synchronous assertion, there is no delay between cause and effect:
 
-![Diagram of an assertion at the right time](/img/2022-03-24-backstage-ingestion-testing/assertion-after.png)
+![Diagram of an assertion at the right time](assertion-after.png)
 
 The effect of any action is immediately observable, and so when an assertion runs, it can always see that effect, making it simple and reliable.
 
 However, in a highly asynchronous environment such as a Backstage server, you will likely try to run an assertion *before* an action's effects have yet to settle and become externally observable.
 
-![An assertion yielding a false negative](/img/2022-03-24-backstage-ingestion-testing/false-negative.png)
+![An assertion yielding a false negative](false-negative.png)
 
 This would result in a false negative, where if you'd just had the patience to wait just a wee bit longer, you could have observed the effect, but instead, you made your assertion too soon, and the test failed.
 
 Here is when eventual consistency comes to the rescue. If you assume that the server state is not immediately available, but is instead only in the process of converging onto some expected state, then instead of making a single observation at the right time, you continually make the same observation again and again until it eventually becomes true.
 
-![Converging assertion](/img/2022-03-24-backstage-ingestion-testing/convergent-assertion.png)
+![Converging assertion](convergent-assertion.png)
 
 Convergence guarantees that if the state you expect can be observed, it will be observed and that you'll wait just long enough to observe it and no longer. If there is something wrong, and the state is never achieved, then the test case will time out, and you'll be presented with the last failed assertion.
 
