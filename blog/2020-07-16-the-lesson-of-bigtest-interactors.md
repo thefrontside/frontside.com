@@ -1,15 +1,13 @@
 ---
-templateKey: blog-post
 title: >-
   The Lesson of BigTest Interactors: never write a flaky test again!
-date: 2020-07-16T05:00:00.000Z
 author: Jonas Niklas
 description: >-
   To prevent flaky tests, BigTest introduces the Interactor API, designed around the lessons learned in Capybara. This article introduces the benefits of Interactors in BigTest and how to use them to write reliable tests. 
 tags:
   - testing
   - bigtest
-img: /img/2020-07-16-interactors-social.png
+image: social.png
 ---
 
 Testing the frontend of complex applications is often associated with nightmarishly inconsistent test suites, where seemingly random failures cast doubt on the value of the tests themselves and frustrate developers to no end. Our mission with BigTest has been to eliminate flakiness in tests altogether and provide the most stable, easy to use, and best performing test framework out there. 
@@ -107,7 +105,7 @@ ambiguities that we cannot otherwise resolve.
 
 Let's illustrate what we mean by this with an example: Imagine we have a paginated list with a 'Next' link at the bottom. Whenever we press the next link we will load a new set of rows, and we also update the `href` attribute of the next link to point to the next page.
 
-![Image of a page showing a list and "Previous" and "Next" buttons](/img/2020-07-16-interactors-next.png)
+![Image of a page showing a list and "Previous" and "Next" buttons](next.png)
 
 Now imagine a written a test written like this:
 
@@ -158,14 +156,14 @@ Strategies like these are why BigTest is going to be such a significant step for
   <h2>Related article:</h2>
   <div class="posts-list-entry">
     <h3 class="posts-list-title">
-      <a href="/blog/2020-triple-threat-to-testing-part-2-reliability/">
+      <a href="/blog/2020-04-30-triple-threat-to-testing-part-2-reliability/">
         The Triple Threat to Testing — Part 2: Reliability
       </a>
     </h3>
     <p>
       Flakiness: one of the biggest pain-points of any test suite. From app complexity to incident management, we explore some of the most common causes of unreliable tests.
     </p>
-    <a href="/blog/2020-triple-threat-to-testing-part-2-reliability/" class="post-link">
+    <a href="/blog/2020-04-30-triple-threat-to-testing-part-2-reliability/" class="post-link">
       Continue reading
       <span class="post-link--arrow">→</span>
     </a>
