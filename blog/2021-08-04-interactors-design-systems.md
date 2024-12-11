@@ -1,20 +1,18 @@
 ---
-templateKey: blog-post
 title: >-
   Interactors: the design systems testing ally
-date: 2021-08-04T05:00:00.000Z
 author: Charles Lowell, Jeffrey Cherewaty
 description: >-
   Components from a design system make building UIs easy. It should be just as easy to test them. Interactors enable more robust tests for component-based UIs, and improve component libraries' maintainability.
 tags:
   - testing
   - design-systems
-img: /img/2021-interactors-design.png
+image: interactors-design.png
 ---
 
 The reusable component libraries shipped with design systems enable developers to use on-brand and battle-tested components. Developers don't have to re-invent the wheel every time they need a common element like an input, modal dialog, or date picker.
 
-![Screenshots of date picker components highlighting clickable areas](/img/2021-08-04-interactors-design-system/date-picker-click-map.png)
+![Screenshots of date picker components highlighting clickable areas](date-picker-click-map.png)
 
 If you're building an application with some of these components, you'll want to write some tests. With the date picker component pictured above, a user needs at least four clicks to select a date. That means a UI test will also need to step through those four clicks. Testing this interaction with React Testing Library and Cypress could look like:
 
@@ -109,21 +107,21 @@ When you write your test assertions and actions using selectors, you're on your 
 
 Interactors bring in static checks for your tests, which means your IDE and compiler can provide more support as you develop:
 
-![Screenshot of IDE showing in-line suggestions and documentation about Interactors](/img/2021-08-04-interactors-design-system/interactors-ide-suggestions.png)
+![Screenshot of IDE showing in-line suggestions and documentation about Interactors](interactors-ide-suggestions.png)
 
 Not everything can be found by static analysis in a test, but Interactors are ready to provide helpful suggestions for common small mistakes that are usually hard to debug. For example, if you were looking for a login button in your test case, but forgot for a moment that the button actually reads "Log In", Interactors will hint that to you:
 
-![Screenshot of interactors suggestion similar elements to the one that was not found](/img/2021-08-04-interactors-design-system/interactors-error-suggest-not-found.png)
+![Screenshot of interactors suggestion similar elements to the one that was not found](interactors-error-suggest-not-found.png)
 
 Interactors not only check for presence before committing an action in the UI, they also check if the [element is visible](https://github.com/thefrontside/element-is-visible)—through various heuristics—and that it is enabled. For example, if Interactors did find the button and it is visible but not enabled, it will throw an error like this:
 
-![Screenshot of interactors failing a test because the target element was visible but not enabled](/img/2021-08-04-interactors-design-system/interactors-error-disabled-element.png)
+![Screenshot of interactors failing a test because the target element was visible but not enabled](interactors-error-disabled-element.png)
 
 ## Try out Interactors!
 
 If you're still not sure about trying out Interactors, take a look at this [pull request in FOLIO](https://github.com/folio-org/stripes-testing/pull/112), an open-source project, adopting Interactors in their component library:
 
-![Screenshot of code diff resulting in refactoring a test using React Testing Library to use Interactors](/img/2021-08-04-interactors-design-system/diff-react-testing-library-vs-interactors.png)
+![Screenshot of code diff resulting in refactoring a test using React Testing Library to use Interactors](diff-react-testing-library-vs-interactors.png)
 
 The selectors are difficult to follow and are quite fragile, while the Interactors are easier to read and focus on testing the app as a user would use it.
 
@@ -133,28 +131,28 @@ You can start using Interactors as part of your current test setup, they're comp
   <h2>Related articles:</h2>
   <div class="posts-list-entry">
     <h3 class="posts-list-title">
-      <a href="/blog/2021-18-02-there-and-back-again-testing-and-upgrades/">
+      <a href="../2021-02-18-there-and-back-again-testing-and-upgrades/">
         There and Back Again: Testing and Stack Upgrades
       </a>
     </h3>
     <p>
       Upgrading your application stack to new major versions can be terrifying, especially when you have a massive application with 75 developers working on features non-stop. However, a good testing strategy gives you confidence to make bold moves that take your organization to heretofore unexplored lands.
     </p>
-    <a href="/blog/2021-18-02-there-and-back-again-testing-and-upgrades/" class="post-link">
+    <a href="../2021-18-02-there-and-back-again-testing-and-upgrades/" class="post-link">
       Continue reading
       <span class="post-link--arrow">→</span>
     </a>
   </div>
   <div class="posts-list-entry">
     <h3 class="posts-list-title">
-      <a href="/blog/2021-04-07-helping-designers-and-developers-storybook/">
+      <a href="../2021-04-07-helping-designers-and-developers-storybook/">
         Unleashing the Genie: Helping both designers and developers with Storybook
       </a>
     </h3>
     <p>
       Good documentation is key to design systems. However, what "good" means varies according to the reader. This article will go through tips to generate documentations for designers and developers from a single Storybook—keep everyone happy with minimum effort!
     </p>
-    <a href="/blog/2021-04-07-helping-designers-and-developers-storybook/" class="post-link">
+    <a href="../2021-04-07-helping-designers-and-developers-storybook/" class="post-link">
       Continue reading
       <span class="post-link--arrow">→</span>
     </a>
