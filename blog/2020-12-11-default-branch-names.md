@@ -1,8 +1,6 @@
 ---
-templateKey: blog-post
 title: >-
   Renaming `main` with purpose 
-date: 2020-12-11T05:00:00.000Z
 author: Jorge Lainfiesta
 description: >-
   As generic default branch names like `master` for Git repos have gone out of fashion, possibilities emerge for more effective and informative naming conventions. Learn about the branch naming strategy Frontside uses for our Open Source libraries and how we name app project branches.
@@ -10,7 +8,7 @@ tags:
   - continuous-delivery
   - best-practices
   - dx
-img: /img/2020-12-11-default-branch-names.png
+image: default-branch-names.png
 ---
 
 At Frontside `main` (or any similar name) has never seemed like a great branch name. Like many developers, we navigate through different kinds of repositories all the time, from user-facing apps to Open Source libraries. It can be difficult to keep track of how code flows from development to its final purpose when merging our work into a codebase, making naming branches not just a matter of efficiency but affecting the clarity of the code as well.
@@ -19,7 +17,7 @@ Every project has its own goal and process, which means that merging code into '
 
 That's why we propose naming the default branch of each repository such that it reflects its purpose. For instance, in `effection`—a library we maintain—the default branch is `v0` because the code merged there is part of version zero, and we cut releases from it. Another example is our website: the default branch is called `production` because everything we merge into it is automatically published to production.
 
-![Screenshot of PR getting merged to 'production'](/img/2020-12-11-default-branch-name--screenshot.png)
+![Screenshot of PR getting merged to 'production'](screenshot.png)
 
 _The author and reviewers of a PR that will be merged into `production` are now conscious of the aims and purpose in the code in question._
 
@@ -67,14 +65,14 @@ Naming is hard. It's been a challenge in computer science for decades. But what 
   <h2>Related article:</h2>
   <div class="posts-list-entry">
     <h3 class="posts-list-title">
-      <a href="/blog/2020-7-reasons-for-good-pull-request-descriptions/">
+      <a href="../2020-04-15-7-reasons-for-good-pull-request-descriptions/">
         7 reasons to write good Pull Request descriptions
       </a>
     </h3>
     <p>
       A good Pull Request description can lead to better reviews, improved solutions, better documentation, and more. In this article, Taras surveys seven big wins of PR descriptions.
     </p>
-    <a href="/blog/2020-7-reasons-for-good-pull-request-descriptions/" class="post-link">
+    <a href="../2020-04-15-7-reasons-for-good-pull-request-descriptions/" class="post-link">
       Continue reading
       <span class="post-link--arrow">→</span>
     </a>
