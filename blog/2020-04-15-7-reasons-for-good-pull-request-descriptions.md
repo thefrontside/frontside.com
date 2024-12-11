@@ -1,14 +1,12 @@
 ---
-templateKey: blog-post
 title: 7 reasons to write good Pull Request descriptions
-date: 2020-04-15T05:00:00.000Z
 author: Taras Mankovski
 description: >-
   A good Pull Request description can lead to better reviews, improved solutions, better documentation, and more. In this article, Taras surveys seven big wins of PR descriptions.
 tags:
   - best-practices
   - dx
-img: /img/2020-7-reasons-for-good-pull-request-descriptions-social.png
+image: social.png
 ---
 
 In large open-source projects writing a good description in a Pull Request (PR) can be the difference between your changes being merged or ignored. These projects essentially necessitate the creation of PR descriptions, as development practices are strictly enforced by tooling and the culture of collaboration. These practices dramatically help improve the quality of the overall project.
@@ -23,7 +21,7 @@ For me, descriptions are a critical part of Pull Requests. In case you’re not 
 
 By definition, a Pull Request is a proposal to change code in a particular way. If your change is correct, then your code will likely live in the application for a long time. You will always be able to go back and look at the result of merging the pull request. But what you will not find in the source code is why the change was made. What prompted the change? Were you under pressure to fix a bug? Was this change a team decision that you implemented? All of this information is context. It provides the answer, and sometimes is the only defense against the inevitable question that gets asked: Why on earth is this code even here?
 
-![A PR with no description has no context](/img/2020-7-reasons-for-good-pull-request-descriptions-empty-pr.png)
+![A PR with no description has no context](empty-pr.png)
 _A Pull Request with no description lacks important context. For example, why did this PR change 53 files at once? Refactoring? New feature? Hard to tell at a glance._
 
 ## 2. Descriptions prevent unnecessary code
@@ -42,7 +40,7 @@ These kinds of side changes are surprisingly devious. They can slow down code re
 
 Especially on large projects it’s not possible to always come up with the best available solution on your own. In most cases there will always be someone who will know an area of source code better than you. In other cases you are that person for a particular stretch of code, yet others are making imperfect changes to it. Given the constant churn and evolution of the programming ecosystems and it’s not hard to see why it’s simply impossible to always coming up with the best possible solution when making a PR. Yet it is also in everyone’s interest that others have an opportunity to suggest alternative and possibly better solutions to what was suggested in a PR. Without a description that draws the reviewer’s attention to the approach, you’re significantly reducing the chances that a better solution will emerge through code reviews.
 
-![Recording of a long discussion on a PR](/img/2020-7-reasons-for-good-pull-request-descriptions-long-responses.png)
+![Recording of a long discussion on a PR](long-responses.png)
 _A good description can lead to great discussion on a PR. I recently experienced it when contributing to Ink._
 
 ## 5. Descriptions makes reviewing easier
@@ -69,14 +67,14 @@ Requiring a good PR description is a small investment that pays big dividends. G
   <h2>Related article:</h2>
   <div class="posts-list-entry">
     <h3 class="posts-list-title">
-      <a href="/blog/2020-05-25-github-actions-pull_request/">
+      <a href="/blog/2020-05-26-github-actions-pull_request/">
         Gihub Actions: a deep dive into pull_request
       </a>
     </h3>
     <p>
       We have put together specific behaviors and information that you’ll need to use pull_request as a trigger for your Github Actions workflow.
     </p>
-    <a href="/blog/2020-05-25-github-actions-pull_request/" class="post-link">
+    <a href="/blog/2020-05-26-github-actions-pull_request/" class="post-link">
       Continue reading
       <span class="post-link--arrow">→</span>
     </a>
