@@ -1,15 +1,13 @@
 ---
-templateKey: blog-post
 title: >-
   Announcing GraphGen: the search for the graph factory
-date: 2022-02-21T05:00:00.000Z
 author: Charles Lowell
 description: >-
   Creating fake datasets that resemble real ones is nearly impossible today. That's why Frontside is working on a tool that can generate graphs with coherent data and relationships
 tags:
   - dx
   - simulation
-img: /img/2022-graphgetn.png
+image: graphgen.png
 ---
 
 From the very beginning of my career until the present day I have relied on fake data. That may sound odd to the uninitiated—especially in a world where that seems overrun with fake data—but it’s true for me and every other developer I know. We couldn’t do what we do—build reliable applications that work every time—without high-quality fake data. 
