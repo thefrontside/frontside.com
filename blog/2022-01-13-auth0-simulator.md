@@ -1,5 +1,4 @@
 ---
-templateKey: blog-post
 title: >-
   Simplified local development and testing with Auth0 simulation
 date: 2022-01-13T05:00:00.000Z
@@ -11,7 +10,7 @@ tags:
   - simulation
   - testing
   - javascript
-img: /img/2022-auth-simulator.png
+image: auth-simulator.png
 ---
 
 Auth0 is an excellent service that lets you focus on your app instead of trying to stay up to date with the latest safe and secure authentication practices. However, what’s not so great is having to use Auth0 as part of your local development process or within end-to-end tests.
