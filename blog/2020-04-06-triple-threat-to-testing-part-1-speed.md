@@ -1,15 +1,13 @@
 ---
-templateKey: blog-post
 title: >-
   The Triple Threat to Testing — Part 1: Speed
-date: 2020-04-06T05:00:00.000Z
 author: Charles Lowell, Robbie Pitts, Taras Mankovski, Jeffrey Cherewaty, Jorge Lainfiesta
 description: >-
   Speed, reliability, and relevance constitute the mains pillars of a robust testing strategy. The faster a test suite can diagnose an issue in its application, the more value it renders. In this article, we navigate through the most significant causes of slow tests and suggest ideas to deal with them.
 tags:
   - testing
   - dx
-img: /img/2020-triple-threat-to-testing-part-1-speed.png
+image: triple-threat-to-testing-part-1-speed.png
 ---
 
 Writing tests is like paying taxes. And much like how attitudes vary towards paying taxes, attitudes diverge widely in development circles about writing tests. Some people dread paying their taxes; much in the same way as some developers would rather cut off their arm than spend time testing an app. Other people willingly pay their taxes because of the benefits they confer, like drivable roads, health care and national defense. In similar fashion there are those developers that look forward to testing because of the protection in gives against regressions and the confidence it inspires when making changes. You'll even find people who argue that there’s something inherently good in paying taxes and writing tests—a moral obligation if you will.
@@ -140,7 +138,7 @@ We think it’s worth the effort to improve testing, as speedy test suites short
 
 Speed is critical to a healthy testing strategy, but it won't work without the other pillars of the testing triple threat. Next we focus on the second essential make-or-break factor in testing: reliability. Tests can be flaky, but there are strategies you can take now to detect, fix, and even prevent having non-deterministic tests in your application.
 
-Keep on reading, [The Triple Threat to Testing — Part 2: Reliability](/blog/2020-triple-threat-to-testing-part-2-reliability/).
+Keep on reading, [The Triple Threat to Testing — Part 2: Reliability](/blog/2020-04-30-triple-threat-to-testing-part-2-reliability/).
 
 ---
 
