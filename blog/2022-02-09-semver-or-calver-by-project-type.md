@@ -1,14 +1,12 @@
 ---
-templateKey: blog-post
 title: >-
   When to use SemVer or CalVer: project type considerations
-date: 2022-02-09T05:00:00.000Z
 author: Jacob Bolda
 description: >-
   Choosing a versioning scheme helps you manage the understanding and expectations of your project over time. In this article, you'll learn about how to decide on whether to use SemVer or CalVer according to your project type. 
 tags:
   - dx
-img: /img/2022-versioning.png
+image: versioning.png
 ---
 
 Reaching meaningful versions is more than setting a number within a package's main file (e.g., package.json, pubspec.yaml, etc.). Versioning aims to build up quality metadata that humans and computers can understand. With this metadata, you can understand the impact a change will have downstream and communicate with users more effectively. 
