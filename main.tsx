@@ -17,6 +17,7 @@ import { twindPlugin } from "./plugins/twind.ts";
 import { config } from "./twind.config.ts";
 import { blogPostRoute } from "./routes/blog-post-route.tsx";
 import { blogIndexRoute } from "./routes/blog-index-route.tsx";
+import { blogTagRoute } from "./routes/blog-tag-route.tsx";
 
 await main(function* () {
   let proxies = proxySites();
@@ -26,6 +27,7 @@ await main(function* () {
       route("/", indexRoute()),
       route("/blog", blogIndexRoute()),
       route("/blog/:id", yield* blogPostRoute()),
+      route("/blog/tags/:tag", blogTagRoute()),
       route("/blog(.*)", assetsRoute("blog")),
       route("/backstage", backstageServicesRoute()),
       route("/dx-consulting", dxConsultingServicesRoute()),
