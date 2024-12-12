@@ -16,6 +16,7 @@
     "npm:@twind/preset-typography@1.0.7": "1.0.7_@twind+core@1.1.3",
     "npm:@types/hast@3": "3.0.4",
     "npm:hast-util-from-html@*": "2.0.3",
+    "npm:hast-util-select@*": "6.0.1",
     "npm:hast-util-select@6.0.1": "6.0.1",
     "npm:hast-util-to-html@*": "9.0.0",
     "npm:hast-util-to-html@9.0.0": "9.0.0",
