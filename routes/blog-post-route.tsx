@@ -52,7 +52,7 @@ export function* blogPostRoute(): Operation<JSXHandler> {
               <div class="flex flex-wrap gap-2 mb-6">
                 {post.tags.map((tag) => (
                   <span class="px-3 py-1 border border-blue-300 rounded-full text-blue-primary text-sm capitalize">
-                    {tag}
+                    <a href={`../tags/${tag}`}>{tag}</a>
                   </span>
                 ))}
               </div>
