@@ -1,6 +1,7 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@libs/xml@*": "6.0.3",
     "jsr:@std/cli@^1.0.6": "1.0.7",
     "jsr:@std/encoding@^1.0.5": "1.0.5",
     "jsr:@std/fmt@^1.0.3": "1.0.3",
@@ -28,6 +29,9 @@
     "npm:remark-mdx-frontmatter@5.0.0": "5.0.0"
   },
   "jsr": {
+    "@libs/xml@6.0.3": {
+      "integrity": "85506d5c61b0110d26dbb02059ce5a543226c3501fccbc7692e2ba4921f95567"
+    },
     "@std/cli@1.0.7": {
       "integrity": "98359df9df586a69015ba570305183b0cb9e7d53c05ea2016ef9a3e77e82c7cd"
     },

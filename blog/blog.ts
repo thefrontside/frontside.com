@@ -12,6 +12,7 @@ export interface Blog {
   slice(...args: Parameters<Array<unknown>["slice"]>): BlogPost[];
   get(id: string): BlogPost | undefined;
   getPosts(): BlogPost[];
+  getTags(): string[];
   getPostsByTag(tag: string): BlogPost[];
 }
 
@@ -120,6 +121,7 @@ export function* initBlog(): Operation<void> {
     slice: (...args) => values.slice(...args),
     get: (id) => posts.get(id),
     getPosts: () => values,
+    getTags: () => [...tags.keys()],
     getPostsByTag: (tag) => tags.get(tag.toLowerCase()) ?? [],
   });
 }

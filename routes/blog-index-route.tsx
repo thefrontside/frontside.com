@@ -1,8 +1,10 @@
+import { JSXElement } from "revolution/jsx-runtime";
 import { useBlog } from "../blog/blog.ts";
+import { sitemapped } from "../plugins/sitemap.ts";
 import { useAppHtml } from "./app.html.tsx";
 
 export function blogIndexRoute() {
-  return function* () {
+  return sitemapped<JSXElement>(function* () {
     let blog = yield* useBlog();
 
     let [latest] = blog.slice(0, 1);
@@ -48,5 +50,5 @@ export function blogIndexRoute() {
         </div>
       </App>
     );
-  };
+  });
 }

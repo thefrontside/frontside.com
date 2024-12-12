@@ -1,9 +1,10 @@
-import type { JSXHandler } from "revolution";
+import type { JSXElement } from "revolution";
 
 import { useAppHtml } from "../../app.html.tsx";
+import { sitemapped } from "../../../plugins/sitemap.ts";
 
-export function resideoBackstageCaseStudyRoute(): JSXHandler {
-  return function* () {
+export function resideoBackstageCaseStudyRoute() {
+  return sitemapped<JSXElement>(function* () {
     let greenblueIndicatorScreenshot =
       "../../../assets/img/2021-casestudy-resideo-backstage/backstage-indicator-catalog.png";
     let scaffoldScreenshot =
@@ -138,9 +139,9 @@ export function resideoBackstageCaseStudyRoute(): JSXHandler {
               Adopt Backstage with Frontside
             </a>
           </section>
-        </article>
         <script defer src="//embed.typeform.com/next/embed.js"></script>
+        </article>
       </AppHtml>
     );
-  };
+  });
 }

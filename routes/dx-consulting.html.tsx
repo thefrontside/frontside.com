@@ -1,9 +1,9 @@
-import type { JSXHandler } from "revolution";
-
 import { useAppHtml } from "./app.html.tsx";
+import { sitemapped } from "../plugins/sitemap.ts";
+import { JSXElement } from "revolution/jsx-runtime";
 
-export function dxConsultingServicesRoute(): JSXHandler {
-  return function* () {
+export function dxConsultingServicesRoute() {
+  return sitemapped<JSXElement>(function* () {
     let heroAnimation = "../assets/animations/consulting-hero.json";
     let frustrationAnimation =
       "../assets/animations/consulting-frustration.json";
@@ -457,5 +457,5 @@ export function dxConsultingServicesRoute(): JSXHandler {
         </article>
       </AppHtml>
     );
-  };
+  });
 }

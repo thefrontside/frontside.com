@@ -6,7 +6,8 @@ description: >-
   Kubernetes is on the rise and having it in your toolkit can get you a long way. In this article, Min shows us how to set up a MicoK8s in your local machine.
 tags:
   - kubernetes
-  - CI/CD
+  - Continuous Integration
+  - Continuous Deployment
 image: hero.png
 ---
 

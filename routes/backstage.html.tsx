@@ -1,9 +1,10 @@
-import type { JSXHandler } from "revolution";
+import type { JSXElement } from "revolution";
 
 import { useAppHtml } from "./app.html.tsx";
+import { sitemapped } from "../plugins/sitemap.ts";
 
-export function backstageServicesRoute(): JSXHandler {
-  return function* () {
+export function backstageServicesRoute() {
+  return sitemapped<JSXElement>(function* () {
     let backstageDomain = "../assets/img/q3-2021/backstage-map-domain.png";
     let deriskBackstage = "../assets/animations/backstage-derisk.json";
     let backstageDx = "../assets/img/q3-2021/backstage-integrate-dx.png";
@@ -229,5 +230,5 @@ export function backstageServicesRoute(): JSXHandler {
         </article>
       </AppHtml>
     );
-  };
+  });
 }

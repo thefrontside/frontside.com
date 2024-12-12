@@ -1,10 +1,10 @@
-import type { Operation } from "effection";
-import type { JSXHandler } from "revolution";
+import type { JSXElement } from "revolution";
 
 import { useAppHtml } from "./app.html.tsx";
+import { sitemapped } from "../plugins/sitemap.ts";
 
-export function pluginWorkshopRoute(): JSXHandler {
-  return function* () {
+export function pluginWorkshopRoute() {
+  return sitemapped<JSXElement>(function* () {
     let logoHumanitec = "../assets/client-logos/logo-humanitec.svg";
     let logoHP = "../assets/client-logos/logo-HP-black.svg";
     let logoIndeed = "../assets/client-logos/logo-indeed.svg";
@@ -804,7 +804,7 @@ export function pluginWorkshopRoute(): JSXHandler {
         </article>
       </AppHtml>
     );
-  };
+  });
 }
 function H2(
   { children, class: classes = " " }: {

@@ -1,6 +1,6 @@
 import { main, suspend } from "effection";
 
-import { createRevolution, route } from "revolution";
+import { createRevolution } from "revolution";
 
 // Routes
 import { proxyRoute } from "./routes/proxy-route.ts";
@@ -11,6 +11,7 @@ import { dxConsultingServicesRoute } from "./routes/dx-consulting.html.tsx";
 import { pluginWorkshopRoute } from "./routes/advanced-backstage-plugin-development-route.tsx";
 import { resideoBackstageCaseStudyRoute } from "./routes/work/case-studies/case-study-resideo.html.tsx";
 
+import { route, sitemapPlugin } from "./plugins/sitemap.ts";
 import { etagPlugin } from "./plugins/etag.ts";
 import { currentRequestPlugin } from "./plugins/current-request.ts";
 import { twindPlugin } from "./plugins/twind.ts";
@@ -43,12 +44,14 @@ await main(function* () {
       route("/graphgen(.*)", proxyRoute(proxies.graphgen)),
       route("/assets(.*)", assetsRoute("assets")),
       route("/interactors(.*)", proxyRoute(proxies.interactors)),
+
       proxyRoute(proxies.legacy),
     ],
 
     plugins: [
-      etagPlugin(),
       currentRequestPlugin(),
+      sitemapPlugin(),
+      etagPlugin(),
       twindPlugin({ config }),
     ],
   });
@@ -65,6 +68,7 @@ function proxySites() {
     effection: {
       prefix: "effection",
       website: Deno.env.get("EFFECTION_URL") ?? "https://effection.deno.dev",
+      sitemap: true,
     },
     interactors: {
       prefix: "interactors",
@@ -74,6 +78,7 @@ function proxySites() {
     graphgen: {
       prefix: "graphgen",
       website: Deno.env.get("GRAPHGEN_URL") ?? "https://graphgen.deno.dev",
+      sitemap: true,
     },
     legacy: {
       prefix: "",
