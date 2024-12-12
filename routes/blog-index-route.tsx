@@ -20,7 +20,7 @@ export function blogIndexRoute() {
 
     return (
       <App>
-        <div class="prose">
+        <div class="prose mx-auto">
           <section>
             <h1>Latest</h1>
             <a href={`/blog/${latest.id}`}>{latest.title}</a>
