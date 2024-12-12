@@ -3,7 +3,6 @@ import remarkGfm from "npm:remark-gfm@4.0.0";
 import remarkFrontmatter from "npm:remark-frontmatter@5.0.0";
 import remarkMdxFrontmatter from "npm:remark-mdx-frontmatter@5.0.0";
 import rehypePrismPlus from "npm:rehype-prism-plus@1.5.1";
-import { selectAll } from "npm:hast-util-select@6.0.1";
 import { Fragment, jsx, JSXElement, jsxs } from "revolution/jsx-runtime";
 import { call, createContext, Operation } from "effection";
 
@@ -84,31 +83,10 @@ export function* initBlog(): Operation<void> {
 
     posts.set(id, {
       ...frontmatter,
-      image: frontmatter.image ? `${id}/${frontmatter.image}` : undefined,
       id,
       date,
       content: () => {
-        let element = mod.default({}) as JSXElement;
-        let elements = selectAll("[href],[src]", element);
-
-        for (let element of elements) {
-          let properties = element.properties!;
-
-          if (
-            typeof properties.href === "string" &&
-            !properties.href.startsWith("/")
-          ) {
-            if (!properties.href.match(/^\w+:/)) {
-              properties.href = `${id}/${properties.href}`;
-            }
-          }
-          if (typeof properties.src === "string") {
-            if (!properties.src.match(/^\w+:/)) {
-              properties.src = `${id}/${properties.src}`;
-            }
-          }
-        }
-        return element;
+	return mod.default({});
       },
     });
   }

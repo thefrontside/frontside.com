@@ -12,7 +12,7 @@ import { initBlog, useBlog } from "../blog/blog.ts";
 export function* blogPostRoute(): Operation<JSXHandler> {
   yield* initBlog();
 
-  return clean(function* route() {
+  return directory(function* route() {
     let { id } = yield* useParams<{ id: string }>();
 
     let blog = yield* useBlog();
@@ -69,11 +69,13 @@ export function* blogPostRoute(): Operation<JSXHandler> {
   });
 }
 
-// strip `/` off the end of our blog urls
-function clean<T>(middleware: Middleware<Request, T>): Middleware<Request, T> {
+// ensure that the blog post entry ends with `/`. That way, all JS,CSS, and image
+// assets will be loaded relative to the blog post and self containment is
+// trivial.
+function directory<T>(middleware: Middleware<Request, T>): Middleware<Request, T> {
   return function* (request, next) {
-    if (request.url.endsWith("/")) {
-      return yield* respondRedirect(request.url.replace(/\/$/, ""));
+    if (!request.url.endsWith("/")) {
+      return yield* respondRedirect(`${request.url}/`);
     } else {
       return yield* middleware(request, next);
     }
