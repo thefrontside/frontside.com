@@ -6,12 +6,9 @@ import {
   useParams,
 } from "revolution";
 import { useAppHtml } from "./app.html.tsx";
-import { Operation } from "effection";
-import { initBlog, useBlog } from "../blog/blog.ts";
+import { useBlog } from "../blog/blog.ts";
 
-export function* blogPostRoute(): Operation<JSXHandler> {
-  yield* initBlog();
-
+export function blogPostRoute(): JSXHandler {
   return directory(function* route() {
     let { id } = yield* useParams<{ id: string }>();
 

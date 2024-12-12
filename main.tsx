@@ -18,15 +18,18 @@ import { config } from "./twind.config.ts";
 import { blogPostRoute } from "./routes/blog-post-route.tsx";
 import { blogIndexRoute } from "./routes/blog-index-route.tsx";
 import { blogTagRoute } from "./routes/blog-tag-route.tsx";
+import { initBlog } from "./blog/blog.ts";
 
 await main(function* () {
   let proxies = proxySites();
+
+  yield* initBlog();
 
   let revolution = createRevolution({
     app: [
       route("/", indexRoute()),
       route("/blog", blogIndexRoute()),
-      route("/blog/:id", yield* blogPostRoute()),
+      route("/blog/:id", blogPostRoute()),
       route("/blog/tags/:tag", blogTagRoute()),
       route("/blog(.*)", assetsRoute("blog")),
       route("/backstage", backstageServicesRoute()),
