@@ -3,6 +3,7 @@ import remarkGfm from "npm:remark-gfm@4.0.0";
 import remarkFrontmatter from "npm:remark-frontmatter@5.0.0";
 import remarkMdxFrontmatter from "npm:remark-mdx-frontmatter@5.0.0";
 import rehypePrismPlus from "npm:rehype-prism-plus@1.5.1";
+import rehypeSlug from "npm:rehype-slug@5.1.0";
 import { Fragment, jsx, JSXElement, jsxs } from "revolution/jsx-runtime";
 import { call, createContext, Operation } from "effection";
 import { existsSync } from "jsr:@std/fs";
@@ -83,6 +84,7 @@ export function* initBlog(): Operation<void> {
           remarkGfm,
         ],
         rehypePlugins: [
+	  rehypeSlug,
           [rehypePrismPlus, { showLineNumbers: true }],
         ],
       })
