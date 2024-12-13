@@ -20,7 +20,7 @@ That’s why we say more than ever before: *Effection is Structured Concurrency 
 
 Here’s an overview of some key features you’ll find in Effection 3.0
 
-\- [Excellent TypeScript Experience](#%EF%B8%8F-first-class-typescript-experience): TypeScript types have been carefully re-imagined to be as small and helpful as possible.
+\- [Excellent TypeScript Experience](#%EF%B8%8F-excellent-typescript-experience): TypeScript types have been carefully re-imagined to be as small and helpful as possible.
 
 \- [Embrace of JavaScript](#%EF%B8%8F-embrace-the-javascript): Version 3 is easier to learn and safer to integrate into your projects than ever because of its dedication to following JavaScript standards in spirit and form.
 
