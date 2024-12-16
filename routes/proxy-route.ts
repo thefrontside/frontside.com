@@ -1,5 +1,9 @@
 import type { HTTPMiddleware } from "revolution";
 import { call, Operation } from "effection";
+import { fromHtml } from "npm:hast-util-from-html";
+import { toHtml } from "npm:hast-util-to-html";
+import { selectAll } from "npm:hast-util-select";
+import { posixNormalize } from "https://deno.land/std@0.201.0/path/_normalize.ts";
 
 export interface ProxyRouteOptions {
   website: string;
@@ -22,28 +26,27 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
 
     let base = new URL(`/${options.prefix}`, request.url);
 
-    let headers: Record<string, string> = {
-      "X-Base-Url": base.toString(),
-    };
-    for (let [key, value] of request.headers.entries()) {
-      headers[key] = value;
-    }
-
-    let response = yield* call(fetch(target, {
-      redirect: "manual",
-      headers,
-    }));
+    let response = yield* call(() =>
+      fetch(target, {
+        redirect: "manual",
+      })
+    );
 
     if (response.status === 301) {
       let location = response.headers.get("location");
       if (location?.startsWith(String(website))) {
         let headers: Record<string, string> = {};
-        for (let [key, value] of request.headers.entries()) {
+        for (let [key, value] of response.headers.entries()) {
           headers[key] = value;
         }
 
         let url = new URL(request.url);
-        headers.location = location.replace(target.origin, url.origin);
+
+        let loc = new URL(location);
+        if (!options.root) {
+          loc.pathname = `${options.prefix}${loc.pathname}`;
+        }
+        headers.location = loc.toString().replace(target.origin, url.origin);
 
         response = new Response(null, {
           status: response.status,
@@ -51,6 +54,36 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
           headers,
         });
       }
+    } else if (
+      response.headers.get("Content-Type")?.match(/html/) && !options.root
+    ) {
+      let body = yield* call(() => response.text());
+      let tree = fromHtml(body);
+
+      let elements = selectAll('[href^="/"],[src^="/"]', tree);
+
+      for (let element of elements) {
+        let properties = element.properties!;
+
+        if (properties.href) {
+          properties.href = posixNormalize(
+            `${base.pathname}${properties.href}`,
+          );
+        }
+        if (properties.src) {
+          properties.src = posixNormalize(`${base.pathname}${properties.src}`);
+        }
+      }
+      let headers: Record<string, string> = {};
+      for (let [key, value] of response.headers.entries()) {
+        headers[key] = value;
+      }
+
+      response = new Response(toHtml(tree), {
+        status: response.status,
+        statusText: response.statusText,
+        headers,
+      });
     }
 
     return response;
