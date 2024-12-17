@@ -32,7 +32,7 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
       })
     );
 
-    if (response.status === 301) {
+    if ([301, 302, 307, 308].includes(response.status)) {
       let location = response.headers.get("location");
       if (location?.startsWith(String(website))) {
         let headers: Record<string, string> = {};
