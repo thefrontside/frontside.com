@@ -18,29 +18,104 @@ export function blogIndexRoute() {
       twitterXImage: "/assets/index-meta-home-cloud-native.png",
     });
 
+    console.log(recent);
+
     return (
       <App>
-        <div class="prose mx-auto">
-          <section>
+        <div class="flex flex-col justify-self-center !max-w-none prose">
+          <section class="mb-4 p-4">
             <h1>Latest</h1>
-            <a href={`/blog/${latest.id}`}>{latest.title}</a>
+            <a
+              class="flex flex-col no-underline prose-lg"
+              href={`/blog/${latest.id}`}
+            >
+              <img
+                class="flex-shrink-0 w-[300px] h-auto"
+                src={latest.image
+                  ? `blog/${latest.id}/${latest.image}`
+                  : "/assets/fs-logo-no-text.svg"}
+                alt="Blog image"
+              />
+              <div class="max-w-prose">
+                <span class="bg-blue-primary p-2 rounded-lg text-white">
+                  New
+                </span>
+                <h3 class="font-black text-3xl">{latest.title}</h3>
+                <p>
+                  {latest.author} - {new Intl.DateTimeFormat("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  }).format(latest.date)}
+                </p>
+                <p class="max-w-prose font-normal">{latest.description}</p>
+                <strong>&rarr; Read Article</strong>
+              </div>
+            </a>
           </section>
           <section>
             <h2>Last Three</h2>
-            <ol>
+            <ol class="md:gap-6 lg:gap-11 space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 mx-auto p-4 max-w-7xl">
               {recent.map((post) => (
-                <li>
-                  <a href={`/blog/${post.id}`}>{post.title}</a>
+                <li class="md:mt-0 p-2 md:p-4 border prose">
+                  <a
+                    class="no-underline"
+                    href={`/blog/${post.id}`}
+                  >
+                    <img
+                      class="flex-shrink-0 rounded-lg md:w-[500px] md:h-[200px] object-cover"
+                      src={post.image
+                        ? `blog/${post.id}/${post.image}`
+                        : "/assets/fs-logo-no-text.svg"}
+                      alt="Blog image"
+                    />
+                    <div>
+                      <h3 class="font-black text-3xl">{post.title}</h3>
+                      <p>
+                        {post.author} - {new Intl.DateTimeFormat("en-US", {
+                          month: "long",
+                          day: "numeric",
+                          year: "numeric",
+                        }).format(latest.date)}
+                      </p>
+                      <p class="max-w-prose font-normal">
+                        {post.description}
+                      </p>
+                      <strong>&rarr; Read Article</strong>
+                    </div>
+                  </a>
                 </li>
               ))}
             </ol>
           </section>
           <section>
-	    <h2>All</h2>
-            <ol>
+            <h2>All</h2>
+            <ol class="md:gap-6 lg:gap-11 space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 mx-auto p-4 max-w-7xl">
               {blog.getPosts().map((post) => (
-                <li>
-                  <a href={`/blog/${post.id}`}>{post.title}</a>
+                <li class="md:mt-0 p-2 md:p-4 border prose">
+                  <a class="no-underline prose" href={`/blog/${post.id}`}>
+                    <img
+                      class="flex-shrink-0 rounded-lg md:w-[500px] md:h-[200px] object-cover"
+                      src={post.image
+                        ? `blog/${post.id}/${post.image}`
+                        : "/assets/fs-logo-no-text.svg"}
+                      alt="Blog image"
+                    />
+                    <div>
+                      <h3 class="font-black text-3xl">{post.title}</h3>
+                      <p>
+                        {post.author} - {new Intl.DateTimeFormat("en-US", {
+                          month: "long",
+                          day: "numeric",
+                          year: "numeric",
+                        }).format(latest.date)}
+                      </p>
+                      <p class="max-w-prose font-normal">
+                        {post.description}
+                      </p>
+                      <strong>&rarr; Read Article</strong>
+                    </div>
+                  </a>
                 </li>
               ))}
             </ol>
