@@ -70,7 +70,7 @@ export function blogIndexRoute() {
                       alt="Blog image"
                     />
                     <div>
-                      <h3 class="font-black text-3xl">{post.title}</h3>
+                      <h3 class="font-black text-2xl">{post.title}</h3>
                       <p>
                         {post.author} - {new Intl.DateTimeFormat("en-US", {
                           month: "long",
@@ -102,7 +102,7 @@ export function blogIndexRoute() {
                       alt="Blog image"
                     />
                     <div>
-                      <h3 class="font-black text-3xl">{post.title}</h3>
+                      <h3 class="font-black text-2xl">{post.title}</h3>
                       <p>
                         {post.author} - {new Intl.DateTimeFormat("en-US", {
                           month: "long",
