@@ -32,10 +32,10 @@ export function blogPostRoute(): JSXHandler {
 
     return (
       <AppHtml>
-        <article class="p-6 lg:p-0 text-blue-primary">
-          <header class="flex md:flex-row flex-col justify-between mx-auto mb-8 max-w-6xl">
-            <section class="basis-1/2">
-              <h1 class="mb-4 font-black text-2xl md:text-5xl uppercase">
+        <article class="flex flex-col items-center p-6 lg:p-0 text-blue-primary">
+          <header class="flex flex-col justify-center items-center mb-8 max-w-3xl">
+            <section class="p-4 md:p-0">
+              <h1 class="mb-4 max-w-prose font-black text-2xl md:text-4xl uppercase">
                 {post.title}
               </h1>
               <p class="mb-2">{post.author}</p>
@@ -54,9 +54,9 @@ export function blogPostRoute(): JSXHandler {
                 ))}
               </div>
             </section>
-            <img src={image} class="rounded-xl w-1/3" />
+            <img src={image} class="rounded-xl" />
           </header>
-          <section class="mx-auto text-blue-primary prose">
+          <section class="mx-auto text-blue-primary lg:prose-xl prose">
             <link rel="stylesheet" href="/assets/prism-atom-one-dark.css" />
             <post.content />
           </section>
@@ -69,7 +69,9 @@ export function blogPostRoute(): JSXHandler {
 // ensure that the blog post entry ends with `/`. That way, all JS,CSS, and image
 // assets will be loaded relative to the blog post and self containment is
 // trivial.
-function directory<T>(middleware: Middleware<Request, T>): Middleware<Request, T> {
+function directory<T>(
+  middleware: Middleware<Request, T>,
+): Middleware<Request, T> {
   return function* (request, next) {
     if (!request.url.endsWith("/")) {
       return yield* respondRedirect(`${request.url}/`);
