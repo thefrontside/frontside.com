@@ -26,11 +26,11 @@ export function blogIndexRoute() {
           <section class="mb-4 p-4">
             <h1>Latest</h1>
             <a
-              class="flex flex-col no-underline prose-lg"
+              class="flex md:flex-row flex-col no-underline prose-lg"
               href={`/blog/${latest.id}`}
             >
               <img
-                class="flex-shrink-0 w-[300px] h-auto"
+                class="flex-shrink-0 w-[100%] max-w-[500px] h-auto"
                 src={latest.image
                   ? `blog/${latest.id}/${latest.image}`
                   : "/assets/fs-logo-no-text.svg"}
