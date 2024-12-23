@@ -1,1 +1,3941 @@
-{"v":"4.8.0","meta":{"g":"LottieFiles AE 1.0.0","a":"","k":"","d":"","tc":""},"fr":30,"ip":0,"op":230,"w":670,"h":360,"nm":"Branch","ddd":0,"assets":[{"id":"image_0","w":28,"h":28,"u":"","p":"data:image/png;base64,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","e":1},{"id":"image_1","w":28,"h":28,"u":"","p":"data:image/png;base64,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","e":1},{"id":"image_2","w":92,"h":87,"u":"","p":"data:image/png;base64,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","e":1}],"layers":[{"ddd":0,"ind":1,"ty":3,"nm":"Final 2","sr":1.52980132450331,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":1,"k":[{"i":{"x":[0.67],"y":[1]},"o":{"x":[0.33],"y":[0]},"t":0,"s":[0]},{"i":{"x":[0.67],"y":[1]},"o":{"x":[0.33],"y":[0]},"t":113.205,"s":[1]},{"t":229.470198675497,"s":[0]}],"ix":10},"p":{"a":0,"k":[613.631,43.825,0],"ix":2},"a":{"a":0,"k":[278.631,-136.175,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":231,"st":0,"bm":0},{"ddd":0,"ind":2,"ty":2,"nm":"Bolita_Azul_Branch.png 35","cl":"png","parent":49,"refId":"image_0","sr":1.52980132450331,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.67,"y":1},"o":{"x":0.167,"y":0.167},"t":33.655,"s":[-7.846,70.94,0],"to":[5.015,-0.844,0],"ti":[-1.363,2.162,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":71.901,"s":[22.245,65.873,0],"to":[0.395,-0.626,0],"ti":[0,0,0]},{"t":229.470198675497,"s":[23.495,66.123,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":231,"st":0,"bm":0},{"ddd":0,"ind":3,"ty":2,"nm":"Bolita_Azul_Branch.png 25","cl":"png","parent":49,"refId":"image_0","sr":1.52980132450331,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":0,"s":[-278.146,135.948,0],"to":[1.684,-2.222,0],"ti":[-70.867,3.217,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":16.463,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":31.558,"s":[-48.031,74.388,0],"to":[53.933,-5.56,0],"ti":[-6.697,0.575,0]},{"t":36.7162083609007,"s":[-7.846,70.94,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":231,"st":0,"bm":0},{"ddd":0,"ind":4,"ty":2,"nm":"Bolita_Azul_Branch.png 18","cl":"png","parent":49,"refId":"image_0","sr":1.52980132450331,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":36.716,"s":[-21.346,56.937,0],"to":[1.873,-0.157,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":55.072,"s":[-10.111,55.993,0],"to":[0,0,0],"ti":[1.873,-0.157,0]},{"t":229.470198675497,"s":[-21.346,56.937,0]}],"ix":2},"a":{"a":0,"k":[14,14,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":231,"st":0,"bm":0},{"ddd":0,"ind":5,"ty":2,"nm":"Bolita_Azul_Branch.png 21","cl":"png","parent":49,"refId":"image_0","sr":1.46153846153846,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.33,"y":0},"t":35.077,"s":[22.245,65.873,0],"to":[0.395,-0.626,0],"ti":[-110.932,166.431,0]},{"t":96.4613431470307,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[13.958,27.959,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":95,"st":35.0769230769231,"bm":0},{"ddd":0,"ind":6,"ty":2,"nm":"Bolita_Azul_Branch.png 19","cl":"png","parent":47,"refId":"image_0","sr":1.44776119402985,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":32.299,"s":[100]},{"t":94.5522388059701,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.189,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":32.299,"s":[41.714,65.476,0],"to":[17.722,1.482,0],"ti":[-33.258,-9.643,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":51.934,"s":[110.619,94.537,0],"to":[37.185,10.782,0],"ti":[-70.816,30.873,0]},{"t":94.5522388059701,"s":[269.562,83.031,0]}],"ix":2},"a":{"a":0,"k":[14.444,28,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,0.833]},"o":{"x":[0.167,0.167,0.167],"y":[0.167,0.167,0.167]},"t":32.299,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,0.833]},"o":{"x":[0.167,0.167,0.167],"y":[0.167,0.167,0.167]},"t":85.866,"s":[50,50,100]},{"t":94.5522388059701,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":-1,"op":96,"st":27.955223880597,"bm":0},{"ddd":0,"ind":7,"ty":2,"nm":"Bolita_Azul_Branch.png 20","cl":"png","parent":49,"refId":"image_0","sr":1.14925373134328,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[3.815,53.409,0],"ix":2},"a":{"a":0,"k":[14,14,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":231,"st":0,"bm":0},{"ddd":0,"ind":8,"ty":2,"nm":"Bolita_Azul_Branch.png 22","cl":"png","parent":49,"refId":"image_0","sr":1.52980132450331,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":0,"s":[13.798,34.914,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":38.246,"s":[13.617,34.241,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":55.072,"s":[12.596,40.793,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":108.616,"s":[13.29,34.423,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":168.277,"s":[14.073,34.196,0],"to":[0,0,0],"ti":[0,0,0]},{"t":229.470198675497,"s":[13.798,34.914,0]}],"ix":2},"a":{"a":0,"k":[14,14,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":231,"st":0,"bm":0},{"ddd":0,"ind":9,"ty":2,"nm":"Bolita_Azul_Branch.png 34","cl":"png","parent":47,"refId":"image_0","sr":1.16759776536313,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":-0.189,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.67,"y":1},"o":{"x":0.167,"y":0.167},"t":22,"s":[16.661,60.752,0],"to":[0,0,0],"ti":[-37.977,-3.176,0]},{"t":54.6921514828113,"s":[41.756,65.475,0]}],"ix":2},"a":{"a":0,"k":[14.444,28,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":22,"op":231,"st":18.4972067039106,"bm":0},{"ddd":0,"ind":10,"ty":2,"nm":"Bolita_Azul_Branch.png 23","cl":"png","parent":49,"refId":"image_0","sr":1.52980132450331,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":38.246,"s":[-11.172,39.853,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":55.072,"s":[-4.283,50.232,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":88.728,"s":[-2.947,49.618,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":171.337,"s":[-7.564,44.118,0],"to":[0,0,0],"ti":[0,0,0]},{"t":229.470198675497,"s":[-11.172,39.853,0]}],"ix":2},"a":{"a":0,"k":[14,14,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":231,"st":0,"bm":0},{"ddd":0,"ind":11,"ty":2,"nm":"Bolita_Azul_Branch.png 24","cl":"png","parent":49,"refId":"image_0","sr":1.52980132450331,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":0,"s":[-1.976,24.329,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":36.716,"s":[-1.976,24.329,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":55.072,"s":[-1.748,42.327,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":107.087,"s":[-1.886,34.95,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":152.981,"s":[-1.87,32.953,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":189.694,"s":[-1.939,26.816,0],"to":[0,0,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":211.113,"s":[-1.956,26.476,0],"to":[0,0,0],"ti":[0,0,0]},{"t":229.470198675497,"s":[-1.976,24.329,0]}],"ix":2},"a":{"a":0,"k":[14,14,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":231,"st":0,"bm":0},{"ddd":0,"ind":12,"ty":2,"nm":"Bolita_Azul_Branch.png 41","cl":"png","parent":47,"refId":"image_0","sr":1.9375,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":-61.413,"s":[100]},{"t":35.4621212121212,"s":[50]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-61.413,"s":[21.557,62.917,0],"to":[20.708,-0.238,0],"ti":[-18.781,-8.728,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-38.75,"s":[78.437,82.818,0],"to":[60.01,27.889,0],"ti":[-59.075,29.82,0]},{"t":35.4621212121212,"s":[271.265,80.207,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":-61.413,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":-3.288,"s":[45,45,100]},{"t":35.4621212121212,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":0,"op":36,"st":-61.4128787878788,"bm":0},{"ddd":0,"ind":13,"ty":2,"nm":"Bolita_Azul_Branch.png 36","cl":"png","parent":47,"refId":"image_0","sr":1.9375,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":169,"s":[100]},{"t":265.875,"s":[50]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":169,"s":[21.557,62.917,0],"to":[20.708,-0.238,0],"ti":[-18.781,-8.728,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":191.663,"s":[78.437,82.818,0],"to":[60.01,27.889,0],"ti":[-59.075,29.82,0]},{"t":265.875,"s":[271.265,80.207,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":169,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":227.125,"s":[45,45,100]},{"t":265.875,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":169,"op":231,"st":169,"bm":0},{"ddd":0,"ind":14,"ty":2,"nm":"Bolita_Azul_Branch.png 29","cl":"png","parent":47,"refId":"image_0","sr":2.13333333333333,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":134,"s":[100]},{"t":208.666178377966,"s":[50]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":134,"s":[21.557,62.917,0],"to":[20.708,-0.238,0],"ti":[-18.781,-8.728,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":151.467,"s":[78.437,82.818,0],"to":[60.01,27.889,0],"ti":[-59.075,29.82,0]},{"t":208.666178377966,"s":[271.265,80.207,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":134,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":189.467,"s":[45,45,100]},{"t":208.666178377966,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":134,"op":210.8,"st":134,"bm":0},{"ddd":0,"ind":15,"ty":2,"nm":"Bolita_Azul_Branch.png 28","cl":"png","parent":47,"refId":"image_0","sr":2.13333333333333,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":103,"s":[100]},{"t":177.666178377966,"s":[50]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":103,"s":[21.557,62.917,0],"to":[20.708,-0.238,0],"ti":[-18.781,-8.728,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":120.467,"s":[78.437,82.818,0],"to":[60.01,27.889,0],"ti":[-59.075,29.82,0]},{"t":177.666178377966,"s":[271.265,80.207,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":103,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":162.733,"s":[45,45,100]},{"t":177.666178377966,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":103,"op":179.8,"st":103,"bm":0},{"ddd":0,"ind":16,"ty":2,"nm":"Bolita_Azul_Branch.png 33","cl":"png","parent":47,"refId":"image_0","sr":2.13333333333333,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":72,"s":[100]},{"t":146.666178377966,"s":[50]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":72,"s":[21.557,62.917,0],"to":[20.708,-0.238,0],"ti":[-18.781,-8.728,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":89.467,"s":[78.437,82.818,0],"to":[60.01,27.889,0],"ti":[-59.075,29.82,0]},{"t":146.666178377966,"s":[271.265,80.207,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":72,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":125.334,"s":[45,45,100]},{"t":146.666178377966,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":72,"op":148.8,"st":72,"bm":0},{"ddd":0,"ind":17,"ty":2,"nm":"Bolita_Azul_Branch.png 32","cl":"png","parent":47,"refId":"image_0","sr":1.9,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":29,"s":[100]},{"t":124.000651052821,"s":[50]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":29,"s":[21.557,62.917,0],"to":[20.708,-0.238,0],"ti":[-18.781,-8.728,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":51.224,"s":[78.437,82.818,0],"to":[60.01,27.889,0],"ti":[-59.075,29.82,0]},{"t":124.000651052821,"s":[271.265,80.207,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":29,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":86,"s":[45,45,100]},{"t":124.000651052821,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":29,"op":124,"st":29,"bm":0},{"ddd":0,"ind":18,"ty":2,"nm":"Bolita_Azul_Branch.png 31","cl":"png","parent":47,"refId":"image_0","sr":1.9,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":77,"s":[100]},{"t":172.000651052821,"s":[50]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":77,"s":[21.557,62.917,0],"to":[20.708,-0.238,0],"ti":[-18.781,-8.728,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":99.224,"s":[78.437,82.818,0],"to":[60.01,27.889,0],"ti":[-59.075,29.82,0]},{"t":172.000651052821,"s":[271.265,80.207,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":77,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":139.7,"s":[45,45,100]},{"t":170.100227868487,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":77,"op":172,"st":77,"bm":0},{"ddd":0,"ind":19,"ty":2,"nm":"Bolita_Azul_Branch.png 27","cl":"png","parent":47,"refId":"image_0","sr":1.9,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":55,"s":[100]},{"t":150.000651052821,"s":[50]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":55,"s":[21.557,62.917,0],"to":[20.708,-0.238,0],"ti":[-18.781,-8.728,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":77.224,"s":[78.437,82.818,0],"to":[60.01,27.889,0],"ti":[-59.075,29.82,0]},{"t":150.000651052821,"s":[271.265,80.207,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":55,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":112,"s":[45,45,100]},{"t":150.000651052821,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":55,"op":150,"st":55,"bm":0},{"ddd":0,"ind":20,"ty":2,"nm":"Bolita_Azul_Branch.png 30","cl":"png","parent":47,"refId":"image_0","sr":1.78387096774194,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":86,"s":[100]},{"t":194.81547798446,"s":[50]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":86,"s":[21.557,62.917,0],"to":[20.708,-0.238,0],"ti":[-18.781,-8.728,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":111.456,"s":[78.437,82.818,0],"to":[60.01,27.889,0],"ti":[-59.075,29.82,0]},{"t":194.81547798446,"s":[271.265,80.207,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":86,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":159.138,"s":[45,45,100]},{"t":194.81547798446,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":86,"op":196.6,"st":86,"bm":0},{"ddd":0,"ind":21,"ty":2,"nm":"Bolita_Azul_Branch.png 26","cl":"png","parent":47,"refId":"image_0","sr":2.13333333333333,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":23,"s":[100]},{"t":97.666178377966,"s":[50]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":23,"s":[21.557,62.917,0],"to":[20.708,-0.238,0],"ti":[-18.781,-8.728,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":40.467,"s":[78.437,82.818,0],"to":[60.01,27.889,0],"ti":[-59.075,29.82,0]},{"t":97.666178377966,"s":[271.265,80.207,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":23,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":76.334,"s":[45,45,100]},{"t":97.666178377966,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":23,"op":99.8,"st":23,"bm":0},{"ddd":0,"ind":22,"ty":2,"nm":"Bolita_Rosada_Branch.png 10","cl":"png","parent":48,"refId":"image_1","sr":2.203125,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":-93.332,"s":[100]},{"t":38.8551136363636,"s":[50]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.33,"y":0},"t":-93.332,"s":[-278.146,135.948,0],"to":[16.382,-21.617,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-77.911,"s":[-217.956,88.623,0],"to":[6.421,-21.645,0],"ti":[-17.183,14.645,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-53.953,"s":[-177.807,35.276,0],"to":[29.582,-25.213,0],"ti":[-35.543,15.732,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-12.703,"s":[-79.432,-26.573,0],"to":[32.955,-14.586,0],"ti":[-28.212,22.426,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":25.546,"s":[17.259,-74.105,0],"to":[12.871,-10.231,0],"ti":[-10.654,12.523,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":42.996,"s":[51.725,-109.277,0],"to":[6.888,-8.096,0],"ti":[-4.062,9.823,0]},{"t":54.2769886363636,"s":[69.579,-135.534,0]}],"ix":2},"a":{"a":0,"k":[14.242,28,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.67,0.67,0.67],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":-93.332,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.167,0.167,0.167],"y":[0,0,0]},"t":38.855,"s":[45,45,100]},{"t":54.2769886363636,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":0,"op":55,"st":-93.3323863636364,"bm":0},{"ddd":0,"ind":23,"ty":2,"nm":"Bolita_Rosada_Branch.png 8","cl":"png","parent":48,"refId":"image_1","sr":2.203125,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":137,"s":[100]},{"t":269.1875,"s":[50]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.33,"y":0},"t":137,"s":[-278.146,135.948,0],"to":[16.382,-21.617,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":152.422,"s":[-217.956,88.623,0],"to":[6.421,-21.645,0],"ti":[-17.183,14.645,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":176.379,"s":[-177.807,35.276,0],"to":[29.582,-25.213,0],"ti":[-35.543,15.732,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":217.63,"s":[-79.432,-26.573,0],"to":[32.955,-14.586,0],"ti":[-28.212,22.426,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":255.878,"s":[17.259,-74.105,0],"to":[12.871,-10.231,0],"ti":[-10.654,12.523,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":273.328,"s":[51.725,-109.277,0],"to":[6.888,-8.096,0],"ti":[-4.062,9.823,0]},{"t":284.609375,"s":[69.579,-135.534,0]}],"ix":2},"a":{"a":0,"k":[14.242,28,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.67,0.67,0.67],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":137,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.167,0.167,0.167],"y":[0,0,0]},"t":269.188,"s":[45,45,100]},{"t":284.609375,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":137,"op":231,"st":137,"bm":0},{"ddd":0,"ind":24,"ty":2,"nm":"Bolita_Rosada_Branch.png 2","cl":"png","parent":48,"refId":"image_1","sr":1.94117647058824,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":73,"s":[100]},{"t":189.470588235294,"s":[50]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.33,"y":0},"t":73,"s":[-278.146,135.948,0],"to":[16.382,-21.617,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":86.588,"s":[-217.956,88.623,0],"to":[6.421,-21.645,0],"ti":[-17.183,14.645,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":107.696,"s":[-177.807,35.276,0],"to":[29.582,-25.213,0],"ti":[-35.543,15.732,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":144.043,"s":[-79.432,-26.573,0],"to":[32.955,-14.586,0],"ti":[-28.212,22.426,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":177.744,"s":[17.259,-74.105,0],"to":[12.871,-10.231,0],"ti":[-10.654,12.523,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":193.118,"s":[51.725,-109.277,0],"to":[6.888,-8.096,0],"ti":[-4.062,9.823,0]},{"t":203.058693319023,"s":[69.579,-135.534,0]}],"ix":2},"a":{"a":0,"k":[14.242,28,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.67,0.67,0.67],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":73,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.167,0.167,0.167],"y":[0,0,0]},"t":189.471,"s":[45,45,100]},{"t":203.058693319023,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":73,"op":205,"st":73,"bm":0},{"ddd":0,"ind":25,"ty":2,"nm":"Bolita_Rosada_Branch.png 3","cl":"png","parent":48,"refId":"image_1","sr":1.87974683544304,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":43,"s":[100]},{"t":172.702043357362,"s":[50]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.33,"y":0},"t":43,"s":[-278.146,135.948,0],"to":[16.382,-21.617,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":56.158,"s":[-217.956,88.623,0],"to":[6.421,-21.645,0],"ti":[-17.183,14.645,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":80.687,"s":[-177.807,35.276,0],"to":[29.582,-25.213,0],"ti":[-35.543,15.732,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":122.923,"s":[-79.432,-26.573,0],"to":[32.955,-14.586,0],"ti":[-28.212,22.426,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":162.083,"s":[17.259,-74.105,0],"to":[12.871,-10.231,0],"ti":[-10.654,12.523,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":179.949,"s":[51.725,-109.277,0],"to":[6.888,-8.096,0],"ti":[-4.062,9.823,0]},{"t":191.500162762736,"s":[69.579,-135.534,0]}],"ix":2},"a":{"a":0,"k":[14.242,28,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.67,0.67,0.67],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":43,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.167,0.167,0.167],"y":[0,0,0]},"t":172.702,"s":[45,45,100]},{"t":191.500162762736,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":43,"op":191.5,"st":43,"bm":0},{"ddd":0,"ind":26,"ty":2,"nm":"Bolita_Rosada_Branch.png 4","cl":"png","parent":48,"refId":"image_1","sr":1.94117647058824,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":17,"s":[100]},{"t":133.470588235294,"s":[50]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.33,"y":0},"t":17,"s":[-278.146,135.948,0],"to":[16.382,-21.617,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":30.588,"s":[-217.956,88.623,0],"to":[6.421,-21.645,0],"ti":[-17.183,14.645,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":51.696,"s":[-177.807,35.276,0],"to":[29.582,-25.213,0],"ti":[-35.543,15.732,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":88.043,"s":[-79.432,-26.573,0],"to":[32.955,-14.586,0],"ti":[-28.212,22.426,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":121.744,"s":[17.259,-74.105,0],"to":[12.871,-10.231,0],"ti":[-10.654,12.523,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":137.118,"s":[51.725,-109.277,0],"to":[6.888,-8.096,0],"ti":[-4.062,9.823,0]},{"t":147.058693319023,"s":[69.579,-135.534,0]}],"ix":2},"a":{"a":0,"k":[14.242,28,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.67,0.67,0.67],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":17,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.167,0.167,0.167],"y":[0,0,0]},"t":133.471,"s":[45,45,100]},{"t":147.058693319023,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":17,"op":149,"st":17,"bm":0},{"ddd":0,"ind":27,"ty":2,"nm":"Bolita_Rosada_Branch.png 5","cl":"png","parent":48,"refId":"image_1","sr":2.13829787234043,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":80,"s":[100]},{"t":161.255514462954,"s":[50]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.33,"y":0},"t":80,"s":[-278.146,135.948,0],"to":[16.382,-21.617,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":94.968,"s":[-217.956,88.623,0],"to":[6.421,-21.645,0],"ti":[-17.183,14.645,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":110.081,"s":[-177.807,35.276,0],"to":[29.582,-25.213,0],"ti":[-35.543,15.732,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":136.106,"s":[-79.432,-26.573,0],"to":[32.955,-14.586,0],"ti":[-28.212,22.426,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":160.236,"s":[17.259,-74.105,0],"to":[12.871,-10.231,0],"ti":[-10.654,12.523,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":171.245,"s":[51.725,-109.277,0],"to":[6.888,-8.096,0],"ti":[-4.062,9.823,0]},{"t":178.362092755696,"s":[69.579,-135.534,0]}],"ix":2},"a":{"a":0,"k":[14.242,28,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.67,0.67,0.67],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":80,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.167,0.167,0.167],"y":[0,0,0]},"t":161.256,"s":[45,45,100]},{"t":178.362092755696,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":80,"op":180.5,"st":80,"bm":0},{"ddd":0,"ind":28,"ty":2,"nm":"Bolita_Rosada_Branch.png 6","cl":"png","parent":48,"refId":"image_1","sr":2.13829787234043,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":40,"s":[100]},{"t":138.362092755696,"s":[50]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.33,"y":0},"t":40,"s":[-278.146,135.948,0],"to":[16.382,-21.617,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":54.968,"s":[-217.956,88.623,0],"to":[6.421,-21.645,0],"ti":[-17.183,14.645,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":70.081,"s":[-177.807,35.276,0],"to":[29.582,-25.213,0],"ti":[-35.543,15.732,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":96.106,"s":[-79.432,-26.573,0],"to":[32.955,-14.586,0],"ti":[-28.212,22.426,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":120.236,"s":[17.259,-74.105,0],"to":[12.871,-10.231,0],"ti":[-10.654,12.523,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":131.245,"s":[51.725,-109.277,0],"to":[6.888,-8.096,0],"ti":[-4.062,9.823,0]},{"t":138.362092755696,"s":[69.579,-135.534,0]}],"ix":2},"a":{"a":0,"k":[14.242,28,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.833,0.833,0.833],"y":[0.833,0.833,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":40,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":121.256,"s":[45,45,100]},{"t":138.362092755696,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":40,"op":140.5,"st":40,"bm":0},{"ddd":0,"ind":29,"ty":2,"nm":"Bolita_Rosada_Branch.png 7","cl":"png","parent":48,"refId":"image_1","sr":1.94117647058824,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":0,"s":[100]},{"t":116.470588235294,"s":[50]}],"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.33,"y":0},"t":0,"s":[-278.146,135.948,0],"to":[16.382,-21.617,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":13.588,"s":[-217.956,88.623,0],"to":[6.421,-21.645,0],"ti":[-17.183,14.645,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":34.696,"s":[-177.807,35.276,0],"to":[29.582,-25.213,0],"ti":[-35.543,15.732,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":71.043,"s":[-79.432,-26.573,0],"to":[32.955,-14.586,0],"ti":[-28.212,22.426,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":104.744,"s":[17.259,-74.105,0],"to":[12.871,-10.231,0],"ti":[-10.654,12.523,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":120.118,"s":[51.725,-109.277,0],"to":[6.888,-8.096,0],"ti":[-4.062,9.823,0]},{"t":130.058693319023,"s":[69.579,-135.534,0]}],"ix":2},"a":{"a":0,"k":[14.242,28,0],"ix":1},"s":{"a":1,"k":[{"i":{"x":[0.67,0.67,0.67],"y":[1,1,1]},"o":{"x":[0.33,0.33,0.33],"y":[0,0,0]},"t":0,"s":[100,100,100]},{"i":{"x":[0.833,0.833,0.833],"y":[1,1,1]},"o":{"x":[0.167,0.167,0.167],"y":[0,0,0]},"t":110.647,"s":[45,45,100]},{"t":130.058693319023,"s":[0,0,100]}],"ix":6}},"ao":0,"ip":0,"op":132,"st":0,"bm":0},{"ddd":0,"ind":30,"ty":2,"nm":"Bolita_Azul_Branch.png 16","cl":"png","parent":49,"refId":"image_1","sr":1.74095890410959,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":219.385,"s":[100]},{"t":226.349229812622,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":101,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":126.601,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":150.185,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":229.831675053391,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":101,"op":228.09,"st":101,"bm":0},{"ddd":0,"ind":31,"ty":2,"nm":"Bolita_Azul_Branch.png 15","cl":"png","parent":49,"refId":"image_1","sr":1.74095890410959,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":192.385,"s":[100]},{"t":199.349241256714,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":74,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":99.601,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":123.185,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":202.831675053391,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":74,"op":201.09,"st":74,"bm":0},{"ddd":0,"ind":32,"ty":2,"nm":"Bolita_Azul_Branch.png 14","cl":"png","parent":49,"refId":"image_1","sr":1.67090909090909,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":220.356,"s":[100]},{"t":227.039023431274,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":80,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":109.551,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":136.775,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":228.710909090909,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":80,"op":227.04,"st":80,"bm":0},{"ddd":0,"ind":33,"ty":2,"nm":"Bolita_Azul_Branch.png 17","cl":"png","parent":49,"refId":"image_1","sr":1.57193548387097,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":187.061,"s":[100]},{"t":193.349138753967,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":0,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":39.046,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":75.017,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":196.492749300415,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":194.92,"st":0,"bm":0},{"ddd":0,"ind":34,"ty":2,"nm":"Bolita_Azul_Branch.png 13","cl":"png","parent":49,"refId":"image_1","sr":1.74095890410959,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":118.385,"s":[100]},{"t":125.349236409331,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":0,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":25.601,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":49.185,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":128.831675053391,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":127.09,"st":0,"bm":0},{"ddd":0,"ind":35,"ty":2,"nm":"Bolita_Azul_Branch.png 2","cl":"png","parent":49,"refId":"image_0","sr":1.65967032967033,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":174.703,"s":[100]},{"t":181.339547992461,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":46,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":73.225,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":98.303,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":182.999706604076,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":46,"op":182,"st":97.4497802197802,"bm":0},{"ddd":0,"ind":36,"ty":2,"nm":"Bolita_Azul_Branch.png 3","cl":"png","parent":49,"refId":"image_0","sr":1.83,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":161.65,"s":[100]},{"t":168.969902342708,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":61,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":82.819,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":102.919,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":170.8,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":61,"op":170.8,"st":61,"bm":0},{"ddd":0,"ind":37,"ty":2,"nm":"Bolita_Azul_Branch.png 4","cl":"png","parent":49,"refId":"image_0","sr":1.34883720930233,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":126.256,"s":[100]},{"t":131.651358104513,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.799},"o":{"x":0.33,"y":0},"t":18.349,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":62.386,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":88.489,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":133,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":17,"op":133,"st":52.0697674418605,"bm":0},{"ddd":0,"ind":38,"ty":2,"nm":"Bolita_Azul_Branch.png 5","cl":"png","parent":49,"refId":"image_0","sr":1.73478260869565,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":116.761,"s":[100]},{"t":123.700390628824,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":4,"s":[-278.146,135.948,0],"to":[4.293,-5.664,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":24.996,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.67,"y":1},"o":{"x":0.167,"y":0.299},"t":47.088,"s":[-48.031,74.388,0],"to":[31.995,-1.485,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.33,"y":0},"t":68.187,"s":[6.722,66.822,0],"to":[0,0,0],"ti":[-124.662,185.166,0]},{"t":125.434782608696,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":4,"op":123.7,"st":4,"bm":0},{"ddd":0,"ind":39,"ty":2,"nm":"Bolita_Azul_Branch.png 40","cl":"png","parent":49,"refId":"image_0","sr":2.72857142857143,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":100.06,"s":[100]},{"t":106.999912261963,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-56.473,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-23.941,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":6.029,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":107.241125541126,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":108,"st":-56.4731601731602,"bm":0},{"ddd":0,"ind":40,"ty":2,"nm":"Bolita_Azul_Branch.png 39","cl":"png","parent":49,"refId":"image_0","sr":2.08947368421053,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":40.061,"s":[100]},{"t":47.0000363167645,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-78.767,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-53.854,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-30.904,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":46.6015948963317,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":48,"st":-78.7668261562998,"bm":0},{"ddd":0,"ind":41,"ty":2,"nm":"Bolita_Azul_Branch.png 38","cl":"png","parent":49,"refId":"image_0","sr":1.86603773584906,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":7.06,"s":[100]},{"t":13.9998051524162,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-98.335,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-76.086,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":-55.59,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":13.6277301315037,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":15,"st":-98.3345340194397,"bm":0},{"ddd":0,"ind":42,"ty":2,"nm":"Bolita_Azul_Branch.png 9","cl":"png","parent":49,"refId":"image_0","sr":2.72857142857143,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":173.7,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":206.233,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":236.202,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":337.414285714286,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":173.7,"op":231,"st":173.7,"bm":0},{"ddd":0,"ind":43,"ty":2,"nm":"Bolita_Azul_Branch.png 10","cl":"png","parent":49,"refId":"image_0","sr":2.08947368421053,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":151.6,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":176.512,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":199.463,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":276.968421052632,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":151.6,"op":231,"st":151.6,"bm":0},{"ddd":0,"ind":44,"ty":2,"nm":"Bolita_Azul_Branch.png 11","cl":"png","parent":49,"refId":"image_0","sr":1.86603773584906,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":132.1,"s":[-278.146,135.948,0],"to":[28.75,-37.935,0],"ti":[-39.846,4.862,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":154.348,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":174.845,"s":[-48.031,74.388,0],"to":[122.433,-6.152,0],"ti":[-80.96,124.953,0]},{"t":244.062264150943,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":132.1,"op":231,"st":132.1,"bm":0},{"ddd":0,"ind":45,"ty":2,"nm":"Bolita_Azul_Branch.png 12","cl":"png","parent":49,"refId":"image_0","sr":1.5,"ks":{"o":{"a":1,"k":[{"i":{"x":[0.833],"y":[0.833]},"o":{"x":[0.167],"y":[0.167]},"t":84,"s":[100]},{"t":90,"s":[0]}],"ix":11},"r":{"a":0,"k":-0.923,"ix":10},"p":{"a":1,"k":[{"i":{"x":0.833,"y":0.824},"o":{"x":0.33,"y":0},"t":0,"s":[-278.146,135.948,0],"to":[4.293,-5.664,0],"ti":[-70.867,3.217,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.167,"y":0.167},"t":18.95,"s":[-167.291,75.931,0],"to":[39.846,-4.862,0],"ti":[-39.83,2.001,0]},{"i":{"x":0.67,"y":1},"o":{"x":0.167,"y":0.249},"t":30.625,"s":[-48.031,74.388,0],"to":[53.933,-5.56,0],"ti":[0,0,0]},{"i":{"x":0.833,"y":0.833},"o":{"x":0.33,"y":0},"t":42,"s":[6.722,66.822,0],"to":[0,0,0],"ti":[-114.883,176.95,0]},{"t":90,"s":[278.631,-136.175,0]}],"ix":2},"a":{"a":0,"k":[14.927,28.005,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":90,"st":0,"bm":0},{"ddd":0,"ind":46,"ty":2,"nm":"Portal_Branch.png 3","cl":"png","parent":49,"refId":"image_2","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":-1.467,"ix":10},"p":{"a":0,"k":[-278.146,135.948,0],"ix":2},"a":{"a":0,"k":[46,43.5,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":231,"st":0,"bm":0},{"ddd":0,"ind":47,"ty":4,"nm":"Branch3","parent":49,"sr":1.14925373134328,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":1,"k":[{"i":{"x":[0.67],"y":[1]},"o":{"x":[0.33],"y":[0]},"t":0,"s":[0]},{"i":{"x":[0.67],"y":[1]},"o":{"x":[0.33],"y":[0]},"t":130,"s":[1]},{"t":230.000164879207,"s":[0]}],"ix":10},"p":{"a":0,"k":[21.607,63.126,0],"ix":2},"a":{"a":0,"k":[21.607,63.126,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[-5.324,-1.387],[-5.01,-2.17],[-4.856,-2.425],[0,0],[-2.491,-1.043],[0,0],[-1.263,-0.477],[0,0],[-5.167,-1.593],[-1.315,-0.312],[0,0],[0,0],[-0.662,-0.134],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-0.674,-0.051],[0,0],[-2.705,-0.075],[0,0],[-1.352,0.084],[-5.384,0.637],[0,0],[-1.335,0.236],[0,0],[-1.322,0.301],[0,0],[-2.635,0.628],[0,0],[-1.292,0.408],[0,0],[-2.562,0.885],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[2.569,-0.878],[0,0],[1.305,-0.374],[0,0],[2.65,-0.592],[0,0],[1.337,-0.236],[0,0],[1.349,-0.16],[0,0],[5.428,-0.297],[1.359,0.007],[0,0],[2.711,0.235],[0,0],[0.677,0.058],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0.664,0.148],[0,0],[0,0],[1.299,0.411],[5.089,1.957],[0,0],[1.241,0.565],[0,0],[2.452,1.175],[0,0],[4.966,2.097],[5.188,1.297],[5.307,-0.081],[0.011,0.673],[-0.673,0.011]],"o":[[5.553,-0.033],[5.331,1.386],[5.012,2.172],[0,0],[2.43,1.193],[0,0],[1.225,0.573],[0,0],[5.031,1.99],[1.286,0.421],[0,0],[0,0],[0.658,0.153],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0.673,0.064],[0,0],[2.697,0.26],[0,0],[1.354,0.02],[5.408,-0.246],[0,0],[1.346,-0.147],[0,0],[1.336,-0.223],[0,0],[2.649,-0.566],[0,0],[1.306,-0.362],[0,0],[2.573,-0.853],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-2.556,0.909],[0,0],[-1.29,0.421],[0,0],[-2.635,0.654],[0,0],[-1.323,0.314],[0,0],[-1.337,0.249],[0,0],[-5.397,0.69],[-1.357,0.097],[0,0],[-2.718,-0.05],[0,0],[-0.678,-0.045],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[-0.668,-0.129],[0,0],[0,0],[-1.328,-0.302],[-5.217,-1.554],[0,0],[-1.278,-0.469],[0,0],[-2.525,-1.03],[0,0],[-4.874,-2.377],[-4.963,-2.095],[-5.182,-1.299],[-0.673,0.011],[-0.011,-0.673],[0,0]],"v":[[21.593,61.907],[37.988,64.085],[53.477,69.572],[68.227,76.583],[75.508,80.204],[82.861,83.622],[90.293,86.852],[94.071,88.315],[97.876,89.709],[113.299,94.702],[117.218,95.742],[121.16,96.692],[125.103,97.644],[127.078,98.107],[129.073,98.472],[137.055,99.93],[139.051,100.292],[141.064,100.546],[145.09,101.053],[149.117,101.56],[151.131,101.814],[153.154,101.965],[161.253,102.536],[169.367,102.793],[173.427,102.857],[177.487,102.84],[193.702,101.917],[197.747,101.538],[201.785,101.099],[209.823,99.898],[213.834,99.247],[217.814,98.424],[225.766,96.74],[233.624,94.652],[237.545,93.577],[241.409,92.312],[249.132,89.76],[256.703,86.786],[260.486,85.288],[264.178,83.581],[271.566,80.166],[264.21,83.651],[260.531,85.393],[256.761,86.927],[249.21,89.974],[241.503,92.602],[237.645,93.905],[233.728,95.018],[225.874,97.184],[217.921,98.947],[213.939,99.809],[209.924,100.499],[201.875,101.779],[197.828,102.258],[193.774,102.676],[177.507,103.754],[173.432,103.81],[169.354,103.784],[161.201,103.602],[153.058,103.104],[151.022,102.971],[148.996,102.735],[144.943,102.263],[140.89,101.791],[138.863,101.555],[136.852,101.209],[128.809,99.818],[126.797,99.47],[124.807,99.022],[120.829,98.102],[116.851,97.182],[112.896,96.171],[97.312,91.288],[93.463,89.918],[89.64,88.479],[82.114,85.291],[74.677,81.919],[67.35,78.36],[52.638,71.534],[37.425,66.301],[21.622,64.345],[20.382,63.147],[21.58,61.907]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"gf","o":{"a":0,"k":100,"ix":10},"r":1,"bm":0,"g":{"p":3,"k":{"a":0,"k":[0,0.302,0.22,0.529,0.5,0.635,0.261,0.506,1,0.969,0.302,0.482],"ix":9}},"s":{"a":0,"k":[272,82],"ix":5},"e":{"a":0,"k":[19.603,82],"ix":6},"t":1,"nm":"Gradient Fill 1","mn":"ADBE Vector Graphic - G-Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Group 1","np":2,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":231,"st":0,"bm":0},{"ddd":0,"ind":48,"ty":4,"nm":"Branch2","parent":49,"sr":1.14925373134328,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":1,"k":[{"i":{"x":[0.67],"y":[1]},"o":{"x":[0.33],"y":[0]},"t":0,"s":[0]},{"i":{"x":[0.67],"y":[1]},"o":{"x":[0.33],"y":[0]},"t":90.791,"s":[1.5]},{"t":230.000164879207,"s":[0]}],"ix":10},"p":{"a":0,"k":[-218.476,89.445,0],"ix":2},"a":{"a":0,"k":[-218.476,89.445,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[-4.386,6.54],[-5.448,5.621],[-6.004,4.983],[-6.266,4.648],[-28.64,12.339],[-14.326,6.064],[-12.966,8.588],[-5.731,5.251],[-5.206,5.781],[-2.54,2.949],[-2.449,3.023],[-3.008,7.203],[4.853,-6.068],[2.516,-2.97],[2.587,-2.91],[5.72,-5.297],[6.485,-4.332],[14.313,-6.126],[14.229,-6.27],[24.817,-18.687],[5.91,-5.037],[5.393,-5.546],[4.176,-6.465],[2.21,-7.324],[0,0],[0.645,0.194],[-0.195,0.645]],"o":[[2.336,-7.572],[4.321,-6.593],[5.498,-5.581],[5.972,-5.023],[25.051,-18.609],[14.309,-6.194],[14.329,-6.023],[6.49,-4.274],[5.74,-5.246],[2.604,-2.891],[2.535,-2.953],[4.888,-6.031],[-2.961,7.223],[-2.432,3.041],[-2.521,2.966],[-5.173,5.82],[-5.711,5.302],[-12.957,8.705],[-14.31,6.167],[-28.474,12.488],[-6.207,4.667],[-5.942,4.997],[-5.341,5.583],[-4.244,6.416],[0,0],[-0.195,0.645],[-0.645,-0.195],[0,0]],"v":[[-219.873,88.787],[-209.659,67.496],[-194.726,49.317],[-177.396,33.525],[-159.016,19.036],[-78.129,-27.617],[-34.895,-45.303],[6.474,-66.679],[24.816,-81.028],[41.148,-97.68],[48.851,-106.451],[56.379,-115.372],[68.831,-135.023],[56.498,-115.277],[49.025,-106.302],[41.375,-97.477],[25.125,-80.692],[6.814,-66.173],[-34.536,-44.462],[-77.641,-26.499],[-157.921,20.501],[-176.12,35.041],[-193.196,50.805],[-207.749,68.752],[-217.535,89.48],[-217.541,89.498],[-219.06,90.314],[-219.876,88.794]],"c":true},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"gf","o":{"a":0,"k":100,"ix":10},"r":1,"bm":0,"g":{"p":3,"k":{"a":0,"k":[0,0.267,0.216,0.541,0.5,0.618,0.259,0.512,1,0.969,0.302,0.482],"ix":9}},"s":{"a":0,"k":[-220,-23],"ix":5},"e":{"a":0,"k":[69.974,-23],"ix":6},"t":1,"nm":"Gradient Fill 1","mn":"ADBE Vector Graphic - G-Fill","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Group 1","np":2,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":231,"st":0,"bm":0},{"ddd":0,"ind":49,"ty":4,"nm":"Branch1","parent":1,"sr":1.14925373134328,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":1,"k":[{"i":{"x":[0.67],"y":[1]},"o":{"x":[0.33],"y":[0]},"t":0,"s":[0]},{"i":{"x":[0.67],"y":[1]},"o":{"x":[0.33],"y":[0]},"t":128,"s":[1]},{"t":230.000164879207,"s":[0]}],"ix":10},"p":{"a":0,"k":[-279.231,135.948,0],"ix":2},"a":{"a":0,"k":[-279.231,135.948,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"shapes":[{"ty":"gr","it":[{"ind":0,"ty":"sh","ix":1,"ks":{"a":0,"k":{"i":[[0,0],[-39.846,4.862],[-39.83,2.001],[-80.96,124.953]],"o":[[28.75,-37.935],[39.846,-4.862],[122.433,-6.152],[0,0]],"v":[[-278.146,135.948],[-167.291,75.931],[-48.031,74.388],[278.631,-136.175]],"c":false},"ix":2},"nm":"Path 1","mn":"ADBE Vector Shape - Group","hd":false},{"ty":"gs","o":{"a":0,"k":100,"ix":9},"w":{"a":0,"k":2.439,"ix":10},"g":{"p":5,"k":{"a":0,"k":[0,0.267,0.216,0.541,0.2,0.618,0.259,0.512,0.5,0.969,0.302,0.482,0.8,0.618,0.259,0.512,1,0.267,0.216,0.541],"ix":8}},"s":{"a":0,"k":[278.972,-133.885],"ix":4},"e":{"a":0,"k":[-203.177,84.725],"ix":5},"t":1,"lc":2,"lj":1,"ml":10,"ml2":{"a":0,"k":10,"ix":13},"bm":0,"nm":"Gradient Stroke 1","mn":"ADBE Vector Graphic - G-Stroke","hd":false},{"ty":"tr","p":{"a":0,"k":[0,0],"ix":2},"a":{"a":0,"k":[0,0],"ix":1},"s":{"a":0,"k":[100,100],"ix":3},"r":{"a":0,"k":0,"ix":6},"o":{"a":0,"k":100,"ix":7},"sk":{"a":0,"k":0,"ix":4},"sa":{"a":0,"k":0,"ix":5},"nm":"Transform"}],"nm":"Branch1","np":2,"cix":2,"bm":0,"ix":1,"mn":"ADBE Vector Group","hd":false}],"ip":0,"op":231,"st":0,"bm":0},{"ddd":0,"ind":51,"ty":2,"nm":"Portal_Branch.png 2","cl":"png","parent":49,"refId":"image_2","sr":1,"ks":{"o":{"a":0,"k":100,"ix":11},"r":{"a":0,"k":0,"ix":10},"p":{"a":0,"k":[278.631,-136.175,0],"ix":2},"a":{"a":0,"k":[46,43.5,0],"ix":1},"s":{"a":0,"k":[100,100,100],"ix":6}},"ao":0,"ip":0,"op":300,"st":0,"bm":0}],"markers":[]}
+{
+  "v": "4.8.0",
+  "meta": { "g": "LottieFiles AE 1.0.0", "a": "", "k": "", "d": "", "tc": "" },
+  "fr": 30,
+  "ip": 0,
+  "op": 230,
+  "w": 670,
+  "h": 360,
+  "nm": "Branch",
+  "ddd": 0,
+  "assets": [
+    {
+      "id": "image_0",
+      "w": 28,
+      "h": 28,
+      "u": "",
+      "p": "data:image/png;base64,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",
+      "e": 1
+    },
+    {
+      "id": "image_1",
+      "w": 28,
+      "h": 28,
+      "u": "",
+      "p": "data:image/png;base64,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",
+      "e": 1
+    },
+    {
+      "id": "image_2",
+      "w": 92,
+      "h": 87,
+      "u": "",
+      "p": "data:image/png;base64,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",
+      "e": 1
+    }
+  ],
+  "layers": [
+    {
+      "ddd": 0,
+      "ind": 1,
+      "ty": 3,
+      "nm": "Final 2",
+      "sr": 1.52980132450331,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.67], "y": [1] },
+              "o": { "x": [0.33], "y": [0] },
+              "t": 0,
+              "s": [0]
+            },
+            {
+              "i": { "x": [0.67], "y": [1] },
+              "o": { "x": [0.33], "y": [0] },
+              "t": 113.205,
+              "s": [1]
+            },
+            { "t": 229.470198675497, "s": [0] }
+          ],
+          "ix": 10
+        },
+        "p": { "a": 0, "k": [613.631, 43.825, 0], "ix": 2 },
+        "a": { "a": 0, "k": [278.631, -136.175, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 231,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 2,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 35",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.52980132450331,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.67, "y": 1 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 33.655,
+              "s": [-7.846, 70.94, 0],
+              "to": [5.015, -0.844, 0],
+              "ti": [-1.363, 2.162, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 71.901,
+              "s": [22.245, 65.873, 0],
+              "to": [0.395, -0.626, 0],
+              "ti": [0, 0, 0]
+            },
+            { "t": 229.470198675497, "s": [23.495, 66.123, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 231,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 3,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 25",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.52980132450331,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 0,
+              "s": [-278.146, 135.948, 0],
+              "to": [1.684, -2.222, 0],
+              "ti": [-70.867, 3.217, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 16.463,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 31.558,
+              "s": [-48.031, 74.388, 0],
+              "to": [53.933, -5.56, 0],
+              "ti": [-6.697, 0.575, 0]
+            },
+            { "t": 36.7162083609007, "s": [-7.846, 70.94, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 231,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 4,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 18",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.52980132450331,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 36.716,
+              "s": [-21.346, 56.937, 0],
+              "to": [1.873, -0.157, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 55.072,
+              "s": [-10.111, 55.993, 0],
+              "to": [0, 0, 0],
+              "ti": [1.873, -0.157, 0]
+            },
+            { "t": 229.470198675497, "s": [-21.346, 56.937, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14, 14, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 231,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 5,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 21",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.46153846153846,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": 35.077,
+              "s": [22.245, 65.873, 0],
+              "to": [0.395, -0.626, 0],
+              "ti": [-110.932, 166.431, 0]
+            },
+            { "t": 96.4613431470307, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [13.958, 27.959, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 95,
+      "st": 35.0769230769231,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 6,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 19",
+      "cl": "png",
+      "parent": 47,
+      "refId": "image_0",
+      "sr": 1.44776119402985,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 32.299,
+              "s": [100]
+            },
+            { "t": 94.5522388059701, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.189, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 32.299,
+              "s": [41.714, 65.476, 0],
+              "to": [17.722, 1.482, 0],
+              "ti": [-33.258, -9.643, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 51.934,
+              "s": [110.619, 94.537, 0],
+              "to": [37.185, 10.782, 0],
+              "ti": [-70.816, 30.873, 0]
+            },
+            { "t": 94.5522388059701, "s": [269.562, 83.031, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.444, 28, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 0.833] },
+              "o": { "x": [0.167, 0.167, 0.167], "y": [0.167, 0.167, 0.167] },
+              "t": 32.299,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 0.833] },
+              "o": { "x": [0.167, 0.167, 0.167], "y": [0.167, 0.167, 0.167] },
+              "t": 85.866,
+              "s": [50, 50, 100]
+            },
+            { "t": 94.5522388059701, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": -1,
+      "op": 96,
+      "st": 27.955223880597,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 7,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 20",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.14925373134328,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": { "a": 0, "k": [3.815, 53.409, 0], "ix": 2 },
+        "a": { "a": 0, "k": [14, 14, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 231,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 8,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 22",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.52980132450331,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 0,
+              "s": [13.798, 34.914, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 38.246,
+              "s": [13.617, 34.241, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 55.072,
+              "s": [12.596, 40.793, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 108.616,
+              "s": [13.29, 34.423, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 168.277,
+              "s": [14.073, 34.196, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            { "t": 229.470198675497, "s": [13.798, 34.914, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14, 14, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 231,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 9,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 34",
+      "cl": "png",
+      "parent": 47,
+      "refId": "image_0",
+      "sr": 1.16759776536313,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": -0.189, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.67, "y": 1 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 22,
+              "s": [16.661, 60.752, 0],
+              "to": [0, 0, 0],
+              "ti": [-37.977, -3.176, 0]
+            },
+            { "t": 54.6921514828113, "s": [41.756, 65.475, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.444, 28, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 22,
+      "op": 231,
+      "st": 18.4972067039106,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 10,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 23",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.52980132450331,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 38.246,
+              "s": [-11.172, 39.853, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 55.072,
+              "s": [-4.283, 50.232, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 88.728,
+              "s": [-2.947, 49.618, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 171.337,
+              "s": [-7.564, 44.118, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            { "t": 229.470198675497, "s": [-11.172, 39.853, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14, 14, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 231,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 11,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 24",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.52980132450331,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 0,
+              "s": [-1.976, 24.329, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 36.716,
+              "s": [-1.976, 24.329, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 55.072,
+              "s": [-1.748, 42.327, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 107.087,
+              "s": [-1.886, 34.95, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 152.981,
+              "s": [-1.87, 32.953, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 189.694,
+              "s": [-1.939, 26.816, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 211.113,
+              "s": [-1.956, 26.476, 0],
+              "to": [0, 0, 0],
+              "ti": [0, 0, 0]
+            },
+            { "t": 229.470198675497, "s": [-1.976, 24.329, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14, 14, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 231,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 12,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 41",
+      "cl": "png",
+      "parent": 47,
+      "refId": "image_0",
+      "sr": 1.9375,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": -61.413,
+              "s": [100]
+            },
+            { "t": 35.4621212121212, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -61.413,
+              "s": [21.557, 62.917, 0],
+              "to": [20.708, -0.238, 0],
+              "ti": [-18.781, -8.728, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -38.75,
+              "s": [78.437, 82.818, 0],
+              "to": [60.01, 27.889, 0],
+              "ti": [-59.075, 29.82, 0]
+            },
+            { "t": 35.4621212121212, "s": [271.265, 80.207, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": -61.413,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": -3.288,
+              "s": [45, 45, 100]
+            },
+            { "t": 35.4621212121212, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 36,
+      "st": -61.4128787878788,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 13,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 36",
+      "cl": "png",
+      "parent": 47,
+      "refId": "image_0",
+      "sr": 1.9375,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 169,
+              "s": [100]
+            },
+            { "t": 265.875, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 169,
+              "s": [21.557, 62.917, 0],
+              "to": [20.708, -0.238, 0],
+              "ti": [-18.781, -8.728, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 191.663,
+              "s": [78.437, 82.818, 0],
+              "to": [60.01, 27.889, 0],
+              "ti": [-59.075, 29.82, 0]
+            },
+            { "t": 265.875, "s": [271.265, 80.207, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 169,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 227.125,
+              "s": [45, 45, 100]
+            },
+            { "t": 265.875, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 169,
+      "op": 231,
+      "st": 169,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 14,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 29",
+      "cl": "png",
+      "parent": 47,
+      "refId": "image_0",
+      "sr": 2.13333333333333,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 134,
+              "s": [100]
+            },
+            { "t": 208.666178377966, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 134,
+              "s": [21.557, 62.917, 0],
+              "to": [20.708, -0.238, 0],
+              "ti": [-18.781, -8.728, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 151.467,
+              "s": [78.437, 82.818, 0],
+              "to": [60.01, 27.889, 0],
+              "ti": [-59.075, 29.82, 0]
+            },
+            { "t": 208.666178377966, "s": [271.265, 80.207, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 134,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 189.467,
+              "s": [45, 45, 100]
+            },
+            { "t": 208.666178377966, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 134,
+      "op": 210.8,
+      "st": 134,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 15,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 28",
+      "cl": "png",
+      "parent": 47,
+      "refId": "image_0",
+      "sr": 2.13333333333333,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 103,
+              "s": [100]
+            },
+            { "t": 177.666178377966, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 103,
+              "s": [21.557, 62.917, 0],
+              "to": [20.708, -0.238, 0],
+              "ti": [-18.781, -8.728, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 120.467,
+              "s": [78.437, 82.818, 0],
+              "to": [60.01, 27.889, 0],
+              "ti": [-59.075, 29.82, 0]
+            },
+            { "t": 177.666178377966, "s": [271.265, 80.207, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 103,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 162.733,
+              "s": [45, 45, 100]
+            },
+            { "t": 177.666178377966, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 103,
+      "op": 179.8,
+      "st": 103,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 16,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 33",
+      "cl": "png",
+      "parent": 47,
+      "refId": "image_0",
+      "sr": 2.13333333333333,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 72,
+              "s": [100]
+            },
+            { "t": 146.666178377966, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 72,
+              "s": [21.557, 62.917, 0],
+              "to": [20.708, -0.238, 0],
+              "ti": [-18.781, -8.728, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 89.467,
+              "s": [78.437, 82.818, 0],
+              "to": [60.01, 27.889, 0],
+              "ti": [-59.075, 29.82, 0]
+            },
+            { "t": 146.666178377966, "s": [271.265, 80.207, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 72,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 125.334,
+              "s": [45, 45, 100]
+            },
+            { "t": 146.666178377966, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 72,
+      "op": 148.8,
+      "st": 72,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 17,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 32",
+      "cl": "png",
+      "parent": 47,
+      "refId": "image_0",
+      "sr": 1.9,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 29,
+              "s": [100]
+            },
+            { "t": 124.000651052821, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 29,
+              "s": [21.557, 62.917, 0],
+              "to": [20.708, -0.238, 0],
+              "ti": [-18.781, -8.728, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 51.224,
+              "s": [78.437, 82.818, 0],
+              "to": [60.01, 27.889, 0],
+              "ti": [-59.075, 29.82, 0]
+            },
+            { "t": 124.000651052821, "s": [271.265, 80.207, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 29,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 86,
+              "s": [45, 45, 100]
+            },
+            { "t": 124.000651052821, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 29,
+      "op": 124,
+      "st": 29,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 18,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 31",
+      "cl": "png",
+      "parent": 47,
+      "refId": "image_0",
+      "sr": 1.9,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 77,
+              "s": [100]
+            },
+            { "t": 172.000651052821, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 77,
+              "s": [21.557, 62.917, 0],
+              "to": [20.708, -0.238, 0],
+              "ti": [-18.781, -8.728, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 99.224,
+              "s": [78.437, 82.818, 0],
+              "to": [60.01, 27.889, 0],
+              "ti": [-59.075, 29.82, 0]
+            },
+            { "t": 172.000651052821, "s": [271.265, 80.207, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 77,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 139.7,
+              "s": [45, 45, 100]
+            },
+            { "t": 170.100227868487, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 77,
+      "op": 172,
+      "st": 77,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 19,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 27",
+      "cl": "png",
+      "parent": 47,
+      "refId": "image_0",
+      "sr": 1.9,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 55,
+              "s": [100]
+            },
+            { "t": 150.000651052821, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 55,
+              "s": [21.557, 62.917, 0],
+              "to": [20.708, -0.238, 0],
+              "ti": [-18.781, -8.728, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 77.224,
+              "s": [78.437, 82.818, 0],
+              "to": [60.01, 27.889, 0],
+              "ti": [-59.075, 29.82, 0]
+            },
+            { "t": 150.000651052821, "s": [271.265, 80.207, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 55,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 112,
+              "s": [45, 45, 100]
+            },
+            { "t": 150.000651052821, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 55,
+      "op": 150,
+      "st": 55,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 20,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 30",
+      "cl": "png",
+      "parent": 47,
+      "refId": "image_0",
+      "sr": 1.78387096774194,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 86,
+              "s": [100]
+            },
+            { "t": 194.81547798446, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 86,
+              "s": [21.557, 62.917, 0],
+              "to": [20.708, -0.238, 0],
+              "ti": [-18.781, -8.728, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 111.456,
+              "s": [78.437, 82.818, 0],
+              "to": [60.01, 27.889, 0],
+              "ti": [-59.075, 29.82, 0]
+            },
+            { "t": 194.81547798446, "s": [271.265, 80.207, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 86,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 159.138,
+              "s": [45, 45, 100]
+            },
+            { "t": 194.81547798446, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 86,
+      "op": 196.6,
+      "st": 86,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 21,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 26",
+      "cl": "png",
+      "parent": 47,
+      "refId": "image_0",
+      "sr": 2.13333333333333,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 23,
+              "s": [100]
+            },
+            { "t": 97.666178377966, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 23,
+              "s": [21.557, 62.917, 0],
+              "to": [20.708, -0.238, 0],
+              "ti": [-18.781, -8.728, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 40.467,
+              "s": [78.437, 82.818, 0],
+              "to": [60.01, 27.889, 0],
+              "ti": [-59.075, 29.82, 0]
+            },
+            { "t": 97.666178377966, "s": [271.265, 80.207, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 23,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 76.334,
+              "s": [45, 45, 100]
+            },
+            { "t": 97.666178377966, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 23,
+      "op": 99.8,
+      "st": 23,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 22,
+      "ty": 2,
+      "nm": "Bolita_Rosada_Branch.png 10",
+      "cl": "png",
+      "parent": 48,
+      "refId": "image_1",
+      "sr": 2.203125,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": -93.332,
+              "s": [100]
+            },
+            { "t": 38.8551136363636, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": -93.332,
+              "s": [-278.146, 135.948, 0],
+              "to": [16.382, -21.617, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -77.911,
+              "s": [-217.956, 88.623, 0],
+              "to": [6.421, -21.645, 0],
+              "ti": [-17.183, 14.645, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -53.953,
+              "s": [-177.807, 35.276, 0],
+              "to": [29.582, -25.213, 0],
+              "ti": [-35.543, 15.732, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -12.703,
+              "s": [-79.432, -26.573, 0],
+              "to": [32.955, -14.586, 0],
+              "ti": [-28.212, 22.426, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 25.546,
+              "s": [17.259, -74.105, 0],
+              "to": [12.871, -10.231, 0],
+              "ti": [-10.654, 12.523, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 42.996,
+              "s": [51.725, -109.277, 0],
+              "to": [6.888, -8.096, 0],
+              "ti": [-4.062, 9.823, 0]
+            },
+            { "t": 54.2769886363636, "s": [69.579, -135.534, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.242, 28, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.67, 0.67, 0.67], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": -93.332,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.167, 0.167, 0.167], "y": [0, 0, 0] },
+              "t": 38.855,
+              "s": [45, 45, 100]
+            },
+            { "t": 54.2769886363636, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 55,
+      "st": -93.3323863636364,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 23,
+      "ty": 2,
+      "nm": "Bolita_Rosada_Branch.png 8",
+      "cl": "png",
+      "parent": 48,
+      "refId": "image_1",
+      "sr": 2.203125,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 137,
+              "s": [100]
+            },
+            { "t": 269.1875, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": 137,
+              "s": [-278.146, 135.948, 0],
+              "to": [16.382, -21.617, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 152.422,
+              "s": [-217.956, 88.623, 0],
+              "to": [6.421, -21.645, 0],
+              "ti": [-17.183, 14.645, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 176.379,
+              "s": [-177.807, 35.276, 0],
+              "to": [29.582, -25.213, 0],
+              "ti": [-35.543, 15.732, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 217.63,
+              "s": [-79.432, -26.573, 0],
+              "to": [32.955, -14.586, 0],
+              "ti": [-28.212, 22.426, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 255.878,
+              "s": [17.259, -74.105, 0],
+              "to": [12.871, -10.231, 0],
+              "ti": [-10.654, 12.523, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 273.328,
+              "s": [51.725, -109.277, 0],
+              "to": [6.888, -8.096, 0],
+              "ti": [-4.062, 9.823, 0]
+            },
+            { "t": 284.609375, "s": [69.579, -135.534, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.242, 28, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.67, 0.67, 0.67], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 137,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.167, 0.167, 0.167], "y": [0, 0, 0] },
+              "t": 269.188,
+              "s": [45, 45, 100]
+            },
+            { "t": 284.609375, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 137,
+      "op": 231,
+      "st": 137,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 24,
+      "ty": 2,
+      "nm": "Bolita_Rosada_Branch.png 2",
+      "cl": "png",
+      "parent": 48,
+      "refId": "image_1",
+      "sr": 1.94117647058824,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 73,
+              "s": [100]
+            },
+            { "t": 189.470588235294, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": 73,
+              "s": [-278.146, 135.948, 0],
+              "to": [16.382, -21.617, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 86.588,
+              "s": [-217.956, 88.623, 0],
+              "to": [6.421, -21.645, 0],
+              "ti": [-17.183, 14.645, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 107.696,
+              "s": [-177.807, 35.276, 0],
+              "to": [29.582, -25.213, 0],
+              "ti": [-35.543, 15.732, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 144.043,
+              "s": [-79.432, -26.573, 0],
+              "to": [32.955, -14.586, 0],
+              "ti": [-28.212, 22.426, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 177.744,
+              "s": [17.259, -74.105, 0],
+              "to": [12.871, -10.231, 0],
+              "ti": [-10.654, 12.523, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 193.118,
+              "s": [51.725, -109.277, 0],
+              "to": [6.888, -8.096, 0],
+              "ti": [-4.062, 9.823, 0]
+            },
+            { "t": 203.058693319023, "s": [69.579, -135.534, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.242, 28, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.67, 0.67, 0.67], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 73,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.167, 0.167, 0.167], "y": [0, 0, 0] },
+              "t": 189.471,
+              "s": [45, 45, 100]
+            },
+            { "t": 203.058693319023, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 73,
+      "op": 205,
+      "st": 73,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 25,
+      "ty": 2,
+      "nm": "Bolita_Rosada_Branch.png 3",
+      "cl": "png",
+      "parent": 48,
+      "refId": "image_1",
+      "sr": 1.87974683544304,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 43,
+              "s": [100]
+            },
+            { "t": 172.702043357362, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": 43,
+              "s": [-278.146, 135.948, 0],
+              "to": [16.382, -21.617, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 56.158,
+              "s": [-217.956, 88.623, 0],
+              "to": [6.421, -21.645, 0],
+              "ti": [-17.183, 14.645, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 80.687,
+              "s": [-177.807, 35.276, 0],
+              "to": [29.582, -25.213, 0],
+              "ti": [-35.543, 15.732, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 122.923,
+              "s": [-79.432, -26.573, 0],
+              "to": [32.955, -14.586, 0],
+              "ti": [-28.212, 22.426, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 162.083,
+              "s": [17.259, -74.105, 0],
+              "to": [12.871, -10.231, 0],
+              "ti": [-10.654, 12.523, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 179.949,
+              "s": [51.725, -109.277, 0],
+              "to": [6.888, -8.096, 0],
+              "ti": [-4.062, 9.823, 0]
+            },
+            { "t": 191.500162762736, "s": [69.579, -135.534, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.242, 28, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.67, 0.67, 0.67], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 43,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.167, 0.167, 0.167], "y": [0, 0, 0] },
+              "t": 172.702,
+              "s": [45, 45, 100]
+            },
+            { "t": 191.500162762736, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 43,
+      "op": 191.5,
+      "st": 43,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 26,
+      "ty": 2,
+      "nm": "Bolita_Rosada_Branch.png 4",
+      "cl": "png",
+      "parent": 48,
+      "refId": "image_1",
+      "sr": 1.94117647058824,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 17,
+              "s": [100]
+            },
+            { "t": 133.470588235294, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": 17,
+              "s": [-278.146, 135.948, 0],
+              "to": [16.382, -21.617, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 30.588,
+              "s": [-217.956, 88.623, 0],
+              "to": [6.421, -21.645, 0],
+              "ti": [-17.183, 14.645, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 51.696,
+              "s": [-177.807, 35.276, 0],
+              "to": [29.582, -25.213, 0],
+              "ti": [-35.543, 15.732, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 88.043,
+              "s": [-79.432, -26.573, 0],
+              "to": [32.955, -14.586, 0],
+              "ti": [-28.212, 22.426, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 121.744,
+              "s": [17.259, -74.105, 0],
+              "to": [12.871, -10.231, 0],
+              "ti": [-10.654, 12.523, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 137.118,
+              "s": [51.725, -109.277, 0],
+              "to": [6.888, -8.096, 0],
+              "ti": [-4.062, 9.823, 0]
+            },
+            { "t": 147.058693319023, "s": [69.579, -135.534, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.242, 28, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.67, 0.67, 0.67], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 17,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.167, 0.167, 0.167], "y": [0, 0, 0] },
+              "t": 133.471,
+              "s": [45, 45, 100]
+            },
+            { "t": 147.058693319023, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 17,
+      "op": 149,
+      "st": 17,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 27,
+      "ty": 2,
+      "nm": "Bolita_Rosada_Branch.png 5",
+      "cl": "png",
+      "parent": 48,
+      "refId": "image_1",
+      "sr": 2.13829787234043,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 80,
+              "s": [100]
+            },
+            { "t": 161.255514462954, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": 80,
+              "s": [-278.146, 135.948, 0],
+              "to": [16.382, -21.617, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 94.968,
+              "s": [-217.956, 88.623, 0],
+              "to": [6.421, -21.645, 0],
+              "ti": [-17.183, 14.645, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 110.081,
+              "s": [-177.807, 35.276, 0],
+              "to": [29.582, -25.213, 0],
+              "ti": [-35.543, 15.732, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 136.106,
+              "s": [-79.432, -26.573, 0],
+              "to": [32.955, -14.586, 0],
+              "ti": [-28.212, 22.426, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 160.236,
+              "s": [17.259, -74.105, 0],
+              "to": [12.871, -10.231, 0],
+              "ti": [-10.654, 12.523, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 171.245,
+              "s": [51.725, -109.277, 0],
+              "to": [6.888, -8.096, 0],
+              "ti": [-4.062, 9.823, 0]
+            },
+            { "t": 178.362092755696, "s": [69.579, -135.534, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.242, 28, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.67, 0.67, 0.67], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 80,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.167, 0.167, 0.167], "y": [0, 0, 0] },
+              "t": 161.256,
+              "s": [45, 45, 100]
+            },
+            { "t": 178.362092755696, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 80,
+      "op": 180.5,
+      "st": 80,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 28,
+      "ty": 2,
+      "nm": "Bolita_Rosada_Branch.png 6",
+      "cl": "png",
+      "parent": 48,
+      "refId": "image_1",
+      "sr": 2.13829787234043,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 40,
+              "s": [100]
+            },
+            { "t": 138.362092755696, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": 40,
+              "s": [-278.146, 135.948, 0],
+              "to": [16.382, -21.617, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 54.968,
+              "s": [-217.956, 88.623, 0],
+              "to": [6.421, -21.645, 0],
+              "ti": [-17.183, 14.645, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 70.081,
+              "s": [-177.807, 35.276, 0],
+              "to": [29.582, -25.213, 0],
+              "ti": [-35.543, 15.732, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 96.106,
+              "s": [-79.432, -26.573, 0],
+              "to": [32.955, -14.586, 0],
+              "ti": [-28.212, 22.426, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 120.236,
+              "s": [17.259, -74.105, 0],
+              "to": [12.871, -10.231, 0],
+              "ti": [-10.654, 12.523, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 131.245,
+              "s": [51.725, -109.277, 0],
+              "to": [6.888, -8.096, 0],
+              "ti": [-4.062, 9.823, 0]
+            },
+            { "t": 138.362092755696, "s": [69.579, -135.534, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.242, 28, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [0.833, 0.833, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 40,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 121.256,
+              "s": [45, 45, 100]
+            },
+            { "t": 138.362092755696, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 40,
+      "op": 140.5,
+      "st": 40,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 29,
+      "ty": 2,
+      "nm": "Bolita_Rosada_Branch.png 7",
+      "cl": "png",
+      "parent": 48,
+      "refId": "image_1",
+      "sr": 1.94117647058824,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 0,
+              "s": [100]
+            },
+            { "t": 116.470588235294, "s": [50] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": 0,
+              "s": [-278.146, 135.948, 0],
+              "to": [16.382, -21.617, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 13.588,
+              "s": [-217.956, 88.623, 0],
+              "to": [6.421, -21.645, 0],
+              "ti": [-17.183, 14.645, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 34.696,
+              "s": [-177.807, 35.276, 0],
+              "to": [29.582, -25.213, 0],
+              "ti": [-35.543, 15.732, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 71.043,
+              "s": [-79.432, -26.573, 0],
+              "to": [32.955, -14.586, 0],
+              "ti": [-28.212, 22.426, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 104.744,
+              "s": [17.259, -74.105, 0],
+              "to": [12.871, -10.231, 0],
+              "ti": [-10.654, 12.523, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 120.118,
+              "s": [51.725, -109.277, 0],
+              "to": [6.888, -8.096, 0],
+              "ti": [-4.062, 9.823, 0]
+            },
+            { "t": 130.058693319023, "s": [69.579, -135.534, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.242, 28, 0], "ix": 1 },
+        "s": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.67, 0.67, 0.67], "y": [1, 1, 1] },
+              "o": { "x": [0.33, 0.33, 0.33], "y": [0, 0, 0] },
+              "t": 0,
+              "s": [100, 100, 100]
+            },
+            {
+              "i": { "x": [0.833, 0.833, 0.833], "y": [1, 1, 1] },
+              "o": { "x": [0.167, 0.167, 0.167], "y": [0, 0, 0] },
+              "t": 110.647,
+              "s": [45, 45, 100]
+            },
+            { "t": 130.058693319023, "s": [0, 0, 100] }
+          ],
+          "ix": 6
+        }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 132,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 30,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 16",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_1",
+      "sr": 1.74095890410959,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 219.385,
+              "s": [100]
+            },
+            { "t": 226.349229812622, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 101,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 126.601,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 150.185,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 229.831675053391, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 101,
+      "op": 228.09,
+      "st": 101,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 31,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 15",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_1",
+      "sr": 1.74095890410959,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 192.385,
+              "s": [100]
+            },
+            { "t": 199.349241256714, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 74,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 99.601,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 123.185,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 202.831675053391, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 74,
+      "op": 201.09,
+      "st": 74,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 32,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 14",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_1",
+      "sr": 1.67090909090909,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 220.356,
+              "s": [100]
+            },
+            { "t": 227.039023431274, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 80,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 109.551,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 136.775,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 228.710909090909, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 80,
+      "op": 227.04,
+      "st": 80,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 33,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 17",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_1",
+      "sr": 1.57193548387097,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 187.061,
+              "s": [100]
+            },
+            { "t": 193.349138753967, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 0,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 39.046,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 75.017,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 196.492749300415, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 194.92,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 34,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 13",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_1",
+      "sr": 1.74095890410959,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 118.385,
+              "s": [100]
+            },
+            { "t": 125.349236409331, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 0,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 25.601,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 49.185,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 128.831675053391, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 127.09,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 35,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 2",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.65967032967033,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 174.703,
+              "s": [100]
+            },
+            { "t": 181.339547992461, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 46,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 73.225,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 98.303,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 182.999706604076, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 46,
+      "op": 182,
+      "st": 97.4497802197802,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 36,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 3",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.83,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 161.65,
+              "s": [100]
+            },
+            { "t": 168.969902342708, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 61,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 82.819,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 102.919,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 170.8, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 61,
+      "op": 170.8,
+      "st": 61,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 37,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 4",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.34883720930233,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 126.256,
+              "s": [100]
+            },
+            { "t": 131.651358104513, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.799 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": 18.349,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 62.386,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 88.489,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 133, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 17,
+      "op": 133,
+      "st": 52.0697674418605,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 38,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 5",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.73478260869565,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 116.761,
+              "s": [100]
+            },
+            { "t": 123.700390628824, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 4,
+              "s": [-278.146, 135.948, 0],
+              "to": [4.293, -5.664, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 24.996,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.67, "y": 1 },
+              "o": { "x": 0.167, "y": 0.299 },
+              "t": 47.088,
+              "s": [-48.031, 74.388, 0],
+              "to": [31.995, -1.485, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": 68.187,
+              "s": [6.722, 66.822, 0],
+              "to": [0, 0, 0],
+              "ti": [-124.662, 185.166, 0]
+            },
+            { "t": 125.434782608696, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 4,
+      "op": 123.7,
+      "st": 4,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 39,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 40",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 2.72857142857143,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 100.06,
+              "s": [100]
+            },
+            { "t": 106.999912261963, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -56.473,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -23.941,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 6.029,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 107.241125541126, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 108,
+      "st": -56.4731601731602,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 40,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 39",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 2.08947368421053,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 40.061,
+              "s": [100]
+            },
+            { "t": 47.0000363167645, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -78.767,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -53.854,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -30.904,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 46.6015948963317, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 48,
+      "st": -78.7668261562998,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 41,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 38",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.86603773584906,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 7.06,
+              "s": [100]
+            },
+            { "t": 13.9998051524162, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -98.335,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -76.086,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": -55.59,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 13.6277301315037, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 15,
+      "st": -98.3345340194397,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 42,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 9",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 2.72857142857143,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 173.7,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 206.233,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 236.202,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 337.414285714286, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 173.7,
+      "op": 231,
+      "st": 173.7,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 43,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 10",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 2.08947368421053,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 151.6,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 176.512,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 199.463,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 276.968421052632, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 151.6,
+      "op": 231,
+      "st": 151.6,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 44,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 11",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.86603773584906,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 132.1,
+              "s": [-278.146, 135.948, 0],
+              "to": [28.75, -37.935, 0],
+              "ti": [-39.846, 4.862, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 154.348,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 174.845,
+              "s": [-48.031, 74.388, 0],
+              "to": [122.433, -6.152, 0],
+              "ti": [-80.96, 124.953, 0]
+            },
+            { "t": 244.062264150943, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 132.1,
+      "op": 231,
+      "st": 132.1,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 45,
+      "ty": 2,
+      "nm": "Bolita_Azul_Branch.png 12",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_0",
+      "sr": 1.5,
+      "ks": {
+        "o": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.833], "y": [0.833] },
+              "o": { "x": [0.167], "y": [0.167] },
+              "t": 84,
+              "s": [100]
+            },
+            { "t": 90, "s": [0] }
+          ],
+          "ix": 11
+        },
+        "r": { "a": 0, "k": -0.923, "ix": 10 },
+        "p": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": 0.833, "y": 0.824 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": 0,
+              "s": [-278.146, 135.948, 0],
+              "to": [4.293, -5.664, 0],
+              "ti": [-70.867, 3.217, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.167, "y": 0.167 },
+              "t": 18.95,
+              "s": [-167.291, 75.931, 0],
+              "to": [39.846, -4.862, 0],
+              "ti": [-39.83, 2.001, 0]
+            },
+            {
+              "i": { "x": 0.67, "y": 1 },
+              "o": { "x": 0.167, "y": 0.249 },
+              "t": 30.625,
+              "s": [-48.031, 74.388, 0],
+              "to": [53.933, -5.56, 0],
+              "ti": [0, 0, 0]
+            },
+            {
+              "i": { "x": 0.833, "y": 0.833 },
+              "o": { "x": 0.33, "y": 0 },
+              "t": 42,
+              "s": [6.722, 66.822, 0],
+              "to": [0, 0, 0],
+              "ti": [-114.883, 176.95, 0]
+            },
+            { "t": 90, "s": [278.631, -136.175, 0] }
+          ],
+          "ix": 2
+        },
+        "a": { "a": 0, "k": [14.927, 28.005, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 90,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 46,
+      "ty": 2,
+      "nm": "Portal_Branch.png 3",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_2",
+      "sr": 1,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": -1.467, "ix": 10 },
+        "p": { "a": 0, "k": [-278.146, 135.948, 0], "ix": 2 },
+        "a": { "a": 0, "k": [46, 43.5, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 231,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 47,
+      "ty": 4,
+      "nm": "Branch3",
+      "parent": 49,
+      "sr": 1.14925373134328,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.67], "y": [1] },
+              "o": { "x": [0.33], "y": [0] },
+              "t": 0,
+              "s": [0]
+            },
+            {
+              "i": { "x": [0.67], "y": [1] },
+              "o": { "x": [0.33], "y": [0] },
+              "t": 130,
+              "s": [1]
+            },
+            { "t": 230.000164879207, "s": [0] }
+          ],
+          "ix": 10
+        },
+        "p": { "a": 0, "k": [21.607, 63.126, 0], "ix": 2 },
+        "a": { "a": 0, "k": [21.607, 63.126, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "shapes": [
+        {
+          "ty": "gr",
+          "it": [
+            {
+              "ind": 0,
+              "ty": "sh",
+              "ix": 1,
+              "ks": {
+                "a": 0,
+                "k": {
+                  "i": [
+                    [0, 0],
+                    [-5.324, -1.387],
+                    [-5.01, -2.17],
+                    [-4.856, -2.425],
+                    [0, 0],
+                    [-2.491, -1.043],
+                    [0, 0],
+                    [-1.263, -0.477],
+                    [0, 0],
+                    [-5.167, -1.593],
+                    [-1.315, -0.312],
+                    [0, 0],
+                    [0, 0],
+                    [-0.662, -0.134],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [-0.674, -0.051],
+                    [0, 0],
+                    [-2.705, -0.075],
+                    [0, 0],
+                    [-1.352, 0.084],
+                    [-5.384, 0.637],
+                    [0, 0],
+                    [-1.335, 0.236],
+                    [0, 0],
+                    [-1.322, 0.301],
+                    [0, 0],
+                    [-2.635, 0.628],
+                    [0, 0],
+                    [-1.292, 0.408],
+                    [0, 0],
+                    [-2.562, 0.885],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [2.569, -0.878],
+                    [0, 0],
+                    [1.305, -0.374],
+                    [0, 0],
+                    [2.65, -0.592],
+                    [0, 0],
+                    [1.337, -0.236],
+                    [0, 0],
+                    [1.349, -0.16],
+                    [0, 0],
+                    [5.428, -0.297],
+                    [1.359, 0.007],
+                    [0, 0],
+                    [2.711, 0.235],
+                    [0, 0],
+                    [0.677, 0.058],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0.664, 0.148],
+                    [0, 0],
+                    [0, 0],
+                    [1.299, 0.411],
+                    [5.089, 1.957],
+                    [0, 0],
+                    [1.241, 0.565],
+                    [0, 0],
+                    [2.452, 1.175],
+                    [0, 0],
+                    [4.966, 2.097],
+                    [5.188, 1.297],
+                    [5.307, -0.081],
+                    [0.011, 0.673],
+                    [-0.673, 0.011]
+                  ],
+                  "o": [
+                    [5.553, -0.033],
+                    [5.331, 1.386],
+                    [5.012, 2.172],
+                    [0, 0],
+                    [2.43, 1.193],
+                    [0, 0],
+                    [1.225, 0.573],
+                    [0, 0],
+                    [5.031, 1.99],
+                    [1.286, 0.421],
+                    [0, 0],
+                    [0, 0],
+                    [0.658, 0.153],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0.673, 0.064],
+                    [0, 0],
+                    [2.697, 0.26],
+                    [0, 0],
+                    [1.354, 0.02],
+                    [5.408, -0.246],
+                    [0, 0],
+                    [1.346, -0.147],
+                    [0, 0],
+                    [1.336, -0.223],
+                    [0, 0],
+                    [2.649, -0.566],
+                    [0, 0],
+                    [1.306, -0.362],
+                    [0, 0],
+                    [2.573, -0.853],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [-2.556, 0.909],
+                    [0, 0],
+                    [-1.29, 0.421],
+                    [0, 0],
+                    [-2.635, 0.654],
+                    [0, 0],
+                    [-1.323, 0.314],
+                    [0, 0],
+                    [-1.337, 0.249],
+                    [0, 0],
+                    [-5.397, 0.69],
+                    [-1.357, 0.097],
+                    [0, 0],
+                    [-2.718, -0.05],
+                    [0, 0],
+                    [-0.678, -0.045],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [0, 0],
+                    [-0.668, -0.129],
+                    [0, 0],
+                    [0, 0],
+                    [-1.328, -0.302],
+                    [-5.217, -1.554],
+                    [0, 0],
+                    [-1.278, -0.469],
+                    [0, 0],
+                    [-2.525, -1.03],
+                    [0, 0],
+                    [-4.874, -2.377],
+                    [-4.963, -2.095],
+                    [-5.182, -1.299],
+                    [-0.673, 0.011],
+                    [-0.011, -0.673],
+                    [0, 0]
+                  ],
+                  "v": [
+                    [21.593, 61.907],
+                    [37.988, 64.085],
+                    [53.477, 69.572],
+                    [68.227, 76.583],
+                    [75.508, 80.204],
+                    [82.861, 83.622],
+                    [90.293, 86.852],
+                    [94.071, 88.315],
+                    [97.876, 89.709],
+                    [113.299, 94.702],
+                    [117.218, 95.742],
+                    [121.16, 96.692],
+                    [125.103, 97.644],
+                    [127.078, 98.107],
+                    [129.073, 98.472],
+                    [137.055, 99.93],
+                    [139.051, 100.292],
+                    [141.064, 100.546],
+                    [145.09, 101.053],
+                    [149.117, 101.56],
+                    [151.131, 101.814],
+                    [153.154, 101.965],
+                    [161.253, 102.536],
+                    [169.367, 102.793],
+                    [173.427, 102.857],
+                    [177.487, 102.84],
+                    [193.702, 101.917],
+                    [197.747, 101.538],
+                    [201.785, 101.099],
+                    [209.823, 99.898],
+                    [213.834, 99.247],
+                    [217.814, 98.424],
+                    [225.766, 96.74],
+                    [233.624, 94.652],
+                    [237.545, 93.577],
+                    [241.409, 92.312],
+                    [249.132, 89.76],
+                    [256.703, 86.786],
+                    [260.486, 85.288],
+                    [264.178, 83.581],
+                    [271.566, 80.166],
+                    [264.21, 83.651],
+                    [260.531, 85.393],
+                    [256.761, 86.927],
+                    [249.21, 89.974],
+                    [241.503, 92.602],
+                    [237.645, 93.905],
+                    [233.728, 95.018],
+                    [225.874, 97.184],
+                    [217.921, 98.947],
+                    [213.939, 99.809],
+                    [209.924, 100.499],
+                    [201.875, 101.779],
+                    [197.828, 102.258],
+                    [193.774, 102.676],
+                    [177.507, 103.754],
+                    [173.432, 103.81],
+                    [169.354, 103.784],
+                    [161.201, 103.602],
+                    [153.058, 103.104],
+                    [151.022, 102.971],
+                    [148.996, 102.735],
+                    [144.943, 102.263],
+                    [140.89, 101.791],
+                    [138.863, 101.555],
+                    [136.852, 101.209],
+                    [128.809, 99.818],
+                    [126.797, 99.47],
+                    [124.807, 99.022],
+                    [120.829, 98.102],
+                    [116.851, 97.182],
+                    [112.896, 96.171],
+                    [97.312, 91.288],
+                    [93.463, 89.918],
+                    [89.64, 88.479],
+                    [82.114, 85.291],
+                    [74.677, 81.919],
+                    [67.35, 78.36],
+                    [52.638, 71.534],
+                    [37.425, 66.301],
+                    [21.622, 64.345],
+                    [20.382, 63.147],
+                    [21.58, 61.907]
+                  ],
+                  "c": true
+                },
+                "ix": 2
+              },
+              "nm": "Path 1",
+              "mn": "ADBE Vector Shape - Group",
+              "hd": false
+            },
+            {
+              "ty": "gf",
+              "o": { "a": 0, "k": 100, "ix": 10 },
+              "r": 1,
+              "bm": 0,
+              "g": {
+                "p": 3,
+                "k": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0.302,
+                    0.22,
+                    0.529,
+                    0.5,
+                    0.635,
+                    0.261,
+                    0.506,
+                    1,
+                    0.969,
+                    0.302,
+                    0.482
+                  ],
+                  "ix": 9
+                }
+              },
+              "s": { "a": 0, "k": [272, 82], "ix": 5 },
+              "e": { "a": 0, "k": [19.603, 82], "ix": 6 },
+              "t": 1,
+              "nm": "Gradient Fill 1",
+              "mn": "ADBE Vector Graphic - G-Fill",
+              "hd": false
+            },
+            {
+              "ty": "tr",
+              "p": { "a": 0, "k": [0, 0], "ix": 2 },
+              "a": { "a": 0, "k": [0, 0], "ix": 1 },
+              "s": { "a": 0, "k": [100, 100], "ix": 3 },
+              "r": { "a": 0, "k": 0, "ix": 6 },
+              "o": { "a": 0, "k": 100, "ix": 7 },
+              "sk": { "a": 0, "k": 0, "ix": 4 },
+              "sa": { "a": 0, "k": 0, "ix": 5 },
+              "nm": "Transform"
+            }
+          ],
+          "nm": "Group 1",
+          "np": 2,
+          "cix": 2,
+          "bm": 0,
+          "ix": 1,
+          "mn": "ADBE Vector Group",
+          "hd": false
+        }
+      ],
+      "ip": 0,
+      "op": 231,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 48,
+      "ty": 4,
+      "nm": "Branch2",
+      "parent": 49,
+      "sr": 1.14925373134328,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.67], "y": [1] },
+              "o": { "x": [0.33], "y": [0] },
+              "t": 0,
+              "s": [0]
+            },
+            {
+              "i": { "x": [0.67], "y": [1] },
+              "o": { "x": [0.33], "y": [0] },
+              "t": 90.791,
+              "s": [1.5]
+            },
+            { "t": 230.000164879207, "s": [0] }
+          ],
+          "ix": 10
+        },
+        "p": { "a": 0, "k": [-218.476, 89.445, 0], "ix": 2 },
+        "a": { "a": 0, "k": [-218.476, 89.445, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "shapes": [
+        {
+          "ty": "gr",
+          "it": [
+            {
+              "ind": 0,
+              "ty": "sh",
+              "ix": 1,
+              "ks": {
+                "a": 0,
+                "k": {
+                  "i": [
+                    [0, 0],
+                    [-4.386, 6.54],
+                    [-5.448, 5.621],
+                    [-6.004, 4.983],
+                    [-6.266, 4.648],
+                    [-28.64, 12.339],
+                    [-14.326, 6.064],
+                    [-12.966, 8.588],
+                    [-5.731, 5.251],
+                    [-5.206, 5.781],
+                    [-2.54, 2.949],
+                    [-2.449, 3.023],
+                    [-3.008, 7.203],
+                    [4.853, -6.068],
+                    [2.516, -2.97],
+                    [2.587, -2.91],
+                    [5.72, -5.297],
+                    [6.485, -4.332],
+                    [14.313, -6.126],
+                    [14.229, -6.27],
+                    [24.817, -18.687],
+                    [5.91, -5.037],
+                    [5.393, -5.546],
+                    [4.176, -6.465],
+                    [2.21, -7.324],
+                    [0, 0],
+                    [0.645, 0.194],
+                    [-0.195, 0.645]
+                  ],
+                  "o": [
+                    [2.336, -7.572],
+                    [4.321, -6.593],
+                    [5.498, -5.581],
+                    [5.972, -5.023],
+                    [25.051, -18.609],
+                    [14.309, -6.194],
+                    [14.329, -6.023],
+                    [6.49, -4.274],
+                    [5.74, -5.246],
+                    [2.604, -2.891],
+                    [2.535, -2.953],
+                    [4.888, -6.031],
+                    [-2.961, 7.223],
+                    [-2.432, 3.041],
+                    [-2.521, 2.966],
+                    [-5.173, 5.82],
+                    [-5.711, 5.302],
+                    [-12.957, 8.705],
+                    [-14.31, 6.167],
+                    [-28.474, 12.488],
+                    [-6.207, 4.667],
+                    [-5.942, 4.997],
+                    [-5.341, 5.583],
+                    [-4.244, 6.416],
+                    [0, 0],
+                    [-0.195, 0.645],
+                    [-0.645, -0.195],
+                    [0, 0]
+                  ],
+                  "v": [
+                    [-219.873, 88.787],
+                    [-209.659, 67.496],
+                    [-194.726, 49.317],
+                    [-177.396, 33.525],
+                    [-159.016, 19.036],
+                    [-78.129, -27.617],
+                    [-34.895, -45.303],
+                    [6.474, -66.679],
+                    [24.816, -81.028],
+                    [41.148, -97.68],
+                    [48.851, -106.451],
+                    [56.379, -115.372],
+                    [68.831, -135.023],
+                    [56.498, -115.277],
+                    [49.025, -106.302],
+                    [41.375, -97.477],
+                    [25.125, -80.692],
+                    [6.814, -66.173],
+                    [-34.536, -44.462],
+                    [-77.641, -26.499],
+                    [-157.921, 20.501],
+                    [-176.12, 35.041],
+                    [-193.196, 50.805],
+                    [-207.749, 68.752],
+                    [-217.535, 89.48],
+                    [-217.541, 89.498],
+                    [-219.06, 90.314],
+                    [-219.876, 88.794]
+                  ],
+                  "c": true
+                },
+                "ix": 2
+              },
+              "nm": "Path 1",
+              "mn": "ADBE Vector Shape - Group",
+              "hd": false
+            },
+            {
+              "ty": "gf",
+              "o": { "a": 0, "k": 100, "ix": 10 },
+              "r": 1,
+              "bm": 0,
+              "g": {
+                "p": 3,
+                "k": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0.267,
+                    0.216,
+                    0.541,
+                    0.5,
+                    0.618,
+                    0.259,
+                    0.512,
+                    1,
+                    0.969,
+                    0.302,
+                    0.482
+                  ],
+                  "ix": 9
+                }
+              },
+              "s": { "a": 0, "k": [-220, -23], "ix": 5 },
+              "e": { "a": 0, "k": [69.974, -23], "ix": 6 },
+              "t": 1,
+              "nm": "Gradient Fill 1",
+              "mn": "ADBE Vector Graphic - G-Fill",
+              "hd": false
+            },
+            {
+              "ty": "tr",
+              "p": { "a": 0, "k": [0, 0], "ix": 2 },
+              "a": { "a": 0, "k": [0, 0], "ix": 1 },
+              "s": { "a": 0, "k": [100, 100], "ix": 3 },
+              "r": { "a": 0, "k": 0, "ix": 6 },
+              "o": { "a": 0, "k": 100, "ix": 7 },
+              "sk": { "a": 0, "k": 0, "ix": 4 },
+              "sa": { "a": 0, "k": 0, "ix": 5 },
+              "nm": "Transform"
+            }
+          ],
+          "nm": "Group 1",
+          "np": 2,
+          "cix": 2,
+          "bm": 0,
+          "ix": 1,
+          "mn": "ADBE Vector Group",
+          "hd": false
+        }
+      ],
+      "ip": 0,
+      "op": 231,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 49,
+      "ty": 4,
+      "nm": "Branch1",
+      "parent": 1,
+      "sr": 1.14925373134328,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": {
+          "a": 1,
+          "k": [
+            {
+              "i": { "x": [0.67], "y": [1] },
+              "o": { "x": [0.33], "y": [0] },
+              "t": 0,
+              "s": [0]
+            },
+            {
+              "i": { "x": [0.67], "y": [1] },
+              "o": { "x": [0.33], "y": [0] },
+              "t": 128,
+              "s": [1]
+            },
+            { "t": 230.000164879207, "s": [0] }
+          ],
+          "ix": 10
+        },
+        "p": { "a": 0, "k": [-279.231, 135.948, 0], "ix": 2 },
+        "a": { "a": 0, "k": [-279.231, 135.948, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "shapes": [
+        {
+          "ty": "gr",
+          "it": [
+            {
+              "ind": 0,
+              "ty": "sh",
+              "ix": 1,
+              "ks": {
+                "a": 0,
+                "k": {
+                  "i": [
+                    [0, 0],
+                    [-39.846, 4.862],
+                    [-39.83, 2.001],
+                    [-80.96, 124.953]
+                  ],
+                  "o": [
+                    [28.75, -37.935],
+                    [39.846, -4.862],
+                    [122.433, -6.152],
+                    [0, 0]
+                  ],
+                  "v": [
+                    [-278.146, 135.948],
+                    [-167.291, 75.931],
+                    [-48.031, 74.388],
+                    [278.631, -136.175]
+                  ],
+                  "c": false
+                },
+                "ix": 2
+              },
+              "nm": "Path 1",
+              "mn": "ADBE Vector Shape - Group",
+              "hd": false
+            },
+            {
+              "ty": "gs",
+              "o": { "a": 0, "k": 100, "ix": 9 },
+              "w": { "a": 0, "k": 2.439, "ix": 10 },
+              "g": {
+                "p": 5,
+                "k": {
+                  "a": 0,
+                  "k": [
+                    0,
+                    0.267,
+                    0.216,
+                    0.541,
+                    0.2,
+                    0.618,
+                    0.259,
+                    0.512,
+                    0.5,
+                    0.969,
+                    0.302,
+                    0.482,
+                    0.8,
+                    0.618,
+                    0.259,
+                    0.512,
+                    1,
+                    0.267,
+                    0.216,
+                    0.541
+                  ],
+                  "ix": 8
+                }
+              },
+              "s": { "a": 0, "k": [278.972, -133.885], "ix": 4 },
+              "e": { "a": 0, "k": [-203.177, 84.725], "ix": 5 },
+              "t": 1,
+              "lc": 2,
+              "lj": 1,
+              "ml": 10,
+              "ml2": { "a": 0, "k": 10, "ix": 13 },
+              "bm": 0,
+              "nm": "Gradient Stroke 1",
+              "mn": "ADBE Vector Graphic - G-Stroke",
+              "hd": false
+            },
+            {
+              "ty": "tr",
+              "p": { "a": 0, "k": [0, 0], "ix": 2 },
+              "a": { "a": 0, "k": [0, 0], "ix": 1 },
+              "s": { "a": 0, "k": [100, 100], "ix": 3 },
+              "r": { "a": 0, "k": 0, "ix": 6 },
+              "o": { "a": 0, "k": 100, "ix": 7 },
+              "sk": { "a": 0, "k": 0, "ix": 4 },
+              "sa": { "a": 0, "k": 0, "ix": 5 },
+              "nm": "Transform"
+            }
+          ],
+          "nm": "Branch1",
+          "np": 2,
+          "cix": 2,
+          "bm": 0,
+          "ix": 1,
+          "mn": "ADBE Vector Group",
+          "hd": false
+        }
+      ],
+      "ip": 0,
+      "op": 231,
+      "st": 0,
+      "bm": 0
+    },
+    {
+      "ddd": 0,
+      "ind": 51,
+      "ty": 2,
+      "nm": "Portal_Branch.png 2",
+      "cl": "png",
+      "parent": 49,
+      "refId": "image_2",
+      "sr": 1,
+      "ks": {
+        "o": { "a": 0, "k": 100, "ix": 11 },
+        "r": { "a": 0, "k": 0, "ix": 10 },
+        "p": { "a": 0, "k": [278.631, -136.175, 0], "ix": 2 },
+        "a": { "a": 0, "k": [46, 43.5, 0], "ix": 1 },
+        "s": { "a": 0, "k": [100, 100, 100], "ix": 6 }
+      },
+      "ao": 0,
+      "ip": 0,
+      "op": 300,
+      "st": 0,
+      "bm": 0
+    }
+  ],
+  "markers": []
+}

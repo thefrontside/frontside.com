@@ -39,7 +39,11 @@ export function ProjectSelect() {
       </style>
 
       <input type="checkbox" class="hidden" id={toggleId} checked />
-      <label id={openerId} style="position: relative; cursor: pointer;" for={toggleId}>
+      <label
+        id={openerId}
+        style="position: relative; cursor: pointer;"
+        for={toggleId}
+      >
         Open Source
         <aside class="z-20 absolute m-4 rounded-md">
           <h4 class="p-2.5 min-w-max font-normal text-center text-sm uppercase">

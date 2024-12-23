@@ -10,8 +10,8 @@ jobs:
       - uses: actions/checkout@v2
       - uses: volta-cli/action@v4
       - run: |
-           yarn
-           yarn check-urls
+          yarn
+          yarn check-urls
         working-directory: ./legacy
         id: url-hash
 
