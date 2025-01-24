@@ -18,8 +18,6 @@ export function blogIndexRoute() {
       twitterXImage: "/assets/index-meta-home-cloud-native.png",
     });
 
-    console.log(recent);
-
     return (
       <App>
         <div class="flex flex-col justify-self-center !max-w-none prose">
