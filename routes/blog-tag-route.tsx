@@ -36,7 +36,7 @@ export function blogTagRoute() {
                       alt="blog image"
                     />
                     <div>
-                      <h3>{post.title}</h3>
+                      <h3 class="font-black text-2xl">{post.title}</h3>
                     </div>
                   </a>
                 </li>
