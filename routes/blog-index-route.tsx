@@ -30,14 +30,6 @@ export function blogIndexRoute() {
       "jorge",
       "paul",
     ];
-    // const firstName = latest.author.split(" ")[0].toLowerCase();
-    // const isAuthorImageAvailable = authorsWithImage.includes(
-    //   firstName,
-    // );
-    // const authorImage = isAuthorImageAvailable
-    //   ? `/assets/img/authors/${firstName}.jpg`
-    //   : "/assets/fs-logo-no-text.svg";
-
     return (
       <App>
         <div class="flex flex-col justify-self-center !max-w-none prose">
@@ -73,24 +65,6 @@ export function blogIndexRoute() {
             <h2>Last Three</h2>
             <ol class="md:gap-6 lg:gap-11 space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 mx-auto p-4 max-w-7xl">
               {recent.map((post) => {
-                const authorsWithImage = [
-                  "charles",
-                  "elrick",
-                  "taras",
-                  "jacob",
-                  "min",
-                  "jeffrey",
-                  "jorge",
-                  "paul",
-                ];
-                const firstName = post.author.split(" ")[0].toLowerCase();
-                const isAuthorImageAvailable = authorsWithImage.includes(
-                  firstName,
-                );
-                const authorImage = isAuthorImageAvailable
-                  ? `/assets/img/authors/${firstName}.jpg`
-                  : "/assets/fs-logo-no-text.svg";
-
                 return (
                   <li class="flex flex-col md:mt-0 p-2 md:p-4 border h-full prose">
                     <a
