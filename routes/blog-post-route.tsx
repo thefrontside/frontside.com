@@ -7,6 +7,8 @@ import {
 } from "revolution";
 import { useAppHtml } from "./app.html.tsx";
 import { useBlog } from "../blog/blog.ts";
+import { AuthorSection } from "../components/AuthorSection.tsx";
+import { getAuthorImage } from "../lib/getAuthorsImage.ts";
 
 export function blogPostRoute(): JSXHandler {
   return directory(function* route() {
@@ -30,6 +32,17 @@ export function blogPostRoute(): JSXHandler {
       author: post.author,
     });
 
+    const authorsWithImage = [
+      "charles",
+      "elrick",
+      "taras",
+      "jacob",
+      "min",
+      "jeffrey",
+      "jorge",
+      "paul",
+    ];
+
     return (
       <AppHtml>
         <article class="flex flex-col items-center p-6 lg:p-0 text-blue-primary">
@@ -38,15 +51,12 @@ export function blogPostRoute(): JSXHandler {
               <h1 class="mb-4 max-w-prose font-black text-2xl md:text-4xl uppercase">
                 {post.title}
               </h1>
-              <p class="mb-2">{post.author}</p>
-              <div class="mb-6">
-                {post.date.toLocaleString("default", {
-                  month: "long",
-                  day: "numeric",
-                  year: "numeric",
-                })}
-              </div>
-              <div class="flex flex-wrap gap-2 mb-6">
+              <AuthorSection
+                author={post.author}
+                date={post.date}
+                authorImage={getAuthorImage(post.author, authorsWithImage)}
+              />
+              <div class="flex flex-wrap gap-2 mt-8 mb-6">
                 {post.tags.map((tag) => (
                   <span class="px-3 py-1 border border-blue-300 rounded-full text-blue-primary text-sm capitalize">
                     <a href={`../tags/${tag}`}>{tag}</a>
