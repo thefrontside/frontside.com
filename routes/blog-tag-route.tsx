@@ -21,17 +21,6 @@ export function blogTagRoute() {
       twitterXImage: "/assets/index-meta-home-cloud-native.png",
     });
 
-    const authorsWithImage = [
-      "charles",
-      "elrick",
-      "taras",
-      "jacob",
-      "min",
-      "jeffrey",
-      "jorge",
-      "paul",
-    ];
-
     return (
       <App>
         <div class="flex flex-col justify-self-center !max-w-none prose prose">
@@ -65,7 +54,6 @@ export function blogTagRoute() {
                       date={post.date}
                       authorImage={getAuthorImage(
                         post.author,
-                        authorsWithImage,
                       )}
                     />
                   </a>
