@@ -53,7 +53,11 @@ export function blogPostRoute(): JSXHandler {
                 ))}
               </div>
             </section>
-            <img src={image} class="rounded-xl max-h-[500px] object-fit" />
+            <img
+              src={image}
+              class="rounded-xl max-h-[500px] object-fit"
+              alt="Blog image"
+            />
           </header>
           <section class="mx-auto text-blue-primary lg:prose-lg prose">
             <link rel="stylesheet" href="/assets/prism-atom-one-dark.css" />
