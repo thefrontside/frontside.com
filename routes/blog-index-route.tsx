@@ -7,9 +7,7 @@ export function blogIndexRoute() {
   return function* () {
     let blog = yield* useBlog();
 
-    let [latest] = blog.slice(0, 1);
-
-    let recent = blog.slice(1, 4);
+    let [latest, ...rest] = blog.getPosts();
 
     let App = yield* useAppHtml({
       title: "Frontside: Blog",
@@ -51,47 +49,10 @@ export function blogIndexRoute() {
               </div>
             </a>
           </section>
-          <section class="p-20">
-            <h2>All Posts</h2>
-            <ol class="md:gap-6 lg:gap-8 space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 mx-auto p-4 max-w-7xl">
-              {recent.map((post) => {
-                return (
-                  <li class="flex flex-col border-[#f0f0f0] bg-[#Fcfcfc] md:mt-0 p-2 md:p-4 border rounded-md h-full prose">
-                    <a
-                      class="flex flex-col h-full no-underline"
-                      href={`/blog/${post.id}`}
-                    >
-                      <img
-                        class="flex-shrink-0 rounded-lg md:w-[500px] md:h-[200px]"
-                        src={post.image
-                          ? `blog/${post.id}/${post.image}`
-                          : "/assets/fs-logo-no-text.svg"}
-                        alt="Blog image"
-                      />
-                      <div class="flex-grow">
-                        <h3 class="font-black text-2xl">{post.title}</h3>
-                        <p class="max-w-prose font-normal">
-                          {post.description}
-                        </p>
-                        <strong>&rarr; Read Article</strong>
-                      </div>
-                      {/* Author Info */}
-                      <AuthorSection
-                        author={post.author}
-                        date={post.date}
-                        authorImage={getAuthorImage(
-                          post.author,
-                        )}
-                      />
-                    </a>
-                  </li>
-                );
-              })}
-            </ol>
-          </section>
           <section>
+            <h2>All Posts</h2>
             <ol class="md:gap-6 lg:gap-11 space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 mx-auto p-4 max-w-7xl">
-              {blog.getPosts().map((post) => (
+              {rest.map((post) => (
                 <li class="flex flex-col border-[#f0f0f0] bg-[#fcfcfc] md:mt-0 p-2 md:p-4 border rounded-md h-full prose">
                   <a
                     class="flex flex-col h-full no-underline"
