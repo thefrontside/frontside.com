@@ -140,8 +140,8 @@ pre[class*='language-'] {
 
 .token.function {
   color: rgb(250, 208, 0);
-}
 
+}
 .token.regex {
   background: #364135;
 }
