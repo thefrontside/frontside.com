@@ -6,6 +6,6 @@ import { authorsWithImage } from "./authorConfig.ts";
 export function getAuthorImage(author: string): string {
   const firstName = author.split(" ")[0].toLowerCase();
   return authorsWithImage.includes(firstName)
-    ? `/assets/img/authors/${firstName}.jpg`
+    ? `/assets/img/authorsAvatars/${firstName}.webp`
     : "/assets/fs-logo-no-text.svg";
 }
