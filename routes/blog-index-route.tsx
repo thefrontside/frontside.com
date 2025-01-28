@@ -22,7 +22,7 @@ export function blogIndexRoute() {
 
     return (
       <App>
-        <div class="flex flex-col justify-self-center !max-w-none prose">
+        <div class="flex flex-col justify-self-center items-center !max-w-none prose">
           <section class="mb-4 p-4">
             <h1>Latest</h1>
             <a
@@ -62,7 +62,7 @@ export function blogIndexRoute() {
                       href={`/blog/${post.id}`}
                     >
                       <img
-                        class="flex-shrink-0 rounded-lg md:w-[500px] md:h-[200px] object-cover"
+                        class="flex-shrink-0 rounded-lg md:w-[500px] md:h-[200px]"
                         src={post.image
                           ? `blog/${post.id}/${post.image}`
                           : "/assets/fs-logo-no-text.svg"}
@@ -99,7 +99,7 @@ export function blogIndexRoute() {
                     href={`/blog/${post.id}`}
                   >
                     <img
-                      class="flex-shrink-0 rounded-lg md:w-[500px] md:h-[200px] object-cover"
+                      class="box-content flex-shrink-0 rounded-lg w-full h-[250px] overflow-clip object-contain"
                       src={post.image
                         ? `blog/${post.id}/${post.image}`
                         : "/assets/fs-logo-no-text.svg"}
