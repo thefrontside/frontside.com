@@ -5,10 +5,8 @@ tags:
   - hiring
   - senior developers
   - frontside
+image: sv-conjoined.jpg
 ---
-
-![Stephen Tobolowsky expalining the cojoined triangles](sv-conjoined.jpg)
-<div style="text-align:center;"><em>My man Stephen Tobolowsky lays down the conjoined triangles.</em></div>
 
 ### "This actually makes me feel less confident about *my* role here. If we can’t define what we think senior is, how am I supposed to know if I’m working toward it?"
 
