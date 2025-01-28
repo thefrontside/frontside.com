@@ -34,7 +34,7 @@ export function blogTagRoute() {
                     href={`/blog/${post.id}`}
                   >
                     <img
-                      class="flex-shrink-0 rounded-lg md:w-[500px] md:h-[200px] object-cover"
+                      class="flex-shrink-0 rounded-lg md:w-[500px] md:h-[200px]"
                       src={post.image
                         ? `/blog/${post.id}/${post.image}`
                         : "/assets/fs-logo-no-text.svg"}
