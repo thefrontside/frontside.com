@@ -23,7 +23,7 @@ export function blogIndexRoute() {
     return (
       <App>
         <div class="flex flex-col justify-self-center items-center !max-w-none prose">
-          <section class="mb-4 p-4">
+          <section class="md:mt-12 mb-4">
             <h1>Latest</h1>
             <a
               class="flex md:flex-row flex-col no-underline prose-lg"
@@ -51,12 +51,12 @@ export function blogIndexRoute() {
               </div>
             </a>
           </section>
-          <section>
+          <section class="p-20">
             <h2>All Posts</h2>
-            <ol class="md:gap-6 lg:gap-11 space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 mx-auto p-4 max-w-7xl">
+            <ol class="md:gap-6 lg:gap-8 space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 mx-auto p-4 max-w-7xl">
               {recent.map((post) => {
                 return (
-                  <li class="flex flex-col md:mt-0 p-2 md:p-4 border h-full prose">
+                  <li class="flex flex-col border-[#f0f0f0] bg-[#Fcfcfc] md:mt-0 p-2 md:p-4 border rounded-md h-full prose">
                     <a
                       class="flex flex-col h-full no-underline"
                       href={`/blog/${post.id}`}
@@ -92,7 +92,7 @@ export function blogIndexRoute() {
           <section>
             <ol class="md:gap-6 lg:gap-11 space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 mx-auto p-4 max-w-7xl">
               {blog.getPosts().map((post) => (
-                <li class="flex flex-col md:mt-0 p-2 md:p-4 border h-full prose">
+                <li class="flex flex-col border-[#f0f0f0] bg-[#fcfcfc] md:mt-0 p-2 md:p-4 border rounded-md h-full prose">
                   <a
                     class="flex flex-col h-full no-underline"
                     href={`/blog/${post.id}`}
