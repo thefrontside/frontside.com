@@ -52,7 +52,7 @@ export function blogIndexRoute() {
             </a>
           </section>
           <section>
-            <h2>Last Three</h2>
+            <h2>All Posts</h2>
             <ol class="md:gap-6 lg:gap-11 space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 mx-auto p-4 max-w-7xl">
               {recent.map((post) => {
                 return (
@@ -90,7 +90,6 @@ export function blogIndexRoute() {
             </ol>
           </section>
           <section>
-            <h2>All</h2>
             <ol class="md:gap-6 lg:gap-11 space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 mx-auto p-4 max-w-7xl">
               {blog.getPosts().map((post) => (
                 <li class="flex flex-col md:mt-0 p-2 md:p-4 border h-full prose">

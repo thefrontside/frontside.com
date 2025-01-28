@@ -1750,6 +1750,7 @@
     "https://deno.land/x/effection@3.0.3/lib/run/frame.ts": "132fdace9c00e6ad0e249d7faab1c33680336c5fa8e4a893f092ecec4e2df786",
     "https://deno.land/x/effection@3.0.3/lib/run/scope.ts": "a968455e313ba9aa097ee5c18b4db0d8e2397b90c78e413fa08396baead7b74a",
     "https://deno.land/x/effection@3.0.3/lib/run/task.ts": "7084b9cabdc338c776dc522ec8b677fb3ac41aa0c94e454d467731494cb68737",
+    "https://deno.land/x/effection@3.0.3/lib/run/types.ts": "010bea700f68fef99dd87ca5ca3cbbc90e026ac467889d8429d39cba0ee55fda",
     "https://deno.land/x/effection@3.0.3/lib/run/value.ts": "d57428b45dfeecc9df1e68dadf8697dbc33cd412e6ffcab9d0ba4368e8c1fbd6",
     "https://deno.land/x/effection@3.0.3/lib/shift-sync.ts": "74ecefa9cb2e145a3c52f363319f8d6296b804600852044b7d14bd53bc10b512",
     "https://deno.land/x/effection@3.0.3/lib/signal.ts": "6aba1f372419e1540bd29a9ff992ffd2500e035b2e455d2c11d856a052f698d1",
