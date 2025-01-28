@@ -104,10 +104,11 @@ export function* initBlog(): Operation<void> {
     posts.set(id, post);
 
     for (let tag of post.tags) {
-      if (tags.has(tag)) {
-        tags.get(tag.toLowerCase())!.push(post);
+      let key = normalizeTag(tag);
+      if (tags.has(key)) {
+        tags.get(key)!.push(post);
       } else {
-        tags.set(tag.toLowerCase(), [post]);
+        tags.set(key, [post]);
       }
     }
   }
@@ -120,6 +121,10 @@ export function* initBlog(): Operation<void> {
     slice: (...args) => values.slice(...args),
     get: (id) => posts.get(id),
     getPosts: () => values,
-    getPostsByTag: (tag) => tags.get(tag.toLowerCase()) ?? [],
+    getPostsByTag: (tag) => tags.get(normalizeTag(tag)) ?? [],
   });
+}
+
+function normalizeTag(tag: string) {
+  return tag.toLocaleUpperCase().replaceAll("\w", "-");
 }

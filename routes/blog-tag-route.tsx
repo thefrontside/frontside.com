@@ -8,7 +8,9 @@ export function blogTagRoute() {
   return function* () {
     let blog = yield* useBlog();
 
-    let { tag } = yield* useParams<{ tag: string }>();
+    let { tag: tagParam } = yield* useParams<{ tag: string }>();
+
+    let tag = decodeURIComponent(tagParam);
 
     let posts = blog.getPostsByTag(tag);
 
