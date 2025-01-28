@@ -60,7 +60,7 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
       let body = yield* call(() => response.text());
       let tree = fromHtml(body);
 
-      let elements = selectAll('[href^="/"],[src^="/"]', tree);
+      let elements = selectAll('[href^="/"],[src^="/"],form[action]', tree);
 
       for (let element of elements) {
         let properties = element.properties!;
@@ -72,6 +72,11 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
         }
         if (properties.src) {
           properties.src = posixNormalize(`${base.pathname}${properties.src}`);
+        }
+        if (properties.action) {
+          properties.action = posixNormalize(
+            `${base.pathname}${properties.action}`,
+          );
         }
       }
       let headers: Record<string, string> = {};
