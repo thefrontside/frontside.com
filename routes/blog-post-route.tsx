@@ -56,7 +56,8 @@ export function blogPostRoute(): JSXHandler {
             <img
               src={image}
               class="rounded-xl max-h-[500px] object-fit"
-              alt="Blog image"
+              alt=""
+              aria-hidden="true"
             />
           </header>
           <section class="mx-auto text-blue-primary lg:prose-lg prose">
