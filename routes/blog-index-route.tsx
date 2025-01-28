@@ -32,8 +32,7 @@ export function blogIndexRoute() {
                 src={latest.image
                   ? `blog/${latest.id}/${latest.image}`
                   : "/assets/fs-logo-no-text.svg"}
-                alt=""
-                aria-hidden="true"
+                alt="blog image"
               />
               <div class="max-w-prose">
                 <span class="bg-blue-primary p-2 rounded-lg text-white">
@@ -64,8 +63,7 @@ export function blogIndexRoute() {
                       src={post.image
                         ? `blog/${post.id}/${post.image}`
                         : "/assets/fs-logo-no-text.svg"}
-                      alt=""
-                      aria-hidden="true"
+                      alt="blog image"
                     />
                     <div class="flex-grow">
                       <h3 class="font-black text-2xl">{post.title}</h3>

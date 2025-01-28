@@ -56,8 +56,7 @@ export function blogPostRoute(): JSXHandler {
             <img
               src={image}
               class="rounded-xl max-w-[100%] h-auto object-fit"
-              alt=""
-              aria-hidden="true"
+              alt="blog image"
               width={500}
               height={300}
             />
