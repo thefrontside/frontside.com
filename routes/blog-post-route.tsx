@@ -32,17 +32,6 @@ export function blogPostRoute(): JSXHandler {
       author: post.author,
     });
 
-    const authorsWithImage = [
-      "charles",
-      "elrick",
-      "taras",
-      "jacob",
-      "min",
-      "jeffrey",
-      "jorge",
-      "paul",
-    ];
-
     return (
       <AppHtml>
         <article class="flex flex-col items-center p-6 lg:p-0 text-blue-primary">
@@ -54,7 +43,7 @@ export function blogPostRoute(): JSXHandler {
               <AuthorSection
                 author={post.author}
                 date={post.date}
-                authorImage={getAuthorImage(post.author, authorsWithImage)}
+                authorImage={getAuthorImage(post.author)}
               />
               <div class="flex flex-wrap gap-2 mt-8 mb-6">
                 {post.tags.map((tag) => (
@@ -64,7 +53,7 @@ export function blogPostRoute(): JSXHandler {
                 ))}
               </div>
             </section>
-            <img src={image} class="rounded-xl" />
+            <img src={image} class="rounded-xl max-h-[500px] object-fit" />
           </header>
           <section class="mx-auto text-blue-primary lg:prose-lg prose">
             <link rel="stylesheet" href="/assets/prism-atom-one-dark.css" />
