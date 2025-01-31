@@ -55,12 +55,14 @@ enhances resource management, and streamlines complex workflows. In 2024,
 
 **Key Achievements:**
 
-✅ **Seamless Debugging** – No more broken stack traces.
+✅ **Seamless Debugging** – Stack traces that feel just like a normal JavaScript
+call stack... with no extra tooling required. No other library achieves comes
+close to achieving this.
 
 ✅ **LIFO Task Scheduling** – Deterministic execution with shared priorities.
 
-✅ **Smaller & Faster** – Gzipped bundle size reduced to **3KB** for maximum
-performance.
+✅ **Smaller & Faster** – Despite new features being added, the gzipped bundle
+size reduced to **3KB** for maximum performance.
 
 ✅ **A New Performance Standard** – Surpassed RxJS in performance benchmarks.
 
