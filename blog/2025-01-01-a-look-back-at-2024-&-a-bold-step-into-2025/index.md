@@ -3,7 +3,7 @@ title: >-
   A look back at 2024 & a bold step into 2025!
 author: Elrick Ryan
 description: >
-  2024 was a year of breakthroughs, impact, and bold strides at Frontside. From structured concurrency with Effection v4 Alpha to revolutionizing testing with Interactors and Data-Driven Test Framework, to improving our Simulation Platform creating the Foundation Simulator. As we step into 2025, we're doubling down on empowering engineering teams and organization to take bold steps and build with confidence. Here’s a look back at what we accomplished—and a glimpse into what’s next
+  2024 was a year of breakthroughs, impact, and bold strides at Frontside. From structured concurrency with Effection v4 Alpha to revolutionizing testing with Interactors and Data-Driven Test Framework, to improving our Simulation Platform creating the Foundation Simulator. As we step into 2025, we're doubling down on empowering engineering teams and organizations to take bold steps and build with confidence. Here’s a look back at what we accomplished—and a glimpse into what’s next
 tags: [ "Vision 2025"]
 image: happy-new-year-2025-frontside.webp
 ---
@@ -20,14 +20,14 @@ experience challenges across industries, pushed the boundaries of what’s
 possible, and, along the way, built tools and methodologies that are now helping
 teams innovate fearlessly with fewer obstacles.
 
-But what excites me isn’t just what we built—it’s the **WHY** behind
-evertything. Every project we took on wasn’t just about shipping code; it was
-about **digging deep** to uncover and fix root causes and remove barriers—not
-just surface-level issues. We worked alongside our clients to tackle these
-challenges head-on, from technical and architectural roadblocks to developer,
-product, and user experience challenges. More importantly, we empowered our
-client champions to **own these solutions**, ensuring lasting impact across
-their entire organization.
+But what excites me isn’t just what we built—it’s the **WHY** behind everything.
+Every project we took on wasn’t just about shipping code; it was about **digging
+deep** to uncover and fix root causes and remove barriers—not just surface-level
+issues. We worked alongside our clients to tackle these challenges head-on, from
+technical and architectural roadblocks to developer, product, and user
+experience challenges. More importantly, we empowered our client champions to
+**own these solutions**, ensuring lasting impact across their entire
+organization.
 
 In 2025, we’re doubling down and continuing to be a **force multiplier** for
 engineering, executive, design system, testing, platform & infrastructure,
@@ -55,9 +55,9 @@ enhances resource management, and streamlines complex workflows. In 2024,
 
 **Key Achievements:**
 
-✅ **Seamless Debugging** – Effections preserves uninteruppted Stack traces that
+✅ **Seamless Debugging** – Effection preserves uninterrupted Stack traces that
 feel just like a normal JavaScript call stack... with no extra tooling required.
-In this regard, Effection now stands outs among structured concurrency libraries
+In this regard, Effection now stands out among structured concurrency libraries
 for JavaScript.
 
 ✅ **LIFO Task Scheduling** – Deterministic execution with shared priorities.
@@ -88,7 +88,7 @@ Systems and Test software. That’s why Interactors exist."_
 
 In 2024, Interactors continued to prove its value in real-world projects—it was
 integrated with Playwright, Integrated into Tauri as part of a proof of concept
-(POC) for client, and leveraged in our Data-Driven Test Framework.
+(POC) for a client, and leveraged in our Data-Driven Test Framework.
 
 **It helped teams:**
 
@@ -153,7 +153,7 @@ _"We asked: what if tests were treated as **data** instead of just scripts? The
 result was a Data-Driven Testing Framework—and it’s already changing how teams
 think about testing."_
 
-Our test advancement include:
+Our test advancements include:
 
 ✅ **Instant insights** – Query test metadata without running suites.
 
@@ -219,7 +219,7 @@ ergonomics, and enhancing developer experience (DX).
 impact**. Our workshops don’t just teach concepts—they help teams adopt best
 practices, drive change, and build lasting expertise.
 
-1. **Rerun Backstage Workshop** – Continuing to help teams master Backstage
+1. **Re-run Backstage Workshop** – Continuing to help teams master Backstage
    plugin development.
 2. **Up and Running with Backstage Training** – Expanding on our Backstage
    Plugin Workshop will help more teams get started with Backstage.
