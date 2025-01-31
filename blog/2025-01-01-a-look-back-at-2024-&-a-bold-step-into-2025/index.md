@@ -122,6 +122,17 @@ allowing teams to:
 
 ✅ **Use simulation as a bridge for cross-team alignment.**
 
+Our **Simulators**:
+
+✅ **Foundation Simulator** – Reduced overhead for creating new simulators by
+providing a standardized setup. Now, we can continuously push improvements and
+core features to all simulators from a single repository.
+
+✅ **Github Simulator—New features!** Now supports **all REST endpoints** and
+**OAuth workflows**, making GitHub Simulation more complete and adaptable.
+
+**Real World Impact: Keeping Momentum with Simulation**
+
 One of our clients, working on a high-stakes internal product launch, leveraged
 Simulation to **prevent development from stalling** and kept frontend teams
 moving forward despite backend changes and under development. Instead of being
