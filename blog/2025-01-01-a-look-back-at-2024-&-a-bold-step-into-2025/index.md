@@ -194,12 +194,20 @@ teams.
 
 🎯 **Tauri Collaboration** – Extending Interactors into new frontiers.
 
-🎯 **Advanced Training & Resources**
+🎯 **Expanded Simulation Tooling** – Strengthening our suite of simulation
+solutions to help teams decouple development from backend dependencies
+
+🎯 **Enhancements to GitHub Simulator** - Improving documentation, refining
+ergonomics, and enhancing developer experience (DX).
+
+🎯 **Advanced Training & Resources -** We believe **knowledge-sharing amplifies
+impact**. Our workshops don’t just teach concepts—they help teams adopt best
+practices, drive change, and build lasting expertise.
 
 1. **Rerun Backstage Workshop** – Continuing to help teams master Backstage
    plugin development.
 2. **Up and Running with Backstage Training** – Expanding on our Backstage
-   Plugin Workshop to help more teams get started with Backstage.
+   Plugin Workshop will help more teams get started with Backstage.
 3. **Testing and Simulation Training** – Covering best practices and
    methodologies to enhance testing and simulation strategies.
 4. **Structured Concurrency Effection Workshop** – Deep diving into Effection
