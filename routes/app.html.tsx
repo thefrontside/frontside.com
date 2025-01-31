@@ -1,7 +1,10 @@
 import type { Operation } from "effection";
 import type { JSXChild, JSXElement } from "revolution";
 
-import { useAbsoluteUrl } from "../plugins/current-request.ts";
+import {
+  useAbsoluteUrl,
+  useCurrentRequest,
+} from "../plugins/current-request.ts";
 import { ProjectSelect } from "../components/project-select.tsx";
 
 const PAGE_SENSE_SCRIPT_SRC = getEnv("PAGE_SENSE_SCRIPT_SRC");
@@ -18,7 +21,9 @@ export function* useAppHtml(
   options: Options,
 ): Operation<({ children }: { children: JSXChild }) => JSXElement> {
   let { title, description, author } = options;
-  let siteURL = yield* useAbsoluteUrl("/");
+  let request = yield* useCurrentRequest();
+  let url = new URL(request.url);
+  let ogURL = yield* useAbsoluteUrl(url.pathname);
   let ogImageMeta = yield* useAbsoluteUrl(options.ogImage);
   let twitterXImageMeta = yield* useAbsoluteUrl(options.twitterXImage);
   let logoNoText = "/assets/fs-logo-no-text.svg";
@@ -36,7 +41,7 @@ export function* useAppHtml(
           <title>{title}</title>
           <meta name="image" property="og:image" content={ogImageMeta} />
           <meta property="og:title" content={title} />
-          <meta property="og:url" content={siteURL} />
+          <meta property="og:url" content={ogURL} />
           <meta property="og:description" content={description} />
           <meta name="description" content={description} />
           <meta name="author" content={author} />
@@ -53,9 +58,9 @@ export function* useAppHtml(
             rel="stylesheet"
           />
           <link rel="icon" href={logoNoText} />
-          <link rel="canonical" href={siteURL} />
-          <link rel="alternate" href={siteURL} hreflang="en" />
-          <link rel="alternate" href={siteURL} hreflang="x-default" />
+          <link rel="canonical" href={ogURL} />
+          <link rel="alternate" href={ogURL} hreflang="en" />
+          <link rel="alternate" href={ogURL} hreflang="x-default" />
           {PageSenseScriptTag}
         </head>
         <body>
