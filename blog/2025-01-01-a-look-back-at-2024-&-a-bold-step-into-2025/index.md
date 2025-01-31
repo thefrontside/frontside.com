@@ -55,9 +55,10 @@ enhances resource management, and streamlines complex workflows. In 2024,
 
 **Key Achievements:**
 
-✅ **Seamless Debugging** – Stack traces that feel just like a normal JavaScript
-call stack... with no extra tooling required. No other library achieves comes
-close to achieving this.
+✅ **Seamless Debugging** – Effections preserves uninteruppted Stack traces that
+feel just like a normal JavaScript call stack... with no extra tooling required.
+In this regard, Effection now stands outs among structured concurrency libraries
+for JavaScript.
 
 ✅ **LIFO Task Scheduling** – Deterministic execution with shared priorities.
 
