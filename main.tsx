@@ -19,11 +19,15 @@ import { blogPostRoute } from "./routes/blog-post-route.tsx";
 import { blogIndexRoute } from "./routes/blog-index-route.tsx";
 import { blogTagRoute } from "./routes/blog-tag-route.tsx";
 import { initBlog } from "./blog/blog.ts";
+import { podcastIndexRoute } from "./routes/podcast-index-route.tsx";
+import { initSimpleCast } from "./podcast/podcast.ts";
+import { podcastRoute } from "./routes/podcast-route.tsx";
 
 await main(function* () {
   let proxies = proxySites();
 
   yield* initBlog();
+  yield* initSimpleCast(Deno.env.get("SIMPLECAST_API_KEY"));
 
   let revolution = createRevolution({
     app: [
@@ -32,6 +36,8 @@ await main(function* () {
       route("/blog/:id", blogPostRoute()),
       route("/blog/tags/:tag", blogTagRoute()),
       route("/blog(.*)", assetsRoute("blog")),
+      route("/podcast", podcastIndexRoute()),
+      route("/podcast/:id", podcastRoute()),
       route("/backstage", backstageServicesRoute()),
       route("/dx-consulting", dxConsultingServicesRoute()),
       route("/work/case-studies/resideo", resideoBackstageCaseStudyRoute()),
