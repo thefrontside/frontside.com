@@ -1,9 +1,4 @@
-import {
-  call,
-  createContext,
-  Operation,
-  useAbortSignal,
-} from "effection";
+import { call, createContext, Operation, useAbortSignal } from "effection";
 
 const PodcastContext = createContext<Episode[]>(
   "podcast",
@@ -101,4 +96,3 @@ class HTTPClient implements SimplecastClient {
     }
   }
 }
-
