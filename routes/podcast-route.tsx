@@ -12,6 +12,8 @@ export function podcastRoute(): JSXHandler {
       return yield* respondNotFound();
     }
 
+    let authors = episode.authors.collection.map(a => a.name).join(", ")
+
     return (
       <html>
         <body>
@@ -20,6 +22,8 @@ export function podcastRoute(): JSXHandler {
             <li><strong>description</strong>: {episode.description}</li>
             <li><strong>image_url</strong>: {episode.image_url}</li>
             <li><strong>duration</strong>: {episode.duration}</li>
+            <li><strong>audio</strong>: {episode.audio_file_url}</li>
+            <li><strong>authors</strong>: {authors}</li>
           </ul>
         </body>
       </html>
