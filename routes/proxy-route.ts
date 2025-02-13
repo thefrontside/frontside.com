@@ -83,7 +83,7 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
         }
         if (properties.content) {
           if (typeof properties.content === "string") {
-            const parts = properties.content.match(/\d;\s?url=(.*)/);
+            const parts = properties.content.match(/\d;\s*url=(.*)/);
             if (parts) {
               const [, url] = parts;
               properties.content = properties.content.replace(
