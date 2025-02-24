@@ -19,16 +19,17 @@ export function indexRoute(): JSXHandler {
       ogImage: "/assets/index-meta-home-cloud-native.png",
       twitterXImage: "/assets/index-meta-home-cloud-native.png",
       author: "Frontside",
+      analyticsDataDomain: "frontside.com"
     });
 
     return (
       <AppHtml>
         <article>
-          <header class="p-8 lg:p-16 lg:gap-x-8 lg:grid lg:grid-cols-12 mx-auto mt-4 lg:px-8 max-w-screen-2xl">
-            <div class="lg:col-span-7 xl:col-span-6 lg:px-0 pt-10 lg:pt-2 pb-24 sm:pb-8 ">
-              <div class="lg:mx-0 max-w-2xl mx-auto">
-                <h1 class="mt-12 sm:mt-10 font-black text-4xl text-blue-primary sm:text-6xl tracking-tight uppercase">
-                  <span class="bg-gradient-to-r from-[#26abe8] to-[#8c7db3] text-transparent bg-clip-text">
+          <header class="lg:gap-x-8 lg:grid lg:grid-cols-12 mx-auto mt-4 p-8 lg:p-16 lg:px-8 max-w-screen-2xl">
+            <div class="lg:col-span-7 xl:col-span-6 lg:px-0 pt-10 lg:pt-2 pb-24 sm:pb-8">
+              <div class="mx-auto lg:mx-0 max-w-2xl">
+                <h1 class="mt-12 sm:mt-10 font-black text-blue-primary text-4xl sm:text-6xl uppercase tracking-tight">
+                  <span class="bg-clip-text bg-gradient-to-r from-[#26abe8] to-[#8c7db3] text-transparent">
                     Empower
                   </span>{" "}
                   your Developers from Onboarding to Production Release
@@ -40,9 +41,9 @@ export function indexRoute(): JSXHandler {
                 </p>
               </div>
             </div>
-            <div class="relative h-64 lg:col-span-6 sm:w-3/4 md:w-3/4 md:h-3/4 lg:w-full lg:h-full mx-auto">
+            <div class="relative lg:col-span-6 mx-auto sm:w-3/4 md:w-3/4 lg:w-full h-64 md:h-3/4 lg:h-full">
               <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
-              </script>
+              </>
               <lottie-player
                 src="/assets/animations/home-hero.json"
                 background="transparent"
@@ -58,7 +59,7 @@ export function indexRoute(): JSXHandler {
           </header>
           <section class="mx-auto mt-20 px-10 max-w-screen-2xl">
             {/* Client and Partner logos will go here */}
-            <h2 class="font-bold text-blue-primary text-center text-xl">
+            <h2 class="font-bold text-blue-primary text-xl text-center">
               Trusted by the best companies in the world
             </h2>
             <div class="justify-items-center items-center gap-y-20 grid grid-cols-2 lg:grid-cols-4 mx-auto mt-10">
@@ -115,7 +116,7 @@ export function indexRoute(): JSXHandler {
           <section class="bg-gray-50 mt-24 px-4 py-15 md:py-20 lg:py-24 xl:py-30">
             <div class="items-center gap-24 grid grid-cols-1 md:grid-cols-2 m-auto mt-24 md:max-w-5xl">
               <div class="px-4">
-                <h3 class="font-bold text-3xl text-blue-primary">
+                <h3 class="font-bold text-blue-primary text-3xl">
                   <span class="text-[#26abe8]">Re-think</span>{" "}
                   productivity after Kubernetes
                 </h3>
@@ -131,7 +132,7 @@ export function indexRoute(): JSXHandler {
             </div>
             <div class="items-center gap-24 grid grid-cols-1 md:grid-cols-2 m-auto mt-24 md:max-w-5xl">
               <div class="px-4">
-                <h3 class="font-bold text-3xl text-blue-primary">
+                <h3 class="font-bold text-blue-primary text-3xl">
                   <span class="text-[#26abe8]">Shift-left</span>{" "}
                   your testing strategy
                 </h3>
@@ -147,7 +148,7 @@ export function indexRoute(): JSXHandler {
             </div>
             <div class="items-center gap-24 grid grid-cols-1 md:grid-cols-2 m-auto mt-24 md:max-w-5xl">
               <div class="px-4">
-                <h3 class="font-bold text-3xl text-blue-primary">
+                <h3 class="font-bold text-blue-primary text-3xl">
                   <span class="text-[#26abe8]">Inject</span>{" "}
                   leadership into your team
                 </h3>
@@ -163,9 +164,9 @@ export function indexRoute(): JSXHandler {
               <img class="md:order-first" src={homeinject} alt="" />
             </div>
           </section>
-          <section class="grid grid-cols-1 gap-8 md:grid-cols-2 max-w-6xl mx-auto mt-24">
+          <section class="gap-8 grid grid-cols-1 md:grid-cols-2 mx-auto mt-24 max-w-6xl">
             <div class="flex justify-center items-center">
-              <h2 class="font-bold text-5xl sm:text-5xl text-blue-primary tracking-tight">
+              <h2 class="font-bold text-blue-primary text-5xl sm:text-5xl tracking-tight">
                 We help <br />
                 Developers thrive <br />
                 in complexity
@@ -182,7 +183,7 @@ export function indexRoute(): JSXHandler {
                   <h2 class="font-semibold text-[#f74d7b] text-base leading-7">
                     Internal Developer Platforms & Developer Experience
                   </h2>
-                  <p class="mt-2 font-bold text-3xl text-blue-primary sm:text-4xl tracking-tight">
+                  <p class="mt-2 font-bold text-blue-primary text-3xl sm:text-4xl tracking-tight">
                     Bring infrastructure, services, and people together with
                     Backstage.
                   </p>
@@ -191,13 +192,13 @@ export function indexRoute(): JSXHandler {
                     organization's unique ecosystem
                   </p>
                 </div>
-                <div class="mx-auto mt-16 sm:mt-20 lg:mt-24 max-w-2xl lg:max-w-none">
-                  <dl class="gap-x-24 gap-y-16 grid grid-cols-1 lg:grid-cols-3 max-w-xl lg:max-w-none">
+                <div class="mx-auto mt-16 sm:mt-20 lg:mt-24 lg:max-w-none max-w-2xl">
+                  <dl class="gap-x-24 gap-y-16 grid grid-cols-1 lg:grid-cols-3 lg:max-w-none max-w-xl">
                     <div class="flex flex-col">
                       <dt class="flex items-center gap-x-3 font-semibold text-gray-900 text-lg leading-7">
                         Every Service in Sight.
                       </dt>
-                      <dd class="flex flex-col flex-auto mt-4 text-base text-gray-600 leading-7">
+                      <dd class="flex flex-col flex-auto mt-4 text-gray-600 text-base leading-7">
                         <p class="flex-auto text-lg">
                           With Backstage, you can align your organization's
                           code, collaborators, and Cloud services and make the
@@ -210,7 +211,7 @@ export function indexRoute(): JSXHandler {
                       <dt class="flex items-center gap-x-3 font-semibold text-gray-900 text-lg leading-7">
                         Smarten up infrastructure cost
                       </dt>
-                      <dd class="flex flex-col flex-auto mt-4 text-base text-gray-600 leading-7">
+                      <dd class="flex flex-col flex-auto mt-4 text-gray-600 text-base leading-7">
                         <p class="flex-auto text-lg">
                           Backstage allows your teams to move faster but
                           prevents costs from growing as well by bringing
@@ -227,7 +228,7 @@ export function indexRoute(): JSXHandler {
                       <dt class="flex items-center gap-x-3 font-semibold text-gray-900 text-lg leading-7">
                         Derisk your implementation
                       </dt>
-                      <dd class="flex flex-col flex-auto mt-4 text-base text-gray-600 leading-7">
+                      <dd class="flex flex-col flex-auto mt-4 text-gray-600 text-base leading-7">
                         <p class="flex-auto text-lg">
                           Our deep expertise with Backstage’s constantly
                           evolving alpha software means we can open up new
@@ -244,7 +245,7 @@ export function indexRoute(): JSXHandler {
                   </dl>
                   <div class="mt-16 text-center">
                     <a
-                      class="inline-flex items-center bg-gradient-to-r from-[#36baa2] to-[#44378a] p-8 rounded-lg font-bold text-lg text-white"
+                      class="inline-flex items-center bg-gradient-to-r from-[#36baa2] to-[#44378a] p-8 rounded-lg font-bold text-white text-lg"
                       href="/backstage"
                     >
                       <span class="mr-2">

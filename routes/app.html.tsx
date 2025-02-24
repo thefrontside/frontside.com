@@ -15,6 +15,7 @@ export interface Options {
   ogImage: string;
   twitterXImage: string;
   author: string;
+  analyticsDataDomain?: string;
 }
 
 export function* useAppHtml(
@@ -28,6 +29,17 @@ export function* useAppHtml(
   let twitterXImageMeta = yield* useAbsoluteUrl(options.twitterXImage);
   let logoNoText = "/assets/fs-logo-no-text.svg";
   let logoURL = "/assets/fs-logo.svg";
+
+  let AnalyticsScriptTag = options.analyticsDataDomain
+    ? (
+      <script
+        defer
+        data-domain={options.analyticsDataDomain} // Dynamic data domain
+        src="https://plausible.io/js/script.js"
+      >
+      </script>
+    )
+    : <></>;
 
   return function AppHtml({ children }): JSX.Element {
     let PageSenseScriptTag = PAGE_SENSE_SCRIPT_SRC
@@ -62,6 +74,7 @@ export function* useAppHtml(
           <link rel="alternate" href={ogURL} hreflang="en" />
           <link rel="alternate" href={ogURL} hreflang="x-default" />
           {PageSenseScriptTag}
+          {AnalyticsScriptTag}
         </head>
         <body>
           <header class="m-auto p-5 lg:p-12 max-w-screen-sm lg:max-w-screen-2xl">
@@ -92,7 +105,7 @@ export function* useAppHtml(
                 </li>
               </menu>
               <a
-                class="order-2 bg-contain px-2 md:px-2.5 py-2 md:py-1.5 rounded-lg font-bold text-sm text-white md:text-base uppercase btn-contact"
+                class="order-2 bg-contain px-2 md:px-2.5 py-2 md:py-1.5 rounded-lg font-bold text-white text-sm md:text-base uppercase btn-contact"
                 href="/contact"
               >
                 Contact
@@ -123,7 +136,7 @@ export function* useAppHtml(
                 <a href="/contact">Contact</a>
               </li>
             </menu>
-            <section class="gap-y-12 grid grid-cols-1 mt-20 text-center text-xs leading-5 tracking-wide">
+            <section class="gap-y-12 grid grid-cols-1 mt-20 text-xs text-center leading-5 tracking-wide">
               <a href="/">
                 <img
                   alt="Frontside Logo"
