@@ -19,7 +19,7 @@ export function indexRoute(): JSXHandler {
       ogImage: "/assets/index-meta-home-cloud-native.png",
       twitterXImage: "/assets/index-meta-home-cloud-native.png",
       author: "Frontside",
-      analyticsDataDomain: "frontside.com"
+      analyticsDataDomain: "frontside.com",
     });
 
     return (
@@ -43,7 +43,7 @@ export function indexRoute(): JSXHandler {
             </div>
             <div class="relative lg:col-span-6 mx-auto sm:w-3/4 md:w-3/4 lg:w-full h-64 md:h-3/4 lg:h-full">
               <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
-              </>
+              </script>
               <lottie-player
                 src="/assets/animations/home-hero.json"
                 background="transparent"
