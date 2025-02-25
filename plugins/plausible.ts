@@ -1,10 +1,18 @@
 import { RevolutionPlugin } from "revolution";
 import { select } from "npm:hast-util-select";
 
-export function plausiblePlugin(): RevolutionPlugin {
+export interface PlausibleOptions {
+  enabled: boolean;
+}
+
+export function plausiblePlugin(options: PlausibleOptions): RevolutionPlugin {
   return {
     *html(request, next) {
       let html = yield* next(request);
+
+      if (!options.enabled) {
+        return html;
+      }
 
       let body = select("body", html);
 

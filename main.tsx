@@ -21,7 +21,8 @@ import { blogTagRoute } from "./routes/blog-tag-route.tsx";
 import { initBlog } from "./blog/blog.ts";
 import { plausiblePlugin } from "./plugins/plausible.ts";
 
-await main(function* () {
+await main(function* (args) {
+  let dev = !!args.includes("--dev");
   let proxies = proxySites();
 
   yield* initBlog();
@@ -51,7 +52,7 @@ await main(function* () {
       etagPlugin(),
       currentRequestPlugin(),
       twindPlugin({ config }),
-      plausiblePlugin(),
+      plausiblePlugin({ enabled: !dev }),
     ],
   });
 
