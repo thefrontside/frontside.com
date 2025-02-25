@@ -92,7 +92,7 @@ export function* useAppHtml(
                 </li>
               </menu>
               <a
-                class="order-2 bg-contain px-2 md:px-2.5 py-2 md:py-1.5 rounded-lg font-bold text-sm text-white md:text-base uppercase btn-contact"
+                class="order-2 bg-contain px-2 md:px-2.5 py-2 md:py-1.5 rounded-lg font-bold text-white text-sm md:text-base uppercase btn-contact"
                 href="/contact"
               >
                 Contact
@@ -123,7 +123,7 @@ export function* useAppHtml(
                 <a href="/contact">Contact</a>
               </li>
             </menu>
-            <section class="gap-y-12 grid grid-cols-1 mt-20 text-center text-xs leading-5 tracking-wide">
+            <section class="gap-y-12 grid grid-cols-1 mt-20 text-xs text-center leading-5 tracking-wide">
               <a href="/">
                 <img
                   alt="Frontside Logo"

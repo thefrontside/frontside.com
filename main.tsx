@@ -19,8 +19,10 @@ import { blogPostRoute } from "./routes/blog-post-route.tsx";
 import { blogIndexRoute } from "./routes/blog-index-route.tsx";
 import { blogTagRoute } from "./routes/blog-tag-route.tsx";
 import { initBlog } from "./blog/blog.ts";
+import { plausiblePlugin } from "./plugins/plausible.ts";
 
-await main(function* () {
+await main(function* (args) {
+  let dev = !!args.includes("--dev");
   let proxies = proxySites();
 
   yield* initBlog();
@@ -50,6 +52,7 @@ await main(function* () {
       etagPlugin(),
       currentRequestPlugin(),
       twindPlugin({ config }),
+      plausiblePlugin({ enabled: !dev }),
     ],
   });
 
@@ -64,12 +67,14 @@ function proxySites() {
   return {
     effection: {
       prefix: "effection",
-      website: Deno.env.get("EFFECTION_URL") ?? "https://effection-www.deno.dev",
+      website: Deno.env.get("EFFECTION_URL") ??
+        "https://effection-www.deno.dev",
     },
     interactors: {
       prefix: "interactors",
       root: "interactors/",
-      website: Deno.env.get("INTERACTORS_URL") ?? "https://interactors.deno.dev"
+      website: Deno.env.get("INTERACTORS_URL") ??
+        "https://interactors.deno.dev",
     },
     graphgen: {
       prefix: "graphgen",
