@@ -14,9 +14,9 @@ export function plausiblePlugin(options: PlausibleOptions): RevolutionPlugin {
         return html;
       }
 
-      let body = select("body", html);
+      let head = select("head", html);
 
-      body?.children.push({
+      head?.children.push({
         type: "element",
         tagName: "script",
         properties: {
