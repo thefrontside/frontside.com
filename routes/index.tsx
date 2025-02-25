@@ -19,7 +19,6 @@ export function indexRoute(): JSXHandler {
       ogImage: "/assets/index-meta-home-cloud-native.png",
       twitterXImage: "/assets/index-meta-home-cloud-native.png",
       author: "Frontside",
-      analyticsDataDomain: "frontside.com",
     });
 
     return (

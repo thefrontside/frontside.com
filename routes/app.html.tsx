@@ -15,7 +15,6 @@ export interface Options {
   ogImage: string;
   twitterXImage: string;
   author: string;
-  analyticsDataDomain?: string;
 }
 
 export function* useAppHtml(
@@ -29,17 +28,6 @@ export function* useAppHtml(
   let twitterXImageMeta = yield* useAbsoluteUrl(options.twitterXImage);
   let logoNoText = "/assets/fs-logo-no-text.svg";
   let logoURL = "/assets/fs-logo.svg";
-
-  let AnalyticsScriptTag = options.analyticsDataDomain
-    ? (
-      <script
-        defer
-        data-domain={options.analyticsDataDomain} // Dynamic data domain
-        src="https://plausible.io/js/script.js"
-      >
-      </script>
-    )
-    : <></>;
 
   return function AppHtml({ children }): JSX.Element {
     let PageSenseScriptTag = PAGE_SENSE_SCRIPT_SRC
@@ -74,7 +62,6 @@ export function* useAppHtml(
           <link rel="alternate" href={ogURL} hreflang="en" />
           <link rel="alternate" href={ogURL} hreflang="x-default" />
           {PageSenseScriptTag}
-          {AnalyticsScriptTag}
         </head>
         <body>
           <header class="m-auto p-5 lg:p-12 max-w-screen-sm lg:max-w-screen-2xl">
