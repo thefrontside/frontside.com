@@ -1,9 +1,9 @@
 import { RevolutionPlugin } from "revolution";
 import { select } from "npm:hast-util-select";
-import process from "node:process";
 
 export interface UmamiOptions {
   enabled: boolean;
+  umamiWebsiteID: string;
 }
 
 export function umamiPlugin(options: UmamiOptions): RevolutionPlugin {
@@ -11,18 +11,11 @@ export function umamiPlugin(options: UmamiOptions): RevolutionPlugin {
     *html(request, next) {
       let html = yield* next(request);
 
-      if (!options.enabled) {
+      if (!options.enabled || !options.umamiWebsiteID) {
         return html;
       }
 
       let head = select("head", html);
-
-      const umamiId = Deno.env.get("UMAMI_WEBSITE_ID");
-
-      if (!umamiId) {
-        console.warn("Umami tracking ID is missing");
-        return html;
-      }
 
       head?.children.push({
         type: "element",
@@ -30,7 +23,7 @@ export function umamiPlugin(options: UmamiOptions): RevolutionPlugin {
         properties: {
           src: "https://cloud.umami.is/script.js",
           defer: true,
-          "data-website-id": umamiId,
+          "data-website-id": options.umamiWebsiteID,
         },
         children: [],
       });
