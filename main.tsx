@@ -56,7 +56,7 @@ await main(function* (args) {
       plausiblePlugin({ enabled: !dev }),
       umamiPlugin({
         enabled: !dev,
-        umamiWebsiteID: Deno.env.get("UMAMI_WEBSITE_ID") ?? "",
+        umamiWebsiteID: Deno.env.get("UMAMI_WEBSITE_ID"),
       }),
     ],
   });
