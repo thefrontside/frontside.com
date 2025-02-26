@@ -20,6 +20,7 @@ import { blogIndexRoute } from "./routes/blog-index-route.tsx";
 import { blogTagRoute } from "./routes/blog-tag-route.tsx";
 import { initBlog } from "./blog/blog.ts";
 import { plausiblePlugin } from "./plugins/plausible.ts";
+import { umamiPlugin } from "./plugins/umami.ts";
 
 await main(function* (args) {
   let dev = !!args.includes("--dev");
@@ -53,6 +54,10 @@ await main(function* (args) {
       currentRequestPlugin(),
       twindPlugin({ config }),
       plausiblePlugin({ enabled: !dev }),
+      umamiPlugin({
+        enabled: !dev,
+        umamiWebsiteID: Deno.env.get("UMAMI_WEBSITE_ID"),
+      }),
     ],
   });
 
