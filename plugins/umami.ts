@@ -13,7 +13,7 @@ const UmamiContext = createContext<Required<UmamiOptions>>("umami");
 export function* umamiPlugin(
   options: UmamiOptions,
 ): Operation<RevolutionPlugin> {
-  if (!options.websiteID) {
+  if (options.enabled && !options.websiteID) {
     throw new Error(
       "UmamiPlugin: 'websiteId' is required but was not provided. Please pass it in as an option.",
     );

@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "dev": "deno run -A lib/watch.ts blog components lib assets routes plugins -- deno run -A main.tsx --dev"
+    "dev": "deno -A jsr:@effection-contrib/watch deno run -A main.tsx --dev"
   },
   "lint": {
     "rules": {
