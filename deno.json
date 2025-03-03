@@ -1,6 +1,7 @@
 {
   "tasks": {
-    "dev": "deno -A jsr:@effection-contrib/watch deno run -A main.tsx --dev"
+    "dev": "deno -A jsr:@effection-contrib/watch deno run -A main.tsx --dev",
+    "start": "deno -A main.tsx",
   },
   "lint": {
     "rules": {
