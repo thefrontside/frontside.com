@@ -1,6 +1,7 @@
 {
   "tasks": {
-    "dev": "deno run -A lib/watch.ts blog components lib assets routes plugins -- deno run -A main.tsx --dev"
+    "dev": "deno -A jsr:@effection-contrib/watch deno run -A main.tsx --dev",
+    "start": "deno -A main.tsx",
   },
   "lint": {
     "rules": {
@@ -17,7 +18,8 @@
     "jsxImportSource": "revolution"
   },
   "imports": {
-    "effection": "https://deno.land/x/effection@3.0.0-beta.2/mod.ts",
+    "effection": "jsr:@effection/effection@3.2.0",
+    "hast": "npm:hast@^1.0.0",
     "revolution": "https://deno.land/x/revolution@0.6.1/mod.ts",
     "revolution/jsx-runtime": "https://deno.land/x/revolution@0.6.1/jsx-runtime.ts"
   }

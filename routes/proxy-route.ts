@@ -4,6 +4,8 @@ import { fromHtml } from "npm:hast-util-from-html";
 import { toHtml } from "npm:hast-util-to-html";
 import { selectAll } from "npm:hast-util-select";
 import { posixNormalize } from "https://deno.land/std@0.201.0/path/_normalize.ts";
+import { injectPlausible } from "../plugins/plausible.ts";
+import { injectUmami } from "../plugins/umami.ts";
 
 export interface ProxyRouteOptions {
   website: string;
@@ -59,6 +61,9 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
     ) {
       let body = yield* call(() => response.text());
       let tree = fromHtml(body);
+
+      yield* injectPlausible(tree);
+      yield* injectUmami(tree);
 
       let elements = selectAll(
         '[href^="/"],[src^="/"],form[action],[http-equiv="refresh"][content]',

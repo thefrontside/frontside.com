@@ -53,10 +53,10 @@ await main(function* (args) {
       etagPlugin(),
       currentRequestPlugin(),
       twindPlugin({ config }),
-      plausiblePlugin({ enabled: !dev }),
-      umamiPlugin({
+      yield* plausiblePlugin({ enabled: !dev }),
+      yield* umamiPlugin({
         enabled: !dev,
-        umamiWebsiteID: Deno.env.get("UMAMI_WEBSITE_ID"),
+        websiteID: Deno.env.get("UMAMI_WEBSITE_ID"),
       }),
     ],
   });

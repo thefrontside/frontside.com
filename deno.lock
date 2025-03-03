@@ -1,12 +1,16 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@effection/effection@3.2.0": "3.2.0",
+    "jsr:@frontside/continuation@0.1.6": "0.1.6",
+    "jsr:@std/assert@1.0.10": "1.0.10",
     "jsr:@std/cli@^1.0.6": "1.0.7",
     "jsr:@std/encoding@^1.0.5": "1.0.5",
     "jsr:@std/fmt@^1.0.3": "1.0.3",
     "jsr:@std/fs@*": "1.0.5",
     "jsr:@std/html@^1.0.3": "1.0.3",
     "jsr:@std/http@*": "1.0.11",
+    "jsr:@std/internal@^1.0.5": "1.0.5",
     "jsr:@std/media-types@^1.1.0": "1.1.0",
     "jsr:@std/net@^1.0.4": "1.0.4",
     "jsr:@std/path@^1.0.7": "1.0.8",
@@ -22,6 +26,7 @@
     "npm:hast-util-select@*": "6.0.3",
     "npm:hast-util-to-html@*": "9.0.0",
     "npm:hast-util-to-html@9.0.0": "9.0.0",
+    "npm:hast@1": "1.0.0",
     "npm:rehype-prism-plus@1.5.1": "1.5.1",
     "npm:rehype-slug@5.1.0": "5.1.0",
     "npm:remark-frontmatter@5.0.0": "5.0.0",
@@ -29,6 +34,22 @@
     "npm:remark-mdx-frontmatter@5.0.0": "5.0.0"
   },
   "jsr": {
+    "@effection/effection@3.2.0": {
+      "integrity": "28865ac2be00b79236fd23e7c4803884921eb8d5637f57e3e12c0abae7b23d63",
+      "dependencies": [
+        "jsr:@frontside/continuation",
+        "jsr:@std/assert"
+      ]
+    },
+    "@frontside/continuation@0.1.6": {
+      "integrity": "f36a3b9ccdf49f0b15778a5e11a37d91bb097f67522f17ca5fbd668560b31c17"
+    },
+    "@std/assert@1.0.10": {
+      "integrity": "59b5cbac5bd55459a19045d95cc7c2ff787b4f8527c0dd195078ff6f9481fbb3",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
     "@std/cli@1.0.7": {
       "integrity": "98359df9df586a69015ba570305183b0cb9e7d53c05ea2016ef9a3e77e82c7cd"
     },
@@ -59,6 +80,9 @@
         "jsr:@std/path@^1.0.8",
         "jsr:@std/streams"
       ]
+    },
+    "@std/internal@1.0.5": {
+      "integrity": "54a546004f769c1ac9e025abd15a76b6671ddc9687e2313b67376125650dc7ba"
     },
     "@std/media-types@1.1.0": {
       "integrity": "c9d093f0c05c3512932b330e3cc1fe1d627b301db33a4c2c2185c02471d6eaa4"
@@ -535,6 +559,9 @@
       "dependencies": [
         "@types/hast@3.0.4"
       ]
+    },
+    "hast@1.0.0": {
+      "integrity": "sha512-vFUqlRV5C+xqP76Wwq2SrM0kipnmpxJm7OfvVXpB35Fp+Fn4MV+ozr+JZr5qFvyR1q/U+Foim2x+3P+x9S1PLA=="
     },
     "hastscript@7.2.0": {
       "integrity": "sha512-TtYPq24IldU8iKoJQqvZOuhi5CyCQRAbvDOX0x1eW6rsHSxa/1i2CCiptNTotGHJ3VoHRGmqiv6/D3q113ikkw==",
@@ -1812,5 +1839,11 @@
     "https://deno.land/x/revolution@0.6.1/lib/sse.ts": "b7bdcb9a606c262a7e9113e03b4a1bcaac8c17d18993f42d4f99127a5bed78de",
     "https://deno.land/x/revolution@0.6.1/lib/types.ts": "2f32cbc673d496b5a37e5b9ff829577866d66a19b993ed59840b92700861d237",
     "https://deno.land/x/revolution@0.6.1/mod.ts": "ffae461c16d4a1bf24c2179582ab8d5c81ad0df61e4ae2fba51ef5e5bdf90345"
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@effection/effection@3.2.0",
+      "npm:hast@1"
+    ]
   }
 }
