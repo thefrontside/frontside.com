@@ -9,7 +9,7 @@ export interface MatomoOptions {
 
 const MatomoContext = createContext<MatomoOptions>("Matomo");
 
-export function* MatomoPlugin(
+export function* matomoPlugin(
   options: MatomoOptions,
 ): Operation<RevolutionPlugin> {
   yield* MatomoContext.set(options);
