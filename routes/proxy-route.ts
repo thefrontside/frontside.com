@@ -6,6 +6,7 @@ import { selectAll } from "npm:hast-util-select";
 import { posixNormalize } from "https://deno.land/std@0.201.0/path/_normalize.ts";
 import { injectPlausible } from "../plugins/plausible.ts";
 import { injectUmami } from "../plugins/umami.ts";
+import { injectMatomo } from "../plugins/matomo.ts";
 
 export interface ProxyRouteOptions {
   website: string;
@@ -64,6 +65,7 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
 
       yield* injectPlausible(tree);
       yield* injectUmami(tree);
+      yield* injectMatomo(tree);
 
       let elements = selectAll(
         '[href^="/"],[src^="/"],form[action],[http-equiv="refresh"][content]',
