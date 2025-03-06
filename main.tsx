@@ -21,6 +21,7 @@ import { blogTagRoute } from "./routes/blog-tag-route.tsx";
 import { initBlog } from "./blog/blog.ts";
 import { plausiblePlugin } from "./plugins/plausible.ts";
 import { umamiPlugin } from "./plugins/umami.ts";
+import { matomoPlugin } from "./plugins/matomo.ts";
 
 await main(function* (args) {
   let dev = !!args.includes("--dev");
@@ -58,6 +59,7 @@ await main(function* (args) {
         enabled: !dev,
         websiteID: Deno.env.get("UMAMI_WEBSITE_ID"),
       }),
+      yield* matomoPlugin({ enabled: !dev }),
     ],
   });
 
