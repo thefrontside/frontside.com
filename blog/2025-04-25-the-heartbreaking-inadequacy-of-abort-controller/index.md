@@ -6,7 +6,7 @@ description: >-
   why doesn't anybody every use it their own apis?
 author: Charles Lowell
 tags: [ "JavaScript"]
-image: broken-heart.webp
+image: heartbreak.png
 ---
 
 What is it about `AbortController` and its companion `AbortSignal` that keeps
