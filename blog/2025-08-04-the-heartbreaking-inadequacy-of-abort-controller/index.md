@@ -135,13 +135,14 @@ there is a problem with the teardown itself, an error would be raised right at
 the moment of cancellation which we must either handle, or allow to propagate 
 before attempting another turn of the loop.
 
-The bad news is of course, that no matter how much we wish abort controllers
-worked this way, the fact of the matter is that they do not. Instead of being a
-general tool for coordinating shutdown, they are nothing more than a channel
-that communicates an intent to do so. And when we use them, we are forced to
-muddle through the actual work of an orderly cancellation and hope that all the
-functions we pass our signal too can do the same. It should go without saying
-however that robust APIs are not built on hope.
+The bad news is of course, that no matter how much we wish abort
+controllers worked this way, they don't. Instead of being a general
+tool for coordinating shutdown, they are nothing more than a channel
+that communicates an intent to do so. And when we use them, we are
+forced to muddle through the actual work of an orderly cancellation
+and hope that all the functions we pass our signal too can do the
+same. It should go without saying however that robust APIs are not
+built on hope.
 
 There is some good news though: You don’t have to deal with the headaches of an
 abort controller _at all_ when you have a
