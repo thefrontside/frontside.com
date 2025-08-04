@@ -168,7 +168,7 @@ function* main() {
 The key here is that the `scoped()` function declares that anything started
 inside its body needs to be shut down before it can return… which means that you
 get a fresh set of services with each turn of the loop. No awkward apis, no
-wobbly signal passing, just __program execution mirroring program text_.
+wobbly signal passing, just _program execution mirroring program text_.
 
 ### Structured Concurrency for the win
 
