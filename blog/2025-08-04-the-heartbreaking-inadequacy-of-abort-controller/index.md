@@ -3,7 +3,8 @@ title: >-
   The heart breaking inadequacy of AbortController
 description: >-
   If AbortController is the official way to cancel operations in JavaScript,
-  why doesn't anybody include it their own apis?
+  why doesn't anybody use it when they write their own apis?
+
 author: Charles Lowell
 tags: [ "JavaScript"]
 image: heartbreak.png
