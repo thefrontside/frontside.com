@@ -34,7 +34,7 @@ export function blogPostRoute(): JSXHandler {
 
     return (
       <AppHtml>
-        <article class="flex flex-col items-center p-6 lg:p-0 text-blue-primary">
+        <article class="flex flex-col items-center mx-auto p-6 lg:p-0 text-blue-primary">
           <header class="flex flex-col justify-center items-center mb-8 max-w-3xl">
             <section class="p-4 md:p-0">
               <h1 class="mb-4 max-w-prose font-black text-2xl md:text-4xl uppercase">
@@ -61,7 +61,7 @@ export function blogPostRoute(): JSXHandler {
               height={300}
             />
           </header>
-          <section class="mx-auto text-blue-primary lg:prose-lg prose">
+          <section class="mx-auto w-full sm:max-w-screen-sm text-blue-primary lg:prose-lg prose">
             <link rel="stylesheet" href="/assets/prism-atom-one-dark.css" />
             <post.content />
           </section>
