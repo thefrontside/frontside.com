@@ -18,7 +18,7 @@ While this is a major server release, almost all of the work happened below the 
 - [✨ The new `scoped()` api: a dead simple way to contain the effects of any operation](#the-new-scoped-api)
 - [⚡️Size and speed: a zero dependency rewrite of the internal APIs for maximal performance](#toll-free-stack-traces)
 - [⚙️ Deeper platform sympathy: native, complete stack traces for every task](#introducing-effection-extensions)
-- [🌐 Effection Extensions a repository of community contributed modules](️#a-tinier-speedier-and-more-readable-runtime)
+- [🌐 Effection Extensions: a repository of community contributed modules](️#a-tinier-speedier-and-more-readable-runtime)
 
 ## 🎯 Deterministic Executing Order
 
@@ -55,7 +55,7 @@ And the best part is that we’ve back-ported it to Effection 3.2.0 and later so
 
 ## ⚙️ Toll free stack traces
 
-Despite its [fatal flaws](https://frontside.com/blog/2023-12-11-await-event-horizon/), One of the great strengths of  `async/await` is its deep integration with the JavaScript platform. For example, if an error occurs in asynchronous code, The JavaScript runtime will stitch together the trace of asynchronous operations for you without any extra work by you or your framework code. This trace is understood not only by a developer reading it, but even more importantly it is understood by a host of developer tools including IDE’s, LSPs, and Debuggers. This may seem like a small thing, but it is a [constant source of annoyance](https://stackoverflow.com/questions/40064857/how-to-get-the-stacktrace-of-an-error-when-using-rxjs) when using frameworks that manage asynchronous effects. Most either punt on the problem entirely, or require you to have [special apis and instrumentation](https://www.notion.so/Effection-a053688722894e7896f6e59d74535e58?pvs=21) just in order to harvest a stack.
+Despite its [fatal flaws](https://frontside.com/blog/2023-12-11-await-event-horizon/), One of the great strengths of  `async/await` is its deep integration with the JavaScript platform. For example, if an error occurs in asynchronous code, The JavaScript runtime will stitch together the trace of asynchronous operations for you without any extra work by you or your framework code. This trace is understood not only by a developer reading it, but even more importantly it is understood by a host of developer tools including IDE’s, LSPs, and Debuggers. This may seem like a small thing, but it is a [constant source of annoyance](https://stackoverflow.com/questions/40064857/how-to-get-the-stacktrace-of-an-error-when-using-rxjs) when using frameworks that manage asynchronous effects. Most either punt on the problem entirely, or require you to have [special apis and instrumentation](https://www.typekaizen.com/posts/sentry-effect/) just in order to harvest a stack.
 
 With Effection, our goal is not to replace JavaScript, but to embrace it with the power of Structured Concurrency. That’s why we’ve made it so that Effection programs live and breaths on the JavaScript stack. You’d expect a simple stack trace from this program:
 
@@ -104,4 +104,4 @@ Version 3 of Effection was written using our [TypeScript delimited continuations
 
 ## The Future
 
-Effection 4.0 represents over two years of thought, discussion, and code in action at the highest levels of production. We've been using it for a while now and pretty excited about it. And we couldn't be more proud now to share it with you. We can't wait to see the things you'll build with it
+Effection 4.0 represents over two years of thought, discussion, and code in action at the highest levels of production. We've been using it for a while now and are pretty excited about it. And we couldn't be more proud now to share it with you. We can't wait to see the things you'll build with it.
