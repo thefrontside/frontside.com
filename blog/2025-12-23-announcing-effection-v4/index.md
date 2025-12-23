@@ -10,22 +10,22 @@ image: announcing-effection-v4.webp
 
 # Announcing Effection 4.0
 
-Two years ago, In December of 2023, we released Effection 3.0 to the world. Consisting of  a complete API overhaul, we drastically reduced the surface area, and aligned it nearly point for point with Vanilla Javascript. It has been remarkably stable since then, and as a result we’ve had the joy of spending the last two years working *with* Effection rather than working *on* Effection. But we’ve also been watching and listening to the ways that Effection is being used in the wild which has allowed us to make some big time improvements based on it. That’s why we’re happy to announce that these improvements are finally ready to share with the community in the form of Effection 4.0!
+Two years ago, In December of 2023, we released Effection 3.0 to the world. Consisting of  a complete API overhaul, we drastically reduced the surface area, and aligned it nearly point for point with Vanilla JavaScript. It has been remarkably stable since then, and as a result we’ve had the joy of spending the last two years working *with* Effection rather than working *on* Effection. But we’ve also been watching and listening to the ways that Effection is being used in the wild which has allowed us to make some big time improvements based on it. That’s why we’re happy to announce that these improvements are finally ready to share with the community in the form of Effection 4.0!
 
 While this is a major server release, almost all of the work happened below the surface of the public API. As a result, the number of breaking changes it contains is minimal. That’s great news, because it means that after following a gentle upgrade path, you’ll be able to benefit from some big power ups. Here is a list of our favorites:
 
 - [🎯 Stricter execution order for more deterministic computations](#deterministic-executing-order)
 - [✨ The new `scoped()` api: a dead simple way to contain the effects of any operation](#the-new-scoped-api)
-- [⚡️Size and speed: a zero dependency rewrite of the internal APIs for maximal performance](#toll-free-stack-traces)
-- [⚙️ Deeper platform sympathy: native, complete stack traces for every task](#introducing-effection-extensions)
-- [🌐 Effection Extensions: a repository of community contributed modules](️#a-tinier-speedier-and-more-readable-runtime)
+- [⚙️ Deeper platform sympathy: native, complete stack traces for every task](#️toll-free-stack-traces)
+- [🛠️ EffectionX: a the repository of community contributed modules](#️-introducing-effectionx)
+- [⚡️Size and speed: a zero dependency rewrite of the internal APIs for maximal performance](#️a-tinier-speedier-and-more-readable-runtime)
 
 ## 🎯 Deterministic Executing Order
 
 In Effection 3.x, task code will run immediately whenever an event comes in that causes it
 to resume. For example, a child task spawned in the background would start executing immediately, even while its parent was still running synchronous code. It doesn’t matter if the task sits at the root of the tree, or 100 levels deep. This led to cases where code that was technically out of scope was allowed to run even after it had passed its lifetime.
 
-Effection 4.x changes this: a parent task always has priority over its children. This change makes task execution more predictable and allows parents to always have the necessary priority required to supervise the execution of their children. However, it does mean that if your v3 code relied on implicit ordering of child tasks, you might need to adjust your approach. Read more about it in the [upgrade guide](https://frontside.com/effection/guides/v4/upgrade/#task-execution-priority)
+Effection 4.x changes this: a parent task always has priority over its children. This change makes task execution more predictable and allows parents to always have the necessary priority required to supervise the execution of their children. However, it does mean that if your v3 code relied on implicit ordering of child tasks, you might need to adjust your approach. Read more about it in the [upgrade guide](https://frontside.com/effection/guides/v4/upgrade/#task-execution-priority).
 
 ## ✨ The new `scoped()` api
 
@@ -89,7 +89,7 @@ Whether you’re executing in the console, or you’re viewing from a breakpoint
 
 ![Chrome Devtools shows the same stacktrace as the console](devtools.png)
 
-## 🌐 Introducing Effection Extensions
+## 🛠️ Introducing EffectionX
 
 When we released Effection v3, we set out to make structured concurrency in JavaScript feel natural, something you could reach for without fighting the language. Over the last two years, the community has put those primitives to work across a wide range of real world scenarios, bringing structured concurrency guarantees to everyday code.
 
