@@ -10,9 +10,9 @@ image: announcing-effection-v4.webp
 
 # Announcing Effection 4.0
 
-Two years ago, In December of 2023, we released Effection 3.0 to the world. Consisting of  a complete API overhaul, we drastically reduced the surface area, and aligned it nearly point for point with Vanilla JavaScript. It has been remarkably stable since then, and as a result we’ve had the joy of spending the last two years working *with* Effection rather than working *on* Effection. But we’ve also been watching and listening to the ways that Effection is being used in the wild which has allowed us to make some big time improvements based on it. That’s why we’re happy to announce that these improvements are finally ready to share with the community in the form of Effection 4.0!
+Two years ago, in December of 2023, we released Effection 3.0 to the world. Consisting of  a complete API overhaul, we drastically reduced the surface area, and aligned it nearly point for point with Vanilla JavaScript. It has been remarkably stable since then, and as a result we’ve had the joy of spending the last two years working *with* Effection rather than working *on* Effection. But we’ve also been watching and listening to the ways that Effection is being used in the wild which has allowed us to make some big time improvements based on it. That’s why we’re happy to announce that these improvements are finally ready to share with the community in the form of Effection 4.0!
 
-While this is a major server release, almost all of the work happened below the surface of the public API. As a result, the number of breaking changes it contains is minimal. That’s great news, because it means that after following a gentle upgrade path, you’ll be able to benefit from some big power ups. Here is a list of our favorites:
+While this is a major semver release, almost all of the work happened below the surface of the public API. As a result, the number of breaking changes it contains is minimal. That’s great news, because it means that after following a gentle upgrade path, you’ll be able to benefit from some big power ups. Here is a list of our favorites:
 
 - [🎯 Stricter execution order for more deterministic computations](#deterministic-executing-order)
 - [✨ The new `scoped()` api: a dead simple way to contain the effects of any operation](#the-new-scoped-api)
@@ -29,7 +29,7 @@ Effection 4.x changes this: a parent task always has priority over its children.
 
 ## ✨ The new `scoped()` api
 
-*The* superpower of Structured Concurrency is the ability to contain all side-effects inside a single lexical scope. That way, when program execution passes out of a lexical scope, every piece of state contained within can be torn down. But in Effection 3.x  and earlier, this capability was only *implicit*. You could create a new scope by using `action()` , `call()` or `spawn()` but these were merely by-products of the implementation. Users found it confusing about when exactly a new scope was being introduced. For example, when is `task` exited?
+*The* superpower of Structured Concurrency is the ability to contain all side-effects inside a single lexical scope. That way, when program execution passes out of that scope, every piece of state contained within can be torn down. But in Effection 3.x  and earlier, this capability was only *implicit*. You could create a new scope by using `action()` , `call()` or `spawn()` but these were merely by-products of the implementation. Users found it confusing about when exactly a new scope was being introduced. For example, when is `task` exited?
 
 ```js
 await run(function* example() {
@@ -47,7 +47,7 @@ await run(function* example() {
 
 The answer is that in Effection 3, it will be halted immediately when `call()` returns on line (2) because an invisible scope is wrapped around every operation in a call.
 
-To solve this confusion, simplify the API, and separate concerns, Effection V4 adds the new `scoped()` function.
+To solve this confusion, simplify the API, and separate concerns, Effection V4 adds the new [`scoped()`](https://frontside.com/effection/api/v4/scoped/) function.
 
 It encapsulates an operation so that no effects will persist outside of it, shutting down all active effects like concurrent tasks and resources. In addition, all contexts are restored to their values once the operation exits, giving you a clean boundary where you can temporarily modify contextual values without worrying about polluting the outer scope.
 
@@ -104,4 +104,4 @@ Version 3 of Effection was written using our [TypeScript delimited continuations
 
 ## The Future
 
-Effection 4.0 represents over two years of thought, discussion, and code in action at the highest levels of production. We've been using it for a while now and are pretty excited about it. And we couldn't be more proud now to share it with you. We can't wait to see the things you'll build with it.
+Effection 4.0 represents over two years of thought, discussion, and code in action at the highest levels of production. We've been using it for a while now and are pretty excited about it. And we couldn't be more proud now to share it with you. We can't wait to see the things you'll build.
