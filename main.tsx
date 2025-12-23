@@ -75,7 +75,7 @@ function proxySites() {
     effection: {
       prefix: "effection",
       website: Deno.env.get("EFFECTION_URL") ??
-        "https://effection-www.deno.dev",
+        "https://effection.deno.dev",
     },
     interactors: {
       prefix: "interactors",
