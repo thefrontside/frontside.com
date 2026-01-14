@@ -2,7 +2,7 @@ import type { HTTPMiddleware } from "revolution";
 import { call, Operation } from "effection";
 import { fromHtml } from "npm:hast-util-from-html";
 import { toHtml } from "npm:hast-util-to-html";
-import { selectAll } from "npm:hast-util-select";
+import { select, selectAll } from "hast-util-select";
 import { posixNormalize } from "https://deno.land/std@0.201.0/path/_normalize.ts";
 import { injectPlausible } from "../plugins/plausible.ts";
 import { injectUmami } from "../plugins/umami.ts";
@@ -66,6 +66,17 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
       yield* injectPlausible(tree);
       yield* injectUmami(tree);
       yield* injectMatomo(tree);
+
+      // allow proxied site to be indexable
+      let head = select("head", tree);
+
+      if (head) {
+        head.children = head.children.filter((el) =>
+          !(el.type === "element" && el.tagName === "meta" &&
+            el.properties.name === "robots" &&
+            el.properties.content === "noindex")
+        );
+      }
 
       let elements = selectAll(
         '[href^="/"],[src^="/"],form[action],[http-equiv="refresh"][content]',
