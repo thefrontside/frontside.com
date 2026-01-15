@@ -68,7 +68,7 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
       yield* injectMatomo(tree);
 
       let elements = selectAll(
-        '[href^="/"],[src^="/"],form[action],[http-equiv="refresh"][content]',
+        '[href^="/"],[src^="/"],form[action],meta[content]',
         tree,
       );
 
@@ -97,6 +97,8 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
                 url,
                 posixNormalize(`${base.pathname}${url}`),
               );
+            } else if (properties.content.startsWith("http")) {
+              properties.content = properties.content.replace(target.href, base.href.replace(/\/?$/,'/'));
             }
           }
         }
