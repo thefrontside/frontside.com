@@ -30,7 +30,7 @@ export function blogIndexRoute() {
               <img
                 class="flex-shrink-0 mr-8 rounded-lg w-[100%] max-w-[500px] h-auto"
                 src={latest.image
-                  ? `blog/${latest.id}/${latest.image}`
+                  ? `/blog/${latest.id}/${latest.image}`
                   : "/assets/fs-logo-no-text.svg"}
                 alt="blog image"
               />
@@ -61,7 +61,7 @@ export function blogIndexRoute() {
                     <img
                       class="box-content flex-shrink-0 rounded-lg w-full h-[250px] overflow-clip object-contain"
                       src={post.image
-                        ? `blog/${post.id}/${post.image}`
+                        ? `/blog/${post.id}/${post.image}`
                         : "/assets/fs-logo-no-text.svg"}
                       alt="blog image"
                     />
