@@ -10,6 +10,7 @@ import { backstageServicesRoute } from "./routes/backstage.html.tsx";
 import { dxConsultingServicesRoute } from "./routes/dx-consulting.html.tsx";
 import { pluginWorkshopRoute } from "./routes/advanced-backstage-plugin-development-route.tsx";
 import { resideoBackstageCaseStudyRoute } from "./routes/work/case-studies/case-study-resideo.html.tsx";
+import { llmsTxtRoute } from "./routes/llms-txt-route.ts";
 
 import { etagPlugin } from "./plugins/etag.ts";
 import { currentRequestPlugin } from "./plugins/current-request.ts";
@@ -31,6 +32,7 @@ await main(function* (args) {
 
   let revolution = createRevolution({
     app: [
+      route("/llms.txt", llmsTxtRoute()),
       route("/", indexRoute()),
       route("/blog", blogIndexRoute()),
       route("/blog/:id", blogPostRoute()),

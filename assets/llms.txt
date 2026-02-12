@@ -1,0 +1,34 @@
+# Frontside
+
+> Frontside is a software consultancy specializing in Developer Experience (DX),
+> internal developer platforms, and open source tools for JavaScript.
+
+Frontside helps engineering teams build better developer experiences, from local
+development environments to production deployment pipelines. We specialize in
+Backstage implementation, testing strategy, and structured concurrency.
+
+## Services
+
+- [DX Consulting](https://frontside.com/dx-consulting): Developer experience consulting for Cloud native teams
+- [Backstage Implementation](https://frontside.com/backstage): Internal developer portal expertise and plugin development
+
+## Open Source Projects
+
+- [Effection](https://frontside.com/effection/llms.txt): Structured concurrency for JavaScript - see detailed llms.txt for API docs and extension packages
+- [Interactors](https://frontside.com/interactors): Page objects for component library testing
+- [GraphGen](https://frontside.com/graphgen): Generate realistic graph data for testing
+
+## Blog
+
+Technical articles on DX, testing, Backstage, and JavaScript. Notable posts:
+
+- [Announcing Effection 4.0](https://frontside.com/blog/2025-12-23-announcing-effection-v4): Major release with improved determinism
+- [The Heartbreaking Inadequacy of AbortController](https://frontside.com/blog/2025-08-04-the-heartbreaking-inadequacy-of-abort-controller): Why JavaScript needs structured concurrency
+- [Effection: When async/await is not enough](https://frontside.com/blog/2021-10-26-effection-async-await): Introduction to structured concurrency
+
+## Optional
+
+- [All blog posts](https://frontside.com/blog)
+- [About Frontside](https://frontside.com/about)
+- [Contact](https://frontside.com/contact)
+- [Case Study: Resideo](https://frontside.com/work/case-studies/resideo)
