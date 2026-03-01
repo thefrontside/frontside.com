@@ -151,7 +151,7 @@ const matrixList = ['package-a', 'package-b', 'package-c'].map((pkg) => ({
 }));
 
 const includeStatement = { include: matrixList };
-console.log(`::set-output name=matrix::${includeStatement}`);
+console.log(`::set-output name=matrix::${JSON.stringify(includeStatement)}`);
 ```
 
 We use this script in the following workflow. It has two jobs: `generate-matrix` and `test`. In the `generate-matrix` job, we run the `matrix-script.js` shown above which logs the string to `stdout`. The `::set-output name=matrix::` is a special function within Github Actions which tells the runner to set this as an output value for this step. We assign it to a variable by setting the `id: set-matrix`. Finally, we can set it as an output for the whole job by specifying it in `outputs`.
