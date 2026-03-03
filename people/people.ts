@@ -5,6 +5,7 @@ import { parse } from "jsr:@std/yaml";
 export interface People {
   getAll(): Person[];
   get(slug: string): Person | undefined;
+  getBySlug(slug: string): Person | undefined;
 }
 
 export interface Person {
@@ -15,6 +16,7 @@ export interface Person {
   img?: string;
   imgAlt?: string;
   intro: string;
+  bio?: string;
   twitter?: string;
   github?: string;
   order: number;
@@ -30,6 +32,7 @@ interface Frontmatter {
   twitter?: string;
   github?: string;
   intro: string;
+  bio?: string;
   order: number;
   alumnus?: boolean;
 }
@@ -75,6 +78,7 @@ export function* initPeople(): Operation<void> {
             img,
             imgAlt: frontmatter.imgAlt,
             intro: frontmatter.intro,
+            bio: frontmatter.bio,
             twitter: frontmatter.twitter,
             github: frontmatter.github,
             order: frontmatter.order || 999,
@@ -93,5 +97,6 @@ export function* initPeople(): Operation<void> {
   yield* PeopleContext.set({
     getAll: () => sorted,
     get: (slug) => people.get(slug),
+    getBySlug: (slug) => people.get(slug),
   });
 }

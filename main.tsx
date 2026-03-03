@@ -27,6 +27,7 @@ import { blogTagRoute } from "./routes/blog-tag-route.tsx";
 import { tagsRoute } from "./routes/tags-route.tsx";
 import { initBlog } from "./blog/blog.ts";
 import { initPeople } from "./people/people.ts";
+import { personRoute } from "./routes/person-route.tsx";
 import { podcastIndexRoute } from "./routes/podcast-index-route.tsx";
 import { podcastEpisodeRoute } from "./routes/podcast-episode-route.tsx";
 import { plausiblePlugin } from "./plugins/plausible.ts";
@@ -52,6 +53,7 @@ await main(function* (args) {
       route("/contact", contactRoute()),
       route("/code-of-conduct", codeOfConductRoute()),
       route("/privacy-policy", privacyPolicyRoute()),
+      route("/people/:name", personRoute()),
       route("/blog", blogIndexRoute()),
       route("/blog/:id", blogPostRoute()),
       route("/blog/tags/:tag", blogTagRoute()),
