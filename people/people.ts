@@ -4,6 +4,7 @@ import { parse } from "jsr:@std/yaml";
 
 export interface People {
   getAll(): Person[];
+  getCurrent(): Person[];
   get(slug: string): Person | undefined;
   getBySlug(slug: string): Person | undefined;
 }
@@ -60,11 +61,6 @@ export function* initPeople(): Operation<void> {
         if (frontmatterMatch) {
           let frontmatter = parse(frontmatterMatch[1]) as Frontmatter;
 
-          // Skip alumni
-          if (frontmatter.alumnus) {
-            continue;
-          }
-
           // Convert relative img path to absolute
           let img = frontmatter.img
             ? frontmatter.img.replace(/^\.\.\//, "../assets/")
@@ -93,9 +89,11 @@ export function* initPeople(): Operation<void> {
 
   // Sort by order field
   let sorted = [...people.values()].sort((a, b) => a.order - b.order);
+  let current = sorted.filter((p) => !p.alumnus);
 
   yield* PeopleContext.set({
     getAll: () => sorted,
+    getCurrent: () => current,
     get: (slug) => people.get(slug),
     getBySlug: (slug) => people.get(slug),
   });

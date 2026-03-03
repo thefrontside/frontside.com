@@ -14,7 +14,7 @@ export function aboutRoute(): JSXHandler {
     let decor6 = "../assets/img/q3-2021/about-decor-6.png";
 
     let peopleData = yield* usePeople();
-    let people = peopleData.getAll();
+    let people = peopleData.getCurrent();
 
     let AppHtml = yield* useAppHtml({
       title: "About Frontside",
