@@ -61,10 +61,8 @@ export function* initPeople(): Operation<void> {
         if (frontmatterMatch) {
           let frontmatter = parse(frontmatterMatch[1]) as Frontmatter;
 
-          // Convert relative img path to absolute
-          let img = frontmatter.img
-            ? frontmatter.img.replace(/^\.\.\//, "../assets/")
-            : undefined;
+          // Image is now relative to people directory
+          let img = frontmatter.img;
 
           let person: Person = {
             name: frontmatter.name,

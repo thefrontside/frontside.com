@@ -4,7 +4,7 @@ name: Jeffrey Cherewaty
 alumnus: true
 title: COO
 location: Austin, Texas
-img: ../img/q3-2021/team/jeffrey.jpg
+img: jeffrey.jpg
 imgAlt: Portrait of Jeffrey. He has a short haircut and no beard.
 twitter: cherewaty
 github: cherewaty

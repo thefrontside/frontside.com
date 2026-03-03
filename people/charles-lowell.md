@@ -2,7 +2,7 @@
 templateKey: people
 name: Charles Lowell
 title: Founder / Head of Research & Development
-img: ../img/q3-2021/team/charles.jpg
+img: charles.jpg
 imgAlt: Portrait of Charles Lowell. He has a salt and pepper beard beard and a hat.
 location: Austin, Texas — Helsinki, Finland
 twitter: cowboyd

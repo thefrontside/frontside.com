@@ -2,7 +2,7 @@
 templateKey: people
 name: Michele Mikell
 title: Frontside Wrangler
-img: /img/michele-mikell.jpg
+img: michele-mikell.jpg
 twitter: MicheleMikell
 github: MicheleMikell
 alumnus: true

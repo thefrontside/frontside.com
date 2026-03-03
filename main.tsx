@@ -53,7 +53,9 @@ await main(function* (args) {
       route("/contact", contactRoute()),
       route("/code-of-conduct", codeOfConductRoute()),
       route("/privacy-policy", privacyPolicyRoute()),
+
       route("/people/:name", personRoute()),
+      route("/people/images/:file.(jpg|png)", assetsRoute("people")),
       route("/blog", blogIndexRoute()),
       route("/blog/:id", blogPostRoute()),
       route("/blog/tags/:tag", blogTagRoute()),

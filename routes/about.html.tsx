@@ -202,7 +202,7 @@ export function aboutRoute(): JSXHandler {
                   <div class="order-1 md:order-2">
                     {person.img && (
                       <img
-                        src={person.img}
+                        src={`/people/images/${person.img}`}
                         alt={person.imgAlt}
                         class="rounded-lg w-full max-w-md h-auto"
                       />

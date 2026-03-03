@@ -3,7 +3,7 @@ templateKey: people
 name: Jacob Bolda
 title: Engineering Consultant
 location: Milwaukee, Wisconsin
-img: ../img/q3-2021/team/jacob.jpg
+img: jacob.jpg
 imgAlt: Portrait of Jacob. He's sporting a trimmed haircut and a wide smile.
 twitter: jacobbolda
 github: jbolda

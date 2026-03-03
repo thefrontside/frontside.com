@@ -3,7 +3,7 @@ templateKey: people
 name: Taras Mankovski
 title: CXO
 location: Toronto, Canada
-img: ../img/q3-2021/team/taras.jpg
+img: taras.jpg
 imgAlt: Portrait of Taras. He has long straight hair. He has no beard in this picture but usually fashions a short stubble.
 intro: Taras began his journey into the realm of digital technology
   when in early 2000s his first clients started asking him to

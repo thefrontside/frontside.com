@@ -3,7 +3,7 @@ templateKey: people
 name: Elrick Ryan
 title: CEO
 location: Boston, Massachusetts
-img: ../img/q3-2021/team/elrick.jpg
+img: elrick.jpg
 imgAlt: Portrait of Elrick. He has short hair and a short beard.
 twitter: elrickvm
 github: elrickvm

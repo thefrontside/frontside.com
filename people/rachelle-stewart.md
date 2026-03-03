@@ -3,7 +3,7 @@ templateKey: people
 name: Rachelle Stewart
 title: Business Administrator
 location: Richmond, Virginia
-img: ../img/q3-2021/team/rachelle.jpg
+img: rachelle.jpg
 imgAlt: Portrait of Rachelle. She's wearing a hat and has curly hair.
 intro: After leaving the U.S. Air Force, Rachelle began her decade-long
   career in business administration. She has successfully managed
