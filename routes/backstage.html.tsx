@@ -9,10 +9,10 @@ export function backstageServicesRoute(): SitemapRoute<JSXElement> {
       return [{ pathname: generate() }];
     },
     handler: function* () {
-    let backstageDomain = "../assets/img/q3-2021/backstage-map-domain.png";
-    let deriskBackstage = "../assets/animations/backstage-derisk.json";
-    let backstageDx = "../assets/img/q3-2021/backstage-integrate-dx.png";
-    let backstageHeroAnimation = "../assets/animations/backstage-hero.json";
+    let backstageDomain = "/assets/img/q3-2021/backstage-map-domain.png";
+    let deriskBackstage = "/assets/animations/backstage-derisk.json";
+    let backstageDx = "/assets/img/q3-2021/backstage-integrate-dx.png";
+    let backstageHeroAnimation = "/assets/animations/backstage-hero.json";
 
     let AppHtml = yield* useAppHtml({
       title: "Adopt Backstage your way with Frontside",
@@ -88,19 +88,19 @@ export function backstageServicesRoute(): SitemapRoute<JSXElement> {
             </h2>
             <div class="justify-items-center items-center gap-y-20 grid grid-cols-2 lg:grid-cols-4 mx-auto mt-10">
               <img
-                src="../assets/client-logos/grayscale-client-logos/apple-logo-grayscale.svg"
+                src="/assets/client-logos/grayscale-client-logos/apple-logo-grayscale.svg"
                 alt="client logo Apple"
               />
               <img
-                src="../assets/client-logos/grayscale-client-logos/hp-logo-grayscale.svg"
+                src="/assets/client-logos/grayscale-client-logos/hp-logo-grayscale.svg"
                 alt="client logo HP"
               />
               <img
-                src="../assets/client-logos/grayscale-client-logos/ericcson-logo-grayscale.svg"
+                src="/assets/client-logos/grayscale-client-logos/ericcson-logo-grayscale.svg"
                 alt="client logo ericsson"
               />
               <img
-                src="../assets/client-logos/grayscale-client-logos/indeed-logo-grayscale.svg"
+                src="/assets/client-logos/grayscale-client-logos/indeed-logo-grayscale.svg"
                 alt="client logo Indeed"
               />
             </div>

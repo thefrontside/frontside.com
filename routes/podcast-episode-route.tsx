@@ -90,7 +90,7 @@ export function podcastEpisodeRoute(): SitemapRoute<JSXElement> {
                     class="inline-block"
                   >
                     <img
-                      src="../../assets/img/apple-podcasts-badge.svg"
+                      src="/assets/img/apple-podcasts-badge.svg"
                       alt="Listen on Apple Podcasts"
                       class="w-40 h-auto"
                     />

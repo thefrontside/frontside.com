@@ -10,13 +10,13 @@ export function aboutRoute(): SitemapRoute<JSXElement> {
       return [{ pathname: generate() }];
     },
     handler: function* () {
-      let hero = "../assets/img/q3-2021/about-hero.png";
-      let decor1 = "../assets/img/q3-2021/about-decor-1.png";
-      let decor2 = "../assets/img/q3-2021/about-decor-2.png";
-      let decor3 = "../assets/img/q3-2021/about-decor-3.png";
-      let decor4 = "../assets/img/q3-2021/about-decor-4.png";
-      let decor5 = "../assets/img/q3-2021/about-decor-5.png";
-      let decor6 = "../assets/img/q3-2021/about-decor-6.png";
+      let hero = "/assets/img/q3-2021/about-hero.png";
+      let decor1 = "/assets/img/q3-2021/about-decor-1.png";
+      let decor2 = "/assets/img/q3-2021/about-decor-2.png";
+      let decor3 = "/assets/img/q3-2021/about-decor-3.png";
+      let decor4 = "/assets/img/q3-2021/about-decor-4.png";
+      let decor5 = "/assets/img/q3-2021/about-decor-5.png";
+      let decor6 = "/assets/img/q3-2021/about-decor-6.png";
 
       let peopleData = yield* usePeople();
       let people = peopleData.getCurrent();

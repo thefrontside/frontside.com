@@ -10,42 +10,42 @@ export function backstageSupportRoute(): SitemapRoute<JSXElement> {
     },
     handler: function* () {
       let backstageSupportHero =
-        "../../assets/img/backstage-support/backstagesupport-header-40.png";
+        "/assets/img/backstage-support/backstagesupport-header-40.png";
       let backstageValuePropI48 =
-        "../../assets/img/backstage-support/backstagesupport-48.png";
+        "/assets/img/backstage-support/backstagesupport-48.png";
       let backstageValuePropI49 =
-        "../../assets/img/backstage-support/backstagesupport-49.png";
+        "/assets/img/backstage-support/backstagesupport-49.png";
       let backstageValuePropI50 =
-        "../../assets/img/backstage-support/backstagesupport-50.png";
+        "/assets/img/backstage-support/backstagesupport-50.png";
       let backstageValuePropI51 =
-        "../../assets/img/backstage-support/backstagesupport-51.png";
+        "/assets/img/backstage-support/backstagesupport-51.png";
       let backstageValuePropI52 =
-        "../../assets/img/backstage-support/backstagesupport-52.png";
+        "/assets/img/backstage-support/backstagesupport-52.png";
 
-      let leftLaurel = "../../assets/img/backstage-support/artboard-41.png";
-      let rightLaurel = "../../assets/img/backstage-support/artboard-42.png";
+      let leftLaurel = "/assets/img/backstage-support/artboard-41.png";
+      let rightLaurel = "/assets/img/backstage-support/artboard-42.png";
       let backstageRibbon =
-        "../../assets/img/backstage-support/artboard-43.png";
+        "/assets/img/backstage-support/artboard-43.png";
       let backstageContributorOfMonth =
-        "../../assets/img/backstage-support/artboard-44.png";
+        "/assets/img/backstage-support/artboard-44.png";
       let backstageContributionCount =
-        "../../assets/img/backstage-support/artboard-45.png";
+        "/assets/img/backstage-support/artboard-45.png";
       let backstageActiveSigParticipants =
-        "../../assets/img/backstage-support/artboard-46.png";
+        "/assets/img/backstage-support/artboard-46.png";
       let backstageConPresentationCount =
-        "../../assets/img/backstage-support/artboard-47.png";
+        "/assets/img/backstage-support/artboard-47.png";
 
       let supportTierSilver =
-        "../../assets/img/backstage-support/tierSilver-artboard-53.png";
+        "/assets/img/backstage-support/tierSilver-artboard-53.png";
       let supportTierGold =
-        "../../assets/img/backstage-support/tierGold-artboard-54.png";
+        "/assets/img/backstage-support/tierGold-artboard-54.png";
       let supportTierPlatnium =
-        "../../assets/img/backstage-support/tierPlatnium-artboard-55.png";
+        "/assets/img/backstage-support/tierPlatnium-artboard-55.png";
 
-      let clientHpLogo = "../../assets/img/clients/HP_Black_RGB_150_SM.png";
+      let clientHpLogo = "/assets/img/clients/HP_Black_RGB_150_SM.png";
       let clientIndeedLogo =
-        "../../assets/img/clients/Indeed_2021_Logo_RGB_Blue.svg";
-      let clientFannieMaeLogo = "../../assets/img/clients/Fannie-Mae-Logo.png";
+        "/assets/img/clients/Indeed_2021_Logo_RGB_Blue.svg";
+      let clientFannieMaeLogo = "/assets/img/clients/Fannie-Mae-Logo.png";
 
       let AppHtml = yield* useAppHtml({
         title: "Backstage Support - Frontside",

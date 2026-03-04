@@ -10,9 +10,9 @@ export function resideoBackstageCaseStudyRoute(): SitemapRoute<JSXElement> {
     },
     handler: function* () {
     let greenblueIndicatorScreenshot =
-      "../../../assets/img/2021-casestudy-resideo-backstage/backstage-indicator-catalog.png";
+      "/assets/img/2021-casestudy-resideo-backstage/backstage-indicator-catalog.png";
     let scaffoldScreenshot =
-      "../../../assets/img/2021-casestudy-resideo-backstage/backstage-scaffolding.png";
+      "/assets/img/2021-casestudy-resideo-backstage/backstage-scaffolding.png";
 
     let AppHtml = yield* useAppHtml({
       title:

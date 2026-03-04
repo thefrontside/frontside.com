@@ -10,15 +10,15 @@ export function pluginWorkshopRoute(): SitemapRoute<JSXElement> {
       return [{ pathname: generate() }];
     },
     handler: function* () {
-    let logoHumanitec = "../assets/client-logos/logo-humanitec.svg";
-    let logoHP = "../assets/client-logos/logo-HP-black.svg";
-    let logoIndeed = "../assets/client-logos/logo-indeed.svg";
-    let logoResideo = "../assets/client-logos/logo-resideo.svg";
-    let logoEricsson = "../assets/client-logos/logo-ericsson.svg";
-    let headerImage = "../assets/pluginWorkshopHeaderImagev2.png";
-    let benefitsImage1 = "../assets/benefitsImage1.svg";
-    let benefitsImage2 = "../assets/benefitsImage2.svg";
-    let benefitsImage3 = "../assets/benefitsImage3.svg";
+    let logoHumanitec = "/assets/client-logos/logo-humanitec.svg";
+    let logoHP = "/assets/client-logos/logo-HP-black.svg";
+    let logoIndeed = "/assets/client-logos/logo-indeed.svg";
+    let logoResideo = "/assets/client-logos/logo-resideo.svg";
+    let logoEricsson = "/assets/client-logos/logo-ericsson.svg";
+    let headerImage = "/assets/pluginWorkshopHeaderImagev2.png";
+    let benefitsImage1 = "/assets/benefitsImage1.svg";
+    let benefitsImage2 = "/assets/benefitsImage2.svg";
+    let benefitsImage3 = "/assets/benefitsImage3.svg";
 
     let AppHtml = yield* useAppHtml({
       title: "Frontside: Advanced Backstage Plugin Development",
