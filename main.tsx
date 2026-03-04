@@ -1,6 +1,7 @@
 import { main, suspend } from "effection";
 
-import { createRevolution, respondRedirect, route } from "revolution";
+import { createRevolution, respondRedirect, route as $route } from "revolution";
+import { route, sitemapPlugin } from "./plugins/sitemap.ts";
 
 // Routes
 import { proxyRoute } from "./routes/proxy-route.ts";
@@ -55,33 +56,35 @@ await main(function* (args) {
       route("/privacy-policy", privacyPolicyRoute()),
 
       route("/people/:name", personRoute()),
-      route("/people/images/:file.(jpg|png)", assetsRoute("people")),
+      $route("/people/images/:file.(jpg|jpeg|png)", assetsRoute("people")),
       route("/blog", blogIndexRoute()),
       route("/blog/:id", blogPostRoute()),
       route("/blog/tags/:tag", blogTagRoute()),
-      route("/blog(.*)", assetsRoute("blog")),
+      $route("/blog(.*)", assetsRoute("blog")),
       route("/tags", tagsRoute()),
       route("/podcast", podcastIndexRoute()),
       route("/podcast/:slug", podcastEpisodeRoute()),
-      route("/consulting", redirect("/dx-consulting")),
+      $route("/consulting", redirect("/dx-consulting")),
       route("/backstage", backstageServicesRoute()),
       route("/backstage/support", backstageSupportRoute()),
-      route("/backstage/resideo", redirect("/work/case-studies/resideo")),
+      $route("/backstage/resideo", redirect("/work/case-studies/resideo")),
       route("/dx-consulting", dxConsultingServicesRoute()),
       route("/work/case-studies/resideo", resideoBackstageCaseStudyRoute()),
       route(
         "/workshops/advanced-backstage-plugin-development",
         pluginWorkshopRoute(),
       ),
-      route("/effection(.*)", proxyRoute(proxies.effection)),
-      route("/graphgen(.*)", proxyRoute(proxies.graphgen)),
-      route("/assets(.*)", assetsRoute("assets")),
-      route("/interactors(.*)", proxyRoute(proxies.interactors)),
+      proxyRoute({ ...proxies.effection, pattern: "/effection(.*)" }),
+      // TODO: re-enable once graphgen site is fixed
+      // proxyRoute({ ...proxies.graphgen, pattern: "/graphgen(.*)" }),
+      $route("/assets(.*)", assetsRoute("assets")),
+      proxyRoute({ ...proxies.interactors, pattern: "/interactors(.*)" }),
     ],
 
     plugins: [
       etagPlugin(),
       currentRequestPlugin(),
+      sitemapPlugin(),
       twindPlugin({ config }),
       yield* plausiblePlugin({ enabled: !dev }),
       yield* umamiPlugin({

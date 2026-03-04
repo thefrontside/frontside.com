@@ -1,9 +1,14 @@
-import type { JSXHandler } from "revolution";
+import type { SitemapRoute } from "../plugins/sitemap.ts";
+import type { JSXElement } from "revolution/jsx-runtime";
 
 import { useAppHtml } from "./app.html.tsx";
 
-export function backstageServicesRoute(): JSXHandler {
-  return function* () {
+export function backstageServicesRoute(): SitemapRoute<JSXElement> {
+  return {
+    *routemap(generate) {
+      return [{ pathname: generate() }];
+    },
+    handler: function* () {
     let backstageDomain = "../assets/img/q3-2021/backstage-map-domain.png";
     let deriskBackstage = "../assets/animations/backstage-derisk.json";
     let backstageDx = "../assets/img/q3-2021/backstage-integrate-dx.png";
@@ -229,5 +234,6 @@ export function backstageServicesRoute(): JSXHandler {
         </article>
       </AppHtml>
     );
+  },
   };
 }

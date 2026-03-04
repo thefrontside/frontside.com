@@ -1,9 +1,14 @@
-import type { JSXHandler } from "revolution";
+import type { SitemapRoute } from "../plugins/sitemap.ts";
+import type { JSXElement } from "revolution/jsx-runtime";
 
 import { useAppHtml } from "./app.html.tsx";
 
-export function dxConsultingServicesRoute(): JSXHandler {
-  return function* () {
+export function dxConsultingServicesRoute(): SitemapRoute<JSXElement> {
+  return {
+    *routemap(generate) {
+      return [{ pathname: generate() }];
+    },
+    handler: function* () {
     let heroAnimation = "../assets/animations/consulting-hero.json";
     let frustrationAnimation =
       "../assets/animations/consulting-frustration.json";
@@ -457,5 +462,6 @@ export function dxConsultingServicesRoute(): JSXHandler {
         </article>
       </AppHtml>
     );
+  },
   };
 }

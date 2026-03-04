@@ -3,35 +3,46 @@
   "specifiers": {
     "jsr:@effection/effection@3.6.1": "3.6.1",
     "jsr:@frontside/continuation@0.1.6": "0.1.6",
+    "jsr:@frontside/staticalize@0.2.2": "0.2.2",
+    "jsr:@libs/xml@6": "6.0.8",
     "jsr:@std/cli@^1.0.6": "1.0.7",
     "jsr:@std/encoding@^1.0.5": "1.0.5",
     "jsr:@std/fmt@^1.0.3": "1.0.3",
     "jsr:@std/fs@*": "1.0.5",
+    "jsr:@std/fs@1": "1.0.5",
     "jsr:@std/html@^1.0.3": "1.0.3",
     "jsr:@std/http@*": "1.0.11",
     "jsr:@std/media-types@^1.1.0": "1.1.0",
     "jsr:@std/net@^1.0.4": "1.0.4",
+    "jsr:@std/path@1": "1.0.8",
     "jsr:@std/path@^1.0.7": "1.0.8",
     "jsr:@std/path@^1.0.8": "1.0.8",
     "jsr:@std/streams@^1.0.8": "1.0.8",
     "jsr:@std/yaml@*": "1.0.11",
-    "npm:@effectionx/fs@*": "0.2.2_effection@4.0.2",
+    "npm:@effectionx/fs@*": "0.2.2_effection@4.0.0-beta.2",
     "npm:@mdx-js/mdx@3.1.0": "3.1.0",
     "npm:@twind/core@1.1.3": "1.1.3",
     "npm:@twind/preset-tailwind@1.1.4": "1.1.4_@twind+core@1.1.3",
     "npm:@twind/preset-typography@1.0.7": "1.0.7_@twind+core@1.1.3",
     "npm:@types/hast@3": "3.0.4",
     "npm:@types/node@*": "22.12.0",
+    "npm:effection@4.0.0-beta.2": "4.0.0-beta.2",
     "npm:hast-util-from-html@*": "2.0.3",
-    "npm:hast-util-select@*": "6.0.3",
-    "npm:hast-util-to-html@*": "9.0.0",
+    "npm:hast-util-from-html@^2.0.3": "2.0.3",
+    "npm:hast-util-select@*": "6.0.4",
+    "npm:hast-util-select@^6.0.4": "6.0.4",
+    "npm:hast-util-to-html@*": "9.0.5",
     "npm:hast-util-to-html@9.0.0": "9.0.0",
+    "npm:hast-util-to-html@^9.0.5": "9.0.5",
     "npm:hast@1": "1.0.0",
+    "npm:path-to-regexp@8.2.0": "8.2.0",
     "npm:rehype-prism-plus@1.5.1": "1.5.1",
     "npm:rehype-slug@5.1.0": "5.1.0",
     "npm:remark-frontmatter@5.0.0": "5.0.0",
     "npm:remark-gfm@4.0.0": "4.0.0",
-    "npm:remark-mdx-frontmatter@5.0.0": "5.0.0"
+    "npm:remark-mdx-frontmatter@5.0.0": "5.0.0",
+    "npm:zod-opts@0.1.8": "0.1.8",
+    "npm:zod@^3.20.0": "3.25.76"
   },
   "jsr": {
     "@effection/effection@3.6.1": {
@@ -42,6 +53,23 @@
     },
     "@frontside/continuation@0.1.6": {
       "integrity": "f36a3b9ccdf49f0b15778a5e11a37d91bb097f67522f17ca5fbd668560b31c17"
+    },
+    "@frontside/staticalize@0.2.2": {
+      "integrity": "7a9bb78b56199c4635793977a93c4e9d2d59e0e83f587901e6a36f233bb8c601",
+      "dependencies": [
+        "jsr:@libs/xml",
+        "jsr:@std/fs@1",
+        "jsr:@std/path@1",
+        "npm:effection",
+        "npm:hast-util-from-html@^2.0.3",
+        "npm:hast-util-select@^6.0.4",
+        "npm:hast-util-to-html@^9.0.5",
+        "npm:zod",
+        "npm:zod-opts"
+      ]
+    },
+    "@libs/xml@6.0.8": {
+      "integrity": "7aac7438ddd460fede488d6420e4973438919b54b8e882e851ed9a234716baa3"
     },
     "@std/cli@1.0.7": {
       "integrity": "98359df9df586a69015ba570305183b0cb9e7d53c05ea2016ef9a3e77e82c7cd"
@@ -91,7 +119,7 @@
     }
   },
   "npm": {
-    "@effectionx/fs@0.2.2_effection@4.0.2": {
+    "@effectionx/fs@0.2.2_effection@4.0.0-beta.2": {
       "integrity": "sha512-aTT7Rbl8r0/0EgX+qT36gvfJnzAfjQ/+sROPhV2Ms4VcPONqwbunClWwX7B6m0jCHsER/gg4E45s60h6yatVFw==",
       "dependencies": [
         "effection"
@@ -282,8 +310,8 @@
       "integrity": "sha512-9S6m9Sukh1cZNknO1CWAr2QAWsbKLafQiyM5gZ7VgXHeuaoUwffKN4q6NC4A/Mf9iiPlOXQEKW/Mv/mh9/3YFA==",
       "bin": true
     },
-    "effection@4.0.2": {
-      "integrity": "sha512-O8WMGP10nPuJDwbNGILcaCNWS+CvDYjcdsUSD79nWZ+WtUQ8h1MEV7JJwCSZCSeKx8+TdEaZ/8r6qPTR2o/o8w=="
+    "effection@4.0.0-beta.2": {
+      "integrity": "sha512-iqEBfInNx3rB2DhQYYu6LcJ7zRn4yFo+DjUntcWNZeYWh1LiucMXb2JMiD1OA8WPgc3KOwQBxXfOwby1v34WdQ=="
     },
     "entities@4.5.0": {
       "integrity": "sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw=="
@@ -393,7 +421,7 @@
         "@types/hast@2.3.10",
         "@types/unist@2.0.11",
         "hastscript@7.2.0",
-        "property-information",
+        "property-information@6.5.0",
         "vfile@5.3.7",
         "vfile-location@4.1.0",
         "web-namespaces"
@@ -406,7 +434,7 @@
         "@types/unist@3.0.3",
         "devlop",
         "hastscript@9.0.0",
-        "property-information",
+        "property-information@6.5.0",
         "vfile@6.0.3",
         "vfile-location@5.0.3",
         "web-namespaces"
@@ -457,8 +485,8 @@
         "zwitch"
       ]
     },
-    "hast-util-select@6.0.3": {
-      "integrity": "sha512-OVRQlQ1XuuLP8aFVLYmC2atrfWHS5UD3shonxpnyrjcCkwtvmt/+N6kYJdcY4mkMJhxp4kj2EFIxQ9kvkkt/eQ==",
+    "hast-util-select@6.0.4": {
+      "integrity": "sha512-RqGS1ZgI0MwxLaKLDxjprynNzINEkRHY2i8ln4DDjgv9ZhcYVIHN9rlpiYsqtFwrgpYU361SyWDQcGNIBVu3lw==",
       "dependencies": [
         "@types/hast@3.0.4",
         "@types/unist@3.0.3",
@@ -471,7 +499,7 @@
         "hast-util-to-string@3.0.1",
         "hast-util-whitespace",
         "nth-check",
-        "property-information",
+        "property-information@7.1.0",
         "space-separated-tokens",
         "unist-util-visit@5.0.0",
         "zwitch"
@@ -491,7 +519,7 @@
         "mdast-util-mdx-expression",
         "mdast-util-mdx-jsx",
         "mdast-util-mdxjs-esm",
-        "property-information",
+        "property-information@6.5.0",
         "space-separated-tokens",
         "style-to-object@0.4.4",
         "unist-util-position",
@@ -509,7 +537,23 @@
         "hast-util-whitespace",
         "html-void-elements",
         "mdast-util-to-hast",
-        "property-information",
+        "property-information@6.5.0",
+        "space-separated-tokens",
+        "stringify-entities",
+        "zwitch"
+      ]
+    },
+    "hast-util-to-html@9.0.5": {
+      "integrity": "sha512-OguPdidb+fbHQSU4Q4ZiLKnzWo8Wwsf5bZfbvu7//a9oTYoqD/fWpe96NuHkoS9h0ccGOTe0C4NGXdtS0iObOw==",
+      "dependencies": [
+        "@types/hast@3.0.4",
+        "@types/unist@3.0.3",
+        "ccount",
+        "comma-separated-tokens",
+        "hast-util-whitespace",
+        "html-void-elements",
+        "mdast-util-to-hast",
+        "property-information@7.1.0",
         "space-separated-tokens",
         "stringify-entities",
         "zwitch"
@@ -528,7 +572,7 @@
         "mdast-util-mdx-expression",
         "mdast-util-mdx-jsx",
         "mdast-util-mdxjs-esm",
-        "property-information",
+        "property-information@6.5.0",
         "space-separated-tokens",
         "style-to-object@1.0.8",
         "unist-util-position",
@@ -541,7 +585,7 @@
         "@types/hast@3.0.4",
         "comma-separated-tokens",
         "devlop",
-        "property-information",
+        "property-information@6.5.0",
         "space-separated-tokens",
         "web-namespaces",
         "zwitch"
@@ -575,7 +619,7 @@
         "@types/hast@2.3.10",
         "comma-separated-tokens",
         "hast-util-parse-selector@3.1.1",
-        "property-information",
+        "property-information@6.5.0",
         "space-separated-tokens"
       ]
     },
@@ -585,7 +629,7 @@
         "@types/hast@3.0.4",
         "comma-separated-tokens",
         "hast-util-parse-selector@4.0.0",
-        "property-information",
+        "property-information@6.5.0",
         "space-separated-tokens"
       ]
     },
@@ -1188,8 +1232,14 @@
         "entities"
       ]
     },
+    "path-to-regexp@8.2.0": {
+      "integrity": "sha512-TdrF7fW9Rphjq4RjrW0Kp2AW0Ahwu9sRGTkS6bvDi0SCwZlEZYmcfDbEsTz8RVk0EHIS/Vd1bv3JhG+1xZuAyQ=="
+    },
     "property-information@6.5.0": {
       "integrity": "sha512-PgTgs/BlvHxOu8QuEN7wi5A0OmXaBcHpmCSTehcs6Uuu9IkDIEo13Hy7n898RHfrQ49vKCoGeWZSaAK01nwVig=="
+    },
+    "property-information@7.1.0": {
+      "integrity": "sha512-TwEZ+X+yCJmYfL7TPUOcvBZ4QfoT5YenQiJuX//0th53DE6w0xxLEtfK3iyryQFddXuvkIk51EEgrJQ0WJkOmQ=="
     },
     "recma-build-jsx@1.0.0": {
       "integrity": "sha512-8GtdyqaBcDfva+GUKDr3nev3VpKAhup1+RvkMvUxURHpW7QyIvk9F5wz7Vzo06CEMSilw6uArgRqhpiUcWp8ew==",
@@ -1526,6 +1576,15 @@
     "yaml@2.6.1": {
       "integrity": "sha512-7r0XPzioN/Q9kXBro/XPnA6kznR73DHq+GXh5ON7ZozRO6aMjbmiBuKste2wslTFkC5d1dw0GooOCepZXJ2SAg==",
       "bin": true
+    },
+    "zod-opts@0.1.8": {
+      "integrity": "sha512-YZhdEcIL3D2W9fXCCf/UBgrBS90c8w25RTteh5GihGIZzadYr/qIFxyM2L98zHUkZ2S8MMxwn3ny8fzPNnvPlg==",
+      "dependencies": [
+        "zod"
+      ]
+    },
+    "zod@3.25.76": {
+      "integrity": "sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ=="
     },
     "zwitch@2.0.4": {
       "integrity": "sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A=="

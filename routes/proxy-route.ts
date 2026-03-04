@@ -1,4 +1,5 @@
 import type { HTTPMiddleware } from "revolution";
+import { route as revolutionRoute } from "revolution";
 import { call, Operation } from "effection";
 import { fromHtml } from "npm:hast-util-from-html";
 import { toHtml } from "npm:hast-util-to-html";
@@ -7,15 +8,17 @@ import { posixNormalize } from "https://deno.land/std@0.201.0/path/_normalize.ts
 import { injectPlausible } from "../plugins/plausible.ts";
 import { injectUmami } from "../plugins/umami.ts";
 import { injectMatomo } from "../plugins/matomo.ts";
+import type { RoutePath, SitemapExtension } from "../plugins/sitemap.ts";
 
 export interface ProxyRouteOptions {
   website: string;
   prefix: string;
+  pattern?: string;
   root?: string;
 }
 
 export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
-  return function* proxy(request): Operation<Response> {
+  let middleware: HTTPMiddleware & SitemapExtension = function* proxy(request): Operation<Response> {
     let website = new URL(options.website);
 
     let target = new URL(request.url);
@@ -117,4 +120,50 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
 
     return response;
   };
+
+  if (options.prefix) {
+    middleware.sitemapExtension = function* (): Operation<RoutePath[]> {
+      let sitemap = new URL("/sitemap.xml", options.website);
+      try {
+        let response = yield* call(() => fetch(sitemap));
+        if (!response.ok) return [];
+        let xml = yield* call(() => response.text());
+        return parseSitemapUrls(xml, options);
+      } catch {
+        return [];
+      }
+    };
+  }
+
+  if (options.pattern) {
+    let handler = revolutionRoute(options.pattern, middleware);
+    if (middleware.sitemapExtension) {
+      Object.defineProperty(handler, "sitemapExtension", {
+        value: middleware.sitemapExtension,
+      });
+    }
+    return handler;
+  }
+
+  return middleware;
+}
+
+function parseSitemapUrls(
+  xml: string,
+  options: ProxyRouteOptions,
+): RoutePath[] {
+  let paths: RoutePath[] = [];
+  let locRegex = /<loc>(.*?)<\/loc>/g;
+  let match;
+  while ((match = locRegex.exec(xml)) !== null) {
+    let loc = match[1];
+    try {
+      let url = new URL(loc);
+      let pathname = posixNormalize(`/${options.prefix}${url.pathname}`);
+      paths.push({ pathname });
+    } catch {
+      // skip malformed URLs
+    }
+  }
+  return paths;
 }

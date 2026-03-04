@@ -24,14 +24,22 @@ export function* useCurrentRequest() {
  * with protocol.
  */
 export function* useAbsoluteUrl(path: string): Operation<string> {
-  let normalizedPath = posixNormalize(path);
+  let absolute = yield* useAbsoluteUrlFactory();
+  return absolute(path);
+}
+
+export function* useAbsoluteUrlFactory(): Operation<(path: string) => string> {
   let request = yield* useCurrentRequest();
 
-  if (normalizedPath.startsWith("/")) {
-    let url = new URL(request.url);
-    url.pathname = normalizedPath;
-    return url.toString();
-  } else {
-    return new URL(normalizedPath, request.url).toString();
-  }
+  return (path) => {
+    let normalizedPath = posixNormalize(path);
+    if (normalizedPath.startsWith("/")) {
+      let url = new URL(request.url);
+      url.pathname = normalizedPath;
+      url.search = "";
+      return url.toString();
+    } else {
+      return new URL(path, request.url).toString();
+    }
+  };
 }

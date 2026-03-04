@@ -1,17 +1,27 @@
 import {
-  JSXHandler,
   Middleware,
   respondNotFound,
   respondRedirect,
   useParams,
 } from "revolution";
+import type { JSXElement } from "revolution/jsx-runtime";
 import { useAppHtml } from "./app.html.tsx";
 import { useBlog } from "../blog/blog.ts";
 import { AuthorSection } from "../components/AuthorSection.tsx";
 import { getAuthorImage } from "../lib/getAuthorsImage.ts";
+import type { RoutePath, SitemapRoute } from "../plugins/sitemap.ts";
 
-export function blogPostRoute(): JSXHandler {
-  return directory(function* route() {
+export function blogPostRoute(): SitemapRoute<JSXElement> {
+  return {
+    *routemap(generate) {
+      let blog = yield* useBlog();
+      let posts = blog.getPosts();
+      let paths: RoutePath[] = posts.map((post) => ({
+        pathname: generate({ id: post.id }) + "/",
+      }));
+      return paths;
+    },
+    handler: directory(function* route() {
     let { id } = yield* useParams<{ id: string }>();
 
     let blog = yield* useBlog();
@@ -68,7 +78,8 @@ export function blogPostRoute(): JSXHandler {
         </article>
       </AppHtml>
     );
-  });
+  }),
+  };
 }
 
 // ensure that the blog post entry ends with `/`. That way, all JS,CSS, and image

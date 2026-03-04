@@ -1,9 +1,14 @@
-import type { JSXHandler } from "revolution";
+import type { SitemapRoute } from "../plugins/sitemap.ts";
+import type { JSXElement } from "revolution/jsx-runtime";
 
 import { useAppHtml } from "./app.html.tsx";
 
-export function indexRoute(): JSXHandler {
-  return function* () {
+export function indexRoute(): SitemapRoute<JSXElement> {
+  return {
+    *routemap(generate) {
+      return [{ pathname: generate() }];
+    },
+    handler: function* () {
     let homeRethink = "../assets/home-rethink.png";
     let homeshiftleft = "../assets/home-shift-left.png";
     let homeinject = "../assets/home-inject.png";
@@ -269,5 +274,6 @@ export function indexRoute(): JSXHandler {
         </article>
       </AppHtml>
     );
+  },
   };
 }

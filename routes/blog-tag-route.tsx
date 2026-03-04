@@ -1,11 +1,17 @@
 import { useParams } from "revolution";
+import type { JSXElement } from "revolution/jsx-runtime";
 import { useBlog } from "../blog/blog.ts";
 import { useAppHtml } from "./app.html.tsx";
 import { AuthorSection } from "../components/AuthorSection.tsx";
 import { getAuthorImage } from "../lib/getAuthorsImage.ts";
+import type { SitemapRoute } from "../plugins/sitemap.ts";
 
-export function blogTagRoute() {
-  return function* () {
+export function blogTagRoute(): SitemapRoute<JSXElement> {
+  return {
+    *routemap() {
+      return [];
+    },
+    handler: function* () {
     let blog = yield* useBlog();
 
     let { tag: tagParam } = yield* useParams<{ tag: string }>();
@@ -66,5 +72,6 @@ export function blogTagRoute() {
         </div>
       </App>
     );
+  },
   };
 }

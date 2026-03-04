@@ -45,13 +45,10 @@ export function* usePodcast(): Operation<Podcast> {
     let apiKey = Deno.env.get("SIMPLECAST_API");
     let podcastId = "c27dcb5f-6c33-4c38-99c1-b32d3b52fec1";
 
-    if (!apiKey) {
-      throw new Error(
-        "SIMPLECAST_API environment variable is required to load podcast data",
-      );
+    let episodes: Episode[] = [];
+    if (apiKey) {
+      episodes = yield* fetchEpisodesFromAPI(apiKey, podcastId);
     }
-
-    let episodes = yield* fetchEpisodesFromAPI(apiKey, podcastId);
 
     let episodeMap = new Map<string, Episode>();
     for (let episode of episodes) {
