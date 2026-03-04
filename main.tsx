@@ -75,8 +75,7 @@ await main(function* (args) {
         pluginWorkshopRoute(),
       ),
       proxyRoute({ ...proxies.effection, pattern: "/effection(.*)" }),
-      // TODO: re-enable once graphgen site is fixed
-      // proxyRoute({ ...proxies.graphgen, pattern: "/graphgen(.*)" }),
+      proxyRoute({ ...proxies.graphgen, pattern: "/graphgen(.*)" }),
       $route("/assets(.*)", assetsRoute("assets")),
       proxyRoute({ ...proxies.interactors, pattern: "/interactors(.*)" }),
     ],
