@@ -31,6 +31,10 @@ jobs:
             printf '.'
             sleep 1
           done
+        env:
+          SIMPLECAST_API: ${{ secrets.SIMPLECAST_API }}
+          UMAMI_WEBSITE_ID: ${{ secrets.UMAMI_WEBSITE_ID }}
+          PAGE_SENSE_SCRIPT_SRC: ${{ secrets.PAGE_SENSE_SCRIPT_SRC }}
         timeout-minutes: 5
 
       - name: Download Staticalize
