@@ -17,6 +17,7 @@ import { dxConsultingServicesRoute } from "./routes/dx-consulting.html.tsx";
 import { pluginWorkshopRoute } from "./routes/advanced-backstage-plugin-development-route.tsx";
 import { resideoBackstageCaseStudyRoute } from "./routes/work/case-studies/case-study-resideo.html.tsx";
 import { llmsTxtRoute } from "./routes/llms-txt-route.ts";
+import { platformscriptRoute } from "./routes/platformscript-route.tsx";
 
 import { etagPlugin } from "./plugins/etag.ts";
 import { currentRequestPlugin } from "./plugins/current-request.ts";
@@ -74,6 +75,8 @@ await main(function* (args) {
         "/workshops/advanced-backstage-plugin-development",
         pluginWorkshopRoute(),
       ),
+      route("/platformscript", platformscriptRoute()),
+      $route("/platformscript/(.*)", redirect("/platformscript")),
       proxyRoute({ ...proxies.effection, pattern: "/effection(.*)" }),
       proxyRoute({ ...proxies.graphgen, pattern: "/graphgen(.*)" }),
       $route("/assets(.*)", assetsRoute("assets")),
