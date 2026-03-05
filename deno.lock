@@ -1910,7 +1910,9 @@
     "dependencies": [
       "jsr:@effection/effection@3.6.1",
       "npm:@effectionx/fs@*",
-      "npm:hast@1"
+      "npm:hast-util-to-html@*",
+      "npm:hast@1",
+      "npm:path-to-regexp@8.2.0"
     ]
   }
 }

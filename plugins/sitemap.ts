@@ -2,7 +2,7 @@ import type { Middleware, RevolutionPlugin } from "revolution";
 import { route as revolutionRoute, useRevolutionOptions } from "revolution";
 import type { Operation } from "effection";
 import { useAbsoluteUrlFactory } from "./current-request.ts";
-import { compile } from "npm:path-to-regexp@8.2.0";
+import { compile } from "path-to-regexp";
 
 export function sitemapPlugin(): RevolutionPlugin {
   return {

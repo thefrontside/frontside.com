@@ -1,6 +1,6 @@
 import { main, suspend } from "effection";
 
-import { createRevolution, respondRedirect, route as $route } from "revolution";
+import { createRevolution, route as $route } from "revolution";
 import { route, sitemapPlugin } from "./plugins/sitemap.ts";
 
 // Routes
@@ -35,9 +35,25 @@ import { podcastEpisodeRoute } from "./routes/podcast-episode-route.tsx";
 import { plausiblePlugin } from "./plugins/plausible.ts";
 import { umamiPlugin } from "./plugins/umami.ts";
 import { matomoPlugin } from "./plugins/matomo.ts";
+import {
+  legacyRedirectsPlugin,
+  redirectsRoute,
+} from "./plugins/legacy-redirects.tsx";
 
 function redirect(to: string) {
-  return () => respondRedirect(to);
+  return function* () {
+    return (
+      <html>
+        <head>
+          <meta http-equiv="refresh" content={`0;url=${to}`} />
+          <link rel="canonical" href={to} />
+        </head>
+        <body>
+          <a href={to}>Moved to {to}</a>
+        </body>
+      </html>
+    );
+  };
 }
 
 await main(function* (args) {
@@ -75,6 +91,7 @@ await main(function* (args) {
         "/workshops/advanced-backstage-plugin-development",
         pluginWorkshopRoute(),
       ),
+      route("/redirects", redirectsRoute()),
       route("/platformscript", platformscriptRoute()),
       $route("/platformscript/(.*)", redirect("/platformscript")),
       proxyRoute({ ...proxies.effection, pattern: "/effection(.*)" }),
@@ -84,6 +101,7 @@ await main(function* (args) {
     ],
 
     plugins: [
+      legacyRedirectsPlugin(),
       etagPlugin(),
       currentRequestPlugin(),
       sitemapPlugin(),

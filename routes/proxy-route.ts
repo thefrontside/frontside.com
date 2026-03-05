@@ -2,7 +2,7 @@ import type { HTTPMiddleware } from "revolution";
 import { route as revolutionRoute } from "revolution";
 import { call, Operation } from "effection";
 import { fromHtml } from "npm:hast-util-from-html";
-import { toHtml } from "npm:hast-util-to-html";
+import { toHtml } from "hast-util-to-html";
 import { selectAll } from "npm:hast-util-select";
 import { posixNormalize } from "https://deno.land/std@0.201.0/path/_normalize.ts";
 import { injectPlausible } from "../plugins/plausible.ts";

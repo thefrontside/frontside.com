@@ -22,6 +22,8 @@
     "effection": "jsr:@effection/effection@3.6.1",
     "@effectionx/fs": "npm:@effectionx/fs",
     "hast": "npm:hast@^1.0.0",
+    "hast-util-to-html": "npm:hast-util-to-html",
+    "path-to-regexp": "npm:path-to-regexp@8.2.0",
     "revolution": "https://deno.land/x/revolution@0.6.1/mod.ts",
     "revolution/jsx-runtime": "https://deno.land/x/revolution@0.6.1/jsx-runtime.ts"
   }
