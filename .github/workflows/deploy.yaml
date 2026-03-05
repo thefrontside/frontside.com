@@ -1,0 +1,59 @@
+name: deploy
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - production
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Deno
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Serve Website
+        run: |
+          deno task start &
+          until curl --output /dev/null --silent --head --fail http://127.0.0.1:8005; do
+            printf '.'
+            sleep 1
+          done
+        env:
+          SIMPLECAST_API: ${{ secrets.SIMPLECAST_API }}
+          UMAMI_WEBSITE_ID: ${{ secrets.UMAMI_WEBSITE_ID }}
+          PAGE_SENSE_SCRIPT_SRC: ${{ secrets.PAGE_SENSE_SCRIPT_SRC }}
+        timeout-minutes: 5
+
+      - name: Download Staticalize
+        run: |
+          wget https://github.com/thefrontside/staticalize/releases/download/v0.2.2/staticalize-linux.tar.gz \
+            -O /tmp/staticalize-linux.tar.gz
+          tar -xzf /tmp/staticalize-linux.tar.gz -C /usr/local/bin
+          chmod +x /usr/local/bin/staticalize-linux
+
+      - name: Staticalize
+        run: |
+          staticalize-linux \
+            --site=http://127.0.0.1:8005 \
+            --output=built \
+            --base=https://frontside.com
+
+      - name: Upload to Deno Deploy
+        uses: denoland/deployctl@v1
+        with:
+          project: frontside
+          entrypoint: "jsr:@std/http/file-server"
+          root: built

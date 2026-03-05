@@ -1,10 +1,16 @@
+import type { SitemapRoute } from "../plugins/sitemap.ts";
+import type { JSXElement } from "revolution/jsx-runtime";
 import { useBlog } from "../blog/blog.ts";
 import { AuthorSection } from "../components/AuthorSection.tsx";
 import { getAuthorImage } from "../lib/getAuthorsImage.ts";
 import { useAppHtml } from "./app.html.tsx";
 
-export function blogIndexRoute() {
-  return function* () {
+export function blogIndexRoute(): SitemapRoute<JSXElement> {
+  return {
+    *routemap(generate) {
+      return [{ pathname: generate() }];
+    },
+    handler: function* () {
     let blog = yield* useBlog();
 
     let [latest, ...rest] = blog.getPosts();
@@ -85,5 +91,6 @@ export function blogIndexRoute() {
         </div>
       </App>
     );
+  },
   };
 }

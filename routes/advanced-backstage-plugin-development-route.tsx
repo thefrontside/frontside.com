@@ -1,19 +1,24 @@
 import type { Operation } from "effection";
-import type { JSXHandler } from "revolution";
+import type { SitemapRoute } from "../plugins/sitemap.ts";
+import type { JSXElement } from "revolution/jsx-runtime";
 
 import { useAppHtml } from "./app.html.tsx";
 
-export function pluginWorkshopRoute(): JSXHandler {
-  return function* () {
-    let logoHumanitec = "../assets/client-logos/logo-humanitec.svg";
-    let logoHP = "../assets/client-logos/logo-HP-black.svg";
-    let logoIndeed = "../assets/client-logos/logo-indeed.svg";
-    let logoResideo = "../assets/client-logos/logo-resideo.svg";
-    let logoEricsson = "../assets/client-logos/logo-ericsson.svg";
-    let headerImage = "../assets/pluginWorkshopHeaderImagev2.png";
-    let benefitsImage1 = "../assets/benefitsImage1.svg";
-    let benefitsImage2 = "../assets/benefitsImage2.svg";
-    let benefitsImage3 = "../assets/benefitsImage3.svg";
+export function pluginWorkshopRoute(): SitemapRoute<JSXElement> {
+  return {
+    *routemap(generate) {
+      return [{ pathname: generate() }];
+    },
+    handler: function* () {
+    let logoHumanitec = "/assets/client-logos/logo-humanitec.svg";
+    let logoHP = "/assets/client-logos/logo-HP-black.svg";
+    let logoIndeed = "/assets/client-logos/logo-indeed.svg";
+    let logoResideo = "/assets/client-logos/logo-resideo.svg";
+    let logoEricsson = "/assets/client-logos/logo-ericsson.svg";
+    let headerImage = "/assets/pluginWorkshopHeaderImagev2.png";
+    let benefitsImage1 = "/assets/benefitsImage1.svg";
+    let benefitsImage2 = "/assets/benefitsImage2.svg";
+    let benefitsImage3 = "/assets/benefitsImage3.svg";
 
     let AppHtml = yield* useAppHtml({
       title: "Frontside: Advanced Backstage Plugin Development",
@@ -804,6 +809,7 @@ export function pluginWorkshopRoute(): JSXHandler {
         </article>
       </AppHtml>
     );
+  },
   };
 }
 function H2(

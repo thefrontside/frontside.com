@@ -1,28 +1,33 @@
-import type { JSXHandler } from "revolution";
+import type { SitemapRoute } from "../plugins/sitemap.ts";
+import type { JSXElement } from "revolution/jsx-runtime";
 
 import { useAppHtml } from "./app.html.tsx";
 
-export function dxConsultingServicesRoute(): JSXHandler {
-  return function* () {
-    let heroAnimation = "../assets/animations/consulting-hero.json";
+export function dxConsultingServicesRoute(): SitemapRoute<JSXElement> {
+  return {
+    *routemap(generate) {
+      return [{ pathname: generate() }];
+    },
+    handler: function* () {
+    let heroAnimation = "/assets/animations/consulting-hero.json";
     let frustrationAnimation =
-      "../assets/animations/consulting-frustration.json";
-    let cycleAnimation = "../assets/animations/consulting-cycle.json";
+      "/assets/animations/consulting-frustration.json";
+    let cycleAnimation = "/assets/animations/consulting-cycle.json";
 
-    let dxProblems = "../assets/img/q3-2021/dx-problems.png";
-    let dxFrustration = "../assets/img/q3-2021/dx-frustration.png";
-    let dxTools = "../assets/img/q3-2021/dx-tools.png";
-    let dxCycle = "../assets/img/q3-2021/dx-cycle.png";
-    let dxDecoupled = "../assets/img/q3-2021/dx-decoupled.png";
-    let dxLocalDev = "../assets/img/q3-2021/dx-local-dev.png";
-    let dxTesting = "../assets/img/q3-2021/dx-shift-left-testing.png";
+    let dxProblems = "/assets/img/q3-2021/dx-problems.png";
+    let dxFrustration = "/assets/img/q3-2021/dx-frustration.png";
+    let dxTools = "/assets/img/q3-2021/dx-tools.png";
+    let dxCycle = "/assets/img/q3-2021/dx-cycle.png";
+    let dxDecoupled = "/assets/img/q3-2021/dx-decoupled.png";
+    let dxLocalDev = "/assets/img/q3-2021/dx-local-dev.png";
+    let dxTesting = "/assets/img/q3-2021/dx-shift-left-testing.png";
 
     let AppHtml = yield* useAppHtml({
       title: "DX Consulting for Cloud native teams",
       description:
         "Frontside helps Cloud native orgs create Developer Experiences that put the joy back in productivity",
-      ogImage: "../assets/img/q3-2021/meta-backstage.png",
-      twitterXImage: "../assets/img/q3-2021/meta-backstage.png",
+      ogImage: "/assets/img/q3-2021/meta-backstage.png",
+      twitterXImage: "/assets/img/q3-2021/meta-backstage.png",
       author: "Frontside",
     });
 
@@ -90,19 +95,19 @@ export function dxConsultingServicesRoute(): JSXHandler {
             </h2>
             <div class="justify-items-center items-center gap-y-20 grid grid-cols-2 lg:grid-cols-4 mx-auto mt-10">
               <img
-                src="../assets/client-logos/grayscale-client-logos/apple-logo-grayscale.svg"
+                src="/assets/client-logos/grayscale-client-logos/apple-logo-grayscale.svg"
                 alt="client logo Apple"
               />
               <img
-                src="../assets/client-logos/grayscale-client-logos/hp-logo-grayscale.svg"
+                src="/assets/client-logos/grayscale-client-logos/hp-logo-grayscale.svg"
                 alt="client logo HP"
               />
               <img
-                src="../assets/client-logos/grayscale-client-logos/ericcson-logo-grayscale.svg"
+                src="/assets/client-logos/grayscale-client-logos/ericcson-logo-grayscale.svg"
                 alt="client logo ericsson"
               />
               <img
-                src="../assets/client-logos/grayscale-client-logos/indeed-logo-grayscale.svg"
+                src="/assets/client-logos/grayscale-client-logos/indeed-logo-grayscale.svg"
                 alt="client logo Indeed"
               />
             </div>
@@ -457,5 +462,6 @@ export function dxConsultingServicesRoute(): JSXHandler {
         </article>
       </AppHtml>
     );
+  },
   };
 }

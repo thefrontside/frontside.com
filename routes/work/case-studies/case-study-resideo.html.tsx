@@ -1,13 +1,18 @@
-import type { JSXHandler } from "revolution";
+import type { SitemapRoute } from "../../../plugins/sitemap.ts";
+import type { JSXElement } from "revolution/jsx-runtime";
 
 import { useAppHtml } from "../../app.html.tsx";
 
-export function resideoBackstageCaseStudyRoute(): JSXHandler {
-  return function* () {
+export function resideoBackstageCaseStudyRoute(): SitemapRoute<JSXElement> {
+  return {
+    *routemap(generate) {
+      return [{ pathname: generate() }];
+    },
+    handler: function* () {
     let greenblueIndicatorScreenshot =
-      "../../../assets/img/2021-casestudy-resideo-backstage/backstage-indicator-catalog.png";
+      "/assets/img/2021-casestudy-resideo-backstage/backstage-indicator-catalog.png";
     let scaffoldScreenshot =
-      "../../../assets/img/2021-casestudy-resideo-backstage/backstage-scaffolding.png";
+      "/assets/img/2021-casestudy-resideo-backstage/backstage-scaffolding.png";
 
     let AppHtml = yield* useAppHtml({
       title:
@@ -142,5 +147,6 @@ export function resideoBackstageCaseStudyRoute(): JSXHandler {
         <script defer src="//embed.typeform.com/next/embed.js"></script>
       </AppHtml>
     );
+  },
   };
 }
