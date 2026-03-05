@@ -123,7 +123,7 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
 
   if (options.prefix) {
     middleware.sitemapExtension = function* (): Operation<RoutePath[]> {
-      let sitemap = new URL("/sitemap.xml", options.website);
+      let sitemap = new URL(`/${options.root ?? ""}sitemap.xml`, options.website);
       try {
         let response = yield* call(() => fetch(sitemap));
         if (!response.ok) return [];
@@ -159,7 +159,8 @@ function parseSitemapUrls(
     let loc = match[1];
     try {
       let url = new URL(loc);
-      let pathname = posixNormalize(`/${options.prefix}${url.pathname}`);
+      let path = options.root ? url.pathname.replace(`/${options.root}`, "/") : url.pathname;
+      let pathname = posixNormalize(`/${options.prefix}${path}`);
       paths.push({ pathname });
     } catch {
       // skip malformed URLs
