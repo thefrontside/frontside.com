@@ -59,7 +59,7 @@
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-remark": "^4.7.0",
     "gatsby-transformer-sharp": "^3.10.0",
-    "lodash": "^4.17.21",
+    "lodash": "^4.18.1",
     "lodash-webpack-plugin": "^0.11.4",
     "lodash.round": "^4.0.4",
     "plausible-tracker": "^0.3.1",
