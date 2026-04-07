@@ -101,7 +101,7 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
                 posixNormalize(`${base.pathname}${url}`),
               );
             } else if (properties.content.startsWith("http")) {
-              properties.content = properties.content.replace(target.href, base.href.replace(/\/?$/,'/'));
+              properties.content = properties.content.replace(target.origin, base.href.replace(/\/?$/, ''));
             }
           }
         }
