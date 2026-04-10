@@ -131,7 +131,6 @@ function proxySites() {
     },
     interactors: {
       prefix: "interactors",
-      root: "interactors/",
       website: Deno.env.get("INTERACTORS_URL") ??
         "https://interactors.deno.dev",
     },
