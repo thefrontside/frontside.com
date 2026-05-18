@@ -11968,7 +11968,7 @@ http-errors@2.0.0:
     statuses "2.0.1"
     toidentifier "1.0.1"
 
-http-errors@^1.7.3, http-errors@~1.8.1:
+http-errors@^1.7.3:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/http-errors/-/http-errors-1.8.1.tgz#7c3f28577cbc8a207388455dbd62295ed07bd68c"
   integrity sha512-Kpk9Sm7NmI+RHhnj6OIWDI1d6fIoFAtFt9RLaTMRlg/8w49juAStsrBgp0Dp4OdxdVbRIeKhtCUvoi/RuAhO4g==
@@ -15221,11 +15221,11 @@ multer@^1.4.2:
     xtend "^4.0.0"
 
 multiparty@^4.2.1:
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/multiparty/-/multiparty-4.2.3.tgz#6b14981badb5ad3f0929622868751810368d4633"
-  integrity sha512-Ak6EUJZuhGS8hJ3c2fY6UW5MbkGUPMBEGd13djUzoY/BHqV/gTuFWtC6IuVA7A2+v3yjBS6c4or50xhzTQZImQ==
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/multiparty/-/multiparty-4.3.0.tgz#fc8588787b02fd0f8b9f1b8ac27e0633dac8cda2"
+  integrity sha512-LD3YDFI9KrDoOGHsPM+hNraPDQQDPLe8Un/kvJfsZCsHKriA4mphg6Ctc2Cuup/59DtHMdAPm6ICXlUmhwTiug==
   dependencies:
-    http-errors "~1.8.1"
+    http-errors "2.0.0"
     safe-buffer "5.2.1"
     uid-safe "2.1.5"
 
