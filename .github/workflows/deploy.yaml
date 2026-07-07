@@ -53,7 +53,7 @@ jobs:
 
       - name: Upload to Deno Deploy
         run: deno deploy create \
-          --token {{ secrets.DENO_DEPLOY }}
+          --token ${{ secrets.DENO_DEPLOY }}
           --org frontsidesoftware \
           --app foundation \
           --source local \
