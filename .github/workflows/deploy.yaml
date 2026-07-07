@@ -52,11 +52,8 @@ jobs:
             --base=https://frontside.com
 
       - name: Upload to Deno Deploy
-        run: deno deploy create \
-          --token ${{ secrets.DENO_DEPLOY }}
+        env:
+          DENO_DEPLOY_TOKEN: ${{ secrets.DENO_DEPLOY }}
+        run: deno deploy update \
           --org frontsidesoftware \
-          --app foundation \
-          --source local \
-          --runtime-mode static \
-          --static-dir built \
-          --region global
+          --app foundation
