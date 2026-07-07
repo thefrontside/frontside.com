@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Deno
         uses: denoland/setup-deno@v2
@@ -53,6 +53,7 @@ jobs:
 
       - name: Upload to Deno Deploy
         run: deno deploy create \
+          --token {{ secrets.DENO_DEPLOY }}
           --org frontsidesoftware \
           --app foundation \
           --source local \
