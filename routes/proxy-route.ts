@@ -18,7 +18,9 @@ export interface ProxyRouteOptions {
 }
 
 export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
-  let middleware: HTTPMiddleware & SitemapExtension = function* proxy(request): Operation<Response> {
+  let middleware: HTTPMiddleware & SitemapExtension = function* proxy(
+    request,
+  ): Operation<Response> {
     let website = new URL(options.website);
 
     let target = new URL(request.url);
@@ -41,10 +43,7 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
     if ([301, 302, 307, 308].includes(response.status)) {
       let location = response.headers.get("location");
       if (location?.startsWith(String(website))) {
-        let headers: Record<string, string> = {};
-        for (let [key, value] of response.headers.entries()) {
-          headers[key] = value;
-        }
+        let headers = copyHeaders(response);
 
         let url = new URL(request.url);
 
@@ -101,20 +100,18 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
                 posixNormalize(`${base.pathname}${url}`),
               );
             } else if (properties.content.startsWith("http")) {
-              properties.content = properties.content.replace(target.origin, base.href.replace(/\/?$/, ''));
+              properties.content = properties.content.replace(
+                target.origin,
+                base.href.replace(/\/?$/, ""),
+              );
             }
           }
         }
       }
-      let headers: Record<string, string> = {};
-      for (let [key, value] of response.headers.entries()) {
-        headers[key] = value;
-      }
-
       response = new Response(toHtml(tree), {
         status: response.status,
         statusText: response.statusText,
-        headers,
+        headers: copyHeaders(response),
       });
     }
 
@@ -123,7 +120,10 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
 
   if (options.prefix) {
     middleware.sitemapExtension = function* (): Operation<RoutePath[]> {
-      let sitemap = new URL(`/${options.root ?? ""}sitemap.xml`, options.website);
+      let sitemap = new URL(
+        `/${options.root ?? ""}sitemap.xml`,
+        options.website,
+      );
       try {
         let response = yield* call(() => fetch(sitemap));
         if (!response.ok) return [];
@@ -148,6 +148,28 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
   return middleware;
 }
 
+// Copy an upstream response's headers, dropping the ones that describe how the
+// *original* body was framed on the wire. `fetch()` transparently decompresses
+// the body, so by the time we rebuild the response the payload is plain text —
+// carrying over the upstream `content-encoding` (e.g. gzip) or its stale
+// `content-length` makes us serve uncompressed bytes labelled as gzip, which
+// downstream clients then fail to decode ("Invalid gzip header"). Let the
+// server recompute these for the new body.
+function copyHeaders(response: Response): Record<string, string> {
+  let skip = new Set([
+    "content-encoding",
+    "content-length",
+    "transfer-encoding",
+  ]);
+  let headers: Record<string, string> = {};
+  for (let [key, value] of response.headers.entries()) {
+    if (!skip.has(key.toLowerCase())) {
+      headers[key] = value;
+    }
+  }
+  return headers;
+}
+
 function parseSitemapUrls(
   xml: string,
   options: ProxyRouteOptions,
@@ -159,7 +181,9 @@ function parseSitemapUrls(
     let loc = match[1];
     try {
       let url = new URL(loc);
-      let path = options.root ? url.pathname.replace(`/${options.root}`, "/") : url.pathname;
+      let path = options.root
+        ? url.pathname.replace(`/${options.root}`, "/")
+        : url.pathname;
       let pathname = posixNormalize(`/${options.prefix}${path}`);
       paths.push({ pathname });
     } catch {
