@@ -54,7 +54,7 @@ jobs:
       - name: Upload to Deno Deploy
         run: deno deploy create \
           --org frontsidesoftware \
-          --app home \
+          --app foundation \
           --source local \
           --runtime-mode static \
           --static-dir built \
