@@ -52,8 +52,10 @@ jobs:
             --base=https://frontside.com
 
       - name: Upload to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: frontside
-          entrypoint: "jsr:@std/http/file-server"
-          root: built
+        run: deno deploy create \
+          --org frontsidesoftware \
+          --app home \
+          --source local \
+          --runtime-mode static \
+          --static-dir built \
+          --region global
