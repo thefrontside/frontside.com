@@ -7,6 +7,9 @@ on:
     branches:
       - production
 
+permissions:
+  contents: read
+
 jobs:
   # --- PULL REQUEST PREVIEW DEPLOYMENT ---
   deploy-preview:
@@ -14,12 +17,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     environment:
-      name: preview
-      url: ${{ steps.netlify.outputs.preview-url }}
-    permissions:
-      id-token: write
-      contents: read
-      pull-requests: write # Required if you want to write a comment on the PR
+      name: Preview
+      url: ${{ steps.netlify.outputs.unique-url }}
 
     steps:
     - name: Checkout
@@ -57,15 +56,23 @@ jobs:
           --output=built \
           --base=https://frontside.com
 
-    - name: Deploy Preview
+    - name: Deploy Preview to Netlify
       id: netlify
       run: |
-        # Run CLI deploy WITHOUT the --prod flag to create a preview instance
-        OUTPUT=$(npx netlify-cli deploy --dir=built --auth=${{ secrets.NETLIFY_AUTH_TOKEN }} --site=${{ secrets.NETLIFY_SITE_ID }})
-        
-        # Parse out the dynamic website URL from Netlify's terminal response
-        URL=$(echo "$OUTPUT" | grep -oE "https://[^ ]+\.netlify\.app" | head -n 1)
-        echo "preview-url=$URL" >> $GITHUB_OUTPUT
+        PR_NUMBER="${{ github.event.pull_request.number }}"
+        COMMIT_SHA="${{ github.sha }}"
+
+        OUTPUT=$(npx netlify-cli deploy \
+          --dir=built \
+          --alias="pr-$PR_NUMBER" \
+          --message="Preview for PR #$PR_NUMBER at commit $COMMIT_SHA" \
+          --auth=${{ secrets.NETLIFY_AUTH_TOKEN }} \
+          --site=${{ secrets.NETLIFY_SITE_ID }})
+
+        UNIQUE_URL=$(echo "$OUTPUT" | grep -oE "https://[^ ]+\.netlify\.app" | head -n 1)
+        echo "unique-url=$UNIQUE_URL" >> $GITHUB_OUTPUT
+
+        echo "stable-url=https://pr-$PR_NUMBER--frontside.netlify.app" >> $GITHUB_OUTPUT
 
     # Automatically post the link as a comment inside the PR thread
     - name: Comment PR with Preview Link
@@ -76,7 +83,7 @@ jobs:
             issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
-            body: `🚀 **Deploy Preview Ready!** Review changes here: ${{ steps.netlify.outputs.preview-url }}`
+            body: `🚀 **Deploy Preview Ready!** Review changes here: ${{ steps.netlify.outputs.stable-url }}`
           })
 
   # --- PRODUCTION DEPLOYMENT ---
@@ -85,10 +92,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     environment:
-      name: production
+      name: Production
       url: https://frontside.com
-    permissions:
-      contents: read
 
     steps:
       - name: Checkout
