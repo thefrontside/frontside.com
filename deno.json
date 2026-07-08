@@ -2,7 +2,7 @@
   "tasks": {
     "dev": "deno -A jsr:@effection-contrib/watch deno run -A main.tsx --dev",
     "start": "deno -A main.tsx",
-    "staticalize": "deno run -A jsr:@frontside/staticalize@0.2.2/cli --site http://localhost:8005 --output=built --base=http://localhost:8005"
+    "staticalize": "deno run -A jsr:@frontside/staticalize@0.2.6/cli --site http://localhost:8005 --output=built --base=http://localhost:8005"
   },
   "lint": {
     "rules": {
