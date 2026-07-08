@@ -65,16 +65,18 @@ jobs:
         PR_NUMBER="${{ github.event.pull_request.number }}"
         COMMIT_SHA="${{ github.sha }}"
 
-        OUTPUT=$(npx netlify-cli deploy \
+        DEPLOY_OUTPUT=$(npx netlify-cli deploy \
           --dir=built \
           --alias="pr-$PR_NUMBER" \
           --message="Preview for PR #$PR_NUMBER at commit $COMMIT_SHA" \
           --auth=${{ secrets.NETLIFY_AUTH_TOKEN }} \
-          --site=${{ secrets.NETLIFY_SITE_ID }})
+          --site=${{ secrets.NETLIFY_SITE_ID }} \
+          --json)
 
-        UNIQUE_URL=$(echo "$OUTPUT" | grep -oE "https://[^ ]+\.netlify\.app" | head -n 1)
+        # Netlify JSON format exposes this as a root property called "deploy_url"
+        UNIQUE_URL=$(echo "$DEPLOY_OUTPUT" | jq -r '.deploy_url')
+
         echo "unique-url=$UNIQUE_URL" >> $GITHUB_OUTPUT
-
         echo "stable-url=https://pr-$PR_NUMBER--frontside.netlify.app" >> $GITHUB_OUTPUT
 
     - name: Comment PR with Preview Link
