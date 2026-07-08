@@ -19,6 +19,9 @@ jobs:
     environment:
       name: Preview
       url: ${{ steps.netlify.outputs.unique-url }}
+    permissions:
+      contents: read
+      pull-requests: write
 
     steps:
     - name: Checkout
