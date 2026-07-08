@@ -73,9 +73,7 @@ jobs:
           --site=${{ secrets.NETLIFY_SITE_ID }} \
           --json)
 
-        # Netlify JSON format exposes this as a root property called "deploy_url"
-        UNIQUE_URL=$(echo "$DEPLOY_OUTPUT" | jq -r '.deploy_url')
-
+        UNIQUE_URL=$(echo "$DEPLOY_OUTPUT" | jq -r '.deploy_ssl_url')
         echo "unique-url=$UNIQUE_URL" >> $GITHUB_OUTPUT
         echo "stable-url=https://pr-$PR_NUMBER--frontside.netlify.app" >> $GITHUB_OUTPUT
 
