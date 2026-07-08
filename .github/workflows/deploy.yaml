@@ -63,7 +63,7 @@ jobs:
       id: netlify
       run: |
         PR_NUMBER="${{ github.event.pull_request.number }}"
-        COMMIT_SHA="${{ github.sha }}"
+        COMMIT_SHA="${{ github.event.pull_request.head.sha }}"
 
         DEPLOY_OUTPUT=$(npx netlify-cli deploy \
           --dir=built \
