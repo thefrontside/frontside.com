@@ -127,16 +127,16 @@ function proxySites() {
     effection: {
       prefix: "effection",
       website: Deno.env.get("EFFECTION_URL") ??
-        "https://effection.deno.dev",
+        "https://effection.netlify.app",
     },
     interactors: {
       prefix: "interactors",
       website: Deno.env.get("INTERACTORS_URL") ??
-        "https://interactors.deno.dev",
+        "https://interactors.netlify.app",
     },
     graphgen: {
       prefix: "graphgen",
-      website: Deno.env.get("GRAPHGEN_URL") ?? "https://graphgen.deno.dev",
+      website: Deno.env.get("GRAPHGEN_URL") ?? "https://graphgen.netlify.app",
     },
   } as const;
 }
