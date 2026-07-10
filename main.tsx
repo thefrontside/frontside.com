@@ -136,7 +136,7 @@ function proxySites() {
     },
     graphgen: {
       prefix: "graphgen",
-      website: Deno.env.get("GRAPHGEN_URL") ?? "https://graphgen.netlify.app",
+      website: Deno.env.get("GRAPHGEN_URL") ?? "https://graphgen-data.netlify.app",
     },
   } as const;
 }
