@@ -42,22 +42,29 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
 
     if ([301, 302, 307, 308].includes(response.status)) {
       let location = response.headers.get("location");
-      if (location?.startsWith(String(website))) {
-        let headers = copyHeaders(response);
+      if (location) {
+        // Resolve relative Location headers against the upstream website
+        // - Netlify returns relative redirects like "/search/""
+        // - Deno Deploy returns absolute ones like "https://host/search/"
+        let loc = location.startsWith("http")
+          ? new URL(location)
+          : new URL(location, website);
 
-        let url = new URL(request.url);
+        if (loc.origin === website.origin) {
+          let headers = copyHeaders(response);
+          let url = new URL(request.url);
 
-        let loc = new URL(location);
-        if (!options.root) {
-          loc.pathname = `${options.prefix}${loc.pathname}`;
+          if (!options.root) {
+            loc.pathname = `${options.prefix}${loc.pathname}`;
+          }
+          headers.location = loc.toString().replace(target.origin, url.origin);
+
+          response = new Response(null, {
+            status: response.status,
+            statusText: response.statusText,
+            headers,
+          });
         }
-        headers.location = loc.toString().replace(target.origin, url.origin);
-
-        response = new Response(null, {
-          status: response.status,
-          statusText: response.statusText,
-          headers,
-        });
       }
     } else if (
       response.headers.get("Content-Type")?.match(/html/) && !options.root
