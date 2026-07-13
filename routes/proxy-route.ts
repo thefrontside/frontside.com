@@ -128,7 +128,11 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
       }
     }
 
-    return response;
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers: copyHeaders(response),
+    });
   };
 
   if (options.prefix) {
