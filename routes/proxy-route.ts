@@ -142,17 +142,15 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
     };
   }
 
-  if (options.pattern) {
-    let handler = revolutionRoute(options.pattern, middleware);
-    if (middleware.sitemapExtension) {
-      Object.defineProperty(handler, "sitemapExtension", {
-        value: middleware.sitemapExtension,
-      });
-    }
-    return handler;
-  }
+  let pattern = options.pattern ?? `/${options.prefix}(.*)`;
 
-  return middleware;
+  let handler = revolutionRoute(pattern, middleware);
+  if (middleware.sitemapExtension) {
+    Object.defineProperty(handler, "sitemapExtension", {
+      value: middleware.sitemapExtension,
+    });
+  }
+  return handler;
 }
 
 // Copy an upstream response's headers, dropping the ones that describe how the

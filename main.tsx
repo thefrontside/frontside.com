@@ -94,10 +94,10 @@ await main(function* (args) {
       route("/redirects", redirectsRoute()),
       route("/platformscript", platformscriptRoute()),
       $route("/platformscript/(.*)", redirect("/platformscript")),
-      proxyRoute({ ...proxies.effection, pattern: "/effection(.*)" }),
-      proxyRoute({ ...proxies.graphgen, pattern: "/graphgen(.*)" }),
+      proxyRoute(proxies.effection),
+      proxyRoute(proxies.graphgen),
       $route("/assets(.*)", assetsRoute("assets")),
-      proxyRoute({ ...proxies.interactors, pattern: "/interactors(.*)" }),
+      proxyRoute(proxies.interactors),
     ],
 
     plugins: [
