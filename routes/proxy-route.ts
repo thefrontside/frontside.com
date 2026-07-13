@@ -69,57 +69,63 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
     } else if (
       response.headers.get("Content-Type")?.match(/html/) && !options.root
     ) {
-      let body = yield* call(() => response.text());
-      let tree = fromHtml(body);
+      try {
+        let body = yield* call(() => response.text());
+        let tree = fromHtml(body);
 
-      yield* injectPlausible(tree);
-      yield* injectUmami(tree);
-      yield* injectMatomo(tree);
+        yield* injectPlausible(tree);
+        yield* injectUmami(tree);
+        yield* injectMatomo(tree);
 
-      let elements = selectAll(
-        '[href^="/"],[src^="/"],form[action],meta[content]',
-        tree,
-      );
+        let elements = selectAll(
+          '[href^="/"],[src^="/"],form[action],meta[content]',
+          tree,
+        );
 
-      for (let element of elements) {
-        let properties = element.properties!;
+        for (let element of elements) {
+          let properties = element.properties!;
 
-        if (properties.href) {
-          properties.href = posixNormalize(
-            `${base.pathname}${properties.href}`,
-          );
-        }
-        if (properties.src) {
-          properties.src = posixNormalize(`${base.pathname}${properties.src}`);
-        }
-        if (properties.action) {
-          properties.action = posixNormalize(
-            `${base.pathname}${properties.action}`,
-          );
-        }
-        if (properties.content) {
-          if (typeof properties.content === "string") {
-            const parts = properties.content.match(/\d;\s*url=(.*)/);
-            if (parts) {
-              const [, url] = parts;
-              properties.content = properties.content.replace(
-                url,
-                posixNormalize(`${base.pathname}${url}`),
-              );
-            } else if (properties.content.startsWith("http")) {
-              properties.content = properties.content.replace(
-                target.origin,
-                base.href.replace(/\/?$/, ""),
-              );
+          if (properties.href) {
+            properties.href = posixNormalize(
+              `${base.pathname}${properties.href}`,
+            );
+          }
+          if (properties.src) {
+            properties.src = posixNormalize(
+              `${base.pathname}${properties.src}`,
+            );
+          }
+          if (properties.action) {
+            properties.action = posixNormalize(
+              `${base.pathname}${properties.action}`,
+            );
+          }
+          if (properties.content) {
+            if (typeof properties.content === "string") {
+              const parts = properties.content.match(/\d;\s*url=(.*)/);
+              if (parts) {
+                const [, url] = parts;
+                properties.content = properties.content.replace(
+                  url,
+                  posixNormalize(`${base.pathname}${url}`),
+                );
+              } else if (properties.content.startsWith("http")) {
+                properties.content = properties.content.replace(
+                  target.origin,
+                  base.href.replace(/\/?$/, ""),
+                );
+              }
             }
           }
         }
+        response = new Response(toHtml(tree), {
+          status: response.status,
+          statusText: response.statusText,
+          headers: copyHeaders(response),
+        });
+      } catch (error) {
+        console.error(`Proxy HTML rewrite failed for ${request.url}:`, error);
       }
-      response = new Response(toHtml(tree), {
-        status: response.status,
-        statusText: response.statusText,
-        headers: copyHeaders(response),
-      });
     }
 
     return response;
