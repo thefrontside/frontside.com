@@ -42,80 +42,97 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
 
     if ([301, 302, 307, 308].includes(response.status)) {
       let location = response.headers.get("location");
-      if (location?.startsWith(String(website))) {
-        let headers = copyHeaders(response);
+      if (location) {
+        // Resolve relative Location headers against the upstream website
+        // - Netlify returns relative redirects like "/search/""
+        // - Deno Deploy returns absolute ones like "https://host/search/"
+        let loc = location.startsWith("http")
+          ? new URL(location)
+          : new URL(location, website);
 
-        let url = new URL(request.url);
+        if (loc.origin === website.origin) {
+          let headers = copyHeaders(response);
+          let url = new URL(request.url);
 
-        let loc = new URL(location);
-        if (!options.root) {
-          loc.pathname = `${options.prefix}${loc.pathname}`;
+          if (!options.root) {
+            loc.pathname = `${options.prefix}${loc.pathname}`;
+          }
+          headers.location = loc.toString().replace(target.origin, url.origin);
+
+          response = new Response(null, {
+            status: response.status,
+            statusText: response.statusText,
+            headers,
+          });
         }
-        headers.location = loc.toString().replace(target.origin, url.origin);
-
-        response = new Response(null, {
-          status: response.status,
-          statusText: response.statusText,
-          headers,
-        });
       }
     } else if (
       response.headers.get("Content-Type")?.match(/html/) && !options.root
     ) {
-      let body = yield* call(() => response.text());
-      let tree = fromHtml(body);
+      try {
+        let body = yield* call(() => response.text());
+        let tree = fromHtml(body);
 
-      yield* injectPlausible(tree);
-      yield* injectUmami(tree);
-      yield* injectMatomo(tree);
+        yield* injectPlausible(tree);
+        yield* injectUmami(tree);
+        yield* injectMatomo(tree);
 
-      let elements = selectAll(
-        '[href^="/"],[src^="/"],form[action],meta[content]',
-        tree,
-      );
+        let elements = selectAll(
+          '[href^="/"],[src^="/"],form[action],meta[content]',
+          tree,
+        );
 
-      for (let element of elements) {
-        let properties = element.properties!;
+        for (let element of elements) {
+          let properties = element.properties!;
 
-        if (properties.href) {
-          properties.href = posixNormalize(
-            `${base.pathname}${properties.href}`,
-          );
-        }
-        if (properties.src) {
-          properties.src = posixNormalize(`${base.pathname}${properties.src}`);
-        }
-        if (properties.action) {
-          properties.action = posixNormalize(
-            `${base.pathname}${properties.action}`,
-          );
-        }
-        if (properties.content) {
-          if (typeof properties.content === "string") {
-            const parts = properties.content.match(/\d;\s*url=(.*)/);
-            if (parts) {
-              const [, url] = parts;
-              properties.content = properties.content.replace(
-                url,
-                posixNormalize(`${base.pathname}${url}`),
-              );
-            } else if (properties.content.startsWith("http")) {
-              properties.content = properties.content.replace(
-                target.origin,
-                base.href.replace(/\/?$/, ""),
-              );
+          if (properties.href) {
+            properties.href = posixNormalize(
+              `${base.pathname}${properties.href}`,
+            );
+          }
+          if (properties.src) {
+            properties.src = posixNormalize(
+              `${base.pathname}${properties.src}`,
+            );
+          }
+          if (properties.action) {
+            properties.action = posixNormalize(
+              `${base.pathname}${properties.action}`,
+            );
+          }
+          if (properties.content) {
+            if (typeof properties.content === "string") {
+              const parts = properties.content.match(/\d;\s*url=(.*)/);
+              if (parts) {
+                const [, url] = parts;
+                properties.content = properties.content.replace(
+                  url,
+                  posixNormalize(`${base.pathname}${url}`),
+                );
+              } else if (properties.content.startsWith("http")) {
+                properties.content = properties.content.replace(
+                  target.origin,
+                  base.href.replace(/\/?$/, ""),
+                );
+              }
             }
           }
         }
+        response = new Response(toHtml(tree), {
+          status: response.status,
+          statusText: response.statusText,
+          headers: copyHeaders(response),
+        });
+      } catch (error) {
+        console.error(`Proxy HTML rewrite failed for ${request.url}:`, error);
       }
-      response = new Response(toHtml(tree), {
-        status: response.status,
-        statusText: response.statusText,
-        headers: copyHeaders(response),
-      });
     }
 
-    return response;
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers: copyHeaders(response),
+    });
   };
 
   if (options.prefix) {
@@ -135,17 +152,15 @@ export function proxyRoute(options: ProxyRouteOptions): HTTPMiddleware {
     };
   }
 
-  if (options.pattern) {
-    let handler = revolutionRoute(options.pattern, middleware);
-    if (middleware.sitemapExtension) {
-      Object.defineProperty(handler, "sitemapExtension", {
-        value: middleware.sitemapExtension,
-      });
-    }
-    return handler;
-  }
+  let pattern = options.pattern ?? `/${options.prefix}(.*)`;
 
-  return middleware;
+  let handler = revolutionRoute(pattern, middleware);
+  if (middleware.sitemapExtension) {
+    Object.defineProperty(handler, "sitemapExtension", {
+      value: middleware.sitemapExtension,
+    });
+  }
+  return handler;
 }
 
 // Copy an upstream response's headers, dropping the ones that describe how the

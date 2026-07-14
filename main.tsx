@@ -94,10 +94,10 @@ await main(function* (args) {
       route("/redirects", redirectsRoute()),
       route("/platformscript", platformscriptRoute()),
       $route("/platformscript/(.*)", redirect("/platformscript")),
-      proxyRoute({ ...proxies.effection, pattern: "/effection(.*)" }),
-      proxyRoute({ ...proxies.graphgen, pattern: "/graphgen(.*)" }),
+      proxyRoute(proxies.effection),
+      proxyRoute(proxies.graphgen),
       $route("/assets(.*)", assetsRoute("assets")),
-      proxyRoute({ ...proxies.interactors, pattern: "/interactors(.*)" }),
+      proxyRoute(proxies.interactors),
     ],
 
     plugins: [
@@ -127,16 +127,16 @@ function proxySites() {
     effection: {
       prefix: "effection",
       website: Deno.env.get("EFFECTION_URL") ??
-        "https://effection.deno.dev",
+        "https://effection.netlify.app",
     },
     interactors: {
       prefix: "interactors",
       website: Deno.env.get("INTERACTORS_URL") ??
-        "https://interactors.deno.dev",
+        "https://interactors.netlify.app",
     },
     graphgen: {
       prefix: "graphgen",
-      website: Deno.env.get("GRAPHGEN_URL") ?? "https://graphgen.deno.dev",
+      website: Deno.env.get("GRAPHGEN_URL") ?? "https://graphgen-data.netlify.app",
     },
   } as const;
 }
