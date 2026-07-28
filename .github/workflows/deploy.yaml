@@ -61,6 +61,15 @@ jobs:
           --concurrency=25 \
           --retries=5
 
+    - name: Build Effection Search Index
+      run: |
+        npx --yes pagefind@1.3.0 \
+          --site built/effection \
+          --output-path built/effection/pagefind
+
+        test -s built/effection/pagefind/pagefind.js
+        test -s built/effection/pagefind/pagefind-entry.json
+
     - name: Deploy Preview to Netlify
       id: netlify
       run: |
@@ -145,6 +154,15 @@ jobs:
             --base=https://frontside.com \
             --concurrency=25 \
             --retries=5
+
+      - name: Build Effection Search Index
+        run: |
+          npx --yes pagefind@1.3.0 \
+            --site built/effection \
+            --output-path built/effection/pagefind
+
+          test -s built/effection/pagefind/pagefind.js
+          test -s built/effection/pagefind/pagefind-entry.json
 
       - name: Deploy to Production
         run: |
