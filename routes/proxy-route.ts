@@ -199,11 +199,32 @@ function parseSitemapUrls(
       let path = options.root
         ? url.pathname.replace(`/${options.root}`, "/")
         : url.pathname;
-      let pathname = posixNormalize(`/${options.prefix}${path}`);
-      paths.push({ pathname });
+      paths.push({ pathname: prefixed(path, options.prefix) });
     } catch {
       // skip malformed URLs
     }
   }
   return paths;
+}
+
+/**
+ * Mount a path from a proxied site's sitemap under its prefix here.
+ *
+ * A site staticalized with `--base` naming the url it lives at *on this site*
+ * already carries the prefix in every `<loc>` — Effection publishes
+ * `https://frontside.com/effection/docs`, not `/docs`. Adding the prefix to
+ * that would ask for `/effection/effection/docs`, which is nowhere.
+ *
+ * A site that still advertises its own origin, as Interactors and Graphgen do,
+ * needs the prefix. So does an Effection preview, whose base is its own alias
+ * url. Deciding on the path rather than the origin covers all three.
+ */
+export function prefixed(path: string, prefix: string): string {
+  let mount = `/${prefix}`;
+
+  if (path === mount || path.startsWith(`${mount}/`)) {
+    return posixNormalize(path);
+  }
+
+  return posixNormalize(`${mount}${path}`);
 }
