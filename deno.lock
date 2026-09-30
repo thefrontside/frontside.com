@@ -3,7 +3,6 @@
   "specifiers": {
     "jsr:@effection/effection@3.6.1": "3.6.1",
     "jsr:@frontside/continuation@0.1.6": "0.1.6",
-    "jsr:@frontside/staticalize@0.2.6": "0.2.6",
     "jsr:@libs/xml@6": "6.0.8",
     "jsr:@std/cli@^1.0.6": "1.0.7",
     "jsr:@std/encoding@^1.0.5": "1.0.5",
@@ -56,23 +55,6 @@
     },
     "@frontside/continuation@0.1.6": {
       "integrity": "f36a3b9ccdf49f0b15778a5e11a37d91bb097f67522f17ca5fbd668560b31c17"
-    },
-    "@frontside/staticalize@0.2.6": {
-      "integrity": "1a346d477fc72724fc04860e67164d4585f8da274e84a09b33e23400768aee05",
-      "dependencies": [
-        "jsr:@libs/xml",
-        "jsr:@std/fs@1",
-        "jsr:@std/path@1",
-        "npm:@effectionx/context-api",
-        "npm:@effectionx/stream-helpers",
-        "npm:clayterm",
-        "npm:configliere",
-        "npm:effection@^4.0.2",
-        "npm:hast-util-from-html@^2.0.3",
-        "npm:hast-util-select@^6.0.4",
-        "npm:hast-util-to-html@^9.0.5",
-        "npm:zod@^4.1.11"
-      ]
     },
     "@libs/xml@6.0.8": {
       "integrity": "7aac7438ddd460fede488d6420e4973438919b54b8e882e851ed9a234716baa3"
